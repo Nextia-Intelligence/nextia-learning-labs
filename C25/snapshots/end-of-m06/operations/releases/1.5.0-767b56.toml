@@ -1,0 +1,42 @@
+# A release manifest: every version that makes this release's answers.
+# Written by python -m ops release build. Do not edit: a change makes a new release.
+id = "1.5.0-767b56"
+
+[code]
+version = "1.5.0"
+commit = "none (the project folder is not a Git repository)"
+fingerprint = "c8ee0759e085"
+image = "not built (the course runs the service with Python)"
+
+[database]
+migrations = 20
+last_migration = "020_release_state.sql"
+
+[assistant]
+prompt = "assistant-v3"
+prompt_fingerprint = "e91df8e7a92a"
+schema = "ticket_analysis"
+schema_fingerprint = "f66acdf35fe1"
+max_completion_tokens = 1000
+
+[model]
+deployment = "chat-small"
+expected_version = "gpt-6-luna-2026-09-22"
+embedding = "embed-small-384-v1"
+
+[retrieval]
+answer_prompt = "answer-v1"
+search = "PostgreSQL full-text search, the 2 best documents"
+index_version = "75cf862216c3"
+
+[data]
+evaluation_set = "d4c96eaa10c0"
+evaluation_inputs = "3f90ab808275"
+evidence = "candidate-v3-chat-small-r1-31b45f"
+
+[settings]
+BREAKER_FAILURES = "5"
+INTAKE_MODE = "queue"
+JOB_MAX_ATTEMPTS = "5"
+PROVIDER_TIMEOUT = "10"
+QUEUE_MAX = "5000"

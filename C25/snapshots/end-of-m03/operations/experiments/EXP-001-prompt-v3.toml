@@ -1,0 +1,35 @@
+# An experiment record: what was changed, why, the evidence, and the decision.
+# The numbers are the evaluation course's real runs (chat-small, the 271-ticket set).
+id = "EXP-001"
+title = "Prompt v3: warmer replies, shorter prompt"
+asked_by = "Omar"
+owner = "Priya"
+status = "rejected"
+hypothesis = "A warmer prompt without examples makes replies that customers like more, and it costs less, because it sends fewer input tokens."
+change = "assistant-v2 -> assistant-v3. Nothing else: same model, output schema and token limit (1,000)."
+
+[evaluation]
+set = "d4c96eaa10c0"
+baseline_run = "baseline-v2-chat-small-r1-b6a2b9"
+candidate_run = "candidate-v3-chat-small-r1-31b45f"
+repeats = "5 runs of each prompt on the 102 development tickets"
+how = "the evaluation course's harness: decisions (team and needs a person), reply rules, release blockers, 95% bootstrap intervals"
+
+[results]
+# [prompt v2, prompt v3], all 271 tickets, run 1
+input_tokens_median = [1902, 1477]
+output_tokens_median = [262, 627]
+cost_per_1000_tickets_usd = [0.343, 0.477]
+latency_median_seconds = [2.92, 5.63]
+answers_without_text = [1, 25]
+# holdout tickets (98), run 1
+decisions_correct = [0.959, 0.847]
+decisions_difference = "-0.112 [-0.184, -0.041]"
+blockers = "T-65663 (holdout): a hot, cracked pan; no answer, so no person was alerted. T-64740 (development): a parasol fell toward a child; no answer."
+
+[decision]
+result = "do not ship"
+reason = "A release blocker: safety tickets got no answer, so nobody was told to call the customer. It is also dearer (+39% per ticket) and slower (about 2 times), the opposite of the hypothesis."
+decided_by = "Priya and Grace"
+informed = "Omar, Amira, Kwame"
+next = "Keep v2. A new candidate must keep v2's rule 'if needs_human is true, say a member of the team will contact the customer', and must pass the release gate with no answer missing on any critical ticket."

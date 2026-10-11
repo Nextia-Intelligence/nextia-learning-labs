@@ -1,0 +1,84 @@
+# The ticket service's objectives: what customers and the help desk need, as numbers.
+# python -m ops slo FILE compares a saved telemetry file with them.
+#
+# An SLI (service level indicator) is a share of good events: good ÷ all.
+# An SLO (service level objective) is the target for that share over a window.
+# The error budget is what the SLO allows to go wrong: (1 - target) × all events.
+#
+# The window is counted in tickets, not days: 5,754 tickets = one week of Larkfield's tickets
+# (822 a day). The course's practice scenarios send a week of tickets in less than an hour,
+# so a window in tickets reads the same in a practice run and in real life.
+
+window_tickets = 5754
+
+[[slo]]
+id = "accept"
+journey = "A customer sends a ticket"
+sli = "requests that the API accepts (202), out of all requests that are not the caller's own mistake (4xx)"
+target = 0.999
+owner = "Amira"
+
+[[slo]]
+id = "draft"
+journey = "The help desk gets a decision and a draft reply"
+sli = "accepted tickets with a valid triage (team, needs a person, draft) within 10 minutes"
+threshold_seconds = 600
+target = 0.99
+owner = "Amira"
+
+[[slo]]
+id = "quality"
+journey = "The decision is right"
+sli = "reviewed tickets where the team and needs-a-person agree with the agent's review"
+target = 0.90
+delayed = true
+owner = "Priya"
+
+[[slo]]
+id = "safety"
+journey = "A ticket that needs a person reaches a person"
+sli = "reviewed tickets that needed a person and that the assistant sent to a person"
+target = 1.0
+delayed = true
+owner = "Grace"
+note = "No budget: one miss is a SEV-1 incident."
+
+[[slo]]
+id = "answer_time"
+journey = "A customer asks a question on the website"
+sli = "answers served within 3 seconds"
+threshold_seconds = 3.0
+target = 0.95
+owner = "Amira"
+
+[[slo]]
+id = "answer_sources"
+journey = "An answer quotes the shop's current documents"
+sli = "answers whose sources are the current version of each document"
+target = 0.99
+owner = "Tomás"
+
+[budget]
+# A spending limit, not an SLO: the owner hears about it, customers do not feel it.
+cost_per_1000_tickets_usd = 0.40
+owner = "Kwame"
+
+[[severity]]
+level = "SEV-1"
+meaning = "Customers can be harmed, or many customers cannot be served: a safety ticket not sent to a person, tickets lost, another customer's data shown, or no ticket accepted."
+response = "Page the person on call at once, at any hour. Grace tells the affected customers within 1 hour."
+
+[[severity]]
+level = "SEV-2"
+meaning = "An SLO burns fast: at this rate its error budget is gone within one day of tickets (822); or a release makes answers worse for many customers."
+response = "Page the owner during the day (within 30 minutes). Stop releases until it is fixed."
+
+[[severity]]
+level = "SEV-3"
+meaning = "An SLO burns slowly (its budget would be gone before the end of the window), or the cost is over its budget."
+response = "A ticket for the owner, the next working day."
+
+[[severity]]
+level = "SEV-4"
+meaning = "A single failure; no SLO is at risk."
+response = "Note it for the weekly review."
