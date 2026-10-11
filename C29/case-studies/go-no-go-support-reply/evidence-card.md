@@ -8,7 +8,7 @@
 |---|---|---|
 | Test tickets: development / holdout | 102 / 98 | [Evaluating and Testing AI Systems](https://learning.nextia-ai.com/courses/evals/) |
 | Holdout tickets with an answer, v2 / v3 | 98 / 90 of 98 | same |
-| Holdout tickets that need a person, sent to a person, v2 / v3 | 24/24 / 23/24 | same |
+| Holdout tickets that need a person, sent to a person, v2 / v3 | 24 of 24 / 23 of 24 | same |
 | Holdout "both decisions right", v2 / v3 | 94 / 83 of 98 | same |
 | Difference v3 − v2 on the holdout, with its 95% range | −0.112 (−0.184 to −0.041) | same |
 | Tickets with no answer, all 271 test tickets, v2 / v3 | 1 / 25 | same |
