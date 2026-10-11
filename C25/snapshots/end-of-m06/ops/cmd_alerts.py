@@ -3,9 +3,12 @@ every 10 seconds of the file, as Grafana does on live data.
 
     python -m ops alerts data/telemetry/canary.jsonl.gz
     python -m ops alerts FILE --after "rollout canary"     detection time after that action
+    python -m ops alerts FILE --after "simulator mode: outage"
 
 For each alert: when it fired, when it stopped, and the owner and runbook. With --after, it
 also prints how long after that practice action each alert fired (the detection time). The
+action is found by its text as ops incident prints it ("simulator mode: outage"), so a part of
+it is enough; the first action that matches counts. The
 values come from the events, so they can differ a little from Grafana's (which reads metrics
 that are sent every 15 seconds).
 """
@@ -123,6 +126,12 @@ def evaluate(tel: Telemetry, rules: list[dict]) -> dict[str, list[tuple[float, f
     return out
 
 
+def action_text(attributes: dict) -> str:
+    """A practice action as ops incident prints it: "simulator mode: outage"."""
+    detail = attributes.get("mode") or attributes.get("alert") or attributes.get("model_version")
+    return attributes.get("action", "") + (f": {detail}" if detail else "")
+
+
 def register(commands) -> None:
     p = commands.add_parser("alerts", help="run the alert rules on saved telemetry")
     p.add_argument("file", nargs="+", help="saved telemetry (.jsonl or .jsonl.gz)")
@@ -138,14 +147,14 @@ def run(args) -> int:
     since = None
     if args.after:
         acts = [
-            r
+            (r["time"], action_text(r["attributes"]))
             for r in tel.events("practice.action")
-            if args.after in r["attributes"].get("action", "")
+            if args.after in action_text(r["attributes"])
         ]
         if not acts:
             raise ValueError(f"no practice action like {args.after!r} in the file")
-        since = acts[0]["time"]
-        print(f"Practice action {acts[0]['attributes']['action']!r} at {minutes(since, tel.start)}")
+        since = acts[0][0]
+        print(f"Practice action {acts[0][1]!r} at {minutes(since, tel.start)}")
     rows = []
     for rule in rules:
         for start, end in fired[rule["uid"]]:

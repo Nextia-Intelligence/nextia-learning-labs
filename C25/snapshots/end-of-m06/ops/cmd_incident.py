@@ -6,12 +6,12 @@
 It puts on one timeline: the practice actions (what we did on purpose), release changes, the
 circuit breaker, the alerts (the rules of operations/alerts.toml run on the file), and per
 period the tickets received, refused, finished, without a valid draft, the oldest waiting
-ticket and the time to a draft. The recovery checks at the end compare the last period with
-the first: a recovery is a claim, and these numbers are its evidence.
+ticket and the time to a draft. The recovery checks at the end compare the last full period
+with the first: a recovery is a claim, and these numbers are its evidence.
 """
 
 from ops import files
-from ops.cmd_alerts import build, evaluate
+from ops.cmd_alerts import action_text, build, evaluate
 from ops.telemetry import Telemetry, minutes, percentile, table
 
 
@@ -44,9 +44,7 @@ def run(args) -> int:
     s = build(tel)
     marks = []
     for r in tel.events("practice.action"):
-        a = r["attributes"]
-        detail = a.get("mode") or a.get("alert") or a.get("model_version") or ""
-        text = a.get("action", "") + (f": {detail}" if detail else "")
+        text = action_text(r["attributes"])
         marks.append((r["time"], "practice" if "alert" not in text else "grafana", text))
     for r in tel.events("release.changed"):
         a = r["attributes"]
@@ -84,7 +82,8 @@ def run(args) -> int:
     t = tel.start
     while t < tel.end:
         p = period(tel, s, t, t + width)
-        periods.append(p)
+        if t + width <= tel.end:  # the last, shorter period is not compared
+            periods.append(p)
         rows.append(
             [
                 f"{(t - tel.start) / 60:g}-{(t - tel.start + width) / 60:g}",

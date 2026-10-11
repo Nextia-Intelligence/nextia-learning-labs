@@ -102,3 +102,5 @@ def test_the_incident_timeline_and_recovery(tmp_path, capsys):
     assert "[x] nothing is waiting long" in out
     assert main(["alerts", str(outage_file(tmp_path)), "--after", "simulator mode"]) == 0
     assert "0.7 min" in capsys.readouterr().out  # the circuit alert, 40 s after the outage
+    assert main(["alerts", str(outage_file(tmp_path)), "--after", "mode: outage"]) == 0
+    assert "'simulator mode: outage' at +5.0 min" in capsys.readouterr().out
