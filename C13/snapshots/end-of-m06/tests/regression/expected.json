@@ -1,0 +1,558 @@
+{
+ "D001": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-986875",
+    "found"
+   ],
+   "date": [
+    "2026-07-08",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "209.35",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "25.12",
+    "found"
+   ],
+   "total": [
+    "234.47",
+    "found"
+   ],
+   "payment_method": [
+    "Cash",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D004": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-285213",
+    "found"
+   ],
+   "date": [
+    "2026-09-13",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "488.00",
+    "found"
+   ],
+   "shipping": [
+    "0.00",
+    "found"
+   ],
+   "tax": [
+    "73.08",
+    "found"
+   ],
+   "total": [
+    "561.08",
+    "found"
+   ],
+   "payment_method": [
+    "Amex",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D017": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "MAPLE & PINE",
+    "found"
+   ],
+   "order_number": [
+    null,
+    "absent"
+   ],
+   "date": [
+    "2026-09-06",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "inferred"
+   ],
+   "subtotal": [
+    "9.99",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "1.30",
+    "found"
+   ],
+   "total": [
+    "11.29",
+    "found"
+   ],
+   "payment_method": [
+    "Cash",
+    "found"
+   ]
+  },
+  "review": true
+ },
+ "D021": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-373435",
+    "found"
+   ],
+   "date": [
+    "2026-07-09",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "inferred"
+   ],
+   "subtotal": [
+    "24.95",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "3.74",
+    "found"
+   ],
+   "total": [
+    "28.69",
+    "found"
+   ],
+   "payment_method": [
+    "Visa",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D025": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-536359",
+    "found"
+   ],
+   "date": [
+    "2026-07-13",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "34.50",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "4.15",
+    "found"
+   ],
+   "total": [
+    "38.65",
+    "found"
+   ],
+   "payment_method": [
+    "Debit",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D036": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-706142",
+    "found"
+   ],
+   "date": [
+    "2026-08-09",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "inferred"
+   ],
+   "subtotal": [
+    "880.00",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "131.78",
+    "found"
+   ],
+   "total": [
+    "1011.78",
+    "found"
+   ],
+   "payment_method": [
+    "Cash",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D045": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-754892",
+    "found"
+   ],
+   "date": [
+    "2026-06-13",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "unverified"
+   ],
+   "subtotal": [
+    "358.95",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "46.66",
+    "found"
+   ],
+   "total": [
+    null,
+    "absent"
+   ],
+   "payment_method": [
+    null,
+    "absent"
+   ]
+  },
+  "review": true
+ },
+ "D046": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    null,
+    "absent"
+   ],
+   "order_number": [
+    null,
+    "absent"
+   ],
+   "date": [
+    null,
+    "absent"
+   ],
+   "currency": [
+    null,
+    "absent"
+   ],
+   "subtotal": [
+    null,
+    "absent"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    null,
+    "absent"
+   ],
+   "total": [
+    null,
+    "absent"
+   ],
+   "payment_method": [
+    null,
+    "absent"
+   ]
+  },
+  "review": true
+ },
+ "D047": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    null,
+    "absent"
+   ],
+   "order_number": [
+    "LK-192531",
+    "found"
+   ],
+   "date": [
+    null,
+    "absent"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "187.00",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "24.31",
+    "found"
+   ],
+   "total": [
+    "211.31",
+    "found"
+   ],
+   "payment_method": [
+    "Visa",
+    "found"
+   ]
+  },
+  "review": true
+ },
+ "D049": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "MAPLE & PINE",
+    "found"
+   ],
+   "order_number": [
+    null,
+    "absent"
+   ],
+   "date": [
+    "2026-09-23",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "inferred"
+   ],
+   "subtotal": [
+    "27.45",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "3.57",
+    "found"
+   ],
+   "total": [
+    "31.02",
+    "found"
+   ],
+   "payment_method": [
+    "Visa",
+    "found"
+   ]
+  },
+  "review": true
+ },
+ "D050": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-762786",
+    "found"
+   ],
+   "date": [
+    "2026-09-26",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "449.00",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "58.37",
+    "found"
+   ],
+   "total": [
+    "517.37",
+    "found"
+   ],
+   "payment_method": [
+    "Debit",
+    "found"
+   ]
+  },
+  "review": true
+ },
+ "D058": {
+  "intake": "accepted",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-921048",
+    "found"
+   ],
+   "date": [
+    "2026-06-11",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "274.50",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "32.95",
+    "found"
+   ],
+   "total": [
+    "307.45",
+    "found"
+   ],
+   "payment_method": [
+    "Amex",
+    "found"
+   ]
+  },
+  "review": false
+ },
+ "D059": {
+  "intake": "duplicate",
+  "fields": {},
+  "review": false
+ },
+ "D061": {
+  "intake": "corrupt",
+  "fields": {},
+  "review": true
+ },
+ "D064": {
+  "intake": "wrong_extension",
+  "fields": {
+   "vendor": [
+    "Larkfield",
+    "found"
+   ],
+   "order_number": [
+    "LK-833156",
+    "found"
+   ],
+   "date": [
+    "2026-06-27",
+    "found"
+   ],
+   "currency": [
+    "CAD",
+    "found"
+   ],
+   "subtotal": [
+    "249.00",
+    "found"
+   ],
+   "shipping": [
+    null,
+    "absent"
+   ],
+   "tax": [
+    "32.37",
+    "found"
+   ],
+   "total": [
+    "281.37",
+    "found"
+   ],
+   "payment_method": [
+    "Amex",
+    "found"
+   ]
+  },
+  "review": false
+ }
+}
