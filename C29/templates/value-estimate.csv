@@ -1,0 +1,18 @@
+input,low,base,high,label,source_or_reason
+tickets_per_day,600,822,1100,assumption,"base = the average day of the practice ticket workload in Scaling APIs and AI Workloads (synthetic)"
+days_per_year,365,365,365,assumption,the online shop takes tickets every day
+share_drafted,0.749,0.749,0.749,recorded,"MLOps and LLMOps: Operating AI in Production, practice week (1 minus the share sent to a person)"
+share_usable,0.869,0.869,0.869,recorded,"Evaluating and Testing AI Systems, judge scores 4 or 5"
+adoption_share,0.4,0.7,0.9,assumption,share of drafts that agents use
+minutes_to_write_a_reply_by_hand,4,6,8,assumption,not measured: time a few agents
+minutes_to_review_a_usable_draft,2.5,1.5,1,assumption,
+minutes_lost_on_a_draft_that_is_not_usable,3,2,1,assumption,
+agent_cost_per_hour_usd,25,32,40,assumption,pay and overhead
+harmful_share,0.0151,0.005,0.0,assumption,"low = rule of three on 0 harmful of 199 recorded drafts"
+missed_share,0.2,0.1,0.05,assumption,share of harmful drafts an agent sends anyway
+cost_per_harmful_reply_usd,150,50,20,assumption,
+ai_cost_usd_per_1000_tickets,0.341,0.341,0.341,recorded,"MLOps and LLMOps: Operating AI in Production, practice week"
+upkeep_hours_per_month,40,20,10,assumption,
+engineering_cost_per_hour_usd,100,60,40,assumption,"the range of AI System Design and Cost Engineering"
+one_time_build_hours,1200,800,500,assumption,
+one_time_change_hours,120,60,30,assumption,training and the new workflow
