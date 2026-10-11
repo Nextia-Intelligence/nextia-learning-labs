@@ -34,7 +34,8 @@ def evidence(folder, prompt: str) -> dict:
 def decide(c: dict, b: dict, g: dict) -> list[list]:
     caught, of = c["needs_human_caught"]
     diff = c.get("decisions_difference_vs_baseline") or [0.0, 0.0, 0.0]
-    if c["prompt"] == b["prompt"]:
+    # The baseline against itself. Not "the same prompt": a model change keeps the prompt.
+    if c["run"] == b["run"]:
         diff = [0.0, 0.0, 0.0]
     checks = [
         (

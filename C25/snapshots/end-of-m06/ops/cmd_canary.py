@@ -138,18 +138,28 @@ def run(args) -> int:
             f"({total:,} tickets in all)"
         )
     changes = tel.events("release.changed")
-    if changes and not args.shadow:
+    if changes and not args.shadow and not changes[-1]["attributes"].get("release.canary"):
+        # The evidence of recovery, once the last change removed the canary. The worker logs
+        # the change when it takes its next job. A canary job that started before the change
+        # may still finish in the next 30 s: count it as in flight, not as a failed rollback.
         last = changes[-1]
-        after = [
-            r["attributes"] for r in tel.events("ticket.triaged") if r["time"] > last["time"] + 30
+        later = [r for r in tel.events("ticket.triaged") if r["time"] > last["time"]]
+        in_flight = [
+            r
+            for r in later
+            if r["attributes"].get("release.canary") and r["time"] <= last["time"] + 30
         ]
+        after = [r["attributes"] for r in later if r not in in_flight]
         s = stats(after)
         print(
             f"After the last release change ({minutes(last['time'], tel.start)}: active "
             f"{last['attributes'].get('release.active')}, canary "
-            f"{last['attributes'].get('release.canary')}), from 30 s later: {s['tickets']:,} "
-            f"tickets, {s['no_answer']} without text, US${s['cost_per_1000'] or 0:.3f} per "
-            f"1,000, triage p95 {s['p95_s'] or 0:.2f} s, canary tickets "
+            f"{last['attributes'].get('release.canary')}): {s['tickets']:,} tickets, "
+            f"{s['no_answer']} without text, US${s['cost_per_1000'] or 0:.3f} per 1,000, "
+            f"triage p95 {s['p95_s'] or 0:.2f} s, canary tickets "
             f"{sum(bool(r.get('release.canary')) for r in after)}"
+            + (f" ({len(in_flight)} canary tickets in flight finished first)" if in_flight else "")
         )
+        if not after:
+            print("No ticket was triaged after the change yet: send tickets, then run this again.")
     return 0
