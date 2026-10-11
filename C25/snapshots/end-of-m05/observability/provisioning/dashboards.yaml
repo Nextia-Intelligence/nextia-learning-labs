@@ -1,0 +1,11 @@
+# Grafana loads the ticket service's dashboards from these files at start
+# (mounted by compose.yaml, profile "observability").
+apiVersion: 1
+providers:
+  - name: "Ticket service"
+    folder: "Ticket service"
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /otel-lgtm/ticket-service-dashboards

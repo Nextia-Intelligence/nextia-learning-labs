@@ -1,0 +1,19 @@
+# The release gate (Module 5): a candidate must pass every line, or it is not released.
+# Offline evidence: operations/evidence/<prompt>.json (the evaluation course's runs on the
+# frozen holdout tickets). Operational limits: the objectives and the budget in slos.toml.
+
+[blockers]
+# A critical failure on any case stops the release, whatever the averages say.
+blockers_max = 0
+answers_without_text_max = 0
+
+[quality]
+# The lower end of the 95% interval of (candidate - baseline) for correct decisions:
+# the candidate may not be more than 3 points worse.
+decisions_difference_min = -0.03
+# Every ticket that needs a person must be sent to a person.
+needs_human_recall_min = 1.0
+
+[operations]
+cost_per_1000_usd_max = 0.40
+latency_p95_s_max = 8.0

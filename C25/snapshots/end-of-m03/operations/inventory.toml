@@ -1,0 +1,105 @@
+# What the ticket service depends on, and who owns each part.
+# python -m ops inventory prints it as a table.
+#
+# kind:        code, data, model, prompt, index, tool, provider, infrastructure, people
+# version:     where you read the version that is running now
+# owner:       the person who decides about it and is called first when it fails
+# first_sign:  the first thing you would see when it fails (the signal to watch)
+
+[[component]]
+name = "ticket-api (API and worker)"
+kind = "code"
+version = "the Git commit and the container image digest"
+owner = "Amira"
+first_sign = "5xx answers from POST /v1/tickets; jobs that fail or wait too long"
+
+[[component]]
+name = "triage prompt"
+kind = "prompt"
+version = "ASSISTANT_PROMPT (a file in ticket_api/prompts/) and its fingerprint"
+owner = "Priya"
+first_sign = "answers without text; more tickets sent to a person; agents correct more teams"
+
+[[component]]
+name = "support policy (inside the prompt)"
+kind = "data"
+version = "ticket_api/prompts/policy.md, part of the prompt fingerprint"
+owner = "Grace"
+first_sign = "replies that state an old rule; agents rewrite the drafts"
+
+[[component]]
+name = "chat model (chat-small)"
+kind = "model"
+version = "the model version in the provider's answers (gen_ai.response.model)"
+owner = "Priya"
+first_sign = "a new model version in the answers; changed tokens, time or decisions"
+
+[[component]]
+name = "AI provider"
+kind = "provider"
+version = "the provider's URL and contract (quota: 100 chat requests a minute)"
+owner = "Kwame"
+first_sign = "HTTP 429 (quota) or 5xx and timeouts; the circuit breaker opens"
+
+[[component]]
+name = "evaluation set"
+kind = "data"
+version = "the dataset version (the first 12 characters of its SHA-256)"
+owner = "Priya"
+first_sign = "a release decision that the set cannot support (a new kind of ticket is missing)"
+
+[[component]]
+name = "embedding model (embed-small)"
+kind = "model"
+version = "the embedding version (embed-small-384-v1)"
+owner = "Priya"
+first_sign = "similar-ticket search returns unrelated tickets"
+
+[[component]]
+name = "shop documents"
+kind = "data"
+version = "the documents fingerprint (doc_id, version and hash of every document)"
+owner = "Grace"
+first_sign = "a document changes and answers still quote the old text"
+
+[[component]]
+name = "retrieval index (answers)"
+kind = "index"
+version = "the index version: the documents fingerprint it was built from"
+owner = "Tomás"
+first_sign = "answers that cite an old document version; questions with no source found"
+
+[[component]]
+name = "tools"
+kind = "tool"
+version = "none: the assistant calls no tools; document search is part of the retrieval index"
+owner = "Tomás"
+first_sign = "-"
+
+[[component]]
+name = "PostgreSQL (tickets, jobs, AI results)"
+kind = "infrastructure"
+version = "the server version and the last migration"
+owner = "Mei"
+first_sign = "503 database_busy; slow queries; a failed backup"
+
+[[component]]
+name = "Valkey (cache)"
+kind = "infrastructure"
+version = "the image tag"
+owner = "Amira"
+first_sign = "X-Cache: off (the service still works, but slower and dearer)"
+
+[[component]]
+name = "telemetry storage (collector, Grafana)"
+kind = "infrastructure"
+version = "the image tag of the observability stack"
+owner = "Mei"
+first_sign = "empty dashboards; alerts that cannot be evaluated"
+
+[[component]]
+name = "customer communication (status message, replies)"
+kind = "people"
+version = "the help desk's message templates"
+owner = "Grace"
+first_sign = "customers ask where their answer is"

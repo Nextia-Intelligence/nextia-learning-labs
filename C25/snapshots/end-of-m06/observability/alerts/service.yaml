@@ -1,0 +1,153 @@
+# Alert rules of the ticket service (Grafana file provisioning). The same rules,
+# for saved telemetry, are in operations/alerts.toml (python -m ops alerts).
+apiVersion: 1
+groups:
+  - orgId: 1
+    name: "Service objectives"
+    folder: "Ticket service"
+    interval: "10s"
+    rules:
+      - uid: "accept-fast-burn"
+        title: "Tickets refused (accept SLO burns fast)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "(sum(rate(app_tickets_received_total{http_status_code=~\"5..\"}[5m])) or vector(0)) / sum(rate(app_tickets_received_total{http_status_code!~\"4..\"}[5m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.0144
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "1m"
+        labels:
+          severity: "SEV-2"
+          owner: "Amira"
+          service: "ticket-api"
+        annotations:
+          summary: "More than 1.44% of ticket requests were refused in 5 minutes: 14.4 times the 0.1% that the accept SLO allows."
+          runbook_url: "operations/runbooks/tickets-refused.md"
+        isPaused: false
+      - uid: "draft-fast-burn"
+        title: "Tickets without a valid draft (draft SLO burns fast)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "(sum(rate(app_tickets_triaged_total{outcome!=\"ok\"}[5m])) or vector(0)) / sum(rate(app_tickets_triaged_total[5m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.1
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "1m"
+        labels:
+          severity: "SEV-2"
+          owner: "Amira"
+          service: "ticket-api"
+        annotations:
+          summary: "More than 10% of finished tickets in 5 minutes had no valid draft: 10 times the 1% that the draft SLO allows."
+          runbook_url: "operations/runbooks/bad-release.md"
+        isPaused: false
+      - uid: "drafts-late"
+        title: "Drafts are late (oldest ticket waits over 2 minutes)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "max(app_queue_oldest_age_seconds)"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 120
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "1m"
+        labels:
+          severity: "SEV-2"
+          owner: "Amira"
+          service: "ticket-api"
+        annotations:
+          summary: "The oldest queued ticket has waited more than 2 minutes; at 10 minutes it breaks the draft SLO."
+          runbook_url: "operations/runbooks/provider-outage.md"
+        isPaused: false
+      - uid: "provider-circuit-open"
+        title: "AI provider failing (circuit breaker open)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "max(app_provider_breaker_open_ratio)"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "30s"
+        labels:
+          severity: "SEV-2"
+          owner: "Kwame"
+          service: "ticket-api"
+        annotations:
+          summary: "The worker's circuit breaker is open: the provider failed 5 calls in a row."
+          runbook_url: "operations/runbooks/provider-outage.md"
+        isPaused: false
