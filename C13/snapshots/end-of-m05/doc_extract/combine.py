@@ -11,7 +11,8 @@ The steps for one document:
      unknown, or the reading score of a required field is low;
   4. reconcile, field by field: agree -> keep the rules' value and its box; disagree -> keep both and
      send the field to review; the model alone -> keep its value only if the printed text can be
-     found on the page (grounded); otherwise mark it "unverified".
+     found on the page (grounded); otherwise mark it "unverified"; both absent -> absent, with the
+     model's reason when it gives one (not_printed, cut_off, unreadable).
 """
 
 from __future__ import annotations
@@ -99,11 +100,12 @@ def combine(d, use_model: bool = True) -> tuple[Extraction, Decision]:
         r = rules.fields[name]
         m = model.fields.get(name) if model else None
         flags: list[str] = []
-        if m is None or (r.value is not None and m.value is not None and
-                         contract.normalise(name, r.value) == contract.normalise(name, m.value)):
+        if m is None or (r.value is None and m.value is None) or (
+                r.value is not None and m.value is not None and
+                contract.normalise(name, r.value) == contract.normalise(name, m.value)):
             chosen, src = r, ("both" if m is not None and r.value is not None else "rules")
-            if m is not None and r.value is None and m.value is None:
-                chosen = Found(name, None, "absent", m.reason or r.reason)
+            if m is not None and r.value is None and m.value is None:  # both absent: keep the model's reason
+                chosen = Found(name, None, "absent", m.reason or r.reason)  # (cut_off, unreadable, ...)
                 src = "none"
         elif r.value is not None and m.value is not None:  # they disagree: keep the rules' value, review
             chosen, src = r, "rules"
@@ -145,7 +147,8 @@ def main(argv: list[str] | None = None) -> None:
         want = d.fields.get(name)
         mark = "ok" if compare.correct(name, f.value, want) else f"WRONG (true: {want})"
         flags = f"  [{'; '.join(dec.flags[name])}]" if name in dec.flags else ""
-        print(f"  {name:<15} {str(f.value):<14} from {dec.source[name]:<5} {f.status:<10} {mark}{flags}")
+        shown = f.value if f.value is not None else f"({f.reason or 'absent'})"
+        print(f"  {name:<15} {shown:<14} from {dec.source[name]:<5} {f.status:<10} {mark}{flags}")
 
 
 if __name__ == "__main__":

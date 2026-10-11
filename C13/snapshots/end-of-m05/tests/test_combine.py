@@ -26,4 +26,5 @@ def test_a_value_the_page_does_not_show_is_marked_unverified():
     d = next(d for d in documents.receipts() if d.truth.get("printed_but_cut_off") == ["total", "payment_method"])
     ex, dec = combine.combine(d)
     assert ex.value("total") is None  # cut off: nobody invents it
+    assert ex.fields["total"].reason == "cut_off"  # and the reason is kept
     assert any(f.startswith("unverified") for f in dec.flags.get("currency", []))

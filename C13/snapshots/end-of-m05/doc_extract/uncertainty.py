@@ -9,6 +9,8 @@ Signals (all measurable, none of them is the model's opinion of itself):
   conflict        two pages of the same file show different values for one field
   unverified      the model gave a value that cannot be found on the page (a guess or a deduction)
   model_absent    the model said a value is absent; its reason is kept (cut_off, unreadable, ...)
+  wrong_reason    an absent value whose reason the contract does not allow for that field (a receipt
+                  always prints its shop and date: they can be cut_off or unreadable, never not_printed)
 """
 
 from __future__ import annotations
@@ -61,6 +63,21 @@ def conflicts(pages: list[Page]) -> list[str]:
     return out
 
 
+def field_signals(ex) -> list[str]:
+    """Absent values with a reason worth a person's look: the picture lost them, or the reason given
+    is one the extraction contract does not allow for that field."""
+    out = []
+    for name, f in ex.fields.items():
+        if f.value is not None or f.reason in ("not_found", ""):  # found, or the rules simply did not see it
+            continue
+        allowed = contract.FIELDS[name].may_be_missing
+        if f.reason not in allowed:
+            out.append(f"{name}: absent ({f.reason}), but the contract allows only: {', '.join(allowed)}")
+        elif f.reason != "not_printed":
+            out.append(f"{name}: absent ({f.reason})")
+    return out
+
+
 def main(argv: list[str] | None = None) -> None:
     from doc_extract import combine, documents
 
@@ -72,15 +89,14 @@ def main(argv: list[str] | None = None) -> None:
         s.flags += conflicts(ex.pages)
         for name, fl in dec.flags.items():
             s.flags += [f"{name}: {x}" for x in fl if x.startswith(("unverified", "conflict"))]
-        for name, f in ex.fields.items():
-            if f.value is None and f.reason not in ("not_found", "not_printed", ""):
-                s.flags.append(f"{name}: absent ({f.reason})")
+        s.flags += field_signals(ex)
         if len(docs) == 1:
             print(f"{d.doc_id}  {d.file}: {s.chars} characters, mean score {s.mean_score}, text about {s.text_px} px high")
             for fl in s.flags or ["no uncertainty signal"]:
                 print(f"  {fl}")
             for name, f in ex.fields.items():
-                print(f"  {name:<15} {str(f.value):<14} {f.status}")
+                shown = f.value if f.value is not None else f"({f.reason or 'absent'})"
+                print(f"  {name:<15} {shown:<14} {f.status}")
         else:
             print(f"{d.doc_id}  {d.source:<11} {s.mean_score:>5}  {'; '.join(s.flags)[:110]}")
 
