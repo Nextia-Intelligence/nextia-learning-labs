@@ -27,3 +27,5 @@ Each extension comes only after the core works, and each has its own course to c
 | Custom model | a small fine-tuned or distilled model served locally for the answer step, to cut cost and keep documents on the computer | the custom-model serving course | the same held-out report, the cost per question, and the p95 time on the same laptop |
 | Agent | an assistant that drafts a reply to the customer and asks staff to approve it (never sends alone) | the agents course | a test that it never acts without approval, and the held-out report of the drafts |
 | MCP server | the assistant's search as an MCP tool for other AI clients, with the same per-shop access checks | the MCP course | the isolation checks run through the MCP tool: 0 leaks |
+
+If I build one, I start with the MCP server: its first evidence reuses the isolation checks that already exist. The agent comes last, and only after B34 is fixed and measured on a new held-out set.

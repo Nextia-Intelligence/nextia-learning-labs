@@ -51,7 +51,7 @@ One API process (FastAPI) serves the page, checks every caller, runs the answer 
 
 ```
 browser (one plain page) --cookie--> API: identify -> membership -> route
-                                       |-- answer pipeline: retrieve (vectors + keywords, reranked) -> assemble
+                                       |-- answer pipeline: retrieve (vectors + keywords, fused) -> assemble
                                        |                    -> model (recorded | live) -> check citations -> store
                                        |-- ingestion worker: parse -> chunk -> embed -> save (one transaction)
                                        '-- PostgreSQL + pgvector (row-level security per shop)
@@ -62,7 +62,7 @@ The design pack has the details: `docs/design-pack/architecture.md` (components,
 | Setting (.env) | Default | What it does |
 |---|---|---|
 | `ANSWER_PROVIDER` | `recorded` | `recorded` (the course team's answers; mock for other questions), `mock` (no model), `live` (`LLM_BASE_URL` + `LLM_API_KEY`, any OpenAI-compatible endpoint) |
-| `RETRIEVAL_MODE` | `hybrid_rerank` | `dense` (vectors only) or `hybrid_rerank` (vectors + keywords, fused, reread by a cross-encoder) |
+| `RETRIEVAL_MODE` | `hybrid` | `dense` (vectors only), `hybrid` (vectors + keywords, fused), `dense_rerank` or `hybrid_rerank` (then reread by a cross-encoder: measured, not better here, about 0.4 s slower) |
 | `PROMPT_VERSION` | `answer_v2` | the answer prompt in `doc_assistant/prompts/` |
 | `ASSISTANT_TODAY` | `2026-10-11` | the course's "today" (empty = the real date): policies change with the date |
 | `DAILY_QUESTION_LIMIT`, `MONTHLY_BUDGET_USD` | 200, 5 | usage limits per shop (0 = no limit) |
@@ -72,9 +72,11 @@ The design pack has the details: `docs/design-pack/architecture.md` (components,
 
 Every document, shop and person is made up for the course: see `data/dataset.md` (CC0). Larkfield's 36 documents are the RAG course's policy collection; Bramble Books' 15 were written for this course with the same difficulties (two versions of a policy, a contradiction, a table-only answer, staff-only procedures, an instruction hidden in a supplier's document). The 103 questions in `evaluation/` were written by people, not by a model; 41 of them were reserved as the held-out set before any tuning (`evaluation/heldout.lock`).
 
-The two local models: `intfloat/multilingual-e5-small` (MIT) for the vectors and `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (Apache-2.0) for reranking, both pinned to one revision. The recorded answers in `recordings/` were made with chat-small (Azure OpenAI).
+The two local models: `intfloat/multilingual-e5-small` (MIT) for the vectors and `cross-encoder/mmarco-mMiniLMv2-L12-H384-v1` (Apache-2.0) for the optional reranking, both pinned to one revision. The recorded answers in `recordings/` were made with chat-small (Azure OpenAI).
 
 ## Evaluation
+
+On the 41 held-out questions (real answers of chat-small, recorded): 36 correct, every citation valid, 5 of the 6 questions that need a "no answer" refused, 0 of 2 hidden instructions followed, about 1.3 s and US$0.00017 per question. The isolation checks found 0 leaks (430 probes in the report's run). The one improvement, keyword search next to the vectors, gained on the tuning questions but not on the held-out ones: it is kept because it is no worse at the same cost, not because it is better.
 
 See `docs/evaluation-report.md`: the held-out results, the isolation and failure checks, the error categories and the one improvement, with its regressions and costs. Run it again: `python -m scripts.evaluate --set heldout` (recorded answers: the same numbers without a key).
 
@@ -86,6 +88,11 @@ See `docs/evaluation-report.md`: the held-out results, the isolation and failure
 - The practice identity provider asks for no password. The session cookie lasts up to 8 hours and cannot be revoked earlier; removing a membership takes effect at once.
 - The cloud deployment steps in `docs/deployment.md` were written but not run by the course team.
 - The keys of the question set are strict regular expressions written by one person: read the failures before you trust a number.
+- Known failures: asked at Bramble Books about Larkfield's goodwill credit (held-out question B34), it answers with Bramble's own limit instead of saying that it only knows Bramble's documents. No data leaks, but the acceptance criterion "always says no answer when it should" is not met. With keyword search, one French table question (Q37) lost its answer.
+
+## Status
+
+Complete: one journey for two shops, sign-in and roles, row-level security, failure handling, deletion, a held-out evaluation, and a reproducible local demo with CI, usage limits and a tested rollback. Planned, not done: a cloud deployment, French tuning questions, a fix for B34, and the extensions in `docs/reflection.md`. Every claim and its evidence: `docs/portfolio-checklist.md`. The five-minute demo: `docs/demo-script.md`.
 
 ## Licence
 
