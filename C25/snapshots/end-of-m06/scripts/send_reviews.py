@@ -40,6 +40,8 @@ def due(now: float, delay: float, done: set[str]) -> list[dict]:
 
 
 def send(client: httpx.Client, rows: list[dict], share: float, rng: random.Random) -> tuple:
+    if not rows:  # nothing is old enough yet (or no practice ticket was sent)
+        return 0, 0
     truth = labels()
     sent = skipped = 0
     with DONE.open("a", encoding="utf-8") as out:
