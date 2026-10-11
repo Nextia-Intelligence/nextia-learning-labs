@@ -28,6 +28,7 @@ def test_the_prepared_data_is_the_same_every_time(tmp_path):
     assert m["train"]["sha256_12"] == saved["train"]["sha256_12"]
     assert m["rejected"] == {"duplicate": 23, "evaluation leak": 1, "known wrong label": 70}
     assert (m["train"]["records"], m["val"]["records"]) == (900, 100)
+    assert m["uncovered"] == ["French", "H2", "H3", "H4", "H5"]
 
 
 def test_validation_and_training_share_no_ticket_and_no_evaluation_case(tmp_path):

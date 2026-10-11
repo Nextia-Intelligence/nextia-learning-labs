@@ -63,7 +63,8 @@ def load_extra(path: Path) -> list[dict]:
             r = json.loads(line)
             rows.append({"id": r["id"], "text": r["text"], "team": r["team"], "style": r.get("style", ""),
                          "needs_human": bool(r["needs_human"]), "rule": r.get("rule", ""),
-                         "label_how": r.get("label_how", ""), "source": r.get("source", "extra")})
+                         "label_how": r.get("label_how", ""), "source": r.get("source", "extra"),
+                         "language": r.get("language", "en")})
     return rows
 
 
@@ -145,6 +146,17 @@ def coverage(rows: list[dict]) -> dict:
     }
 
 
+RULES = ("H1", "H2", "H3", "H4", "H5")
+
+
+def uncovered(rows: list[dict]) -> list[str]:
+    """The scenarios of the evaluation cases that no record in rows shows: French, and each needs-a-person rule.
+    The source tickets are all in English (they have no language field)."""
+    seen = {r.get("rule") for r in rows if r["needs_human"]}
+    french = any(r.get("language", "en") == "fr" for r in rows)
+    return ([] if french else ["French"]) + [rule for rule in RULES if rule not in seen]
+
+
 def sha12(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()[:12]
 
@@ -179,4 +191,5 @@ def prepare(per_team: int | None = 200, val_share: float = 0.1, seed: int = SEED
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     manifest["rejected_rows"] = rejected
+    manifest["uncovered"] = uncovered(train)  # printed, not written: the manifest describes the files
     return manifest

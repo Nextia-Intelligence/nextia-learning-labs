@@ -150,6 +150,22 @@ def cmd_record(args):
 
 # Module 2, lesson 3: clean, split, check for leakage
 
+def describe_uncovered(missing: list[str]) -> str:
+    """["French", "H2", "H3", "H4", "H5"] -> "French tickets, and needs-a-person rules H2 to H5"."""
+    nums = [int(x[1:]) for x in missing if x.startswith("H")]
+    runs = []
+    for n in nums:
+        if runs and n == runs[-1][1] + 1:
+            runs[-1][1] = n
+        else:
+            runs.append([n, n])
+    words = [w for a, b in runs for w in ([f"H{a} to H{b}"] if b > a + 1 else [f"H{n}" for n in range(a, b + 1)])]
+    rules = " and ".join([", ".join(words[:-1]), words[-1]] if len(words) > 1 else words)
+    parts = (["French tickets"] if "French" in missing else []) + (
+        [f"needs-a-person rule{'s' if len(nums) > 1 else ''} {rules}"] if nums else [])
+    return ", and ".join(parts) if parts else "nothing (French and every rule have a record)"
+
+
 @command("prepare", "clean the training tickets and write data/prepared/",
          arg("--per-team", type=int, default=200, help="records per team before the split (0 = all)"),
          arg("--extra", help="a JSONL file of extra records to add before cleaning"),
@@ -170,7 +186,7 @@ def cmd_prepare(args):
         p = m[part]
         teams = ", ".join(f"{k} {v}" for k, v in p["teams"].items())
         print(f"{part:5s} {p['records']:4d} records  ({teams}; needs a person {p['needs_human']})")
-    print("Not covered by any training record: French tickets, and needs-a-person rules H2 to H5")
+    print(f"Not covered by any training record: {describe_uncovered(m['uncovered'])}")
     print("Wrote data/prepared/train.jsonl, val.jsonl, rejected.jsonl and manifest.json")
 
 
