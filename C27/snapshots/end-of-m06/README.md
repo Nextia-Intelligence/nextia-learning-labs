@@ -24,7 +24,7 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env                    # then change POSTGRES_PASSWORD (and the two URLs) in .env
 python -m idp init                      # the practice identity provider's keys; writes two secrets to .env
-docker compose up -d db                 # PostgreSQL with pgvector
+docker compose up -d --wait db          # PostgreSQL with pgvector; --wait: until it is ready
 python -m scripts.load_pack             # the two shops, their people and their 51 documents (downloads the models once)
 ```
 

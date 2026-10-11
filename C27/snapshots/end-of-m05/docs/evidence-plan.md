@@ -1,6 +1,6 @@
 # Evidence plan: the document assistant
 
-Sam's plan from Module 1. For every claim in the README and the demo, the artifact that proves it. A claim without evidence is not made.
+Sam's plan from Module 1. For every claim in the README and the demo, the artifact that proves it. A claim without evidence is not made. Changed in Module 5: the claim "One change improved it, with evidence" became "One change was tested with evidence", because the held-out set did not show an improvement (see `docs/evaluation-report.md`).
 
 ## Claims and evidence
 
@@ -12,7 +12,7 @@ Sam's plan from Module 1. For every claim in the README and the demo, the artifa
 | It says "no answer" instead of guessing | abstention on the held-out unanswerable and other-shop questions | 5 |
 | Bad files, repeated uploads and a slow model are handled | `python -m scripts.failure_cases`; `tests/test_failures.py` | 4 |
 | Deleting a document removes everything | `tests/test_deletion.py` | 4 |
-| One change improved it, with evidence | the evaluation report: baseline against candidate on the held-out questions | 5 |
+| One change was tested with evidence | the evaluation report: baseline against candidate on the held-out questions | 5 |
 | It runs from a clean environment | the CI workflow and the smoke test; the Compose demo | 6 |
 | It costs under US$0.001 per question | the cost per question in the evaluation report (recorded token counts × the price list) | 5 |
 

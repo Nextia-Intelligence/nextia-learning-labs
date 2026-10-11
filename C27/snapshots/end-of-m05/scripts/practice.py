@@ -16,7 +16,8 @@ ISSUER = "http://localhost:8400"
 def practice_tokens():
     """Tokens signed by a throw-away practice provider, and a validator that trusts only it."""
     # the scripts print their own summary, not every request, model load or PDF warning
-    for name in ("doc_assistant.access", "httpx", "sentence_transformers"):
+    # (the test client logs every request through "httpx2")
+    for name in ("doc_assistant.access", "httpx", "httpx2", "sentence_transformers"):
         logging.getLogger(name).setLevel(logging.WARNING)
     logging.getLogger("pypdf").setLevel(logging.ERROR)
     from idp.store import Store

@@ -1,4 +1,4 @@
--- The capstone's core schema (designed in Module 2, applied from Module 3).
+-- The capstone's core schema (designed and applied in Module 2).
 -- Every table that holds a shop's data has tenant_id, and every key that points at another
 -- shop's row includes it: a chunk cannot belong to a document of another shop.
 CREATE EXTENSION IF NOT EXISTS vector;

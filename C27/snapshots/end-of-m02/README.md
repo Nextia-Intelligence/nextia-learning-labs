@@ -8,7 +8,7 @@ The data and the design are ready, before any integration is built: a two-shop d
 python3 -m venv .venv && source .venv/bin/activate      # Windows: py -3.12 -m venv .venv; .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 cp .env.example .env                                     # Windows: copy .env.example .env; then change the password
-docker compose up -d db                                  # PostgreSQL 18 with pgvector
+docker compose up -d --wait db                           # PostgreSQL 18 with pgvector; --wait: until it is ready
 python -m scripts.datapack                               # checksums, every document parses, the difficulties
 python -m doc_assistant.migrate                          # applies migrations/001_core.sql
 python -m pytest
@@ -24,4 +24,4 @@ python -m pytest
 
 ## Reset
 
-`docker compose down --volumes` deletes the database; `docker compose up -d db` and `python -m doc_assistant.migrate` make it again.
+`docker compose down --volumes` deletes the database; `docker compose up -d --wait db` and `python -m doc_assistant.migrate` make it again.

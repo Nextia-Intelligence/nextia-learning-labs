@@ -9,7 +9,7 @@ python3 -m venv .venv && source .venv/bin/activate      # Windows: py -3.12 -m v
 pip install -r requirements.txt
 cp .env.example .env                                     # then change the password
 python -m idp init                                       # the practice identity provider's keys; two secrets go into .env
-docker compose up -d db
+docker compose up -d --wait db                           # --wait: until the database is ready
 python -m scripts.load_pack
 python -m scripts.failure_cases                          # the four failure cases, for real
 python -m pytest

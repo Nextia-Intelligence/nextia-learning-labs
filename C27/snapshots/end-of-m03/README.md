@@ -9,7 +9,7 @@ python3 -m venv .venv && source .venv/bin/activate      # Windows: py -3.12 -m v
 # Linux without a GPU: pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 cp .env.example .env                                     # then change the password
-docker compose up -d db
+docker compose up -d --wait db                           # --wait: until the database is ready
 python -m scripts.load_pack                              # migrations, the two shops and their 51 documents (downloads the models once)
 python -m scripts.ask "How long is a gift card valid?" --tenant bramble
 fastapi dev doc_assistant/main.py                        # the page: http://127.0.0.1:8000

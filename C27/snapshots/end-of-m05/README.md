@@ -8,7 +8,7 @@ The assistant is measured on the held-out questions, the isolation checks run on
 python3 -m venv .venv && source .venv/bin/activate      # Windows: py -3.12 -m venv .venv; .venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 cp .env.example .env && python -m idp init
-docker compose up -d db
+docker compose up -d --wait db                           # --wait: until the database is ready
 python -m scripts.load_pack
 python -m scripts.isolation                              # must say 0 leaks
 python -m scripts.evaluate --set heldout                 # recorded answers: the report's numbers, without a key
