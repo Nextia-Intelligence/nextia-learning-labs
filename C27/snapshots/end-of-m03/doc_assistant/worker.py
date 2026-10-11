@@ -129,7 +129,7 @@ def main() -> None:
 
     s = settings()
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
-    db = Database(s.database_url, s.app_db_role)
+    db = Database(s.database_url)
     db.open()
     stop = threading.Event()
     signal.signal(signal.SIGTERM, lambda *_: stop.set())

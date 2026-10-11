@@ -21,20 +21,25 @@ def main(argv: list[str] | None = None) -> int:
     spans = [json.loads(x) for x in path.read_text(encoding="utf-8").splitlines() if x.strip()]
     wanted = argv[0] if argv else "last"
     if wanted == "last":
-        roots = [s for s in spans if s["parent_id"] is None and s["name"] == "ask"]
-        if not roots:
+        # The latest question: its "ask" span is the root in a script, and inside the request's
+        # spans (FastAPI makes them) in the API.
+        asks = [s for s in spans if s["name"] == "ask"]
+        if not asks:
             print("No question in the traces yet.")
             return 1
-        wanted = roots[-1]["trace_id"]
+        wanted = max(asks, key=lambda s: s["end_ns"])["trace_id"]
     mine = sorted((s for s in spans if s["trace_id"] == wanted), key=lambda s: s["start_ns"])
     if not mine:
         print(f"No trace {wanted}.")
         return 1
+    by_id = {s["span_id"]: s for s in mine}
     t0 = mine[0]["start_ns"]
     total = max(s["end_ns"] for s in mine) - t0
     print(f"trace {wanted}: {total / 1e6:.0f} ms")
     for s in mine:
-        depth = 0 if s["parent_id"] is None else 1
+        depth, parent = 0, s["parent_id"]
+        while parent in by_id:
+            depth, parent = depth + 1, by_id[parent]["parent_id"]
         start = (s["start_ns"] - t0) / 1e6
         bar = " " * int(40 * (s["start_ns"] - t0) / total) + "#" * max(1, int(40 * (s["end_ns"] - s["start_ns"]) / total))
         attrs = ", ".join(f"{k}={v}" for k, v in s["attributes"].items())
