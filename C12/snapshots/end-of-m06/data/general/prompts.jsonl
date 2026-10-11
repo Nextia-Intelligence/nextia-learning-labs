@@ -1,0 +1,20 @@
+{"id": "g01", "prompt": "What is the capital of France? Answer in one word.", "expected_any": ["paris"]}
+{"id": "g02", "prompt": "What is 7 + 5? Answer with a number only.", "expected_any": ["12"]}
+{"id": "g03", "prompt": "Translate 'thank you' into French.", "expected_any": ["merci"]}
+{"id": "g04", "prompt": "Name a colour of the sky on a clear day. One word.", "expected_any": ["blue"]}
+{"id": "g05", "prompt": "What is the opposite of 'hot'? One word.", "expected_any": ["cold"]}
+{"id": "g06", "prompt": "How many days are in a week? Answer with a number.", "expected_any": ["7", "seven"]}
+{"id": "g07", "prompt": "Which animal says 'moo'? One word.", "expected_any": ["cow"]}
+{"id": "g08", "prompt": "What is the plural of 'mouse'?", "expected_any": ["mice"]}
+{"id": "g09", "prompt": "Complete the sentence: The sun rises in the ...", "expected_any": ["east"]}
+{"id": "g10", "prompt": "Write the word 'garden' in capital letters.", "expected_any": ["GARDEN"]}
+{"id": "g11", "prompt": "What is 10 times 3? Answer with a number only.", "expected_any": ["30"]}
+{"id": "g12", "prompt": "Which month comes after March?", "expected_any": ["april"]}
+{"id": "g13", "prompt": "What do bees make? One word.", "expected_any": ["honey"]}
+{"id": "g14", "prompt": "Is ice cold or hot? One word.", "expected_any": ["cold"]}
+{"id": "g15", "prompt": "What colour is a ripe banana? One word.", "expected_any": ["yellow"]}
+{"id": "g16", "prompt": "Name the largest planet in our solar system.", "expected_any": ["jupiter"]}
+{"id": "g17", "prompt": "How many legs does a spider have? Answer with a number.", "expected_any": ["8", "eight"]}
+{"id": "g18", "prompt": "What is the freezing point of water in degrees Celsius? Answer with a number.", "expected_any": ["0", "zero"]}
+{"id": "g19", "prompt": "Write a short greeting to a customer named Ana.", "expected_any": ["ana"]}
+{"id": "g20", "prompt": "Say 'good morning' in Spanish.", "expected_any": ["buenos"]}

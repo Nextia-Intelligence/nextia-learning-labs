@@ -1,0 +1,18 @@
+# Published list prices, in US dollars, before tax and without discounts. Prices change: check the
+# current price page before you use them. Source: the Azure Retail Prices API
+# (https://prices.azure.com/api/retail/prices), region East US 2, read on 2026-10-11.
+
+checked = "2026-10-11"
+
+[chat_small]
+# The hosted model of the support assistant (gpt-6-luna, Global Standard). It has no fine-tuning price
+# in the list: it cannot be fine-tuned there.
+input_per_1m = 0.10
+output_per_1m = 0.50
+
+[nano_fine_tuned]
+# gpt-4.1-nano, a small hosted model that CAN be fine-tuned (Global). Not used in this course.
+training_per_1m_tokens = 1.50
+hosting_per_hour = 1.70
+input_per_1m = 0.10
+output_per_1m = 0.40

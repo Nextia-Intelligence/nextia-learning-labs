@@ -1,0 +1,26 @@
+# The second run: lora-r8 with ONE change, 6 epochs instead of 2. The first run never sent a ticket to a
+# person on the dev cases, and its validation loss was still falling at its last step.
+# Train with: python -m adapt train configs/lora-r8-long.toml (about 18 minutes)
+name = "lora-r8-long"
+seed = 12
+threads = 2                 # CPU threads: the run must leave the rest of the computer usable
+
+[data]
+train = "data/prepared/train.jsonl"   # from: python -m adapt prepare (900 records)
+val = "data/prepared/val.jsonl"       # 100 records, the same teams, never trained on
+max_tokens = 320            # longer examples lose the end of the ticket text, never the answer
+
+[lora]
+rank = 8
+alpha = 16                  # the update is scaled by alpha / rank = 2
+dropout = 0.05
+targets = ["q_proj", "v_proj"]
+
+[train]
+learning_rate = 2e-4
+batch_size = 8
+epochs = 6                  # the one change from lora-r8 (2 epochs): its validation loss was still falling
+eval_every = 25             # steps between validation losses
+checkpoint_every = 50       # steps between checkpoints (a stopped run loses at most 50 steps)
+gradient_checkpointing = true   # less memory, about 20% more time
+keep_checkpoints = 2

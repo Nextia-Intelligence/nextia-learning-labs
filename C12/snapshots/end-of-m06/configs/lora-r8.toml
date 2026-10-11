@@ -1,0 +1,25 @@
+# The course's main run: a LoRA adapter of rank 8 on the attention's query and value layers.
+# Every setting that changes the result is here. Train with: python -m adapt train configs/lora-r8.toml
+name = "lora-r8"
+seed = 12
+threads = 2                 # CPU threads: the run must leave the rest of the computer usable
+
+[data]
+train = "data/prepared/train.jsonl"   # from: python -m adapt prepare (900 records)
+val = "data/prepared/val.jsonl"       # 100 records, the same teams, never trained on
+max_tokens = 320            # longer examples lose the end of the ticket text, never the answer
+
+[lora]
+rank = 8
+alpha = 16                  # the update is scaled by alpha / rank = 2
+dropout = 0.05
+targets = ["q_proj", "v_proj"]
+
+[train]
+learning_rate = 2e-4
+batch_size = 8
+epochs = 2
+eval_every = 25             # steps between validation losses
+checkpoint_every = 50       # steps between checkpoints (a stopped run loses at most 50 steps)
+gradient_checkpointing = true   # less memory, about 20% more time
+keep_checkpoints = 2
