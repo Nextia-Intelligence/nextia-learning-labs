@@ -1,6 +1,6 @@
 """Running costs, side by side: the hosted model now, the local adapter, a hosted fine-tune (Module 5).
 
-Three kinds of number, each labelled: measured (saved runs), price (prices.toml, dated), assumption.
+Three kinds of number, each labelled: measured (saved runs), price (prices.toml, list prices that change), assumption.
 """
 
 import json
@@ -12,6 +12,7 @@ from .cases import load_cases
 
 ROOT = Path(__file__).resolve().parents[1]
 HOURS_PER_MONTH = 730
+DAY_NOTE = {822: "assumption: Larkfield's average day"}
 
 
 def load_prices(path: Path = ROOT / "prices.toml") -> dict:
@@ -43,7 +44,7 @@ def report(tickets_per_day: int, run: str = "lora-r8-long") -> list[str]:
     nano = prices["nano_fine_tuned"]
     train_tokens = summary["train_tokens"]
     return [
-        f"{tickets_per_day} tickets a day (assumption: Larkfield's average day).",
+        f"{tickets_per_day} tickets a day ({DAY_NOTE.get(tickets_per_day, 'assumption')}).",
         "",
         "Hosted model now (chat-small, recorded run, dev):",
         f"  measured: US${per_ticket * 1000:.2f} per 1,000 tickets (median {tin:.0f} tokens in, {tout:.0f} out)",
@@ -54,7 +55,7 @@ def report(tickets_per_day: int, run: str = "lora-r8-long") -> list[str]:
         "  assumption: it runs on a computer you already have; its price, power and upkeep are not counted",
         f"  measured: training took {summary['train_seconds'] / 60:.1f} minutes once ({train_tokens:,} tokens seen)",
         "",
-        f"Hosted fine-tune (price list of {prices['checked']}; not run in this course):",
+        "Hosted fine-tune (list prices from prices.toml; prices change: check the current page; not run here):",
         "  price: training gpt-4.1-nano on the same tokens: "
         f"US${train_tokens / 1e6 * nano['training_per_1m_tokens']:.2f}",
         f"  price: hosting the fine-tuned model: US${nano['hosting_per_hour']:.2f} an hour = "

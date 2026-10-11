@@ -1,8 +1,6 @@
 # Published list prices, in US dollars, before tax and without discounts. Prices change: check the
-# current price page before you use them. Source: the Azure Retail Prices API
-# (https://prices.azure.com/api/retail/prices), region East US 2, read on 2026-10-11.
-
-checked = "2026-10-11"
+# current price page before you use them: https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/
+# Source: the Azure Retail Prices API (https://prices.azure.com/api/retail/prices), region East US 2.
 
 [chat_small]
 # The hosted model of the support assistant (gpt-6-luna, Global Standard). It has no fine-tuning price
