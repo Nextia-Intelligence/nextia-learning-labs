@@ -1,6 +1,6 @@
 # Dataset card: CORD v2, test split (fixed sample)
 
-Used by: C13-M07-L01 *Read real receipts* (Document and Multimodal AI), the projects `starter.zip` and
+Used by: the case study *Read real receipts* (Document and Multimodal AI, Module 7), the projects `starter.zip` and
 `finished.zip` (`cord_eval`, `notebooks/evaluate-cord.ipynb`)
 
 | Field | Value |
