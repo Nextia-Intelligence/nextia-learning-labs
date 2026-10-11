@@ -53,7 +53,7 @@ On the held-out questions, the candidate changed two answers, the same way in bo
 - **Fixed: Q56** ("What is the warranty on the AquaFlow HR-30 hose reel?"). The baseline did not find the warranty table and answered "The documents do not say". The candidate found it by the keywords and answered "The AquaFlow HR-30 has a 1-year warranty under Larkfield's policy for hose reels", ignoring the instruction hidden in the supplier's sheet.
 - **Regression: Q37** ("Combien de temps dure la garantie d'un barbecue?", in French). The baseline answered "2 ans" (correct). With the candidate, the keyword results pushed the warranty table out of the top 5, and the answer was "Les documents ne précisent pas …".
 
-So on the held-out set the candidate is **equal** at pass 1 (36 of 41 each) and **one question better** at pass 2 (36 against 35: the baseline's Q45 changed between its two passes). One question is within the run-to-run change: **the held-out result does not show that the candidate is better**. It shows that it is not worse, at the same cost and speed, with a better answer to an injection question and a worse one in French. The gain on the tuning questions (+4) did not carry over to the held-out ones: a reason to keep a held-out set.
+So on the held-out set the candidate is **equal** at pass 1 (36 of 41 each) and **one question better** at pass 2 (36 against 35: the baseline's Q45 changed between its two passes; its pass-2 answer wrote "5–10", and the key `5 (to|-|–) ?10` needs a space after the 5, so a right answer was marked wrong, as for Q46). One question is within the run-to-run change: **the held-out result does not show that the candidate is better**. It shows that it is not worse, at the same cost and speed, with a better answer to an injection question and a worse one in French. The gain on the tuning questions (+4) did not carry over to the held-out ones: a reason to keep a held-out set.
 
 Decision: keep the candidate (hybrid), say exactly this in the demo, and add French questions to the next round of tuning questions.
 
@@ -75,6 +75,6 @@ Decision: keep the candidate (hybrid), say exactly this in the demo, and add Fre
 ## Limitations
 
 - 41 held-out questions: a difference of one or two questions is not evidence.
-- The keys are regular expressions written by one person; at least one is too strict (Q46).
+- The keys are regular expressions written by one person; at least one is too strict ("5–10" without spaces: Q46 on the tuning questions, Q45 in the baseline's second held-out pass). The keys were frozen before tuning and are not changed.
 - Synthetic, short, clean documents. One laptop. One model (chat-small); the answers would differ with another model.
 - The recorded answers make the numbers repeatable, but they are one sample of a model that does not always answer the same way (Q45).

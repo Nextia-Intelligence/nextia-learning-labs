@@ -17,6 +17,7 @@ staff-only passage. The API runs in this process with practice tokens (no server
 
 import argparse
 import json
+import logging
 from dataclasses import replace
 
 from fastapi.testclient import TestClient
@@ -110,7 +111,16 @@ def database_checks(deps) -> dict:
     return {"database_probes": probes, "database_rows_of_other_shop": leaks}
 
 
+def quiet() -> None:
+    """Print the summary only: importing the API turns on its request log, and the test client and the
+    model download log every HTTP request. Warnings and errors still show."""
+    for name in ("httpx", "httpx2", "huggingface_hub", "sentence_transformers", "doc_assistant.access"):
+        logging.getLogger(name).setLevel(logging.WARNING)
+    logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
+
+
 def main(argv: list[str] | None = None) -> int:
+    quiet()
     parser = argparse.ArgumentParser(prog="python -m scripts.isolation")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
