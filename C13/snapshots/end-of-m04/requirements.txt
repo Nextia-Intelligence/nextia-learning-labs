@@ -1,0 +1,16 @@
+# PDF text layer with coordinates (MIT; brings pdfminer.six) and PDF pages as pictures (PDFium, Apache-2.0/BSD)
+pdfplumber==0.11.10
+pypdfium2==5.14.0
+# PDF structure: encryption, damaged files (BSD)
+pypdf==6.20.0
+# The course's document generator writes PDFs (BSD)
+reportlab==5.0.1
+# Pictures (MIT-CMU) and spreadsheets (MIT)
+pillow==12.3.0
+openpyxl==3.1.5
+# OCR on the CPU: RapidOCR with its PP-OCR models inside the package (Apache-2.0), on ONNX Runtime (MIT)
+rapidocr==3.10.0
+onnxruntime==1.31.0
+numpy==2.5.4
+# Only for an optional live call to a vision model with your own key (Apache-2.0)
+openai==3.28.0

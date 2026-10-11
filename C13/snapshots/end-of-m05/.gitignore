@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+out/
+data/documents/
+data/truth.jsonl
+data/SHA256SUMS.generated
+.env
+review.db
