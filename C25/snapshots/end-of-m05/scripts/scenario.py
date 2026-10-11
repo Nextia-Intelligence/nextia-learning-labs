@@ -18,7 +18,7 @@ RATE_LIMIT_PER_MINUTE=0), two workers (python -m ticket_api.worker), with teleme
 (TELEMETRY_FILE and, for the alerts, the Grafana stack). The scenario writes its own actions
 to practice/actions.jsonl in the telemetry format (event practice.action), so that python -m
 ops can show them on the same timeline. Time runs faster than in real life: 2 tickets a second
-is about 140 times Larkfield's average (822 a day).
+is about 210 times Larkfield's average (822 a day).
 """
 
 import argparse

@@ -22,7 +22,7 @@ The service ran on one laptop with PostgreSQL, Valkey, the simulated AI provider
 
 ## Limitations and cautions
 
-- Time is compressed: the scenarios send about 140 times Larkfield's average traffic, so "minutes" in the files are practice minutes. The service's objectives count tickets, not days, for this reason.
+- Time is compressed: the scenarios send about 210 times Larkfield's average traffic, so "minutes" in the files are practice minutes. The service's objectives count tickets, not days, for this reason.
 - The same 268 tickets come back again and again, so a rare recorded answer (for example the one answer without text of prompt v2) appears many times.
 - The agents' reviews are the labels that the evaluation course gave the tickets; they arrive 120 to 300 seconds after the ticket here, not hours or days.
 - Traces are sampled at 10% in `normal-week` and `drift`, and kept at 100% in the other scenarios. Logs and metrics count every ticket.

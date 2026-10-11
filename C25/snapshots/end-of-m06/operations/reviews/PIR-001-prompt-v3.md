@@ -4,7 +4,7 @@ A post-incident review: what happened, why, and what stops it from happening aga
 no person. The numbers come from the practice replay of the incident
 (`release-full.jsonl.gz` in the course's saved telemetry: a practice incident that we caused
 on purpose, with the evaluation course's real recorded answers). The replay sends tickets
-about 140 times faster than Larkfield's real traffic: 1,798 tickets with prompt v3 is about
+about 210 times faster than Larkfield's real traffic: 1,798 tickets with prompt v3 is about
 two days of Larkfield's tickets (822 a day).
 
 | | |
