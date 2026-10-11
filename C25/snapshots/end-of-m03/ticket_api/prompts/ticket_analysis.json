@@ -1,0 +1,116 @@
+{
+  "type": "json_schema",
+  "json_schema": {
+    "name": "ticket_analysis",
+    "strict": true,
+    "schema": {
+      "$defs": {
+        "OrderRef": {
+          "additionalProperties": false,
+          "properties": {
+            "order_id": {
+              "description": "The order ID exactly as the ticket writes it.",
+              "pattern": "^LK-\\d{6}$",
+              "title": "Order Id",
+              "type": "string"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "enum": [
+                    "processing",
+                    "shipped",
+                    "delivered",
+                    "return_requested",
+                    "return_received",
+                    "refunded",
+                    "cancelled"
+                  ],
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Only from an order lookup result; otherwise null.",
+              "title": "Status"
+            }
+          },
+          "required": [
+            "order_id",
+            "status"
+          ],
+          "title": "OrderRef",
+          "type": "object"
+        }
+      },
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "enum": [
+            "en",
+            "fr"
+          ],
+          "title": "Language",
+          "type": "string"
+        },
+        "team": {
+          "enum": [
+            "delivery",
+            "returns",
+            "payment",
+            "warranty",
+            "account"
+          ],
+          "title": "Team",
+          "type": "string"
+        },
+        "needs_human": {
+          "title": "Needs Human",
+          "type": "boolean"
+        },
+        "reason": {
+          "maxLength": 300,
+          "title": "Reason",
+          "type": "string"
+        },
+        "confidence": {
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "title": "Confidence",
+          "type": "string"
+        },
+        "order": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/OrderRef"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "reply": {
+          "maxLength": 1200,
+          "minLength": 1,
+          "title": "Reply",
+          "type": "string"
+        }
+      },
+      "required": [
+        "language",
+        "team",
+        "needs_human",
+        "reason",
+        "confidence",
+        "order",
+        "reply"
+      ],
+      "title": "TicketAnalysis",
+      "type": "object"
+    }
+  }
+}

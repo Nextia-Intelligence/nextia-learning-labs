@@ -1,0 +1,225 @@
+# Alert rules of the ticket service (Grafana file provisioning). The same rules,
+# for saved telemetry, are in operations/alerts.toml (python -m ops alerts).
+apiVersion: 1
+groups:
+  - orgId: 1
+    name: "AI quality and cost"
+    folder: "Ticket service"
+    interval: "10s"
+    rules:
+      - uid: "no-answer"
+        title: "Answers without text"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(app_tickets_triaged_total{outcome=~\"no_answer|sent_to_person\"}[5m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-2"
+          owner: "Priya"
+          service: "ticket-api"
+        annotations:
+          summary: "The model used all its tokens and wrote nothing: the ticket has no team, no needs-a-person decision and no draft. A safety ticket would reach nobody."
+          runbook_url: "operations/runbooks/bad-release.md"
+        isPaused: false
+      - uid: "cost-over-budget"
+        title: "AI cost per 1,000 tickets over budget"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 900
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "1000 * sum(increase(app_ai_cost_USD_total[15m])) / sum(increase(app_tickets_triaged_total[15m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.4
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "2m"
+        labels:
+          severity: "SEV-3"
+          owner: "Kwame"
+          service: "ticket-api"
+        annotations:
+          summary: "The estimated AI cost per 1,000 tickets is over the US$0.40 budget (15 minutes)."
+          runbook_url: "operations/runbooks/bad-release.md"
+        isPaused: false
+      - uid: "triage-slow"
+        title: "Triage calls slow (p95 over 8 s)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "histogram_quantile(0.95, sum by (le) (rate(gen_ai_client_operation_duration_seconds_bucket{gen_ai_operation_name=\"chat\"}[5m])))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 8
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "2m"
+        labels:
+          severity: "SEV-3"
+          owner: "Amira"
+          service: "ticket-api"
+        annotations:
+          summary: "The 95th percentile of the triage call is over 8 seconds (5 minutes)."
+          runbook_url: "operations/runbooks/provider-outage.md"
+        isPaused: false
+      - uid: "model-version-changed"
+        title: "The provider answered with another model version"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(gen_ai_client_token_usage_count{gen_ai_operation_name=\"chat\",gen_ai_token_type=\"input\",app_prompt_version!=\"\",gen_ai_response_model!=\"gpt-6-luna-2026-09-22\"}[10m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-3"
+          owner: "Priya"
+          service: "ticket-api"
+        annotations:
+          summary: "Some answers came from a model version that is not the release's (gpt-6-luna-2026-09-22). Check the quality before the change reaches every ticket."
+          runbook_url: "operations/runbooks/model-version-changed.md"
+        isPaused: false
+      - uid: "old-sources"
+        title: "Answers quote old document versions"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 600
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(app_answers_served_total{stale=\"true\"}[10m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-3"
+          owner: "Tomás"
+          service: "ticket-api"
+        annotations:
+          summary: "Answers cite a document version that is not current: the retrieval index is older than the documents."
+          runbook_url: "operations/runbooks/stale-index.md"
+        isPaused: false
+      - uid: "reviews-disagree"
+        title: "Agents disagree with the assistant (quality SLO)"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 1800
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "(sum(increase(app_tickets_reviewed_total{agrees=\"false\"}[30m])) or vector(0)) / sum(increase(app_tickets_reviewed_total[30m]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.1
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "2m"
+        labels:
+          severity: "SEV-3"
+          owner: "Priya"
+          service: "ticket-api"
+        annotations:
+          summary: "More than 10% of the reviews in 30 minutes disagree with the assistant's team or needs-a-person decision (quality SLO 90%)."
+          runbook_url: "operations/runbooks/quality-drop.md"
+        isPaused: false
