@@ -46,3 +46,13 @@ def test_tax_lines_are_added_up():
              Line("TOTAL", (0, 60, 50, 70)), Line("CAD 112.00", (180, 60, 240, 70))]
     ex = fields.extract([Page("x.pdf", 1, 300, 100, "pt", "text", lines)], "text")
     assert ex.value("tax") == "12.00" and ex.value("total") == "112.00" and ex.value("currency") == "CAD"
+
+
+def test_a_quantity_line_keeps_the_unit_price():
+    # Found by the item check of validate.py: "3 x 24.95  74.85" gave a unit price of 74.85.
+    rows = [(1, [Line("Pruning shears", (14, 227, 90, 236))]),
+            (1, [Line("3 x 24.95", (25, 239, 74, 248)), Line("74.85", (186, 239, 213, 248))]),
+            (1, [Line("Tuyau d'arrosage", (14, 252, 90, 261))]),
+            (1, [Line("2 x 1 011,78", (25, 264, 74, 273)), Line("2 023,56", (180, 264, 213, 273))])]
+    got = [(i["quantity"], i["unit_price"], i["line_total"]) for i in fields.items(rows)]
+    assert got == [(3, "24.95", "74.85"), (2, "1011.78", "2023.56")]

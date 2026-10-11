@@ -23,7 +23,9 @@ TOTAL = re.compile(r"^(total|total \((cad|usd)\))")
 SUBTOTAL = re.compile(r"^(sub-?total|sous-total)\b")
 SHIPPING = re.compile(r"^(shipping|livraison)\b")
 CURRENCY = re.compile(r"(?<![A-Z])(CAD|USD)(?![A-Z])")
-QTY_LINE = re.compile(r"^(\d{1,2})\s*[x×X*]\s*\$?\s*(\d[\d ,.]*)")
+# "3 x 24.95  74.85": group 2 is the unit price, one amount ("1 011,78" in French). The second
+# choice keeps a line whose price OCR misread (no decimals) as an item, as before.
+QTY_LINE = re.compile(r"^(\d{1,2})\s*[x×X*]\s*\$?\s*(\d{1,3}(?:[ ,.]\d{3})*[.,]\d{2}(?!\d)|\d[\d ,.]*)")
 
 
 @dataclass

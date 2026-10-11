@@ -10,7 +10,7 @@ documents are made by the course's generator; the vision answers are the course'
 | Path | Printed values correct | Missing | Wrong | Invented | Complete documents |
 |---|---|---|---|---|---|
 | PDF text layer + rules | 169 of 435 (38.9%) | 266 | 0 | 0 | 19 of 54 (reads only digital PDFs: 96.5% of their values) |
-| OCR + rules | 392 (90.1%) | 42 | 1 | 0 | 44 |
+| OCR + rules | 392 (90.1%) | 42 | 1 | 0 | 45 |
 | OCR on prepared pictures + rules | 408 (93.8%) | 27 | 0 | 0 | 46 |
 | Vision model, plain prompt (v1) | 424 (97.5%) | 8 | 3 | **11** | 40 |
 | Vision model, precise prompt (v2) | 425 (97.7%) | 9 | 1 | 0 | 51 |

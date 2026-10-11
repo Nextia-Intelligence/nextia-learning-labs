@@ -31,3 +31,15 @@ one of each kind: digital, scanned, turned, photo, French, another shop, cut off
 total, a claim with two parts, a copy, a damaged file, a wrong extension. `python -m doc_extract.pipeline
 regression` must show no change before any new version goes live. When a change is meant (a better
 OCR engine), update the file with `--update` and say in the change why each value changed.
+
+## Changing the code: a worked example
+
+The item check of `validate.py` warned `3 x 74.85 is not 74.85` on 16 results. The receipts were right:
+the pattern for a quantity line in `fields.py` read `3 x 24.95  74.85` as one amount. The change, in order:
+
+1. A test that shows the bug and fails (`test_a_quantity_line_keeps_the_unit_price` in `tests/test_fields.py`).
+2. The fix (one line: `QTY_LINE` takes one amount as the unit price). The new test and all others pass.
+3. A new version (`__version__` and `pyproject.toml`: 1.0.0 -> 1.0.1), so that `pipeline status` finds the
+   results made by 1.0.0.
+4. `pipeline reprocess`, then `pipeline regression`: no change, because the regression set compares the
+   fields, statuses and review decisions, and the item lines are not among them. The new test guards the fix.

@@ -1,6 +1,6 @@
 [project]
 name = "doc-extract"
-version = "1.0.0"
+version = "1.0.1"
 description = "Read Larkfield's receipts, scans, photos, tables and policies, and keep the source of every value."
 requires-python = ">=3.12"
 license = "MIT"

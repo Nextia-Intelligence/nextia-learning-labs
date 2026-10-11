@@ -106,6 +106,8 @@ python -m doc_extract.evaluate --systems text,ocr,ocr_prepared,vision,vision_v1,
 python -m doc_extract.budget --pages 300 --model-share 0.25
 python -m doc_extract.pipeline run            # every document, results in out/results/
 python -m doc_extract.pipeline regression     # the regression set (tests/regression/expected.json)
+python -m doc_extract.pipeline status         # results made by an older version
+python -m doc_extract.pipeline reprocess      # run those again
 python -m doc_extract.pipeline delete D045    # delete what the pipeline made from one document
 ```
 
