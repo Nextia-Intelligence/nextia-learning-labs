@@ -1,6 +1,6 @@
 # Dataset card: Theo's weak capstone (constructed) and the two-shop data pack
 
-Used by: the case study *Review a weak capstone* (`C27-M08-L02`), `starter.zip` and `finished.zip`
+Used by: the case study [*Review a weak capstone*](https://learning.nextia-ai.com/courses/capstone/m08/review-a-weak-capstone/), `starter.zip` and `finished.zip`
 
 | Field | Value |
 |---|---|

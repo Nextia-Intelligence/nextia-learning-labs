@@ -1,6 +1,6 @@
 # Capstone: the document assistant (end of Module 5)
 
-The assistant is measured on the held-out questions, the isolation checks run on three layers, and one change chosen from the tuning questions' errors is in place: keyword search next to the vectors, fused by reciprocal rank fusion (`RETRIEVAL_MODE=hybrid`). The cross-encoder reranker is an option (`dense_rerank`, `hybrid_rerank`): measured, slower, not better here. `docs/evaluation-report.md` compares the baseline and the candidate, with the regressions and the cost: on the held-out questions the candidate is not proven better, only no worse.
+The assistant is measured on the held-out questions, the isolation checks run on four layers (search, access level, API, database), and one change chosen from the tuning questions' errors is in place: keyword search next to the vectors, fused by reciprocal rank fusion (`RETRIEVAL_MODE=hybrid`). The cross-encoder reranker is an option (`dense_rerank`, `hybrid_rerank`): measured, slower, not better here. `docs/evaluation-report.md` compares the baseline and the candidate, with the regressions and the cost: on the held-out questions the candidate is not proven better, only no worse.
 
 ## First run
 
@@ -18,7 +18,7 @@ python -m pytest
 ## What Module 5 added
 
 - `doc_assistant/evaluate.py`, `scripts/evaluate.py`: the measures and the runner (`--set dev|heldout`, `--config`, `--retrieval-only`).
-- `scripts/isolation.py`: search, API and database checks across the two shops.
+- `scripts/isolation.py`: search, access-level, API and database checks across the two shops.
 - The change: `migrations/004_keyword_search.sql`, `retrieve.py` (the four modes and the fusion), `rerank.py` (the reranker option).
 - `docs/evaluation-report.md`.
 

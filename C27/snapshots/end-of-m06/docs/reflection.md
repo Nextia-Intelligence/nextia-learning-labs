@@ -6,7 +6,7 @@ Sam's retrospective (Module 7): what went well, what did not, what Sam would do 
 
 - Writing the acceptance criteria and reserving the held-out questions in the first week. Every later argument ("is it good enough?") had a number to point at, and Tomás's "skip the holdout, we're short of time" had an answer: it took ten minutes, in week one.
 - One complete journey before any extra feature. The mock adapter made the page, the upload and the job states work before any model was involved.
-- Isolation checked in three layers (search, API, database). Row-level security found nothing new, which is the point of a second lock: it is there for the day a query forgets its filter.
+- Isolation checked in four layers (search, access level, API, database). Row-level security found nothing new, which is the point of a second lock: it is there for the day a query forgets its filter.
 
 ## What did not go well
 

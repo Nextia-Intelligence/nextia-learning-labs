@@ -13,3 +13,7 @@ Every decision of the capstone is written down here, one file per step. The temp
 | `evaluation-report.md` | Run held-out tests to Document trade-offs | results, error categories, baseline against candidate |
 | `demo-script.md` | Demo narrative | the five-minute story, with a failure case and a trade-off |
 | `portfolio-checklist.md` | Repository handoff | every claim and its evidence |
+| `deployment.md` | Release the demo | the private Compose demo, and the cloud steps (written, not run) |
+| `runbook.md` | Recovery and cost control | rollback, usage limits, cleanup |
+| `reflection.md` | Reflection and extensions | what went well, what did not, the next steps, one proposed extension |
+| `marking-rubric.md` | Final assignment | how each required item is marked: demonstrated, partially or not yet |
