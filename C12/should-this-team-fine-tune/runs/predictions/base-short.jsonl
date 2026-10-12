@@ -1,0 +1,400 @@
+{"id": "val-2501", "split": "dev", "raw": "Sure, here are some flight details for the 5th through 8th International Round Trip:\n\n- 5th International Round Trip:\n-", "seconds": 0.5185}
+{"id": "val-2503", "split": "dev", "raw": "Here's a JSON response for under 700 people:\n\n{\n  \"intent\": \"book_flight\",\n  \"name\": \"Den", "seconds": 0.4584}
+{"id": "val-2505", "split": "dev", "raw": "To find a round trip flight from Denver International Airport (DEN) to New York International Airport (NYY) on the 8th to the 1", "seconds": 0.5106}
+{"id": "val-2507", "split": "dev", "raw": "To find a flight for under 700 on the 4th from Denver International Airport to New York International Airport, you can use the following steps:", "seconds": 0.5822}
+{"id": "val-2508", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or browse the internet. I'm unable to provide information about", "seconds": 0.473}
+{"id": "val-2510", "split": "dev", "raw": "Here's a JSON response that includes the flight details for the given dates:\n\n```json\n{\n  \"intent\": \"book_flight\",\n ", "seconds": 0.4375}
+{"id": "val-2512", "split": "dev", "raw": "{\"intent\": \"book_flight\", \"description\": \"Book a flight from Philadelphia to Atlanta on June 5th and return on June 8th", "seconds": 0.429}
+{"id": "val-2513", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm here to assist you", "seconds": 0.4398}
+{"id": "val-2514", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm unable to provide you", "seconds": 0.4446}
+{"id": "val-2518", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to search for specific flight information or services. However, I can guide", "seconds": 0.4919}
+{"id": "val-2121", "split": "dev", "raw": "No, it is not possible for a hotel to be booked by you for me in Afghanistan at the zoo for the 10th to the 1", "seconds": 0.4549}
+{"id": "val-2123", "split": "dev", "raw": "Yes, a hotel can be booked for you in Afghanistan at the zoo for the 10th to the 15th days of the month.", "seconds": 0.4637}
+{"id": "val-2124", "split": "dev", "raw": "Sure, I can reserve a hotel for you at the zoo for the 10th to the 15th days of the month. Please provide the", "seconds": 0.4701}
+{"id": "val-2126", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to book hotels or rooms for specific dates or guests. I recommend checking", "seconds": 0.4875}
+{"id": "val-2129", "split": "dev", "raw": "Here are some hotels in Boise, Idaho, that have positive reviews:\n\nHotel: \"The Boise Hotel\"\n\nReview: \"The", "seconds": 0.4609}
+{"id": "val-2131", "split": "dev", "raw": "Here's a JSON-formatted response with a list of hotels in Baltimore, with positive reviews:\n\n```json\n{\n  \"hotels\":", "seconds": 0.4576}
+{"id": "val-2135", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to book flights or accommodations. However, I can guide you on how", "seconds": 0.4498}
+{"id": "val-2136", "split": "dev", "raw": "Sure, I can help with that. Here's a simple JSON response:\n\n```json\n{\n  \"intent\": \"reservation\",\n  \"", "seconds": 0.4693}
+{"id": "val-2138", "split": "dev", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to make reservations in real-time. However, I can guide you", "seconds": 0.4647}
+{"id": "val-2139", "split": "dev", "raw": "\"Book a motel in uptown from March 3 to March 4. Please provide the address of the motel, and we will arrange for a", "seconds": 0.4398}
+{"id": "val-2820", "split": "dev", "raw": "\"Car rental services:\n\n* Car rental services:\n\t+ Uber\n\t+ Lyft\n\t+ CarRental\n\t+ Lyft", "seconds": 0.458}
+{"id": "val-2823", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm unable to provide information", "seconds": 0.4497}
+{"id": "val-2825", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm unable to provide information", "seconds": 0.4529}
+{"id": "val-2827", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to book car rental services. However, I can guide you on how", "seconds": 0.5482}
+{"id": "val-2829", "split": "dev", "raw": "Sure, I can help with that. Here are some steps to book a car rental in Las Vegas:\n\n1. **Visit Las Vegas**: Go to the", "seconds": 0.4305}
+{"id": "val-2830", "split": "dev", "raw": "To rent a car in Las Vegas, you'll need to follow these steps:\n\n1. **Check the rental website**: Visit the rental website of the rental", "seconds": 0.4358}
+{"id": "val-2832", "split": "dev", "raw": "Yes, you can get a car rental in Boise, Idaho, from April 11th to April 13th. The rental company is called", "seconds": 0.442}
+{"id": "val-2835", "split": "dev", "raw": "Yes, you can rent a car from the airport on March 1st to March 8th. The rental fee is $100.", "seconds": 0.4297}
+{"id": "val-2836", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have access to real-time data or current events. I'm unable to provide current", "seconds": 0.469}
+{"id": "val-2839", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your device. I'm unable to provide assistance with", "seconds": 0.4546}
+{"id": "val-1200", "split": "dev", "raw": "Yes, you can take more than one carry on. Here are the rules:\n\n1. You can take more than one carry on at a time.\n", "seconds": 0.459}
+{"id": "val-1201", "split": "dev", "raw": "Yes, more than one carry on costs extra at Ryanair. The extra cost is $100 for each carry on, which is $100", "seconds": 0.4759}
+{"id": "val-1204", "split": "dev", "raw": "Yes, Jet Blue allows more than one carry on. The airline allows up to 10 carry-on flights per day, with a maximum of 1", "seconds": 0.451}
+{"id": "val-1206", "split": "dev", "raw": "The carry on policy for Delta Air Lines is as follows:\n\n- Delta Air Lines will not carry on any items that are not approved for use in the", "seconds": 0.4594}
+{"id": "val-1209", "split": "dev", "raw": "Delta's carry on policy is as follows:\n\n- If you have a carry on, you can use it for:\n- Traveling to and from", "seconds": 0.4718}
+{"id": "val-1211", "split": "dev", "raw": "The carry-on rules for Delta Airlines are as follows:\n\n- The carry-on is not allowed in the cabin, except for the cabin crew and", "seconds": 0.5011}
+{"id": "val-1212", "split": "dev", "raw": "United's carry-on rules are as follows:\n\n- Carry-on: The carry-on is a standard, standard-sized, standard-sized", "seconds": 0.4481}
+{"id": "val-1214", "split": "dev", "raw": "Here are the carry-on rules for American Airlines:\n\nCarry-on rules for American Airlines:\n\nCarry-on rules for American Airlines", "seconds": 0.4673}
+{"id": "val-1216", "split": "dev", "raw": "Here is the list of carry-on information for the United States:\n\n- United States:\n- 1.25-liter (1.", "seconds": 0.5112}
+{"id": "val-1218", "split": "dev", "raw": "Sure, here are the carry-on rules for American Airlines:\n\nCarry-on rules for American Airlines:\n\nCarry-on rules for", "seconds": 0.4991}
+{"id": "val-1741", "split": "dev", "raw": "The exchange rate between US dollars and euros is currently -0.85.", "seconds": 0.2492}
+{"id": "val-1743", "split": "dev", "raw": "$1 USD is equivalent to €1.00 in euros.", "seconds": 0.244}
+{"id": "val-1744", "split": "dev", "raw": "The exchange rate between country A and country B is approximately 1:1.0000000000000000", "seconds": 0.4883}
+{"id": "val-1745", "split": "dev", "raw": "The conversion rate of 100 dollars to euros is approximately 0.95%.", "seconds": 0.283}
+{"id": "val-1748", "split": "dev", "raw": "The exchange rate between US dollars and euros is currently -0.0000000000000000000", "seconds": 0.419}
+{"id": "val-1753", "split": "dev", "raw": "The exchange rate between dollars and euros is currently -0.00000000000000000000", "seconds": 0.4251}
+{"id": "val-1754", "split": "dev", "raw": "100 dollars is equal to 100 euros.", "seconds": 0.1998}
+{"id": "val-1756", "split": "dev", "raw": "The going rate between US dollars and Canadian dollars is approximately 1.25 USD per US gallon.", "seconds": 0.3145}
+{"id": "val-1758", "split": "dev", "raw": "The rate for 500 cad in US dollars is approximately 0.0000000000000000", "seconds": 0.4645}
+{"id": "val-1759", "split": "dev", "raw": "US dollars (USD) vs CAD (CAD) are two different currencies used in international trade.\n\nUS dollars (USD) are the official currency of the", "seconds": 0.4504}
+{"id": "val-0321", "split": "dev", "raw": "You are currently boarding your flight. You can check your status by using the flight status page on the flight app.", "seconds": 0.3455}
+{"id": "val-0324", "split": "dev", "raw": "The expected arrival of flight dl123 is:\n\n\"2023-01-01 12:00:0", "seconds": 0.4391}
+{"id": "val-0327", "split": "dev", "raw": "Yes, there are expected delays for flight dl123. The delay is expected to be around 2-3 hours. The delay is due to a", "seconds": 0.4582}
+{"id": "val-0329", "split": "dev", "raw": "The flight dl123 is a flight that departs from the airport of Delft, Netherlands, and takes off from the airport of Amsterdam, Netherlands", "seconds": 0.4451}
+{"id": "val-0330", "split": "dev", "raw": "The status of flight dl123 is:\n\n- \"in progress\"\n\nThis indicates that dl123 is currently in the process of", "seconds": 0.4638}
+{"id": "val-0334", "split": "dev", "raw": "The flight is scheduled to land at 10:00 AM local time (EST) on the day of the flight.", "seconds": 0.3979}
+{"id": "val-0335", "split": "dev", "raw": "The flight is scheduled to land at the airport in the specified time zone. The flight is scheduled to land at 10:00 AM on the specified", "seconds": 0.4928}
+{"id": "val-0336", "split": "dev", "raw": "The flight is scheduled to arrive at the airport in 2 hours.", "seconds": 0.2282}
+{"id": "val-0337", "split": "dev", "raw": "The flight board is currently at 10:00 AM.", "seconds": 0.2032}
+{"id": "val-0339", "split": "dev", "raw": "The flight boarding is typically done at the airport, usually around 10-15 minutes before departure. The process typically involves a series of checks, checks", "seconds": 0.419}
+{"id": "val-2261", "split": "dev", "raw": "No, you don't need a visa if you're traveling to a country that allows international travel. However, if you're traveling to a country that requires a", "seconds": 0.4814}
+{"id": "val-2263", "split": "dev", "raw": "No, you don't need a visa to go to the airport to check in at the airport. You can simply enter your passport number and your passport card number", "seconds": 0.4258}
+{"id": "val-2264", "split": "dev", "raw": "Yes, you do need a visa to travel to the United States. The visa required for your travel to the United States is the International Traffic of Goods (IT", "seconds": 0.4281}
+{"id": "val-2266", "split": "dev", "raw": "Yes, you should apply for an International Visa (IV) in Brazil. The process can take several weeks, depending on your nationality and the type of visa", "seconds": 0.4317}
+{"id": "val-2267", "split": "dev", "raw": "No, it does not require an international visa for you to visit Okinawa. Okinawa is a Japanese island, and the government of Japan does not require an", "seconds": 0.4414}
+{"id": "val-2268", "split": "dev", "raw": "No, an international visa is not needed to go to Cyprus. The visa required to enter Cyprus is the International Visa Application Application (IVA) and the", "seconds": 0.4205}
+{"id": "val-2269", "split": "dev", "raw": "To determine if you need an international visa for China, you should check the official government website of the country where you plan to visit. The website typically provides information", "seconds": 0.4389}
+{"id": "val-2270", "split": "dev", "raw": "No, you should not get an international visa to go to Switzerland. Switzerland is a sovereign state and does not have an official visa application process. You need to", "seconds": 0.4205}
+{"id": "val-2271", "split": "dev", "raw": "No, South Korea does not require an international visa. The country does not have a visa-free travel policy, and the only exception is for tourists who have", "seconds": 0.4125}
+{"id": "val-2275", "split": "dev", "raw": "Yes, you do need an international visa to enter Uganda. The visa requirements vary depending on the country and the type of visa you are applying for. However,", "seconds": 0.4105}
+{"id": "val-0841", "split": "dev", "raw": "You can find your luggage in the following locations:\n\n1. The luggage area: This is the main area where you can find your luggage. You can find", "seconds": 0.4272}
+{"id": "val-0842", "split": "dev", "raw": "You can call the following number to arrange your luggage:\n\n+ 1-800-555-1234\n+ ", "seconds": 0.4016}
+{"id": "val-0843", "split": "dev", "raw": "To locate your luggage, you can use the following methods:\n\n1. **GPS**: Use a GPS device or a smartphone app to find your location. The", "seconds": 0.413}
+{"id": "val-0844", "split": "dev", "raw": "\"Sorry, I'm sorry to hear that you lost your luggage. Please, do not hesitate to contact the customer service of the travel app for assistance. We", "seconds": 0.4056}
+{"id": "val-0847", "split": "dev", "raw": "If you lost your luggage, the first thing to do is to contact the airline's customer service team. They can help you find a replacement or provide a refund", "seconds": 0.4312}
+{"id": "val-0849", "split": "dev", "raw": "If you lost your luggage, you can try the following steps:\n\n1. **Check the GPS**: If you're using a GPS device, check the GPS", "seconds": 0.414}
+{"id": "val-0853", "split": "dev", "raw": "{\"intent\": \"lost_luggage\"}", "seconds": 0.1655}
+{"id": "val-0855", "split": "dev", "raw": "I'm sorry to hear that your luggage is missing from American Airlines Flight Ab123. Please provide me with the details of your flight, including the time", "seconds": 0.4201}
+{"id": "val-0857", "split": "dev", "raw": "If you lost your luggage, the procedure is as follows:\n\n1. **Contact the Help Chat**: You can call the Help Chat to report the lost luggage", "seconds": 0.4036}
+{"id": "val-0858", "split": "dev", "raw": "If you lost your luggage, follow these steps:\n\n1. **Contact the Help Chat**: You can call the Help Chat to report the lost luggage. The", "seconds": 0.4119}
+{"id": "val-1700", "split": "dev", "raw": "The sockets used in the US are the following:\n\n1. **USB**: This is the most common type of USB socket, used in most devices,", "seconds": 0.4096}
+{"id": "val-1703", "split": "dev", "raw": "Yes, in France, it is recommended to use a socket converter to ensure that your internet connection is stable and reliable. Here are some common socket converter types:", "seconds": 0.4211}
+{"id": "val-1704", "split": "dev", "raw": "You need to use the following socker conveters in Africa:\n\n1. **Socker Converter**: This is a software that converts your current location to", "seconds": 0.4197}
+{"id": "val-1707", "split": "dev", "raw": "In Australia, the outlet type used for the airline's services is the \"Airline Express\" (AEP). The AEP is a network of airlines that", "seconds": 0.4316}
+{"id": "val-1710", "split": "dev", "raw": "To find the correct electrical plug type for your trip, you can use the following steps:\n\n1. Check the electrical outlet in your home or office. If", "seconds": 0.4091}
+{"id": "val-1712", "split": "dev", "raw": "In Spain, the electrical plug used for the internet of things (IoT) is the USB-A connector. It is a standard connector that is widely used in", "seconds": 0.4254}
+{"id": "val-1713", "split": "dev", "raw": "The UK uses the Europlug, which is a standard plug used for electrical appliances and devices. It is a standard plug that is widely used in the UK.", "seconds": 0.4143}
+{"id": "val-1716", "split": "dev", "raw": "Here are the plugs in England:\n\n- Euro: Euro\n- Plug: Euro\n- Plug: Euro\n- Plug: Euro\n", "seconds": 0.438}
+{"id": "val-1718", "split": "dev", "raw": "The plug used by Colombia is the \"Plug-in\" or \"Plug-in Electric Vehicle\" (PEV). It is a type of electric", "seconds": 0.4101}
+{"id": "val-1719", "split": "dev", "raw": "The plugs used by the UK are:\n\n1. Eurozone: Eurozone plugs are used by the UK to send messages to the UK's European Union partners", "seconds": 0.4689}
+{"id": "val-0640", "split": "dev", "raw": "The timezone of Saigon, Vietnam, is UTC-7.", "seconds": 0.2}
+{"id": "val-0642", "split": "dev", "raw": "Ho Chi Minh City (HCN) is a city in the Central Highlands of Vietnam. It is a city located in the Central Highlands of Vietnam, which is", "seconds": 0.4128}
+{"id": "val-0645", "split": "dev", "raw": "The time zone in Germany is UTC+10.", "seconds": 0.1716}
+{"id": "val-0647", "split": "dev", "raw": "The time zones used by the European Union are:\n\n1. Eastern European Time (EEET): This is the time zone used by the countries of Eastern Europe", "seconds": 0.3902}
+{"id": "val-0648", "split": "dev", "raw": "The time zone of China is Coordinated Universal Time (UTC+1).", "seconds": 0.2182}
+{"id": "val-0649", "split": "dev", "raw": "The timezone for Hong Kong is UTC+9.", "seconds": 0.1598}
+{"id": "val-0650", "split": "dev", "raw": "The city of orlando is located in the UTC+1 timezone.", "seconds": 0.2061}
+{"id": "val-0653", "split": "dev", "raw": "Here is the JSON data:\n\n```json\n{\n  \"intent\": \"book_flight\",\n  \"message\": \"Vancouver is in the", "seconds": 0.404}
+{"id": "val-0655", "split": "dev", "raw": "The timezone is \"UTC+1\" in this case.", "seconds": 0.1793}
+{"id": "val-0657", "split": "dev", "raw": "The UK's timezone is UTC-03:00.", "seconds": 0.2131}
+{"id": "val-0000", "split": "dev", "raw": "In Spanish, the phrase \"meeting tomorrow is said how\" is used to express a casual or informal conversation. It's a common way to say \"I", "seconds": 0.4132}
+{"id": "val-0001", "split": "dev", "raw": "In French, you would say: \"Je vais bien, je vais bien, je vais bien, je vais bien,", "seconds": 0.4473}
+{"id": "val-0003", "split": "dev", "raw": "You can ask about the weather in China by using the following methods:\n\n1. **Ask a local**: You can ask a local about the weather in China", "seconds": 0.4319}
+{"id": "val-0004", "split": "dev", "raw": "\"Canceler\" in French is \"Canceler\".", "seconds": 0.1955}
+{"id": "val-0006", "split": "dev", "raw": "\"Bonjour\" in French is \"Bonjour\".", "seconds": 0.169}
+{"id": "val-0010", "split": "dev", "raw": "\"Bonjour\" is the French equivalent of \"Hello.\" It's a greeting that's commonly used in French culture. You can say it in English, but", "seconds": 0.4166}
+{"id": "val-0011", "split": "dev", "raw": "Sure, I can help you with that. Here's how you can say goodbye in French:\n\n\"Bonjour\"\n\nThis means \"Goodbye", "seconds": 0.4235}
+{"id": "val-0014", "split": "dev", "raw": "\"Goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye, goodbye,", "seconds": 0.4372}
+{"id": "val-0017", "split": "dev", "raw": "\"Bienvenido, estas personas están en la pantalla de la vista de la vista de la vista de la vista", "seconds": 0.4313}
+{"id": "val-0019", "split": "dev", "raw": "Sure, I can help with that. Here's a translation of \"water\" into \"Dutch\":\n\n\"water\" in Dutch is \"woon\"", "seconds": 0.418}
+{"id": "val-0140", "split": "dev", "raw": "Yes, traveling to France is generally safe. The country has a well-developed public transportation system, and many airports and train stations are staffed by experienced travelers", "seconds": 0.4251}
+{"id": "val-0141", "split": "dev", "raw": "Yes, France is generally considered safe to travel to. The country has a relatively low crime rate, with a relatively low crime rate for a European country. The", "seconds": 0.4858}
+{"id": "val-0142", "split": "dev", "raw": "Yes, traveling to France is generally safe. Here are some safety tips:\n\n1. **Travel with a valid passport**: If you have a valid passport,", "seconds": 0.4556}
+{"id": "val-0145", "split": "dev", "raw": "Yes, there are several current travel alerts for Brazil. Here are some of them:\n\n1. Brazil Travel Alert: This alert is issued by the Brazilian Travel", "seconds": 0.4372}
+{"id": "val-0147", "split": "dev", "raw": "Yes, it's safe to travel to Guatemala right now. The National Emergency Management Agency (ENA) has issued a travel alert for the country, which includes", "seconds": 0.4666}
+{"id": "val-0150", "split": "dev", "raw": "Yes, there are travel alerts for Antarctica. The most recent ones are:\n\n- Antartica Travel Alert: This alert is sent to all travelers who", "seconds": 0.4315}
+{"id": "val-0151", "split": "dev", "raw": "Yes, there are travel alerts for mountain view. The alerts are available for the following:\n\n- Mountain View Airport: Alerts for the airport are available", "seconds": 0.438}
+{"id": "val-0156", "split": "dev", "raw": "This week, the COVID-19 pandemic has led to a significant increase in the number of cases and hospitalizations in Canada. As of the end of March,", "seconds": 0.4182}
+{"id": "val-0157", "split": "dev", "raw": "Yes, the riots in France triggered several alerts for people traveling to France. The alerts include:\n\n- \"Fernway: International Visa Alert\"", "seconds": 0.4381}
+{"id": "val-0158", "split": "dev", "raw": "No, there is no danger going to Brazil.", "seconds": 0.1706}
+{"id": "val-1263", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with your bank's systems. I recommend contacting your", "seconds": 0.4504}
+{"id": "val-1265", "split": "dev", "raw": "You've already sent a message to your financial institution, which is likely to be a bank or a credit card company. You can use the following format to send", "seconds": 0.4124}
+{"id": "val-1266", "split": "dev", "raw": "You've added the following information to your message:\n\n\"on tuesday i will be leaving for tennessee and will not be returning until the twenty", "seconds": 0.4293}
+{"id": "val-1267", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your bank account. I'm here to assist you", "seconds": 0.4039}
+{"id": "val-1268", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your bank's information. I recommend contacting your bank", "seconds": 0.4581}
+{"id": "val-1269", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your bank's information. I'm here to assist", "seconds": 0.4177}
+{"id": "val-1271", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with your bank's databases. I'm here to", "seconds": 0.4237}
+{"id": "val-1272", "split": "dev", "raw": "From April to May, you will be in the United States. You can notify your bank by sending a message to their customer service department. The message should include", "seconds": 0.4286}
+{"id": "val-1277", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or process sensitive information like your personal data. I recommend using", "seconds": 0.4387}
+{"id": "val-1278", "split": "dev", "raw": "Your bank should send a notification to your account, including the sender's name, tokyo, and the recipient's name. The notification should include the sender's", "seconds": 0.4541}
+{"id": "val-0941", "split": "dev", "raw": "The best pizza in Arizona is often a combination of local, regional, and international flavors. Here are some of the top pizza spots in Arizona:\n\nThe", "seconds": 0.4448}
+{"id": "val-0942", "split": "dev", "raw": "In Arizona, popular mountain destinations include the Grand Canyon, Monument Valley, Bryce Canyon, Zion National Park, and Arches National Park. The Grand Canyon is", "seconds": 0.4558}
+{"id": "val-0944", "split": "dev", "raw": "The favorite destination for traveling this year is:\n\n- Traveling to the United States\n- Traveling to Europe\n- Traveling to Asia\n-", "seconds": 0.5116}
+{"id": "val-0946", "split": "dev", "raw": "Cravene is a charming town in the Australian outback, known for its stunning natural beauty, rich history, and vibrant culture. Here are some activities", "seconds": 0.4638}
+{"id": "val-0948", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide information about tourist places in Bangkok. However, I can", "seconds": 0.4369}
+{"id": "val-0949", "split": "dev", "raw": "Here is a list of tourist destinations in Paris:\n\nParis:\n- Eiffel Tower\n- Louvre Museum\n- Arc de Triomphe\n", "seconds": 0.4573}
+{"id": "val-0952", "split": "dev", "raw": "I'm sorry for the confusion, but as an AI, I don't have the ability to provide recommendations for fun tourist activities in Washington, DC. I recommend", "seconds": 0.4322}
+{"id": "val-0953", "split": "dev", "raw": "1. The Grand Canyon: The Grand Canyon is a must-see destination for tourists, offering breathtaking views of the Colorado River, the Grand Canyon, and the", "seconds": 0.4239}
+{"id": "val-0954", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to search for specific activities or events in a specific location. I suggest", "seconds": 0.4224}
+{"id": "val-0956", "split": "dev", "raw": "In Seoul, you can do the following:\n\n1. Visit the Seoul National Museum: This museum showcases the history of Seoul and its people.\n\n2.", "seconds": 0.5254}
+{"id": "val-2280", "split": "dev", "raw": "No, it is not necessary to get a shot for travel to India. The official travel documents for India are available on the official government website. However, it", "seconds": 0.4482}
+{"id": "val-2284", "split": "dev", "raw": "Yes, you can travel to South Africa without getting a shot. Here are the steps:\n\n1. **Travel to South Africa**: You can start by booking", "seconds": 0.4596}
+{"id": "val-2286", "split": "dev", "raw": "No, you don't need any vaccines before traveling to Brazil. The country is known for its high vaccination rates, and many travelers are vaccinated against COVID-1", "seconds": 0.496}
+{"id": "val-2287", "split": "dev", "raw": "Before going to Africa, it's essential to prepare yourself physically and mentally for the journey. Here are some shots to consider:\n\nPhysical Preparation:\n\n", "seconds": 0.4591}
+{"id": "val-2288", "split": "dev", "raw": "No, you don't need to get any shots before volunteering in the Congo. The Congo is a tropical country with a dry climate, and vaccinations are not necessary", "seconds": 0.4393}
+{"id": "val-2290", "split": "dev", "raw": "No, you don't need to get any shots before travelling to Australia. Australia is a safe and secure destination, and vaccinations are generally recommended for travelers. However", "seconds": 0.4358}
+{"id": "val-2291", "split": "dev", "raw": "Yes, it's recommended to get shots if you're planning to go to Thailand. The Centers for Disease Control and Prevention (CDC) recommends the following vaccinations for", "seconds": 0.4369}
+{"id": "val-2293", "split": "dev", "raw": "No, you don't need to get any shots before visiting family in Seattle. The Centers for Disease Control and Prevention (CDC) recommends that all adults over ", "seconds": 0.4473}
+{"id": "val-2297", "split": "dev", "raw": "No, you don't need to get shots to enter Cuba. The COVID-19 vaccine is available for purchase in Cuba, and you can get it through", "seconds": 0.4916}
+{"id": "val-2299", "split": "dev", "raw": "No, Ecuador does not require proof of any shots for you to go there. The country does not have any specific requirements for vaccinations or medications. However, it", "seconds": 0.4472}
+{"id": "oos_val-0001", "split": "dev", "raw": "\"A show on broadway. A show on broadway. A show on broadway. A show on broadway. A show on broadway. A", "seconds": 0.5051}
+{"id": "oos_val-0002", "split": "dev", "raw": "The best record in the NFL is held by the 2019 NFL Draft pick, who was drafted by the 2019 NFL Draft pick", "seconds": 0.5279}
+{"id": "oos_val-0006", "split": "dev", "raw": "You can see the recent activity in your backyard by looking at the weather forecast. The weather forecast for your area usually shows the average temperature, precipitation, and wind", "seconds": 0.5102}
+{"id": "oos_val-0007", "split": "dev", "raw": "The amount you pay over the minimum is the amount you need to pay to get your card. If you pay $50 a month over the minimum, you", "seconds": 0.4754}
+{"id": "oos_val-0008", "split": "dev", "raw": "No, our bank does not have free notary services. We have a dedicated notary service that is available to ensure the accuracy and integrity of transactions. We", "seconds": 0.4413}
+{"id": "oos_val-0009", "split": "dev", "raw": "The top stories this week were:\n\n1. \"The New York Times\" - The paper published a story about a new, high-speed train that will", "seconds": 0.4686}
+{"id": "oos_val-0011", "split": "dev", "raw": "No, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no,", "seconds": 0.5108}
+{"id": "oos_val-0012", "split": "dev", "raw": "Here is the channel guide for the flight chat:\n\nChannel Guide:\n\n| Channel | Description |\n| --- | --- |\n| Booking", "seconds": 0.4499}
+{"id": "oos_val-0015", "split": "dev", "raw": "The last time the president visited the city of Floridau was in 2018.", "seconds": 0.3163}
+{"id": "oos_val-0017", "split": "dev", "raw": "To compute the median of a set of numbers, you need to first arrange the numbers in order from smallest to largest. If there are an even number of values", "seconds": 0.4748}
+{"id": "oos_val-0020", "split": "dev", "raw": "To compute the price per ounce of a product, you can use the following formula:\n\nPrice per ounce = (Price per ounce * Quantity) /", "seconds": 0.4327}
+{"id": "oos_val-0021", "split": "dev", "raw": "To unclog a drain, follow these steps:\n\n1. **Check the Drain**: Open the drain plug and look for any blockages or blockages. If", "seconds": 0.4401}
+{"id": "oos_val-0022", "split": "dev", "raw": "I'm sorry for the confusion, but as an AI, I don't have the ability to access or interact with your personal data. I'm here to assist", "seconds": 0.4425}
+{"id": "oos_val-0025", "split": "dev", "raw": "To root an Android phone, you need to follow these steps:\n\n1. Open the Settings app on your Android phone.\n2. Tap on the gear", "seconds": 0.4444}
+{"id": "oos_val-0026", "split": "dev", "raw": "No, Android is not better than iPhone. Android is a mobile operating system developed by Google, while iPhone is a personal computer based on Apple's proprietary technology.", "seconds": 0.4586}
+{"id": "oos_val-0032", "split": "dev", "raw": "No, the flu is not contagious. The flu virus is a highly contagious and highly infectious disease that can spread quickly through the air, especially in crowded areas like", "seconds": 0.4361}
+{"id": "oos_val-0033", "split": "dev", "raw": "Yes, it is true that nicotine is harder to kick than heroin. According to the National Institute on Drug Abuse (NIDA), nicotine is a highly addictive substance", "seconds": 0.4771}
+{"id": "oos_val-0036", "split": "dev", "raw": "Yes, hypnosis can be used to break bad habits. Hypnosis is a state of heightened suggestibility and relaxation, where the mind is more receptive to positive suggestions", "seconds": 0.5105}
+{"id": "oos_val-0038", "split": "dev", "raw": "{\n  \"intent\": \"book_flight\",\n  \"message\": \"You have booked a flight to New York City. Please confirm your travel details", "seconds": 0.4496}
+{"id": "oos_val-0039", "split": "dev", "raw": "Based on the information in the doc, the best biomedical engineering program in the United States is the University of California, San Francisco (UCSF). The program", "seconds": 0.4564}
+{"id": "oos_val-0040", "split": "dev", "raw": "Nuclear engineering is the application of physics, chemistry, and mathematics to design, build, and maintain nuclear power plants, nuclear reactors, and other nuclear facilities. It", "seconds": 0.4422}
+{"id": "oos_val-0041", "split": "dev", "raw": "Electrical engineering was created in the late 19th century by the French engineer Charles-Etienne Janvier. He was born on July 28", "seconds": 0.4215}
+{"id": "oos_val-0042", "split": "dev", "raw": "Naval engineering is the branch of engineering that deals with the design, construction, and operation of ships, submarines, and other naval vessels. It involves the study", "seconds": 0.4396}
+{"id": "oos_val-0043", "split": "dev", "raw": "Yes, it is possible to survive in a black hole. The event horizon of a black hole is a boundary beyond which nothing, including light, can escape the", "seconds": 0.4224}
+{"id": "oos_val-0044", "split": "dev", "raw": "Black holes are formed when a massive star collapses in on itself, causing a massive amount of matter to be compressed into an incredibly small space. This compression creates an", "seconds": 0.4134}
+{"id": "oos_val-0045", "split": "dev", "raw": "A black hole is a region in space where the gravitational pull is so strong that nothing, including light, can escape. It is formed when a massive star collapses", "seconds": 0.4476}
+{"id": "oos_val-0047", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or read the latest news from the internet. I recommend checking", "seconds": 0.4293}
+{"id": "oos_val-0049", "split": "dev", "raw": "The birds fly with their wings.", "seconds": 0.1289}
+{"id": "oos_val-0051", "split": "dev", "raw": "Cannabis originates from the Indian subcontinent, specifically from the Indus Valley Civilization, which flourished around 2500-1900 BCE. The earliest", "seconds": 0.4179}
+{"id": "oos_val-0052", "split": "dev", "raw": "You have a cannabis stock that is performing well. Here are some key metrics that indicate the health of your cannabis stocks:\n\n1. **Average Order Value (", "seconds": 0.4218}
+{"id": "oos_val-0053", "split": "dev", "raw": "No, marijuana is not addictive. It is a controlled substance and is not considered a habit-forming substance. It is a legal and regulated substance in the United", "seconds": 0.4437}
+{"id": "oos_val-0054", "split": "dev", "raw": "In blackjack, the maximum amount you can bet is 17.", "seconds": 0.2303}
+{"id": "oos_val-0055", "split": "dev", "raw": "The game of \"The Game of Life\" has the highest odds at a casino. The odds are 1 in 100,000,", "seconds": 0.4315}
+{"id": "oos_val-0059", "split": "dev", "raw": "To get into Harvard, the SAT score must be at least 1300. The SAT is a standardized test that assesses a student's knowledge and skills", "seconds": 0.4311}
+{"id": "oos_val-0062", "split": "dev", "raw": "Based on the given data, the act score for the given actions is:\n\n- book_flight: 100\n- book_hotel", "seconds": 0.439}
+{"id": "oos_val-0063", "split": "dev", "raw": "In 2018, the cryptocurrency Bitcoin gained the most in the year, with a total value of $16.9 billion. Bitcoin was the", "seconds": 0.4556}
+{"id": "oos_val-0071", "split": "dev", "raw": "No, the United States is not a democracy. A democracy is a system of government where power is held by the people, and the government is accountable to the", "seconds": 0.432}
+{"id": "oos_val-0073", "split": "dev", "raw": "A democracy is a system of government where citizens have the right to participate in the decision-making process, and the government is accountable to the people. Here's", "seconds": 0.4461}
+{"id": "oos_val-0074", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with your personal data. I'm here to assist", "seconds": 0.4594}
+{"id": "oos_val-0076", "split": "dev", "raw": "I'm here to help you determine if your dog is ill. To do this, I'll need to know more about your dog's situation. Can you please", "seconds": 0.4402}
+{"id": "oos_val-0077", "split": "dev", "raw": "Based on the data provided, the dog breed that sold the most in 2018 was the Labrador Retriever. The Labrador Retriever is", "seconds": 0.4283}
+{"id": "oos_val-0079", "split": "dev", "raw": "If you dream of falling off a building, it means that you are experiencing a dream that involves falling or being thrown from a building. This can be a vivid", "seconds": 0.4498}
+{"id": "oos_val-0081", "split": "dev", "raw": "Dreaming is a complex and multifaceted phenomenon that has been studied extensively in psychology, neuroscience, and philosophy. While the exact mechanisms behind dreaming are still not fully", "seconds": 0.4284}
+{"id": "oos_val-0083", "split": "dev", "raw": "The friendliest breed of dog is the Labrador Retriever. They are known for their friendly nature, loyalty, and ability to be very loyal to their human", "seconds": 0.4444}
+{"id": "oos_val-0085", "split": "dev", "raw": "Ducks do not sleep.", "seconds": 0.1235}
+{"id": "oos_val-0088", "split": "dev", "raw": "No, the eggs are not different. They are all the same species, and the only difference is the color.", "seconds": 0.3316}
+{"id": "oos_val-0090", "split": "dev", "raw": "You can easily replace a string on your guitar using the following methods:\n\n1. **String replacement**: You can replace a string with another string by using the", "seconds": 0.4377}
+{"id": "oos_val-0094", "split": "dev", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or view current time. I'm designed to provide information about", "seconds": 0.4406}
+{"id": "oos_val-0096", "split": "dev", "raw": "The most popular fake news website is \"The Daily Beast\" by The Daily Beast.", "seconds": 0.2823}
+{"id": "oos_val-0098", "split": "dev", "raw": "CNN is not a fake news website. CNN is a news organization that provides accurate and unbiased information about current events, politics, and current affairs. CNN is not", "seconds": 0.4398}
+{"id": "test-3751", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to access or interact with real-time data or services. I'm", "seconds": 0.4947}
+{"id": "test-3752", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to book flights directly from Delta Airlines. However, I can guide you", "seconds": 0.4167}
+{"id": "test-3755", "split": "holdout", "raw": "\"Delta, please. I'm sorry for the inconvenience, but Delta is not a flight-related service. I'm sorry for any inconvenience you may have experienced", "seconds": 0.4152}
+{"id": "test-3757", "split": "holdout", "raw": "Sure, I can help with that. Here's a JSON response:\n\n```json\n{\n  \"intent\": \"book_flight\",\n  \"", "seconds": 0.4201}
+{"id": "test-3763", "split": "holdout", "raw": "\"I'm sorry for any confusion, but as an AI, I don't have the ability to access or process sensitive information. I recommend checking the official flight", "seconds": 0.4238}
+{"id": "test-3765", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to access or access your personal data. I'm unable to provide information", "seconds": 0.4163}
+{"id": "test-3767", "split": "holdout", "raw": "Yes, you can fly from Atlanta to San Francisco for less than 100 dollars. The flight from Atlanta to San Francisco is a 2-hour", "seconds": 0.4145}
+{"id": "test-3770", "split": "holdout", "raw": "Here's a JSON response with the necessary information for a roundtrip flight from San Antonio, Texas, to D.T., Washington, D.C.:\n", "seconds": 0.4143}
+{"id": "test-3771", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm here to assist you", "seconds": 0.4216}
+{"id": "test-3774", "split": "holdout", "raw": "Yes, there are roundtrip flights from Shanghai to seatac on Wednesday, which departs on the thirty-first day of the month.", "seconds": 0.3664}
+{"id": "test-3182", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to browse the internet or provide real-time information. However, I", "seconds": 0.4038}
+{"id": "test-3183", "split": "holdout", "raw": "Here's a JSON response with the necessary information for a hotel in Phoenix, Arizona, near the Phoenix area:\n\n```json\n{\n  \"name\":", "seconds": 0.4042}
+{"id": "test-3185", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I suggest you check the official", "seconds": 0.4017}
+{"id": "test-3186", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to browse the internet or access real-time data. However, I", "seconds": 0.4114}
+{"id": "test-3188", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to browse the internet or provide real-time information. However, I", "seconds": 0.3913}
+{"id": "test-3190", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to browse the internet or access real-time information. However, I", "seconds": 0.3904}
+{"id": "test-3193", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to book flights or accommodations. However, I can guide you on how", "seconds": 0.3939}
+{"id": "test-3199", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to browse the internet or search for specific information. However, I can", "seconds": 0.476}
+{"id": "test-3205", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with real-time data or information. I'm", "seconds": 0.4109}
+{"id": "test-3206", "split": "holdout", "raw": "You can find a room near the Jacksonville Stadium between 1st and 3rd quarters.", "seconds": 0.283}
+{"id": "test-4234", "split": "holdout", "raw": "You can find a car rental in Asheville, North Carolina, via priceline. Here's how you can do it:\n\n1. Go to the", "seconds": 0.3925}
+{"id": "test-4235", "split": "holdout", "raw": "The phone number of the car rental place is: 123-456-7890.", "seconds": 0.3111}
+{"id": "test-4237", "split": "holdout", "raw": "Allegedly, the rental car is available for 2 hours.", "seconds": 0.2159}
+{"id": "test-4243", "split": "holdout", "raw": "\"book me a car rental in Wichita, a travel app. NAME is one of: book_flight, book_hotel, car_", "seconds": 0.4177}
+{"id": "test-4244", "split": "holdout", "raw": "Based on the information in the doc, there are 12 places in Dallas that can be rented a car. These include:\n\n* Dallas International Airport", "seconds": 0.4012}
+{"id": "test-4245", "split": "holdout", "raw": "Singapore is a popular destination for car rental. Here are some places you can rent a car in Singapore:\n\n1. **Singapore International Airport**: The", "seconds": 0.411}
+{"id": "test-4249", "split": "holdout", "raw": "Here's a JSON response with the necessary information:\n\n```json\n{\n  \"intent\": \"rent\",\n  \"date\": \"4/1", "seconds": 0.4246}
+{"id": "test-4252", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have real-time access to current events or location data. I suggest you check the", "seconds": 0.3916}
+{"id": "test-4256", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your current location. I'm here to assist you", "seconds": 0.4081}
+{"id": "test-4259", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to provide specific car rental information. However, I can suggest you to", "seconds": 0.4008}
+{"id": "test-1803", "split": "holdout", "raw": "You can carry-on a total of 10 bags.", "seconds": 0.1938}
+{"id": "test-1807", "split": "holdout", "raw": "Yes, you can fly with your razors. The restrictions are as follows:\n\n1. Razors: You are not allowed to fly with your razors", "seconds": 0.3951}
+{"id": "test-1809", "split": "holdout", "raw": "According to the official American Airlines website, the maximum number of carry-on flights you can take on a flight with American Airlines is 12. However,", "seconds": 0.3987}
+{"id": "test-1817", "split": "holdout", "raw": "The carry-on policy for flights on the airline called JetBlue is:\n\n\"The carry-on policy for flights on the airline called JetBlue is", "seconds": 0.4092}
+{"id": "test-1821", "split": "holdout", "raw": "The carry-on policy for flights on Southwest Airlines is as follows:\n\n- The carry-on policy for flights on Southwest Airlines is as follows:\n", "seconds": 0.4133}
+{"id": "test-1823", "split": "holdout", "raw": "The carry-on policy for flights on Transaero is as follows:\n\n- The carry-on policy for flights on Transaero is as follows", "seconds": 0.4008}
+{"id": "test-1824", "split": "holdout", "raw": "The carry-on policy for flights on JetBlue is as follows:\n\n- The carry-on is not allowed on flights with a non-jetblue", "seconds": 0.3978}
+{"id": "test-1826", "split": "holdout", "raw": "The carry-on policy for flights on American Airlines is as follows:\n\n- The carry-on policy for flights on American Airlines is as follows:\n", "seconds": 0.388}
+{"id": "test-1828", "split": "holdout", "raw": "Here are the carry-on rules for the flight you have:\n\n- Carry-on:\n- The carry-on is the most important item to", "seconds": 0.3917}
+{"id": "test-1829", "split": "holdout", "raw": "The carry-on restrictions for American Airlines are as follows:\n\n- Carry-on: \n- 1.25 pounds (600", "seconds": 0.4016}
+{"id": "test-2616", "split": "holdout", "raw": "The exchange rate between the MXN and GBP is approximately 1.25 GBP/MXN.", "seconds": 0.335}
+{"id": "test-2617", "split": "holdout", "raw": "The current exchange rate between the Euro and the MXN is approximately 1.25 MXN to 1 EUR.", "seconds": 0.3582}
+{"id": "test-2618", "split": "holdout", "raw": "The exchange rate between ils and US dollars is approximately 1.25 USD / 1 L$.", "seconds": 0.3046}
+{"id": "test-2621", "split": "holdout", "raw": "1 US dollar is equivalent to approximately 1.75 British Pounds.", "seconds": 0.2262}
+{"id": "test-2624", "split": "holdout", "raw": "You can get one Mexican peso for one US dollar. The exchange rate is 1 peso = 1 US dollar.", "seconds": 0.3393}
+{"id": "test-2628", "split": "holdout", "raw": "The current exchange rate between cad and euros is currently: 1 cad = 1.0500 euros.", "seconds": 0.3147}
+{"id": "test-2633", "split": "holdout", "raw": "20 yen is 20 * 100 = 200 yen.", "seconds": 0.2788}
+{"id": "test-2635", "split": "holdout", "raw": "$30 USD is more than $30 CAD.", "seconds": 0.1859}
+{"id": "test-2637", "split": "holdout", "raw": "The conversion of $30 in Canadian dollars to US dollars is as follows:\n\n$30 in Canadian dollars = $300 in US dollars", "seconds": 0.4006}
+{"id": "test-2639", "split": "holdout", "raw": "$30 USD in Canadian dollars is equivalent to $1.25 USD in the United States.", "seconds": 0.2842}
+{"id": "test-0482", "split": "holdout", "raw": "The status of your jetblue flight is currently \"cancelled\". This means that you will not be able to receive any updates or notifications from the airline. You", "seconds": 0.3889}
+{"id": "test-0484", "split": "holdout", "raw": "The status of your American Airlines flight is currently:\n\n- Passenger 1: Passenger 2: Passenger 3: Passenger 4", "seconds": 0.4261}
+{"id": "test-0485", "split": "holdout", "raw": "The news with your Delta flight is that your Delta Delta 123 is now flying from New York to Los Angeles. The flight was delayed due to a", "seconds": 0.3945}
+{"id": "test-0486", "split": "holdout", "raw": "You can find the Delta flight details by searching for \"Delta Flight\" in the search bar. You can also use the search function to filter by flight type,", "seconds": 0.3908}
+{"id": "test-0487", "split": "holdout", "raw": "Flight dl123 is a flight that is scheduled to depart from the airport of Fernway, a travel app. The flight is scheduled to depart from", "seconds": 0.3986}
+{"id": "test-0489", "split": "holdout", "raw": "Yes, flight dl123 left.", "seconds": 0.1527}
+{"id": "test-0490", "split": "holdout", "raw": "The flight dl123 is scheduled to arrive on time.", "seconds": 0.1918}
+{"id": "test-0492", "split": "holdout", "raw": "The status of your Delta flight is currently:\n\n- Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta Delta", "seconds": 0.4078}
+{"id": "test-0498", "split": "holdout", "raw": "Here's a JSON response with the status of your American Airlines flight:\n\n```json\n{\n  \"status\": \"OK\",\n  \"message\": \"", "seconds": 0.4122}
+{"id": "test-0508", "split": "holdout", "raw": "The booking for your flight is scheduled for 10:00 AM on Monday, May 15th, 2023.", "seconds": 0.3955}
+{"id": "test-3391", "split": "holdout", "raw": "No, you don't need a visa for South Korea. However, you may need to apply for a visa if you're traveling to South Korea for business or", "seconds": 0.4094}
+{"id": "test-3393", "split": "holdout", "raw": "No, visas are not required to go to Cuba. The country has no visa-free travel policy, and all travelers must obtain a visa from the embassy or", "seconds": 0.4183}
+{"id": "test-3397", "split": "holdout", "raw": "Yes, it's generally recommended to apply for a visa in Mexico if you're traveling to the country. The visa requirements vary depending on your nationality, but generally", "seconds": 0.4349}
+{"id": "test-3398", "split": "holdout", "raw": "No, a visa is not necessary for traveling to South Africa. However, it is recommended to check the visa requirements for your country before your trip.", "seconds": 0.4013}
+{"id": "test-3404", "split": "holdout", "raw": "The visa requirements for Brazil are as follows:\n\n1. **Visa Type**: The visa type for Brazil is \"Visa for International Travel to Brazil\".", "seconds": 0.3958}
+{"id": "test-3406", "split": "holdout", "raw": "No, traveling to St Petersburg, Russia, does not require a travel visa. The visa requirements for international travel to Russia are different from those for other countries.", "seconds": 0.3983}
+{"id": "test-3410", "split": "holdout", "raw": "Yes, you can get to Cuba with the visa you have. The visa you have is the one issued by the Cuban embassy in the United States. The visa", "seconds": 0.4}
+{"id": "test-3414", "split": "holdout", "raw": "No, you do not need a visa for Cuba. The only visa required for Cubans is a visa-exempt visa, which is the one that allows", "seconds": 0.3973}
+{"id": "test-3417", "split": "holdout", "raw": "No, you don't need a visa to travel outside of the United States. However, you should check with your embassy or consulate for the most accurate and", "seconds": 0.408}
+{"id": "test-3418", "split": "holdout", "raw": "No, the provided JSON does not contain any information about visas for international travel.", "seconds": 0.2265}
+{"id": "test-1260", "split": "holdout", "raw": "Yes, your luggage is lost.", "seconds": 0.1246}
+{"id": "test-1261", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or view your personal data, such as your name, address", "seconds": 0.3984}
+{"id": "test-1263", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to search for specific items or services. I suggest you reach out to", "seconds": 0.3929}
+{"id": "test-1267", "split": "holdout", "raw": "I'm sorry to hear that your luggage has been lost. Please provide as much information as possible about the lost luggage, including the location, the reason for the", "seconds": 0.3972}
+{"id": "test-1269", "split": "holdout", "raw": "I'm sorry to hear that your luggage has gone missing. Please remember to contact the police immediately if you're experiencing any difficulty in finding your luggage. They can", "seconds": 0.4069}
+{"id": "test-1271", "split": "holdout", "raw": "I'm sorry for the inconvenience, but as an AI, I don't have the ability to access or view your personal data. I'm unable to assist with", "seconds": 0.3946}
+{"id": "test-1274", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your personal data. I'm designed to respect user", "seconds": 0.3838}
+{"id": "test-1275", "split": "holdout", "raw": "I'm sorry to hear that your luggage has been misplaced. Please provide as much information as possible about the items you have in your luggage, including the name of", "seconds": 0.3963}
+{"id": "test-1285", "split": "holdout", "raw": "\"My luggage has been misplaced. I'm sorry for the confusion. Can you please provide me with the details of the luggage that has been misplaced? I'm", "seconds": 0.4182}
+{"id": "test-1286", "split": "holdout", "raw": "Sorry for the confusion, but as an AI, I don't have the ability to search for specific items or provide specific information. I suggest you check the official", "seconds": 0.3965}
+{"id": "test-2551", "split": "holdout", "raw": "To plug in your items in France, you can use the following steps:\n\n1. Open the French SIM card app on your device.\n2. Tap", "seconds": 0.3958}
+{"id": "test-2552", "split": "holdout", "raw": "No, the socket converter is not required in France. The FCO (French Coordinated Telecommunications Commission) does not require a socket converter. The FCO", "seconds": 0.3977}
+{"id": "test-2553", "split": "holdout", "raw": "No, France does not use a socket converter. The FCO (French Coordinated Telecommunications) is a network protocol that allows users to communicate with each other", "seconds": 0.4045}
+{"id": "test-2555", "split": "holdout", "raw": "No, you won't need a plug converter when you visit Costa Rica. The country's electricity is generated by solar panels and wind turbines, and the electricity is", "seconds": 0.3913}
+{"id": "test-2556", "split": "holdout", "raw": "No, you won't need a plug converter when you visit Kenya. The country's electricity is provided by the National Electricity Grid, which is a network of interconnected", "seconds": 0.3887}
+{"id": "test-2561", "split": "holdout", "raw": "The plug used in the Caribbean is the \"Caribbean Plug\" or \"Caribbean Plug-in\" (CPI). It is a", "seconds": 0.3906}
+{"id": "test-2566", "split": "holdout", "raw": "No, the \"plus\" feature in the United States does not use the same feature as the \"plus\" feature in the United States. The \"plus\"", "seconds": 0.3909}
+{"id": "test-2568", "split": "holdout", "raw": "Electrical plugs used in that country are:\n\n- Type A: 120V, 120Hz, 120V", "seconds": 0.3861}
+{"id": "test-2569", "split": "holdout", "raw": "The electric plugs in the country are different from the ones in the United States. The plugs are made of a different material, and they are designed to be more", "seconds": 0.3933}
+{"id": "test-2577", "split": "holdout", "raw": "No, Sweden does not use the same kind of socket as the United States. The Swedish socket is a standard for international communication, and it is used for sending", "seconds": 0.4028}
+{"id": "test-0960", "split": "holdout", "raw": "The timezone for the United Kingdom is UTC-5, which is equivalent to the Pacific Time Zone. This means that messages sent to the UK's international network will", "seconds": 0.4021}
+{"id": "test-0963", "split": "holdout", "raw": "La's time zone is UTC-5.", "seconds": 0.1474}
+{"id": "test-0968", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have real-time capabilities to provide accurate time zone information. I recommend using a time", "seconds": 0.4399}
+{"id": "test-0974", "split": "holdout", "raw": "The timezone for the LaLaLauria app is UTC-8.", "seconds": 0.2184}
+{"id": "test-0979", "split": "holdout", "raw": "Denver's timezone is UTC-05:30.", "seconds": 0.1964}
+{"id": "test-0980", "split": "holdout", "raw": "No, Denver is not located in the Eastern Timezones. Denver is located in the Western Timezones.", "seconds": 0.3051}
+{"id": "test-0981", "split": "holdout", "raw": "Denver is located in the United States.", "seconds": 0.1438}
+{"id": "test-0984", "split": "holdout", "raw": "The timezone in Valencia, Spain is UTC-03:00.", "seconds": 0.2186}
+{"id": "test-0986", "split": "holdout", "raw": "\"The timezone is 12:00 AM in the city of Salt Lake City.\"", "seconds": 0.2536}
+{"id": "test-0988", "split": "holdout", "raw": "The time in Phoenix, Arizona, is 10:30 PM.", "seconds": 0.2193}
+{"id": "test-0001", "split": "holdout", "raw": "The Spanish word for pasta is \"pastel.\"", "seconds": 0.1535}
+{"id": "test-0004", "split": "holdout", "raw": "In Norway, the word for trees is \"komputer\".", "seconds": 0.2017}
+{"id": "test-0006", "split": "holdout", "raw": "Here's a simplified version of the Spanish phrase for tacos in Mexico: \"Tacos en México\" (Tacos in Mexico). This", "seconds": 0.3902}
+{"id": "test-0010", "split": "holdout", "raw": "\"Je vais aussi vous aider à vous aider à vous aider à vous aider à vous aider à", "seconds": 0.4058}
+{"id": "test-0011", "split": "holdout", "raw": "Привет, Вы можете понять, что мы стоем д", "seconds": 0.4039}
+{"id": "test-0019", "split": "holdout", "raw": "\"Kudos, wie ein gute Brot, wie ein gute Brot, wie ein gute Brot,", "seconds": 0.4004}
+{"id": "test-0022", "split": "holdout", "raw": "Korean: \"아래는 바로 아래를 찍�", "seconds": 0.4198}
+{"id": "test-0025", "split": "holdout", "raw": "\"Dentro de la vida, esta vida es un camino de la vida. Esto es un camino de la vida", "seconds": 0.3978}
+{"id": "test-0026", "split": "holdout", "raw": "In Spanish, the word for \"dog\" is \"pajar\".", "seconds": 0.2102}
+{"id": "test-0027", "split": "holdout", "raw": "In Spanish, the word for \"dog\" is \"pajar\".", "seconds": 0.2301}
+{"id": "test-0210", "split": "holdout", "raw": "Yes, there is a travel alert in Spain. The alert is called \"Spain Travel Alert\" and it is available on the Spanish Telecom website. The alert", "seconds": 0.4044}
+{"id": "test-0211", "split": "holdout", "raw": "\"Travel Alert in Cuba:\n\n\"The Travel Alert in Cuba is a notification to the public about the availability of flights, hotels, and other travel services", "seconds": 0.3872}
+{"id": "test-0216", "split": "holdout", "raw": "Yes, there are several travel advisories for the United States. Here are some of the most common ones:\n\n1. **Travel to the United States**:", "seconds": 0.3873}
+{"id": "test-0218", "split": "holdout", "raw": "Yes, there are travel alerts for the United States. The alerts are available for flights, hotels, and travel. You can find them by searching for \"us", "seconds": 0.3866}
+{"id": "test-0220", "split": "holdout", "raw": "Based on the information provided, it is not recommended to travel to Europe for the purpose of a flight. The information suggests that the trip is not safe, and", "seconds": 0.4171}
+{"id": "test-0221", "split": "holdout", "raw": "Yes, traveling to Japan is generally safe, but it's essential to be aware of the following:\n\n1. **Travel Warning**: Japan has a travel warning", "seconds": 0.3979}
+{"id": "test-0223", "split": "holdout", "raw": "Yes, you will be safe going to South America. The United States is not a country in South America, and the country you are in is not South America", "seconds": 0.3931}
+{"id": "test-0229", "split": "holdout", "raw": "\"Note: This note is for travel alerts for the countries of Haiti and the Dominican Republic. Please note that these alerts are not available for the United States.", "seconds": 0.3977}
+{"id": "test-0230", "split": "holdout", "raw": "Here's a simple function in Python that uses the `requests` library to fetch travel alerts for the given country:\n\n```python\nimport requests\n\n", "seconds": 0.4}
+{"id": "test-0233", "split": "holdout", "raw": "Yes, it is safe for you to go to Turkey. The official website of the Turkish Travel Bureau is: https://www.turkishtravel.com", "seconds": 0.407}
+{"id": "test-1891", "split": "holdout", "raw": "You are in the United States. You are in California. You are in the United States. You are in California. You are in California. You are in", "seconds": 0.4045}
+{"id": "test-1892", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with your bank's systems. I recommend contacting your", "seconds": 0.3986}
+{"id": "test-1895", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or interact with your bank's systems. I recommend contacting your", "seconds": 0.4059}
+{"id": "test-1896", "split": "holdout", "raw": "Here's a JSON response with the necessary information:\n\n```json\n{\n  \"intent\": \"book_flight\",\n  \"message\": \"From", "seconds": 0.4029}
+{"id": "test-1899", "split": "holdout", "raw": "\"Hi [Bank Name],\n\nI'm leaving for Montreal tomorrow and would like to let you know that I'm leaving. I'm a bit concerned about", "seconds": 0.4015}
+{"id": "test-1905", "split": "holdout", "raw": "I'm sorry for any misunderstanding, but as an AI, I don't have the ability to access or access your financial institute app. I'm here to assist", "seconds": 0.396}
+{"id": "test-1907", "split": "holdout", "raw": "I'm sorry for any misunderstanding, but as an AI, I don't have the ability to access or access your bank's fraud department. I recommend contacting the", "seconds": 0.3964}
+{"id": "test-1909", "split": "holdout", "raw": "Here's a JSON response that includes the necessary information for your bank to process your account:\n\n```json\n{\n  \"intent\": \"CANC", "seconds": 0.394}
+{"id": "test-1913", "split": "holdout", "raw": "I'm sorry for any misunderstanding, but as an AI, I don't have the ability to access or interact with your bank's systems. I'm here to", "seconds": 0.4065}
+{"id": "test-1916", "split": "holdout", "raw": "To call your bank, you can use the following steps:\n\n1. Open your bank's website or mobile app.\n2. Click on the \"Account", "seconds": 0.4041}
+{"id": "test-1412", "split": "holdout", "raw": "Planning a trip to Madrid can be overwhelming, but with a clear plan, you can make the most of your time in the city. Here's a step-", "seconds": 0.4008}
+{"id": "test-1413", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to browse the internet or provide real-time information. However, I", "seconds": 0.4677}
+{"id": "test-1414", "split": "holdout", "raw": "I'm sorry for the misunderstanding, but as an AI, I don't have the ability to browse the internet or search for specific information. However, I can", "seconds": 0.4018}
+{"id": "test-1422", "split": "holdout", "raw": "Dublin is a great city to visit for a variety of activities. Here are some suggestions:\n\n1. **Dublin Castle**: This is a", "seconds": 0.3899}
+{"id": "test-1423", "split": "holdout", "raw": "Paris is a city that's full of hidden gems, and I'm happy to help you plan your trip. Here are some suggestions for what to do and see", "seconds": 0.3971}
+{"id": "test-1427", "split": "holdout", "raw": "Paris is a city that offers a wide range of activities and experiences to make your stay unforgettable. Here are some fun tourist activities to consider:\n\nTake a", "seconds": 0.4167}
+{"id": "test-1430", "split": "holdout", "raw": "Here are some things to do in Phoenix:\n\n**Travel:**\n\n1. Book a flight to Phoenix\n2. Book a hotel in Phoenix\n3", "seconds": 0.4009}
+{"id": "test-1431", "split": "holdout", "raw": "Here are some things you can do in Dallas:\n\n1. **Check your account**: Go to your account settings and log in to your account.\n\n2", "seconds": 0.4073}
+{"id": "test-1434", "split": "holdout", "raw": "Here are some things to do in Phoenix:\n\n1. **Visit the Phoenix Museum**: The Phoenix Museum is a museum dedicated to the city's history and culture", "seconds": 0.3923}
+{"id": "test-1435", "split": "holdout", "raw": "New Jersey is a great place to explore. Here are some fun silly things to do in New Jersey:\n\n* Take a ride on the Jersey Bridge,", "seconds": 0.394}
+{"id": "test-3425", "split": "holdout", "raw": "Yes, there are several required shots to travel to Astana. Here are the most important ones:\n\n1. **Traveler's Visa**: This is", "seconds": 0.3966}
+{"id": "test-3428", "split": "holdout", "raw": "Yes, there are several required shots in Indonesia. Here are the ones you should be aware of:\n\n1. **Vaccine**: The most important one is", "seconds": 0.4014}
+{"id": "test-3429", "split": "holdout", "raw": "In Mozambique, the required shots for the COVID-19 vaccine are:\n\n1. COVID-19 vaccine: 2 doses (200 micrograms", "seconds": 0.3891}
+{"id": "test-3432", "split": "holdout", "raw": "Before embarking on a trip to Europe, it's essential to consider the potential risks and benefits of getting more shots. Here's a suggested approach:\n\nBefore", "seconds": 0.3901}
+{"id": "test-3433", "split": "holdout", "raw": "I'm sorry for any misunderstanding, but as an AI, I don't have the ability to access or access your personal data. I'm designed to respect user", "seconds": 0.3891}
+{"id": "test-3440", "split": "holdout", "raw": "No, Cuba does not require vaccines. Cuba is a travel app that provides information about flights, hotels, and other travel options. It does not have", "seconds": 0.3833}
+{"id": "test-3441", "split": "holdout", "raw": "The vaccines for Cuba are:\n\n1. Influenza vaccine: This is the most common vaccine for the country. It is a live attenuated virus that is", "seconds": 0.3945}
+{"id": "test-3442", "split": "holdout", "raw": "Based on the information in the document, the following vaccines are required for Cuba:\n\n1. COVID-19 vaccine: The vaccine is available for purchase", "seconds": 0.3933}
+{"id": "test-3443", "split": "holdout", "raw": "No, you don't need a vaccine for the Congo. The Congo is a tropical country in Central Africa, and the vaccine for the Congo is not typically required", "seconds": 0.3863}
+{"id": "test-3444", "split": "holdout", "raw": "Here is the JSON data for the vaccine recommendations for your trip to Cuba:\n\n```json\n{\n  \"intent\": \"book_flight\",\n ", "seconds": 0.4039}
+{"id": "oos_test-0006", "split": "holdout", "raw": "Here are some vegetables that pair well with mushrooms:\n\n* **Cabbage**: A great addition to a mushroom-based dish, as it's a", "seconds": 0.3936}
+{"id": "oos_test-0015", "split": "holdout", "raw": "Your driving experience is a great example of how AI can enhance your driving experience. Here's how it can help:\n\n1. **Improved safety**: AI", "seconds": 0.3904}
+{"id": "oos_test-0018", "split": "holdout", "raw": "The government shutdown has been ongoing for several days, with the following status:\n\n- The shutdown has been ongoing for several days, with the following status:", "seconds": 0.3845}
+{"id": "oos_test-0052", "split": "holdout", "raw": "I'm ready to help you with your travel needs. Please go ahead and finish your tasks, and I'll be happy to assist you.", "seconds": 0.3565}
+{"id": "oos_test-0091", "split": "holdout", "raw": "The next full moon is on the 15th of August, 2024.", "seconds": 0.2722}
+{"id": "oos_test-0092", "split": "holdout", "raw": "To change the windshield wipers on your car, you can follow these steps:\n\n1. **Open the windshield wipers**: Open the windshield", "seconds": 0.3847}
+{"id": "oos_test-0116", "split": "holdout", "raw": "The National Aeronautics and Space Administration (NASA) closes its offices in New York City, New York, from 10:00 AM to 12", "seconds": 0.3912}
+{"id": "oos_test-0133", "split": "holdout", "raw": "The number of people who died in the storm is unknown, but it is likely that it was a combination of factors, including the severity of the storm, the", "seconds": 0.3878}
+{"id": "oos_test-0145", "split": "holdout", "raw": "No, your carrier does not have coverage in Europe. You need to check with your carrier for the most up-to-date coverage information.", "seconds": 0.3653}
+{"id": "oos_test-0160", "split": "holdout", "raw": "To upgrade to full coverage for your car, you'll need to complete the following steps:\n\n1. **Check the Carfax Report**: Visit the Carfax", "seconds": 0.3971}
+{"id": "oos_test-0166", "split": "holdout", "raw": "The best local real estate agent in the world is often a combination of experience, expertise, and a deep understanding of the local market. Here are some of the", "seconds": 0.3929}
+{"id": "oos_test-0201", "split": "holdout", "raw": "Here's a JSON-formatted list of prices for parking at the airport over the weekend:\n\n```json\n{\n  \"intent\": \"book_", "seconds": 0.3944}
+{"id": "oos_test-0208", "split": "holdout", "raw": "A well-reviewed book for a teenage girl to read is one that is:\n\n1. **Relevant to her interests**: The book should be relevant to", "seconds": 0.4091}
+{"id": "oos_test-0319", "split": "holdout", "raw": "Dyslexia is a learning disability that affects the way a person processes and interprets written language. There are several factors that can contribute to dyslexia, including:\n", "seconds": 0.3869}
+{"id": "oos_test-0365", "split": "holdout", "raw": "The cost of bottled water varies depending on the source, destination, and type of bottled water. Here are some general prices for bottled water in the United States:", "seconds": 0.3973}
+{"id": "oos_test-0372", "split": "holdout", "raw": "Based on the information in the document, you should consider the following camera options:\n\n1. **Lens**: A good camera with a wide-angle lens", "seconds": 0.3854}
+{"id": "oos_test-0373", "split": "holdout", "raw": "You have consumed 125 grams of candy.", "seconds": 0.1632}
+{"id": "oos_test-0379", "split": "holdout", "raw": "Phosphorus is a chemical element with the symbol P and atomic number 11. It is a soft, silvery-white, dense, and highly reactive metal", "seconds": 0.3818}
+{"id": "oos_test-0400", "split": "holdout", "raw": "You can check the current availability of the bands in your city by using the following URLs:\n\n- https://www.tourist.com/bands", "seconds": 0.387}
+{"id": "oos_test-0406", "split": "holdout", "raw": "The daffodils will bloom this year in the spring. The exact timing can vary depending on the specific location and the weather. However, the daff", "seconds": 0.402}
+{"id": "oos_test-0414", "split": "holdout", "raw": "The symptoms of cancer can vary depending on the type and stage of the cancer, but common symptoms include:\n\n1. Fatigue: Feeling tired or weak all the", "seconds": 0.3962}
+{"id": "oos_test-0415", "split": "holdout", "raw": "You have caught 10 pokemon in your PokeBot app.", "seconds": 0.2347}
+{"id": "oos_test-0424", "split": "holdout", "raw": "The AI system does not speak English in Australia. It is designed to work with various languages, including English, and can communicate with users in a variety of languages", "seconds": 0.3853}
+{"id": "oos_test-0426", "split": "holdout", "raw": "Based on the data provided, the United States military budget for 2018 was approximately $1.2 billion. This represents a 10.", "seconds": 0.4007}
+{"id": "oos_test-0433", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or analyze data from external sources. I'm designed to provide", "seconds": 0.3875}
+{"id": "oos_test-0444", "split": "holdout", "raw": "The best songs at this year's Oscars are:\n\n- \"The Night I Found a Bird\" by The Beatles\n- \"The Night", "seconds": 0.3872}
+{"id": "oos_test-0471", "split": "holdout", "raw": "I'm sorry for any confusion, but as an AI, I don't have the ability to access or access your personal data. I'm here to assist you", "seconds": 0.3936}
+{"id": "oos_test-0516", "split": "holdout", "raw": "Bill Gates is a philanthropist and entrepreneur who has made significant contributions to various fields, including technology, finance, and education. He is the founder and CEO of", "seconds": 0.3924}
+{"id": "oos_test-0564", "split": "holdout", "raw": "The next mardi gras is scheduled to take place on Saturday, March 15, at 10:00 AM EST.", "seconds": 0.3564}
+{"id": "oos_test-0580", "split": "holdout", "raw": "Here are some examples of post-modern art:\n\n1. **Abstract Expressionism**: Artists like Jackson Pollock, Mark Rothko, and Willem de", "seconds": 0.3955}
+{"id": "oos_test-0586", "split": "holdout", "raw": "Here are the real estate listings for sale in your area:\n\n**Real Estate for Sale**\n\n| City | Address |\n| --- | ---", "seconds": 0.395}
+{"id": "oos_test-0591", "split": "holdout", "raw": "Here's a Python program that uses a robot to bring you snacks:\n\n```python\nimport tkinter as tk\n\nclass Robot:\n    def __init", "seconds": 0.3916}
+{"id": "oos_test-0637", "split": "holdout", "raw": "Here is a list of all your DVDs:\n\nDVDs:\n\n- \"The Lost City of Z\" (1986)", "seconds": 0.3921}
+{"id": "oos_test-0656", "split": "holdout", "raw": "The longest tributary in Venezuela is the Choco River, which flows through the southern part of the country. It is the second longest river in the country, after", "seconds": 0.4076}
+{"id": "oos_test-0659", "split": "holdout", "raw": "You can find the information about enrolling your son in public kindergarten in the following places:\n\n1. **National Association of the Education Department (NAED)**:", "seconds": 0.391}
+{"id": "oos_test-0745", "split": "holdout", "raw": "The new life growth in trees when the seasons change.", "seconds": 0.1684}
+{"id": "oos_test-0754", "split": "holdout", "raw": "\"were the millers\" is a great movie. It's a great example of a sci-fi thriller that explores the world of millers and their", "seconds": 0.4035}
+{"id": "oos_test-0763", "split": "holdout", "raw": "Here's a JSON-formatted list of photos organized by year:\n\n```json\n{\n  \"2020\": {\n    \"date\": \"", "seconds": 0.3842}
+{"id": "oos_test-0785", "split": "holdout", "raw": "The cost of dry cleaning depends on the type of jackets you're looking for. Here are the prices for dry cleaning for two jackets:\n\n- **B", "seconds": 0.3908}
+{"id": "oos_test-0791", "split": "holdout", "raw": "Here's a note on how many miles I walk a day:\n\n\"I walk 3 miles a day. I do this because I love walking and", "seconds": 0.3947}
+{"id": "oos_test-0821", "split": "holdout", "raw": "The closest car wash is located at the nearest airport, which is Newark, New Jersey. The nearest car wash is located at the airport, which is ", "seconds": 0.3956}
+{"id": "oos_test-0825", "split": "holdout", "raw": "Here is a JSON-formatted response:\n\n```json\n{\n  \"intent\": \"book_flight\",\n  \"message\": \"Welcome to the", "seconds": 0.3843}
+{"id": "oos_test-0840", "split": "holdout", "raw": "The race for the NASCAR Grand Prix is scheduled to begin on Saturday, June 15th, at 10:00 AM in the", "seconds": 0.3891}
+{"id": "oos_test-0884", "split": "holdout", "raw": "Here are some articles on car washing at home:\n\nArticle:\n\nCar Wash: How to Get the Best Service at Home\n\nCar Wash:", "seconds": 0.3941}
+{"id": "oos_test-0904", "split": "holdout", "raw": "Nevileware returned to his jail cell after a 10-year prison sentence for the murder of his wife, Elizabeth. The case was initially closed,", "seconds": 0.3944}
+{"id": "oos_test-0923", "split": "holdout", "raw": "Here's a simple Python function to calculate the average temperature change over the last 30 years for your area:\n\n```python\ndef calculate_average", "seconds": 0.3974}
+{"id": "oos_test-0931", "split": "holdout", "raw": "To turn up the resolution of your camera phone's photos, you can follow these steps:\n\n1. Open the camera app on your phone.\n2.", "seconds": 0.3983}
+{"id": "oos_test-0949", "split": "holdout", "raw": "The number of deaths from skydiving has been steadily increasing over the past few decades. According to the Centers for Disease Control and Prevention (CDC), the number", "seconds": 0.3947}
+{"id": "oos_test-0964", "split": "holdout", "raw": "Based on the data provided, the scores of other teams in this division are:\n\n- The top scorer is the person who received the most points,", "seconds": 0.3969}
+{"id": "oos_test-0976", "split": "holdout", "raw": "You can use the following code to calculate the time left on your laundry:\n\n```python\nimport time\n\ndef calculate_time_left():\n   ", "seconds": 0.3999}
