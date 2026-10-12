@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document assistant</title>
+  <link rel="stylesheet" href="app.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Document assistant</h1>
+    <p id="who" aria-live="polite">Loading…</p>
+    <nav id="account"></nav>
+  </header>
+
+  <main>
+    <noscript><p class="error">This page needs JavaScript. The API works without it: see /docs.</p></noscript>
+
+    <section id="shop-section" hidden>
+      <label for="shop">Shop</label>
+      <select id="shop"></select>
+      <span id="role" class="muted"></span>
+    </section>
+
+    <section aria-labelledby="ask-title">
+      <h2 id="ask-title">Ask a question</h2>
+      <form id="ask-form">
+        <label for="question">Question</label>
+        <textarea id="question" name="question" rows="3" minlength="3" maxlength="500" required
+                  placeholder="Can a customer return a book after 20 days?"></textarea>
+        <label for="as-of">Date the answer is for <span class="muted">(optional; today if empty)</span></label>
+        <input id="as-of" name="as_of" type="date">
+        <button type="submit">Ask</button>
+      </form>
+      <div id="ask-status" role="status" aria-live="polite"></div>
+      <article id="answer" hidden aria-live="polite"></article>
+      <aside id="evidence" hidden aria-live="polite"></aside>
+    </section>
+
+    <section aria-labelledby="docs-title">
+      <h2 id="docs-title">Documents</h2>
+      <form id="upload-form">
+        <label for="file">Upload a document <span class="muted">(.md, .txt, .html or .pdf, at most 5 MB)</span></label>
+        <input id="file" name="file" type="file" accept=".md,.txt,.html,.htm,.pdf" required>
+        <fieldset>
+          <legend>Who may read it</legend>
+          <label><input type="radio" name="access" value="" checked> As the file says (staff only if it does not say)</label>
+          <label><input type="radio" name="access" value="staff"> Owners and staff only</label>
+          <label><input type="radio" name="access" value="public"> Every member of this shop, read-only members too</label>
+        </fieldset>
+        <button type="submit">Upload</button>
+      </form>
+      <div id="upload-status" role="status" aria-live="polite"></div>
+      <p id="doc-counts" class="muted"></p>
+      <table id="docs">
+        <caption class="visually-hidden">Documents of this shop and their indexing status</caption>
+        <thead><tr><th scope="col">Document</th><th scope="col">Version</th><th scope="col">In force</th>
+          <th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

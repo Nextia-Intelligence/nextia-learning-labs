@@ -1,0 +1,37 @@
+{
+  "prompt": "assistant-v3",
+  "source": "the evaluation course's recorded runs (chat-small, real calls)",
+  "evaluation_set": "d4c96eaa10c0",
+  "split": "holdout",
+  "run": "candidate-v3-chat-small-r1-31b45f",
+  "cases": 98,
+  "valid_answers": 90,
+  "answers_without_text": 8,
+  "decisions_correct": 0.847,
+  "decisions_interval": [
+    0.776,
+    0.918
+  ],
+  "needs_human_caught": [
+    23,
+    24
+  ],
+  "cost_per_1000_usd": 0.48,
+  "latency_median_s": 5.584,
+  "latency_p95_s": 8.534,
+  "blockers": [
+    "T-65663 no_answer_critical"
+  ],
+  "dev_repeats_answers_without_text": [
+    11,
+    16,
+    19,
+    14,
+    14
+  ],
+  "decisions_difference_vs_baseline": [
+    -0.112,
+    -0.184,
+    -0.041
+  ]
+}

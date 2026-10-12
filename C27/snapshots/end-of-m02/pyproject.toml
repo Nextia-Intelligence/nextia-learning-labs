@@ -1,0 +1,19 @@
+[project]
+name = "doc-assistant"
+version = "1.0.0"
+description = "A document support assistant for two shops: grounded answers with citations, from each shop's own documents."
+requires-python = ">=3.12"
+license = "MIT"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]
+
+[tool.ruff]
+line-length = 125
+extend-exclude = ["idp"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["B008", "E702"]   # E702: the parser keeps two short statements on a line

@@ -1,0 +1,115 @@
+# The ticket service's alerts: the same rules as observability/alerts/*.yaml (Grafana), written
+# so that python -m ops alerts can run them on saved telemetry. Each alert has an owner, a
+# severity (slos.toml) and a runbook. "window" is the time the rule looks back; "for" is how
+# long the rule must hold before the alert fires.
+
+[[alert]]
+uid = "accept-fast-burn"
+title = "Tickets refused (accept SLO burns fast)"
+rule = "share of ticket requests answered 5xx (4xx not counted)"
+above = 0.0144
+window = 300
+for = 60
+severity = "SEV-2"
+owner = "Amira"
+runbook = "operations/runbooks/tickets-refused.md"
+
+[[alert]]
+uid = "draft-fast-burn"
+title = "Tickets without a valid draft (draft SLO burns fast)"
+rule = "share of finished tickets whose outcome is not ok"
+above = 0.10
+window = 300
+for = 60
+severity = "SEV-2"
+owner = "Amira"
+runbook = "operations/runbooks/bad-release.md"
+
+[[alert]]
+uid = "drafts-late"
+title = "Drafts are late (oldest ticket waits over 2 minutes)"
+rule = "age in seconds of the oldest ticket that has no triage result yet"
+above = 120
+window = 0
+for = 60
+severity = "SEV-2"
+owner = "Amira"
+runbook = "operations/runbooks/provider-outage.md"
+
+[[alert]]
+uid = "provider-circuit-open"
+title = "AI provider failing (circuit breaker open)"
+rule = "the worker's circuit breaker is open"
+above = 0
+window = 0
+for = 30
+severity = "SEV-2"
+owner = "Kwame"
+runbook = "operations/runbooks/provider-outage.md"
+
+[[alert]]
+uid = "no-answer"
+title = "Answers without text"
+rule = "finished tickets whose model answer had no text"
+above = 0
+window = 300
+for = 0
+severity = "SEV-2"
+owner = "Priya"
+runbook = "operations/runbooks/bad-release.md"
+
+[[alert]]
+uid = "cost-over-budget"
+title = "AI cost per 1,000 tickets over budget"
+rule = "estimated AI cost per 1,000 finished tickets"
+above = 0.40
+window = 900
+for = 120
+severity = "SEV-3"
+owner = "Kwame"
+runbook = "operations/runbooks/bad-release.md"
+
+[[alert]]
+uid = "triage-slow"
+title = "Triage calls slow (p95 over 8 s)"
+rule = "95th percentile of the triage call, seconds"
+above = 8
+window = 300
+for = 120
+severity = "SEV-3"
+owner = "Amira"
+runbook = "operations/runbooks/provider-outage.md"
+
+[[alert]]
+uid = "model-version-changed"
+title = "The provider answered with another model version"
+rule = "answers from a model version that is not the release's"
+above = 0
+window = 600
+for = 0
+severity = "SEV-3"
+owner = "Priya"
+runbook = "operations/runbooks/model-version-changed.md"
+expected_model = "gpt-6-luna-2026-09-22"
+
+[[alert]]
+uid = "old-sources"
+title = "Answers quote old document versions"
+rule = "answers whose sources are not the current version"
+above = 0
+window = 600
+for = 0
+severity = "SEV-3"
+owner = "Tomás"
+runbook = "operations/runbooks/stale-index.md"
+
+[[alert]]
+uid = "reviews-disagree"
+title = "Agents disagree with the assistant (quality SLO)"
+rule = "share of agents' reviews that disagree with the decision"
+above = 0.10
+window = 1800
+for = 120
+severity = "SEV-3"
+owner = "Priya"
+runbook = "operations/runbooks/quality-drop.md"

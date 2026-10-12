@@ -1,0 +1,12 @@
+# How a release reaches customers (Module 5): a canary first, and when to roll back.
+[canary]
+share = 0.10
+# Quality, cost and time are judged only after this many canary tickets.
+minimum_tickets = 50
+
+[rollback]
+# Any one of these sends the canary back (python -m ops rollout rollback).
+answers_without_text = 1      # canary tickets with no answer (a safety ticket may be one)
+cost_increase = 0.20          # cost per ticket, against the active release (+20%)
+triage_p95_increase = 0.50    # p95 of the triage call, against the active release (+50%)
+agreement_drop = 0.05         # agreement with agents' reviews (needs 50 reviews of the canary)
