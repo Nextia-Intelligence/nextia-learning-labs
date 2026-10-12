@@ -1,0 +1,98 @@
+/* Module 1's page: a few rules for type, a two-column layout and readable forms. */
+:root {
+  --ink: #1d2733;
+  --muted: #5b6673;
+  --line: #d5dbe1;
+  --accent: #1f5fa8;
+  --paper: #ffffff;
+  --page: #f4f6f8;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+}
+
+.top {
+  padding: 1rem 1.5rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+/* One column on a phone, two columns when there is room. */
+.layout {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 48rem) {
+  .layout {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 0.35rem;
+}
+
+label {
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+  padding: 0.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+}
+
+button {
+  margin-top: 0.75rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* A clear outline for the keyboard user. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tickets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tickets li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tickets .meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
