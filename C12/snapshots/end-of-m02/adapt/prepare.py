@@ -29,7 +29,7 @@ SEED = 12
 SECRETS = {
     "card number": re.compile(r"\b(?:\d[ -]?){13,19}\b"),
     # A password is a word with a digit or a symbol after "password is" or "password:". The first version
-    # of this rule ("password is" + any word) rejected 13 tickets that say "my password is wrong".
+    # of this rule ("password is" + any word) rejected 12 tickets that say "my password is wrong".
     "password": re.compile(r"(?i)\b(password|passcode|pwd)\b\s*(is|was|:|=)\s*[\"']?(?=\S*[\d!@#$%^&*])\S{6,}"),
     "email address": re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+"),
 }

@@ -66,7 +66,7 @@ yet.
 
 ## Module 4: run a controlled experiment
 
-Training needs PyTorch, `transformers` and `peft` (about 900 MB in the virtual environment) and the base
+Training needs PyTorch, `transformers` and `peft` (about 720 MB in the virtual environment) and the base
 model's weights (about 270 MB). On Windows and Linux, install PyTorch first, from the CPU-only index:
 
 ```sh

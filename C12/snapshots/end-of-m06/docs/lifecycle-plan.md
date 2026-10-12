@@ -24,8 +24,9 @@ evidence and the files must stay usable for the next attempt.
 - **A new base model** with a permissive licence, small enough for our hardware: a new base means a new
   adapter (an adapter works only on the exact base revision it was trained on).
 
-Each trigger starts the same steps: prepare, train one controlled run, compare on dev, decide, and read the
-holdout once.
+Each trigger starts the same steps: prepare, train one controlled run, compare on dev, decide, and read a
+new holdout version once. The current holdout cases were read for the result memo, so they are no longer
+unseen: Grace's team writes the new version before the next attempt.
 
 ## 3. Before any deployment (if a future adapter passes)
 

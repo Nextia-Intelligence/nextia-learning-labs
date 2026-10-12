@@ -40,7 +40,7 @@ Against `targets.toml` the adapter meets the format and speed targets and misses
 - **Regressions:** on 20 general questions the base model answered 12 right, the adapters 10 and 11. Too
   few questions to say more than "no large loss".
 - **Cost:** the hosted assistant costs about US$0.35 per 1,000 tickets (measured). The adapter would save
-  about US$8.50 a month at 822 tickets a day (an assumption), and keep the tickets on our computers.
+  about US$8.53 a month at 822 tickets a day (an assumption), and keep the tickets on our computers.
   Hosting a fine-tuned model in the cloud instead would cost US$1.70 an hour (price), far more than the
   hosted assistant.
 
@@ -48,4 +48,5 @@ Against `targets.toml` the adapter meets the format and speed targets and misses
 
 Reviewed training examples of every needs-a-person rule and of French tickets; or a design where the
 adapter only routes and the safety decision stays with the hosted model or a person. Either one must be
-measured again on dev, and then on the holdout once.
+measured again on dev, and then once on a new holdout version: this memo read the current holdout cases,
+so they are no longer unseen.
