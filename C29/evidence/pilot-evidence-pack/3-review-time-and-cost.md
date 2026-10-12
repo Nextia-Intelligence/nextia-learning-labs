@@ -97,4 +97,15 @@ The model cost is the same at every level: US$0.34 (v2) and US$0.48 (v3) per 1,0
 
 How the table is made: the recorded shares of usable, partly helpful, wrong and harmful replies (judge scores 4–5, 3, 2 and 1: prompt v2 173, 23, 3, 0 of 199; prompt v3 145, 8, 43, 2 of 198), times assumed minutes per ticket and an assumed share of bad replies that a person lets through: 0% when the agent writes, 10% when the agent edits a draft, 30% when the agent only approves (fast approval means less attention), and 100% when nobody reads.
 
+The assumptions behind Part B, with their low, base and high values ("low" makes the assistant look worst, as in Part A):
+
+| Assumption | Low | Base | High |
+|---|---|---|---|
+| Minutes per ticket when the assistant only suggests (the agent writes the reply) | 6 | 5 | 4.5 |
+| Minutes to read a reply and approve or reject it (no editing) | 1 | 0.6 | 0.4 |
+| Share of bad replies a person misses when editing a draft | 20% | 10% | 5% |
+| Share of bad replies a person misses when only approving | 50% | 30% | 20% |
+
+The draft level uses the minutes of Part A: 1.5 minutes to review a usable draft, and 6 + 2 minutes for a draft that is not usable. At the approve level, a person writes a rejected reply again by hand.
+
 **What this tells us.** Each step up the ladder saves agent time and lets more wrong replies through. At the draft level, prompt v3 costs **US$475 more in agent time per 1,000 tickets** than prompt v2, because agents rewrite more of its drafts; its model cost is only US$0.14 higher. A "cheaper model" that makes worse drafts is dearer. And "acts alone" with prompt v2 would still send about 15 wrong replies per 1,000 tickets to customers. Its harmful drafts were 0 in 199, which by the rule of three still allows up to about 15 harmful replies per 1,000. Tickets that need a person go to a person at every level: prompt v2 caught 24 of 24 on the holdout tickets, prompt v3 23 of 24.
