@@ -1,0 +1,4 @@
+# Pinned versions (the latest stable releases that work together on 2026-10-11).
+# Module 1 needs only the tests and the linter; Modules 2 and 3 add the rest.
+pytest==9.1.1
+ruff==0.17.0

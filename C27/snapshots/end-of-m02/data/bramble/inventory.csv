@@ -1,0 +1,16 @@
+file,doc_id,title,version,effective_from,effective_to,owner,access,language,doc_type,format
+documents/book-clubs-and-schools.md,book-clubs-and-schools,Book clubs and schools,1,2026-09-15,,Ines (owner),public,en,policy,md
+documents/delivery-policy.md,delivery-policy,Delivery times,1,2026-09-15,,Ines (owner),public,en,policy,md
+documents/distributor-northwind-preorders.md,distributor-northwind-preorders,Northwind Book Distribution - pre-order information,1,2026-09-20,,Northwind Book Distribution (supplier),public,en,supplier,md
+documents/events-and-room-hire.pdf,events-and-room-hire,Events and room hire,1,2026-09-15,,Ines (owner),public,en,policy,pdf
+documents/faq.md,faq,Frequently asked questions,4,2026-09-15,,Customer help (Ines),public,en,help,md
+documents/gift-cards.md,gift-cards,Gift cards,1,2026-09-15,,Ines (owner),public,en,policy,md
+documents/loyalty-stamp-card.md,loyalty-stamp-card,Loyalty stamp card,1,2026-09-15,,Ines (owner),public,en,policy,md
+documents/policy-rules.md,policy-rules,How our policies work,1,2026-09-15,,Ines (owner),public,en,policy,md
+documents/privacy-notice.md,privacy-notice,Privacy notice,2,2026-09-15,,Ines (owner),public,en,policy,md
+documents/refund-approval-procedure.md,refund-approval-procedure,Refund approval (staff procedure),1,2026-09-15,,Ines (owner),staff,en,procedure,md
+documents/returns-policy.v1.md,returns-policy,Returning a book,1,2026-09-15,2026-11-30,Ines (owner),public,en,policy,md
+documents/returns-policy.v2.html,returns-policy,Returning a book,2,2026-12-01,,Ines (owner),public,en,policy,html
+documents/special-orders.md,special-orders,Special orders and pre-orders,2,2026-09-15,,Ines (owner),public,en,policy,md
+documents/staff-discount.md,staff-discount,Staff discount (staff only),1,2026-09-15,,Ines (owner),staff,en,procedure,md
+documents/supplier-terms.md,supplier-terms,Wholesale terms (staff only),1,2026-09-15,,Ines (owner),staff,en,procedure,md
