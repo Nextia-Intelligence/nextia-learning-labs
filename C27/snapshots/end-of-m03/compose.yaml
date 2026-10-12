@@ -1,0 +1,25 @@
+# The document assistant's database on your computer (Module 6 adds the whole demo).
+#   Start:  docker compose up -d db
+#   Stop:   docker compose down            (keeps the data)
+#   Reset:  docker compose down --volumes  (deletes the data)
+
+services:
+  db:
+    # PostgreSQL 18.6 with the pgvector extension (0.8.7), as in the databases course.
+    image: pgvector/pgvector:0.8.7-pg18-trixie
+    environment:
+      POSTGRES_USER: assistant
+      POSTGRES_DB: assistant
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U assistant -d assistant"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+volumes:
+  pgdata:
