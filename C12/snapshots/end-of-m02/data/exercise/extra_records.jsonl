@@ -1,0 +1,4 @@
+{"id": "X-001", "text": "Hi, this isn't a delivery issue, the hammock arrived fine. The problem is that I can't log in to my account, and the password reset email never came through even after several tries. Could you help me get back in? Order LK-837202. Thanks!", "team": "account", "needs_human": false, "source": "exercise (constructed)"}
+{"id": "X-002", "text": "I can't sign in. My password is Rose2026! and it still says wrong. Please fix it.", "team": "account", "needs_human": false, "source": "exercise (constructed)"}
+{"id": "X-003", "text": "Checkout showed $34.99 for the pruning shears, but I was charged $39.49! Order LK-520874. Please correct it", "team": "payment", "needs_human": false, "source": "exercise (constructed)"}
+{"id": "X-004", "text": "My new garden chair arrived with one leg bent. Can you send a replacement leg?", "team": "delivery", "needs_human": false, "source": "exercise (constructed)"}

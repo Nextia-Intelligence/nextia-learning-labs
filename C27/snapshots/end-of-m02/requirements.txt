@@ -1,0 +1,8 @@
+# Pinned versions (the latest stable releases that work together on 2026-10-11).
+# Module 2: the database driver and the PDF reader; Module 3 adds the API and the models.
+psycopg[binary,pool]==3.3.6
+pypdf==6.20.0
+
+# Work on it
+pytest==9.1.1
+ruff==0.17.0

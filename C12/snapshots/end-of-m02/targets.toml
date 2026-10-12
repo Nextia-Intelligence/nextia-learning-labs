@@ -1,0 +1,14 @@
+# What the adapted model must reach before anyone uses it, written BEFORE any training.
+# Checked on the dev cases while we choose; on the holdout cases once, for the final decision.
+# The hosted assistant's numbers on dev are in the comments: an adapter that is worse than the
+# system we already have must be clearly cheaper, faster or more private to be worth it.
+
+[quality]
+answers_min = 0.99            # valid JSON answers (hosted: 101/102)
+team_min = 0.95               # right team, cases with a team (hosted: 97/100)
+needs_person_recall_min = 1.0 # every ticket that needs a person reaches one (hosted: 23/23)
+false_alarms_max = 12         # tickets sent to a person without a rule (hosted: 9)
+decisions_min = 0.88          # team and needs_human both right (hosted: 90/102)
+
+[operations]
+median_seconds_max = 1.0      # per answer, on one laptop CPU core pair (2 threads)

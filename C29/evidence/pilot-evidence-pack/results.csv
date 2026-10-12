@@ -1,0 +1,13 @@
+measure,prompt_v2_dev,prompt_v3_dev,prompt_v2_holdout,prompt_v3_holdout,label,source
+tickets,102,102,98,98,recorded,Evaluating and Testing AI Systems
+tickets_with_an_answer,101,91,98,90,recorded,Evaluating and Testing AI Systems
+right_team,97,88,97,89,recorded,Evaluating and Testing AI Systems
+tickets_with_a_team_label,100,100,97,97,recorded,Evaluating and Testing AI Systems
+needs_a_person_sent_to_a_person,23,22,24,23,recorded,Evaluating and Testing AI Systems
+needs_a_person_in_all,23,23,24,24,recorded,Evaluating and Testing AI Systems
+false_alarms,9,6,4,7,recorded,Evaluating and Testing AI Systems
+both_decisions_right,90,84,94,83,recorded,Evaluating and Testing AI Systems
+reply_follows_every_rule,100,85,96,87,recorded,Evaluating and Testing AI Systems
+model_cost_usd_per_1000_tickets,0.346,0.48,0.339,0.48,recorded,Evaluating and Testing AI Systems
+seconds_to_answer_median,2.977,6.069,2.813,5.584,recorded,Evaluating and Testing AI Systems
+seconds_to_answer_slowest_5_percent,5.547,8.515,4.896,8.534,recorded,Evaluating and Testing AI Systems

@@ -1,0 +1,91 @@
+# The document assistant on your computer.
+#   Database only (while you develop):  docker compose up -d db
+#   The whole demo (Module 6):          docker compose --profile app up -d --build
+#   Stop:                               docker compose --profile app down        (keeps the data)
+#   Reset:                              docker compose --profile app down --volumes   (deletes the data)
+
+services:
+  db:
+    # PostgreSQL 18.6 with the pgvector extension (0.8.7), as in the databases course.
+    image: pgvector/pgvector:0.8.7-pg18-trixie
+    environment:
+      POSTGRES_USER: assistant
+      POSTGRES_DB: assistant
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "127.0.0.1:${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U assistant -d assistant"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+
+  idp:
+    # The practice identity provider (made-up people, no passwords). Needs .idp/ from
+    # "python -m idp init", mounted read-only.
+    profiles: ["app"]
+    image: doc-assistant:${APP_VERSION:-1.0.0}
+    command: ["python", "-m", "idp"]
+    # .idp/ belongs to your user and only your user may read it (0700): the practice provider
+    # runs as root inside its container to read the mounted keys. Never do this with real keys.
+    user: "0:0"
+    environment:
+      IDP_HOST: 0.0.0.0
+      IDP_ISSUER: http://localhost:8400
+      IDP_DIR: /idp
+    volumes:
+      - ./.idp:/idp:ro
+    ports:
+      - "127.0.0.1:${IDP_PORT:-8400}:8400"
+
+  migrate:
+    profiles: ["app"]
+    image: doc-assistant:${APP_VERSION:-1.0.0}
+    command: ["python", "-m", "doc_assistant.migrate"]
+    environment:
+      DATABASE_URL: postgresql://assistant:${POSTGRES_PASSWORD}@db:5432/assistant
+    depends_on:
+      db:
+        condition: service_healthy
+
+  api:
+    profiles: ["app"]
+    build:
+      context: .
+      args:
+        APP_VERSION: ${APP_VERSION:-1.0.0}
+    image: doc-assistant:${APP_VERSION:-1.0.0}
+    environment:
+      DATABASE_URL: postgresql://assistant:${POSTGRES_PASSWORD}@db:5432/assistant
+      ASSISTANT_TODAY: ${ASSISTANT_TODAY:-}
+      ANSWER_PROVIDER: ${ANSWER_PROVIDER:-recorded}
+      RETRIEVAL_MODE: ${RETRIEVAL_MODE:-hybrid}
+      PROMPT_VERSION: ${PROMPT_VERSION:-answer_v2}
+      OIDC_ISSUER: http://localhost:8400
+      OIDC_INTERNAL_URL: http://idp:8400
+      OIDC_CLIENT_SECRET: ${OIDC_CLIENT_SECRET:?Run python -m idp init first}
+      SESSION_SECRET: ${SESSION_SECRET:?Run python -m idp init first}
+      SESSION_COOKIE_SECURE: "false"     # http on your own computer only
+      PUBLIC_URL: http://127.0.0.1:8000
+      DAILY_QUESTION_LIMIT: ${DAILY_QUESTION_LIMIT:-200}
+      MONTHLY_BUDGET_USD: ${MONTHLY_BUDGET_USD:-5}
+      TORCH_THREADS: ${TORCH_THREADS:-2}
+      TRACE_FILE: /app/traces/spans.jsonl
+    ports:
+      - "127.0.0.1:${API_PORT:-8000}:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/ready')"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+      start_period: 20s
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      idp:
+        condition: service_started
+
+volumes:
+  pgdata:

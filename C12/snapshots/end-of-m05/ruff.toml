@@ -1,0 +1,7 @@
+line-length = 120
+target-version = "py312"
+[lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E741"]
+[lint.per-file-ignores]
+"adapt/predict.py" = ["E501"]  # the prompt text keeps one rule per line

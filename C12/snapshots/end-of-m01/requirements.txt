@@ -1,0 +1,2 @@
+# Modules 1 to 3 need only the tests. PyTorch, transformers and peft arrive in Module 4.
+pytest==9.1.1

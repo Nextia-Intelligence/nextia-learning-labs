@@ -1,0 +1,50 @@
+{
+ "name": "lora-r8",
+ "config": {
+  "name": "lora-r8",
+  "seed": 12,
+  "threads": 2,
+  "train": "data/train.jsonl",
+  "val": "data/val.jsonl",
+  "max_tokens": 320,
+  "rank": 8,
+  "alpha": 16,
+  "dropout": 0.05,
+  "targets": [
+   "q_proj",
+   "v_proj"
+  ],
+  "learning_rate": 0.0002,
+  "batch_size": 8,
+  "epochs": 2,
+  "eval_every": 25,
+  "checkpoint_every": 50,
+  "gradient_checkpointing": true,
+  "keep_checkpoints": 2,
+  "train_limit": 0,
+  "notes": ""
+ },
+ "steps": 204,
+ "train_records": 813,
+ "val_records": 72,
+ "train_tokens": 229918,
+ "trainable_parameters": 460800,
+ "all_parameters": 134975808,
+ "adapter_bytes": 1859889,
+ "train_seconds": 221.2,
+ "wall_seconds_this_session": 245.3,
+ "peak_mb": 1702.2,
+ "first_val_loss": 0.3754,
+ "best_val_loss": 0.0515,
+ "best_step": 200,
+ "final_val_loss": 0.053,
+ "tokenizer_sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+ "versions": {
+  "python": "3.12.13",
+  "torch": "2.14.1",
+  "transformers": "5.19.0",
+  "peft": "0.21.2"
+ },
+ "machine": "Darwin arm64",
+ "resumed": false
+}

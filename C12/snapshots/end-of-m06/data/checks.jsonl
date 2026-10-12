@@ -1,0 +1,8 @@
+{"id": "C-01", "text": "My parcel was due on Monday and the tracking has not moved for six days. Where is it?", "team": "delivery", "needs_human": false}
+{"id": "C-02", "text": "The garden bench arrived today with a broken leg. The box was crushed.", "team": "delivery", "needs_human": false}
+{"id": "C-03", "text": "I would like to send back the plant pots. I changed my mind and they are unused. How do I get a return label?", "team": "returns", "needs_human": false}
+{"id": "C-04", "text": "You charged my card twice for the same lawn mower order. Please refund the second charge.", "team": "payment", "needs_human": false}
+{"id": "C-05", "text": "After three months of use, the hose reel started to leak at the joint. Is it covered by the guarantee?", "team": "warranty", "needs_human": false}
+{"id": "C-06", "text": "I cannot sign in. The reset email never arrives.", "team": "account", "needs_human": false}
+{"id": "C-07", "text": "The electric heater sparked and the plug got very hot. I am scared to use it again.", "team": "warranty", "needs_human": true}
+{"id": "C-08", "text": "The kettle base started smoking the first time I used it, and there was a burning smell.", "team": "warranty", "needs_human": true}
