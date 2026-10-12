@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ticket desk</title>
+  </head>
+  <body>
+    <header class="top">
+      <h1>Larkfield ticket desk</h1>
+    </header>
+
+    <main class="layout">
+      <section aria-labelledby="new-heading" class="card">
+        <h2 id="new-heading">New ticket</h2>
+        <form id="new-ticket" class="form">
+          <label for="customer">Customer ID</label>
+          <input id="customer" name="customer_id" required pattern="C-[0-9]{4,5}" placeholder="C-0022" />
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" required maxlength="120" />
+
+          <label for="body">Message</label>
+          <textarea id="body" name="body" required rows="4" maxlength="5000"></textarea>
+
+          <button type="submit">Send ticket</button>
+        </form>
+        <p id="answer" role="status"></p>
+      </section>
+
+      <section aria-labelledby="list-heading" class="card">
+        <h2 id="list-heading">Newest tickets</h2>
+        <ul id="tickets" class="rows">
+          <li>Loading…</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

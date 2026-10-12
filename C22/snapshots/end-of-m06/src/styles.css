@@ -1,0 +1,377 @@
+/* The ticket desk's styles. Colours are tokens, so that a change happens in one place.
+   Every text colour has a contrast of at least 4.5:1 with its background. */
+:root {
+  --ink: #1d2733;
+  --muted: #56616d;
+  --line: #d5dbe1;
+  --accent: #1f5fa8;
+  --accent-ink: #ffffff;
+  --paper: #ffffff;
+  --page: #f4f6f8;
+  --danger: #a32020;
+  --danger-bg: #fdeeee;
+  --warn-bg: #fff6dc;
+  --ok-bg: #e8f5ec;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.45;
+  color: var(--ink);
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.top h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.top nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.top nav a[aria-current='page'] {
+  font-weight: 700;
+  text-decoration-thickness: 3px;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* One column on a phone; list and ticket side by side when there is room. */
+.layout {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 60rem) {
+  .layout {
+    grid-template-columns: minmax(22rem, 2fr) 3fr;
+    align-items: start;
+  }
+}
+
+.card,
+.list,
+.detail {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-width: 0;
+}
+
+h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* Forms */
+.form,
+.filters {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.filters {
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 30rem) {
+  .filters {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.filters label,
+.form label {
+  display: grid;
+  gap: 0.2rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  padding: 0.45rem 0.6rem;
+  border: 1px solid #8a949f;
+  border-radius: 0.35rem;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+button {
+  background: var(--accent);
+  color: var(--accent-ink);
+  border-color: var(--accent);
+  cursor: pointer;
+}
+
+button.secondary {
+  background: var(--paper);
+  color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+[aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.field-error {
+  color: var(--danger);
+  margin: 0;
+}
+
+/* A clear outline for the keyboard user, on every control. */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 0.5rem;
+  z-index: 10;
+  background: var(--paper);
+  padding: 0.5rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* The ticket list */
+.rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 'id subject badge' 'id meta badge';
+  gap: 0 0.75rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  height: 3.5rem;
+  box-sizing: border-box;
+}
+
+.row:hover {
+  background: var(--page);
+}
+
+.row[aria-current='true'] {
+  background: #e3edf8;
+}
+
+.row-id {
+  grid-area: id;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+}
+
+.row-subject {
+  grid-area: subject;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row-meta {
+  grid-area: meta;
+  color: var(--muted);
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row .badge {
+  grid-area: badge;
+  align-self: center;
+}
+
+.scroller {
+  height: 60vh;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.05rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
+  border: 1px solid currentColor;
+}
+
+.badge-open {
+  color: #1f5fa8;
+}
+
+.badge-pending {
+  color: #8a5300;
+}
+
+.badge-resolved {
+  color: #1d6b37;
+}
+
+.badge-closed {
+  color: var(--muted);
+}
+
+/* A ticket */
+.message {
+  border-left: 4px solid var(--line);
+  padding: 0.25rem 0.75rem;
+  margin: 0.75rem 0;
+}
+
+.message p {
+  margin: 0.2rem 0;
+  white-space: pre-wrap;
+}
+
+.message-agent {
+  border-color: var(--accent);
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+/* Errors and notices */
+.error {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.error p {
+  margin: 0.2rem 0;
+}
+
+.notice {
+  background: var(--warn-bg);
+  border: 1px solid #b07a00;
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.75rem;
+}
+
+.success {
+  background: var(--ok-bg);
+  border: 1px solid #1d6b37;
+  border-radius: 0.35rem;
+  padding: 0.5rem 0.75rem;
+}
+
+/* The AI draft */
+.draft {
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+.draft-text {
+  white-space: pre-wrap;
+  min-height: 3rem;
+}
+
+/* A finished draft is HTML: its paragraphs and list items make the line breaks. */
+.draft-text.markdown {
+  white-space: normal;
+}
+
+.draft-state {
+  font-weight: 600;
+}
+
+.citations {
+  font-size: 0.95rem;
+}
+
+.citations blockquote {
+  margin: 0.25rem 0 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--line);
+  color: var(--muted);
+}
+
+/* Job steps */
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.steps li {
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.steps li[aria-current='step'] {
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

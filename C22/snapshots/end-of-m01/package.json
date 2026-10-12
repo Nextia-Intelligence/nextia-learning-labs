@@ -1,0 +1,24 @@
+{
+  "name": "ticket-desk",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Larkfield's help-desk interface: the running project of the frontend course of Nextia Learning.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": "^22.22.2 || >=24.15.0"
+  },
+  "scripts": {
+    "api": "node mock-api/server.mjs",
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test \"mock-api/*.test.mjs\" && vitest run"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  }
+}
