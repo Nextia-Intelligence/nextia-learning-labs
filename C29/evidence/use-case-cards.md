@@ -16,7 +16,7 @@ For each card, ask four questions, in this order: What is the problem, and for w
 | **Volume** | About 822 tickets a day (recorded on a synthetic workload; treat it as an assumption) |
 | **Cost of a mistake** | A wrong promise (a refund the policy does not give), a missed safety concern, an annoyed customer |
 | **Data** | Thousands of past tickets and replies; a written policy |
-| **Can a person check it?** | Yes: the agent reads the draft before it is sent, in about a minute |
+| **Can a person check it?** | Yes: the agent reads the draft before it is sent, in about one to two and a half minutes (base 1.5; assumption) |
 | **Evidence so far** | A pilot: see the [pilot evidence pack](pilot-evidence-pack/README.md) (recorded) |
 
 ## Card 2: Read receipts and supplier invoices (Larkfield finance)

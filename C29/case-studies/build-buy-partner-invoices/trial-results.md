@@ -26,4 +26,4 @@ With a looser instruction (an earlier prompt), the same vision model **invented 
 
 - The trial set is 54 receipt documents (synthetic); it has no multi-page supplier invoices.
 - The partner has no result on Larkfield's documents.
-- The partner's error cost is unknown (no trial): shown as none, not as zero.
+- The partner's error cost is unknown (no trial): its cost is '+ errors', never zero.
