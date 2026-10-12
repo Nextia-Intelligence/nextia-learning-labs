@@ -1,0 +1,65 @@
+{
+ "settings": {
+  "per_team": 200,
+  "val_share": 0.1,
+  "seed": 12,
+  "near": 0.4,
+  "extra": null
+ },
+ "source_records": 4696,
+ "rejected": {
+  "duplicate": 23,
+  "evaluation leak": 1,
+  "known wrong label": 70
+ },
+ "clean_records": 4602,
+ "train": {
+  "records": 900,
+  "sha256_12": "73f29c94b022",
+  "teams": {
+   "account": 180,
+   "delivery": 180,
+   "payment": 180,
+   "returns": 180,
+   "warranty": 180
+  },
+  "needs_human": 78,
+  "styles": {
+   "boundary": 211,
+   "distractor": 127,
+   "long": 40,
+   "negation": 47,
+   "plain": 195,
+   "request_last": 70,
+   "short": 60,
+   "two_topics": 96,
+   "typos": 54
+  },
+  "french": 0
+ },
+ "val": {
+  "records": 100,
+  "sha256_12": "f0b7e6da2e1a",
+  "teams": {
+   "account": 20,
+   "delivery": 20,
+   "payment": 20,
+   "returns": 20,
+   "warranty": 20
+  },
+  "needs_human": 9,
+  "styles": {
+   "boundary": 22,
+   "distractor": 13,
+   "long": 7,
+   "negation": 7,
+   "plain": 23,
+   "request_last": 8,
+   "short": 9,
+   "two_topics": 9,
+   "typos": 2
+  },
+  "french": 0
+ },
+ "evaluation_cases_version": "69bc4c1c556f"
+}

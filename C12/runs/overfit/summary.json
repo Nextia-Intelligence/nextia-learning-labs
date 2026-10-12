@@ -1,0 +1,50 @@
+{
+ "name": "overfit",
+ "config": {
+  "name": "overfit",
+  "seed": 12,
+  "threads": 2,
+  "train": "data/prepared/train.jsonl",
+  "val": "data/prepared/val.jsonl",
+  "max_tokens": 320,
+  "rank": 16,
+  "alpha": 32,
+  "dropout": 0.0,
+  "targets": [
+   "q_proj",
+   "v_proj"
+  ],
+  "learning_rate": 0.001,
+  "batch_size": 8,
+  "epochs": 20,
+  "eval_every": 6,
+  "checkpoint_every": 30,
+  "gradient_checkpointing": true,
+  "keep_checkpoints": 2,
+  "train_limit": 48,
+  "notes": "48 training records, 20 epochs, learning rate 1e-3, rank 16: made to overfit"
+ },
+ "steps": 120,
+ "train_records": 48,
+ "val_records": 100,
+ "train_tokens": 145340,
+ "trainable_parameters": 921600,
+ "all_parameters": 135436608,
+ "adapter_bytes": 3703281,
+ "train_seconds": 163.5,
+ "wall_seconds_this_session": 282.2,
+ "peak_mb": 1819.5,
+ "first_val_loss": 0.216,
+ "best_val_loss": 0.0851,
+ "best_step": 36,
+ "final_val_loss": 0.1267,
+ "tokenizer_sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
+ "versions": {
+  "python": "3.12.13",
+  "torch": "2.14.1",
+  "transformers": "5.19.0",
+  "peft": "0.21.2"
+ },
+ "machine": "Darwin arm64",
+ "resumed": false
+}

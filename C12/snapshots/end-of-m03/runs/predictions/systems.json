@@ -1,0 +1,10 @@
+{
+ "chat-small": {
+  "what": "the hosted assistant: chat-small with the long policy prompt and strict structured output (recorded in the evaluation course)",
+  "where": "hosted"
+ },
+ "base-short": {
+  "what": "SmolLM2-135M-Instruct, the short instruction only",
+  "where": "local"
+ }
+}
