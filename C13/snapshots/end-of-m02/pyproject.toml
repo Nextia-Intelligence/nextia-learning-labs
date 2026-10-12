@@ -1,0 +1,20 @@
+[project]
+name = "doc-extract"
+version = "1.0.0"
+description = "Read Larkfield's receipts, scans, photos, tables and policies, and keep the source of every value."
+requires-python = ">=3.12"
+license = "MIT"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["E501", "E731", "B905"]  # zip() of rows and headers of different lengths is on purpose
+
+[tool.ruff.lint.isort]
+known-first-party = ["doc_extract", "tests"]
