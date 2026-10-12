@@ -1,0 +1,34 @@
+# Where every file in data/ comes from, and what this course may use it for.
+# A record without a source here is not used.
+
+[sources.tickets]
+file = "data/source/tickets.csv"
+what = "4,696 ticket messages with a team: the TRAINING split of the deep learning course"
+origin = "Made up for the deep learning course: written by a language model from a list of situations, checked by a second model. No real customer wrote them."
+licence = "CC0 1.0"
+permitted_use = "training, validation and teaching"
+sha256 = "98487169346f8b0d9bc55a3844849ab95d012b75f01d7083605a6a1cea57aa39"
+
+[sources.needs_human]
+file = "data/source/needs_human.csv"
+what = "needs_human for each of the 4,696 tickets"
+origin = "The course author read the 98 tickets that contain a word from the evaluation course's safety word list and applied Grace's rule H1: 89 need a person, 9 do not. The other 4,598 tickets were not read; they are false because they have no safety word."
+licence = "CC0 1.0"
+permitted_use = "training, validation and teaching"
+sha256 = "54e66c55abdfc4c86e2416fee266d076f7fa29f373cc31f3441bcb4ee9dd3823"
+
+[sources.known_wrong_labels]
+file = "data/source/known_wrong_labels.txt"
+what = "70 ticket IDs whose team is wrong on purpose (1.5% label noise, put in by the deep learning course)"
+origin = "The deep learning course's split manifest"
+licence = "CC0 1.0"
+permitted_use = "removing wrong labels"
+sha256 = "08128bdc437d92738083a7ac1df060ce6d36fe19a97252464b5fc1186fc06e00"
+
+[sources.evaluation]
+file = "data/eval/cases.jsonl"
+what = "271 labelled cases of the evaluation course: dev 102, holdout 98, contaminated 71"
+origin = "The evaluation course's evaluation set (version d4c96eaa10c0), the fields this course uses. 140 tickets come from the deep learning course's validation and test splits, 60 were written for the evaluation course, 71 are the tickets that the hosted assistant's prompt was written on."
+licence = "CC0 1.0"
+permitted_use = "EVALUATION ONLY: never training. dev for choices, holdout for the final decision."
+sha256 = "69bc4c1c556f7d40332ef97ce9db79b10ae22f8d9aa6852fb6d3410f4e84e9dd"

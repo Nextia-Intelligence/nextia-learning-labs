@@ -1,0 +1,30 @@
+{
+ "chat-small": {
+  "what": "the hosted assistant: chat-small with the long policy prompt and strict structured output (recorded in the evaluation course)",
+  "where": "hosted"
+ },
+ "words": {
+  "what": "word counts + logistic regression for the team, the safety word list for needs_human (no language model)",
+  "where": "local"
+ },
+ "base-short": {
+  "what": "SmolLM2-135M-Instruct, the short instruction only",
+  "where": "local"
+ },
+ "base-policy": {
+  "what": "SmolLM2-135M-Instruct, a better prompt: the rules and three examples",
+  "where": "local"
+ },
+ "base-choice": {
+  "what": "SmolLM2-135M-Instruct, the better prompt, answer chosen from the 10 valid answers",
+  "where": "local"
+ },
+ "adapter": {
+  "what": "SmolLM2-135M-Instruct + the first LoRA adapter (runs/lora-r8, 2 epochs), the short instruction",
+  "where": "local"
+ },
+ "adapter-long": {
+  "what": "SmolLM2-135M-Instruct + the second LoRA adapter (runs/lora-r8-long, 6 epochs), the short instruction",
+  "where": "local"
+ }
+}
