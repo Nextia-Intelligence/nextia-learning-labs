@@ -32,5 +32,6 @@ What the next developer needs to run, check and change the ticket desk. A worked
 ## Known limits
 
 - The keyboard can reach only the ticket rows that are drawn. The list box itself takes the focus and scrolls with the arrow keys; search is the fast way to a ticket.
+- After **Send reply**, the keyboard focus falls to the page: the button is disabled while the reply is sent, and nothing takes the focus back. A screen reader still hears "Sent." (a status). Fix it as the new-ticket form does: move the focus to the result.
 - The mock API has no sign-in. The authentication course adds sessions; the desk must then send its cookie with `credentials: 'include'`, and the API must allow it.
 - Tested in Chromium (desktop and a phone screen size). Not tested here: Firefox, Safari, real phones, Windows high-contrast mode.

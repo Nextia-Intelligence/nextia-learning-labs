@@ -329,6 +329,11 @@ button:disabled {
   min-height: 3rem;
 }
 
+/* A finished draft is HTML: its paragraphs and list items make the line breaks. */
+.draft-text.markdown {
+  white-space: normal;
+}
+
 .draft-state {
   font-weight: 600;
 }
