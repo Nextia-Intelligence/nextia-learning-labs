@@ -16,7 +16,7 @@ A worked example for the lesson *Test and deliver*. It says what we measured, on
 
 - **Rows in `memo`.** Typing a note above 50 rows drew the rows 1,000 times, but that cost 2.4 ms for 20 key presses. Moving the note's state down to the note removed the extra drawing without `memo`. We keep the simple version.
 - **Drawing the draft once per frame.** Drawing every piece of a recorded draft took 30 commits; once per frame took 11. Both cost less than 0.01 ms of React work per draft on this computer. We keep one commit per piece, and we do not announce every piece to screen readers.
-- **Downloading every ticket.** The list asks the server for one page of 50 tickets at a time. Downloading all 10,000 took 6.5 s and 100 requests (about 2.3 MB of JSON) before the first row could be drawn.
+- **Downloading every ticket.** The list asks the server for one page of 50 tickets at a time. Downloading all 10,000 took 6.5 s and 100 requests (about 2.4 MB of JSON) before the first row could be drawn.
 
 ## Check it again before a delivery
 
