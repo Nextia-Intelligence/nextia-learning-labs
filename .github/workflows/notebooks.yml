@@ -31,7 +31,10 @@ jobs:
             course=${nb%%/*}
             # Test with the data in this commit. A notebook downloads its data
             # from main only when the file is not next to it.
-            if [ -d "$course/data" ]; then cp "$course"/data/*.csv "$dir"/; fi
+            # Some data folders have no CSV files.
+            for csv in "$course"/data/*.csv; do
+              if [ -f "$csv" ]; then cp "$csv" "$dir"/; fi
+            done
             echo "::group::$nb"
             case "$nb" in
               *-solution.ipynb) jupyter nbconvert --to notebook --execute --output-dir /tmp/out "$nb" ;;
