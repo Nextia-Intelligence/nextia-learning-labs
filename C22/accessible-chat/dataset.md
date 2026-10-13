@@ -4,7 +4,7 @@ Used by: the case study *Make an AI chat interface accessible* of *Frontend Arch
 
 | Field | Value |
 |---|---|
-| Source | Nextia Learning's RAG course: Grace's 67 questions ([labs `C09/questions/`](https://github.com/usmanahmed99/nextia-learning-labs/tree/main/C09/questions)) and the recorded answers of the course's policy assistant (retrieval with reranking, model `chat-small`) |
+| Source | Nextia Learning's RAG course: Grace's 67 questions ([labs `C09/questions/`](https://github.com/Nextia-Intelligence/nextia-learning-labs/tree/main/C09/questions)) and the recorded answers of the course's policy assistant (retrieval with reranking, model `chat-small`) |
 | Publisher / creator | Nextia Learning. The questions and the policy documents are made up for the courses; the answers are the real output of a hosted language model, recorded once. |
 | Licence | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) (public domain) |
 | Attribution text | None needed. "Recorded policy-assistant answers, Nextia Learning" is welcome. |

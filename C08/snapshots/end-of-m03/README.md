@@ -34,7 +34,7 @@ python -m pytest
 
 ## Reset
 
-If the project stops working, delete this folder and copy the snapshot again from [the labs repository](https://github.com/usmanahmed99/nextia-learning-labs/tree/main/C08/snapshots). Your `.venv` must be made again.
+If the project stops working, delete this folder and copy the snapshot again from [the labs repository](https://github.com/Nextia-Intelligence/nextia-learning-labs/tree/main/C08/snapshots). Your `.venv` must be made again.
 
 ## Licence
 

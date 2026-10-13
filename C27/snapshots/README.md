@@ -21,6 +21,6 @@ The test counts include the tests that need the database (`TEST_DATABASE_URL` in
 
 ## Use a snapshot
 
-1. Get the files: clone this repository (`git clone https://github.com/usmanahmed99/nextia-learning-labs.git`), or download [its ZIP file](https://github.com/usmanahmed99/nextia-learning-labs/archive/refs/heads/main.zip).
+1. Get the files: clone this repository (`git clone https://github.com/Nextia-Intelligence/nextia-learning-labs.git`), or download [its ZIP file](https://github.com/Nextia-Intelligence/nextia-learning-labs/archive/refs/heads/main.zip).
 2. Copy the snapshot to your projects folder, for example as `~/projects/doc-assistant`. Keep your own project under another name first.
 3. Follow the snapshot's `README.md`: it has the commands for its stage.

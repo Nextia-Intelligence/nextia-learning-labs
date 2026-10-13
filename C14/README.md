@@ -6,7 +6,7 @@ Practice repositories for every module and the final assignment of [Git and Team
 
 ```sh
 cd ~/projects
-git clone https://github.com/usmanahmed99/nextia-learning-labs.git   # once
+git clone https://github.com/Nextia-Intelligence/nextia-learning-labs.git   # once
 sh nextia-learning-labs/C14/setup.sh m03
 ```
 

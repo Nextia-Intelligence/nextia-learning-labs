@@ -15,7 +15,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-LABS = os.environ.get("NX_LABS_RAW", "https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C06/")
+LABS = os.environ.get("NX_LABS_RAW", "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C06/")
 FILES = {  # file -> SHA-256 (labs C06/data/SHA256SUMS)
     "data/train.csv": "98487169346f8b0d9bc55a3844849ab95d012b75f01d7083605a6a1cea57aa39",
     "data/valid.csv": "f0c7bfa75e75837cdaf891ac8d007a78a018ba8e3488155cf43f2c6a34a064c8",

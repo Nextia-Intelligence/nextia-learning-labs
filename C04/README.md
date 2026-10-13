@@ -22,8 +22,8 @@ The dataset card is [data/dataset.md](data/dataset.md).
 Python 3.12 or later. In a terminal, in your project folder (`ticket-data`):
 
 ```sh
-curl -O https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C04/get_data.py
-curl -O https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C04/q.py
+curl -O https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C04/get_data.py
+curl -O https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C04/q.py
 python3 get_data.py
 python3 q.py "SELECT COUNT(*) FROM tickets"
 ```
