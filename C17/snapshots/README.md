@@ -26,10 +26,10 @@ The steps use `end-of-m03` as an example. Use the name of your snapshot.
 
    ```sh
    cd ~/projects
-   git clone https://github.com/usmanahmed99/nextia-learning-labs.git
+   git clone https://github.com/Nextia-Intelligence/nextia-learning-labs.git
    ```
 
-   If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/usmanahmed99/nextia-learning-labs/archive/refs/heads/main.zip), and unzip it in `~/projects`. Its folder is `nextia-learning-labs-main`.
+   If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/Nextia-Intelligence/nextia-learning-labs/archive/refs/heads/main.zip), and unzip it in `~/projects`. Its folder is `nextia-learning-labs-main`.
 2. Keep your own project. If `~/projects/escalation-service` exists, rename it. If its containers run, stop them first in the old folder: `docker compose down`.
 
    ```sh

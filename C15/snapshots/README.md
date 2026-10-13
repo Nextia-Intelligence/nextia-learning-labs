@@ -29,10 +29,10 @@ The steps use `start` as an example. Use the name of your snapshot.
 
    ```sh
    cd ~/projects
-   git clone https://github.com/usmanahmed99/nextia-learning-labs.git
+   git clone https://github.com/Nextia-Intelligence/nextia-learning-labs.git
    ```
 
-   If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/usmanahmed99/nextia-learning-labs/archive/refs/heads/main.zip), and unzip it in `~/projects`. Its folder is `nextia-learning-labs-main`.
+   If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/Nextia-Intelligence/nextia-learning-labs/archive/refs/heads/main.zip), and unzip it in `~/projects`. Its folder is `nextia-learning-labs-main`.
 2. Copy the snapshot to a new folder, `ticket-cleaner-assist` (a different name from your Python course project, so that you keep it):
 
    ```sh

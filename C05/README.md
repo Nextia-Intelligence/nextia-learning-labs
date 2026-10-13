@@ -18,7 +18,7 @@ You can do every lesson in Colab or Kaggle without an installation. To work on y
 
 ```bash
 mkdir -p ~/projects/ticket-model && cd ~/projects/ticket-model
-curl -fsSL -O https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C05/get_data.py
+curl -fsSL -O https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C05/get_data.py
 python3 get_data.py
 ```
 

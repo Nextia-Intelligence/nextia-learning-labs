@@ -24,7 +24,7 @@ Each snapshot has only what the lessons' guided practice makes. It does not have
 
 The steps use `end-of-m03` as an example. Use the name of your snapshot.
 
-1. Get the files. If you have Git, clone this repository once, in `~/projects`: `git clone https://github.com/usmanahmed99/nextia-learning-labs.git`. If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/usmanahmed99/nextia-learning-labs/archive/refs/heads/main.zip) and unzip it in `~/projects`.
+1. Get the files. If you have Git, clone this repository once, in `~/projects`: `git clone https://github.com/Nextia-Intelligence/nextia-learning-labs.git`. If you already have the clone, get the newest files with `git -C nextia-learning-labs pull`. Without Git, download [the ZIP file of this repository](https://github.com/Nextia-Intelligence/nextia-learning-labs/archive/refs/heads/main.zip) and unzip it in `~/projects`.
 2. Keep your own project: rename `~/projects/ticket-api` to `ticket-api-old` (Windows: `Rename-Item ticket-api ticket-api-old`).
 3. Copy the snapshot into a new `ticket-api` folder, and take your `.env` and `secrets/` with you:
 

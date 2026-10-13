@@ -134,6 +134,6 @@ LICENSE              MIT
 
 ## Data
 
-`data/tickets.csv` has 15 synthetic tickets from the [Nextia Learning labs](https://github.com/usmanahmed99/nextia-learning-labs/tree/main/C02/data) (CC0 1.0). Nine are valid, and six have one problem each.
+`data/tickets.csv` has 15 synthetic tickets from the [Nextia Learning labs](https://github.com/Nextia-Intelligence/nextia-learning-labs/tree/main/C02/data) (CC0 1.0). Nine are valid, and six have one problem each.
 
 `data/web-form-export.csv` has 12 synthetic tickets from the new web form (CC0 1.0). They are all valid.

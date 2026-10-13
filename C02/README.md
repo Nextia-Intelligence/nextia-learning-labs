@@ -40,7 +40,7 @@ Module 1 (the terminal, installing Python, virtual environments) and Quality and
 In your project folder, with the terminal in `ticket-cleaner`:
 
 ```sh
-curl -o data/tickets.csv https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C02/data/tickets.csv
+curl -o data/tickets.csv https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C02/data/tickets.csv
 ```
 
 On Windows, in PowerShell, type `curl.exe` instead of `curl`. You can also open the link in a browser and save the file into your `data` folder.

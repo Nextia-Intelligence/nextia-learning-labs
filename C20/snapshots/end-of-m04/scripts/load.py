@@ -37,7 +37,7 @@ TABLES = ["customers", "tickets", "messages", "attachments", "documents", "ai_ru
 HELP_DESK = TABLES + ["ticket_embeddings"]
 # The large vectors are one 15 MB file. The labs repository keeps it; it is downloaded once.
 LARGE_VECTORS_URL = (
-    "https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C20/data/large/"
+    "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C20/data/large/"
 )
 LARGE_VECTORS_SHA256 = "b675097e1a237121867f298847976f732a418b7fcedbea8b5f22843b8cbea888"
 EMBEDDING_VERSION = "e5-small-v1"

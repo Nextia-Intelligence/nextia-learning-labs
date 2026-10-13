@@ -38,7 +38,7 @@ from ticket_api.config import load_env, load_settings
 
 FILE = "sf311_2025_arrivals.csv.gz"
 SHA256 = "57c4209ce8aefb694a99436faef07d3eb6256e1004724fc5ec358ccdc720e548"
-URL = ("https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C21/"
+URL = ("https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C21/"
        "M07-L01-capacity-plan-from-a-public-traffic-trace/" + FILE)
 
 

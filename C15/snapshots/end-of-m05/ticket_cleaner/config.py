@@ -1,7 +1,7 @@
 import os
 from dataclasses import dataclass, field
 
-DEFAULT_URL = "https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C02/data/tickets.json"
+DEFAULT_URL = "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C02/data/tickets.json"
 
 
 @dataclass(frozen=True)

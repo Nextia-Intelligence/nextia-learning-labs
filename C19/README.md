@@ -2,7 +2,7 @@
 
 Files for [CI/CD, Testing and Safe Releases](https://learning.nextia-ai.com/courses/cicd/).
 
-The reference project is a real repository with real workflow runs: **[usmanahmed99/ticket-api-ci](https://github.com/usmanahmed99/ticket-api-ci)**. Its pull requests, checks, releases (v1.1.0, v1.2.0, v1.2.1) and deployments are the ones the lessons show.
+The reference project is a real repository with real workflow runs: **[Nextia-Intelligence/ticket-api-ci](https://github.com/Nextia-Intelligence/ticket-api-ci)**. Its pull requests, checks, releases (v1.1.0, v1.2.0, v1.2.1) and deployments are the ones the lessons show.
 
 | Path | Used in | What it is |
 |---|---|---|

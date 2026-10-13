@@ -24,7 +24,7 @@ import sys
 import urllib.request
 from pathlib import Path
 
-BASE = "https://raw.githubusercontent.com/usmanahmed99/nextia-learning-labs/main/C04/data/"
+BASE = "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C04/data/"
 FILES = {
     "customers.csv": "7b437642f0095524f8311f67a7caeb17100d23eed92618b9cf012cd3d3b79993",
     "tickets.csv": "9c47e08cf2ec5977733d32cc21eb97d0dd01b021d1f5fbf7ec31fef6279b1a28",

@@ -70,7 +70,7 @@ A request that was not recorded cannot be replayed by the mock: you see `No reco
 
 ## Reset
 
-Delete `results.sqlite` and `logs/` to start again. If the project is broken, copy the snapshot of the last module you finished from [the labs repository](https://github.com/usmanahmed99/nextia-learning-labs/tree/main/C08/snapshots), and make `.venv` again.
+Delete `results.sqlite` and `logs/` to start again. If the project is broken, copy the snapshot of the last module you finished from [the labs repository](https://github.com/Nextia-Intelligence/nextia-learning-labs/tree/main/C08/snapshots), and make `.venv` again.
 
 ## Tested
 
