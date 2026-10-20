@@ -13,6 +13,7 @@ Real models give different answers on every run: the seed does not replay them.
 """
 
 import json
+import re
 import urllib.error
 import urllib.request
 
@@ -89,7 +90,9 @@ def respond(conv: dict, message: str, trace: dict) -> str:
         if not calls:
             trace["usage"] = usage
             trace["live_model_reported"] = data.get("model")
-            return (msg.get("content") or "").strip()
+            reply = (msg.get("content") or "").strip()
+            trace["cited"] = cited_keys(reply, found)
+            return reply
         msgs.append({"role": "assistant", "content": msg.get("content"), "tool_calls": calls})
         for c in calls:
             name = c["function"]["name"]
@@ -104,6 +107,16 @@ def respond(conv: dict, message: str, trace: dict) -> str:
             msgs.append({"role": "tool", "tool_call_id": c["id"], "content": json.dumps(result)})
     trace["usage"] = usage
     return "Sorry, I could not finish this request. Please contact the help desk: 1-800-555-0142."
+
+
+def cited_keys(reply: str, found: list) -> list[str]:
+    """The sections the reply cites: each source number [n] in the reply that the prompt gave, in order, once."""
+    keys = []
+    for m in re.finditer(r"\[(\d+)\]", reply):
+        n = int(m.group(1))
+        if 1 <= n <= len(found) and found[n - 1][0].key not in keys:
+            keys.append(found[n - 1][0].key)
+    return keys
 
 
 def _run_tool(conv: dict, name: str, args: dict) -> dict:

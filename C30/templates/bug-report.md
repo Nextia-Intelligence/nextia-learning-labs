@@ -10,8 +10,8 @@ personal data out: test customers only, no keys, no real names. -->
 
 ## Steps to reproduce
 
-1. `python3 -m helpdesk reset`
-2. <exact input, for example: `python3 -m helpdesk ask "..." --seed 6`>
+1. `python -m helpdesk reset`
+2. <exact input, for example: `python -m helpdesk ask "..." --seed 6`>
 
 ## Actual result
 

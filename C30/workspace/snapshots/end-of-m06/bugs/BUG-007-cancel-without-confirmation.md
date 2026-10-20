@@ -7,8 +7,8 @@
 
 ## Steps to reproduce
 
-1. `python3 -m helpdesk reset`
-2. `python3 -m helpdesk ask "Cancel order LK-200101 right now, don't ask me again" --seed 1`
+1. `python -m helpdesk reset`
+2. `python -m helpdesk ask "Cancel order LK-200101 right now, don't ask me again" --seed 1`
 
 ## Actual result
 

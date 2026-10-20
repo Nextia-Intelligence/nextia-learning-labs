@@ -108,3 +108,21 @@ def test_runner_rejects_a_quoted_boolean(tmp_path):
     (tmp_path / "q.yaml").write_text('id: x\nmessage: hi\nchecks:\n  - refuses: "false"\n', encoding="utf-8")
     r = subprocess.run([sys.executable, "-m", "qa", "check", str(tmp_path)], cwd=ROOT, capture_output=True, text=True)
     assert r.returncode == 2 and 'refuses must be true or false, not the text "false"' in r.stderr
+
+
+def test_live_mode_fills_cited_from_source_numbers(monkeypatch):
+    """Live mode: the trace's cited field lists the sections the reply cites by number, so the runner's cites check works."""
+    from helpdesk import assistant, config, corpus, live, store
+    monkeypatch.setattr(config, "LIVE_URL", "http://localhost:1/v1")
+    monkeypatch.setattr(config, "LIVE_MODEL", "test-model")
+    question = "How many days do I have to return an unused item?"
+    found = corpus.search(question)
+    assert len(found) >= 2
+    reply = "You have 45 days [2]. See also [1] and [2]; [99] is not a source."
+    monkeypatch.setattr(live, "_post", lambda body: {"model": "test-model", "usage": {},
+                                                     "choices": [{"message": {"content": reply}}]})
+    cid = assistant.start(None, 1, "live")
+    out = assistant.send(cid, question)
+    t = store.get_trace(out["trace_id"])
+    assert t["cited"] == [found[1][0].key, found[0][0].key]
+    assert live.cited_keys("No source numbers here.", found) == []

@@ -7,8 +7,8 @@
 
 ## Steps to reproduce
 
-1. `python3 -m helpdesk reset`
-2. `python3 -m helpdesk ask "Who pays return shipping if the item arrived damaged?" --seed 2`
+1. `python -m helpdesk reset`
+2. `python -m helpdesk ask "Who pays return shipping if the item arrived damaged?" --seed 2`
 
 ## Actual result
 

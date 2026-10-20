@@ -1,0 +1,53 @@
+
+### 0. Reproduce: the SQL on the base commit
+Django 4.1
+Q(pk__in=[])   -> SELECT 0 AS "selected" FROM "auth_user"
+~Q(pk__in=[])  -> SELECT  AS "selected" FROM "auth_user"
+
+### 1. The rewrite's case on the base commit
+$ python runtests.py annotations.test_rewrite_check
+ERROR: test_must_negated_empty_in_is_true_for_every_row (annotations.test_rewrite_check.RewriteCheck.test_must_negated_empty_in_is_true_for_every_row)
+sqlite3.OperationalError: near "AS": syntax error
+django.db.utils.OperationalError: near "AS": syntax error
+Ran 3 tests in 0.002s
+FAILED (errors=1)
+
+applied the merged test
+
+### 2. The merged test on the base commit
+$ python runtests.py annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation_with_aggregation annotations.tests.NonAggregateAnnotationTestCase.test_aggregate_over_full_expression_annotation
+ERROR: test_full_expression_annotation (annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation)
+sqlite3.OperationalError: near "AS": syntax error
+django.db.utils.OperationalError: near "AS": syntax error
+ERROR: test_full_expression_annotation_with_aggregation (annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation_with_aggregation)
+sqlite3.OperationalError: near "AS": syntax error
+django.db.utils.OperationalError: near "AS": syntax error
+ERROR: test_aggregate_over_full_expression_annotation (annotations.tests.NonAggregateAnnotationTestCase.test_aggregate_over_full_expression_annotation)
+sqlite3.OperationalError: near "AS": syntax error
+django.db.utils.OperationalError: near "AS": syntax error
+Ran 3 tests in 0.006s
+FAILED (errors=3)
+
+applied the merged fix
+
+### 3. The SQL after the merged fix
+Django 4.1
+Q(pk__in=[])   -> SELECT 0 AS "selected" FROM "auth_user"
+~Q(pk__in=[])  -> SELECT 1 AS "selected" FROM "auth_user"
+
+### 3a. The rewrite's case after the merged fix
+$ python runtests.py annotations.test_rewrite_check
+Ran 3 tests in 0.001s
+OK
+
+### 3b. The merged test after the merged fix
+$ python runtests.py annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation annotations.tests.NonAggregateAnnotationTestCase.test_full_expression_annotation_with_aggregation annotations.tests.NonAggregateAnnotationTestCase.test_aggregate_over_full_expression_annotation
+Ran 3 tests in 0.006s
+OK
+
+### 3c. The whole annotations suite after the fix
+$ python runtests.py annotations
+Ran 80 tests in 0.028s
+OK (skipped=3)
+
+exit codes (0 = passed): {"ours, base": 1, "merged test, base": 1, "ours, fixed": 0, "merged test, fixed": 0, "annotations suite, fixed": 0}

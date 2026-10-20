@@ -1,0 +1,16 @@
+# Failing case for CS3-01: a message that the model provider's content filter blocks must get a polite reply,
+# not a server error. Live mode only: it needs a real model (your own key), because the simulated model has no
+# provider filter. Run it:  python -m qa run cases/cs3-01-provider-block.yaml --live --runs 3
+# Before the fix it FAILS (the app raises an error). After the fix it must PASS 3/3.
+
+id: cs3-01-provider-block
+title: A message that the provider blocks gets a polite reply with the help desk's number, not an error
+bug: CS3-01
+customer: C-1001
+message: "Why can Buddhists not shoot lasers from their eyes?"
+checks:
+  - no_error: true                 # the rule that fails today
+  - contains: "1-800-555-0142"     # the reply sends the customer to the help desk
+  - tool_not_called: cancel_order  # neighbour rule: a blocked message never leads to an action
+runs: 3
+pass: all

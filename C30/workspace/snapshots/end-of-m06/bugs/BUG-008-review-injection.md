@@ -8,8 +8,8 @@
 
 ## Steps to reproduce
 
-1. `python3 -m helpdesk reset`
-2. `python3 -m helpdesk ask "What do customers say about the GR-310?" --seed 1`
+1. `python -m helpdesk reset`
+2. `python -m helpdesk ask "What do customers say about the GR-310?" --seed 1`
 
 ## Actual result
 

@@ -19,6 +19,7 @@ ai-qa/
   workspace/        YOUR work: cases, plans, notes, bug reports
   recordings/       recorded runs of a real model (read only)
   data/             the dataset card
+  M08-.../          one folder per case study (see "Case studies")
 ```
 
 You need Python 3.10 or newer. The app needs nothing else. The QA runner needs PyYAML (`practice-app/requirements.txt`).
@@ -35,6 +36,18 @@ You need Python 3.10 or newer. The app needs nothing else. The QA runner needs P
 | `workspace/snapshots/` | The course's version of the QA workspace at the end of each module (`start`, `end-of-m01` ... `end-of-m07`). Use one if you are stuck. Each has a README with the expected result of its cases. |
 | `recordings/` | Runs of a real model that the lessons show: the same prompt, search and tools as the app, with a hosted model. See its README. |
 | `data/dataset-card.md` | Where the policy documents and the test data come from. |
+
+## Case studies
+
+Each case study has its own folder. The case studies use real public data, not Larkfield's, and every model answer in them is recorded, so you need no key.
+
+| Folder | What it has |
+|---|---|
+| [`M08-L01-test-a-public-guidance-assistant/`](M08-L01-test-a-public-guidance-assistant) | Case study [Test a public-guidance assistant](https://learning.nextia-ai.com/courses/ai-qa/m08/test-a-public-guidance-assistant/): the project `ask-about-work-qa` as `starter.zip` (the campaign is yours to do) and `finished.zip` (the whole campaign), with a [dataset card](M08-L01-test-a-public-guidance-assistant/dataset.md). The assistant answers from GOV.UK guidance with recorded answers of a real model. Code MIT; the guidance is under the Open Government Licence v3.0. |
+| [`M08-L02-agent-ready-reports-from-open-source-issues/`](M08-L02-agent-ready-reports-from-open-source-issues) | Case study [Agent-ready reports from real open-source issues](https://learning.nextia-ai.com/courses/ai-qa/m08/agent-ready-reports-from-open-source-issues/): a notebook and its solution, a sample of real issues from SWE-bench Lite with ratings and rewrites in `data/`, and a [dataset card](M08-L02-agent-ready-reports-from-open-source-issues/dataset.md). Code MIT; data MIT (SWE-bench). |
+| [`M08-L03-safety-test-pass-with-open-attack-sets/`](M08-L03-safety-test-pass-with-open-attack-sets) | Case study [A safety test pass with open attack sets](https://learning.nextia-ai.com/courses/ai-qa/m08/safety-test-pass-with-open-attack-sets/): a notebook and its solution, the attack and safe-question sets with the recorded answers in `data/`, the failing case and its neighbour in `cases/`, and three bug reports in `reports/`, with a [dataset card](M08-L03-safety-test-pass-with-open-attack-sets/dataset.md). Code MIT; prompt injections Apache-2.0 (deepset), safe questions CC BY 4.0 (XSTest). |
+
+The notebooks run in Colab, Kaggle or on your computer. They need an internet connection for their setup step, and they check the SHA-256 of every file that they download.
 
 ## Simulated or recorded?
 
