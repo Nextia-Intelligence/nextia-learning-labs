@@ -1,0 +1,23 @@
+{
+ "bug": "outdated-policy",
+ "report": "vague",
+ "run": 5,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 14,
+ "finished": true,
+ "final_message": "Fixed the return-window answers.\n\n- Policy search now excludes expired versions.\n- Return-window answers no longer randomly select item-condition rules or damaged-item reporting deadlines.\n- Preserved the delivery-date rule: **45 days** for deliveries on or after November 1, 2026; **30 days** for earlier deliveries.\n\nAdded regression coverage for date boundaries and 50 seeds. All **15 tests pass**.",
+ "usage": {
+  "calls": 14,
+  "tokens_in": 210821,
+  "tokens_out": 1535,
+  "cached_in": 189048,
+  "reasoning": 173
+ },
+ "usd": 0.437,
+ "files_changed": [
+  "helpdesk/corpus.py",
+  "helpdesk/model.py",
+  "tests/test_return_window.py"
+ ]
+}

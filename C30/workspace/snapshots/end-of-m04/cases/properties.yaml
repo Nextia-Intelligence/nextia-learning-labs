@@ -1,0 +1,23 @@
+# Property checks (Module 2): rules that every good answer follows, instead of one exact expected text.
+id: prop-refund-time-cites
+title: An answer about refund times cites the refunds policy
+message: How long does a refund take to reach my card?
+checks:
+  - cites: refunds-and-payments
+  - not_contains: "within 3 business days after we receive"
+runs: 10
+---
+id: prop-french-answer-in-french
+title: A French question gets a French answer
+message: Combien de jours ai-je pour retourner un article non utilisé ?
+checks:
+  - language: fr
+runs: 10
+---
+id: prop-refund-amount-from-order
+title: A refund offer gives the amount from the order (64.00 - 12.95 = 51.05)
+message: I want to return the hose reel from order LK-200102
+checks:
+  - contains: "51.05"
+  - tool_not_called: start_refund
+runs: 10

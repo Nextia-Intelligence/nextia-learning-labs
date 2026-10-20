@@ -1,0 +1,10 @@
+id: bug-008-return-window-in-force
+title: The return window comes from the policy in force (version 4, 45 days)
+bug: BUG-008
+message: How many days do I have to return an unused item?
+checks:
+  - contains: 45 days
+  - not_contains: 30 days
+  - cites: returns-policy@4
+  - not_cites: returns-policy@3
+runs: 20

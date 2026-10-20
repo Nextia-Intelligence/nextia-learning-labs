@@ -1,0 +1,39 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -68,6 +68,11 @@
+         if w in STOP or len(w) < 2:
+             continue
+         w = SYNONYMS.get(w, w)
++        # Pest-control product names often describe their action rather than
++        # the policy's category (chemicals). Normalize productive suffixes,
++        # including compound names, without enumerating customer messages.
++        if w.endswith(("killer", "killers", "icide", "icides")):
++            w = "chemical"
+         if len(w) > 4 and w.endswith("s") and not w.endswith("ss"):
+             w = w[:-1]
+         out.append(w)
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,4 +1,6 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+@@ -7,9 +9,13 @@
+ 
+ 
+ def blocked(message: str) -> str | None:
+-    """The blocked word found in the message, or None."""
++    """Match harmful words, not incidental substrings in product names.
++
++    Keep common verb inflections blocked as well: word boundaries must not
++    turn 'killing' or 'poisoned' into a way around the filter.
++    """
+     text = fold(message)
+     for word in BLOCKED_WORDS:
+-        if word in text:
++        if re.search(r"\b" + re.escape(word) + r"(?:s|ed|ing)?\b", text):
+             return word
+     return None

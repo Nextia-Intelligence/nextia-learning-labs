@@ -1,0 +1,33 @@
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,15 +1,28 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+ # Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
+ 
++# A product name, not a request to kill. Match the complete phrase so that
++# other occurrences (including kill/killing) keep their existing behaviour.
++_WEED_KILLER = re.compile(r"\bweed[\s-]+killers?\b")
++
+ 
+ def blocked(message: str) -> str | None:
+-    """The blocked word found in the message, or None."""
++    """The blocked word found in the message, or None.
++
++    Ignore 'kill' only where it is part of the garden product name. This is
++    not a message-level exemption: every other occurrence and every other
++    blocked word is still checked, even in questions mentioning that product.
++    """
+     text = fold(message)
++    without_product_name = _WEED_KILLER.sub("weed product", text)
+     for word in BLOCKED_WORDS:
+-        if word in text:
++        candidate = without_product_name if word == "kill" else text
++        if word in candidate:
+             return word
+     return None

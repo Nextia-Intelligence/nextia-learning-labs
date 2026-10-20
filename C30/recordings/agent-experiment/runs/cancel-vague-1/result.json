@@ -1,0 +1,23 @@
+{
+ "bug": "cancel",
+ "report": "vague",
+ "run": 1,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 13,
+ "finished": true,
+ "final_message": "Fixed the cancellation bypass. Requests such as “cancel immediately,” “don’t ask,” or “sans confirmation” now always trigger a confirmation question before cancellation.\n\nAdded regression tests for English and French requests, declined or interrupted confirmations, and successful cancellation after confirmation.\n\nValidation: **64 tests passed**.",
+ "usage": {
+  "calls": 13,
+  "tokens_in": 175538,
+  "tokens_out": 2223,
+  "cached_in": 157226,
+  "reasoning": 353
+ },
+ "usd": 0.3733,
+ "files_changed": [
+  "helpdesk/assistant.py",
+  "helpdesk/model.py",
+  "tests/test_cancellation.py"
+ ]
+}

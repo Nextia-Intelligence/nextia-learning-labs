@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "vague",
+ "run": 2,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 10,
+ "finished": true,
+ "final_message": "Fixed the false refusal caused by matching `kill` inside “weed killer.”\n\n- Weed-killer product questions now reach the normal answer path in simulated and live modes.\n- Other harmful wording in the same message still triggers refusal.\n- Added regression tests for common spellings and harmful requests.\n\nValidation: **25 tests passed**. The assistant still uses existing policy information; this change adds no chemical-use advice.",
+ "usage": {
+  "calls": 10,
+  "tokens_in": 129134,
+  "tokens_out": 2135,
+  "cached_in": 119663,
+  "reasoning": 434
+ },
+ "usd": 0.2796,
+ "files_changed": [
+  "helpdesk/safety.py",
+  "tests/test_safety.py"
+ ]
+}

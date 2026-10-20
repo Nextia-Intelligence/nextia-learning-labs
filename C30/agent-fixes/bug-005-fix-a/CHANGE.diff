@@ -1,0 +1,23 @@
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,4 +1,6 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+@@ -10,6 +12,12 @@
+     """The blocked word found in the message, or None."""
+     text = fold(message)
+     for word in BLOCKED_WORDS:
+-        if word in text:
++        if word == "kill":
++            # Match the verb (including inflections), not product nouns such
++            # as "weed killer". Keep scanning: a product mention must not
++            # bypass another trigger such as "poison" or "hurt".
++            if re.search(r"\bkill(?:s|ed|ing)?\b", text):
++                return word
++        elif word in text:
+             return word
+     return None

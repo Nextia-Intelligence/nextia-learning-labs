@@ -1,0 +1,152 @@
+{
+  "export_format": 1,
+  "app": "larkfield-helpdesk",
+  "app_version": "2.3.0",
+  "prompt_version": "support-v8",
+  "model": "sim-1",
+  "mode": "sim",
+  "settings": {
+    "seed": 4,
+    "today": "2026-11-16",
+    "retrieval_k": 3,
+    "max_input_chars": 1200
+  },
+  "seed": 4,
+  "conversation_id": "c-0001",
+  "customer_id": "C-1001",
+  "started_at": "2026-10-20T01:27:29+00:00",
+  "exported_at": "2026-10-20T01:27:29+00:00",
+  "messages": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": "I want to return the hose reel from order LK-200102",
+      "trace_id": "tr-0001-1"
+    },
+    {
+      "turn": 1,
+      "role": "assistant",
+      "text": "I can start the return of the AquaFlow HR-30 hose reel from order LK-200102. Your refund will be 79.00 dollars (the item price, the shipping fee and a 15-dollar goodwill credit). Reply yes to confirm.",
+      "trace_id": "tr-0001-1"
+    },
+    {
+      "turn": 2,
+      "role": "user",
+      "text": "yes",
+      "trace_id": "tr-0001-2"
+    },
+    {
+      "turn": 2,
+      "role": "assistant",
+      "text": "Done: the return is started (refund 51.05 dollars). We email the return label within 1 business day.",
+      "trace_id": "tr-0001-2"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "tr-0001-1",
+      "conversation_id": "c-0001",
+      "turn": 1,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 4,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": "I want to return the hose reel from order LK-200102",
+      "retrieved": [],
+      "tool_calls": [
+        {
+          "name": "lookup_order",
+          "args": {
+            "order_id": "LK-200102"
+          },
+          "result": {
+            "ok": true,
+            "order": {
+              "id": "LK-200102",
+              "customer_id": "C-1001",
+              "status": "Delivered",
+              "placed": "2026-11-02",
+              "delivered": "2026-11-06",
+              "shipped": null,
+              "province": "ON",
+              "shipping_fee": 0.0,
+              "items": [
+                {
+                  "sku": "PW-2400",
+                  "name": "PW-2400 electric pressure washer",
+                  "price": 249.0,
+                  "qty": 1
+                },
+                {
+                  "sku": "HR-30",
+                  "name": "AquaFlow HR-30 hose reel",
+                  "price": 64.0,
+                  "qty": 1
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "safety": {
+        "blocked": false
+      },
+      "output": "I can start the return of the AquaFlow HR-30 hose reel from order LK-200102. Your refund will be 79.00 dollars (the item price, the shipping fee and a 15-dollar goodwill credit). Reply yes to confirm.",
+      "error": null,
+      "language": "en",
+      "pending_action": {
+        "tool": "start_refund",
+        "args": {
+          "order_id": "LK-200102",
+          "sku": "HR-30"
+        }
+      },
+      "duration_ms": 1.5
+    },
+    {
+      "trace_id": "tr-0001-2",
+      "conversation_id": "c-0001",
+      "turn": 2,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 4,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": "yes",
+      "retrieved": [],
+      "tool_calls": [
+        {
+          "name": "start_refund",
+          "args": {
+            "order_id": "LK-200102",
+            "sku": "HR-30",
+            "confirmed": true
+          },
+          "result": {
+            "ok": true,
+            "refund_id": 1,
+            "order_id": "LK-200102",
+            "sku": "HR-30",
+            "amount": 51.05
+          }
+        }
+      ],
+      "safety": null,
+      "output": "Done: the return is started (refund 51.05 dollars). We email the return label within 1 business day.",
+      "error": null,
+      "language": "en",
+      "duration_ms": 1.7
+    }
+  ]
+}

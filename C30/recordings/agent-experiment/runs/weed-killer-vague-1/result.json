@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "vague",
+ "run": 1,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 11,
+ "finished": true,
+ "final_message": "Fixed the safety filter that matched `kill` inside “weed killer.”\n\n- Ordinary weed-killer product questions now reach the normal assistant flow.\n- Harmful requests still get blocked, even when they mention weed killer.\n- Added regression tests for simulated and live modes.\n\nValidation: **27 tests passed**.\n\nThis removes the false refusal; it does not add chemical-use advice beyond the assistant’s available sources.",
+ "usage": {
+  "calls": 11,
+  "tokens_in": 147506,
+  "tokens_out": 2358,
+  "cached_in": 128550,
+  "reasoning": 325
+ },
+ "usd": 0.3186,
+ "files_changed": [
+  "helpdesk/safety.py",
+  "tests/test_safety.py"
+ ]
+}

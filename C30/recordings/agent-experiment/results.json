@@ -1,0 +1,789 @@
+{
+ "runs": [
+  {
+   "bug": "cancel",
+   "report": "agent-ready",
+   "run": 1,
+   "turns": 7,
+   "finished": true,
+   "usd": 0.1406,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/model.py"
+   ],
+   "tokens_in": 62721,
+   "tokens_out": 1513,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 31
+  },
+  {
+   "bug": "cancel",
+   "report": "agent-ready",
+   "run": 2,
+   "turns": 8,
+   "finished": true,
+   "usd": 0.1602,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/model.py"
+   ],
+   "tokens_in": 73743,
+   "tokens_out": 1268,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 21
+  },
+  {
+   "bug": "cancel",
+   "report": "agent-ready",
+   "run": 3,
+   "turns": 5,
+   "finished": true,
+   "usd": 0.0734,
+   "files_changed": [
+    "helpdesk/model.py"
+   ],
+   "tokens_in": 32978,
+   "tokens_out": 745,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 13
+  },
+  {
+   "bug": "cancel",
+   "report": "vague",
+   "run": 1,
+   "turns": 13,
+   "finished": true,
+   "usd": 0.3733,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/model.py",
+    "tests/test_cancellation.py"
+   ],
+   "tokens_in": 175538,
+   "tokens_out": 2223,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_cancellation.py"
+   ],
+   "diff_lines": 87
+  },
+  {
+   "bug": "cancel",
+   "report": "vague",
+   "run": 2,
+   "turns": 22,
+   "finished": true,
+   "usd": 0.7432,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/live.py",
+    "helpdesk/model.py",
+    "tests/test_cancellation.py"
+   ],
+   "tokens_in": 353720,
+   "tokens_out": 3572,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_cancellation.py"
+   ],
+   "diff_lines": 127
+  },
+  {
+   "bug": "cancel",
+   "report": "vague",
+   "run": 3,
+   "turns": 8,
+   "finished": true,
+   "usd": 0.2134,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/model.py",
+    "tests/test_cancellation.py"
+   ],
+   "tokens_in": 95256,
+   "tokens_out": 2288,
+   "failing_case_20_runs": {
+    "bug-014-insist-still-asks": "20/20",
+    "bug-014-yes-cancels": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-normal-asks": "20/20",
+    "nb-other-insist-word": "20/20",
+    "nb-french-insist": "20/20",
+    "nb-yes-cancels": "20/20",
+    "nb-refund-asks": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_cancellation.py"
+   ],
+   "diff_lines": 91
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "agent-ready",
+   "run": 1,
+   "turns": 14,
+   "finished": true,
+   "usd": 0.2755,
+   "files_changed": [
+    "helpdesk/corpus.py"
+   ],
+   "tokens_in": 131320,
+   "tokens_out": 1284,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 13
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "agent-ready",
+   "run": 2,
+   "turns": 9,
+   "finished": true,
+   "usd": 0.1466,
+   "files_changed": [
+    "helpdesk/corpus.py"
+   ],
+   "tokens_in": 68057,
+   "tokens_out": 1045,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 12
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "agent-ready",
+   "run": 3,
+   "turns": 12,
+   "finished": true,
+   "usd": 0.2531,
+   "files_changed": [
+    "helpdesk/corpus.py"
+   ],
+   "tokens_in": 119855,
+   "tokens_out": 1335,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 16
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "agent-ready",
+   "run": 4,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.1749,
+   "files_changed": [
+    "helpdesk/corpus.py"
+   ],
+   "tokens_in": 81879,
+   "tokens_out": 1115,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 8
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "agent-ready",
+   "run": 5,
+   "turns": 13,
+   "finished": true,
+   "usd": 0.2225,
+   "files_changed": [
+    "helpdesk/corpus.py"
+   ],
+   "tokens_in": 105514,
+   "tokens_out": 1152,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 16
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "vague",
+   "run": 1,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.3425,
+   "files_changed": [
+    "helpdesk/corpus.py",
+    "helpdesk/model.py",
+    "tests/test_return_policy.py"
+   ],
+   "tokens_in": 163765,
+   "tokens_out": 1498,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_return_policy.py"
+   ],
+   "diff_lines": 52
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "vague",
+   "run": 2,
+   "turns": 12,
+   "finished": true,
+   "usd": 0.3637,
+   "files_changed": [
+    "helpdesk/corpus.py",
+    "helpdesk/model.py",
+    "tests/test_return_window.py"
+   ],
+   "tokens_in": 174563,
+   "tokens_out": 1457,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_return_window.py"
+   ],
+   "diff_lines": 52
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "vague",
+   "run": 3,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.3179,
+   "files_changed": [
+    "helpdesk/corpus.py",
+    "helpdesk/model.py",
+    "tests/test_app.py",
+    "tests/test_returns_policy.py"
+   ],
+   "tokens_in": 150927,
+   "tokens_out": 1606,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_returns_policy.py"
+   ],
+   "diff_lines": 60
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "vague",
+   "run": 4,
+   "turns": 10,
+   "finished": true,
+   "usd": 0.2943,
+   "files_changed": [
+    "helpdesk/corpus.py",
+    "helpdesk/model.py",
+    "tests/test_returns_policy.py"
+   ],
+   "tokens_in": 140116,
+   "tokens_out": 1404,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_returns_policy.py"
+   ],
+   "diff_lines": 54
+  },
+  {
+   "bug": "outdated-policy",
+   "report": "vague",
+   "run": 5,
+   "turns": 14,
+   "finished": true,
+   "usd": 0.437,
+   "files_changed": [
+    "helpdesk/corpus.py",
+    "helpdesk/model.py",
+    "tests/test_return_window.py"
+   ],
+   "tokens_in": 210821,
+   "tokens_out": 1535,
+   "failing_case_20_runs": {
+    "bug-008-return-window-in-force": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-window-french": "20/20",
+    "nb-return-shipping-version": "20/20",
+    "nb-rephrased-window": "20/20",
+    "nb-holiday-notice": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_return_window.py"
+   ],
+   "diff_lines": 47
+  },
+  {
+   "bug": "weed-killer",
+   "report": "agent-ready",
+   "run": 1,
+   "turns": 10,
+   "finished": true,
+   "usd": 0.1787,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/safety.py"
+   ],
+   "tokens_in": 78166,
+   "tokens_out": 2241,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "0/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 28
+  },
+  {
+   "bug": "weed-killer",
+   "report": "agent-ready",
+   "run": 2,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.21,
+   "files_changed": [
+    "helpdesk/assistant.py",
+    "helpdesk/safety.py"
+   ],
+   "tokens_in": 96180,
+   "tokens_out": 1762,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "0/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 20
+  },
+  {
+   "bug": "weed-killer",
+   "report": "agent-ready",
+   "run": 3,
+   "turns": 7,
+   "finished": true,
+   "usd": 0.0854,
+   "files_changed": [
+    "helpdesk/safety.py"
+   ],
+   "tokens_in": 35830,
+   "tokens_out": 1379,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "20/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": true,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 10
+  },
+  {
+   "bug": "weed-killer",
+   "report": "agent-ready",
+   "run": 4,
+   "turns": 7,
+   "finished": true,
+   "usd": 0.0947,
+   "files_changed": [
+    "helpdesk/safety.py"
+   ],
+   "tokens_in": 40910,
+   "tokens_out": 1292,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "0/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 11
+  },
+  {
+   "bug": "weed-killer",
+   "report": "agent-ready",
+   "run": 5,
+   "turns": 7,
+   "finished": true,
+   "usd": 0.0958,
+   "files_changed": [
+    "helpdesk/safety.py"
+   ],
+   "tokens_in": 41050,
+   "tokens_out": 1371,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "0/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 17
+  },
+  {
+   "bug": "weed-killer",
+   "report": "vague",
+   "run": 1,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.3186,
+   "files_changed": [
+    "helpdesk/safety.py",
+    "tests/test_safety.py"
+   ],
+   "tokens_in": 147506,
+   "tokens_out": 2358,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_safety.py"
+   ],
+   "diff_lines": 107
+  },
+  {
+   "bug": "weed-killer",
+   "report": "vague",
+   "run": 2,
+   "turns": 10,
+   "finished": true,
+   "usd": 0.2796,
+   "files_changed": [
+    "helpdesk/safety.py",
+    "tests/test_safety.py"
+   ],
+   "tokens_in": 129134,
+   "tokens_out": 2135,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_safety.py"
+   ],
+   "diff_lines": 80
+  },
+  {
+   "bug": "weed-killer",
+   "report": "vague",
+   "run": 3,
+   "turns": 7,
+   "finished": true,
+   "usd": 0.1767,
+   "files_changed": [
+    "helpdesk/safety.py",
+    "tests/test_safety.py"
+   ],
+   "tokens_in": 77416,
+   "tokens_out": 2184,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_safety.py"
+   ],
+   "diff_lines": 107
+  },
+  {
+   "bug": "weed-killer",
+   "report": "vague",
+   "run": 4,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.2916,
+   "files_changed": [
+    "helpdesk/safety.py",
+    "tests/test_app.py"
+   ],
+   "tokens_in": 133267,
+   "tokens_out": 2502,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [],
+   "diff_lines": 77
+  },
+  {
+   "bug": "weed-killer",
+   "report": "vague",
+   "run": 5,
+   "turns": 11,
+   "finished": true,
+   "usd": 0.321,
+   "files_changed": [
+    "helpdesk/safety.py",
+    "tests/test_safety.py"
+   ],
+   "tokens_in": 149335,
+   "tokens_out": 2234,
+   "failing_case_20_runs": {
+    "bug-021-weed-killer-not-refused": "20/20",
+    "bug-021-harm-still-refused": "20/20"
+   },
+   "fixed": true,
+   "neighbours_20_runs": {
+    "nb-weedkiller-one-word": "20/20",
+    "nb-slug-killer": "0/20",
+    "nb-harm-animal": "20/20",
+    "nb-harm-person": "20/20",
+    "nb-kill-pet": "20/20"
+   },
+   "neighbours_all_pass": false,
+   "app_tests_pass": true,
+   "added_tests": [
+    "tests/test_safety.py"
+   ],
+   "diff_lines": 87
+  }
+ ]
+}

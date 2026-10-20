@@ -1,0 +1,41 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -116,8 +116,11 @@
+ 
+ 
+ def in_force(s: Section, today: str) -> bool:
+-    """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    """Is this policy version in force on the app's date (inclusive bounds)?"""
++    return (
++        (not s.effective_from or s.effective_from <= today)
++        and (not s.effective_to or today <= s.effective_to)
++    )
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+@@ -126,18 +129,21 @@
+     today = today or config.TODAY
+     docs, df = _index()
+     n = len(docs)
+-    q = terms(query)
++    q = set(terms(query))
+     scored = []
+     for s, d in zip(sections(), docs):
+         if not in_force(s, today):
+             continue
+         score = 0.0
+-        for t in set(q):
++        for t in q:
+             tf = d.count(t)
+             if tf:
+                 score += (1 + math.log(tf)) * math.log(1 + n / df[t])
+         if score > 0:
+-            scored.append((s, round(score / math.sqrt(len(d) + 10) * 4, 3)))
++            # Prefer sections covering the whole question over partial matches
++            # whose repeated keywords alone can otherwise give similar scores.
++            coverage = len(q.intersection(d)) / len(q)
++            scored.append((s, round(score / math.sqrt(len(d) + 10) * 4 * coverage, 3)))
+     scored.sort(key=lambda x: (-x[1], x[0].doc_id, -x[0].version))
+     return scored[:k]
+ 

@@ -1,0 +1,26 @@
+# Retrieval or generation? (Module 6): check what was retrieved, what was cited, and whether it is current.
+id: ret-no-expired-version-retrieved
+title: The search never returns a policy version that has expired on the app date
+message: How many days do I have to return an unused item?
+checks:
+  - not_retrieved: returns-policy@3
+---
+id: ret-no-expired-notice-cited
+title: An expired notice (holiday returns 2025) is never cited
+message: What is the time limit for sending back something I haven't used?
+checks:
+  - not_cites: holiday-returns-2025
+runs: 10
+---
+id: ret-citation-numbers-match
+title: Source [1] in the list is the document of the sentence marked [1]
+message: Who pays return shipping if the item arrived damaged?
+checks:
+  - not_regex: "\\[1\\] Damaged, faulty"
+runs: 10
+---
+id: ret-kettle-safety-steps
+title: A safety question gets the steps of the safety notice, not only the risk
+message: My KT-180 kettle does not switch off when the water boils. What should I do?
+checks:
+  - contains: unplug

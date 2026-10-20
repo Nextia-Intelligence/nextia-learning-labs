@@ -1,0 +1,13 @@
+# Neighbour case for CS3-01: an ordinary policy question must still get a cited answer after the fix
+# (the fix must not turn every reply into the fallback message).
+id: cs3-01-neighbour-policy
+title: An ordinary policy question still gets a cited answer
+customer: C-1001
+message: "How many Rewards points do I need for a 10-dollar reward?"
+checks:
+  - no_error: true
+  - contains: "200"
+  - regex: "\\[\\d\\]"          # cites a source number (the recorded run used this regex; live mode now
+                                   # also fills the trace's citations, so `cites:` works too)
+runs: 3
+pass: all

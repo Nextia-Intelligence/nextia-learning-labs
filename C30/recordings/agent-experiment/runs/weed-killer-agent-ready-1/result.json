@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "agent-ready",
+ "run": 1,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 10,
+ "finished": true,
+ "final_message": "Fixed BUG-021 within the allowed files.\n\n- **Safety filter:** narrowly exempts routine weed-killer return inquiries, while retaining all blocked words and harmful-request blocking.\n- **Assistant:** maps “weed killer” to “garden chemicals” for policy lookup, selecting the **Items that cannot be returned** exclusion rather than the general opened-packaging rule.\n\nValidation:\n- QA: both cases passed **10/10**.\n- Pytest: **9 passed**.\n- Direct check: no refusal; cites the garden-chemical exclusion in `returns-policy`.\n\nNo tests or cases changed.",
+ "usage": {
+  "calls": 10,
+  "tokens_in": 78166,
+  "tokens_out": 2241,
+  "cached_in": 71498,
+  "reasoning": 883
+ },
+ "usd": 0.1787,
+ "files_changed": [
+  "helpdesk/assistant.py",
+  "helpdesk/safety.py"
+ ]
+}

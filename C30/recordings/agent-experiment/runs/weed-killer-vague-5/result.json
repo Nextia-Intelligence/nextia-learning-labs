@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "vague",
+ "run": 5,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 11,
+ "finished": true,
+ "final_message": "Fixed the safety filter: “weed killer,” “weed-killer,” and “weedkiller” no longer trigger a refusal just because they contain “kill.” Other blocked language in the same message still triggers the safety check.\n\nAdded regression tests for safe product questions and harmful requests in simulated and mocked live modes.\n\n**Validation:** All 26 tests pass.\n\nIf the policies don’t contain the requested product information, the assistant still uses its normal fallback rather than inventing an answer.",
+ "usage": {
+  "calls": 11,
+  "tokens_in": 149335,
+  "tokens_out": 2234,
+  "cached_in": 130403,
+  "reasoning": 490
+ },
+ "usd": 0.321,
+ "files_changed": [
+  "helpdesk/safety.py",
+  "tests/test_safety.py"
+ ]
+}

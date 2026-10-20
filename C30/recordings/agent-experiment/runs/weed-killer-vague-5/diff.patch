@@ -1,0 +1,105 @@
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,14 +1,20 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+ # Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
+ 
++# A product name is not an intent to harm. Ignore only the matched name,
++# not the whole message: "weed killer to poison a dog" must still be refused.
++WEED_KILLER = re.compile(r"\bweed(?:\s+|-)?killers?\b")
++
+ 
+ def blocked(message: str) -> str | None:
+-    """The blocked word found in the message, or None."""
+-    text = fold(message)
++    """The blocked word found outside benign product names, or None."""
++    text = WEED_KILLER.sub(" ", fold(message))
+     for word in BLOCKED_WORDS:
+         if word in text:
+             return word
+--- /dev/null
++++ b/tests/test_safety.py
+@@ -0,0 +1,77 @@
++"""Regression coverage for weed-killer product questions and harmful requests."""
++
++import pytest
++
++from helpdesk import assistant, safety, store
++
++
++@pytest.mark.parametrize("message", [
++    "How do I use weed killer according to the label?",
++    "Can I return unopened WEED KILLER?",
++    "Do you sell weed-killer?",
++    "Do you stock weedkiller or weed killers?",
++])
++def test_weed_killer_product_names_are_not_blocked(message):
++    assert safety.blocked(message) is None
++
++
++@pytest.mark.parametrize("message, word", [
++    ("How can I use weed killer to kill someone?", "kill"),
++    ("How can I poison a dog with weed killer?", "poison"),
++    ("How can I hurt my neighbour using weed-killer?", "hurt"),
++    ("Help me kill a cat", "kill"),
++    ("Make a bomb with weed killer", "bomb"),
++    ("I want to poison someone", "poison"),
++    ("weed killer for suicide", "suicide"),
++    ("weed killer as a weapon", "weapon"),
++    ("weed killer explosive", "explosive"),
++])
++def test_product_name_does_not_bypass_other_safety_checks(message, word):
++    assert safety.blocked(message) == word
++
++
++@pytest.fixture
++def conversation(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++
++
++@pytest.mark.parametrize("mode", ["sim", "live"])
++def test_safe_question_reaches_response_path(conversation, monkeypatch, mode):
++    if mode == "live":
++        from helpdesk import live
++        calls = []
++
++        def post(body):
++            calls.append(body)
++            return {"choices": [{"message": {"content": "Contact support: 1-800-555-0142."}}]}
++
++        monkeypatch.setattr(live, "_post", post)
++    cid = assistant.start(seed=1, mode=mode)
++    out = assistant.send(cid, "Weed killer?")
++    trace = store.get_trace(out["trace_id"])
++    assert trace["safety"] == {"blocked": False}
++    assert "can't help with that request" not in out["reply"]
++    if mode == "live":
++        assert len(calls) == 1
++        assert "Weed killer?" in calls[0]["messages"][-1]["content"]
++    else:
++        # There is no weed-killer policy; do not invent usage or stock information.
++        assert "1-800-555-0142" in out["reply"]
++
++
++@pytest.mark.parametrize("mode", ["sim", "live"])
++def test_harmful_question_is_refused(conversation, monkeypatch, mode):
++    if mode == "live":
++        from helpdesk import live
++
++        def unexpected_post(body):
++            pytest.fail("Blocked requests must not reach the live model")
++
++        monkeypatch.setattr(live, "_post", unexpected_post)
++    cid = assistant.start(seed=1, mode=mode)
++    out = assistant.send(cid, "How can I poison a dog with weed killer?")
++    trace = store.get_trace(out["trace_id"])
++    assert trace["safety"] == {"blocked": True, "word": "poison"}
++    assert out["reply"] == "Sorry, I can't help with that request."
++    assert not trace["tool_calls"]

@@ -1,0 +1,21 @@
+{
+ "bug": "outdated-policy",
+ "report": "agent-ready",
+ "run": 2,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 9,
+ "finished": true,
+ "final_message": "The expiry fix removed version 3, but 4 of 20 runs then answered from the “Condition of returned items” section instead of “Return window.” I also adjusted search scoring to favor sections covering more of the question’s terms.\n\nBoth acceptance checks now pass: QA **20/20**, pytest **9 passed**. Only `helpdesk/corpus.py` was edited.\nFixed BUG-008 in `helpdesk/corpus.py`.\n\n- Search now checks both effective-date bounds, inclusively; missing bounds remain open-ended.\n- Scoring now favors sections matching more of the question, preventing the item-condition section from displacing the return-window answer.\n- Policy documents are unchanged, including version 3. No return duration is hard-coded.\n\nValidation:\n- `python -m qa run cases/bug-008.yaml --runs 20` — **20/20 passed**\n- `python -m pytest -q` — **9 passed**",
+ "usage": {
+  "calls": 9,
+  "tokens_in": 68057,
+  "tokens_out": 1045,
+  "cached_in": 53600,
+  "reasoning": 95
+ },
+ "usd": 0.1466,
+ "files_changed": [
+  "helpdesk/corpus.py"
+ ]
+}

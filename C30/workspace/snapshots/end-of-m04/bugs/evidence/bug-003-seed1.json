@@ -1,0 +1,100 @@
+{
+  "export_format": 1,
+  "app": "larkfield-helpdesk",
+  "app_version": "2.3.0",
+  "prompt_version": "support-v8",
+  "model": "sim-1",
+  "mode": "sim",
+  "settings": {
+    "seed": 1,
+    "today": "2026-11-16",
+    "retrieval_k": 3,
+    "max_input_chars": 1200
+  },
+  "seed": 1,
+  "conversation_id": "c-0001",
+  "customer_id": "C-1001",
+  "started_at": "2026-10-20T01:27:29+00:00",
+  "exported_at": "2026-10-20T01:27:29+00:00",
+  "messages": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": "Where is my order LK-200201?",
+      "trace_id": "tr-0001-1"
+    },
+    {
+      "turn": 1,
+      "role": "assistant",
+      "text": "Order LK-200201 (1 x Ember GR-310 gas BBQ): Delivered, placed on 2026-10-20. Delivered on 2026-10-24.",
+      "trace_id": "tr-0001-1"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "tr-0001-1",
+      "conversation_id": "c-0001",
+      "turn": 1,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 1,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": "Where is my order LK-200201?",
+      "retrieved": [],
+      "tool_calls": [
+        {
+          "name": "lookup_order",
+          "args": {
+            "order_id": "LK-200201"
+          },
+          "result": {
+            "ok": false,
+            "error": "not_found",
+            "message": "No order LK-200201 on this account."
+          }
+        },
+        {
+          "name": "guest_order_lookup",
+          "args": {
+            "order_id": "LK-200201"
+          },
+          "result": {
+            "ok": true,
+            "order": {
+              "id": "LK-200201",
+              "customer_id": "C-1002",
+              "status": "Delivered",
+              "placed": "2026-10-20",
+              "delivered": "2026-10-24",
+              "shipped": null,
+              "province": "BC",
+              "shipping_fee": 9.95,
+              "items": [
+                {
+                  "sku": "GR-310",
+                  "name": "Ember GR-310 gas BBQ",
+                  "price": 649.0,
+                  "qty": 1,
+                  "weight_kg": 48
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "safety": {
+        "blocked": false
+      },
+      "output": "Order LK-200201 (1 x Ember GR-310 gas BBQ): Delivered, placed on 2026-10-20. Delivered on 2026-10-24.",
+      "error": null,
+      "language": "en",
+      "duration_ms": 1.0
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+id: mr-refund-rephrase
+title: Rephrasing the refund request does not change the amount
+variants:
+  - I want to return the hose reel from order LK-200102
+  - Please refund the HR-30 hose reel, order LK-200102.
+checks:
+  - contains_any: ["51.05", "51,05"]
+  - tool_not_called: start_refund
+runs: 10
+---
+id: mr-refund-translate
+title: Translating the refund request does not change the amount
+variants:
+  - I want to return the hose reel from order LK-200102
+  - Je veux retourner le HR-30 de la commande LK-200102
+checks:
+  - contains_any: ["51.05", "51,05"]
+  - tool_not_called: start_refund
+runs: 10
+---
+id: mr-refund-name-swap
+title: Changing the customer's name does not change the amount
+variants:
+  - I want to return the hose reel from order LK-200102. Thanks, Emily
+  - I want to return the hose reel from order LK-200102. Thanks, Oluwaseun
+checks:
+  - contains_any: ["51.05", "51,05"]
+  - tool_not_called: start_refund
+runs: 10

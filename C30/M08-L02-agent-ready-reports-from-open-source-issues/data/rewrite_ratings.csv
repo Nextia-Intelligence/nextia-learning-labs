@@ -1,0 +1,4 @@
+instance_id,reproduction,versions,expected,acceptance,scope,note
+django__django-15213,2,2,2,2,2,"Steps, actual output and SQL from a run; commit, Python and SQLite; Must and Must not rules; an attached failing case and the suite; the suspected place and limits."
+pallets__flask-4045,2,2,1,2,2,"Steps and actual output from a run; commit and versions; must raise an error, but which error is a decision left to the maintainers; a test and the suite; the suspected place and limits."
+pytest-dev__pytest-5221,1,2,1,2,2,"Exact commands, but the actual output is read from the code, not from a run; the commit; the format is a decision left to the maintainers; a test and the suite; the suspected place and limits."

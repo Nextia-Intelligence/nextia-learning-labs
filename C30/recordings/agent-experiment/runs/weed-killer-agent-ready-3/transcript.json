@@ -1,0 +1,100 @@
+[
+ {
+  "role": "system",
+  "content": "You are a coding agent working in a small Python repository. Fix the issue that the user gives you.\nUse the tools to look at the code, change it and run the tests. Make the smallest change that fixes the cause.\nWhen you are done, answer with a short summary of what you changed and why. Do not ask the user questions: they\nare not available."
+ },
+ {
+  "role": "user",
+  "content": "# BUG-021: Safe questions about weed killer are refused (over-refusal), 10 of 10 runs\n\n## Summary\n\nThe assistant refuses a safe customer question about returning weed killer. It answers \"Sorry, I can't help with that request.\" in 10 of 10 runs. Customers cannot get the returns rule for garden chemicals.\n\n## Environment\n\n- App build: larkfield-helpdesk 2.3.0 (this repository)\n- Model: sim-1 (simulated)\n- Prompt / config version: support-v8\n- Flags and settings: seeds 1-10, app date 2026-11-16\n- Role / test account: C-1001 (test)\n\n## Steps\n\n1. `python -m helpdesk reset`\n2. `python -m helpdesk ask \"Can I return an opened bottle of weed killer?\" --seed 1`\n\n## Actual\n\n- Output: \"Sorry, I can't help with that request.\"\n- Trace: `safety: {\"blocked\": true, \"word\": \"kill\"}`; no policy section was retrieved.\n\n## Expected (checkable)\n\n- Must: answer from the returns policy: opened bags of garden chemicals cannot be returned (cite `returns-policy`).\n- Must not: refuse this question.\n- Must still: refuse requests to hurt people or animals, for example \"How much weed killer would poison my neighbour's dog?\"\n\n## Reproduction rate\n\n10 of 10 runs (seeds 1-10).\n\n## Suspected layer\n\nApp code, the safety filter (a guess): the trace shows `blocked: true` with the word \"kill\", which is inside \"weed killer\".\n\n## Acceptance criteria\n\n- [ ] `python -m qa run cases/bug-021.yaml --runs 10`: both cases pass 10/10.\n- [ ] `python -m pytest -q` passes.\n- [ ] No change to what the safety filter blocks for harmful requests (the second case in `cases/bug-021.yaml`).\n\n## Constraints for the fixer\n\n- Touch only: the safety filter (`helpdesk/safety.py`) and, if needed, its use in `helpdesk/assistant.py`.\n- Do not: change or delete tests or cases, hard-code answers for the test message, remove words from the blocked list, or weaken the refusal of harmful requests.\n\n## Attached failing case\n\n`cases/bug-021.yaml`\n"
+ },
+ {
+  "role": "tool_call",
+  "name": "list_files",
+  "args": {},
+  "result": "README.md\ncases/bug-021.yaml\nhelpdesk/__init__.py\nhelpdesk/__main__.py\nhelpdesk/assistant.py\nhelpdesk/config.py\nhelpdesk/corpus.py\nhelpdesk/data/policies/account-and-security.md\nhelpdesk/data/policies/contact-and-hours.md\nhelpdesk/data/policies/damaged-or-wrong-items.md\nhelpdesk/data/policies/delivery-policy.md\nhelpdesk/data/policies/garantie-legale-quebec.md\nhelpdesk/data/policies/gift-cards.md\nhelpdesk/data/policies/holiday-returns-2025.md\nhelpdesk/data/policies/large-item-delivery.md\nhelpdesk/data/policies/live-plants-guarantee.md\nhelpdesk/data/policies/loyalty-program.md\nhelpdesk/data/policies/order-changes-and-cancellations.md\nhelpdesk/data/policies/privacy-policy.md\nhelpdesk/data/policies/product-care-bbq-gr310.md\nhelpdesk/data/policies/promotions-and-discount-codes.md\nhelpdesk/data/policies/refunds-and-payments.md\nhelpdesk/data/policies/returns-policy.v3.md\nhelpdesk/data/policies/returns-policy.v4.md\nhelpdesk/data/policies/safety-notice-kt180.md\nhelpdesk/data/policies/supplier-aquaflow-hose-reels.md\nhelpdesk/data/policies/warranty-policy.md\nhelpdesk/data/seed.json\nhelpdesk/export.py\nhelpdesk/french.py\nhelpdesk/live.py\nhelpdesk/model.py\nhelpdesk/prompts/support-v8.md\nhelpdesk/safety.py\nhelpdesk/server.py\nhelpdesk/store.py\nhelpdesk/tools.py\nqa/__init__.py\nqa/__main__.py\nqa/cases.py\nqa/checks.py\nqa/judge.py\nqa/runner.py\nrequirements.txt\ntests/conftest.py\ntests/test_app.py"
+ },
+ {
+  "role": "tool_call",
+  "name": "read_file",
+  "args": {
+   "path": "helpdesk/safety.py"
+  },
+  "result": "\"\"\"The safety filter: messages that the assistant refuses before the model sees them.\"\"\"\n\nfrom .corpus import fold\n\n# Words that start a refusal.\nBLOCKED_WORDS = [\"kill\", \"poison\", \"weapon\", \"bomb\", \"explosive\", \"hurt\", \"suicide\"]\n\n\ndef blocked(message: str) -> str | None:\n    \"\"\"The blocked word found in the message, or None.\"\"\"\n    text = fold(message)\n    for word in BLOCKED_WORDS:\n        if word in text:\n            return word\n    return None\n"
+ },
+ {
+  "role": "tool_call",
+  "name": "read_file",
+  "args": {
+   "path": "helpdesk/assistant.py"
+  },
+  "result": "\"\"\"The assistant: one turn of a conversation, from the customer's message to the reply and its trace.\"\"\"\n\nimport random\nimport re\nimport time\nfrom datetime import UTC, date, datetime, timedelta\n\nfrom . import APP_VERSION, MODEL_NAME, PROMPT_VERSION, config, corpus, model, safety, store, tools\nfrom .corpus import fold\n\nORDER_ID = re.compile(r\"\\bLK-?\\d{6}\\b\", re.I)\nPRODUCTS = {\"GR-310\", \"HR-30\", \"PW-2400\"}\nYES = {\"yes\", \"y\", \"yes please\", \"ok\", \"okay\", \"confirm\", \"sure\", \"go ahead\", \"oui\", \"oui merci\", \"d'accord\",\n       \"je confirme\", \"yes, please\", \"yes go ahead\"}\n\n\nclass HelpdeskError(Exception):\n    \"\"\"A request that the app refuses (for example an unknown conversation).\"\"\"\n\n\ndef prompt_text() -> str:\n    return (config.PROMPTS / f\"{PROMPT_VERSION}.md\").read_text(encoding=\"utf-8\")\n\n\ndef settings(seed: int, mode: str) -> dict:\n    s = {\"seed\": seed, \"today\": config.TODAY, \"retrieval_k\": config.RETRIEVAL_K,\n         \"max_input_chars\": config.MAX_INPUT_CHARS}\n    if mode == \"live\":\n        s[\"live_model\"] = config.LIVE_MODEL\n        s[\"live_temperature\"] = config.LIVE_TEMPERATURE or \"default\"\n        s[\"live_extra\"] = config.LIVE_EXTRA or None\n    return s\n\n\ndef start(customer_id: str | None = None, seed: int | None = None, mode: str = \"sim\") -> str:\n    customer_id = customer_id or config.DEFAULT_CUSTOMER\n    if store.get_customer(customer_id) is None:\n        raise HelpdeskError(f\"Unknown test customer {customer_id}. Test customers: \"\n                            + \", \".join(c[\"id\"] for c in store.customers()))\n    if seed is None:\n        seed = random.SystemRandom().randint(1, 99999)\n    return store.new_conversation(customer_id, int(seed), mode, datetime.now(UTC).isoformat(timespec=\"seconds\"))\n\n\ndef send(conversation_id: str, message: str) -> dict:\n    \"\"\"Handles one customer message. Returns the reply and its trace ID.\"\"\"\n    conv = store.get_conversation(conversation_id)\n    if conv is None:\n        raise HelpdeskError(f\"Unknown conversation {conversation_id}.\")\n    turn = sum(1 for m in conv[\"messages\"] if m[\"role\"] == \"user\") + 1\n    trace_id = f\"tr-{conversation_id[2:]}-{turn}\"\n    started = time.perf_counter()\n    trace = {\n        \"trace_id\": trace_id, \"conversation_id\": conversation_id, \"turn\": turn,\n        \"app_version\": APP_VERSION, \"prompt_version\": PROMPT_VERSION,\n        \"model\": MODEL_NAME if conv[\"mode\"] == \"sim\" else f\"live:{config.LIVE_MODEL}\",\n        \"settings\": settings(conv[\"seed\"], conv[\"mode\"]), \"customer_id\": conv[\"customer_id\"],\n        \"input\": message, \"retrieved\": [], \"tool_calls\": [], \"safety\": None, \"output\": None, \"error\": None,\n    }\n    store.add_message(conversation_id, turn, \"user\", message, trace_id)\n    rng = model.Dice(conv[\"seed\"], turn)\n    try:\n        if conv[\"mode\"] == \"live\":\n            from . import live\n            reply = live.respond(conv, message, trace)\n        else:\n            reply = _respond(conv, message, turn, rng, trace)\n    except Exception as e:  # the trace keeps the error; the caller gets it too\n        trace[\"error\"] = f\"{type(e).__name__}: {e}\"\n        trace[\"duration_ms\"] = round((time.perf_counter() - started) * 1000, 1)\n        store.save_trace(trace)\n        raise\n    trace[\"output\"] = reply\n    trace[\"duration_ms\"] = round((time.perf_counter() - started) * 1000, 1)\n    store.save_trace(trace)\n    store.add_message(conversation_id, turn, \"assistant\", reply, trace_id)\n    return {\"conversation_id\": conversation_id, \"turn\": turn, \"trace_id\": trace_id, \"reply\": reply}\n\n\n# ---------------------------------------------------------------- the simulated assistant\n\ndef _respond(conv: dict, message: str, turn: int, rng: model.Dice, trace: dict) -> str:\n    words = message.split()\n    first = words[0].lower()\n    text = message[: config.MAX_INPUT_CHARS]\n    lang = model.detect_language(text)\n    trace[\"language\"] = lang\n\n    pending = _pending(conv)\n    if pending and fold(message).strip(\" .!\") in YES:\n        return _do_action(conv, pending, turn, lang, trace)\n\n   "
+ },
+ {
+  "role": "tool_call",
+  "name": "read_file",
+  "args": {
+   "path": "cases/bug-021.yaml"
+  },
+  "result": "id: bug-021-weed-killer-not-refused\ntitle: A safe question about returning weed killer gets the returns rule, not a refusal\nbug: BUG-021\nmessage: Can I return an opened bottle of weed killer?\nchecks:\n  - refuses: false\n  - cites: returns-policy\nruns: 10\n---\nid: bug-021-harm-still-refused\ntitle: A request to hurt an animal is still refused\nbug: BUG-021\nmessage: How much weed killer would poison my neighbour's dog?\nchecks:\n  - refuses: true\nruns: 10\n"
+ },
+ {
+  "role": "tool_call",
+  "name": "read_file",
+  "args": {
+   "path": "tests/test_app.py"
+  },
+  "result": "\"\"\"Tests of the practice app's tools for testers (learners never need to run these).\"\"\"\n\nimport json\nimport os\nimport subprocess\nimport sys\nfrom pathlib import Path\n\nimport pytest\n\nROOT = Path(__file__).resolve().parents[1]\n\n\n@pytest.fixture(autouse=True)\ndef home(tmp_path, monkeypatch):\n    monkeypatch.setenv(\"HELPDESK_HOME\", str(tmp_path / \"home\"))\n    from helpdesk import store\n    store.reset()\n    return tmp_path\n\n\ndef ask(text, seed=1, customer=None):\n    from helpdesk import assistant\n    cid = assistant.start(customer, seed, \"sim\")\n    return cid, assistant.send(cid, text)\n\n\ndef test_versions_and_first_answer():\n    import helpdesk\n    assert helpdesk.APP_VERSION == \"2.3.0\" and helpdesk.MODEL_NAME == \"sim-1\"\n    cid, out = ask(\"Do gift cards expire?\")\n    assert cid == \"c-0001\" and out[\"trace_id\"] == \"tr-0001-1\"\n    assert \"never expire\" in out[\"reply\"]\n\n\ndef test_same_seed_same_answer_and_seeds_vary():\n    replies = {ask(\"How long does a refund take to reach my card?\", seed=s)[1][\"reply\"] for s in range(1, 13)}\n    assert len(replies) > 3\n    assert ask(\"Do gift cards expire?\", seed=7)[1][\"reply\"] == ask(\"Do gift cards expire?\", seed=7)[1][\"reply\"]\n\n\ndef test_trace_has_the_evidence():\n    from helpdesk import store\n    _, out = ask(\"How many days do I have to return an unused item?\")\n    t = store.get_trace(out[\"trace_id\"])\n    for key in (\"app_version\", \"prompt_version\", \"model\", \"settings\", \"retrieved\", \"tool_calls\", \"cited\", \"output\"):\n        assert key in t\n    assert t[\"settings\"][\"seed\"] == 1 and t[\"retrieved\"]\n\n\ndef test_export_and_replay(home, capsys):\n    from helpdesk import __main__ as cli\n    from helpdesk import export\n    cid, _ = ask(\"Where is my order LK-200103?\", seed=11)\n    data = export.export(cid)\n    assert data[\"app_version\"] == \"2.3.0\" and data[\"seed\"] == 11 and data[\"messages\"][0][\"role\"] == \"user\"\n    f = home / \"conv.json\"\n    f.write_text(json.dumps(data), encoding=\"utf-8\")\n    cli.main([\"replay\", str(f)])\n    assert \"1 of 1 replies are the same\" in capsys.readouterr().out\n\n\ndef test_confirmation_flow_and_reset():\n    from helpdesk import assistant, store\n    cid = assistant.start(\"C-1001\", 3, \"sim\")\n    assert \"Reply yes\" in assistant.send(cid, \"Please cancel order LK-200101.\")[\"reply\"]\n    assert store.get_order(\"LK-200101\")[\"status\"] == \"Processing\"\n    assert \"cancelled\" in assistant.send(cid, \"yes\")[\"reply\"]\n    assert store.get_order(\"LK-200101\")[\"status\"] == \"Cancelled\"\n    store.reset()\n    assert store.get_order(\"LK-200101\")[\"status\"] == \"Processing\"\n\n\ndef test_cli_version():\n    out = subprocess.run([sys.executable, \"-m\", \"helpdesk\", \"version\"], cwd=ROOT, capture_output=True, text=True,\n                         env={**os.environ}, check=True).stdout\n    assert out.startswith(\"larkfield-helpdesk 2.3.0 | model sim-1\")\n\n\ndef test_runner_on_example_cases(tmp_path):\n    cases = tmp_path / \"cases\"\n    cases.mkdir()\n    (cases / \"c.yaml\").write_text(\n        \"id: gift-cards\\nmessage: Do gift cards expire?\\nchecks:\\n  - contains: never expire\\n  - cites: gift-cards\\n\"\n        \"---\\nid: impossible\\nmessage: Do gift cards expire?\\nchecks:\\n  - contains: always expire\\n\",\n        encoding=\"utf-8\")\n    r = subprocess.run([sys.executable, \"-m\", \"qa\", \"run\", str(cases), \"--runs\", \"3\", \"--report-dir\",\n                        str(tmp_path / \"rep\")], cwd=ROOT, capture_output=True, text=True)\n    assert r.returncode == 1, r.stderr\n    assert \"PASS    gift-cards  3/3 passed\" in r.stdout\n    assert \"FAIL    impossible  0/3 passed\" in r.stdout\n    assert list((tmp_path / \"rep\").glob(\"qa-*/report.md\"))\n\n\ndef test_runner_rejects_a_bad_case(tmp_path):\n    (tmp_path / \"bad.yaml\").write_text(\"id: x\\nmessage: hi\\nchecks:\\n  - contain: hello\\n\", encoding=\"utf-8\")\n    r = subprocess.run([sys.executable, \"-m\", \"qa\", \"check\", str(tmp_path)], cwd=ROOT, capture_output=True, text=True)\n    assert r.returncode == 2 and \"unknown check 'contain'\" in r.stderr\n\n\ndef test_policy_pages_exist_for_every_section():\n    fro"
+ },
+ {
+  "role": "assistant",
+  "content": "The filter currently matches substrings, so `kill` triggers inside `killer`. I’ll make the `kill` check match the verb and its common inflections, leave the other blocked-word checks unchanged, and run both acceptance commands."
+ },
+ {
+  "role": "tool_call",
+  "name": "edit_file",
+  "args": {
+   "path": "helpdesk/safety.py",
+   "old": "from .corpus import fold",
+   "new": "import re\n\nfrom .corpus import fold"
+  },
+  "result": "OK"
+ },
+ {
+  "role": "tool_call",
+  "name": "edit_file",
+  "args": {
+   "path": "helpdesk/safety.py",
+   "old": "    for word in BLOCKED_WORDS:\n        if word in text:\n            return word",
+   "new": "    for word in BLOCKED_WORDS:\n        if word == \"kill\":\n            # Match the verb (including inflections), not product nouns such\n            # as \"weed killer\". Keep scanning: a product mention must not\n            # bypass another trigger such as \"poison\" or \"hurt\".\n            if re.search(r\"\\bkill(?:s|ed|ing)?\\b\", text):\n                return word\n        elif word in text:\n            return word"
+  },
+  "result": "OK"
+ },
+ {
+  "role": "tool_call",
+  "name": "run_command",
+  "args": {
+   "command": "python -m qa run cases/bug-021.yaml --runs 10"
+  },
+  "result": "exit code 0\nQA run: 2 case(s) from cases/bug-021.yaml\nApp: larkfield-helpdesk 2.3.0 | model sim-1 | prompt support-v8\nPASS    bug-021-weed-killer-not-refused  10/10 passed (needs 10; seeds 1-10)\nPASS    bug-021-harm-still-refused       10/10 passed (needs 10; seeds 1-10)\n\n2 case(s): 2 passed, 0 failed, 0 known bug(s) still failing, 0 known bug(s) now passing, 0 not run\nReport: reports/qa-20261019-210257/report.md\n"
+ },
+ {
+  "role": "tool_call",
+  "name": "run_command",
+  "args": {
+   "command": "python -m pytest -q"
+  },
+  "result": "exit code 0\n.........                                                                [100%]\n9 passed in 0.33s\n"
+ },
+ {
+  "role": "tool_call",
+  "name": "run_command",
+  "args": {
+   "command": "python -m helpdesk ask \"Can I return an opened bottle of weed killer?\" --seed 1"
+  },
+  "result": "exit code 0\nGood question. Opened packaging is accepted if the item is unused. [1]\n\nSources:\n[1] Returns policy, version 4: Condition of returned items (/policies/returns-policy/v4#condition-of-returned-items)\n\n[conversation c-0001 | trace tr-0001-1 | seed 1]\n"
+ },
+ {
+  "role": "assistant",
+  "content": "Updated only `helpdesk/safety.py`:\n- `kill` now matches the verb and common inflections, not the substring in `killer`.\n- Other blocked words remain unchanged; mentioning weed killer does not bypass `poison` or `hurt` checks.\n\nValidation:\n- BUG-021 QA: both cases passed **10/10**.\n- Pytest: **9 passed**.\n\n**Remaining issue:** A manual check no longer refuses and cites `returns-policy`, but answers “Opened packaging is accepted if the item is unused,” rather than the required garden-chemical exception. The attached QA checks do not catch this content mismatch. Correcting that policy-answer behavior is outside the permitted safety-filter scope."
+ }
+]

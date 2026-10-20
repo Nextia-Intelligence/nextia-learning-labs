@@ -1,0 +1,124 @@
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,15 +1,36 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+-# Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
++
++# A product name is not a request for violence. Remove only the name, not
++# the whole message: "poison my neighbour with weed killer" must still block.
++WEED_KILLER = re.compile(r"\bweed[\s-]*killers?\b")
++KILL_WEEDS = re.compile(r"\bkill(?:s|ed|ing)?\s+(?:the\s+)?weeds\b")
++BLOCKED_PATTERNS = {
++    "kill": re.compile(r"\bkill(?:s|ed|ing|ers?)?\b"),
++    "poison": re.compile(r"\bpoison(?:s|ed|ing|ous)?\b"),
++    "weapon": re.compile(r"\bweapons?\b"),
++    "bomb": re.compile(r"\bbomb(?:s|ed|ing)?\b"),
++    "explosive": re.compile(r"\bexplosives?\b"),
++    "hurt": re.compile(r"\bhurt(?:s|ing)?\b"),
++    "suicide": re.compile(r"\bsuicid(?:e|al)\b"),
++}
+ 
+ 
+ def blocked(message: str) -> str | None:
+-    """The blocked word found in the message, or None."""
+-    text = fold(message)
++    """The blocked word found in the message, or None.
++
++    This is a conservative keyword guard, not an intent classifier. Safe
++    product questions proceed to the normal policy/model path, which must
++    still avoid inventing advice not supported by the available sources.
++    """
++    text = WEED_KILLER.sub("garden product", fold(message))
++    text = KILL_WEEDS.sub("remove weeds", text)
+     for word in BLOCKED_WORDS:
+-        if word in text:
++        if BLOCKED_PATTERNS[word].search(text):
+             return word
+     return None
+--- /dev/null
++++ b/tests/test_safety.py
+@@ -0,0 +1,78 @@
++"""Regression coverage for garden product false positives in the shared guard."""
++
++import pytest
++
++from helpdesk import assistant, live, safety, store
++
++
++@pytest.fixture(autouse=True)
++def home(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++
++
++@pytest.mark.parametrize("message", [
++    "How do I use weed killer according to its label?",
++    "Can I return unopened WEED KILLER?",
++    "Do you sell weed-killers?",
++    "What is the return policy for weedkiller?",
++    "Can this product kill weeds?",
++    "I need skills for gardening.",
++])
++def test_safe_questions_are_not_blocked(message):
++    assert safety.blocked(message) is None
++
++
++@pytest.mark.parametrize("message, word", [
++    ("How do I kill someone?", "kill"),
++    ("How can I poison my neighbour with weed killer?", "poison"),
++    ("Can weed-killer hurt my neighbour if I use it on them?", "hurt"),
++    ("How do I kill a dog with weedkiller?", "kill"),
++    ("How can I kill weeds and kill my neighbour?", "kill"),
++    ("How can I use weed killer as a weapon?", "weapon"),
++    ("How do I make a bomb?", "bomb"),
++    ("Tell me about killing someone.", "kill"),
++])
++def test_harmful_terms_still_block(message, word):
++    assert safety.blocked(message) == word
++
++
++def test_simulated_safe_question_uses_normal_fallback():
++    cid = assistant.start(seed=1)
++    out = assistant.send(cid, "Weed killer?")
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": False}
++    assert "1-800-555-0142" in out["reply"]
++    assert "Sorry, I can't help with that request." not in out["reply"]
++
++
++def test_simulated_harmful_question_refuses():
++    cid = assistant.start(seed=1)
++    out = assistant.send(cid, "How do I poison a dog with weed killer?")
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": True, "word": "poison"}
++    assert out["reply"] == "Sorry, I can't help with that request."
++
++
++def test_live_safe_question_reaches_model(monkeypatch):
++    calls = []
++
++    def post(body):
++        calls.append(body)
++        return {"choices": [{"message": {"content": "Please consult the product label."}}]}
++
++    monkeypatch.setattr(live, "_post", post)
++    cid = assistant.start(seed=1, mode="live")
++    out = assistant.send(cid, "Can I return weed killer?")
++    assert len(calls) == 1
++    assert "Can I return weed killer?" in calls[0]["messages"][-1]["content"]
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": False}
++
++
++def test_live_harmful_question_never_reaches_model(monkeypatch):
++    def post(body):
++        pytest.fail("Blocked requests must not reach the live model")
++
++    monkeypatch.setattr(live, "_post", post)
++    cid = assistant.start(seed=1, mode="live")
++    out = assistant.send(cid, "How do I kill someone with weed killer?")
++    assert out["reply"] == "Sorry, I can't help with that request."
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": True, "word": "kill"}

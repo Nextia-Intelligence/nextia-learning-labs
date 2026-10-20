@@ -1,0 +1,90 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -116,8 +116,8 @@
+ 
+ 
+ def in_force(s: Section, today: str) -> bool:
+-    """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    """Is this policy version in force on the requested date (inclusive bounds)?"""
++    return s.effective_from <= today and (not s.effective_to or today <= s.effective_to)
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -144,6 +144,15 @@
+     """An answer to a policy question, built from the sections that the search found."""
+     if not found or found[0][1] < 2.0:
+         return {"text": phrase(user_lang, "abstain"), "cited": [], "language": user_lang, "abstained": True}
++    # A return-window question needs the window, not a randomly selected nearby
++    # condition-of-items or damaged-item reporting section. Keep the version
++    # selected by retrieval (which may use a historical effective date).
++    query_terms = set(terms(question))
++    if "return" in query_terms and query_terms & {"days", "window", "long"}:
++        windows = [(s, score) for s, score in found
++                   if s.doc_id == "returns-policy" and s.heading == "Return window"]
++        if windows:
++            found = windows
+     first = pick_source(found, rng)
+     source = found[first][0]
+     sents = best_sentences(source, question, rng)
+--- a/tests/test_app.py
++++ b/tests/test_app.py
+@@ -46,6 +46,9 @@
+     for key in ("app_version", "prompt_version", "model", "settings", "retrieved", "tool_calls", "cited", "output"):
+         assert key in t
+     assert t["settings"]["seed"] == 1 and t["retrieved"]
++    assert "45 days" in out["reply"] and "30 days" not in out["reply"]
++    assert "returns-policy@4#return-window" in t["cited"]
++    assert not any(s["doc_id"] == "returns-policy" and s["version"] == 3 for s in t["retrieved"])
+ 
+ 
+ def test_export_and_replay(home, capsys):
+--- /dev/null
++++ b/tests/test_returns_policy.py
+@@ -0,0 +1,44 @@
++"""Regression tests for selecting the return policy in force."""
++
++from dataclasses import replace
++
++import pytest
++
++from helpdesk import corpus, model, tools
++
++
++@pytest.mark.parametrize("day,version", [
++    ("2026-10-30", 3),
++    ("2026-10-31", 3),
++    ("2026-11-01", 4),
++    ("2026-11-16", 4),
++])
++def test_return_policy_search_respects_effective_dates(day, version):
++    found = corpus.search("How many days do I have to return an unused item?", today=day)
++    returns = [s for s, _ in found if s.doc_id == "returns-policy"]
++    assert returns
++    assert {s.version for s in returns} == {version}
++
++
++def test_in_force_open_ended_and_inclusive_bounds():
++    section = corpus.find("returns-policy", 3)[0]
++    assert not corpus.in_force(section, "2025-02-28")
++    assert corpus.in_force(section, "2025-03-01")
++    assert corpus.in_force(section, "2026-10-31")
++    assert not corpus.in_force(section, "2026-11-01")
++    assert corpus.in_force(replace(section, effective_to=""), "2026-11-16")
++
++
++@pytest.mark.parametrize("seed", range(1, 31))
++def test_current_return_window_answer(seed):
++    question = "How many days do I have to return an unused item?"
++    answer = model.policy_answer(question, corpus.search(question), "en", model.Dice(seed, 1))
++    assert "45 days" in answer["text"]
++    assert "30 days" not in answer["text"]
++    assert any(s.doc_id == "returns-policy" and s.version == 4 for s in answer["cited"])
++    assert not any(s.doc_id == "returns-policy" and s.version == 3 for s in answer["cited"])
++
++
++@pytest.mark.parametrize("delivered,window", [("2026-10-31", 30), ("2026-11-01", 45)])
++def test_order_return_window_uses_delivery_date(delivered, window):
++    assert tools.return_window(delivered) == window
