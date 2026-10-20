@@ -1,0 +1,92 @@
+{
+  "export_format": 1,
+  "app": "larkfield-helpdesk",
+  "app_version": "2.3.0",
+  "prompt_version": "support-v8",
+  "model": "sim-1",
+  "mode": "sim",
+  "settings": {
+    "seed": 2,
+    "today": "2026-11-16",
+    "retrieval_k": 3,
+    "max_input_chars": 1200
+  },
+  "seed": 2,
+  "conversation_id": "c-0001",
+  "customer_id": "C-1001",
+  "started_at": "2026-10-20T00:45:32+00:00",
+  "exported_at": "2026-10-20T00:45:32+00:00",
+  "messages": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": "How many days do I have to return an unused item?",
+      "trace_id": "tr-0001-1"
+    },
+    {
+      "turn": 1,
+      "role": "assistant",
+      "text": "Thanks for asking. You can return an unused item within 30 days of delivery for a full refund of the item price. [1] I hope this helps.\n\nSources:\n[1] Returns policy, version 3: Return window (/policies/returns-policy/v3#return-window)",
+      "trace_id": "tr-0001-1"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "tr-0001-1",
+      "conversation_id": "c-0001",
+      "turn": 1,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 2,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": "How many days do I have to return an unused item?",
+      "retrieved": [
+        {
+          "doc_id": "returns-policy",
+          "version": 4,
+          "section": "Return window",
+          "score": 7.926,
+          "effective_from": "2026-11-01",
+          "effective_to": null,
+          "link": "/policies/returns-policy/v4#return-window"
+        },
+        {
+          "doc_id": "returns-policy",
+          "version": 3,
+          "section": "Return window",
+          "score": 7.926,
+          "effective_from": "2025-03-01",
+          "effective_to": "2026-10-31",
+          "link": "/policies/returns-policy/v3#return-window"
+        },
+        {
+          "doc_id": "returns-policy",
+          "version": 4,
+          "section": "Condition of returned items",
+          "score": 7.419,
+          "effective_from": "2026-11-01",
+          "effective_to": null,
+          "link": "/policies/returns-policy/v4#condition-of-returned-items"
+        }
+      ],
+      "tool_calls": [],
+      "safety": {
+        "blocked": false
+      },
+      "output": "Thanks for asking. You can return an unused item within 30 days of delivery for a full refund of the item price. [1] I hope this helps.\n\nSources:\n[1] Returns policy, version 3: Return window (/policies/returns-policy/v3#return-window)",
+      "error": null,
+      "language": "en",
+      "cited": [
+        "returns-policy@3#return-window"
+      ],
+      "answer_language": "en",
+      "duration_ms": 6.2
+    }
+  ]
+}

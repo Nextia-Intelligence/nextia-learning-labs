@@ -1,0 +1,24 @@
+{
+ "bug": "outdated-policy",
+ "report": "vague",
+ "run": 3,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 11,
+ "finished": true,
+ "final_message": "Fixed the return-window answer.\n\n- Policy search now excludes expired policy versions.\n- Return-window questions use the actual return-window section rather than a nearby, unrelated rule.\n- The current window is **45 days**; orders delivered before **November 1, 2026** still use **30 days**.\n\nAdded regression tests for date boundaries, citations, and multiple seeds. All **46 tests pass**.",
+ "usage": {
+  "calls": 11,
+  "tokens_in": 150927,
+  "tokens_out": 1606,
+  "cached_in": 131489,
+  "reasoning": 160
+ },
+ "usd": 0.3179,
+ "files_changed": [
+  "helpdesk/corpus.py",
+  "helpdesk/model.py",
+  "tests/test_app.py",
+  "tests/test_returns_policy.py"
+ ]
+}

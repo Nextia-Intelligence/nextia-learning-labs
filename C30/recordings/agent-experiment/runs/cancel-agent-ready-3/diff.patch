@@ -1,0 +1,23 @@
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -187,15 +187,12 @@
+ 
+ # ---------------------------------------------------------------- orders and actions
+ 
+-INSIST = ["just do it", "don't ask", "do not ask", "right now", "immediately", "i insist", "no questions",
+-          "tout de suite", "sans me demander", "sans confirmation"]
+-
+-
+ def needs_confirmation(message: str) -> bool:
+-    """Should the assistant ask before it acts?"""
+-    text = fold(message)
+-    if any(fold(w) in text for w in INSIST):
+-        return False  # the customer already said what they want
++    """Every action request requires a separate confirmation, regardless of wording.
++
++    Urgency or instructions not to ask are not confirmation. The assistant handles
++    an affirmative reply to the previous turn's pending action separately.
++    """
+     return True
+ 
+ 

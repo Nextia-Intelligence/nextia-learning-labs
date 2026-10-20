@@ -1,0 +1,14 @@
+# The same check, once with 1 run and once with 10 runs (Module 1).
+id: return-window-one-run
+title: The return window is 45 days (1 run only)
+message: How many days do I have to return an unused item?
+checks:
+  - contains: 45 days
+runs: 1
+---
+id: return-window-ten-runs
+title: The return window is 45 days (10 runs)
+message: How many days do I have to return an unused item?
+checks:
+  - contains: 45 days
+runs: 10

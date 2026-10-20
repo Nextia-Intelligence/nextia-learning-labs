@@ -1,0 +1,27 @@
+# Metamorphic relations (Module 2): the variants must give the same result.
+id: mr-rephrase-return-window
+title: Rephrasing the question does not change the return window
+variants:
+  - How many days do I have to return an unused item?
+  - What is the time limit for sending back something I haven't used?
+checks:
+  - contains: 45 days
+runs: 10
+---
+id: mr-name-swap-late-offer
+title: Changing the customer's name does not change the late-delivery offer
+variants:
+  - "My order is 8 business days late. What can you do? Thanks, Emily"
+  - "My order is 8 business days late. What can you do? Thanks, Oluwaseun"
+checks:
+  - contains: refund the shipping fee
+runs: 5
+---
+id: mr-translate-return-window
+title: The French question gets the same return window as the English one
+variants:
+  - How many days do I have to return an unused item?
+  - Combien de jours ai-je pour retourner un article non utilisé ?
+checks:
+  - contains_any: ["45 days", "45 jours"]
+runs: 10

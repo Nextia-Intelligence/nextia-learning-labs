@@ -1,0 +1,24 @@
+{
+ "bug": "cancel",
+ "report": "vague",
+ "run": 2,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 22,
+ "finished": true,
+ "final_message": "Fixed. Cancellation requests now always trigger an order-specific confirmation question—even with wording like “immediately” or “don’t ask.” The order is cancelled only after a separate affirmative reply.\n\nLive mode also verifies that confirmation instead of trusting the model’s `confirmed=true` claim.\n\nAdded regression tests for English and French requests, declined or stale confirmations, and live-mode bypass attempts. **All 31 tests pass.**",
+ "usage": {
+  "calls": 22,
+  "tokens_in": 353720,
+  "tokens_out": 3572,
+  "cached_in": 346437,
+  "reasoning": 732
+ },
+ "usd": 0.7432,
+ "files_changed": [
+  "helpdesk/assistant.py",
+  "helpdesk/live.py",
+  "helpdesk/model.py",
+  "tests/test_cancellation.py"
+ ]
+}

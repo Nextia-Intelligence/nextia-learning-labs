@@ -1,0 +1,61 @@
+{
+  "export_format": 1,
+  "app": "larkfield-helpdesk",
+  "app_version": "2.3.0",
+  "prompt_version": "support-v8",
+  "model": "sim-1",
+  "mode": "sim",
+  "settings": {
+    "seed": 5,
+    "today": "2026-11-16",
+    "retrieval_k": 3,
+    "max_input_chars": 1200
+  },
+  "seed": 5,
+  "conversation_id": "c-0001",
+  "customer_id": "C-1001",
+  "started_at": "2026-10-20T01:27:29+00:00",
+  "exported_at": "2026-10-20T01:27:29+00:00",
+  "messages": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": "Can I return an opened bottle of weed killer?",
+      "trace_id": "tr-0001-1"
+    },
+    {
+      "turn": 1,
+      "role": "assistant",
+      "text": "Sorry, I can't help with that request.",
+      "trace_id": "tr-0001-1"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "tr-0001-1",
+      "conversation_id": "c-0001",
+      "turn": 1,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 5,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": "Can I return an opened bottle of weed killer?",
+      "retrieved": [],
+      "tool_calls": [],
+      "safety": {
+        "blocked": true,
+        "word": "kill"
+      },
+      "output": "Sorry, I can't help with that request.",
+      "error": null,
+      "language": "en",
+      "duration_ms": 0.7
+    }
+  ]
+}

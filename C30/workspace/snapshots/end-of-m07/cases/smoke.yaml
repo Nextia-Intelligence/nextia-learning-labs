@@ -1,0 +1,8 @@
+# The first case: the app starts, answers and cites a policy.
+id: smoke-first-answer
+title: The assistant answers a simple policy question and cites the policy
+message: Do gift cards expire?
+checks:
+  - no_error: true
+  - contains: never expire
+  - cites: gift-cards

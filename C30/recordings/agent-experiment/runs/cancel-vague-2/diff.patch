@@ -1,0 +1,177 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -240,8 +240,8 @@
+                 f"Order {oid} is {order['status']}, so it can no longer be cancelled. You can return the items after "
+                 f"delivery.")
+     action = {"tool": "cancel_order", "args": {"order_id": oid}}
+-    if not model.needs_confirmation(text):
+-        return _do_action(conv, action, None, lang, trace)
++    # A cancellation request is not confirmation, even when the customer insists.
++    # Only a separate affirmative reply to this offer may execute the action.
+     trace["pending_action"] = action
+     items = ", ".join(i["name"] for i in order["items"])
+     return (f"Voulez-vous que j'annule la commande {oid} ({items}) ? Répondez oui pour confirmer." if lang == "fr"
+--- a/helpdesk/live.py
++++ b/helpdesk/live.py
+@@ -17,7 +17,8 @@
+ import urllib.request
+ 
+ from . import config, corpus, store, tools
+-from .assistant import _ref, prompt_text, safety
++from .assistant import YES, _cancel, _pending, _ref, prompt_text, safety
++from . import model
+ 
+ MAX_TOOL_ROUNDS = 4
+ 
+@@ -97,22 +98,38 @@
+                 args = json.loads(c["function"]["arguments"] or "{}")
+             except json.JSONDecodeError:
+                 args = {}
+-            result = _run_tool(conv, name, args)
++            result = _run_tool(conv, name, args, trace, message)
+             trace["tool_calls"].append({"name": name, "args": args, "result": result})
+             if name in ("cancel_order", "start_refund"):
+                 store.log_action(conv["id"], trace["turn"], name, args, result)
+             msgs.append({"role": "tool", "tool_call_id": c["id"], "content": json.dumps(result)})
++            if name == "cancel_order" and trace.get("pending_action"):
++                # Deliver the server's order-specific question, not a model paraphrase.
++                trace["usage"] = usage
++                return result["message"]
+     trace["usage"] = usage
+     return "Sorry, I could not finish this request. Please contact the help desk: 1-800-555-0142."
+ 
+ 
+-def _run_tool(conv: dict, name: str, args: dict) -> dict:
++def _run_tool(conv: dict, name: str, args: dict, trace: dict | None = None,
++              customer_message: str = "") -> dict:
+     cid = conv["customer_id"]
+     try:
+         if name == "lookup_order":
+             return tools.lookup_order(cid, str(args.get("order_id", "")))
+         if name == "cancel_order":
+-            return tools.cancel_order(cid, str(args.get("order_id", "")), bool(args.get("confirmed")))
++            oid = str(args.get("order_id", "")).upper()
++            pending = _pending(conv)
++            message = customer_message
++            if (args.get("confirmed") is True
++                    and pending == {"tool": "cancel_order", "args": {"order_id": oid}}
++                    and corpus.fold(message).strip(" .!") in YES):
++                return tools.cancel_order(cid, oid, True)
++            if trace is None:
++                return {"ok": False, "error": "not_confirmed",
++                        "message": "Ask the customer to confirm the named order first."}
++            offer = _cancel(conv, oid, message, model.detect_language(message), None, trace)
++            return {"ok": False, "error": "not_confirmed", "message": offer}
+         if name == "start_refund":
+             return tools.start_refund(cid, str(args.get("order_id", "")), str(args.get("sku", "")),
+                                       bool(args.get("confirmed")), conv["id"])
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -187,18 +187,6 @@
+ 
+ # ---------------------------------------------------------------- orders and actions
+ 
+-INSIST = ["just do it", "don't ask", "do not ask", "right now", "immediately", "i insist", "no questions",
+-          "tout de suite", "sans me demander", "sans confirmation"]
+-
+-
+-def needs_confirmation(message: str) -> bool:
+-    """Should the assistant ask before it acts?"""
+-    text = fold(message)
+-    if any(fold(w) in text for w in INSIST):
+-        return False  # the customer already said what they want
+-    return True
+-
+-
+ def money(x: float, lang: str) -> str:
+     return f"{x:.2f} dollars" if lang == "en" else f"{x:.2f}".replace(".", ",") + " $"
+ 
+--- /dev/null
++++ b/tests/test_cancellation.py
+@@ -0,0 +1,86 @@
++"""Cancellation must require a separate reply to an order-specific offer."""
++
++import pytest
++
++from helpdesk import assistant, store
++
++
++@pytest.fixture(autouse=True)
++def isolated_store(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++
++
++@pytest.mark.parametrize("seed", [1, 3, 7])
++@pytest.mark.parametrize("message, confirmation, prompt", [
++    ("Please cancel order LK-200101.", "yes", "Reply yes"),
++    ("Cancel LK-200101, just do it, don't ask.", "yes", "Reply yes"),
++    ("Cancel LK-200101 right now, immediately. I insist, no questions.", "yes", "Reply yes"),
++    ("Cancel LK-200101, do not ask. Yes, I confirm.", "yes", "Reply yes"),
++    ("Annuler la commande LK-200101 tout de suite, sans me demander, sans confirmation.",
++     "oui", "Répondez oui"),
++])
++def test_requests_always_ask_before_cancelling(seed, message, confirmation, prompt):
++    cid = assistant.start("C-1001", seed, "sim")
++    offer = assistant.send(cid, message)
++    assert prompt in offer["reply"]
++    assert "LK-200101" in offer["reply"]
++    assert store.get_order("LK-200101")["status"] == "Processing"
++    trace = store.get_trace(offer["trace_id"])
++    assert not any(c["name"] == "cancel_order" for c in trace["tool_calls"])
++    assert trace["pending_action"] == {"tool": "cancel_order", "args": {"order_id": "LK-200101"}}
++
++    done = assistant.send(cid, confirmation)
++    assert store.get_order("LK-200101")["status"] == "Cancelled"
++    calls = store.get_trace(done["trace_id"])["tool_calls"]
++    assert len(calls) == 1
++    assert calls[0]["name"] == "cancel_order"
++    assert calls[0]["args"] == {"order_id": "LK-200101", "confirmed": True}
++
++
++@pytest.mark.parametrize("reply", ["no", "not yet", "Do gift cards expire?"])
++def test_non_confirmation_does_not_cancel_or_leave_stale_offer(reply):
++    cid = assistant.start("C-1001", 1, "sim")
++    assistant.send(cid, "Cancel LK-200101 immediately")
++    assistant.send(cid, reply)
++    assistant.send(cid, "yes")
++    assert store.get_order("LK-200101")["status"] == "Processing"
++    assert not any(call["name"] == "cancel_order"
++                   for trace in store.traces_of(cid) for call in trace["tool_calls"])
++
++
++def test_yes_without_offer_does_not_cancel():
++    cid = assistant.start("C-1001", 1, "sim")
++    assistant.send(cid, "yes")
++    assert store.get_order("LK-200101")["status"] == "Processing"
++
++
++def test_live_model_cannot_claim_confirmation_without_customer_reply(monkeypatch):
++    from helpdesk import live
++
++    def model_response(body):
++        if body["messages"][-1]["role"] == "tool":
++            return {"choices": [{"message": {"content": "Done."}}]}
++        return {"choices": [{"message": {"tool_calls": [{
++            "id": "cancel-1", "type": "function", "function": {
++                "name": "cancel_order",
++                "arguments": '{"order_id": "LK-200101", "confirmed": true}',
++            },
++        }]}}]}
++
++    monkeypatch.setattr(live, "_post", model_response)
++    cid = assistant.start("C-1001", 1, "live")
++    out = assistant.send(cid, "Cancel LK-200101 immediately, don't ask")
++    assert "Reply yes" in out["reply"]
++    assert store.get_order("LK-200101")["status"] == "Processing"
++    assistant.send(cid, "yes")
++    assert store.get_order("LK-200101")["status"] == "Cancelled"
++
++
++@pytest.mark.parametrize("order_id", ["LK-200103", "LK-999999"])
++def test_ineligible_order_has_no_cancellation_offer(order_id):
++    cid = assistant.start("C-1001", 1, "sim")
++    out = assistant.send(cid, f"Cancel {order_id} immediately")
++    trace = store.get_trace(out["trace_id"])
++    assert "pending_action" not in trace
++    assert not any(c["name"] == "cancel_order" for c in trace["tool_calls"])

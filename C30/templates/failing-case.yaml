@@ -1,0 +1,17 @@
+# A failing case: the bug as a test that fails today and must pass after the fix.
+# Run it: python -m qa run THIS-FILE --runs 10
+# Before the fix it must FAIL (that proves it catches the bug). After the fix it must PASS N/N.
+# Then keep it in your regression set, so the bug cannot come back unseen.
+
+id: bug-000-short-name            # the bug ID and a few words
+title: <one sentence: what must be true>
+bug: BUG-000
+customer: C-1001
+steps:
+  - say: <the exact message that shows the bug>
+  # - say: yes                    # more steps for a conversation
+checks:
+  - <check>: <value>              # the rule that fails today (from "Expected" in the report)
+  - <check>: <value>              # a neighbour rule that must keep passing (no weakened fix)
+runs: 10                          # enough runs to see a "sometimes" bug: see the reproduction-rate lesson
+pass: all

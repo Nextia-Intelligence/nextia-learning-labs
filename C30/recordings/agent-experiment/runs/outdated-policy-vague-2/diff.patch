@@ -1,0 +1,73 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -117,7 +117,7 @@
+ 
+ def in_force(s: Section, today: str) -> bool:
+     """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    return s.effective_from <= today and (not s.effective_to or today <= s.effective_to)
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -118,6 +118,10 @@
+ def pick_source(found: list[tuple[Section, float]], rng: Dice) -> int:
+     """Which of the sections the answer is built from: usually the best one, sometimes the next."""
+     if len(found) < 2:
++        return 0
++    # A return-window answer must not randomly switch to a nearby section
++    # about item condition (or another deadline).
++    if found[0][0].doc_id == "returns-policy" and found[0][0].heading == "Return window":
+         return 0
+     best = found[0][1]
+     close = [i for i, (_, score) in enumerate(found) if score >= 0.9 * best]
+--- /dev/null
++++ b/tests/test_return_window.py
+@@ -0,0 +1,46 @@
++"""Regression coverage for return-policy effective dates and answers."""
++
++import pytest
++
++from helpdesk import assistant, corpus, store, tools
++
++
++@pytest.fixture(autouse=True)
++def isolated_store(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++
++
++@pytest.mark.parametrize("day,version", [
++    ("2025-03-01", 3),
++    ("2026-10-31", 3),
++    ("2026-11-01", 4),
++    ("2026-11-16", 4),
++])
++def test_return_policy_effective_dates(day, version):
++    for section in corpus.find("returns-policy"):
++        assert corpus.in_force(section, day) == (section.version == version)
++    found = corpus.search("How many days do I have to return an unused item?", today=day)
++    returns = [s for s, _ in found if s.doc_id == "returns-policy"]
++    assert returns
++    assert {s.version for s in returns} == {version}
++
++
++def test_return_policy_not_yet_effective():
++    assert not any(corpus.in_force(s, "2025-02-28") for s in corpus.find("returns-policy"))
++
++
++@pytest.mark.parametrize("seed", range(1, 31))
++def test_current_return_window_answer(seed):
++    cid = assistant.start(seed=seed)
++    out = assistant.send(cid, "How many days do I have to return an unused item?")
++    assert "45 days" in out["reply"]
++    assert "30 days" not in out["reply"]
++    trace = store.get_trace(out["trace_id"])
++    assert any(key.startswith("returns-policy@4#") for key in trace["cited"])
++    assert not any(r["doc_id"] == "returns-policy" and r["version"] == 3 for r in trace["retrieved"])
++
++
++@pytest.mark.parametrize("delivered,days", [("2026-10-31", 30), ("2026-11-01", 45)])
++def test_order_window_still_uses_delivery_date(delivered, days):
++    assert tools.return_window(delivered) == days

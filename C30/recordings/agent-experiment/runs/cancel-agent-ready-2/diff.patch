@@ -1,0 +1,47 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -231,8 +231,10 @@
+ 
+ 
+ def _cancel(conv: dict, oid: str, text: str, lang: str, rng: model.Dice, trace: dict) -> str:
+-    order = _own_order(conv, oid, trace)
+-    if order is None:
++    # Prepare a tool-free confirmation from the local snapshot. The action tool
++    # rechecks ownership and current status after the customer confirms.
++    order = store.get_order(oid)
++    if order is None or order["customer_id"] != conv["customer_id"]:
+         return _not_found(oid, lang)
+     if order["status"] != "Processing":
+         return (f"La commande {oid} est au statut {order['status']} : elle ne peut plus être annulée. Vous pouvez "
+@@ -240,8 +242,6 @@
+                 f"Order {oid} is {order['status']}, so it can no longer be cancelled. You can return the items after "
+                 f"delivery.")
+     action = {"tool": "cancel_order", "args": {"order_id": oid}}
+-    if not model.needs_confirmation(text):
+-        return _do_action(conv, action, None, lang, trace)
+     trace["pending_action"] = action
+     items = ", ".join(i["name"] for i in order["items"])
+     return (f"Voulez-vous que j'annule la commande {oid} ({items}) ? Répondez oui pour confirmer." if lang == "fr"
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -187,15 +187,12 @@
+ 
+ # ---------------------------------------------------------------- orders and actions
+ 
+-INSIST = ["just do it", "don't ask", "do not ask", "right now", "immediately", "i insist", "no questions",
+-          "tout de suite", "sans me demander", "sans confirmation"]
+-
+-
+ def needs_confirmation(message: str) -> bool:
+-    """Should the assistant ask before it acts?"""
+-    text = fold(message)
+-    if any(fold(w) in text for w in INSIST):
+-        return False  # the customer already said what they want
++    """An action request always needs a separate confirmation, regardless of wording.
++
++    Confirmation is handled by the assistant only when the next customer message
++    affirms a pending action; urgency in the initial request is not confirmation.
++    """
+     return True
+ 
+ 

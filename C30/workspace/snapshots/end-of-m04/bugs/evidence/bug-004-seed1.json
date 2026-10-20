@@ -1,0 +1,51 @@
+{
+  "export_format": 1,
+  "app": "larkfield-helpdesk",
+  "app_version": "2.3.0",
+  "prompt_version": "support-v8",
+  "model": "sim-1",
+  "mode": "sim",
+  "settings": {
+    "seed": 1,
+    "today": "2026-11-16",
+    "retrieval_k": 3,
+    "max_input_chars": 1200
+  },
+  "seed": 1,
+  "conversation_id": "c-0001",
+  "customer_id": "C-1001",
+  "started_at": "2026-10-20T01:27:29+00:00",
+  "exported_at": "2026-10-20T01:27:29+00:00",
+  "messages": [
+    {
+      "turn": 1,
+      "role": "user",
+      "text": " ",
+      "trace_id": "tr-0001-1"
+    }
+  ],
+  "traces": [
+    {
+      "trace_id": "tr-0001-1",
+      "conversation_id": "c-0001",
+      "turn": 1,
+      "app_version": "2.3.0",
+      "prompt_version": "support-v8",
+      "model": "sim-1",
+      "settings": {
+        "seed": 1,
+        "today": "2026-11-16",
+        "retrieval_k": 3,
+        "max_input_chars": 1200
+      },
+      "customer_id": "C-1001",
+      "input": " ",
+      "retrieved": [],
+      "tool_calls": [],
+      "safety": null,
+      "output": null,
+      "error": "IndexError: list index out of range",
+      "duration_ms": 0.4
+    }
+  ]
+}

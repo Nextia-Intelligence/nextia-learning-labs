@@ -1,0 +1,75 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -116,8 +116,8 @@
+ 
+ 
+ def in_force(s: Section, today: str) -> bool:
+-    """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    """Is this policy version in force on the given date (inclusive bounds)?"""
++    return s.effective_from <= today and (not s.effective_to or today <= s.effective_to)
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -144,7 +144,10 @@
+     """An answer to a policy question, built from the sections that the search found."""
+     if not found or found[0][1] < 2.0:
+         return {"text": phrase(user_lang, "abstain"), "cited": [], "language": user_lang, "abstained": True}
+-    first = pick_source(found, rng)
++    # A return deadline must not randomly come from item-condition rules or
++    # a damaged-item reporting deadline when the return-window section ranks first.
++    return_window = found[0][0].doc_id == "returns-policy" and found[0][0].heading == "Return window"
++    first = 0 if return_window else pick_source(found, rng)
+     source = found[first][0]
+     sents = best_sentences(source, question, rng)
+     if not sents:
+@@ -154,7 +157,7 @@
+     # Sometimes the answer adds a second, related source.
+     others = [s for s, score in found if s.doc_id != source.doc_id and score >= 0.5 * found[0][1]]
+     extra = None
+-    if others and rng.random("second_source") < 0.33:
++    if others and not return_window and rng.random("second_source") < 0.33:
+         extra = others[0]
+         cited.append(extra)
+     opener = rng.choice("opener", P[lang]["openers"])
+--- /dev/null
++++ b/tests/test_return_window.py
+@@ -0,0 +1,36 @@
++"""Regression tests for return policy effective dates and answers."""
++
++import pytest
++
++from helpdesk import assistant, corpus, store, tools
++
++
++@pytest.mark.parametrize("today, version", [
++    ("2026-10-31", 3),
++    ("2026-11-01", 4),
++    ("2026-11-16", 4),
++])
++def test_return_policy_date_boundaries(today, version):
++    windows = [s for s in corpus.find("returns-policy") if s.heading == "Return window"]
++    assert [s.version for s in windows if corpus.in_force(s, today)] == [version]
++    found = corpus.search("How many days do I have to return an unused item?", today=today)
++    assert found
++    assert all(s.version == version for s, _ in found if s.doc_id == "returns-policy")
++
++
++def test_current_return_window_across_seeds(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++    for seed in range(1, 51):
++        cid = assistant.start(seed=seed)
++        out = assistant.send(cid, "How many days do I have to return an unused item?")
++        assert "45 days" in out["reply"], (seed, out["reply"])
++        assert "30 days" not in out["reply"], (seed, out["reply"])
++        trace = store.get_trace(out["trace_id"])
++        assert "returns-policy@4#return-window" in trace["cited"]
++        assert all(r["version"] == 4 for r in trace["retrieved"] if r["doc_id"] == "returns-policy")
++
++
++@pytest.mark.parametrize("delivered, days", [("2026-10-31", 30), ("2026-11-01", 45)])
++def test_order_window_uses_delivery_date(delivered, days):
++    assert tools.return_window(delivered) == days

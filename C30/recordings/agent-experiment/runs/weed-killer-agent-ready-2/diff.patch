@@ -1,0 +1,44 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -126,7 +126,9 @@
+         trace["tool_calls"].append({"name": "product_reviews", "args": {"product": product}, "result": result})
+         return model.tone_prefix(text, lang, rng) + model.summarise_reviews(product, result["reviews"], lang, rng)
+ 
+-    return _policy(text, lang, rng, trace)
++    # Safety has checked the original text; use its recognized product name's
++    # policy category so retrieval and sentence selection find the exception.
++    return _policy(safety.policy_query(text), lang, rng, trace)
+ 
+ 
+ def _asks_for_instructions(folded: str) -> bool:
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,14 +1,26 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+ # Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
+ 
++# This product name contains "kill", but is not itself a request for harm.
++# Mask only the name, not the whole message: other occurrences of blocked
++# words (including "kill") must still trigger a refusal.
++WEED_KILLER = re.compile(r"\bweed[\s-]+killers?\b", re.I)
++
++
++def policy_query(message: str) -> str:
++    """Use the policy's product category for the benign name recognized here."""
++    return WEED_KILLER.sub("garden chemicals", message)
++
+ 
+ def blocked(message: str) -> str | None:
+-    """The blocked word found in the message, or None."""
+-    text = fold(message)
++    """The blocked word found outside a benign product name, or None."""
++    text = WEED_KILLER.sub("herbicide", fold(message))
+     for word in BLOCKED_WORDS:
+         if word in text:
+             return word

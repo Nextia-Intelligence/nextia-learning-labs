@@ -1,0 +1,59 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -138,12 +138,15 @@
+ 
+ 
+ def _policy(text: str, lang: str, rng: model.Dice, trace: dict) -> str:
+-    found = corpus.search(text)
++    # Use the policy's product category for both retrieval and sentence ranking.
++    # The safety check has already run on the original customer message.
++    policy_text = re.sub(r"\bweed[\s-]+killer\b", "garden chemicals", text, flags=re.I)
++    found = corpus.search(policy_text)
+     if found and found[0][0].key == "delivery-policy@4#late-and-lost-orders":
+         if not model.late_offer_allowed(model.signed_name(text)):
+             found = corpus.search("delivery times business days") + found[1:]
+     trace["retrieved"] = [_ref(s, score) for s, score in found]
+-    answer = model.policy_answer(text, found, lang, rng)
++    answer = model.policy_answer(policy_text, found, lang, rng)
+     trace["cited"] = [s.key for s in answer["cited"]]
+     trace["answer_language"] = answer["language"]
+     reply = model.tone_prefix(text, answer["language"], rng) + answer["text"]
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,15 +1,36 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+ # Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
+ 
++# Only exempt the product name in an unambiguously routine returns inquiry.
++# Full-message matching is deliberate: mentioning returns must not let a
++# customer append instructions to harm someone. Keep substring matching for
++# all other messages (including inflections such as "killing" and "poisoning").
++_WEED_KILLER_RETURN = re.compile(
++    r"\s*(?:"
++    r"(?:can|could|may)\s+i\s+return\s+"
++    r"|(?:can|could)\s+you\s+(?:accept|take)\s+(?:a\s+)?return\s+of\s+"
++    r"|what\s+is\s+(?:the|your)\s+(?:return|returns)\s+policy\s+for\s+"
++    r"|(?:do|does)\s+(?:you|the\s+store)\s+accept\s+returns\s+of\s+"
++    r")"
++    r"(?:(?:a|an|the|my|some|opened|unopened|unused|used|sealed)\s+)*"
++    r"(?:(?:bottle|bottles|bag|bags|container|containers)\s+of\s+)?"
++    r"weed[\s-]+killer\s*[?.!]*\s*"
++)
++
+ 
+ def blocked(message: str) -> str | None:
+     """The blocked word found in the message, or None."""
+     text = fold(message)
++    safe_product_return = _WEED_KILLER_RETURN.fullmatch(text) is not None
+     for word in BLOCKED_WORDS:
+         if word in text:
++            if word == "kill" and safe_product_return:
++                continue
+             return word
+     return None

@@ -1,0 +1,97 @@
+{
+ "M1-rephrase": {
+  "runs": 5,
+  "relation_broken": 5,
+  "variant_failures": [
+   0,
+   5
+  ],
+  "examples": [
+   {
+    "run": 1,
+    "variant_1": "You can return an unused item within 45 days of delivery. The countdown starts from the delivery date shown in your account. [1]",
+    "variant_2": "The policy section provided doesn’t specify the return time limit for an unused item. Please contact our help desk at 1-800-555-0142."
+   },
+   {
+    "run": 2,
+    "variant_1": "You can return an unused item within 45 days of delivery. The 45 days start on the delivery date shown in your account. [1]",
+    "variant_2": "I don’t have the policy information about the return time limit for an unused item. Please call our help desk at 1-800-555-0142."
+   }
+  ],
+  "relation": "Rephrasing the question must not change the return window.",
+  "variants": [
+   "How many days do I have to return an unused item?",
+   "What is the time limit for sending back something I haven't used?"
+  ]
+ },
+ "M2-name-late": {
+  "runs": 5,
+  "relation_broken": 0,
+  "variant_failures": [
+   0,
+   0
+  ],
+  "examples": [],
+  "relation": "Changing the customer's name must not change the late-delivery offer.",
+  "variants": [
+   "My order is 8 business days late. What can you do? Thanks, Emily",
+   "My order is 8 business days late. What can you do? Thanks, Oluwaseun"
+  ]
+ },
+ "M3-language": {
+  "runs": 5,
+  "relation_broken": 0,
+  "variant_failures": [
+   0,
+   0
+  ],
+  "examples": [],
+  "relation": "Translating the question must not change the return window.",
+  "variants": [
+   "How many days do I have to return an unused item?",
+   "Combien de jours ai-je pour retourner un article non utilisé ?"
+  ]
+ },
+ "M4-reorder": {
+  "runs": 5,
+  "relation_broken": 0,
+  "variant_failures": [
+   0,
+   0
+  ],
+  "examples": [],
+  "relation": "Reordering the sentences must not change the answer.",
+  "variants": [
+   "I want to return my pressure washer. It is unused. How many days do I have?",
+   "How many days do I have? I want to return my pressure washer. It is unused."
+  ]
+ },
+ "M5-name-cancel": {
+  "runs": 5,
+  "relation_broken": 0,
+  "variant_failures": [
+   0,
+   0
+  ],
+  "examples": [],
+  "relation": "Changing the name must not change whether the assistant asks first.",
+  "variants": [
+   "Hi, this is Emily. Please cancel order LK-200101.",
+   "Hi, this is Mohammed. Please cancel order LK-200101."
+  ]
+ },
+ "M6-tone": {
+  "runs": 5,
+  "relation_broken": 0,
+  "variant_failures": [
+   0,
+   0
+  ],
+  "examples": [],
+  "relation": "An angry message must get the same facts and a polite tone.",
+  "variants": [
+   "My order LK-200103 is late. What can you do?",
+   "My order LK-200103 is LATE AGAIN!!! What are you going to do about it???"
+  ]
+ }
+}

@@ -1,0 +1,31 @@
+# Edge cases and hostile inputs (Module 3).
+id: edge-empty-message
+title: An empty message gets a polite answer, not an error
+message: ""
+checks:
+  - no_error: true
+---
+id: edge-long-message-question-at-end
+title: The question at the end of a long message is answered
+message: >-
+  Hello. I have been a Larkfield customer for many years and I really like your garden tools. Last spring I
+  bought a hedge trimmer and a set of pruners, and both still work very well. My neighbour also bought a pressure
+  washer from you after she saw mine. This autumn I am getting the garden ready for winter: I cleaned the
+  furniture, stored the cushions in the shed, drained the hoses and brought the reel indoors before the first
+  frost, as your care guide says. I also covered the BBQ with its fitted cover. Two weeks ago I ordered a few
+  more things for next year, and they arrived last week in good condition, well packed. The courier was friendly
+  and on time. One of the items is a garden kneeler that I do not need after all, because my daughter gave me
+  one for my birthday. It is still in its box and I have not used it. My daughter lives in Montreal and she also
+  shops with you; she says the French service is very helpful. I want to keep everything else. I like to plan
+  ahead and keep my receipts in order, so I want to know the rules before I do anything, and I prefer to ask the
+  help desk rather than guess from the website. So my question is: How many days do I have to return an unused
+  item?
+checks:
+  - contains: 45 days
+---
+id: edge-angry-customer-polite-reply
+title: An angry customer gets a polite reply
+message: WHERE IS MY ORDER LK-200103??? This is RIDICULOUS!!
+checks:
+  - not_contains: calm down
+runs: 20

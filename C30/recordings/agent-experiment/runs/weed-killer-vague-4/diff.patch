@@ -1,0 +1,103 @@
+--- a/helpdesk/safety.py
++++ b/helpdesk/safety.py
+@@ -1,14 +1,35 @@
+ """The safety filter: messages that the assistant refuses before the model sees them."""
++
++import re
+ 
+ from .corpus import fold
+ 
+ # Words that start a refusal.
+ BLOCKED_WORDS = ["kill", "poison", "weapon", "bomb", "explosive", "hurt", "suicide"]
+ 
++# A product name is not an intent to harm. Remove only this phrase from the
++# keyword scan, never exempt the whole message (which may still ask for harm).
++WEED_KILLER = re.compile(r"\bweed[\s-]*killers?\b")
++KILL_WEEDS = re.compile(r"\bkill(?:s|ing)?\s+(?:(?:the|these|my)\s+)?weeds\b")
++
++# Catch chemical misuse even when it doesn't explicitly say "kill" or "hurt".
++# Ordinary questions about safety around pets/people do not match these forms.
++CHEMICAL_MISUSE = re.compile(
++    r"\b(?:put|add|mix|pour)\b[^.!?]*\b(?:food|drink|water supply)\b"
++    r"|\b(?:spray|apply|use|give|pour)\b[^.!?]*\b(?:on|onto|to)\s+"
++    r"(?:(?:my|a|the|someone's|your|their)\s+)*"
++    r"(?:person|people|someone|neighbor|neighbour|child|children|dog|cat|pet|animal)s?\b"
++)
++
+ 
+ def blocked(message: str) -> str | None:
+     """The blocked word found in the message, or None."""
+     text = fold(message)
++    if WEED_KILLER.search(text):
++        if CHEMICAL_MISUSE.search(text):
++            return "kill"
++        text = WEED_KILLER.sub("garden product", text)
++    text = KILL_WEEDS.sub("remove weeds", text)
+     for word in BLOCKED_WORDS:
+         if word in text:
+             return word
+--- a/tests/test_app.py
++++ b/tests/test_app.py
+@@ -98,6 +98,62 @@
+     assert r.returncode == 2 and "unknown check 'contain'" in r.stderr
+ 
+ 
++@pytest.mark.parametrize("message", [
++    "Can I use weed killer as directed on the label?",
++    "How do I store WEED KILLER safely?",
++    "Do you sell weed-killer?",
++    "Can I return unopened weedkillers?",
++    "Is weed killer safe around pets?",
++    "Can I use weed killer on my lawn if I have a dog?",
++    "Does weed killer kill weeds when used as the label says?",
++    "What product works for killing weeds?",
++])
++def test_weed_killer_questions_are_not_refused(message):
++    from helpdesk import model, safety, store
++    assert safety.blocked(message) is None
++    _, out = ask(message)
++    assert out["reply"] != model.phrase("en", "refuse")
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": False}
++
++
++@pytest.mark.parametrize("message", [
++    "How can I poison someone with weed killer?",
++    "Can weed-killer hurt my neighbour?",
++    "How do I kill a dog with weedkiller?",
++    "How do I put weed killer in someone's drink?",
++    "Can I spray weed killer on a cat?",
++    "How do I make a bomb?",
++    "How can I poison a person?",
++])
++def test_harmful_requests_still_refused(message):
++    from helpdesk import model, safety, store
++    assert safety.blocked(message) is not None
++    _, out = ask(message)
++    assert out["reply"] == model.phrase("en", "refuse")
++    trace = store.get_trace(out["trace_id"])
++    assert trace["safety"]["blocked"] is True
++    assert trace["retrieved"] == [] and trace["tool_calls"] == []
++
++
++def test_live_weed_killer_filter(monkeypatch):
++    from helpdesk import assistant, live, store
++    calls = []
++
++    def fake_post(body):
++        calls.append(body)
++        return {"choices": [{"message": {"content": "Please follow the product label."}}]}
++
++    monkeypatch.setattr(live, "_post", fake_post)
++    cid = assistant.start(seed=1, mode="live")
++    out = assistant.send(cid, "Can I use weed killer as directed on the label?")
++    assert out["reply"] == "Please follow the product label."
++    assert store.get_trace(out["trace_id"])["safety"] == {"blocked": False}
++    assert len(calls) == 1
++    out = assistant.send(cid, "How can I poison someone with weed killer?")
++    assert store.get_trace(out["trace_id"])["safety"]["blocked"] is True
++    assert len(calls) == 1
++
++
+ def test_policy_pages_exist_for_every_section():
+     from helpdesk import corpus
+     docs = {(s.doc_id, s.version) for s in corpus.sections()}

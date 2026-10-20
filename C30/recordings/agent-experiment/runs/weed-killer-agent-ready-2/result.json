@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "agent-ready",
+ "run": 2,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 11,
+ "finished": true,
+ "final_message": "Fixed BUG-021 within the permitted files.\n\n- Excluded the product name “weed killer” from the blocked-keyword scan; all blocked words remain in place and are checked elsewhere in the message.\n- Mapped the product name to “garden chemicals” for policy lookup, so the answer cites **Items that cannot be returned**, not the general opened-packaging rule.\n- No tests or cases changed; no answer hard-coded.\n\nValidation:\n- Bug QA: **both cases passed 10/10**.\n- Pytest: **9 passed**.\n- Manual check: cited the opened garden-chemicals exception in `returns-policy`.",
+ "usage": {
+  "calls": 11,
+  "tokens_in": 96180,
+  "tokens_out": 1762,
+  "cached_in": 88095,
+  "reasoning": 570
+ },
+ "usd": 0.21,
+ "files_changed": [
+  "helpdesk/assistant.py",
+  "helpdesk/safety.py"
+ ]
+}

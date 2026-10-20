@@ -1,0 +1,22 @@
+{
+ "bug": "weed-killer",
+ "report": "vague",
+ "run": 4,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 11,
+ "finished": true,
+ "final_message": "Fixed the safety filter so “weed killer” and “killing weeds” no longer trigger automatic refusal. Harmful requests, including misuse against people or animals, remain blocked.\n\nAdded regression tests for simulated and live modes. **All 25 tests pass.**\n\nIf the policies lack an answer, the assistant will still acknowledge that and provide the help-desk number rather than invent product guidance.",
+ "usage": {
+  "calls": 11,
+  "tokens_in": 133267,
+  "tokens_out": 2502,
+  "cached_in": 108293,
+  "reasoning": 709
+ },
+ "usd": 0.2916,
+ "files_changed": [
+  "helpdesk/safety.py",
+  "tests/test_app.py"
+ ]
+}

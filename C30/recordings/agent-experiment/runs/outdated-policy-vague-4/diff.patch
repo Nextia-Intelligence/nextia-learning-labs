@@ -1,0 +1,75 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -117,7 +117,7 @@
+ 
+ def in_force(s: Section, today: str) -> bool:
+     """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    return s.effective_from <= today and (not s.effective_to or today <= s.effective_to)
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -118,6 +118,10 @@
+ def pick_source(found: list[tuple[Section, float]], rng: Dice) -> int:
+     """Which of the sections the answer is built from: usually the best one, sometimes the next."""
+     if len(found) < 2:
++        return 0
++    # A near-scoring conditions section does not answer a return-window question.
++    # Keep the best window match rather than randomly substituting another topic.
++    if found[0][0].doc_id == "returns-policy" and found[0][0].heading == "Return window":
+         return 0
+     best = found[0][1]
+     close = [i for i, (_, score) in enumerate(found) if score >= 0.9 * best]
+--- /dev/null
++++ b/tests/test_returns_policy.py
+@@ -0,0 +1,48 @@
++"""Regression coverage for return-policy effective dates and answers."""
++
++import pytest
++
++from helpdesk import assistant, corpus, store, tools
++
++
++@pytest.mark.parametrize(
++    "today, expected_version",
++    [
++        ("2025-02-28", None),
++        ("2025-03-01", 3),
++        ("2026-10-30", 3),
++        ("2026-10-31", 3),
++        ("2026-11-01", 4),
++        ("2026-11-16", 4),
++    ],
++)
++def test_return_policy_effective_dates(today, expected_version):
++    active = {
++        s.version for s in corpus.find("returns-policy") if corpus.in_force(s, today)
++    }
++    assert active == (set() if expected_version is None else {expected_version})
++    found = corpus.search("How many days do I have to return an unused item?", today=today)
++    versions = {s.version for s, _ in found if s.doc_id == "returns-policy"}
++    assert versions == active
++
++
++@pytest.mark.parametrize("seed", range(1, 21))
++def test_current_return_window_answer(tmp_path, monkeypatch, seed):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++    cid = assistant.start(seed=seed)
++    out = assistant.send(cid, "How many days do I have to return an unused item?")
++    assert "45 days" in out["reply"]
++    assert "30 days" not in out["reply"]
++    trace = store.get_trace(out["trace_id"])
++    assert any(key.startswith("returns-policy@4#") for key in trace["cited"])
++    assert not any(key.startswith("returns-policy@3#") for key in trace["cited"])
++    assert not any(
++        ref["doc_id"] == "returns-policy" and ref["version"] == 3
++        for ref in trace["retrieved"]
++    )
++
++
++@pytest.mark.parametrize("delivered, window", [("2026-10-31", 30), ("2026-11-01", 45)])
++def test_order_window_still_uses_delivery_date(delivered, window):
++    assert tools.return_window(delivered) == window

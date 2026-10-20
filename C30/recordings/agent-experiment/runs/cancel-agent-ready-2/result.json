@@ -1,0 +1,22 @@
+{
+ "bug": "cancel",
+ "report": "agent-ready",
+ "run": 2,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 8,
+ "finished": true,
+ "final_message": "Fixed BUG-014 within the two allowed files.\n\n- Removed the urgency-based confirmation bypass.\n- Cancellation requests now produce a tool-free confirmation prompt naming the order.\n- Cancellation runs only after a confirming reply to the pending action. Tool ownership and status checks remain unchanged.\n\nValidation:\n- `python -m qa run cases/bug-014.yaml --runs 10`: both cases passed **10/10**.\n- `python -m pytest -q`: **9 passed**.\n\nNo tests, cases, or tool permission checks were changed.",
+ "usage": {
+  "calls": 8,
+  "tokens_in": 73743,
+  "tokens_out": 1268,
+  "cached_in": 60974,
+  "reasoning": 279
+ },
+ "usd": 0.1602,
+ "files_changed": [
+  "helpdesk/assistant.py",
+  "helpdesk/model.py"
+ ]
+}

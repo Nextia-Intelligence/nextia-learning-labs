@@ -1,0 +1,108 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -240,8 +240,8 @@
+                 f"Order {oid} is {order['status']}, so it can no longer be cancelled. You can return the items after "
+                 f"delivery.")
+     action = {"tool": "cancel_order", "args": {"order_id": oid}}
+-    if not model.needs_confirmation(text):
+-        return _do_action(conv, action, None, lang, trace)
++    # A cancellation request (even an urgent one) is not confirmation.
++    # Only an affirmative reply on the following turn may execute this action.
+     trace["pending_action"] = action
+     items = ", ".join(i["name"] for i in order["items"])
+     return (f"Voulez-vous que j'annule la commande {oid} ({items}) ? Répondez oui pour confirmer." if lang == "fr"
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -187,18 +187,6 @@
+ 
+ # ---------------------------------------------------------------- orders and actions
+ 
+-INSIST = ["just do it", "don't ask", "do not ask", "right now", "immediately", "i insist", "no questions",
+-          "tout de suite", "sans me demander", "sans confirmation"]
+-
+-
+-def needs_confirmation(message: str) -> bool:
+-    """Should the assistant ask before it acts?"""
+-    text = fold(message)
+-    if any(fold(w) in text for w in INSIST):
+-        return False  # the customer already said what they want
+-    return True
+-
+-
+ def money(x: float, lang: str) -> str:
+     return f"{x:.2f} dollars" if lang == "en" else f"{x:.2f}".replace(".", ",") + " $"
+ 
+--- /dev/null
++++ b/tests/test_cancellation.py
+@@ -0,0 +1,71 @@
++"""Cancellation must require a separate confirmation, regardless of urgency."""
++
++import pytest
++
++from helpdesk import assistant, store
++
++
++@pytest.fixture(autouse=True)
++def isolated_store(tmp_path, monkeypatch):
++    monkeypatch.setenv("HELPDESK_HOME", str(tmp_path / "home"))
++    store.reset()
++
++
++@pytest.mark.parametrize("seed", [1, 3, 7, 12])
++@pytest.mark.parametrize("message,confirmation", [
++    ("Please cancel order LK-200101.", "yes"),
++    ("Cancel LK-200101, just do it.", "yes"),
++    ("Cancel LK-200101, don't ask.", "yes"),
++    ("Cancel LK-200101, do not ask.", "yes"),
++    ("Cancel LK-200101 right now.", "yes"),
++    ("Cancel LK-200101 immediately.", "yes"),
++    ("Cancel LK-200101, I insist.", "yes"),
++    ("Cancel LK-200101, no questions.", "yes"),
++    ("Annuler la commande LK-200101 tout de suite.", "oui"),
++    ("Annuler la commande LK-200101 sans me demander.", "oui"),
++    ("Annuler la commande LK-200101 sans confirmation.", "oui"),
++    ("Yes, cancel LK-200101 immediately.", "yes"),
++])
++def test_cancellation_always_asks_first(seed, message, confirmation):
++    cid = assistant.start("C-1001", seed, "sim")
++    out = assistant.send(cid, message)
++    trace = store.get_trace(out["trace_id"])
++    assert "LK-200101" in out["reply"]
++    assert "confirm" in out["reply"]
++    assert trace["pending_action"] == {"tool": "cancel_order", "args": {"order_id": "LK-200101"}}
++    assert not any(c["name"] == "cancel_order" for c in trace["tool_calls"])
++    assert store.get_order("LK-200101")["status"] == "Processing"
++
++    out = assistant.send(cid, confirmation)
++    trace = store.get_trace(out["trace_id"])
++    calls = [c for c in trace["tool_calls"] if c["name"] == "cancel_order"]
++    assert len(calls) == 1
++    assert calls[0]["args"] == {"order_id": "LK-200101", "confirmed": True}
++    assert calls[0]["result"]["ok"]
++    assert store.get_order("LK-200101")["status"] == "Cancelled"
++
++
++@pytest.mark.parametrize("response", ["no", "not yet", "Do gift cards expire?"])
++def test_declined_or_interrupted_confirmation_cannot_be_used_later(response):
++    cid = assistant.start("C-1001", 1, "sim")
++    assistant.send(cid, "Cancel LK-200101 immediately.")
++    assistant.send(cid, response)
++    out = assistant.send(cid, "yes")
++    assert store.get_order("LK-200101")["status"] == "Processing"
++    assert not any(c["name"] == "cancel_order" for c in store.get_trace(out["trace_id"])["tool_calls"])
++
++
++def test_yes_without_pending_cancellation_does_nothing():
++    cid = assistant.start("C-1001", 1, "sim")
++    out = assistant.send(cid, "yes")
++    assert store.get_order("LK-200101")["status"] == "Processing"
++    assert not any(c["name"] == "cancel_order" for c in store.get_trace(out["trace_id"])["tool_calls"])
++
++
++@pytest.mark.parametrize("order_id", ["LK-200103", "LK-200201", "LK-999999"])
++def test_ineligible_orders_do_not_offer_cancellation(order_id):
++    cid = assistant.start("C-1001", 1, "sim")
++    out = assistant.send(cid, f"Cancel {order_id} immediately.")
++    trace = store.get_trace(out["trace_id"])
++    assert "pending_action" not in trace
++    assert not any(c["name"] == "cancel_order" for c in trace["tool_calls"])

@@ -1,0 +1,8 @@
+# Measure a reproduction rate (Module 3): many runs, and a pass rule that shows the rate.
+id: repro-return-window-30-runs
+title: The return window is 45 days (30 runs)
+message: How many days do I have to return an unused item?
+checks:
+  - contains: 45 days
+  - cites: returns-policy@4
+runs: 30

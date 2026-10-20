@@ -1,0 +1,21 @@
+{
+ "bug": "outdated-policy",
+ "report": "agent-ready",
+ "run": 5,
+ "model": "gpt-6.1-sol 2026-09-29",
+ "api": "Responses API, reasoning effort medium",
+ "turns": 13,
+ "finished": true,
+ "final_message": "Fixed BUG-008 in `helpdesk/corpus.py` only.\n\n- Policy search now checks both effective-date bounds, inclusively; a missing bound remains open-ended.\n- Ranking now favors sections covering more query terms, preventing the return-window question from selecting the condition-only section.\n- Version 3 remains unchanged in `helpdesk/data/policies/` and can still be retrieved for dates when it was in force.\n- No hard-coded return-window value or test/case changes.\n\nValidation:\n- `python -m qa run cases/bug-008.yaml --runs 20`: **20/20 passed**\n- `python -m pytest -q`: **9 passed**",
+ "usage": {
+  "calls": 13,
+  "tokens_in": 105514,
+  "tokens_out": 1152,
+  "cached_in": 93615,
+  "reasoning": 99
+ },
+ "usd": 0.2225,
+ "files_changed": [
+  "helpdesk/corpus.py"
+ ]
+}

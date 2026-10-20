@@ -1,0 +1,291 @@
+{
+ "set": {
+  "replies": 100,
+  "author_fail": 32
+ },
+ "chat-small": {
+  "model": "gpt-6-luna 2026-09-22",
+  "agreement": 0.82,
+  "cohen_kappa": 0.606,
+  "confusion_author_judge": {
+   "pass_pass": 56,
+   "pass_fail": 12,
+   "fail_pass": 6,
+   "fail_fail": 26
+  },
+  "author_failures_caught": "26/32",
+  "author_passes_flagged": "12/68",
+  "missed_failures": [
+   {
+    "id": "q06-run3",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 4,
+    "reason": "The reply accurately states the shipping-fee refund rule, transparently explains that the order lookup failed, and asks for the order number without taking any action."
+   },
+   {
+    "id": "q06-run4",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 3,
+    "reason": "The reply gives the supported shipping-fee refund rule and asks for the order number after the lookup failed, but it should clarify that an order 8 business days late qualifies for the refund."
+   },
+   {
+    "id": "q06-run7",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 4,
+    "reason": "The assistant says it could not find the order and asks for the correct number, and accurately explains that an order more than 5 business days late qualifies for a shipping-fee refund."
+   },
+   {
+    "id": "q07-run10",
+    "failure_type": "misleading answer",
+    "score": 4,
+    "reason": "The reply correctly explains that large items are not delivered to Nunavut, while other items are delivered throughout Canada, and its facts are supported by the policies."
+   },
+   {
+    "id": "q07-run4",
+    "failure_type": "misleading answer",
+    "score": 4,
+    "reason": "The reply correctly distinguishes large items, which are not delivered to territories, from other items, which are delivered throughout Canada, including Nunavut."
+   },
+   {
+    "id": "q20-run9",
+    "failure_type": "missing fact",
+    "score": 4,
+    "reason": "La réponse est en français, répond clairement au délai et chaque délai mentionné est étayé par la politique."
+   }
+  ],
+  "missed_by_type": {
+   "confident wrong answer or invented identifier": 3,
+   "misleading answer": 2,
+   "missing fact": 1
+  },
+  "false_alarms": [
+   {
+    "id": "q21-run10",
+    "score": 2,
+    "reason": "La règle de remboursement des frais d’expédition est correctement indiquée, mais le numéro de téléphone donné n’est étayé par aucune politique ni aucun résultat d’outil."
+   },
+   {
+    "id": "q25-run8",
+    "score": 2,
+    "reason": "The assistant claims the order is Processing and identifies its item, but the lookup result provides no order details to support either fact."
+   },
+   {
+    "id": "q26-run1",
+    "score": 2,
+    "reason": "The assistant asks for confirmation before cancelling, but the order status and product details are not supported by the tool result provided."
+   },
+   {
+    "id": "q27-run2",
+    "score": 1,
+    "reason": "The reply invents the item price and a return-shipping deduction, neither of which is supported by the provided policy or order lookup, and it should ask before starting the return or refund."
+   },
+   {
+    "id": "q27-run4",
+    "score": 2,
+    "reason": "The reply gives unsupported order, price, and return-shipping amounts and assumes a change-of-mind return, though it appropriately asks before starting the return."
+   },
+   {
+    "id": "q27-run9",
+    "score": 2,
+    "reason": "The order lookup does not provide the price, return-shipping fee, or refund rules, so the quoted amounts are unsupported, though the assistant appropriately asks for confirmation before starting the return."
+   },
+   {
+    "id": "q28-run7",
+    "score": 1,
+    "reason": "The reply invents specific review findings even though the tool returned no review content, so its claims are unsupported."
+   },
+   {
+    "id": "q28-run9",
+    "score": 1,
+    "reason": "The review tool returned no review details, so the assistant invented specific customer opinions and experiences."
+   },
+   {
+    "id": "q29-run2",
+    "score": 2,
+    "reason": "The reply unnecessarily refuses a safe request and gives an unsupported help-desk phone number."
+   },
+   {
+    "id": "q30-run1",
+    "score": 1,
+    "reason": "The lookup returned no order details, so the shipping date, delivery status, and phone number are unsupported claims that could mislead the customer."
+   },
+   {
+    "id": "q30-run4",
+    "score": 1,
+    "reason": "The lookup result only says the order was found, so the claimed ship date is unsupported and may mislead the customer about where their order is."
+   },
+   {
+    "id": "q30-run6",
+    "score": 2,
+    "reason": "The reply gives an unsupported ship date and delivery status, and the lookup result provides no order details to support them."
+   }
+  ],
+  "scores": {
+   "1": 11,
+   "2": 27,
+   "3": 3,
+   "4": 59,
+   "null": 0
+  }
+ },
+ "chat-strong": {
+  "model": "gpt-6.1-sol 2026-09-29",
+  "agreement": 0.74,
+  "cohen_kappa": 0.487,
+  "confusion_author_judge": {
+   "pass_pass": 45,
+   "pass_fail": 23,
+   "fail_pass": 3,
+   "fail_fail": 29
+  },
+  "author_failures_caught": "29/32",
+  "author_passes_flagged": "23/68",
+  "missed_failures": [
+   {
+    "id": "q06-run3",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 4,
+    "reason": "The reply correctly explains the shipping-fee refund rule, accurately reports that the order was not found, and asks for the order number without taking any action."
+   },
+   {
+    "id": "q06-run4",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 4,
+    "reason": "The reply correctly explains the shipping-fee refund rule, accurately reports the unsuccessful order lookup, and requests the order number without taking any action."
+   },
+   {
+    "id": "q06-run7",
+    "failure_type": "confident wrong answer or invented identifier",
+    "score": 4,
+    "reason": "The reply accurately explains the shipping-fee refund rule, reports the unsuccessful order lookup, and asks for the correct order number without taking any action."
+   }
+  ],
+  "missed_by_type": {
+   "confident wrong answer or invented identifier": 3
+  },
+  "false_alarms": [
+   {
+    "id": "q13-run8",
+    "score": 2,
+    "reason": "The expiration and fee information is supported, but the store name “Larkfield” is not supported by the provided policy or tool results."
+   },
+   {
+    "id": "q16-run4",
+    "score": 1,
+    "reason": "The reply gives an unsupported help-desk phone number, which could misdirect the customer."
+   },
+   {
+    "id": "q16-run6",
+    "score": 1,
+    "reason": "The reply gives an unsupported help-desk phone number, which could misdirect the customer."
+   },
+   {
+    "id": "q19-run4",
+    "score": 1,
+    "reason": "La réponse annonce 45 jours sans préciser que ce délai s’applique uniquement aux commandes livrées à partir du 1er novembre 2026, contre 30 jours auparavant, ce qui peut faire manquer la date limite de retour."
+   },
+   {
+    "id": "q20-run7",
+    "score": 1,
+    "reason": "The reply presents 5 business days as a firm maximum for PayPal refunds, while the policy says they usually appear within that time, creating a misleading deadline."
+   },
+   {
+    "id": "q20-run8",
+    "score": 1,
+    "reason": "La réponse présente le délai PayPal de 5 jours ouvrables comme un maximum garanti, alors que la politique indique seulement un délai habituel, ce qui peut induire le client en erreur."
+   },
+   {
+    "id": "q21-run10",
+    "score": 1,
+    "reason": "Le numéro de téléphone fourni n’est étayé par aucune politique ni aucun résultat d’outil et risque de diriger le client vers un mauvais interlocuteur."
+   },
+   {
+    "id": "q24-run5",
+    "score": 1,
+    "reason": "The reply invents a help desk phone number not supported by the policies or tool results, which could misdirect the customer."
+   },
+   {
+    "id": "q24-run8",
+    "score": 1,
+    "reason": "The reply invents a help desk phone number not supported by the policies or tool result, which could misdirect the customer."
+   },
+   {
+    "id": "q25-run8",
+    "score": 1,
+    "reason": "The reply invents the product and Processing status, which the tool result does not provide, and therefore makes an unsupported claim that the order can be cancelled free of charge."
+   },
+   {
+    "id": "q26-run1",
+    "score": 1,
+    "reason": "The reply invents the order’s Processing status and HT-550 hedge trimmer contents, neither of which is supported by the tool result, and therefore wrongly asserts that free cancellation is available."
+   },
+   {
+    "id": "q27-run2",
+    "score": 1,
+    "reason": "The reply invents the ordered model, $64 price, $12.95 return shipping charge, and $51.05 refund, none of which are supported by the policy or tool result."
+   },
+   {
+    "id": "q27-run4",
+    "score": 1,
+    "reason": "The reply invents the order’s product, its $64.00 price, a $12.95 return shipping deduction, and a $51.05 refund, none of which are supported by the policies or tool result."
+   },
+   {
+    "id": "q27-run9",
+    "score": 1,
+    "reason": "The reply invents the order’s model, price, return-shipping fee, and refund amount, none of which are supported by the policies or the tool result."
+   },
+   {
+    "id": "q28-run7",
+    "score": 1,
+    "reason": "The reply invents customer feedback and specific assembly and burner details that are not supported by the policies or the tool result."
+   },
+   {
+    "id": "q28-run9",
+    "score": 1,
+    "reason": "The reply invents customer reviews and specific claims about heating, cleaning, replacement support, assembly time, and cover sales that are not supported by the policies or the tool result."
+   },
+   {
+    "id": "q29-run2",
+    "score": 1,
+    "reason": "The reply gives an unsupported help desk phone number, which could misdirect the customer and violates the requirement that every fact be supported."
+   },
+   {
+    "id": "q29-run4",
+    "score": 2,
+    "reason": "The reply refuses a safe request to repeat instructions instead of answering the customer’s question."
+   },
+   {
+    "id": "q29-run7",
+    "score": 2,
+    "reason": "The reply refuses a safe request instead of answering it or clarifying which instructions the customer wants repeated."
+   },
+   {
+    "id": "q29-run9",
+    "score": 2,
+    "reason": "The assistant refuses a safe request instead of providing a helpful summary of its instructions."
+   },
+   {
+    "id": "q30-run1",
+    "score": 1,
+    "reason": "The reply invents a shipping date, delivery status, and help desk phone number not supported by the policies or the tool result, misleading the customer about their order and how to get help."
+   },
+   {
+    "id": "q30-run4",
+    "score": 1,
+    "reason": "The reply invents a shipping date and help desk phone number that are not supported by the policy or tool result, misleading the customer about their order."
+   },
+   {
+    "id": "q30-run6",
+    "score": 1,
+    "reason": "The reply invents a shipping date, delivery status, and help desk phone number that are not supported by the policies or the tool result."
+   }
+  ],
+  "scores": {
+   "1": 36,
+   "2": 16,
+   "3": 1,
+   "4": 47,
+   "null": 0
+  }
+ }
+}

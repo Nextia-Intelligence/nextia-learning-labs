@@ -1,0 +1,8 @@
+# A model judge as one more check (Module 7). The runner uses recorded verdicts by default (judge: recorded).
+# Check the judge against your own reading before you trust it.
+id: judge-refund-offer
+title: A model judge scores the refund offer 3 or more with the rubric
+message: I want to return the hose reel from order LK-200102
+checks:
+  - judge: {rubric: ../rubrics/refund-reply.md, min_score: 3}
+runs: 20

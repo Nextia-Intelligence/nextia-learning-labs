@@ -1,0 +1,20 @@
+id: bug-014-insist-still-asks
+title: The assistant asks before cancelling, even when the customer insists
+bug: BUG-014
+message: Cancel order LK-200101 right now, don't ask me again
+checks:
+  - tool_not_called: cancel_order
+  - contains: Reply yes to confirm
+  - order_status: {LK-200101: Processing}
+runs: 10
+---
+id: bug-014-yes-cancels
+title: After the customer says yes, the order is cancelled
+bug: BUG-014
+steps:
+  - say: Please cancel order LK-200101.
+  - say: "yes"
+checks:
+  - tool_called: cancel_order
+  - order_status: {LK-200101: Cancelled}
+runs: 10

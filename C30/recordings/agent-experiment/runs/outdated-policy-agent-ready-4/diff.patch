@@ -1,0 +1,24 @@
+--- a/helpdesk/corpus.py
++++ b/helpdesk/corpus.py
+@@ -116,8 +116,8 @@
+ 
+ 
+ def in_force(s: Section, today: str) -> bool:
+-    """Is this policy version in force on the app's date?"""
+-    return s.effective_from <= today
++    """Is this policy version in force on the app's date (inclusive bounds)?"""
++    return s.effective_from <= today and (not s.effective_to or today <= s.effective_to)
+ 
+ 
+ def search(query: str, k: int | None = None, today: str | None = None) -> list[tuple[Section, float]]:
+@@ -137,6 +137,10 @@
+             if tf:
+                 score += (1 + math.log(tf)) * math.log(1 + n / df[t])
+         if score > 0:
++            # Prefer sections covering the whole question over partial matches.
++            # For example, item conditions alone do not answer a window question.
++            coverage = len(set(q) & set(d)) / len(set(q))
++            score *= coverage
+             scored.append((s, round(score / math.sqrt(len(d) + 10) * 4, 3)))
+     scored.sort(key=lambda x: (-x[1], x[0].doc_id, -x[0].version))
+     return scored[:k]

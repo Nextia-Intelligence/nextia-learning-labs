@@ -1,0 +1,134 @@
+name: AI behaviour bug
+description: Report a wrong, unsafe or changing behaviour of an AI feature, so that a person or a coding agent can fix it.
+title: "[AI bug] "
+labels: ["bug", "ai-behaviour"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use test accounts only. Do not paste real customer data, keys or passwords.
+        Attach the conversation export and a failing case.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: The behaviour, its impact and how often it happens, in one or two sentences.
+    validations:
+      required: true
+  - type: input
+    id: app_build
+    attributes:
+      label: App build
+      description: Version, commit or folder.
+      placeholder: "2.3.0"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      description: Name and version. Say if it is simulated or a real model.
+      placeholder: "sim-1 (simulated)"
+    validations:
+      required: true
+  - type: input
+    id: prompt_version
+    attributes:
+      label: Prompt or config version
+      placeholder: "support-v8"
+    validations:
+      required: true
+  - type: input
+    id: settings
+    attributes:
+      label: Flags and settings
+      description: Seed, app date, live mode, other settings.
+      placeholder: "seed 6, app date 2026-11-16"
+  - type: input
+    id: account
+    attributes:
+      label: Role or test account
+      placeholder: "C-1001 (test)"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: The exact input, word for word. Attach the conversation export (JSON).
+      placeholder: |
+        1. python3 -m helpdesk reset
+        2. python3 -m helpdesk ask "..." --seed 6
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual
+      description: The output, the trace ID, and the tool calls or retrieved documents from the trace.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected (checkable)
+      description: Rules that two people would check the same way, and what must keep working after the fix.
+      placeholder: |
+        Must: ...
+        Must not: ...
+        Must still: ...
+    validations:
+      required: true
+  - type: input
+    id: reproduction_rate
+    attributes:
+      label: Reproduction rate
+      description: x of y runs, with the seeds or settings.
+      placeholder: "3 of 10 runs (seeds 1-10)"
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Suspected layer (a guess)
+      options:
+        - Retrieval (the documents found)
+        - Prompt or instructions
+        - Model output
+        - Tools, actions or permissions
+        - App code (input, output, errors)
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: layer_reason
+    attributes:
+      label: Why you suspect this layer
+      description: What in the trace or the runs points there.
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      options:
+        - label: The attached failing case passes N/N runs.
+          required: false
+        - label: The existing suite passes.
+          required: false
+        - label: No change to the safety rules, the confirmation rules or the permission checks.
+          required: false
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints for the fixer
+      description: What to touch, and what not to do.
+      value: |
+        Touch only: 
+        Do not: change or delete tests or cases, hard-code answers for the test input, weaken or remove a rule.
+  - type: textarea
+    id: failing_case
+    attributes:
+      label: Failing case
+      description: The QA runner case (YAML) that fails today and must pass after the fix.
+      render: yaml
+    validations:
+      required: true

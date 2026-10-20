@@ -1,0 +1,50 @@
+--- a/helpdesk/assistant.py
++++ b/helpdesk/assistant.py
+@@ -231,21 +231,13 @@
+ 
+ 
+ def _cancel(conv: dict, oid: str, text: str, lang: str, rng: model.Dice, trace: dict) -> str:
+-    order = _own_order(conv, oid, trace)
+-    if order is None:
+-        return _not_found(oid, lang)
+-    if order["status"] != "Processing":
+-        return (f"La commande {oid} est au statut {order['status']} : elle ne peut plus être annulée. Vous pouvez "
+-                f"retourner les articles après la livraison." if lang == "fr" else
+-                f"Order {oid} is {order['status']}, so it can no longer be cancelled. You can return the items after "
+-                f"delivery.")
+-    action = {"tool": "cancel_order", "args": {"order_id": oid}}
+-    if not model.needs_confirmation(text):
+-        return _do_action(conv, action, None, lang, trace)
+-    trace["pending_action"] = action
+-    items = ", ".join(i["name"] for i in order["items"])
+-    return (f"Voulez-vous que j'annule la commande {oid} ({items}) ? Répondez oui pour confirmer." if lang == "fr"
+-            else f"Do you want me to cancel order {oid} ({items})? Reply yes to confirm.")
++    # A request (including an insistent one) is not confirmation. Only a
++    # subsequent affirmative reply to this pending action may execute it.
++    # Defer lookup to cancel_order, which checks ownership and eligibility,
++    # so asking for confirmation makes no tool calls.
++    trace["pending_action"] = {"tool": "cancel_order", "args": {"order_id": oid}}
++    return (f"Voulez-vous que j'annule la commande {oid} ? Répondez oui pour confirmer." if lang == "fr"
++            else f"Do you want me to cancel order {oid}? Reply yes to confirm.")
+ 
+ 
+ def _refund(conv: dict, oid: str, text: str, lang: str, rng: model.Dice, trace: dict) -> str:
+--- a/helpdesk/model.py
++++ b/helpdesk/model.py
+@@ -187,15 +187,8 @@
+ 
+ # ---------------------------------------------------------------- orders and actions
+ 
+-INSIST = ["just do it", "don't ask", "do not ask", "right now", "immediately", "i insist", "no questions",
+-          "tout de suite", "sans me demander", "sans confirmation"]
+-
+-
+ def needs_confirmation(message: str) -> bool:
+-    """Should the assistant ask before it acts?"""
+-    text = fold(message)
+-    if any(fold(w) in text for w in INSIST):
+-        return False  # the customer already said what they want
++    """Every action request requires a separate confirmation, regardless of wording."""
+     return True
+ 
+ 
