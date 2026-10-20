@@ -1,26 +1,21 @@
-# Checking a model judge before trusting it
+# Judge check: the refund offer (cases/judge.yaml)
 
-Recorded (real model). 100 replies of the real assistant (`recordings/judge-set.jsonl`): all 32 replies that the course author labelled as failing in the 300 recorded runs, and 68 passing ones. Two model judges scored each reply 1 to 4 with the same rubric, the policy sections the assistant had, and its tool calls (names and results ok / not found). A score of 3 or 4 counts as pass. Files: `recordings/judge-chat-small.jsonl`, `judge-chat-strong.jsonl`, `judge-summary.json`.
+- App 2.3.0, prompt support-v8, model sim-1 (simulated replies). Judge: recorded verdicts of a real model, with
+  `rubrics/refund-reply.md`, minimum score 3.
+- My labels come from the rubric's first rule: the refund for a change of mind is the item price minus 12.95
+  dollars return shipping. HR-30 hose reel, order LK-200102: 64.00 - 12.95 = 51.05 dollars.
 
-| | chat-small judge | chat-strong judge |
-|---|---|---|
-| Agreement with the author's labels | 82 of 100 | 74 of 100 |
-| Cohen's kappa (agreement beyond chance) | 0.61 | 0.49 |
-| Author's failures that the judge also failed | 26 of 32 | 29 of 32 |
-| Author's passes that the judge failed (false alarms) | 12 of 68 | 23 of 68 |
+| Seeds | Reply (amount) | My verdict | Judge's score | Agree | Why |
+|---|---|---|---|---|---|
+| 1-3, 5-14, 16-20 (18 runs) | 51.05 dollars, asks for a yes | pass | 4 | yes | right amount from the order; asks before it acts |
+| 4, 15 (2 runs) | 79.00 dollars: price + shipping fee + "a 15-dollar goodwill credit" | fail | 1 | yes | invented amount (BUG-001) |
 
-## What the judges missed
-
-- Both judges passed the three replies in which the assistant **looked up an order number that the customer never gave** (`LK-000000`, `LK-1001`): the tool call was in front of them, and they called the reply "transparent".
-- The small judge also passed two replies that start with "No." to "Do you deliver to Nunavut?" (we do; only large items are not delivered there), and one French reply without the "5 à 10 jours" fact.
-
-## Why they raised false alarms
-
-Most false alarms came from what the judge could **not** see: the order details returned by the lookup tool (so the item price looked "invented"), and the help-desk phone number, which is in the assistant's instructions, not in the policy sections. The stronger judge was stricter about this missing evidence, so it caught more failures and raised twice as many false alarms.
+Agreement: 20 of 20. Missed failures: 0. False alarms: 0.
 
 ## Decision
 
-- Use the small judge to **sort** replies for human review, not to approve a release: it finds about 4 in 5 of the failures here.
-- Give the judge the same evidence as the assistant (tool results, the facts in the instructions) before trusting its "fail".
-- Keep a person on every reply that calls a tool with values the customer did not give: neither judge noticed.
-- Check again with your own labels whenever the rubric, the judge model or the app changes. The evaluation course teaches judge calibration in depth.
+For this case, the judge may sort the replies: the rubric states the rule, and the reply shows its calculation, so
+the judge can see a wrong amount without the order data. This is not a general result. In the recorded study of
+100 real-model replies, both judges missed every reply with an invented order number, and raised false alarms when
+they did not see the order data. Check the judge again for every new rubric or new kind of reply. Keep
+`contains: "51.05"` as the main check of the amount: it is cheaper and never wrong about the number.

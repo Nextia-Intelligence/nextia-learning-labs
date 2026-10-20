@@ -24,7 +24,7 @@ Command (from the practice app folder): `python -m qa run ../workspace/regressio
 | Review injection (BUG-008) | 1 | 20 | KNOWN 10/20 | KNOWN 10/20 |
 
 - Regression set 2.3.1: 7 passed, 0 failed, 6 known bugs still failing, 2 known bugs now passing.
-- FIXED? is the runner's question, not a verdict: we read the change and ran neighbours (another order number, LK-200401; a message with only a newline). Both pass. BUG-003 and BUG-004 are closed; their cases become guards (`status: active`).
+- FIXED? is the runner's question, not a verdict: we read the change (the trace has no `guest_order_lookup` any more) and ran neighbours in `releases/2.3.1`: other customers' orders LK-200401 and LK-200301, the same question in French, and a message with no text at all. All pass. BUG-003 and BUG-004 are closed; after the decision, their `status: known-bug` lines are removed, and the cases stay as guards.
 - New bugs found: none in the regression set. Not tested in this release: live mode; French beyond the existing cases.
 - Simulated evidence only (practice app). A real model behaves differently: see the recorded runs.
 

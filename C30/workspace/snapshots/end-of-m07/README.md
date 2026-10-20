@@ -71,4 +71,5 @@ FAIL lines are expected: the practice app has bugs on purpose, and these cases f
 - `rubrics/refund-reply.md`
 - `signoff/release-2.3.1.md`
 - `ui/README.md`
+- `ui/recorded_check.py`
 - `ui/test_chat_ui.py`
