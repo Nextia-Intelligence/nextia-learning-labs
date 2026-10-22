@@ -20,6 +20,7 @@ A short set of measures that shows whether governance helps: are systems known a
 | Inventory coverage | 4 of 8 systems in the registry |
 | Systems without a named accountable owner | 5: S2, S4, S5, S6, S8 |
 | Median time to decision, fast path | 2 working days |
+| Median time to decision, medium tier (owner decides, no board) | 2 working days |
 | Median time to decision, board | 15.5 working days |
 | Median time, low-tier requests sent to the board | 17.5 working days (4 requests, 4 approved with no change) |
 | Requests that were not about AI but went to the board | 1 |

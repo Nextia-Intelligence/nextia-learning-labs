@@ -5,7 +5,7 @@ One row per AI system, including AI features inside tools you buy and AI that no
 | Field | What to write | Why it matters |
 |---|---|---|
 | ID and name | A short ID and the name people use | So that every record points to the same system |
-| Kind | built, bought (an AI feature in a bought tool) or found (nobody registered it) | Bought and found systems need different checks |
+| Kind | built, bought (an AI feature in a bought tool) or unregistered (found, but nobody registered it) | Bought and unregistered systems need different checks |
 | Purpose | What it does, in one sentence | You cannot judge harm without knowing the job |
 | Accountable owner | One named person | Somebody must be able to say yes or no |
 | Technical owner | A named person | Somebody must be able to change or stop it |

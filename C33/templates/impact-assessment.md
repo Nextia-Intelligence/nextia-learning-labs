@@ -1,8 +1,8 @@
 # AI system impact assessment (one page)
 
-This template follows the public outline of ISO/IEC 42005 ([ISO/IEC 42005:2025, AI system impact assessment](https://www.iso.org/standard/42005), checked 22 October 2026), a paid guidance standard. The headings and the questions below are our own words: the standard's text is not copied. Use it for every high-tier system, and for a medium-tier system that affects customers.
+This template follows the public outline of ISO/IEC 42005 ([ISO/IEC 42005:2025, AI system impact assessment](https://www.iso.org/standard/42005), checked 22 October 2026), a paid guidance standard. The headings and the questions below are our own words: the standard's text is not copied. Use it for every high-tier system, and for a medium-tier system that affects customers (the [risk-tier table](risk-tier-table.md) lists it as a control of both tiers).
 
-**When:** before launch, before a major change (new users, new data, more autonomy), and at each review. **Who signs:** the accountable owner; for a high-tier system the governance board reviews it.
+**When:** before launch, before a major change (new users, new data, more autonomy), and at each review. **Who signs:** the accountable owner. For a high-tier system, the governance board reviews it; for a medium-tier system, there is no board review.
 
 ---
 

@@ -50,13 +50,13 @@ Two rules change the result:
 
 ## The controls of each tier
 
-Each tier keeps the controls of the tiers below it.
+Each tier keeps the controls of the tiers below it, except the ones it replaces with its own: a medium or high system has no fast path and no yearly review, and a high system replaces the owner-signed impact assessment with a full one that the board reviews.
 
-| Tier | Controls |
-|---|---|
-| low | Listed in the inventory with a named accountable owner<br>Acceptable-use rules apply<br>Fast path: the owner and the risk lead decide within 2 working days<br>Review once a year |
-| medium | everything in low, and:<br>A system card, kept current<br>A vendor check before buying or switching on<br>An evaluation before each release, with the result in a decision record<br>A person approves every action that affects a customer<br>A change log<br>Review every 6 months |
-| high | everything in low and medium, and:<br>An impact assessment, signed by the accountable owner and reviewed by the board<br>A release gate with written thresholds<br>Monitoring with pause conditions, and an incident plan<br>A privacy or legal review where personal data or the law is involved<br>Review every 3 months |
+| Tier | Controls | Number |
+|---|---|---|
+| low | Listed in the inventory with a named accountable owner<br>Acceptable-use rules apply<br>Fast path: the owner and the risk lead decide within 2 working days<br>Review once a year | 4 |
+| medium | the low controls without: Fast path: the owner and the risk lead decide within 2 working days; Review once a year<br>and:<br>A system card, kept current<br>A vendor check before buying or switching on<br>An evaluation before each release, with the result in a decision record<br>A person approves every action that affects a customer<br>A change log<br>If it affects customers: an impact assessment, signed by the accountable owner (no board review)<br>Review every 6 months | 9 |
+| high | the medium controls without: If it affects customers: an impact assessment, signed by the accountable owner (no board review); Review every 6 months<br>and:<br>A full impact assessment, signed by the accountable owner and reviewed by the board<br>A release gate with written thresholds<br>Monitoring with pause conditions, and an incident plan<br>A privacy or legal review where personal data or the law is involved<br>Review every 3 months | 12 |
 
 ## Worked example: Document assistant
 
