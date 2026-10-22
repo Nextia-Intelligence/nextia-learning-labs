@@ -2,8 +2,8 @@
 
 The project of the course *Governing AI Agents: Gateways, Registries and Controls* (Nextia Learning). Larkfield's
 AI estate on its way under governance: apps ask for a **capability** instead of a model, every agent
-is **registered** with its own identity, and a **model gateway** and a **tool gateway** check, limit and record every
-call.
+is **registered** with its own identity, and every call passes a **model gateway** or a **tool gateway**
+that checks, limits and records it.
 
 You need no account and no key. The models' answers are **real recordings** of earlier courses, replayed by a
 **provider simulator** on your computer. Outages, slow answers and the network's egress log are **simulated**,
@@ -77,6 +77,16 @@ Stop and reset:
 python -m estate down
 python -m estate reset          # deletes state/: the registry, the keys, the usage records, the practice database
 ```
+
+The month's evidence and the search for unregistered AI:
+
+```sh
+python -m estate usage --by team
+python -m estate report --month 2026-10
+python -m estate discover --bill evidence/azure-bill-2026-09.csv --bill evidence/fernway-expense-2026-09.csv --egress evidence/egress-2026-09.csv --scan apps
+```
+
+`evidence/estate-report-2026-09.md` is the report of the replayed month.
 
 ## Commands
 

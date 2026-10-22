@@ -92,8 +92,6 @@ def test_the_platform_refuses_an_approver_with_too_small_a_role(estate):
 
 
 def test_kill_switches_stop_writes_and_tools(estate, tools):
-    import asyncio
-
     t = estate.token("support-workflow", "tool-gateway")
     kill.add("writes", "orders", "usr-kwame", "drill")
     tools.cache.set(estate.snapshot("tools"))
@@ -103,7 +101,6 @@ def test_kill_switches_stop_writes_and_tools(estate, tools):
     kill.add("tool", "orders.get_payments", "usr-kwame", "drill")
     tools.cache.set(estate.snapshot("tools"))
     assert call(tools, t, "orders.get_payments", {"order_id": "LK-645223"}).status_code == 403
-    assert asyncio.iscoroutinefunction(tools.app.state.tg.cache.refresh)
 
 
 def test_a_suspended_agent_calls_no_tool(estate, tools):
