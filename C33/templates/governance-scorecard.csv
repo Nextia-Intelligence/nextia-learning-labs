@@ -1,0 +1,13 @@
+measure,value,good_sign,warning_sign
+inventory_coverage,4 of 8,rising to all,bought and found systems missing
+systems_without_named_owner,5,0,a team or a role instead of a name
+median_days_fast_path,2,days,
+median_days_board,15.5,,
+median_days_low_tier_at_board,17.5,,as long as high tier
+decisions_not_plain_yes,3 of 11,some,0
+overdue_reviews,1,0,growing
+open_risks,9,falling,
+open_risks_without_owner,3,0,any
+exceptions_open,4,few,
+exceptions_past_end,2,0,any
+staff_trained_share,0.42,rising,low while use grows
