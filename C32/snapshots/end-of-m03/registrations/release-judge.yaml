@@ -1,0 +1,18 @@
+id: release-judge
+name: Release judge
+kind: app
+owner: usr-priya
+team: evaluation
+purpose: Scores the support assistant's replies against reference notes before a release (a model judge).
+users: Priya and the release reviewers read the scores; a person makes the release decision.
+from: the evaluation course (the reference judge)
+risk_tier: medium
+data_classes: [personal]
+capabilities: [strong-reasoning]
+tools: []
+autonomy: suggests
+budget_usd_month: 8
+limits: {requests_per_minute: 120, tokens_per_day: 2000000, max_calls_per_run: 1}
+evaluations:
+  strong-reasoning: {evaluation: "evaluation course, agreement with the code checks (dev, bad or not)", measure: agreement, minimum: 0.9}
+review_date: 2026-10-01

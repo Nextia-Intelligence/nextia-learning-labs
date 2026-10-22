@@ -1,0 +1,26 @@
+# Approval policy (owner: Grace; reviewed by Kwame). Code enforces it outside the model: the tool gateway
+# refuses a write that needs an approval without a valid approval grant, whatever the model or the app says.
+# Rules are read from the top: the first rule that matches an action decides.
+version: 1
+roles: [support_agent, team_lead, support_lead]   # from the lowest; a role may approve what the roles below it may
+reads: allow                                       # reads need no approval (the registration's tool list still applies)
+rules:
+  - id: refund-up-to-100
+    match: {tool: orders.request_refund, amount_at_most: 100}
+    approve_by: support_agent
+  - id: refund-up-to-500
+    match: {tool: orders.request_refund, amount_at_most: 500}
+    approve_by: team_lead
+  - id: refund-over-500
+    match: {tool: orders.request_refund}
+    approve_by: support_lead
+  - id: labels-and-reships
+    match: {tool: [orders.create_return_label, orders.reship_item]}
+    approve_by: support_agent
+  - id: ticket-notes
+    match: {tool: orders.add_ticket_note}
+    approve_by: none                               # a note changes nothing for the customer
+  - id: refund-proposals
+    match: {tool: support.propose_refund}
+    approve_by: none                               # the MCP server only records a proposal; a person approves it there
+default: deny                                      # a write that no rule names is refused

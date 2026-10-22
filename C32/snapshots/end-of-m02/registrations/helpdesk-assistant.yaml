@@ -1,0 +1,10 @@
+# A draft registration (the capability catalog's module): who uses which capability, and which
+# evaluation shows that a model is good enough for it. The registration module completes the form.
+status: draft
+id: helpdesk-assistant
+name: Help-desk assistant
+owner: usr-amira
+team: service
+from: the MCP course (its host)
+capabilities:
+- fast-small
