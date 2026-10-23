@@ -1,0 +1,10 @@
+# Grafana loads the support workflow's dashboards from these files at start (compose.yaml mounts them).
+apiVersion: 1
+providers:
+  - name: "Support workflow"
+    folder: "Support workflow"
+    type: file
+    disableDeletion: true
+    allowUiUpdates: false
+    options:
+      path: /otel-lgtm/support-workflow-dashboards

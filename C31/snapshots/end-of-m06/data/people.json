@@ -1,0 +1,9 @@
+{
+  "about": "Larkfield's staff in the practice data (made up). Telemetry and the audit trail carry the staff ID only.",
+  "people": {
+    "usr-sam": {"name": "Sam", "role": "agent", "title": "support agent", "refund_limit": 100},
+    "usr-camille": {"name": "Camille", "role": "team_lead", "title": "team lead", "refund_limit": 500},
+    "usr-grace": {"name": "Grace", "role": "grace", "title": "support lead", "refund_limit": null},
+    "usr-amira": {"name": "Amira", "role": "agent", "title": "developer (practice approvals)", "refund_limit": 100}
+  }
+}

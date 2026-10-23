@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling==1.32.4"]
+build-backend = "hatchling.build"
+
+[project]
+name = "larkfield-inspector"
+version = "1.0.0"
+description = "A small read-only view of AI agent runs from OpenTelemetry data and an audit trail: runs, one run, audit story, cost, compare."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+dependencies = []   # standard library only
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+larkfield-inspector = "larkfield_inspector.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["larkfield_inspector"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"web/dist" = "larkfield_inspector/static"
+
+[tool.hatch.build.targets.sdist]
+include = ["larkfield_inspector", "web/dist", "web/src", "web/index.html", "web/package.json", "web/package-lock.json",
+           "web/tsconfig.json", "web/vite.config.ts", "tests", "sync.py", "README.md", "LICENSE", "Dockerfile"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

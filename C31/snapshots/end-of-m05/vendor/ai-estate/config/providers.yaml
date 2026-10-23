@@ -1,0 +1,22 @@
+# The providers the platform may call (owner: Kwame). Only the gateway holds their keys (state/secrets.json,
+# written by `python -m estate init`). A provider that is not listed here is never called: Fernway is not here.
+# {provsim} is the provider simulator's address (PROVSIM_URL, default http://127.0.0.1:8320).
+providers:
+  azure:
+    base_url: "{provsim}/azure/v1"
+    key: azure
+    region: East US 2
+    contract: "Larkfield's Azure subscription, with a data processing agreement (assumption: it covers personal data)"
+    data_classes: [public, internal, personal]
+  azure-canada:
+    base_url: "{provsim}/azure-canada/v1"
+    key: azure
+    region: Canada East (simulated second region)
+    contract: "the same subscription, another region (simulated: it answers with the same recordings)"
+    data_classes: [public, internal, personal]
+  local:
+    base_url: "{provsim}/local/v1"
+    key: null
+    region: Larkfield's own hardware
+    contract: "none needed: the data does not leave Larkfield"
+    data_classes: [public, internal, personal]

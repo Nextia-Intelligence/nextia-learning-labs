@@ -1,0 +1,1436 @@
+{
+ "batches": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "telemetry.sdk.language",
+      "value": {
+       "stringValue": "python"
+      }
+     },
+     {
+      "key": "telemetry.sdk.name",
+      "value": {
+       "stringValue": "opentelemetry"
+      }
+     },
+     {
+      "key": "telemetry.sdk.version",
+      "value": {
+       "stringValue": "1.45.1"
+      }
+     },
+     {
+      "key": "service.instance.id",
+      "value": {
+       "stringValue": "7451f7ff-f93f-4356-8e97-eec744d73d15"
+      }
+     },
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "support-workflow"
+      }
+     },
+     {
+      "key": "service.version",
+      "value": {
+       "stringValue": "2.0.0"
+      }
+     },
+     {
+      "key": "deployment.environment.name",
+      "value": {
+       "stringValue": "practice"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "larkfield.support-workflow",
+      "version": "2.0.0"
+     },
+     "spans": [
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "A3H1GML16uA=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336500000000000",
+       "endTimeUnixNano": "1792336501681000000",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "1"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "1898"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "45"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.681
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "get_order(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "2d75DleoyWA=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "execute_tool get_order",
+       "kind": 1,
+       "startTimeUnixNano": "1792336501681000000",
+       "endTimeUnixNano": "1792336501681524499",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "get_order"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "read"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "order_id"
+         }
+        },
+        {
+         "key": "larkfield.order.id",
+         "value": {
+          "stringValue": "LK-645112"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "P1CXlNKaqwg=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336501681524499",
+       "endTimeUnixNano": "1792336503668524499",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "2"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2231"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "41"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.987
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "get_payments(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "Z3fQH6hgkzQ=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "execute_tool get_payments",
+       "kind": 1,
+       "startTimeUnixNano": "1792336503668524499",
+       "endTimeUnixNano": "1792336503868837207",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "get_payments"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "read"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "order_id"
+         }
+        },
+        {
+         "key": "larkfield.order.id",
+         "value": {
+          "stringValue": "LK-645112"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "service_unavailable"
+         }
+        },
+        {
+         "key": "error.type",
+         "value": {
+          "stringValue": "service_unavailable"
+         }
+        }
+       ],
+       "status": {
+        "message": "service_unavailable",
+        "code": 2
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "CvuWbnXLpOU=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336503868837207",
+       "endTimeUnixNano": "1792336505369837207",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "3"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2322"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "42"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.501
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "finish(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "bV1qcnl2wJ8=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336505369837207",
+       "endTimeUnixNano": "1792336507057837207",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "4"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2412"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "47"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.688
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "search_policy(order_id,query)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "11p+fYVjhg4=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "execute_tool search_policy",
+       "kind": 1,
+       "startTimeUnixNano": "1792336507057837207",
+       "endTimeUnixNano": "1792336507058187956",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "search_policy"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "read"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "query"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "uJu7IJST6+k=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336507058187956",
+       "endTimeUnixNano": "1792336509133187956",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "5"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2768"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "42"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 2.075
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "finish(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "OyVZ6bQBZjY=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336509133187956",
+       "endTimeUnixNano": "1792336515358187956",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "6"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2858"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "195"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 6.225
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "finish(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "HbDvl88BgHU=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "chat gemma3:4b",
+       "kind": 3,
+       "startTimeUnixNano": "1792336515358187956",
+       "endTimeUnixNano": "1792336519715187956",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "ollama"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "7"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "39329efa"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "json"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "3093"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "130"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "stop"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 4.357
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "finish(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "ScVBnlNMa2E=",
+       "parentSpanId": "SR2O0+jBWcs=",
+       "name": "execute_tool send_reply",
+       "kind": 1,
+       "startTimeUnixNano": "1792336519715187956",
+       "endTimeUnixNano": "1792336519716011248",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "send_reply"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "write"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "ticket_id"
+         }
+        },
+        {
+         "key": "larkfield.reply.status",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "v1uUGAE4hljqo2zwu6MhMw==",
+       "spanId": "SR2O0+jBWcs=",
+       "name": "invoke_agent support-resolver",
+       "kind": 1,
+       "startTimeUnixNano": "1792336500000000000",
+       "endTimeUnixNano": "1792336519716011248",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-resolver"
+         }
+        },
+        {
+         "key": "gen_ai.agent.id",
+         "value": {
+          "stringValue": "support-workflow"
+         }
+        },
+        {
+         "key": "gen_ai.agent.version",
+         "value": {
+          "stringValue": "2.0.0"
+         }
+        },
+        {
+         "key": "gen_ai.workflow.name",
+         "value": {
+          "stringValue": "support-resolution"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "gemma3:4b"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "larkfield.customer.id",
+         "value": {
+          "stringValue": "C-55112"
+         }
+        },
+        {
+         "key": "larkfield.ticket.language",
+         "value": {
+          "stringValue": "en"
+         }
+        },
+        {
+         "key": "larkfield.design",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "larkfield.release",
+         "value": {
+          "stringValue": "2.1.1"
+         }
+        },
+        {
+         "key": "larkfield.proposal.outcome",
+         "value": {
+          "stringValue": "reply_only"
+         }
+        },
+        {
+         "key": "larkfield.proposal.rule",
+         "value": {
+          "stringValue": "double charge"
+         }
+        },
+        {
+         "key": "larkfield.proposal.actions",
+         "value": {
+          "intValue": "0"
+         }
+        },
+        {
+         "key": "larkfield.stop_reason",
+         "value": {
+          "stringValue": "finished"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "7"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "17582"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "542"
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.model_calls",
+         "value": {
+          "intValue": "7"
+         }
+        },
+        {
+         "key": "larkfield.tool_calls",
+         "value": {
+          "intValue": "3"
+         }
+        },
+        {
+         "key": "larkfield.status",
+         "value": {
+          "stringValue": "done"
+         }
+        },
+        {
+         "key": "larkfield.run.id",
+         "value": {
+          "stringValue": "R-1018-010"
+         }
+        },
+        {
+         "key": "larkfield.ticket.id",
+         "value": {
+          "stringValue": "T-90602"
+         }
+        },
+        {
+         "key": "larkfield.outcome",
+         "value": {
+          "stringValue": "resolved"
+         }
+        },
+        {
+         "key": "larkfield.writes_done",
+         "value": {
+          "intValue": "0"
+         }
+        },
+        {
+         "key": "larkfield.reply",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.helpdesk.status",
+         "value": {
+          "stringValue": "resolved"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

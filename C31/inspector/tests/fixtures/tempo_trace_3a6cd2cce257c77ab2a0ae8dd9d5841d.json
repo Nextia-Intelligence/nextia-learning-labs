@@ -1,0 +1,639 @@
+{
+ "batches": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "telemetry.sdk.language",
+      "value": {
+       "stringValue": "python"
+      }
+     },
+     {
+      "key": "telemetry.sdk.name",
+      "value": {
+       "stringValue": "opentelemetry"
+      }
+     },
+     {
+      "key": "telemetry.sdk.version",
+      "value": {
+       "stringValue": "1.45.1"
+      }
+     },
+     {
+      "key": "service.instance.id",
+      "value": {
+       "stringValue": "7451f7ff-f93f-4356-8e97-eec744d73d15"
+      }
+     },
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "support-workflow"
+      }
+     },
+     {
+      "key": "service.version",
+      "value": {
+       "stringValue": "2.0.0"
+      }
+     },
+     {
+      "key": "deployment.environment.name",
+      "value": {
+       "stringValue": "practice"
+      }
+     }
+    ]
+   },
+   "scopeSpans": [
+    {
+     "scope": {
+      "name": "larkfield.support-workflow",
+      "version": "2.0.0"
+     },
+     "spans": [
+      {
+       "traceId": "OmzSzOJXx3qyoK6N2dWEHQ==",
+       "spanId": "lbjf9peTXy4=",
+       "parentSpanId": "gojEG40rsN8=",
+       "name": "chat chat-small",
+       "kind": 3,
+       "startTimeUnixNano": "1791833497000000000",
+       "endTimeUnixNano": "1791833498050000000",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "azure.ai.openai"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "chat-small"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "1"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "d6c784d1"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "text"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1012-034"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gpt-6-luna-2026-09-22"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2163"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "21"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "tool_calls"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0002268
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.05
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "get_order(order_id)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "OmzSzOJXx3qyoK6N2dWEHQ==",
+       "spanId": "LYvlecRdqtY=",
+       "parentSpanId": "gojEG40rsN8=",
+       "name": "execute_tool get_order",
+       "kind": 1,
+       "startTimeUnixNano": "1791833498050000000",
+       "endTimeUnixNano": "1791833498050528790",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "get_order"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "read"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "order_id"
+         }
+        },
+        {
+         "key": "larkfield.order.id",
+         "value": {
+          "stringValue": "LK-793996"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "OmzSzOJXx3qyoK6N2dWEHQ==",
+       "spanId": "I+XK3kOHRA4=",
+       "parentSpanId": "gojEG40rsN8=",
+       "name": "chat chat-small",
+       "kind": 3,
+       "startTimeUnixNano": "1791833498050528790",
+       "endTimeUnixNano": "1791833499996528790",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "chat"
+         }
+        },
+        {
+         "key": "gen_ai.provider.name",
+         "value": {
+          "stringValue": "azure.ai.openai"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "chat-small"
+         }
+        },
+        {
+         "key": "gen_ai.request.max_tokens",
+         "value": {
+          "intValue": "2000"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "2"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.name",
+         "value": {
+          "stringValue": "agent"
+         }
+        },
+        {
+         "key": "gen_ai.prompt.version",
+         "value": {
+          "stringValue": "d6c784d1"
+         }
+        },
+        {
+         "key": "gen_ai.output.type",
+         "value": {
+          "stringValue": "text"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1012-034"
+         }
+        },
+        {
+         "key": "gen_ai.response.model",
+         "value": {
+          "stringValue": "gpt-6-luna-2026-09-22"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "2402"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "158"
+         }
+        },
+        {
+         "key": "gen_ai.response.finish_reasons",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "tool_calls"
+            }
+           ]
+          }
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.0003192
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.replay",
+         "value": {
+          "stringValue": "exact"
+         }
+        },
+        {
+         "key": "larkfield.recorded_latency_s",
+         "value": {
+          "doubleValue": 1.946
+         }
+        },
+        {
+         "key": "larkfield.model.requested",
+         "value": {
+          "arrayValue": {
+           "values": [
+            {
+             "stringValue": "finish(actions,outcome,reason,reply,rule)"
+            }
+           ]
+          }
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "OmzSzOJXx3qyoK6N2dWEHQ==",
+       "spanId": "Td8duYt//yk=",
+       "parentSpanId": "gojEG40rsN8=",
+       "name": "execute_tool send_reply",
+       "kind": 1,
+       "startTimeUnixNano": "1791833499996528790",
+       "endTimeUnixNano": "1791833499997275748",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "send_reply"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "write"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "ticket_id"
+         }
+        },
+        {
+         "key": "larkfield.reply.status",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "OmzSzOJXx3qyoK6N2dWEHQ==",
+       "spanId": "gojEG40rsN8=",
+       "name": "invoke_agent support-resolver",
+       "kind": 1,
+       "startTimeUnixNano": "1791833497000000000",
+       "endTimeUnixNano": "1791833499997275748",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "invoke_agent"
+         }
+        },
+        {
+         "key": "gen_ai.agent.name",
+         "value": {
+          "stringValue": "support-resolver"
+         }
+        },
+        {
+         "key": "gen_ai.agent.id",
+         "value": {
+          "stringValue": "support-workflow"
+         }
+        },
+        {
+         "key": "gen_ai.agent.version",
+         "value": {
+          "stringValue": "2.0.0"
+         }
+        },
+        {
+         "key": "gen_ai.workflow.name",
+         "value": {
+          "stringValue": "support-resolution"
+         }
+        },
+        {
+         "key": "gen_ai.request.model",
+         "value": {
+          "stringValue": "chat-small"
+         }
+        },
+        {
+         "key": "gen_ai.conversation.id",
+         "value": {
+          "stringValue": "R-1012-034"
+         }
+        },
+        {
+         "key": "larkfield.customer.id",
+         "value": {
+          "stringValue": "C-61975"
+         }
+        },
+        {
+         "key": "larkfield.ticket.language",
+         "value": {
+          "stringValue": "en"
+         }
+        },
+        {
+         "key": "larkfield.design",
+         "value": {
+          "stringValue": "agent"
+         }
+        },
+        {
+         "key": "larkfield.release",
+         "value": {
+          "stringValue": "2.0.0"
+         }
+        },
+        {
+         "key": "larkfield.proposal.outcome",
+         "value": {
+          "stringValue": "ask_customer"
+         }
+        },
+        {
+         "key": "larkfield.proposal.rule",
+         "value": {
+          "stringValue": "W3"
+         }
+        },
+        {
+         "key": "larkfield.proposal.actions",
+         "value": {
+          "intValue": "0"
+         }
+        },
+        {
+         "key": "larkfield.stop_reason",
+         "value": {
+          "stringValue": "finished"
+         }
+        },
+        {
+         "key": "larkfield.step",
+         "value": {
+          "intValue": "2"
+         }
+        },
+        {
+         "key": "gen_ai.usage.input_tokens",
+         "value": {
+          "intValue": "4565"
+         }
+        },
+        {
+         "key": "gen_ai.usage.output_tokens",
+         "value": {
+          "intValue": "179"
+         }
+        },
+        {
+         "key": "larkfield.cost.usd",
+         "value": {
+          "doubleValue": 0.000546
+         }
+        },
+        {
+         "key": "larkfield.price_table",
+         "value": {
+          "stringValue": "2026-10-08"
+         }
+        },
+        {
+         "key": "larkfield.model_calls",
+         "value": {
+          "intValue": "2"
+         }
+        },
+        {
+         "key": "larkfield.tool_calls",
+         "value": {
+          "intValue": "1"
+         }
+        },
+        {
+         "key": "larkfield.status",
+         "value": {
+          "stringValue": "done"
+         }
+        },
+        {
+         "key": "larkfield.run.id",
+         "value": {
+          "stringValue": "R-1012-034"
+         }
+        },
+        {
+         "key": "larkfield.ticket.id",
+         "value": {
+          "stringValue": "T-90104"
+         }
+        },
+        {
+         "key": "larkfield.outcome",
+         "value": {
+          "stringValue": "asked_customer"
+         }
+        },
+        {
+         "key": "larkfield.writes_done",
+         "value": {
+          "intValue": "0"
+         }
+        },
+        {
+         "key": "larkfield.reply",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.helpdesk.status",
+         "value": {
+          "stringValue": "waiting_customer"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

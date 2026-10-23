@@ -1,0 +1,23 @@
+id: support-mcp
+name: Support MCP server
+kind: tool-server
+owner: usr-kwame
+team: platform
+purpose: Gives agents the support knowledge (policies, tickets) and one mock write, propose_refund, through the tool gateway.
+users: Registered agents, through the tool gateway only.
+from: the MCP course (support-mcp)
+risk_tier: high
+data_classes: [personal]
+capabilities: []
+tools: [support.search_knowledge, support.get_ticket, support.propose_refund]
+autonomy: acts-with-approval
+budget_usd_month: 0
+limits: {requests_per_minute: 0, tokens_per_day: 0, max_calls_per_run: 0}
+review_date: 2026-12-01
+long_form:
+  impact: propose_refund records a refund proposal; a person approves it in the server's own approvals command.
+  human_oversight: The server's approval (an owner of the organisation, never the proposer).
+  failure_mode: fail_closed
+  incident_contact: usr-kwame
+  data_retention: Proposals in .support/state.db.
+  kill_switch_tested: null

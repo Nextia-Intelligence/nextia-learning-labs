@@ -1,0 +1,35 @@
+# Registration (long form: high risk). python -m estate register registrations/support-workflow.yaml
+id: support-workflow
+name: Support-resolution workflow
+kind: agent
+owner: usr-amira
+team: service
+purpose: Resolves common support tickets - looks up the order and the policy, proposes a refund, a return label or a reship, and waits for a person's approval before any change.
+users: Support agents approve its proposals. Customers get the reply after the team's check.
+from: the agents course (the resolution workflow)
+risk_tier: high
+data_classes: [personal]
+capabilities: [strong-reasoning, fast-small]
+tools:
+  - orders.get_order
+  - orders.get_customer_orders
+  - orders.get_payments
+  - orders.search_policy
+  - orders.get_operation
+  - orders.create_return_label
+  - orders.reship_item
+  - orders.request_refund
+  - orders.add_ticket_note
+autonomy: acts-with-approval
+budget_usd_month: 25
+limits: {requests_per_minute: 120, tokens_per_day: 2000000, max_calls_per_run: 8}
+evaluations:
+  strong-reasoning: {evaluation: "agents course, 70 resolution tasks", measure: task_success, minimum: 0.95}
+review_date: 2026-12-01
+long_form:
+  impact: A wrong proposal that a person approves moves money or goods (a refund, a reship).
+  human_oversight: Every write needs an approval grant from a person allowed by config/policy/approvals.yaml.
+  failure_mode: fail_closed
+  incident_contact: usr-amira
+  data_retention: The gateway keeps no prompt text. The workflow keeps its runs in work/runs.sqlite for 30 days.
+  kill_switch_tested: null
