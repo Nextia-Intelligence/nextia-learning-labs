@@ -13,9 +13,9 @@ You are Farida. The governance board asks for training material: "Write the impa
 The one-page [impact assessment](../../templates/impact-assessment.md) for the grading model, as if written before results day, with:
 
 1. The people affected and how: students, schools and colleges, universities and employers who use grades. Which groups were more exposed?
-2. The benefits and the harms, with the evidence that existed before results day (the interim report was published on 13 August 2020).
+2. The benefits and the harms, with the evidence that existed before results day. The interim report was published on results day (13 August 2020), but its results tables use data from "around a week before results were issued", and its tests of the model were done on 2019 students. Give the error for one student, not only the averages.
 3. Fairness, rights and redress: how a student could find out why, appeal and get a correct grade, and how fast.
-4. The controls, and the condition that should have stopped the launch.
+4. The controls, and two stop lines written before the results (one on people, one on groups), checked against the data that existed a week before results day.
 5. What the assessment cannot know without testing on real results.
 
 ## Make it a portfolio piece
