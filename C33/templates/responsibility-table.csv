@@ -1,0 +1,12 @@
+system,decision,accountable,approves,does,consulted,informed
+S3,"Launch, or a major change",Mei,Mei,data team,"Farida; Kwame",support team leads
+S3,Add or remove documents,Mei,data team lead,data team,Grace,staff who use it
+S3,Change the model or the prompt,Mei,Mei,data team,Farida,staff who use it
+S3,A wrong answer reached a customer,Mei,,data team,Grace,Farida
+S3,Review the system,Mei,,data team,Farida,governance board
+,"Launch, or a major change",,,,,
+,Approve an action that affects a customer,,,,,
+,Change the model or the prompt,,,,,
+,Handle an incident,,,,,
+,Answer a complaint,,,,,
+,Review the system,,,,,

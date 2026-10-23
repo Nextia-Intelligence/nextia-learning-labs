@@ -1,0 +1,39 @@
+dataset_id,tool_version,impact_level,automation,names_executive,peer_review,personal_info,personal_points,raw_score,raw_label
+cea9985f-5e0f-425e-9b7e-e1d122272c56,0.8,2,not asked,no,required,no,0,39,Raw Impact Score
+f77faef4-27d8-4929-929e-bfb1371affde,1.0.1,2,partial,yes,required,yes,2,45,Raw Impact Score
+d41f9ec2-bf01-4b2a-bd8d-1b3a8424f534,0.9.1,2,not asked,no,required,yes,4,43,Raw Impact Score
+daa9ca66-566f-4c2e-a285-d2e217c2a00f,0.10.0,1,partial,no,none,yes,4,37,Raw Impact Score
+afc17416-3781-422d-a4a9-cc55e3a053c8,0.9,2,not asked,no,required,yes,4,47,Raw Impact Score
+6cba99b1-ea2c-4f8a-b954-3843ecd3a7f0,0.9.1,2,not asked,no,required,yes,4,40,Raw Impact Score
+01396e33-2c69-47e5-9381-32e717943b96,0.10.0,2,not asked,no,required,yes,4,41,Raw Impact Score
+9addf54a-7148-459f-b785-0e240414ef7f,0.9.1,2,not asked,no,required,yes,4,48,Raw Impact Score
+f028d40f-3c0e-4a36-8a38-fe18d7aaaa32,0.9.1,1,not asked,no,none,yes,4,28,Raw Impact Score
+b92cbf7b-3b1c-4b02-a219-ce5b9bdb030d,0.9.1,2,not asked,no,required,yes,4,42,Raw Impact Score
+ad4be3b8-ac97-4dc1-8dd8-231239d018f2,0.9.1,2,not asked,no,required,yes,4,49,Raw Impact Score
+240f1dbc-a3b5-46b1-9b5f-d0d3cbec9378,0.10.0,2,partial,no,required,yes,4,34,Raw Impact Score
+24d2cab2-6a0d-4234-9239-b6ce102ebabd,0.9.1,2,not asked,no,required,yes,4,27,Raw Impact Score
+04556b29-284a-4d2b-8076-928476d64553,0.10.0,2,partial,no,required,yes,4,52,Raw Impact Score
+aafdfbcd-1cdb-4913-84d5-a03df727680c,0.10.0,2,not asked,no,required,yes,4,55,Raw Impact Score
+b4a417f7-5040-4328-9863-bb8bbb8568c3,0.10.0,2,partial,no,required,yes,4,36,Raw Impact Score
+52b8574d-5c95-463b-b375-8edd092cea30,0.10.0,1,partial,no,none,no,0,33,Raw Impact Score
+c088f841-2d79-4c7e-9281-cc65cbae1b06,0.10.0,2,partial,no,required,yes,4,49,Raw Impact Score
+89898244-aaae-4591-ba9b-fe5cd81d5924,0.10.0,2,partial,no,required,no,0,39,Raw Impact Score
+6b429c8e-ee5b-451a-883f-b6180ada9286,0.10.0,1,partial,no,none,yes,4,30,Raw Impact Score
+061ee9d1-a04a-4590-a381-df8527390f68,0.10.0,2,partial,no,required,yes,4,54,Raw Impact Score
+f95dbd40-1236-428c-acd1-25b7559686be,0.10.0,2,partial,no,required,yes,4,52,Raw Impact Score
+eaeb269c-6ac5-4429-a5aa-1fcc07c77933,0.10.0,2,partial,no,required,yes,4,63,Raw Impact Score
+123aefbb-c9cb-4243-9be3-7f901daf13f7,0.10.0,1,partial,no,none,yes,4,31,Raw Impact Score
+7612202f-1530-41ce-80c7-6e121f5fcadc,0.10.0,1,partial,no,none,no,0,28,Raw Impact Score
+71b309a0-efd2-4e85-8124-37e935c23aef,0.10.0,1,partial,no,none,yes,4,27,Raw Impact Score
+d24ae2dd-8399-4b49-8441-3e0318aaf69a,0.10.0,1,partial,no,none,yes,4,28,Raw Impact Score
+b3dc23b6-8c06-4c45-bc65-4cb4ec30bf80,0.10.0,1,partial,no,none,yes,4,30,Raw Impact Score
+1257e5c1-243f-4ab8-be42-e7433c8ebe70,0.10.0,2,partial,no,required,yes,4,42,Raw Impact Score
+d5b89acc-5f2a-435d-b8f5-18002ba24c2a,0.10.0,1,full,no,none,no,0,25,Raw Impact Score
+92d7bc61-3724-44cd-9917-e2bf75023d4e,0.10.0,1,partial,no,none,no,0,28,Raw Score
+94d9dd91-803a-458c-a381-db6a22c9571a,0.10.0,1,full,no,none,yes,4,37,Raw Score
+380f8da2-a18e-4747-a29f-7775450b7283,0.10.0,1,partial,no,none,yes,4,30,Raw Score
+eed746a8-a682-47c2-86b1-b427398fa2e2,0.10.0,1,partial,no,none,yes,4,30,Raw Impact Score
+452e10be-383d-4d7a-9c7d-6484dc366a4a,1.0.1,2,partial,yes,required,yes,2,58,Raw Impact Score
+44fe9b0d-d730-43cf-ba7e-d952d55f88f2,0.10.0,1,partial,no,none,yes,4,33,Raw Impact Score
+c839bedc-0d5f-4b02-98a7-671d1f60ac51,1.0.1,2,partial,yes,required,yes,2,56,Raw Impact Score
+b8a34d1b-d27f-4506-973c-d2ea2f68c623,0.10.0,2,partial,no,required,no,4,45,Raw Impact Score
