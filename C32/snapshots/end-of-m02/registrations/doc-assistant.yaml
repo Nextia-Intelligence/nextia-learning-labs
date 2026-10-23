@@ -1,0 +1,15 @@
+# A draft registration (the capability catalog's module): who uses which capability, and which
+# evaluation shows that a model is good enough for it. The registration module completes the form.
+status: draft
+id: doc-assistant
+name: Document assistant
+owner: usr-mei
+team: data
+from: the capstone course (doc-assistant)
+capabilities:
+- fast-small
+evaluations:
+  fast-small:
+    evaluation: capstone course, held-out questions
+    measure: answer_criteria
+    minimum: 0.8

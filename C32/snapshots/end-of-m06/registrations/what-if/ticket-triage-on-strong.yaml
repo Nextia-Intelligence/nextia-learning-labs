@@ -1,0 +1,20 @@
+# A CONSTRUCTED "what if" consumer for the remap gate (python -m estate remap gate ... --also this file):
+# the triage service as if its team had registered it for strong-reasoning. It is not part of the estate.
+# Its evaluation answers are real: the evaluation course recorded the same triage requests on both models.
+id: ticket-triage-on-strong
+name: Ticket triage (what if it used strong-reasoning; constructed)
+kind: app
+owner: usr-amira
+team: service
+purpose: The ticket triage service, as if it asked for strong-reasoning (a constructed case for the gate).
+users: The help desk reads the result.
+risk_tier: medium
+data_classes: [personal]
+capabilities: [strong-reasoning, embed]
+tools: []
+autonomy: suggests
+budget_usd_month: 15
+limits: {requests_per_minute: 600, tokens_per_day: 2500000, max_calls_per_run: 3}
+evaluations:
+  strong-reasoning: {evaluation: "evaluation course, triage set, dev split", measure: decisions, minimum: 0.85}
+review_date: 2027-01-15

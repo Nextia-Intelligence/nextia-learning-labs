@@ -1,0 +1,12 @@
+month,provider,key_id,deployment,requests,tokens_in,tokens_out,cost_usd
+2026-09,azure,az-key-1,chat-small,5880,11212911,1812088,2.027335
+2026-09,azure,az-key-1,chat-strong,769,1771931,89808,4.441942
+2026-09,azure,az-key-1,embed-small,5793,422247,0,0.008445
+2026-09,azure,az-key-2,chat-small,324,299824,39947,0.049956
+2026-09,azure,az-key-3,chat-strong,202,306024,22094,0.832988
+2026-09,azure,az-key-9,chat-small,19563,36440689,5841380,6.564759
+2026-09,azure,az-key-9,chat-strong,2677,6005499,261018,14.621178
+2026-09,azure,az-key-9,embed-small,18391,1330186,0,0.026604
+2026-09,azure-canada,az-key-9,chat-small,55,105161,17658,0.019345
+2026-09,azure-canada,az-key-9,chat-strong,13,30333,1418,0.074846
+2026-09,azure-canada,az-key-9,embed-small,55,4236,0,0.000085

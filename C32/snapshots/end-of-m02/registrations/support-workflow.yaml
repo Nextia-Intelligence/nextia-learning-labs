@@ -1,0 +1,16 @@
+# A draft registration (the capability catalog's module): who uses which capability, and which
+# evaluation shows that a model is good enough for it. The registration module completes the form.
+status: draft
+id: support-workflow
+name: Support-resolution workflow
+owner: usr-amira
+team: service
+from: the agents course (the resolution workflow)
+capabilities:
+- strong-reasoning
+- fast-small
+evaluations:
+  strong-reasoning:
+    evaluation: agents course, 70 resolution tasks
+    measure: task_success
+    minimum: 0.95

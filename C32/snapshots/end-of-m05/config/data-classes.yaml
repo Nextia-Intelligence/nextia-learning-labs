@@ -1,0 +1,16 @@
+# Larkfield's data classes (owner: Mei). A request carries one class: the most sensitive data in it.
+# A registration lists the classes an agent may send; a provider lists the classes its contract covers.
+classes:
+  public:
+    rank: 0
+    about: published policy documents and product pages
+  internal:
+    rank: 1
+    about: staff procedures, internal documents, evaluation data with no customer in it
+  personal:
+    rank: 2
+    about: anything about a customer - names, messages, orders, addresses
+  payment:
+    rank: 3
+    about: card numbers and bank details - never sent to any model
+    never_to_a_model: true

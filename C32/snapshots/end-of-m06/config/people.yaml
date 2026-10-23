@@ -1,0 +1,13 @@
+# Larkfield's people (made up). `approves` is what a person may approve in the refund policy
+# (config/policy/approvals.yaml). `left` is the day a person left the company.
+people:
+  usr-kwame: {name: Kwame, team: platform, title: solution architect and AI platform owner}
+  usr-amira: {name: Amira, team: service, title: developer}
+  usr-priya: {name: Priya, team: evaluation, title: data scientist}
+  usr-mei: {name: Mei, team: data, title: data engineer}
+  usr-grace: {name: Grace, team: service, title: support lead, approves: support_lead}
+  usr-camille: {name: Camille, team: service, title: support team lead, approves: team_lead}
+  usr-sam: {name: Sam, team: service, title: support agent, approves: support_agent}
+  usr-omar: {name: Omar, team: service, title: product manager}
+  usr-tomas: {name: Tomás, team: platform, title: AI engineer}
+  usr-lee: {name: Lee, team: service, title: analyst, left: 2026-08-31}

@@ -1,0 +1,16 @@
+id: helpdesk-assistant
+name: Help-desk assistant
+kind: agent
+owner: usr-amira
+team: service
+purpose: Drafts replies for support agents from the policies and the ticket, through the support MCP server.
+users: Support agents; they send the reply themselves.
+from: the MCP course (its host)
+risk_tier: medium
+data_classes: [personal]
+capabilities: [fast-small]
+tools: [support.search_knowledge, support.get_ticket]
+autonomy: suggests
+budget_usd_month: 2
+limits: {requests_per_minute: 60, tokens_per_day: 300000, max_calls_per_run: 6}
+review_date: 2027-01-15
