@@ -1,5 +1,6 @@
 """The estate's command line from the first module: start, look, stop, reset."""
 
+import os
 import subprocess
 import sys
 
@@ -17,7 +18,7 @@ def estate(*args, env=None):
 
 
 @pytest.mark.services
-def test_up_starts_the_simulator_and_down_stops_it(monkeypatch):
+def test_up_starts_the_simulator_and_down_stops_it(monkeypatch, tmp_path):
     port = str(free_port())
     monkeypatch.setenv("SIM_PORT", port)
     from estate import services
@@ -29,6 +30,13 @@ def test_up_starts_the_simulator_and_down_stops_it(monkeypatch):
         assert "running" in services.status()[0]
         r = estate("reset")
         assert r.returncode != 0 and "Stop the services first" in r.stderr
+        # A second estate (another state folder) on the same port: the answer there is not its own simulator's.
+        own = os.environ["ESTATE_STATE"]
+        monkeypatch.setenv("ESTATE_STATE", str(tmp_path / "other-estate"))
+        other = services.up(["provsim"])
+        assert other[0].startswith("provsim    NOT ANSWERING") and f"port {port} was already in use" in other[0]
+        assert services.running() == {}
+        monkeypatch.setenv("ESTATE_STATE", own)
     finally:
         down = services.down()
     assert down[0].startswith("provsim    stopped")

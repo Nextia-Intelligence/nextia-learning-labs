@@ -14,6 +14,7 @@ import importlib.util
 import json
 import os
 import signal
+import socket
 import subprocess
 import sys
 import time
@@ -99,9 +100,24 @@ def running() -> dict:
     return found
 
 
-def wait_ok(url: str, seconds: float = 20.0) -> bool:
+def _host_port(url: str) -> tuple[str, int]:
+    host, port = url.split("//", 1)[1].split("/", 1)[0].rsplit(":", 1)
+    return host, int(port)
+
+
+def port_in_use(url: str) -> bool:
+    """Whether some program already listens at the service's address (another estate, or a simulator)."""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        s.settimeout(0.5)
+        return s.connect_ex(_host_port(url)) == 0
+
+
+def wait_ok(url: str, seconds: float = 20.0, proc: subprocess.Popen | None = None) -> bool:
+    """Whether the service answers; False at once if the process we started has stopped (it could not start)."""
     end = time.time() + seconds
     while time.time() < end:
+        if proc is not None and proc.poll() is not None:
+            return False
         try:
             with urllib.request.urlopen(url, timeout=1) as r:
                 if r.status == 200:
@@ -123,13 +139,24 @@ def up(only: list[str] | None = None, replicas=("a", "b", "c"), tools: bool = Tr
         if name in pids:
             lines.append(f"{name:<10} already running (process {pids[name]})")
             continue
+        # Another program on the port would answer the health check for us: then the answer is not ours.
+        taken = port_in_use(health)
         log = open(logs / f"{name}.log", "a", encoding="utf-8")
         proc = subprocess.Popen(cmd, cwd=paths.PROJECT, env=env_for(), stdout=log, stderr=subprocess.STDOUT,
                                 start_new_session=True)
         pids[name] = proc.pid
         _pids_file().write_text(json.dumps(pids, indent=1))
-        ok = wait_ok(health, 30 if name == "toolgate" else 20)
-        lines.append(f"{name:<10} {'up' if ok else 'NOT ANSWERING'} (process {proc.pid}) {health.rsplit('/', 1)[0]}")
+        if taken:      # our process cannot bind the port: wait until it stops, so its error is in the log
+            try:
+                proc.wait(timeout=20)
+            except subprocess.TimeoutExpired:
+                pass
+            ok = False
+        else:
+            ok = wait_ok(health, 30 if name == "toolgate" else 20, proc)
+        url = health.rsplit("/", 1)[0]
+        hint = f" - port {_host_port(health)[1]} was already in use" if taken else ""
+        lines.append(f"{name:<10} {'up' if ok else 'NOT ANSWERING'} (process {proc.pid}) {url}{hint}")
     return lines
 
 

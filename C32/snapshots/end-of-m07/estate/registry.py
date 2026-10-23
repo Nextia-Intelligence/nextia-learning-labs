@@ -159,6 +159,11 @@ def check_form(form: dict, catalog: dict | None = None, today: date | None = Non
             p.append(f"data class {c}: not in config/data-classes.yaml")
         elif classes[c].get("never_to_a_model") and form.get("capabilities"):
             p.append(f"data class {c}: never sent to a model, so an agent with capabilities cannot register it")
+        elif classes[c].get("never_to_a_model"):
+            # A tool server lists no capabilities, but its answers go into an agent's context, and from there
+            # to a model: the same rule applies (a gap found by the case study on public MCP servers).
+            p.append(f"data class {c}: never sent to a model, and a tool's answer goes to the agent's model, "
+                     "so a tool server cannot register it")
     caps = catalog["capabilities"]
     for c in form.get("capabilities") or []:
         if c not in caps:

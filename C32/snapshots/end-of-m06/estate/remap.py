@@ -142,13 +142,28 @@ EVALUATORS = {
 }
 
 
+def _retired() -> set[str]:
+    """The IDs that the registry marks as retired (none before the registry exists: Module 3 adds it)."""
+    db = paths.state() / "registry.db"
+    if not db.exists():
+        return set()
+    import sqlite3
+    from contextlib import closing
+
+    with closing(sqlite3.connect(db)) as con:
+        try:
+            return {r[0] for r in con.execute("select agent_id from agents where status = 'retired'")}
+        except sqlite3.OperationalError:     # a registry file without the agents table yet
+            return set()
+
+
 def consumers(capability: str, also: list | None = None) -> list[dict]:
     """The registrations that list the capability (the forms in registrations/, registered or not), plus any
-    "what if" forms given with --also."""
-    out = []
+    "what if" forms given with --also. A form whose agent the registry has retired is not a consumer any more."""
+    out, retired = [], _retired()
     for path in [*sorted(paths.REGISTRATIONS.glob("*.yaml")), *(Path(a) for a in also or [])]:
         form = yaml.safe_load(path.read_text(encoding="utf-8"))
-        if capability in (form.get("capabilities") or []):
+        if capability in (form.get("capabilities") or []) and form.get("id") not in retired:
             out.append(form)
     return out
 

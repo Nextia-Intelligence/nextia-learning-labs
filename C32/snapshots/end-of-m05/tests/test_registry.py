@@ -41,6 +41,8 @@ def test_the_form_refuses_what_the_platform_cannot_allow():
     assert any("left the company" in p for p in registry.check_form(f))
     f = dict(form("ticket-triage"), data_classes=["payment"])
     assert any("never sent to a model" in p for p in registry.check_form(f))
+    f = dict(form("support-mcp"), data_classes=["personal", "payment"])     # a tool server: no capabilities
+    assert any("a tool server cannot register it" in p for p in registry.check_form(f))
     f = dict(form("ticket-triage"), capabilities=["fast-small", "teleport"])
     assert "capability teleport: not in the catalog" in registry.check_form(f)
     f = dict(form("ticket-triage"), review_date="2028-01-01")
@@ -68,6 +70,11 @@ def test_retire_revokes_the_credentials_and_the_id_is_never_used_again():
         registry.register(form("doc-assistant"), "usr-kwame")
     with pytest.raises(ValueError):
         registry.set_status("doc-assistant", "active", "usr-kwame", "undo")
+    # The remap gate reads the forms in registrations/, but a retired agent is no consumer any more.
+    from estate import remap
+
+    assert "doc-assistant" not in [f["id"] for f in remap.consumers("fast-small")]
+    assert "ticket-triage" in [f["id"] for f in remap.consumers("fast-small")]
 
 
 def test_a_status_change_needs_a_reason():
