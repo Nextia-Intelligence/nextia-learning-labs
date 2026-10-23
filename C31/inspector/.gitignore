@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+web/node_modules/
+larkfield_inspector/static/
+build/
+dist/
+!web/dist/
+*.egg-info/
+.pytest_cache/

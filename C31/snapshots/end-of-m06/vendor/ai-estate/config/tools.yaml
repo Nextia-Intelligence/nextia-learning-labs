@@ -1,0 +1,26 @@
+# The tool servers behind the tool gateway (owner: Kwame). The platform decides here which tools are reads and
+# which are writes: MCP tool annotations are hints from the server, not permissions, so they are not used.
+# A tool that is not listed here cannot be called through the gateway.
+servers:
+  orders:
+    about: Larkfield's order, payment and shipping systems (the agents course's practice database), as an MCP server
+    command: ["{python}", "-m", "orders_mcp"]
+    tools:
+      get_order: {kind: read}
+      get_customer_orders: {kind: read}
+      get_payments: {kind: read}
+      search_policy: {kind: read}
+      get_operation: {kind: read}
+      create_return_label: {kind: write}
+      reship_item: {kind: write}
+      request_refund: {kind: write}
+      add_ticket_note: {kind: write}
+  support:
+    about: the MCP course's support-mcp server (policies, tickets, refund proposals), started on stdio
+    command: ["{python}", "-m", "support_mcp"]
+    env: {SUPPORT_USER: usr-sam, SUPPORT_TENANT: larkfield, SUPPORT_SCOPES: "knowledge:read tickets:read refunds:propose"}
+    tools:
+      search_knowledge: {kind: read}
+      get_ticket: {kind: read}
+      propose_refund: {kind: write}
+max_argument_chars: 2000

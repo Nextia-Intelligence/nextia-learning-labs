@@ -1,0 +1,72 @@
+{
+ "about": "The alert rules of grafana/alerts/agent-alerts.yaml, for python -m obs alerts (windows counted in closed runs).",
+ "rules": [
+  {
+   "uid": "unreconciled-writes",
+   "title": "A write timed out and nobody checked whether it happened",
+   "indicator": "unreconciled_writes",
+   "op": ">",
+   "threshold": 0,
+   "window": 45,
+   "severity": "SEV-1",
+   "owner": "Amira",
+   "first_step": "Run `python -m obs find duplicate_write` (or the TraceQL query `duplicate write` in grafana/traceql.md), then ask the system that owns the write (payments for a refund, orders for a label or a reshipment) about each operation ID before anyone sends the change again.",
+   "example_query": "{ span.larkfield.write.outcome = \"timeout\" }",
+   "promql": "sum(increase(larkfield_writes_total{larkfield_write_outcome=\"timeout\"}[90s])) - sum(increase(larkfield_reconciles_total[90s]))"
+  },
+  {
+   "uid": "reply-failures",
+   "title": "Replies to customers failed",
+   "indicator": "reply_failures",
+   "op": ">",
+   "threshold": 0,
+   "window": 45,
+   "severity": "SEV-2",
+   "owner": "Grace",
+   "first_step": "Open the example runs (`python -m obs trace RUN_ID`): did each ticket go to a person, or close as resolved? `python -m obs find no_action` lists the tickets closed without a reply. Send those replies when the reply service works again.",
+   "example_query": "{ span.larkfield.reply.status = \"failed\" }",
+   "promql": "sum(increase(larkfield_tool_calls_total{gen_ai_tool_name=\"send_reply\",larkfield_tool_status=\"failed\"}[90s]))"
+  },
+  {
+   "uid": "loop-stops",
+   "title": "Runs stopped by a loop limit",
+   "indicator": "loop_stops",
+   "op": ">=",
+   "threshold": 3,
+   "window": 45,
+   "severity": "SEV-3",
+   "owner": "Amira",
+   "first_step": "Open three stopped runs (`python -m obs find loop`): which model, which step repeats? Compare with the last release.",
+   "example_query": "{ span.larkfield.stop_reason =~ \"repeated_call|max_steps|too_many_errors\" }",
+   "promql": "sum(increase(larkfield_run_stops_total{larkfield_stop_reason=~\"repeated_call|max_steps|too_many_errors\"}[90s]))"
+  },
+  {
+   "uid": "cost-per-resolved",
+   "title": "Cost per resolved ticket over budget",
+   "indicator": "cost_per_resolved",
+   "op": ">",
+   "threshold": 0.002,
+   "window": 45,
+   "min_runs": 20,
+   "severity": "SEV-3",
+   "owner": "Kwame",
+   "first_step": "Split the cost by model and slice (`python -m obs cost --by model`, the Cost panels): which change raised it? The budget (US$0.002 per resolved ticket) is an assumption: Omar's.",
+   "example_query": "{ span.gen_ai.operation.name =~ \"invoke_agent|invoke_workflow\" && span.larkfield.cost.usd > 0.01 }",
+   "promql": "(sum(increase(larkfield_run_cost_total[90s])) / sum(increase(larkfield_runs_total{larkfield_outcome=\"resolved\"}[90s]))) and sum(increase(larkfield_runs_total[90s])) >= 20"
+  },
+  {
+   "uid": "handoff-rate",
+   "title": "Too many tickets handed to a person",
+   "indicator": "handoff_rate",
+   "op": ">",
+   "threshold": 0.45,
+   "window": 45,
+   "min_runs": 20,
+   "severity": "SEV-3",
+   "owner": "Grace",
+   "first_step": "Split the handed-over runs by model (`python -m obs cost --by model --outcome handed_to_person`) and compare with the day before: a model or a release with many more handoffs is the first suspect. Open its example runs.",
+   "example_query": "{ span.larkfield.outcome = \"handed_to_person\" }",
+   "promql": "(sum(increase(larkfield_runs_total{larkfield_outcome=\"handed_to_person\"}[90s])) / sum(increase(larkfield_runs_total[90s]))) and sum(increase(larkfield_runs_total[90s])) >= 20"
+  }
+ ]
+}

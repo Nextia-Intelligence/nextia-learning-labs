@@ -1,0 +1,48 @@
+# Tests of the approval policy: python -m estate policy test. Each case: an action, an approver (or none),
+# and what must happen. Add a case for every rule you change.
+cases:
+  - name: a 9.95 fee refund needs any support agent
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 9.95, reason_code: RFD-LATE}}
+    expect: {needs: support_agent}
+  - name: Sam may approve a 9.95 refund
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 9.95, reason_code: RFD-LATE}}
+    approver: usr-sam
+    expect: {approved: true}
+  - name: exactly 100 dollars is still the agent's limit
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 100.0, reason_code: RFD-DAMAGE}}
+    approver: usr-sam
+    expect: {approved: true}
+  - name: 100.01 dollars needs a team lead
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 100.01, reason_code: RFD-DAMAGE}}
+    approver: usr-sam
+    expect: {approved: false, needs: team_lead}
+  - name: Camille may approve 450
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 450.0, reason_code: RFD-DOUBLE}}
+    approver: usr-camille
+    expect: {approved: true}
+  - name: 650 needs Grace
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 650.0, reason_code: RFD-DOUBLE}}
+    approver: usr-camille
+    expect: {approved: false, needs: support_lead}
+  - name: Grace may approve 650
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 650.0, reason_code: RFD-DOUBLE}}
+    approver: usr-grace
+    expect: {approved: true}
+  - name: a person who left may not approve
+    action: {tool: orders.request_refund, arguments: {order_id: LK-104233, amount: 9.95, reason_code: RFD-LATE}}
+    approver: usr-lee
+    expect: {approved: false}
+  - name: Omar approves nothing
+    action: {tool: orders.create_return_label, arguments: {order_id: LK-104233, sku: BB-100, reason: damaged}}
+    approver: usr-omar
+    expect: {approved: false}
+  - name: a ticket note needs no approval
+    action: {tool: orders.add_ticket_note, arguments: {note: Resolved}}
+    expect: {needs: none}
+  - name: a write that no rule names is refused
+    action: {tool: orders.delete_order, arguments: {order_id: LK-104233}}
+    expect: {denied: true}
+  - name: reads need no approval
+    action: {tool: orders.get_order, arguments: {order_id: LK-104233}}
+    kind: read
+    expect: {needs: none}

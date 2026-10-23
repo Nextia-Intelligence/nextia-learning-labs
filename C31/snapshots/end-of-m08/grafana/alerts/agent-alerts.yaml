@@ -1,0 +1,194 @@
+# Alert rules of the support workflow (Grafana file provisioning). The same rules, for saved telemetry,
+# are in rules.json (python -m obs alerts). Windows: 90 s = one practice day of the compressed week.
+apiVersion: 1
+groups:
+  - orgId: 1
+    name: "Support workflow"
+    folder: "Support workflow"
+    interval: "10s"
+    rules:
+      - uid: "unreconciled-writes"
+        title: "A write timed out and nobody checked whether it happened"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(larkfield_writes_total{larkfield_write_outcome=\"timeout\"}[90s])) - sum(increase(larkfield_reconciles_total[90s]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-1"
+          owner: "Amira"
+          service: "support-workflow"
+        annotations:
+          summary: "A write timed out and nobody checked whether it happened"
+          first_step: "Run `python -m obs find duplicate_write` (or the TraceQL query `duplicate write` in grafana/traceql.md), then ask the system that owns the write (payments for a refund, orders for a label or a reshipment) about each operation ID before anyone sends the change again."
+          example_runs: "Explore, Tempo, TraceQL: { span.larkfield.write.outcome = \"timeout\" }"
+        isPaused: false
+      - uid: "reply-failures"
+        title: "Replies to customers failed"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(larkfield_tool_calls_total{gen_ai_tool_name=\"send_reply\",larkfield_tool_status=\"failed\"}[90s]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-2"
+          owner: "Grace"
+          service: "support-workflow"
+        annotations:
+          summary: "Replies to customers failed"
+          first_step: "Open the example runs (`python -m obs trace RUN_ID`): did each ticket go to a person, or close as resolved? `python -m obs find no_action` lists the tickets closed without a reply. Send those replies when the reply service works again."
+          example_runs: "Explore, Tempo, TraceQL: { span.larkfield.reply.status = \"failed\" }"
+        isPaused: false
+      - uid: "loop-stops"
+        title: "Runs stopped by a loop limit"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "sum(increase(larkfield_run_stops_total{larkfield_stop_reason=~\"repeated_call|max_steps|too_many_errors\"}[90s]))"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 2.999999999
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-3"
+          owner: "Amira"
+          service: "support-workflow"
+        annotations:
+          summary: "Runs stopped by a loop limit"
+          first_step: "Open three stopped runs (`python -m obs find loop`): which model, which step repeats? Compare with the last release."
+          example_runs: "Explore, Tempo, TraceQL: { span.larkfield.stop_reason =~ \"repeated_call|max_steps|too_many_errors\" }"
+        isPaused: false
+      - uid: "cost-per-resolved"
+        title: "Cost per resolved ticket over budget"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "(sum(increase(larkfield_run_cost_total[90s])) / sum(increase(larkfield_runs_total{larkfield_outcome=\"resolved\"}[90s]))) and sum(increase(larkfield_runs_total[90s])) >= 20"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.002
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-3"
+          owner: "Kwame"
+          service: "support-workflow"
+        annotations:
+          summary: "Cost per resolved ticket over budget"
+          first_step: "Split the cost by model and slice (`python -m obs cost --by model`, the Cost panels): which change raised it? The budget (US$0.002 per resolved ticket) is an assumption: Omar's."
+          example_runs: "Explore, Tempo, TraceQL: { span.gen_ai.operation.name =~ \"invoke_agent|invoke_workflow\" && span.larkfield.cost.usd > 0.01 }"
+        isPaused: false
+      - uid: "handoff-rate"
+        title: "Too many tickets handed to a person"
+        condition: "C"
+        data:
+          - refId: "A"
+            relativeTimeRange:
+              from: 300
+              to: 0
+            datasourceUid: "prometheus"
+            model:
+              refId: "A"
+              expr: "(sum(increase(larkfield_runs_total{larkfield_outcome=\"handed_to_person\"}[90s])) / sum(increase(larkfield_runs_total[90s]))) and sum(increase(larkfield_runs_total[90s])) >= 20"
+              instant: true
+              range: false
+          - refId: "C"
+            datasourceUid: "__expr__"
+            model:
+              refId: "C"
+              type: "threshold"
+              expression: "A"
+              conditions:
+                - evaluator:
+                    type: "gt"
+                    params:
+                      - 0.45
+        noDataState: "OK"
+        execErrState: "Error"
+        for: "0s"
+        labels:
+          severity: "SEV-3"
+          owner: "Grace"
+          service: "support-workflow"
+        annotations:
+          summary: "Too many tickets handed to a person"
+          first_step: "Split the handed-over runs by model (`python -m obs cost --by model --outcome handed_to_person`) and compare with the day before: a model or a release with many more handoffs is the first suspect. Open its example runs."
+          example_runs: "Explore, Tempo, TraceQL: { span.larkfield.outcome = \"handed_to_person\" }"
+        isPaused: false

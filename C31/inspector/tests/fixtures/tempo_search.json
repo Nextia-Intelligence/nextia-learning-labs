@@ -1,0 +1,23 @@
+{
+ "traces": [
+  {
+   "traceID": "15ba0d9388d1b9e001af373f21c4b955",
+   "rootServiceName": "support-workflow"
+  },
+  {
+   "traceID": "3a6cd2cce257c77ab2a0ae8dd9d5841d",
+   "rootServiceName": "support-workflow"
+  },
+  {
+   "traceID": "bf5b941801388658eaa36cf0bba32133",
+   "rootServiceName": "support-workflow"
+  },
+  {
+   "traceID": "f0433c4403e2767e1d69ece18a947526",
+   "rootServiceName": "support-workflow"
+  }
+ ],
+ "metrics": {
+  "inspectedTraces": 4
+ }
+}

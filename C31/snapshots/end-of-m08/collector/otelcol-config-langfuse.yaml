@@ -1,0 +1,152 @@
+# The Collector of the course (OpenTelemetry Collector Contrib 0.162.0, inside grafana/otel-lgtm 0.36.0).
+# compose.yaml mounts this file over the image's own /otel-lgtm/otelcol-config.yaml.
+#
+#   receive   OTLP from the workflow (gRPC 4317, HTTP 4318)
+#   process   redact text and personal data (every signal), sample traces only (tail sampling)
+#   route     audit events -> the audit store (never sampled, never to Loki); other events -> Loki
+#   export    traces -> Tempo, metrics -> Prometheus, events -> Loki, audit events -> the audit store
+#
+# The application does not know any of these places: it sends to one address (OTEL_EXPORTER_OTLP_ENDPOINT).
+#
+# This variant adds a THIRD destination: Langfuse (OTLP over HTTP to <LANGFUSE_BASE_URL>/api/public/otel, traces
+# only, no gRPC), with basic auth from LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY (set in your shell, never in
+# a file you commit). Langfuse gets the same redacted traces; only the course's synthetic practice data.
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
+      http:
+        endpoint: 0.0.0.0:4318
+
+extensions:
+  health_check:
+    endpoint: 0.0.0.0:13133
+    path: "/ready"
+  basicauth/langfuse:
+    client_auth:
+      username: ${env:LANGFUSE_PUBLIC_KEY}
+      password: ${env:LANGFUSE_SECRET_KEY}
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 400
+  batch:
+
+  # Defence in depth: the workflow records no text (OBS_CAPTURE_CONTENT=off), and the Collector removes it
+  # again before anything leaves, in case an instrumentation library adds it.
+  transform/redact:
+    error_mode: ignore
+    trace_statements:
+      - context: span
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+          - delete_key(attributes, "gen_ai.system_instructions")
+          - delete_key(attributes, "gen_ai.tool.call.arguments")
+          - delete_key(attributes, "gen_ai.tool.call.result")
+          - delete_key(attributes, "gen_ai.prompt")
+          - delete_key(attributes, "gen_ai.completion")
+          - replace_all_patterns(attributes, "value", "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+          - replace_all_patterns(attributes, "value", "\\b(?:\\d[ -]?){13,19}\\b", "[card number]")
+      - context: spanevent
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+    log_statements:   # events for Loki (audit events are checked by the audit store's schema instead)
+      - context: log
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+          - replace_all_patterns(attributes, "value", "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+          - replace_pattern(body, "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+
+  # Traces only. Keep every trace that matters for an investigation; keep 10% of the ordinary ones.
+  # A run's two traces are decided apart: the approval trace can be kept when the first trace was not.
+  tail_sampling:
+    decision_wait: 10s
+    num_traces: 20000
+    policies:
+      - name: errors
+        type: status_code
+        status_code: {status_codes: [ERROR]}
+      - name: writes-and-approvals
+        type: string_attribute
+        string_attribute: {key: gen_ai.operation.name, values: [approve]}
+      - name: write-calls
+        type: string_attribute
+        string_attribute: {key: larkfield.tool.kind, values: [write]}
+      - name: injected-input
+        type: boolean_attribute
+        boolean_attribute: {key: larkfield.input.injection, value: true}
+      - name: slow-runs
+        type: latency
+        latency: {threshold_ms: 30000}
+      - name: ten-percent-of-the-rest
+        type: probabilistic
+        probabilistic: {sampling_percentage: 10}
+
+connectors:
+  routing/logs:
+    default_pipelines: [logs/loki]
+    table:
+      - context: log
+        condition: attributes["audit.type"] != nil
+        pipelines: [logs/audit]
+
+exporters:
+  otlp_http/traces:
+    endpoint: http://127.0.0.1:4418
+    tls:
+      insecure: true
+  otlp_http/langfuse:
+    endpoint: ${env:LANGFUSE_BASE_URL}/api/public/otel
+    headers:
+      x-langfuse-ingestion-version: "4"   # Langfuse's docs: new data appears in real time
+    auth:
+      authenticator: basicauth/langfuse
+  otlp_http/metrics:
+    endpoint: http://127.0.0.1:9090/api/v1/otlp
+    tls:
+      insecure: true
+  otlp_http/logs:
+    endpoint: http://127.0.0.1:3100/otlp
+    tls:
+      insecure: true
+  # The audit store runs on your computer (python -m auditstore serve --host 0.0.0.0): the container reaches it
+  # at host.docker.internal. JSON, so that the store needs no protobuf library. Retries until it answers.
+  otlp_http/audit:
+    endpoint: ${env:AUDIT_STORE_URL}
+    encoding: json
+    retry_on_failure:
+      enabled: true
+      max_elapsed_time: 0
+
+service:
+  extensions: [health_check, basicauth/langfuse]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, transform/redact, tail_sampling, batch]
+      exporters: [otlp_http/traces]
+    traces/langfuse:          # the same traces, not sampled: Langfuse's free plan counts units, check them
+      receivers: [otlp]
+      processors: [memory_limiter, transform/redact, batch]
+      exporters: [otlp_http/langfuse]
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [otlp_http/metrics]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter]
+      exporters: [routing/logs]
+    logs/loki:
+      receivers: [routing/logs]
+      processors: [transform/redact, batch]
+      exporters: [otlp_http/logs]
+    logs/audit:
+      receivers: [routing/logs]
+      exporters: [otlp_http/audit]

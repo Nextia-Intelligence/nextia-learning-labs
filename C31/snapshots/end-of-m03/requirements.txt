@@ -1,0 +1,7 @@
+# Tested with Python 3.12.13 (macOS, Apple silicon): the latest stable versions when the course was built.
+# The agents course's workflow (pydantic, openai); OpenTelemetry (SDK and the OTLP/HTTP exporters) from Module 2.
+openai==3.37.0
+pydantic==2.14.1
+opentelemetry-api==1.45.1
+opentelemetry-sdk==1.45.1
+opentelemetry-exporter-otlp-proto-http==1.45.1

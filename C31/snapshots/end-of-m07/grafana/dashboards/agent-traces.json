@@ -1,0 +1,264 @@
+{
+ "uid": "agent-traces",
+ "title": "Support workflow: failure patterns in traces",
+ "description": "The TraceQL queries of grafana/traceql.md, one table each. Click a trace ID to open the waterfall.",
+ "tags": [
+  "support-workflow"
+ ],
+ "timezone": "browser",
+ "editable": false,
+ "graphTooltip": 1,
+ "refresh": "10s",
+ "time": {
+  "from": "now-15m",
+  "to": "now"
+ },
+ "schemaVersion": 41,
+ "panels": [
+  {
+   "type": "table",
+   "title": "TraceQL: loop",
+   "description": "runs stopped by a loop limit.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.larkfield.stop_reason =~ \"repeated_call|max_steps\" }",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 1,
+   "gridPos": {
+    "x": 0,
+    "y": 0,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: many calls to one tool",
+   "description": "traces with 3 or more get_order calls.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.gen_ai.tool.name = \"get_order\" } | count() > 2",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 2,
+   "gridPos": {
+    "x": 12,
+    "y": 0,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: hidden tool error",
+   "description": "a read failed and the run was closed as resolved. also finds errors that a later call repaired: open each trace.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.larkfield.tool.kind = \"read\" && status = error } && { span.larkfield.outcome = \"resolved\" }",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 3,
+   "gridPos": {
+    "x": 0,
+    "y": 8,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: duplicate write",
+   "description": "two refund calls in one trace that may both have changed the data. a timeout BEFORE the write also counts: check the payment system.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.gen_ai.tool.name = \"request_refund\" && span.larkfield.write.outcome =~ \"done|timeout\" } | count() > 1",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 4,
+   "gridPos": {
+    "x": 12,
+    "y": 8,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: write without an approval",
+   "description": "a write in a trace that does not start with a person's decision. 0 in the course's week: every write is in an approval trace.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ rootName !~ \"approve.*\" && span.larkfield.tool.kind = \"write\" && span.gen_ai.tool.name != \"send_reply\" }",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 5,
+   "gridPos": {
+    "x": 0,
+    "y": 16,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: no action",
+   "description": "closed as resolved, nothing written and the reply failed.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.larkfield.outcome = \"resolved\" && span.larkfield.writes_done = 0 } && { span.larkfield.reply.status = \"failed\" }",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 6,
+   "gridPos": {
+    "x": 12,
+    "y": 16,
+    "w": 12,
+    "h": 8
+   }
+  },
+  {
+   "type": "table",
+   "title": "TraceQL: injected input",
+   "description": "runs whose input carried an injected instruction. whether a write followed is in the run's SECOND trace: TraceQL cannot join two traces; follow the link.",
+   "datasource": {
+    "type": "tempo",
+    "uid": "tempo"
+   },
+   "targets": [
+    {
+     "datasource": {
+      "type": "tempo",
+      "uid": "tempo"
+     },
+     "queryType": "traceql",
+     "query": "{ span.larkfield.input.injection = true }",
+     "limit": 50,
+     "tableType": "traces",
+     "refId": "A"
+    }
+   ],
+   "fieldConfig": {
+    "defaults": {
+     "unit": ""
+    },
+    "overrides": []
+   },
+   "id": 7,
+   "gridPos": {
+    "x": 0,
+    "y": 24,
+    "w": 12,
+    "h": 8
+   }
+  }
+ ]
+}

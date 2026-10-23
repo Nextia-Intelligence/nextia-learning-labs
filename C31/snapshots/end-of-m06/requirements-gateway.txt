@@ -1,0 +1,3 @@
+# Optional: the agents governance course's estate (vendor/ai-estate), for the gateway lesson. Python 3.12.13.
+-r requirements.txt
+-r vendor/ai-estate/requirements.txt

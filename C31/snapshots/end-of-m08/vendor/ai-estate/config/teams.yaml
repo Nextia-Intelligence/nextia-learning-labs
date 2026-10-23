@@ -1,0 +1,6 @@
+# Teams and their monthly AI budgets (US$, owner: Kwame with each team lead). Assumptions for practice.
+teams:
+  service: {lead: usr-amira, budget_usd_month: 40}
+  data: {lead: usr-mei, budget_usd_month: 10}
+  evaluation: {lead: usr-priya, budget_usd_month: 10}
+  platform: {lead: usr-kwame, budget_usd_month: 5}

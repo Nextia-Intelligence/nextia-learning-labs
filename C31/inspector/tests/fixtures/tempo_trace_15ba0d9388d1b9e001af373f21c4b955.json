@@ -1,0 +1,428 @@
+{
+ "batches": [
+  {
+   "resource": {
+    "attributes": [
+     {
+      "key": "telemetry.sdk.language",
+      "value": {
+       "stringValue": "python"
+      }
+     },
+     {
+      "key": "telemetry.sdk.name",
+      "value": {
+       "stringValue": "opentelemetry"
+      }
+     },
+     {
+      "key": "telemetry.sdk.version",
+      "value": {
+       "stringValue": "1.45.1"
+      }
+     },
+     {
+      "key": "service.instance.id",
+      "value": {
+       "stringValue": "7451f7ff-f93f-4356-8e97-eec744d73d15"
+      }
+     },
+     {
+      "key": "service.name",
+      "value": {
+       "stringValue": "support-workflow"
+      }
+     },
+     {
+      "key": "service.version",
+      "value": {
+       "stringValue": "2.0.0"
+      }
+     },
+     {
+      "key": "deployment.environment.name",
+      "value": {
+       "stringValue": "practice"
+      }
+     }
+    ]
+   },
+   "instrumentationLibrarySpans": [
+    {
+     "scope": {
+      "name": "larkfield.support-workflow",
+      "version": "2.0.0"
+     },
+     "spans": [
+      {
+       "traceId": "FboNk4jRueABrzc/IcS5VQ==",
+       "spanId": "xOExPOwhs44=",
+       "parentSpanId": "zA21olmPa+k=",
+       "name": "execute_tool request_refund",
+       "kind": 1,
+       "startTimeUnixNano": "1792070232000000000",
+       "endTimeUnixNano": "1792070242000554458",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "request_refund"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "write"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "amount,order_id,reason_code,tool"
+         }
+        },
+        {
+         "key": "larkfield.order.id",
+         "value": {
+          "stringValue": "LK-793996"
+         }
+        },
+        {
+         "key": "larkfield.operation.id",
+         "value": {
+          "stringValue": "797fbb5bbb9f8a7e"
+         }
+        },
+        {
+         "key": "larkfield.idempotency_key",
+         "value": {
+          "stringValue": "797fbb5bbb9f8a7e"
+         }
+        },
+        {
+         "key": "larkfield.attempt",
+         "value": {
+          "intValue": "1"
+         }
+        },
+        {
+         "key": "larkfield.refund.amount",
+         "value": {
+          "doubleValue": 9.95
+         }
+        },
+        {
+         "key": "larkfield.refund.reason",
+         "value": {
+          "stringValue": "RFD-LATE"
+         }
+        },
+        {
+         "key": "larkfield.write.outcome",
+         "value": {
+          "stringValue": "timeout"
+         }
+        },
+        {
+         "key": "error.type",
+         "value": {
+          "stringValue": "timeout"
+         }
+        }
+       ],
+       "status": {
+        "message": "timeout",
+        "code": 2
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "FboNk4jRueABrzc/IcS5VQ==",
+       "spanId": "wylThWRUbYI=",
+       "parentSpanId": "zA21olmPa+k=",
+       "name": "execute_tool request_refund",
+       "kind": 1,
+       "startTimeUnixNano": "1792070242000554458",
+       "endTimeUnixNano": "1792070242001170207",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "request_refund"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "write"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "amount,order_id,reason_code,tool"
+         }
+        },
+        {
+         "key": "larkfield.order.id",
+         "value": {
+          "stringValue": "LK-793996"
+         }
+        },
+        {
+         "key": "larkfield.operation.id",
+         "value": {
+          "stringValue": "797fbb5bbb9f8a7e"
+         }
+        },
+        {
+         "key": "larkfield.idempotency_key",
+         "value": {
+          "stringValue": "797fbb5bbb9f8a7e-retry1"
+         }
+        },
+        {
+         "key": "larkfield.attempt",
+         "value": {
+          "intValue": "2"
+         }
+        },
+        {
+         "key": "larkfield.refund.amount",
+         "value": {
+          "doubleValue": 9.95
+         }
+        },
+        {
+         "key": "larkfield.refund.reason",
+         "value": {
+          "stringValue": "RFD-LATE"
+         }
+        },
+        {
+         "key": "larkfield.write.outcome",
+         "value": {
+          "stringValue": "done"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "FboNk4jRueABrzc/IcS5VQ==",
+       "spanId": "iYhEyTwqjn8=",
+       "parentSpanId": "zA21olmPa+k=",
+       "name": "execute_tool send_reply",
+       "kind": 1,
+       "startTimeUnixNano": "1792070242001170207",
+       "endTimeUnixNano": "1792070242001922748",
+       "attributes": [
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "execute_tool"
+         }
+        },
+        {
+         "key": "gen_ai.tool.name",
+         "value": {
+          "stringValue": "send_reply"
+         }
+        },
+        {
+         "key": "gen_ai.tool.type",
+         "value": {
+          "stringValue": "function"
+         }
+        },
+        {
+         "key": "larkfield.tool.kind",
+         "value": {
+          "stringValue": "write"
+         }
+        },
+        {
+         "key": "larkfield.tool.arguments",
+         "value": {
+          "stringValue": "ticket_id"
+         }
+        },
+        {
+         "key": "larkfield.reply.status",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.tool.status",
+         "value": {
+          "stringValue": "ok"
+         }
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256,
+       "links": []
+      },
+      {
+       "traceId": "FboNk4jRueABrzc/IcS5VQ==",
+       "spanId": "zA21olmPa+k=",
+       "name": "approve support-resolution",
+       "kind": 1,
+       "startTimeUnixNano": "1792070232000000000",
+       "endTimeUnixNano": "1792070242001922748",
+       "attributes": [
+        {
+         "key": "larkfield.customer.id",
+         "value": {
+          "stringValue": "C-61975"
+         }
+        },
+        {
+         "key": "larkfield.ticket.language",
+         "value": {
+          "stringValue": "en"
+         }
+        },
+        {
+         "key": "larkfield.design",
+         "value": {
+          "stringValue": "agent_structured"
+         }
+        },
+        {
+         "key": "larkfield.release",
+         "value": {
+          "stringValue": "2.1.0"
+         }
+        },
+        {
+         "key": "larkfield.approval.approver",
+         "value": {
+          "stringValue": "usr-sam"
+         }
+        },
+        {
+         "key": "larkfield.approval.role",
+         "value": {
+          "stringValue": "agent"
+         }
+        },
+        {
+         "key": "larkfield.approval.limit",
+         "value": {
+          "doubleValue": 100.0
+         }
+        },
+        {
+         "key": "larkfield.approval.wait_s",
+         "value": {
+          "doubleValue": 55505.4
+         }
+        },
+        {
+         "key": "gen_ai.operation.name",
+         "value": {
+          "stringValue": "approve"
+         }
+        },
+        {
+         "key": "larkfield.approval.decision",
+         "value": {
+          "stringValue": "approved"
+         }
+        },
+        {
+         "key": "larkfield.run.id",
+         "value": {
+          "stringValue": "R-1014-040"
+         }
+        },
+        {
+         "key": "larkfield.ticket.id",
+         "value": {
+          "stringValue": "T-90104"
+         }
+        },
+        {
+         "key": "larkfield.outcome",
+         "value": {
+          "stringValue": "resolved"
+         }
+        },
+        {
+         "key": "larkfield.writes_done",
+         "value": {
+          "intValue": "1"
+         }
+        },
+        {
+         "key": "larkfield.reply",
+         "value": {
+          "stringValue": "sent"
+         }
+        },
+        {
+         "key": "larkfield.helpdesk.status",
+         "value": {
+          "stringValue": "resolved"
+         }
+        }
+       ],
+       "links": [
+        {
+         "traceId": "8EM8RAPidn4daezhipR1Jg==",
+         "spanId": "eNJG7iLl9e8=",
+         "attributes": [
+          {
+           "key": "larkfield.link",
+           "value": {
+            "stringValue": "approval of this run"
+           }
+          }
+         ],
+         "flags": 768
+        }
+       ],
+       "status": {
+        "code": 0
+       },
+       "flags": 256
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

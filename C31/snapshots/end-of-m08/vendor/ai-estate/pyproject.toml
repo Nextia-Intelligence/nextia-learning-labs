@@ -1,0 +1,21 @@
+[project]
+name = "ai-estate"
+version = "1.0.0"
+description = "Larkfield's AI estate under governance: a capability catalog, a registry, identities, a model gateway, a tool gateway, policies, kill switches and evidence (Nextia Learning)"
+requires-python = ">=3.12"
+license = "MIT"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["live: calls a real provider (the agents course's opt-in test); run with: pytest -m live",
+           "services: starts the estate's services as real processes on free ports"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["resolver", "support_mcp", "tests/workflow"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W"]   # the ruff defaults, and warnings

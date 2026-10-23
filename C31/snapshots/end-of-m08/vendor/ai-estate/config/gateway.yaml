@@ -1,0 +1,19 @@
+# The model gateway's settings (owner: Kwame). Published with the catalog: `python -m estate config publish`.
+config_cache:
+  poll_seconds: 2          # each replica asks the configuration store this often
+  max_stale_seconds: 60    # a practice value: after this long without the store, each risk tier's failure mode applies
+failure_modes:             # what a replica does when a control cannot run (store unreachable too long, usage store down)
+  low: fail_open           # serve; count budgets on this replica only; guardrails still run (they are code in the replica)
+  medium: fail_open
+  high: fail_closed        # refuse with 503 control_unavailable: no call without every control
+budgets:
+  soft_warning_at: 0.8     # a warning header from 80% of a monthly budget; a hard stop at 100%
+guardrails:
+  - {id: card-numbers, kind: card_number, action: redact}   # 13-19 digits that pass the Luhn check
+  - {id: secrets, kind: secret, action: block}              # API keys and passwords in a prompt
+prompts:
+  keep: never              # the gateway records no prompt or answer text
+rollout:
+  canary: [a]              # a new configuration goes to these replicas first
+  watch_requests: 40       # requests on the canary before the rest get it
+  max_error_rate: 0.05     # more failures than this on the canary: roll back

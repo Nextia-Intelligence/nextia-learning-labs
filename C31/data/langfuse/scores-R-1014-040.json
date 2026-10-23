@@ -1,0 +1,19 @@
+{
+ "data": [
+  {
+   "id": "a756b571-d04c-446f-a6c6-9aa94bed18a9",
+   "projectId": "cmvjxoqj900juad0eeb1we79o",
+   "name": "sampled-review",
+   "source": "API",
+   "timestamp": "2026-10-23T10:09:58.583Z",
+   "environment": "default",
+   "createdAt": "2026-10-23T10:09:59.000Z",
+   "updatedAt": "2026-10-23T10:10:03.705Z",
+   "dataType": "NUMERIC",
+   "value": 0
+  }
+ ],
+ "meta": {
+  "limit": 50
+ }
+}

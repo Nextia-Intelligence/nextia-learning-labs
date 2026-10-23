@@ -1,0 +1,21 @@
+{
+ "status": "success",
+ "data": {
+  "resultType": "matrix",
+  "result": [
+   {
+    "metric": {},
+    "values": [
+     [
+      1792036800,
+      "0.0123"
+     ],
+     [
+      1792040400,
+      "0.0050"
+     ]
+    ]
+   }
+  ]
+ }
+}

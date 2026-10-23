@@ -1,0 +1,129 @@
+# The same Collector without Docker: the otelcol-contrib binary (a release of opentelemetry-collector-releases)
+# writes what it would send to Tempo, Prometheus and Loki into files instead (OTLP JSON, one request per line),
+# so that `python -m obs` and `python -m obs check-redaction` can read them. Run it from the project folder:
+#   OUT_DIR=work/collector-out AUDIT_STORE_URL=http://127.0.0.1:8313 otelcol-contrib --config collector/standalone.yaml
+#
+#   receive   OTLP from the workflow (gRPC 4317, HTTP 4318)
+#   process   redact text and personal data (every signal), sample traces only (tail sampling)
+#   route     audit events -> the audit store (never sampled, never to Loki); other events -> Loki
+#   export    traces -> Tempo, metrics -> Prometheus, events -> Loki, audit events -> the audit store
+#
+# The application does not know any of these places: it sends to one address (OTEL_EXPORTER_OTLP_ENDPOINT).
+
+receivers:
+  otlp:
+    protocols:
+      grpc:
+        endpoint: 127.0.0.1:4317
+      http:
+        endpoint: 127.0.0.1:4318
+
+extensions:
+  health_check:
+    endpoint: 127.0.0.1:13133
+    path: "/ready"
+
+processors:
+  memory_limiter:
+    check_interval: 1s
+    limit_mib: 400
+  batch:
+
+  # Defence in depth: the workflow records no text (OBS_CAPTURE_CONTENT=off), and the Collector removes it
+  # again before anything leaves, in case an instrumentation library adds it.
+  transform/redact:
+    error_mode: ignore
+    trace_statements:
+      - context: span
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+          - delete_key(attributes, "gen_ai.system_instructions")
+          - delete_key(attributes, "gen_ai.tool.call.arguments")
+          - delete_key(attributes, "gen_ai.tool.call.result")
+          - delete_key(attributes, "gen_ai.prompt")
+          - delete_key(attributes, "gen_ai.completion")
+          - replace_all_patterns(attributes, "value", "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+          - replace_all_patterns(attributes, "value", "\\b(?:\\d[ -]?){13,19}\\b", "[card number]")
+      - context: spanevent
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+    log_statements:   # events for Loki (audit events are checked by the audit store's schema instead)
+      - context: log
+        statements:
+          - delete_key(attributes, "gen_ai.input.messages")
+          - delete_key(attributes, "gen_ai.output.messages")
+          - replace_all_patterns(attributes, "value", "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+          - replace_pattern(body, "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}", "[email]")
+
+  # Traces only. Keep every trace that matters for an investigation; keep 10% of the ordinary ones.
+  # A run's two traces are decided apart: the approval trace can be kept when the first trace was not.
+  tail_sampling:
+    decision_wait: 10s
+    num_traces: 20000
+    policies:
+      - name: errors
+        type: status_code
+        status_code: {status_codes: [ERROR]}
+      - name: writes-and-approvals
+        type: string_attribute
+        string_attribute: {key: gen_ai.operation.name, values: [approve]}
+      - name: write-calls
+        type: string_attribute
+        string_attribute: {key: larkfield.tool.kind, values: [write]}
+      - name: injected-input
+        type: boolean_attribute
+        boolean_attribute: {key: larkfield.input.injection, value: true}
+      - name: slow-runs
+        type: latency
+        latency: {threshold_ms: 30000}
+      - name: ten-percent-of-the-rest
+        type: probabilistic
+        probabilistic: {sampling_percentage: 10}
+
+connectors:
+  routing/logs:
+    default_pipelines: [logs/loki]
+    table:
+      - context: log
+        condition: attributes["audit.type"] != nil
+        pipelines: [logs/audit]
+
+exporters:
+  file/traces:
+    path: ${env:OUT_DIR}/traces.jsonl
+  file/metrics:
+    path: ${env:OUT_DIR}/metrics.jsonl
+  file/logs:
+    path: ${env:OUT_DIR}/logs.jsonl
+  # The audit store (python -m auditstore serve). JSON, so that the store needs no protobuf library.
+  otlp_http/audit:
+    endpoint: ${env:AUDIT_STORE_URL}
+    encoding: json
+    retry_on_failure:
+      enabled: true
+      max_elapsed_time: 0
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, transform/redact, tail_sampling, batch]
+      exporters: [file/traces]
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [file/metrics]
+    logs:
+      receivers: [otlp]
+      processors: [memory_limiter]
+      exporters: [routing/logs]
+    logs/loki:
+      receivers: [routing/logs]
+      processors: [transform/redact, batch]
+      exporters: [file/logs]
+    logs/audit:
+      receivers: [routing/logs]
+      exporters: [otlp_http/audit]

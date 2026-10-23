@@ -1,0 +1,8 @@
+# The platform's inventory of Larkfield's keys at the providers it has a contract with (owner: Kwame).
+# Read from the provider's console. A key ID on a bill that is not here is a finding (python -m estate discover).
+keys:
+  az-key-1: {provider: azure, owner: usr-amira, purpose: the service team's shared key, from before the gateway, status: to_revoke}
+  az-key-2: {provider: azure, owner: usr-mei, purpose: the data team's key, from before the gateway, status: to_revoke}
+  az-key-9: {provider: azure, owner: usr-kwame, purpose: the model gateway's key, status: gateway}
+gateway_hosts: [gateway-a, gateway-b, gateway-c]   # the machines allowed to reach the providers (egress rule)
+allowed_addresses: ["127.0.0.1:8322", "127.0.0.1:8321", "127.0.0.1:8326"]   # the gateways and the control plane

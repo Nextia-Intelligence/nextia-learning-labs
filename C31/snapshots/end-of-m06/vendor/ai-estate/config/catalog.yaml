@@ -1,0 +1,56 @@
+# Larkfield's capability catalog (owner: Kwame). Apps ask for a capability, not a model: the platform
+# decides which model serves it. A capability has a CONTRACT (what it promises) and a MAPPING (what serves
+# it today). Change the mapping only as a release (python -m estate remap ...): see the docs.
+version: 1
+capabilities:
+  fast-small:
+    contract:
+      purpose: short structured answers at low cost - triage, routing, short drafts
+      features: [chat, structured_output, tools]
+      quality_floor: {evaluation: "evaluation course, triage set, dev split", measure: decisions, minimum: 0.85}
+      latency_p95_s: 6.0
+      data_classes: [public, internal, personal]
+      price_band_usd_per_1m: {input: 0.50, output: 2.00}
+    mapping:
+      primary: {provider: azure, deployment: chat-small, params_if_tools: {reasoning_effort: none}}
+      fallbacks:
+        - {provider: azure-canada, deployment: chat-small, params_if_tools: {reasoning_effort: none}}
+  strong-reasoning:
+    contract:
+      purpose: multi-step decisions that need the strongest model - resolution plans, judging answers
+      features: [chat, structured_output]
+      quality_floor: {evaluation: "agents course, 70 resolution tasks", measure: task_success, minimum: 0.95}
+      latency_p95_s: 12.0
+      data_classes: [public, internal, personal]
+      price_band_usd_per_1m: {input: 2.50, output: 12.00}
+    mapping:
+      primary: {provider: azure, deployment: chat-strong}
+      fallbacks:
+        - {provider: azure-canada, deployment: chat-strong}
+  embed:
+    contract:
+      purpose: vectors for finding similar tickets
+      features: [embeddings]
+      dimensions: 384
+      quality_floor: {evaluation: "none yet", measure: none, minimum: null}
+      latency_p95_s: 1.0
+      data_classes: [public, internal, personal]
+      price_band_usd_per_1m: {input: 0.05, output: 0.0}
+    mapping:
+      primary: {provider: azure, deployment: embed-small}
+      fallbacks:
+        - {provider: azure-canada, deployment: embed-small}
+  vision:
+    contract:
+      purpose: read photos that customers attach
+      features: [chat, images]
+      quality_floor: {evaluation: "none yet", measure: none, minimum: null}
+      latency_p95_s: 10.0
+      data_classes: [public, internal, personal]
+      price_band_usd_per_1m: {input: 2.50, output: 12.00}
+    mapping: null   # planned: no deployment in the estate reads images (nothing recorded)
+# Old model names that apps used before the gateway. They work during the move, with a warning header.
+aliases:
+  chat-small: fast-small
+  chat-strong: strong-reasoning
+  embed-small: embed

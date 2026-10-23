@@ -1,0 +1,23 @@
+id: orders-mcp
+name: Orders MCP server
+kind: tool-server
+owner: usr-mei
+team: data
+purpose: Gives agents Larkfield's order, payment and shipping systems (reads, and four writes that need approval), through the tool gateway.
+users: Registered agents, through the tool gateway only.
+from: the agents course's practice systems, behind an MCP server written for this course
+risk_tier: high
+data_classes: [personal]
+capabilities: []
+tools: [orders.get_order, orders.get_customer_orders, orders.get_payments, orders.search_policy, orders.get_operation, orders.create_return_label, orders.reship_item, orders.request_refund, orders.add_ticket_note]
+autonomy: acts-with-approval
+budget_usd_month: 0
+limits: {requests_per_minute: 0, tokens_per_day: 0, max_calls_per_run: 0}
+review_date: 2026-12-01
+long_form:
+  impact: Its writes change orders and move money in the practice database (a refund, a reship, a label).
+  human_oversight: The tool gateway asks for an approval grant on every write that the policy names.
+  failure_mode: fail_closed
+  incident_contact: usr-mei
+  data_retention: The practice database; operations are kept with their operation ID.
+  kill_switch_tested: null
