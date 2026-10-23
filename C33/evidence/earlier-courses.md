@@ -62,7 +62,7 @@ Version 3 passes 0 of 6 rules.
 
 ## Security testing
 
-From the course [AI Security, Privacy and Responsible Design](https://learning.nextia-ai.com/courses/ai-security/): Larkfield's support assistant tested with 42 attacks and 26 normal tasks, in five designs.
+From the course [AI Security, Privacy and Responsible Design](https://learning.nextia-ai.com/courses/ai-security/): Larkfield's support assistant (in this course, the support-resolution workflow, S2) tested with 42 attacks and 26 normal tasks, in five designs.
 
 | Design | Attacks that reached their goal (of 42) | Runs with an unsafe side effect | Normal tasks right (of 26) |
 |---|---|---|---|

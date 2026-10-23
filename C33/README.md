@@ -41,8 +41,18 @@ Larkfield is a home-and-garden shop. It is made up for the course. It sells to c
 | `board/` | The board's terms of reference, an agenda, its first quarter and the requests to review | Module 6 |
 | `incidents/` | An incident and a customer complaint (constructed) | Module 6 |
 | `templates/governance-scorecard.md`, `.csv` | Measures that show whether governance helps | Module 6 |
-| `case-studies/` | Three case studies on public records | Module 7 |
+| `case-studies/tribunal-chatbot-answer/` | Case study: a tribunal case about a chatbot's answer (*Moffatt v. Air Canada*). A worksheet for a governance review | Case studies |
+| `case-studies/public-algorithm-failure/` | Case study: learn from a public algorithm failure (the exam grades in England when exams were cancelled). Links to the official documents and a source card | Case studies |
+| `case-studies/published-ai-register/` | Case study: review a published AI register (the Government of Canada's Algorithmic Impact Assessments). One row per record and the answers read from each record | Case studies |
 | `final-assignment/governance-pack.md` | The final assignment: Larkfield's governance pack for its next year | Final assignment |
+
+## The case studies
+
+The course has three case studies on public records. Each one has its own folder with a README that says what to read and what to hand in. Do at least one of them for the certificate.
+
+1. **A tribunal case about a chatbot's answer** (`case-studies/tribunal-chatbot-answer/`). A tribunal held an airline responsible for a wrong answer that its website chatbot gave a customer. You write a governance review and ask which of Larkfield's systems could make a wrong promise.
+2. **Learn from a public algorithm failure** (`case-studies/public-algorithm-failure/`). When exams in England were cancelled, a statistical model lowered many students' grades, and the government went back to the teachers' grades. You write the impact assessment that the model needed before results day.
+3. **Review a published AI register** (`case-studies/published-ai-register/`). The Government of Canada publishes an impact assessment for each automated decision system. You build an inventory of ten records, give each one your own risk tier and compare it with the published level.
 
 ## Check your files
 

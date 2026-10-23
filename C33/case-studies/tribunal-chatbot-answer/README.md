@@ -6,7 +6,7 @@
 
 ## Your role
 
-You are Farida, Larkfield's risk and compliance lead. Nadia read about the case and asks: "Larkfield's support assistant answers customers too. Could this happen to us? What would have prevented it?"
+You are Farida, Larkfield's risk and compliance lead. Nadia read about the case and asks: "Our support systems answer customers too. Could this happen to us? What would have prevented it?"
 
 The case study page walks through the analysis: <https://learning.nextia-ai.com/courses/ai-governance/m07/a-tribunal-case-about-a-chatbots-answer/>.
 
