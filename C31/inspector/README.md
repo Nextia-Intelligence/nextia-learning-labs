@@ -134,6 +134,16 @@ The built-in data sets stay in the **Data** list in live mode. If Tempo does not
 4. **Cost.** Cost per resolved ticket per day or per hour, with the budget line (US$0.002 per resolved ticket, an assumption: Omar's budget) and the releases. Select a bar to see its runs on the Runs screen. Tables show the cost by model, language, outcome, release and model step, and the 10 most expensive runs. The prices come from the dated price table on each model span (`larkfield.price_table`). They are the course's prices, not the prices of your provider today.
 5. **Compare.** Two runs of one ticket, side by side, with the steps aligned. The first difference is marked: a model decision, a tool result or an approval.
 
+What the screens look like with the replayed week (light mode, English):
+
+![The Runs screen: the 316 runs of the replayed week](screens/runs-en-light.png)
+
+![The Audit screen: the double refund told from the audit trail, which verifies](screens/audit-en-light.png)
+
+![The Cost screen: cost per resolved ticket per day, with the budget line and the releases](screens/cost-en-light.png)
+
+![The Compare screen: the double refund beside another run of the same ticket](screens/compare-en-light.png)
+
 The screens have English and French labels (**EN** / **FR**), a light and a dark mode (**Dark mode**, or your system's setting), and work with the keyboard and screen readers. The Markdown export is in English: it is the text of the course's `obs` tool.
 
 ## How one flag is computed
