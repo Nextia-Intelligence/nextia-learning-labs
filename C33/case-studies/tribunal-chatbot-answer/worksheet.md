@@ -5,7 +5,7 @@
 | Question | Your answer | Paragraph |
 |---|---|---|
 | What did the customer ask, and when? | | |
-| What did the chatbot tell him? | | |
+| What did the chatbot tell them? | | |
 | What did another page of the same website say? | | |
 | What did the company argue about its chatbot? | | |
 | What did the tribunal decide, and on which ground? | | |

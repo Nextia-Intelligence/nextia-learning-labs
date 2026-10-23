@@ -1,12 +1,14 @@
 # Case study: a tribunal case about a chatbot's answer
 
-**The decision:** *Moffatt v. Air Canada*, 2024 BCCRT 149, a decision of the Civil Resolution Tribunal of British Columbia. Read it on CanLII: <https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html>. The [source card](source-card.md) says what the decision is, how you may use it, and what this course checked.
+**The decision:** *Moffatt v. Air Canada*, 2024 BCCRT 149, a decision of the Civil Resolution Tribunal of British Columbia. Read it on CanLII: <https://www.canlii.org/en/bc/bccrt/doc/2024/2024bccrt149/2024bccrt149.html>, or search for "2024 BCCRT 149" on the tribunal's decisions site: <https://decisions.civilresolutionbc.ca/crt/en/nav.do>. The [source card](source-card.md) says what the decision is, how you may use it, and what this course checked.
 
 **This is not legal advice**, and it is not a judgement of the company: you use a public decision to practise a governance review.
 
 ## Your role
 
 You are Farida, Larkfield's risk and compliance lead. Nadia read about the case and asks: "Larkfield's support assistant answers customers too. Could this happen to us? What would have prevented it?"
+
+The case study page walks through the analysis: <https://learning.nextia-ai.com/courses/ai-governance/m07/a-tribunal-case-about-a-chatbots-answer/>.
 
 ## What you hand in
 
