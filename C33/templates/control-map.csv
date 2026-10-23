@@ -1,0 +1,3 @@
+policy_line,control,kind,owner,evidence,how_often_checked
+A person approves every refund that an AI system proposes.,The workflow only proposes; a person with a high enough limit approves; the MCP server refuses approvals without the owner role.,platform,Grace and Kwame,Approval record of each refund (who; when; exact action),weekly sample of ten approvals
+,,,,,
