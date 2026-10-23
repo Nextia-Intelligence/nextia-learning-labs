@@ -77,6 +77,7 @@ RESOLVER_PROVIDER=gateway RESOLVER_TOOLS=gateway python -m resolver run T-90103 
 RESOLVER_PROVIDER=gateway RESOLVER_TOOLS=gateway python -m resolver approve T-90103-agent_structured-strong-reasoning-1 --as agent --approver usr-sam
 python -m estate policy test
 python -m estate usage
+python -m apps.workday --tasks 1-4      # a replayed day of the workflow, for a kill-switch drill
 ```
 
 Stop and reset:
