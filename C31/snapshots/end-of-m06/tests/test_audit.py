@@ -6,7 +6,7 @@ import pytest
 from opentelemetry.sdk.trace.sampling import ALWAYS_OFF
 
 from auditstore.schema import AuditEventError
-from auditstore.store import AuditStore
+from auditstore.store import AuditStore, record_hash
 from resolver import telemetry
 from resolver.__main__ import main
 
@@ -32,6 +32,13 @@ def test_the_chain_verifies_and_finds_a_changed_record(tmp_path):
     s.path.write_text("\n".join(lines) + "\n")
     v = s.verify()
     assert not v["ok"] and v["problems"][0].startswith("record 3: its content does not match its hash")
+    recs = [json.loads(line) for line in lines]          # now compute record 3's hash and every later one again
+    for i in range(2, 5):
+        recs[i]["prev"] = recs[i - 1]["hash"]
+        recs[i]["hash"] = record_hash(recs[i]["seq"], recs[i]["prev"], recs[i]["event"])
+    s.path.write_text("".join(json.dumps(r) + "\n" for r in recs))
+    v = s.verify()
+    assert not v["ok"] and "as the anchor says, but its last hash is not the anchor's head" in v["problems"][0]
 
 
 def test_removing_the_last_record_is_found_by_the_anchor(tmp_path):

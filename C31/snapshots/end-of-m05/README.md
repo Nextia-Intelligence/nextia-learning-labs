@@ -6,11 +6,14 @@ Orchestration*, now live: it sends the reply and closes the ticket. You need no 
 decision is a real recording, replayed, and every change goes to a practice database on your computer.
 
 New: cost. Every model span and every run carries its cost and the date of the price table that made it;
-`python -m obs cost` splits it by model, slice, day, step or customer.
+`python -m obs cost` splits it by model, slice, day, step or customer. `--budget` says when the cost per
+resolved ticket went over a budget and which runs caused it; `obs gateway … --by team` splits the gateway's
+records by registered agent or team.
 
 ```sh
 python -m obs cost --by model --data data/telemetry/week
 python -m obs cost --by day --data data/telemetry/week
+python -m obs cost --budget 0.002 --data data/telemetry/week
 ```
 
 ## Set up

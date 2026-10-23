@@ -12,9 +12,11 @@
     python -m resolver eval [--variant agent] [--model chat-small] [--repeat 1] [--slice S] [--approve all|labels]
     python -m resolver compare
     python -m resolver reset [--all]
+    python -m resolver review RUN_ID pass|fail --by usr-priya
 """
 
 import argparse
+import dataclasses
 import json
 import sys
 from pathlib import Path
@@ -132,6 +134,12 @@ def cmd_run(args) -> None:
               f"{required_role(state)}   (or: reject)")
 
 
+def release_for(naive_retry: bool) -> live.Release:
+    """The release settings from the environment; --naive-retry changes the retry only, never the other settings."""
+    release = live.Release.from_env()
+    return dataclasses.replace(release, retry="naive") if naive_retry else release
+
+
 def _decide(args, approve: bool) -> None:
     store = CheckpointStore()
     state = store.load(args.run_id)
@@ -141,9 +149,7 @@ def _decide(args, approve: bool) -> None:
     def save(s):
         keep_faults(s, world)
         store.save(s)
-    release = live.Release.from_env()
-    if args.naive_retry:
-        release = live.Release(release.version, "naive", release.reply_failure, release.hard_model)
+    release = release_for(args.naive_retry)
     if state.status != "waiting_approval":
         sys.exit(f"Not approved: Run {state.run_id} is not waiting for approval (status: {state.status}).")
     try:
@@ -218,6 +224,37 @@ def cmd_trace(args) -> None:
     if state is None:
         sys.exit(f"No run for {args.run}.")
     print(render(state))
+
+
+def cmd_review(args) -> None:
+    """A person's review of a closed run, attached to the run's trace: a GenAI evaluation event whose trace and
+    span IDs are the run span's (the same event the sampled reviews of the replayed week carry)."""
+    from opentelemetry import context as otel_context
+    from opentelemetry import trace
+    from opentelemetry.trace import NonRecordingSpan, SpanContext, TraceFlags
+
+    from . import conventions as c
+    try:
+        state = CheckpointStore().load(args.run_id)
+    except KeyError as e:
+        sys.exit(str(e).strip("'\""))
+    ref = state.telemetry.get("root")
+    if not state.telemetry.get("outcome"):
+        sys.exit(f"Not reviewed: run {state.run_id} is not closed yet (status: {state.status}).")
+    if not ref:
+        sys.exit(f"Not reviewed: run {state.run_id} has no trace (telemetry was off).")
+    parent = SpanContext(int(ref["trace_id"], 16), int(ref["span_id"], 16), False, TraceFlags(ref.get("flags", 1)))
+    token = otel_context.attach(trace.set_span_in_context(NonRecordingSpan(parent)))
+    try:
+        telemetry.get().event("gen_ai.evaluation.result", {
+            "gen_ai.evaluation.name": "sampled-review", "gen_ai.evaluation.score.value": 1.0 if args.label == "pass" else 0.0,
+            "gen_ai.evaluation.score.label": args.label, c.RUN_ID: state.run_id, c.TICKET_ID: state.task_id,
+            "larkfield.reviewer": args.by})
+    finally:
+        otel_context.detach(token)
+    telemetry.get().flush()
+    print(f"Review of {state.run_id} ({state.telemetry['outcome'].replace('_', ' ')}): {args.label}, by {args.by}. "
+          f"Attached to trace {ref['trace_id']}, span {ref['span_id']}.")
 
 
 def cmd_runs(args) -> None:
@@ -332,10 +369,16 @@ def main(argv=None) -> None:
     sub.add_parser("compare")
     p = sub.add_parser("reset")
     p.add_argument("--all", action="store_true")
+    p = sub.add_parser("review")
+    p.add_argument("run_id")
+    p.add_argument("label", choices=["pass", "fail"])
+    p.add_argument("--by", default="usr-priya", help="the reviewer's person ID")
     args = ap.parse_args(argv)
     {"tasks": cmd_tasks, "show": cmd_show, "run": cmd_run, "resume": cmd_resume, "trace": cmd_trace,
      "runs": cmd_runs, "changes": cmd_changes, "eval": cmd_eval, "compare": cmd_compare, "reset": cmd_reset,
-     "approve": lambda a: _decide(a, True), "reject": lambda a: _decide(a, False)}[args.command](args)
+     "approve": lambda a: _decide(a, True), "reject": lambda a: _decide(a, False),
+     "review": cmd_review,
+     }[args.command](args)
 
 
 if __name__ == "__main__":

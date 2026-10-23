@@ -20,10 +20,12 @@ python -m estate register registrations/support-workflow.yaml
 python -m estate review support-workflow --next 2026-12-01
 python -m estate credentials issue support-workflow
 python -m estate config publish --note "the registrations"
-python -m estate up
+PYTHONPATH=../.. python -m estate up
 ```
 
-PowerShell: the same commands (`cd vendor\ai-estate`).
+`PYTHONPATH=../..` lets the estate's tool server find the workflow's code in the project folder; without it the tool gateway prints `NOT ANSWERING` (the model gateway still works).
+
+PowerShell: the same commands (`cd vendor\ai-estate`), with `$env:PYTHONPATH = "..\.."` before `python -m estate up`.
 
 Run a ticket through the gateway (from the project folder). The model is a capability name now:
 

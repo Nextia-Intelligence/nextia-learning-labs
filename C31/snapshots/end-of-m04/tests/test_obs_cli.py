@@ -39,5 +39,9 @@ def test_find_counts_the_patterns(capsys, monkeypatch):
     assert "match(es) in 316 run(s)" in out
     out = run(capsys, monkeypatch, "runs", *WEEK, "--flag", "duplicate_write")
     assert "R-1014-040" in out
+    # the metric around the no-action runs: 9 failed replies on Thursday, each point with an example trace
+    out = run(capsys, monkeypatch, "metrics", "larkfield.tool.calls", "--where", "gen_ai.tool.name=send_reply",
+              "--where", "larkfield.tool.status=failed", *WEEK)
+    assert "R-1015-017 (trace f62fe6a2)" in out and "4 interval(s) with an increase, 4 with an example trace" in out
 
 

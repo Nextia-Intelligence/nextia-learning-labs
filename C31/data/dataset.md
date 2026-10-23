@@ -25,6 +25,7 @@ tickets (316 runs, Monday to Sunday), the same tickets on a healthy release, one
 | `telemetry/healthy-week/` | the same | The same tickets on the healthy release, with no incident |
 | `telemetry/constructed/` | the same | One constructed run: a scripted model (not a real one) follows an injected instruction |
 | `telemetry/gateway/` | `traces.jsonl`, `gateway-usage.json` | 70 tickets through the agents governance course's model gateway: the workflow's traces and the gateway's usage records |
+| `langfuse/` | `session-R-1014-040.json`, `scores-R-1014-040.json`, `observations-sample.json` | Langfuse's API answers after the course team sent the week to Langfuse once (synthetic data only): the double refund's session, its scores, and a sample of observations. Langfuse computed no cost for these models (`totalCost` is empty) |
 | `logs/week.log` | | The week as the workflow's log file shows it (one line per closed ticket) |
 
 **What is not in it.** No text of a ticket, prompt, answer or reply: only IDs, counts, codes, model and tool names.

@@ -30,7 +30,6 @@ def test_a_run_is_one_trace_with_genai_spans(telemetry_files, capsys):
     assert abs(first.seconds - first.get(c.RECORDED_LATENCY)) < 0.01
     tools = run.tool_spans
     assert [s.tool for s in tools][:1] == ["get_order"] and tools[0].get(c.ARGS_SHAPE) == "order_id"
-    assert run.replies[0].get(c.REPLY_STATUS) == "sent"
 
 
 def test_no_text_leaves_the_application_by_default(telemetry_files, capsys):

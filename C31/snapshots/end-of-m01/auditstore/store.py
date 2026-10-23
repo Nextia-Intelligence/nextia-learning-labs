@@ -152,9 +152,12 @@ class AuditStore:
             prev = rec["hash"]
         if not problems and self.anchor.exists():
             a = json.loads(self.anchor.read_text())
-            if a.get("count") != n or a.get("head") != prev:
+            if a.get("count") != n:
                 problems.append(f"the store has {n} records, the anchor says {a.get('count')}: records were removed "
                                 "at the end or added without the store")
+            elif a.get("head") != prev:
+                problems.append(f"the store has {n} records, as the anchor says, but its last hash is not the anchor's "
+                                "head: a record was changed and the hashes after it computed again")
         elif not problems and n:
             problems.append("no anchor file: the end of the chain cannot be checked")
         return {"ok": not problems, "count": n, "head": prev, "problems": problems}

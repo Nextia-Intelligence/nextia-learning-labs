@@ -29,10 +29,8 @@ services:
       - "host.docker.internal:host-gateway"
     volumes:
       - lgtmdata:/data
-      - ../collector/${OTELCOL_CONFIG:-otelcol-config.yaml}:/otel-lgtm/otelcol-config.yaml:ro
       - ./provisioning/dashboards.yaml:/otel-lgtm/grafana/conf/provisioning/dashboards/support-workflow.yaml:ro
       - ./dashboards:/otel-lgtm/support-workflow-dashboards:ro
-      - ./alerts/agent-alerts.yaml:/otel-lgtm/grafana/conf/provisioning/alerting/support-workflow.yaml:ro
 
 volumes:
   lgtmdata:

@@ -8,7 +8,8 @@
     python -m obs events [RUN_ID] [--name larkfield.run.closed] [--data DIR]
     python -m obs audit  verify|show RUN_ID|story RUN_ID|forget CUSTOMER_ID [--audit FILE] [--markdown]
     python -m obs slo    [--data DIR] [--window 45]
-    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json]
+    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json] [--min-runs N]
+    python -m obs reviews [--by language|model|release|outcome|day] [--failed] [--queue [--share 0.2] [--every de,fr]]
     python -m obs check-redaction DIR
     python -m obs gateway USAGE.json [--data DIR]
 

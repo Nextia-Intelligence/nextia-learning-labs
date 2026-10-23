@@ -42,3 +42,22 @@ def join(t, usage: Path) -> list[str]:
     for cap, model in models:
         lines.append(f"  capability {cap} was answered by {model}")
     return lines
+
+
+
+def split(usage: Path, by: str) -> list[str]:
+    """The gateway's records grouped by what only the gateway knows: the registered agent, its team, the
+    capability or the model that answered. Calls, calls that did not end ok, tokens and cost per group."""
+    field = {"agent": "agent_id", "team": "team", "capability": "capability", "model": "model_version"}[by]
+    groups: dict = {}
+    for r in json.loads(Path(usage).read_text()):
+        g = groups.setdefault(r.get(field) or "-", [0, 0, 0, 0, 0.0])
+        g[0] += 1
+        g[1] += r.get("outcome") != "ok"
+        g[2] += r.get("tokens_in") or 0
+        g[3] += r.get("tokens_out") or 0
+        g[4] += r.get("cost_usd") or 0
+    lines = [f"{by:<24} {'calls':>6} {'not ok':>7} {'tokens in':>10} {'out':>8} {'cost US$':>10}"]
+    for k, (n, refused, tin, tout, cost) in sorted(groups.items()):
+        lines.append(f"{k:<24} {n:>6} {refused:>7} {tin:>10} {tout:>8} {cost:>10.5f}")
+    return lines + ["The gateway prices each call with its own price table; the traces price the same calls with the app's."]

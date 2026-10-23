@@ -6,9 +6,11 @@
     python -m obs find   --tool get_order --min-calls 3 | --write-without-approval | --error-then-resolved
     python -m obs cost   [--by model|language|outcome|design|day|step|customer|release] [--data DIR]
     python -m obs events [RUN_ID] [--name larkfield.run.closed] [--data DIR]
+    python -m obs metrics NAME [--where KEY=VALUE] [--day D] [--data DIR]
     python -m obs audit  verify|show RUN_ID|story RUN_ID|forget CUSTOMER_ID [--audit FILE] [--markdown]
     python -m obs slo    [--data DIR] [--window 45]
-    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json]
+    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json] [--min-runs N]
+    python -m obs reviews [--by language|model|release|outcome|day] [--failed] [--queue [--share 0.2] [--every de,fr]]
     python -m obs check-redaction DIR
     python -m obs gateway USAGE.json [--data DIR]
 
@@ -217,11 +219,63 @@ def cmd_find(args):
     print(f"{len(hits)} match(es) in {len(runs)} run(s)")
 
 
+# ------------------------------------------------------------------ metrics, with their exemplars
+
+def cmd_metrics(args):
+    """The increase of one metric between two exported points (one hour in the saved week), per series, with the
+    example trace (exemplar) that the SDK attached to the point. Metrics are never sampled: they count every run."""
+    from .model import attributes, lines
+    t = load(args)
+    where = dict(w.split("=", 1) for w in args.where or [])
+    run_of = {s.trace_id: r.run_id for r in t.runs.values() for s in r.spans}
+    last: dict = {}
+    rows = []
+    description = ""
+    for request in lines(t.folder / "metrics.jsonl"):
+        for rm in request.get("resourceMetrics", []):
+            for sm in rm.get("scopeMetrics", []):
+                for m in sm.get("metrics", []):
+                    if m["name"] != args.name:
+                        continue
+                    description = m.get("description", "")
+                    points = (m.get("sum") or m.get("histogram") or {}).get("dataPoints", [])
+                    for p in points:
+                        a = attributes(p.get("attributes"))
+                        if any(str(a.get(k)) != v for k, v in where.items()):
+                            continue
+                        series = tuple(sorted((k, str(v)) for k, v in a.items() if k not in where))
+                        value = float(p.get("asInt") or p.get("asDouble") or p.get("count") or 0)
+                        before = last.get(series)
+                        end = int(p["timeUnixNano"])
+                        last[series] = (value, end)
+                        increase = value - (before[0] if before else 0)
+                        start = before[1] if before else int(p["startTimeUnixNano"])
+                        if increase <= 0:
+                            continue
+                        if args.day and not when(start, "%a").lower().startswith(args.day.lower()[:3]):
+                            continue
+                        example = next((e.get("traceId", "") for e in p.get("exemplars", [])), "")
+                        rows.append((start, end, series, increase, example))
+    if not description:
+        sys.exit(f"No metric {args.name} in {t.folder}.")
+    print(f"{args.name}: {description}, increase per exported interval"
+          + "".join(f", {k}={v}" for k, v in where.items()) + (f", {args.day}" if args.day else ""))
+    for start, end, series, increase, example in sorted(rows):
+        labels = " ".join(f"{k.replace('larkfield.', '').replace('gen_ai.', '')}={v}" for k, v in series) or "-"
+        shown = f"{increase:g}" if increase == int(increase) else f"{increase:.5f}"
+        ex = f"{run_of.get(example, '?')} (trace {example[:8]})" if example else "-"
+        print(f"{when(start, '%a %H:%M')}-{when(end, '%H:%M')}  +{shown:<8} {labels:<44} example: {ex}")
+    print(f"{len(rows)} interval(s) with an increase, {sum(1 for r in rows if r[4])} with an example trace")
+
+
 # ------------------------------------------------------------------ cost
 
 def cmd_cost(args):
     t = load(args)
     runs = select(t, args)
+    if args.budget is not None:
+        budget_report(runs, args.budget, args.window)
+        return
     if args.by == "step":
         from collections import defaultdict
         rows = defaultdict(lambda: [0, 0.0, 0, 0])
@@ -259,6 +313,31 @@ def cmd_cost(args):
               f"{(f'{total_cost / total_res:.5f}' if total_res else '-'):>12} {total_res / len(runs):>8.1%}")
     print("Cost = tokens x the price table of the course's recordings (larkfield.price_table on each span). "
           "Check your provider's current prices.")
+
+
+def budget_report(runs, budget: float, window: int, min_runs: int = 20, top: int = 5):
+    """When the cost per resolved ticket over the last WINDOW closed runs first went over BUDGET, and the runs
+    that cost most in that window: a budget alert that names the runs behind it."""
+    order = sorted(runs, key=lambda r: r.end)
+    print(f"Budget: US${budget} per resolved ticket over the last {window} closed runs (from {min_runs} runs on)")
+    for i, run in enumerate(order):
+        recent = order[max(0, i + 1 - window):i + 1]
+        resolved = sum(1 for r in recent if r.outcome == "resolved")
+        cost = sum(r.cost for r in recent)
+        if len(recent) < min_runs or not resolved or cost / resolved <= budget:
+            continue
+        print(f"Over budget at {when(run.end, '%a %d %b %H:%M')} (closed run {i + 1}, {run.run_id}): "
+              f"US${cost / resolved:.5f} per resolved ticket ({resolved} resolved, US${cost:.5f})")
+        costly = sorted(recent, key=lambda r: -r.cost)[:top]
+        share = sum(r.cost for r in costly) / cost if cost else 0
+        print(f"The {len(costly)} runs that cost most in that window ({share:.0%} of its cost):")
+        w = max([len(r.run_id) for r in costly] + [12])
+        print(f"{'run':<{w}} {'ticket':<8} {'started':<9} {'outcome':<17} {'model':>5} {'tools':>5} {'appr':>4} "
+              f"{'cost US$':>9} {'secs':>6} {'model':<11} flags")
+        for r in costly:
+            print(run_row(r, w))
+        return
+    print("Never over budget.")
 
 
 # ------------------------------------------------------------------ events
@@ -322,9 +401,9 @@ def cmd_audit(args):
 # ------------------------------------------------------------------ service levels and alerts
 
 def cmd_slo(args):
-    from .alerts import slis
+    from .alerts import approvals_and_reviews, slis
     t = load(args)
-    for line in slis(list(t.runs.values()), args.window):
+    for line in slis(list(t.runs.values()), args.window) + approvals_and_reviews(t):
         print(line)
 
 
@@ -332,7 +411,41 @@ def cmd_alerts(args):
     from .alerts import evaluate, load_rules
     t = load(args)
     rules = load_rules(Path(args.rules) if args.rules else PROJECT / "grafana" / "alerts" / "rules.json")
-    for line in evaluate(list(t.runs.values()), rules):
+    if args.min_runs is not None:
+        print(f"Every rule is evaluated from closed run {args.min_runs} on (the rules file's min_runs is not used).")
+    for line in evaluate(list(t.runs.values()), rules, args.min_runs):
+        print(line)
+
+
+def cmd_reviews(args):
+    from .alerts import passed, review_table, reviews_of, sampled
+    t = load(args)
+    if args.queue:
+        reviews = reviews_of(t)
+        every = set(args.every.split(",")) if args.every else set()
+        queue = [r for r in sorted(t.runs.values(), key=lambda r: r.end) if r.run_id not in reviews
+                 and (sampled(r.run_id, args.share) or r.language in every)]
+        w = max([len(r.run_id) for r in queue] + [12])
+        print(f"{'run':<{w}} {'ticket':<8} {'closed':<9} {'language':<8} {'model':<11} outcome")
+        for r in queue:
+            print(f"{r.run_id:<{w}} {r.ticket:<8} {when(r.end, '%a %H:%M'):<9} {r.language:<8} {r.model:<11} {r.outcome}")
+        print(f"{len(queue)} run(s) to review: {args.share:.0%} of runs by the hash of the run ID"
+              + (f", and every run in {', '.join(sorted(every))}" if every else "")
+              + f"; {len(reviews)} run(s) already reviewed.")
+        return
+    if args.failed:
+        reviews = reviews_of(t)
+        bad = [(t.runs[rid], e) for rid, e in reviews.items() if not passed(e)]
+        w = max([len(r.run_id) for r, _ in bad] + [12])
+        print(f"{'run':<{w}} {'ticket':<8} {'language':<8} {'model':<11} {'outcome':<17} {'reviewed':<9} trace")
+        for r, e in sorted(bad, key=lambda x: x[0].end):
+            print(f"{r.run_id:<{w}} {r.ticket:<8} {r.language:<8} {r.model:<11} {r.outcome:<17} "
+                  f"{when(e['time'], '%a %H:%M'):<9} {e['trace_id']}")
+        print(f"{len(bad)} failed review(s) of {len(reviews)}")
+        return
+    key = {"language": lambda r: r.language, "model": lambda r: r.model, "release": lambda r: r.release,
+           "outcome": lambda r: r.outcome, "day": lambda r: when(r.start, "%a %d")}[args.by]
+    for line in review_table(t, key):
         print(line)
 
 
@@ -351,6 +464,11 @@ def cmd_check_redaction(args):
 
 def cmd_gateway(args):
     from .gateway import join
+    if args.by:
+        from .gateway import split
+        for line in split(Path(args.usage), args.by):
+            print(line)
+        return
     t = load(args)
     for line in join(t, Path(args.usage)):
         print(line)
@@ -376,11 +494,17 @@ def main(argv=None):
     p.add_argument("--min-calls", type=int)
     p.add_argument("--write-without-approval", action="store_true")
     p.add_argument("--error-then-resolved", action="store_true")
+    p = data(sub.add_parser("metrics"))
+    p.add_argument("name", help="a metric name, for example larkfield.tool.calls")
+    p.add_argument("--where", action="append", help="KEY=VALUE: keep only the series with this attribute")
+    p.add_argument("--day")
     p = data(sub.add_parser("cost"))
     p.add_argument("--by", default="model",
                    choices=["model", "language", "outcome", "design", "day", "step", "customer", "release", "none"])
     for f in ("outcome", "model", "language", "day", "release"):
         p.add_argument(f"--{f}")
+    p.add_argument("--budget", type=float, help="US$ per resolved ticket: when did a window go over it, and why")
+    p.add_argument("--window", type=int, default=45, help="closed runs per window (45 = one day at Larkfield)")
     p = data(sub.add_parser("events"))
     p.add_argument("run", nargs="?")
     p.add_argument("--name")
@@ -394,17 +518,26 @@ def main(argv=None):
     p.add_argument("--window", type=int, default=45, help="runs per window (45 = one day at Larkfield)")
     p = data(sub.add_parser("alerts"))
     p.add_argument("--rules")
+    p.add_argument("--min-runs", type=int, help="evaluate every rule from this closed run on (1 = no guard)")
+    p = data(sub.add_parser("reviews"))
+    p.add_argument("--by", default="language", choices=["language", "model", "release", "outcome", "day"])
+    p.add_argument("--failed", action="store_true", help="list the failed reviews and their trace IDs")
+    p.add_argument("--queue", action="store_true", help="the runs that the sampler picks and nobody reviewed yet")
+    p.add_argument("--share", type=float, default=0.2, help="the sampler's share of runs (default 0.2)")
+    p.add_argument("--every", help="languages whose every run is reviewed, for example de,fr")
     p = sub.add_parser("check-redaction")
     p.add_argument("folder")
     p = data(sub.add_parser("gateway"))
     p.add_argument("usage", help="the gateway's usage records (JSON), from the agents governance course's estate")
+    p.add_argument("--by", choices=["agent", "team", "capability", "model"])
     args = ap.parse_args(argv)
     commands = {"runs": cmd_runs, "trace": cmd_trace, "events": cmd_events, "audit": cmd_audit}
     commands["check-redaction"] = cmd_check_redaction
     commands["gateway"] = cmd_gateway
     commands["find"] = cmd_find
+    commands["metrics"] = cmd_metrics
     commands["cost"] = cmd_cost
-    commands.update({"slo": cmd_slo, "alerts": cmd_alerts})
+    commands.update({"slo": cmd_slo, "alerts": cmd_alerts, "reviews": cmd_reviews})
     commands[args.command](args)
 
 

@@ -6,9 +6,11 @@
     python -m obs find   --tool get_order --min-calls 3 | --write-without-approval | --error-then-resolved
     python -m obs cost   [--by model|language|outcome|design|day|step|customer|release] [--data DIR]
     python -m obs events [RUN_ID] [--name larkfield.run.closed] [--data DIR]
+    python -m obs metrics NAME [--where KEY=VALUE] [--day D] [--data DIR]
     python -m obs audit  verify|show RUN_ID|story RUN_ID|forget CUSTOMER_ID [--audit FILE] [--markdown]
     python -m obs slo    [--data DIR] [--window 45]
-    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json]
+    python -m obs alerts [--data DIR] [--rules grafana/alerts/rules.json] [--min-runs N]
+    python -m obs reviews [--by language|model|release|outcome|day] [--failed] [--queue [--share 0.2] [--every de,fr]]
     python -m obs check-redaction DIR
     python -m obs gateway USAGE.json [--data DIR]
 
@@ -217,6 +219,55 @@ def cmd_find(args):
     print(f"{len(hits)} match(es) in {len(runs)} run(s)")
 
 
+# ------------------------------------------------------------------ metrics, with their exemplars
+
+def cmd_metrics(args):
+    """The increase of one metric between two exported points (one hour in the saved week), per series, with the
+    example trace (exemplar) that the SDK attached to the point. Metrics are never sampled: they count every run."""
+    from .model import attributes, lines
+    t = load(args)
+    where = dict(w.split("=", 1) for w in args.where or [])
+    run_of = {s.trace_id: r.run_id for r in t.runs.values() for s in r.spans}
+    last: dict = {}
+    rows = []
+    description = ""
+    for request in lines(t.folder / "metrics.jsonl"):
+        for rm in request.get("resourceMetrics", []):
+            for sm in rm.get("scopeMetrics", []):
+                for m in sm.get("metrics", []):
+                    if m["name"] != args.name:
+                        continue
+                    description = m.get("description", "")
+                    points = (m.get("sum") or m.get("histogram") or {}).get("dataPoints", [])
+                    for p in points:
+                        a = attributes(p.get("attributes"))
+                        if any(str(a.get(k)) != v for k, v in where.items()):
+                            continue
+                        series = tuple(sorted((k, str(v)) for k, v in a.items() if k not in where))
+                        value = float(p.get("asInt") or p.get("asDouble") or p.get("count") or 0)
+                        before = last.get(series)
+                        end = int(p["timeUnixNano"])
+                        last[series] = (value, end)
+                        increase = value - (before[0] if before else 0)
+                        start = before[1] if before else int(p["startTimeUnixNano"])
+                        if increase <= 0:
+                            continue
+                        if args.day and not when(start, "%a").lower().startswith(args.day.lower()[:3]):
+                            continue
+                        example = next((e.get("traceId", "") for e in p.get("exemplars", [])), "")
+                        rows.append((start, end, series, increase, example))
+    if not description:
+        sys.exit(f"No metric {args.name} in {t.folder}.")
+    print(f"{args.name}: {description}, increase per exported interval"
+          + "".join(f", {k}={v}" for k, v in where.items()) + (f", {args.day}" if args.day else ""))
+    for start, end, series, increase, example in sorted(rows):
+        labels = " ".join(f"{k.replace('larkfield.', '').replace('gen_ai.', '')}={v}" for k, v in series) or "-"
+        shown = f"{increase:g}" if increase == int(increase) else f"{increase:.5f}"
+        ex = f"{run_of.get(example, '?')} (trace {example[:8]})" if example else "-"
+        print(f"{when(start, '%a %H:%M')}-{when(end, '%H:%M')}  +{shown:<8} {labels:<44} example: {ex}")
+    print(f"{len(rows)} interval(s) with an increase, {sum(1 for r in rows if r[4])} with an example trace")
+
+
 # ------------------------------------------------------------------ events
 
 def cmd_events(args):
@@ -300,6 +351,10 @@ def main(argv=None):
     p.add_argument("--min-calls", type=int)
     p.add_argument("--write-without-approval", action="store_true")
     p.add_argument("--error-then-resolved", action="store_true")
+    p = data(sub.add_parser("metrics"))
+    p.add_argument("name", help="a metric name, for example larkfield.tool.calls")
+    p.add_argument("--where", action="append", help="KEY=VALUE: keep only the series with this attribute")
+    p.add_argument("--day")
     p = data(sub.add_parser("events"))
     p.add_argument("run", nargs="?")
     p.add_argument("--name")
@@ -318,6 +373,7 @@ def main(argv=None):
     commands["check-redaction"] = cmd_check_redaction
     commands["gateway"] = cmd_gateway
     commands["find"] = cmd_find
+    commands["metrics"] = cmd_metrics
     commands[args.command](args)
 
 

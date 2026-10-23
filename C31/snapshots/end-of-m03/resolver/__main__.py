@@ -15,6 +15,7 @@
 """
 
 import argparse
+import dataclasses
 import json
 import sys
 from pathlib import Path
@@ -132,6 +133,12 @@ def cmd_run(args) -> None:
               f"{required_role(state)}   (or: reject)")
 
 
+def release_for(naive_retry: bool) -> live.Release:
+    """The release settings from the environment; --naive-retry changes the retry only, never the other settings."""
+    release = live.Release.from_env()
+    return dataclasses.replace(release, retry="naive") if naive_retry else release
+
+
 def _decide(args, approve: bool) -> None:
     store = CheckpointStore()
     state = store.load(args.run_id)
@@ -141,9 +148,7 @@ def _decide(args, approve: bool) -> None:
     def save(s):
         keep_faults(s, world)
         store.save(s)
-    release = live.Release.from_env()
-    if args.naive_retry:
-        release = live.Release(release.version, "naive", release.reply_failure, release.hard_model)
+    release = release_for(args.naive_retry)
     if state.status != "waiting_approval":
         sys.exit(f"Not approved: Run {state.run_id} is not waiting for approval (status: {state.status}).")
     try:
@@ -335,7 +340,8 @@ def main(argv=None) -> None:
     args = ap.parse_args(argv)
     {"tasks": cmd_tasks, "show": cmd_show, "run": cmd_run, "resume": cmd_resume, "trace": cmd_trace,
      "runs": cmd_runs, "changes": cmd_changes, "eval": cmd_eval, "compare": cmd_compare, "reset": cmd_reset,
-     "approve": lambda a: _decide(a, True), "reject": lambda a: _decide(a, False)}[args.command](args)
+     "approve": lambda a: _decide(a, True), "reject": lambda a: _decide(a, False),
+     }[args.command](args)
 
 
 if __name__ == "__main__":

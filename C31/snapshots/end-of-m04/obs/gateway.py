@@ -42,3 +42,4 @@ def join(t, usage: Path) -> list[str]:
     for cap, model in models:
         lines.append(f"  capability {cap} was answered by {model}")
     return lines
+
