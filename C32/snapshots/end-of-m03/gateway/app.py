@@ -81,9 +81,9 @@ async def handle(request: Request, endpoint: str) -> JSONResponse:
         if agent is None:
             raise Refused(403, "not_registered", f"{agent_id} is not registered: register it before its first call.",
                           "registration")
-        if agent.get("revoked_before") and claims["iat"] <= agent["revoked_before"]:
-            raise Refused(401, "token_revoked", "This token was issued before the agent's credentials were revoked.",
-                          "identity")
+        bad = identity.check_credential(agent, claims)
+        if bad:
+            raise Refused(401, *bad, "identity")
         if agent["status"] != "active":
             raise Refused(403, f"agent_{agent['status']}",
                           f"{agent_id} is {agent['status']}: the gateway refuses its calls.", "registration")

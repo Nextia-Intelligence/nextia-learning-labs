@@ -62,3 +62,47 @@ def test_revoked_credentials_get_no_token(triage):
     with pytest.raises(identity.TokenError):
         identity.token(*triage, "model-gateway")
     assert identity.revoked_before("ticket-triage") is not None
+
+
+def agent_view(agent_id):
+    live, revoked = identity.credential_ids(agent_id)
+    return {"credentials": live, "revoked_credentials": revoked}
+
+
+def claims_of(t):
+    return jwt.decode(t, options={"verify_signature": False})
+
+
+def test_each_secret_is_its_own_credential_and_the_token_names_it(triage):
+    t = identity.token(*triage, "model-gateway")["access_token"]
+    assert claims_of(t)["cid"] == "ticket-triage#1"
+    assert identity.check_credential(agent_view("ticket-triage"), claims_of(t)) is None
+
+
+def test_a_revoked_token_stays_refused_after_a_new_secret(triage):
+    old = claims_of(identity.token(*triage, "model-gateway")["access_token"])
+    identity.revoke("ticket-triage", "usr-kwame", "leaked in a log")
+    _, secret = identity.issue_credentials("ticket-triage", "usr-kwame")       # before the old token expires
+    new = claims_of(identity.token("ticket-triage", secret, "model-gateway")["access_token"])
+    assert new["cid"] == "ticket-triage#2" and new["iat"] - old["iat"] <= 1   # the same second, or the next one
+    assert identity.check_credential(agent_view("ticket-triage"), old)[0] == "token_revoked"
+    assert identity.check_credential(agent_view("ticket-triage"), new) is None
+
+
+def test_a_new_secret_replaces_the_old_one(triage):
+    old_token = claims_of(identity.token(*triage, "model-gateway")["access_token"])
+    identity.issue_credentials("ticket-triage", "usr-kwame")                  # no revoke first
+    with pytest.raises(identity.TokenError):
+        identity.token(*triage, "model-gateway")                              # the old secret
+    assert identity.check_credential(agent_view("ticket-triage"), old_token)[0] == "token_revoked"
+    assert registry.events("ticket-triage")[1]["action"] == "credentials_revoked"
+
+
+def test_a_token_without_a_credential_id_is_refused(triage):
+    claims = claims_of(identity.token(*triage, "model-gateway")["access_token"])
+    del claims["cid"]
+    forged = jwt.encode(claims, identity.signing_key(), algorithm="RS256",
+                        headers={"kid": identity.kid(), "typ": "at+jwt"})
+    with pytest.raises(identity.TokenError) as e:
+        identity.Verifier(identity.jwks()).verify(forged, "model-gateway")
+    assert e.value.code == "invalid_token"

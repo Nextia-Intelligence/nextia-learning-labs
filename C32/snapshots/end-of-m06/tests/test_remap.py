@@ -32,6 +32,14 @@ def test_an_average_can_pass_while_one_consumer_fails():
 def test_a_consumer_without_an_evaluation_blocks_a_remap():
     r = remap.gate("fast-small", "azure", "chat-strong", consumers_only=["doc-assistant"])
     assert r["consumers"][0]["verdict"] == "no evidence" and r["decision"] == "block"
+    # gemma3:4b: the agents course recorded the workflow on it, but nobody recorded the judge's requests
+    r = remap.gate("strong-reasoning", "local", "gemma3:4b")
+    by = {c["consumer"]: c for c in r["consumers"]}
+    assert by["release-judge"]["verdict"] == "no evidence"
+    assert (by["support-workflow"]["candidate"]["passed"], by["support-workflow"]["candidate"]["total"]) == (28, 70)
+    assert r["average_current"] == 1.0 and r["decision"] == "block"
+    r = remap.gate("strong-reasoning", "local", "gemma3:4b", consumers_only=["ticket-triage-on-strong"], also=[WHAT_IF])
+    assert r["consumers"][0]["verdict"] == "no evidence"                  # no triage request was recorded on gemma
 
 
 def test_the_report_names_every_consumer():

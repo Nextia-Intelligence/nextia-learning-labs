@@ -180,3 +180,11 @@ def usage_table(by: str = "agent", month: str | None = None, since: str | None =
     return "\n".join(lines)
 
 
+def last_rows(n: int = 1, store=None) -> str:
+    """The last n rows of model calls, one field a line (empty fields left out): what the gateway keeps of a call."""
+    store = store or UsageStore()
+    rows = store.rows("select * from model_calls order by id desc limit ?", (n,))
+    out = []
+    for r in reversed(rows):
+        out.append("\n".join(f"{k:<15}{v}" for k, v in r.items() if k != "id" and v not in (None, "")))
+    return "\n\n".join(out) or "No model call is recorded yet."

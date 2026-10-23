@@ -6,6 +6,7 @@ The `Sender` counts what came back (status, model that answered, cost), so every
 import json
 import os
 import time
+import uuid
 from collections import Counter
 from pathlib import Path
 
@@ -69,6 +70,7 @@ class Sender:
         self.tokens_in = self.tokens_out = 0
         self.lines: list[str] = []
         self.sent = 0
+        self.session = uuid.uuid4().hex[:6]     # this replay's part of each run ID (the gateway's step limit counts per run)
 
     def send(self, path: str, body: dict, unit=None, extra_headers: dict | None = None) -> httpx.Response:
         headers = {"x-sim-host": self.cfg["host"]}
@@ -80,8 +82,8 @@ class Sender:
         else:
             url = self.gateway + path[len("/v1"):]
             headers["authorization"] = "Bearer " + self.token()
-            if unit is not None:
-                headers["x-run-id"] = unit.run_id
+            if unit is not None:      # a replay that sends a recorded unit again is a new run: its own run ID
+                headers["x-run-id"] = f"{unit.run_id}:{self.session}"
         headers.update(extra_headers or {})
         r = self.client.post(url, json=body, headers=headers)
         self.sent += 1

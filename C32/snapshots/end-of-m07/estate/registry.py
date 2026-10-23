@@ -37,8 +37,11 @@ create table if not exists events (
   id integer primary key, at text not null, agent_id text, action text not null, actor text not null,
   detail text not null);
 create table if not exists credentials (
-  client_id text primary key, agent_id text not null, secret_hash text not null, created_at text not null,
-  revoked_at text);
+  credential_id text primary key, client_id text not null, agent_id text not null, secret_hash text not null,
+  created_at text not null, revoked_at text);
+create table if not exists revocations (
+  id integer primary key, credential_id text not null, agent_id text not null, at text not null,
+  actor text not null, reason text not null);
 create table if not exists kill_switches (
   id integer primary key, scope text not null, target text not null, created_at text not null,
   created_by text not null, reason text not null, lifted_at text);
@@ -241,7 +244,8 @@ def get(agent_id: str) -> Registration | None:
         if row is None:
             return None
         creds = [dict(r) for r in con.execute(
-            "select client_id, created_at, revoked_at from credentials where agent_id = ? order by created_at",
+            "select credential_id, client_id, created_at, revoked_at from credentials where agent_id = ? "
+            "order by rowid",
             (agent_id,))]
     return Registration(row["agent_id"], json.loads(row["form"]), row["status"], row["version"], row["created_at"],
                         row["updated_at"], creds)
@@ -267,11 +271,24 @@ def set_status(agent_id: str, status: str, actor: str, reason: str) -> Registrat
         con.execute("update agents set status = ?, updated_at = ? where agent_id = ?", (status, now(), agent_id))
         event(con, agent_id, status, actor, reason=reason, before=reg.status)
         if status == "retired":   # a retired agent keeps no working credential
-            con.execute("update credentials set revoked_at = ? where agent_id = ? and revoked_at is null",
-                        (now(), agent_id))
-            event(con, agent_id, "credentials_revoked", actor, reason="retired")
+            revoke_credentials(con, agent_id, actor, "retired")
         bump(con)
     return get(agent_id)
+
+
+def revoke_credentials(con, agent_id: str, actor: str, reason: str) -> list[str]:
+    """Revoke every live credential of an agent, inside the caller's transaction. Each revocation is also kept in
+    its own table, which nothing ever updates or deletes: a credential that was revoked stays revoked, even when
+    the agent gets new credentials later. Returns the revoked credential IDs."""
+    ids = [r[0] for r in con.execute(
+        "select credential_id from credentials where agent_id = ? and revoked_at is null order by rowid", (agent_id,))]
+    t = now()
+    for cid in ids:
+        con.execute("update credentials set revoked_at = ? where credential_id = ?", (t, cid))
+        con.execute("insert into revocations (credential_id, agent_id, at, actor, reason) values (?, ?, ?, ?, ?)",
+                    (cid, agent_id, t, actor, reason))
+    event(con, agent_id, "credentials_revoked", actor, reason=reason, credentials=ids)
+    return ids
 
 
 def review(agent_id: str, actor: str, next_review: str, approve: bool = True, note: str = "") -> Registration:

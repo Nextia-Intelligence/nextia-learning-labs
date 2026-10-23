@@ -156,12 +156,14 @@ def registry_part() -> dict:
     agents = {}
     for reg in registry.all_registrations():
         f = reg.form
+        live, revoked = identity.credential_ids(reg.agent_id)
         agents[reg.agent_id] = {
             "status": reg.status, "team": f["team"], "kind": f["kind"], "owner": f["owner"],
             "risk_tier": f["risk_tier"], "data_classes": f.get("data_classes") or [],
             "capabilities": f.get("capabilities") or [], "tools": f.get("tools") or [], "autonomy": f["autonomy"],
             "budget_usd_month": f.get("budget_usd_month") or 0, "limits": f.get("limits") or {},
             "pins": f.get("pins") or {}, "revoked_before": identity.revoked_before(reg.agent_id),
+            "credentials": live, "revoked_credentials": revoked,
             "failure_mode": (f.get("long_form") or {}).get("failure_mode"),
         }
     with closing(db()) as con:
@@ -200,11 +202,25 @@ def age_seconds(iso: str) -> float:
     return (clock.now() - datetime.fromisoformat(iso)).total_seconds()
 
 
+def _have_toolgate() -> bool:
+    """Whether `estate up` started a tool gateway (its process ID is in state/pids.json)."""
+    from estate import services
+
+    return "toolgate" in services.running()
+
+
 def push(extra_urls: list[str] | None = None, timeout: float = 2.0) -> tuple[int, int]:
     """Ask every known replica (and the tool gateway) to fetch the configuration now. Returns (answered, asked)."""
     if os.environ.get("ESTATE_PUSH", "on") == "off":   # a practice switch: wait for the replicas' own polls
         return 0, 0
     urls = replica_urls() + list(extra_urls or [])
+    # The tool gateway checks the same registry part (suspensions, drains, credentials): push it too, when it
+    # runs. Without it, a resume or new credentials waited for its own poll, and a run that started
+    # at once was refused by the tool gateway (a real race, found by the kill-switch drill).
+    if _have_toolgate():
+        tg = os.environ.get("ESTATE_TOOLS_URL", f"http://127.0.0.1:{os.environ.get('TOOLGATE_PORT', '8326')}")
+        urls.append(tg)
+    urls = list(dict.fromkeys(u.rstrip("/") for u in urls))
     ok = 0
     for url in urls:
         try:

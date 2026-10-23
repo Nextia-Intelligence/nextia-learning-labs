@@ -51,6 +51,15 @@ def test_a_pin_keeps_one_deployment():
     cat = catalog.load_catalog()
     pin = {"deployment": "chat-strong", "model_version": "gpt-6.1-sol-2026-09-29", "retire_by": "2027-03-31"}
     assert {t.deployment for t in catalog.targets(cat, "strong-reasoning", pin=pin)} == {"chat-strong"}
+    moved = copy.deepcopy(cat)                                            # a remap to chat-small: the pin stays
+    for e in [moved["capabilities"]["strong-reasoning"]["mapping"]["primary"],
+              *moved["capabilities"]["strong-reasoning"]["mapping"]["fallbacks"]]:
+        e.update(deployment="chat-small", params={"reasoning_effort": "none"})
+    assert [t.label() for t in catalog.targets(moved, "strong-reasoning")] == ["azure/chat-small",
+                                                                              "azure-canada/chat-small"]
+    pinned = catalog.targets(moved, "strong-reasoning", pin=pin)
+    assert [t.label() for t in pinned] == ["azure/chat-strong", "azure-canada/chat-strong"]
+    assert pinned[0].body_for({"model": "strong-reasoning", "messages": []}) == {"model": "chat-strong", "messages": []}
 
 
 def test_the_platform_adds_settings_only_when_needed():

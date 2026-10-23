@@ -69,6 +69,14 @@ python -m estate usage
 python -m estate usage --by model
 ```
 
+Practice incidents that you cause on purpose (the loop and the hour are constructed; the requests are recorded):
+
+```sh
+python -m apps.runaway support-workflow --attempts 300     # which limit stops a loop, and what it cost first
+python -m apps.traffic --seconds 150                       # stop a replica or the control plane meanwhile
+python -m estate usage --last 1                            # what the gateway keeps of the last call
+```
+
 Stop and reset:
 
 ```sh

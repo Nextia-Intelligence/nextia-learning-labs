@@ -11,20 +11,24 @@ def cmd_credentials(a):
     from estate import configstore, identity
 
     if a.action == "issue":
+        before = identity.credential_ids(a.id)[0]
         try:
-            cid, _ = identity.issue_credentials(a.id, _actor(a))
+            client_id, _ = identity.issue_credentials(a.id, _actor(a))
         except (KeyError, ValueError) as e:
             sys.exit(str(e))
-        where = paths.state() / "credentials" / f"{cid}.json"
+        cred = identity.credential_ids(a.id)[0][-1]
+        where = paths.state() / "credentials" / f"{client_id}.json"
         shown = where.relative_to(paths.PROJECT) if paths.PROJECT in where.parents else where
-        print(f"New credentials for {cid}: client ID {cid}; the secret is in {shown} "
+        print(f"New credentials for {client_id}: client ID {client_id}, credential {cred}; the secret is in {shown} "
               "(shown nowhere else; keep it out of code and out of Git).")
+        if before:
+            print(f"Revoked the earlier credential(s) {', '.join(before)}: their tokens are refused now.")
     else:
         n = identity.revoke(a.id, _actor(a), a.reason)
-        print(f"Revoked {n} credential(s) of {a.id}. Tokens issued before now are refused too.")
-        ok, asked = configstore.push()
-        if asked:
-            print(f"Told {ok} of {asked} gateway replicas to refresh now.")
+        print(f"Revoked {n} credential(s) of {a.id}. Their tokens are refused too, for good.")
+    ok, asked = configstore.push()
+    if asked:
+        print(f"Told {ok} of {asked} gateway replicas to refresh now.")
 
 
 def cmd_token(a):

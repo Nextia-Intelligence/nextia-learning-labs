@@ -7,7 +7,8 @@ consumers (the registrations that list the capability), runs each one's evaluati
 it, with a measure and a minimum) with the CURRENT mapping and with the CANDIDATE, and decides:
 
     pass   every consumer reaches its own minimum with the candidate
-    block  at least one consumer does not, or a consumer has no evaluation that the gate can run
+    block  at least one consumer does not, or a consumer has no evidence: no evaluation that the gate can run,
+           or no answer of the candidate to score (nobody recorded these requests on that model)
 
 It also prints the average over all items of all consumers, because that is the number a platform team is
 tempted to use, and the cost per item. The evaluations replay the real recordings of the earlier courses, so
@@ -172,6 +173,11 @@ def gate(capability: str, provider: str, deployment: str, params: dict | None = 
             continue
         fn = EVALUATORS[ev["evaluation"]]
         now, cand = fn(current), fn(candidate)
+        if cand["total"] == 0 or cand["caller"].errors == cand["caller"].calls:   # not one answer to score
+            row.update(evaluation=ev["evaluation"], verdict="no evidence",
+                       reason=f"no answer of {candidate.label()} to score: no evidence, no remap for this consumer")
+            result["consumers"].append(row)
+            continue
         rate_now = now["passed"] / max(1, now["total"])
         rate_cand = cand["passed"] / max(1, cand["total"])
         row.update(evaluation=ev["evaluation"], measure=ev["measure"], minimum=ev["minimum"],
@@ -191,7 +197,8 @@ def gate(capability: str, provider: str, deployment: str, params: dict | None = 
     tp = sum(c["candidate"]["passed"] for c in scored)
     tt = sum(c["candidate"]["total"] for c in scored)
     result["average_candidate"] = round(tp / max(1, tt), 4)
-    result["average_current"] = round(sum(c["current"]["passed"] for c in scored) / max(1, tt), 4)
+    result["average_current"] = round(sum(c["current"]["passed"] for c in scored)
+                                      / max(1, sum(c["current"]["total"] for c in scored)), 4)
     result["mean_of_consumer_rates"] = round(sum(c["candidate"]["rate"] for c in scored) / max(1, len(scored)), 4)
     result["decision"] = "pass" if result["consumers"] and all(c["verdict"] == "pass" for c in result["consumers"]) \
         else "block"

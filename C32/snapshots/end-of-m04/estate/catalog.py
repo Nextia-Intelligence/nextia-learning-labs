@@ -64,7 +64,8 @@ def _target(entry: dict, pinned: bool = False) -> Target:
 def targets(catalog: dict, capability: str, data_class: str = "personal", pin: dict | None = None,
             providers: dict | None = None) -> list[Target]:
     """The deployments to try for a request, in order: the mapping's primary, then its fallbacks; only providers
-    whose contract allows the data class. A pin keeps only that deployment (in any region of the mapping)."""
+    whose contract allows the data class. A pin keeps that one deployment at each provider of the mapping, also
+    after a remap moved the mapping to another model (then without the new model's settings: the pin's own)."""
     providers = providers if providers is not None else load_providers()
     cap = catalog["capabilities"].get(capability)
     if not cap or not cap.get("mapping"):
@@ -76,8 +77,11 @@ def targets(catalog: dict, capability: str, data_class: str = "personal", pin: d
         if p is None or data_class not in (p.get("data_classes") or []):
             continue
         if pin and e["deployment"] != pin["deployment"]:
-            continue
-        out.append(_target(e, pinned=bool(pin)))
+            e = {"provider": e["provider"], "deployment": pin["deployment"], "params": pin.get("params"),
+                 "params_if_tools": pin.get("params_if_tools")}
+        t = _target(e, pinned=bool(pin))
+        if t.label() not in {x.label() for x in out}:
+            out.append(t)
     return out
 
 

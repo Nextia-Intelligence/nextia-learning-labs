@@ -7,11 +7,11 @@ Each folder here is the `ai-estate` project of [Governing AI Agents: Gateways, R
 | [`start`](start) | Module 1 | The provider simulator (`python -m provsim`) and its recordings, the apps' replayers (`python -m apps.replay`), the weekly digest script, the agents course's support workflow, the MCP course's support server. | 88 |
 | [`end-of-m01`](end-of-m01) | Module 2 | The estate's command line: `python -m estate up`, `down`, `status`, `reset`; Larkfield's AI policy and the rules worksheet. | 91 |
 | [`end-of-m02`](end-of-m02) | Module 3 | The capability catalog (`config/catalog.yaml`, `models.yaml`, `providers.yaml`, `data-classes.yaml`), `estate catalog`, the remap gate (`estate remap gate`) with each consumer's evaluation, draft registrations. | 104 |
-| [`end-of-m03`](end-of-m03) | Module 4 | The registry (`estate register`, `review`, `suspend`, `retire`, `review-due`), one identity per agent (`estate credentials`, `token`), the control plane, the first model gateway, the apps through the gateway (`--via gateway`). | 129 |
-| [`end-of-m04`](end-of-m04) | Module 5 | The whole model gateway: the usage record (`estate usage`), limits, data classes, guardrails, three replicas behind a front door, failure modes, staged configuration changes (`estate config publish --stage canary`, `watch`, `rollback`); the support workflow's model calls through the gateway. | 166 |
-| [`end-of-m05`](end-of-m05) | Module 6 | The tool gateway (`python -m toolgate`) with the order systems' MCP server and the support MCP server, the approval policy (`estate policy test`), approval grants, kill switches (`estate kill`), draining; the support workflow's tools through the tool gateway; `python -m apps.helpdesk`. | 184 |
-| [`end-of-m06`](end-of-m06) | Module 7 | The month's estate report (`estate report`), incidents and exceptions, finding unregistered AI (`estate discover`), the replayed month's evidence in `evidence/`. | 188 |
-| [`end-of-m07`](end-of-m07) | The final assignment | The comparison sheet and the rollout plan in `docs/`, `estate adoption`. The course-end project. | 189 |
+| [`end-of-m03`](end-of-m03) | Module 4 | The registry (`estate register`, `review`, `suspend`, `retire`, `review-due`), one identity per agent (`estate credentials`, `token`), the control plane, the first model gateway, the apps through the gateway (`--via gateway`). | 135 |
+| [`end-of-m04`](end-of-m04) | Module 5 | The whole model gateway: the usage record (`estate usage`), limits, data classes, guardrails, three replicas behind a front door, failure modes, staged configuration changes (`estate config publish --stage canary`, `watch`, `rollback`); the support workflow's model calls through the gateway. | 172 |
+| [`end-of-m05`](end-of-m05) | Module 6 | The tool gateway (`python -m toolgate`) with the order systems' MCP server and the support MCP server, the approval policy (`estate policy test`), approval grants, kill switches (`estate kill`), draining; the support workflow's tools through the tool gateway; `python -m apps.helpdesk`. | 190 |
+| [`end-of-m06`](end-of-m06) | Module 7 | The month's estate report (`estate report`), incidents and exceptions, finding unregistered AI (`estate discover`), the replayed month's evidence in `evidence/`. | 194 |
+| [`end-of-m07`](end-of-m07) | The final assignment | The comparison sheet and the rollout plan in `docs/`, `estate adoption`. The course-end project. | 195 |
 
 Each snapshot has only what the lessons' guided practice makes. It does not have the answers to the "Your turn" tasks.
 
@@ -55,7 +55,7 @@ The steps use `end-of-m03` as an example. Use the name of your snapshot.
    python -m pytest
    ```
 
-   `end-of-m03` gives `129 passed`. Then follow the snapshot's README: it starts the estate for that stage.
+   `end-of-m03` gives `135 passed`. Then follow the snapshot's README: it starts the estate for that stage.
 
 ## Tested
 

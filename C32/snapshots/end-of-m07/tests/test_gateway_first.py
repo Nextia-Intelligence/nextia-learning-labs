@@ -59,10 +59,27 @@ def test_an_old_model_name_works_with_a_warning(estate, gateway):
 
 
 def test_revoked_credentials_kill_the_tokens_already_issued(estate, gateway):
-    import time
-
-    t = estate.token("ticket-triage")
-    time.sleep(1.1)
+    t = estate.token("ticket-triage")                    # no wait: the check compares credential IDs, not times
     estate.identity.revoke("ticket-triage", "usr-kwame", "the secret leaked")
     r = post(gateway(), t)
     assert r.status_code == 401 and r.json()["error"]["code"] == "token_revoked"
+
+
+def test_a_new_secret_in_the_same_second_works_and_the_old_token_stays_dead(estate, gateway):
+    old = estate.token("ticket-triage")
+    estate.identity.revoke("ticket-triage", "usr-kwame", "the secret leaked")
+    _, secret = estate.identity.issue_credentials("ticket-triage", "usr-kwame")     # the same second
+    new = estate.identity.token("ticket-triage", secret, "model-gateway")["access_token"]
+    g = gateway()                                       # a replica with the latest snapshot
+    r = post(g, old)
+    assert r.status_code == 401 and r.json()["error"]["code"] == "token_revoked"
+    assert post(g, new).status_code == 200
+
+
+def test_a_replica_that_has_not_refreshed_refuses_the_new_credential(estate, gateway):
+    stale = estate.snapshot()                           # taken before the new secret exists
+    _, secret = estate.identity.issue_credentials("ticket-triage", "usr-kwame")
+    new = estate.identity.token("ticket-triage", secret, "model-gateway")["access_token"]
+    r = post(gateway(snapshot=stale), new)              # fail closed until its next refresh (the CLI pushes one)
+    assert r.status_code == 401 and r.json()["error"]["code"] == "credential_unknown"
+    assert post(gateway(), new).status_code == 200

@@ -155,9 +155,9 @@ async def call_tool(request: Request) -> JSONResponse:
         if agent is None:
             raise Refused(403, "not_registered", f"{agent_id} is not registered.", "registration")
         row["team"] = agent["team"]
-        if agent.get("revoked_before") and claims["iat"] <= agent["revoked_before"]:
-            raise Refused(401, "token_revoked", "This token was issued before the credentials were revoked.",
-                          "identity")
+        bad = identity.check_credential(agent, claims)
+        if bad:
+            raise Refused(401, *bad, "identity")
         body = await request.json()
         full = str(body.get("tool", ""))
         row["run_id"] = body.get("run_id")
