@@ -1,0 +1,13 @@
+id,request,system,tier,path,days,decision,conditions
+R-01,"Use the meeting-notes tool for customer calls",S7,low,board,18,approved,0
+R-02,"Add a French reply template to the triage drafts",S1,high,board,6,conditions,2
+R-03,"Give the document assistant two new product manuals",S3,low,board,21,approved,0
+R-04,"Switch on the reply suggester in the helpdesk tool",S6,medium,board,9,returned,0
+R-05,"A new spreadsheet formula that flags late invoices (no AI)",,none,board,15,approved,0
+R-06,"Change the triage prompt (version 3)",S1,high,board,7,rejected,0
+R-07,"Let the document assistant answer the partner shop's new staff",S3,low,fast,2,approved,0
+R-08,"Raise the workflow's monthly budget",S2,medium,owner,1,approved,0
+R-09,"Give the document assistant the new returns policy",S3,low,board,17,approved,0
+R-10,"A new knowledge-base article in the support MCP server",S4,medium,owner,3,approved,0
+R-11,"Summaries of meeting notes into the product roadmap",S7,low,board,16,approved,0
+R-12,"Let the workflow issue refunds up to 25 dollars without approval",S2,high,board,,open,0

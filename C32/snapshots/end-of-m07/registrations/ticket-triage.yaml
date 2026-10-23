@@ -1,0 +1,19 @@
+# Registration (short form). Fill it in before the first call: python -m estate register registrations/ticket-triage.yaml
+id: ticket-triage
+name: Ticket triage
+kind: app
+owner: usr-amira
+team: service
+purpose: Reads each new ticket and returns the team and whether a person must handle it.
+users: The help desk reads the result. Customers do not see it.
+from: the MLOps course's ticket service (its triage step)
+risk_tier: medium
+data_classes: [personal]
+capabilities: [fast-small, embed]
+tools: []
+autonomy: suggests
+budget_usd_month: 15
+limits: {requests_per_minute: 600, tokens_per_day: 2500000, max_calls_per_run: 3}
+evaluations:
+  fast-small: {evaluation: "evaluation course, triage set, dev split", measure: decisions, minimum: 0.85}
+review_date: 2027-01-15

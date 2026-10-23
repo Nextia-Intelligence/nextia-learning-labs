@@ -1,0 +1,18 @@
+id: doc-assistant
+name: Document assistant
+kind: app
+owner: usr-mei
+team: data
+purpose: Answers staff questions from Larkfield's and Bramble Books' own documents, with citations.
+users: Staff of the two organisations (sign-in and roles from the capstone course).
+from: the capstone course (doc-assistant)
+risk_tier: low
+data_classes: [internal]
+capabilities: [fast-small]
+tools: []
+autonomy: suggests
+budget_usd_month: 3
+limits: {requests_per_minute: 60, tokens_per_day: 500000, max_calls_per_run: 2}
+evaluations:
+  fast-small: {evaluation: "capstone course, held-out questions", measure: answer_criteria, minimum: 0.8}
+review_date: 2027-02-01

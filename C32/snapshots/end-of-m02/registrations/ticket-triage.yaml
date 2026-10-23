@@ -1,0 +1,16 @@
+# A draft registration (the capability catalog's module): who uses which capability, and which
+# evaluation shows that a model is good enough for it. The registration module completes the form.
+status: draft
+id: ticket-triage
+name: Ticket triage
+owner: usr-amira
+team: service
+from: the MLOps course's ticket service (its triage step)
+capabilities:
+- fast-small
+- embed
+evaluations:
+  fast-small:
+    evaluation: evaluation course, triage set, dev split
+    measure: decisions
+    minimum: 0.85

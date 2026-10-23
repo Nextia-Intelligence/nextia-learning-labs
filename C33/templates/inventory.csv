@@ -1,0 +1,9 @@
+id,name,kind,purpose,accountable_owner,technical_owner,users,people_affected,data,vendor_and_model,autonomy,in_registry,tier,last_review,next_review,status
+S3,Document assistant,built,Answers staff questions from documents with citations,Mei,Mei's data team,staff,customers indirectly,internal and staff-only documents,Larkfield's model provider (contract),suggests,yes,low,at launch,overdue,in use
+S1,Ticket triage service,built,,,,,,,,,,,,,
+S2,Support-resolution workflow,built,,,,,,,,,,,,,
+S4,Support MCP server,built,,,,,,,,,,,,,
+S5,Weekly digest script,unregistered,,,,,,,,,,,,,
+S6,Reply suggester in the helpdesk tool,bought,,,,,,,,,,,,,
+S7,Meeting-notes tool,bought,,,,,,,,,,,,,
+S8,Invoice reader in the accounting tool,bought,,,,,,,,,,,,,
