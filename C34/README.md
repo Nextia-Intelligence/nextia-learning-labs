@@ -7,7 +7,7 @@ Materials for the course *Anomaly Detection: Find What Is Unusual* on
 
 | Folder or file | What it is |
 |---|---|
-| `notebooks/` | One folder per lesson: the learner notebook and its solution. Open them in Colab, Kaggle or VS Code. |
+| `notebooks/` | One folder per lesson or case study: the learner notebook and its solution. Open them in Colab, Kaggle or VS Code. |
 | `data/` | The Larkfield data of the course (synthetic), its dataset card and its checksums. |
 | `compare.py` | The comparison table: it scores any detector on the same data, in the same way. |
 | `features.py` | The behaviour features of the payments (Module 4 builds them). |

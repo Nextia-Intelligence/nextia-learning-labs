@@ -1,0 +1,62 @@
+station,day,verdict,reason
+Wanshouxigong,2015-03-03,normal,clean air: 3 against 8 to 11
+Tiantan,2015-03-10,fault,"one hour at the floor (3) between 16 and 38, while the others read 16"
+Guanyuan,2015-03-15,fault,PM2.5 falls to 33 while its own PM10 rises to 186 and the others stay above 100
+Shunyi,2015-03-23,real,PM2.5 and PM10 fall with the other stations: cleaner air arrives
+Dingling,2015-04-01,fault,one hour at the floor (3) while its PM10 reads 132 and the others 39
+Shunyi,2015-04-10,normal,"PM2.5 147 agrees with the others (163); its PM10 falls from 205 to 37 in three hours, with values that are not whole numbers"
+Tiantan,2015-04-11,normal,"PM2.5 119 agrees with the others (126); its PM10, 28.8, is too low and is not a whole number"
+Guanyuan,2015-04-16,normal,clean air: 3 against about 9 at the other stations
+Changping,2015-04-21,unclear,"one hour at 224 (PM10 the same) between 9 and 30, while the others read 15"
+Wanshouxigong,2015-05-03,normal,clean air: one hour at 3 against 13 at the others
+Wanliu,2015-05-11,normal,clean air: 4 against 10; its PM10 is 7
+Aotizhongxin,2015-05-29,fault,two hours at the floor (3) while its PM10 reads 113 to 307 and the others 30 to 33
+Dongsi,2015-06-08,unclear,one hour at 90 against 12; its PM10 shows the same value; at the same hours Changping reads exactly 500
+Dingling,2015-06-10,real,cleaner air reaches this station first; PM2.5 and PM10 fall together
+Huairou,2015-06-24,real,PM2.5 and PM10 rise together; the others rise less
+Nongzhanguan,2015-06-26,real,cleaner air reaches this station an hour after the others; PM10 agrees
+Wanshouxigong,2015-07-01,unclear,readings jump between 3 and 35 from hour to hour while the others stay at 8 to 10
+Dingling,2015-07-06,fault,two hours at the floor (3) while the others read 49 to 53
+Nongzhanguan,2015-07-09,fault,PM2.5 5 to 9 while the others read 30 to 36 and its own PM10 reads up to 108
+Wanshouxigong,2015-07-22,fault,4 hours at the floor (3) while the others read 13 to 23
+Tiantan,2015-07-30,fault,PM2.5 at the floor (3) for 3 hours while its PM10 reads 53 to 104 and the others 70 to 78
+Tiantan,2015-07-31,fault,"PM2.5 at the floor (3), with missing hours, while the others read 14 to 21"
+Wanshouxigong,2015-07-31,fault,3 hours at the floor (3) while the others read 18 to 21
+Nongzhanguan,2015-08-04,normal,clean air at night: 3 for 8 hours against 9 to 10 at the others
+Huairou,2015-08-05,fault,"one hour with PM2.5 3 and PM10 5, between 73 and 16, while the others read 20"
+Wanliu,2015-08-06,fault,two hours at the floor (3 to 4) while its PM10 reads 29 to 39 and the others 16 to 18
+Wanliu,2015-08-08,fault,"one hour at the floor (3) between 60 and 41, while its PM10 reads 73"
+Gucheng,2015-08-21,normal,clean air: every station reads 3 to 7
+Wanshouxigong,2015-08-30,fault,"PM2.5 at the floor (3) after a missing hour, while its PM10 reads 39 and the others 29"
+Wanshouxigong,2015-08-31,fault,"PM2.5 falls to 4 while its PM10 reads 24 and the others 27, then a missing hour"
+Wanshouxigong,2015-09-01,unclear,one hour at 57 against 9; its PM10 shows the same value; missing hours before and after
+Wanliu,2015-09-25,fault,PM2.5 at the floor for 4 hours while its PM10 reads 31 to 103
+Huairou,2015-10-03,normal,clean air: one hour at 3 between 8 and 8
+Shunyi,2015-10-07,real,cleaner air reaches this station an hour after the others; PM10 agrees
+Wanliu,2015-10-18,real,cleaner air reaches this station a few hours before the others; PM10 agrees
+Wanliu,2015-10-19,fault,"PM2.5 and PM10 both at 3 after missing hours, while the others read 82 to 92"
+Huairou,2015-10-26,normal,"clean air: 3 against 8 to 10 (its PM10 is high, 75 to 186)"
+Huairou,2015-10-27,fault,PM2.5 and PM10 both at 3 for two hours while the others read 13 to 18
+Gucheng,2015-10-28,real,a one-hour rise to 91 that its PM10 shows too (121): a local source
+Changping,2015-11-03,real,PM2.5 and PM10 stay high while the others fall
+Shunyi,2015-11-15,fault,"PM2.5 and PM10 both at 3 after missing hours, while the others read 166 to 177"
+Tiantan,2015-11-15,real,cleaner air reaches this station earlier; PM10 agrees
+Tiantan,2015-11-16,fault,"PM2.5 and PM10 both at 3 for one hour, between 64 and 50, while the others read 60"
+Shunyi,2015-11-19,fault,two hours at the floor (3) while its PM10 reads 58 to 91 and the others 51 to 55
+Dingling,2015-11-25,normal,clean air: 3 against 10; its PM10 is 5
+Dongsi,2015-11-26,fault,"one hour at the floor (3) between 15 and 13, while its PM10 stays at 16 to 17"
+Dingling,2015-12-11,normal,"a cleaner rural station: smooth changes, 9 against 28; PM10 agrees"
+Aotizhongxin,2015-12-12,real,cleaner air reaches this station before the others; PM10 agrees
+Aotizhongxin,2015-12-15,normal,clean air: 3 to 4 against 6 to 7
+Wanliu,2016-01-05,normal,clean air: 4 against 7
+Shunyi,2016-01-22,real,cleaner air reaches this station two hours after the others; PM10 agrees
+Wanliu,2016-01-22,normal,clean air: 3 against 7
+Dingling,2016-01-24,normal,PM2.5 7 to 14 agrees with the others; only its PM10 is high (76 to 160)
+Nongzhanguan,2016-01-27,real,PM2.5 and PM10 rise together to 352; other stations read up to 291
+Tiantan,2016-01-31,real,"PM2.5 and PM10 rise together, an hour or two before the others"
+Aotizhongxin,2016-02-05,fault,PM2.5 stuck at 11 for 7 hours while its PM10 changes from 18 to 22
+Dingling,2016-02-08,real,New Year fireworks: every station is high (median 593 at 01:00)
+Tiantan,2016-02-08,real,New Year fireworks: the smoke stays longer at this station; PM10 agrees
+Wanshouxigong,2016-02-08,real,"New Year fireworks: 999 is the instrument's maximum, and every station is above 590"
+Shunyi,2016-02-25,real,PM2.5 and PM10 stay at 31 to 66 for hours while the others read 4 to 11: local pollution
+Shunyi,2016-02-28,real,PM2.5 and PM10 fall with the other stations: cleaner air arrives
