@@ -1,0 +1,13 @@
+# The packages of the course Anomaly Detection: Find What Is Unusual (Python 3.12). Each notebook installs the
+# ones it needs; install them all to work on your own computer: pip install -r requirements.txt
+pandas==3.1.1
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+matplotlib==3.11.2
+statsmodels==0.15.0
+pyod==3.6.7
+ruptures==1.1.10
+torch==2.15.0
+sentence-transformers==6.2.0
+shap==0.54.1

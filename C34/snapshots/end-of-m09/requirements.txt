@@ -1,0 +1,6 @@
+# The detection job of the course Anomaly Detection: Find What Is Unusual. Python 3.12.
+numpy==2.5.4
+pandas==3.1.1
+scikit-learn==1.9.1
+pytest==9.2.0
+ruff==0.17.4
