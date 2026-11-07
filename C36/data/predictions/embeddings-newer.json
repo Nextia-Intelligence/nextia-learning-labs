@@ -1,0 +1,9 @@
+{
+  "method": "embeddings Granite Embedding 97M multilingual r2 (2026) + logistic regression",
+  "label": "measured",
+  "model": "ibm-granite/granite-embedding-97m-multilingual-r2@835ad14087 (Apache-2.0) + logistic regression C=30",
+  "ms_per_message": 26.867,
+  "run_per_1000": 0.0004,
+  "messages": 4000,
+  "notes": "Embeddings measured on a laptop CPU (Apple M4, 4 threads); time per message one at a time."
+}

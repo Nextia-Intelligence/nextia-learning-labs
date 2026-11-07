@@ -1,0 +1,17 @@
+{
+  "what": "The cost of each kind of routing mistake at Larkfield, in US dollars per message. These are assumptions that Grace and Priya agreed for the course, not measured values.",
+  "review": 1.5,
+  "wrong_queue": 4.0,
+  "wrong_queue_urgent": 20.0,
+  "missed_account_takeover": 200.0,
+  "needs_person_sent_to_team": 40.0,
+  "team_message_sent_to_person": 2.0,
+  "why": {
+    "review": "A person reads the message and sends it to the right team: about 1 minute of an agent at 28 dollars an hour, and the message waits a few hours in the review queue.",
+    "wrong_queue": "The wrong team reads the message and moves it (about 2 minutes), and the customer waits about one more day.",
+    "wrong_queue_urgent": "An urgent message that waits one more day: a lost order, a chargeback or a lost customer in some cases.",
+    "missed_account_takeover": "Someone else uses the customer's account while the message waits: orders on the account, the recovery work and the customer's trust.",
+    "needs_person_sent_to_team": "A safety problem, a legal threat or an escalated complaint that gets a normal team answer: a worse complaint and a risk.",
+    "team_message_sent_to_person": "A senior person reads a normal message and forwards it: about 4 minutes."
+  }
+}

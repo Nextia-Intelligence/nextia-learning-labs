@@ -1,0 +1,80 @@
+"""Download the Larkfield inbox into data/ and check every file's SHA-256. Standard library only.
+
+    python get_data.py
+
+The data is synthetic: it was made for the text routing course and has no real people. It comes from the
+course's public labs repository on GitHub. The recorded model answers (data/predictions/ and data/recordings/)
+come with it, so you need no key.
+"""
+
+import hashlib
+import subprocess
+import sys
+import urllib.request
+from pathlib import Path
+
+URL = "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-labs/main/C36/data/"
+# FILES-START (written by the course team's publish script)
+FILES = {
+    "corrections.csv": "be3088aecd9b7ba5d07ea222b79e06a476806eba81bc80c2f33da695878e5cc0",
+    "costs.json": "9a2d566f062c3382b8884ef07756f886179c69a3525d80e3d4c15c0c4fd4507e",
+    "dataset-card.md": "fce0d2e602002a2ea2c6fc26c1d2ab9c3d1a30906f40fa4a426180c3639e99af",
+    "double_labelled.csv": "ba4a8dadc3c1ba8d48af893124bd33fb7a895f917a2add211486e3dbd353dfc9",
+    "guidelines.md": "8ab83de04998b9017b1aabce00be04084e989af75aff5a9abdd760f4d3cb24b2",
+    "launch_labels_sample.csv": "600c689325b7c14e56f4a27e92e395eb0b2e965411b1abf9d724720c8b485029",
+    "launch_month.csv": "7ef3cc2c5fa910023c6330c1e895744358846ce451e551b86be8c9abe1c4289f",
+    "messages.csv": "266ca23c0551249fc114fc74253103ea8602a04be1fe31d1b7f91bc94ce6dd5e",
+    "old_queue.csv": "e3cde5d19d3ebe2e6e0e067693c76796c0abbf89df0dc93dc310ad3fe42a5cae",
+    "predictions/embeddings-newer.csv": "3c7ffe5b5371ca60c3b6bedc17b307142bcfd77f06c97db7ed267b703a50a8d2",
+    "predictions/embeddings-newer.json": "dcd537f2971b9a48b5354cc9fbb48b87689b83b3a479da9acd119701c2fc19f6",
+    "predictions/embeddings-older.csv": "a06c490ac17cbc1c3c75380f6cdf7775483de92961cdbb78b2a7914256926539",
+    "predictions/embeddings-older.json": "db658bbd13861529122807726b6b41e1da9c70e3b55aba55cce9e868a795e8b4",
+    "predictions/encoder-finetuned.csv": "abced2276671bfd413319573907a48c60952310e50978dba96c0dde0332b7d39",
+    "predictions/encoder-finetuned.json": "1f7c89271a199c1d659bdc29d8ac0592558a1424218bd0519bbbde9840212b94",
+    "predictions/gliclass-zero-shot.csv": "2c22e5036de94a376f7c0ccf22603c4d7c624135c8a4965123c9492748814008",
+    "predictions/gliclass-zero-shot.json": "95ad2acafd48ad2c24516333dba7e78a3eabc7ca616c4053ce2f144f56cbaaec",
+    "predictions/llm-few-shot.csv": "bcdaee3550f78ebb672465314bbcc9ad26283aaea69265a979739cf6a5f965e2",
+    "predictions/llm-few-shot.json": "104b446894a0450a7e02fcd07c6db44f3e1a5486002b388374ce6dae4a744a12",
+    "predictions/llm-zero-shot.csv": "5518e2b668a110b572687313bc13bd689774dff96c0a1614e1cd92e14ddf9ce7",
+    "predictions/llm-zero-shot.json": "9a72ce600d0d858b00dd3b37247a305f9e8b3fc2fef3b8dbe60c0871b0c1b355",
+    "predictions/local-llm-prompted.csv": "5bb0d84f8ee9b5086818d3525e1da3f8172b38b7875b10d1d3021b3ad5889f33",
+    "predictions/local-llm-prompted.json": "ae328379d5ea294b3b59845ee143f24776787e748bc14c165b5e8e9ed4ff7158",
+    "predictions/local-llm-scores.csv": "f85f570075ea9288fd14a6c3955d4310ba740814f3de472e8a263cd4f9682a5f",
+    "predictions/local-llm-scores.json": "67a7e07ce065934a947f59c1c36d416eec76f8827f01500ce82ba6e6c4d9b99e",
+    "predictions/nli-zero-shot.csv": "ecafb001370e5cf2904ce685683beafc86a2c290cd1da80438abb9912d099d3c",
+    "predictions/nli-zero-shot.json": "e271f3b12ad86c6308a74c0b5f8b6bf80c6534cf18c41af5c86c29b184ab53cd",
+    "prices.json": "9e98f9056d9d1e53d76a039da9b10d2b4fa54c8a5b35eb6cae32a2abdee7af38",
+    "recordings/README.md": "d99eb50666045cc2ccf596e100103244fe1513b488fce46e26462a2666053ffc",
+    "recordings/llm-few-shot.jsonl": "259a93f1d6dcbcb167cd45796c8e09a914e56c7741f14bd0aee53c996e8349d4",
+    "recordings/llm-labels.jsonl": "cd6c670a23ee78cd3d8b51e5907ebae9d86448aa6236767c11d55227616fa8cc",
+    "recordings/llm-reasoning.jsonl": "fc8ae631121f3240ce378df429af767ac52ea6e1560aa409de09ffc99b092300",
+    "recordings/llm-zero-shot.jsonl": "957edfb8811e177c83bf23772f0da561659cf50728ffc95597f85cd7680aed86",
+    "rules.json": "6f95d5e7b87869ec7975b198a3777cdd96a0db6a869554d922889479c87b2066",
+    "SHA256SUMS": "25059c2a30d7c1dfc41a8eb90a27e029da7cba139b2a9ee2add9f36a252cd060",
+}
+# FILES-END
+DATA = Path(__file__).resolve().parent / "data"
+
+
+def sha256(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main():
+    for name, expected in FILES.items():
+        path = DATA / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if path.exists() and sha256(path) == expected:
+            continue
+        try:
+            urllib.request.urlretrieve(URL + name, path)
+        except OSError:
+            if subprocess.run(["curl", "-fsSL", "-o", str(path), URL + name]).returncode:
+                sys.exit(f"Could not download {name}. Check your internet connection and run again.")
+        if sha256(path) != expected:
+            sys.exit(f"{name} has the wrong checksum. Delete data/{name} and run again.")
+    print(f"Ready: {len(FILES)} files in {DATA.name}/, every checksum is right.")
+
+
+if __name__ == "__main__":
+    main()
