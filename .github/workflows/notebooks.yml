@@ -3,17 +3,22 @@
 # their unsolved exercises, so they run with --allow-errors: the check is
 # that everything up to the exercises works.
 #
-# Pull requests and pushes to main run only the notebooks that changed, and
-# every notebook of a course whose data changed. To run all notebooks, start
-# the workflow by hand (Actions, Notebooks, Run workflow).
+# Pull requests and pushes to main run only the notebooks that changed, every
+# notebook of a course whose data changed, and the notebooks that use another
+# changed file (a helper, a recording, case-study data). To run all notebooks,
+# start the workflow by hand (Actions, Notebooks, Run workflow).
+#
+# Notebooks download their files from labs main. Here those downloads come
+# from this commit instead (.github/notebook-ci/labs_from_checkout.py), so a
+# pull request is tested with its own data, helpers and recordings.
 name: Notebooks
 
 on:
   pull_request:
-    paths: ["**/*.ipynb", "**/data/**", ".github/workflows/notebooks.yml"]
+    paths: ["**/*.ipynb", "**/data/**", "**/recordings/**", "*/*.py", "**/*.json", "**/*.jsonl", "**/*.csv", "**/*.csv.gz", "**/*.zip", "**/*.txt", ".github/workflows/notebooks.yml", ".github/notebook-ci/**"]
   push:
     branches: [main]
-    paths: ["**/*.ipynb", "**/data/**", ".github/workflows/notebooks.yml"]
+    paths: ["**/*.ipynb", "**/data/**", "**/recordings/**", "*/*.py", "**/*.json", "**/*.jsonl", "**/*.csv", "**/*.csv.gz", "**/*.zip", "**/*.txt", ".github/workflows/notebooks.yml", ".github/notebook-ci/**"]
   workflow_dispatch:
 
 jobs:
@@ -30,6 +35,12 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python -m pip install nbconvert ipykernel
+      - name: Serve labs downloads from this commit
+        run: |
+          site=$(python -c "import sysconfig; print(sysconfig.get_paths()['purelib'])")
+          printf '%s\nimport labs_from_checkout\n' "$GITHUB_WORKSPACE/.github/notebook-ci" > "$site/labs_from_checkout.pth"
+          echo "LABS_CHECKOUT=$GITHUB_WORKSPACE" >> "$GITHUB_ENV"
+          echo "LABS_CHECKOUT_MISSES=$RUNNER_TEMP/labs-misses.txt" >> "$GITHUB_ENV"
       - name: Choose the notebooks
         env:
           EVENT: ${{ github.event_name }}
@@ -48,6 +59,15 @@ jobs:
               for course in $(echo "$changed" | grep -E '^[^/]+/data/' | cut -d/ -f1 | sort -u); do
                 git ls-files "$course/*.ipynb"
               done
+              # Another changed file: the notebooks in its folder (or above its
+              # data/ folder), and every notebook that names its path.
+              echo "$changed" | grep -vE '\.(ipynb|md)$|^\.github/|^[^/]*$' | while read -r f; do
+                d=$(dirname "$f")
+                if [ "$(basename "$d")" = data ]; then d=$(dirname "$d"); fi
+                git ls-files ":(glob)$d/*.ipynb"
+                git grep -l -F -e "${f#*/}" -- "${f%%/*}/*.ipynb" || true
+                git grep -l -F -e "$f" -- '*.ipynb' || true
+              done
             } | sort -u > notebooks.txt
           fi
           echo "Notebooks to run: $(wc -l < notebooks.txt)"
@@ -58,8 +78,9 @@ jobs:
           while read -r nb; do
             dir=$(dirname "$nb")
             course=${nb%%/*}
-            # Test with the data in this commit. A notebook downloads its data
-            # from main only when the file is not next to it.
+            # Test with the data in this commit. Older notebooks look for their
+            # CSV files next to them first. Other downloads from labs main are
+            # served from this commit (see "Serve labs downloads").
             # Some data folders have no CSV files.
             for csv in "$course"/data/*.csv; do
               if [ -f "$csv" ]; then cp "$csv" "$dir"/; fi
@@ -70,4 +91,10 @@ jobs:
               *) jupyter nbconvert --to notebook --execute --allow-errors --output-dir /tmp/out "$nb" ;;
             esac
             echo "::endgroup::"
+            if [ -s "$LABS_CHECKOUT_MISSES" ]; then
+              while read -r url; do
+                echo "::warning file=$nb::Downloaded from labs main (not in this commit): $url"
+              done < "$LABS_CHECKOUT_MISSES"
+              rm "$LABS_CHECKOUT_MISSES"
+            fi
           done < notebooks.txt
