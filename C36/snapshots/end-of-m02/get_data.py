@@ -42,7 +42,7 @@ FILES = {
     "predictions/local-llm-scores.csv": "f85f570075ea9288fd14a6c3955d4310ba740814f3de472e8a263cd4f9682a5f",
     "predictions/local-llm-scores.json": "67a7e07ce065934a947f59c1c36d416eec76f8827f01500ce82ba6e6c4d9b99e",
     "predictions/nli-zero-shot.csv": "ecafb001370e5cf2904ce685683beafc86a2c290cd1da80438abb9912d099d3c",
-    "predictions/nli-zero-shot.json": "e271f3b12ad86c6308a74c0b5f8b6bf80c6534cf18c41af5c86c29b184ab53cd",
+    "predictions/nli-zero-shot.json": "54c2e724cb3c855a0fa6302d4ac0ab2df2ffaf788eec4ab198c6feb8d3508928",
     "prices.json": "9e98f9056d9d1e53d76a039da9b10d2b4fa54c8a5b35eb6cae32a2abdee7af38",
     "recordings/README.md": "d99eb50666045cc2ccf596e100103244fe1513b488fce46e26462a2666053ffc",
     "recordings/llm-few-shot.jsonl": "259a93f1d6dcbcb167cd45796c8e09a914e56c7741f14bd0aee53c996e8349d4",
@@ -50,7 +50,7 @@ FILES = {
     "recordings/llm-reasoning.jsonl": "fc8ae631121f3240ce378df429af767ac52ea6e1560aa409de09ffc99b092300",
     "recordings/llm-zero-shot.jsonl": "957edfb8811e177c83bf23772f0da561659cf50728ffc95597f85cd7680aed86",
     "rules.json": "6f95d5e7b87869ec7975b198a3777cdd96a0db6a869554d922889479c87b2066",
-    "SHA256SUMS": "25059c2a30d7c1dfc41a8eb90a27e029da7cba139b2a9ee2add9f36a252cd060",
+    "SHA256SUMS": "935c4b6321a834a2c26ea7f166b43ce9c1d94b2d36d8370adc90a5ff43ca6a81",
 }
 # FILES-END
 DATA = Path(__file__).resolve().parent / "data"

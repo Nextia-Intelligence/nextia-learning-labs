@@ -8,6 +8,7 @@ Practice files for the course at [learning.nextia-ai.com/courses/text-routing/](
 | `routing.py` | The course's helper for notebooks: the cost table, the columns of the comparison table, and the reliability table. |
 | `Mnn-Lnn-<slug>/` | The lesson notebooks, each with a solution notebook. Each one downloads what it needs, so you can open any lesson without the earlier ones. |
 | `models/finetuned-encoder/` | The ready fine-tuned encoder, for learners who skip the training on their own computer. |
+| `final/` | The final assignment: March 2026 with labels (a new marketplace channel), 100 messages labelled twice, and April 2026 with no labels to replay. Read [`final/README.md`](final/README.md). |
 | `snapshots/` | The course project `larkroute` (the `route` command) at each stage of the course, from `start` to `end-of-m09`. |
 
 ## Open a notebook
