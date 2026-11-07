@@ -59,15 +59,19 @@ jobs:
               for course in $(echo "$changed" | grep -E '^[^/]+/data/' | cut -d/ -f1 | sort -u); do
                 git ls-files "$course/*.ipynb"
               done
-              # Another changed file: the notebooks in its folder (or above its
-              # data/ folder), and every notebook that names its path.
-              echo "$changed" | grep -vE '\.(ipynb|md)$|^\.github/|^[^/]*$' | while read -r f; do
-                d=$(dirname "$f")
-                if [ "$(basename "$d")" = data ]; then d=$(dirname "$d"); fi
-                git ls-files ":(glob)$d/*.ipynb"
-                git grep -l -F -e "${f#*/}" -- "${f%%/*}/*.ipynb" || true
-                git grep -l -F -e "$f" -- '*.ipynb' || true
-              done
+              # Another changed file (a helper, a recording, case-study data; not an image):
+              # the notebooks in its folder (or above its data/ folder), the
+              # notebooks of its course that name its path in the course, and
+              # every notebook that names its full path.
+              echo "$changed" | grep -vE '\.(ipynb|md|png|jpg|jpeg|gif|svg|webp|pdf)$|^\.github/|^[^/]*$' > others.txt || true
+              if [ -s others.txt ]; then
+                sed -E 's#/[^/]*$##; s#/data$##; s#^#:(glob)#; s#$#/*.ipynb#' others.txt | sort -u | tr '\n' '\0' | xargs -0 git ls-files --
+                for course in $(cut -d/ -f1 others.txt | sort -u); do
+                  grep "^$course/" others.txt | cut -d/ -f2- > names.txt
+                  git grep -l -F -f names.txt -- "$course/*.ipynb" || true
+                done
+                git grep -l -F -f others.txt -- '*.ipynb' || true
+              fi
             } | sort -u > notebooks.txt
           fi
           echo "Notebooks to run: $(wc -l < notebooks.txt)"
