@@ -20,6 +20,9 @@ MIN_UNITS = 200
 def check_week(store, data_dir, week):
     """Bias by category of the plan of `week` over its first 7 days. Needs the sales of those 7 days."""
     d = week_dir(store, week)
+    if not (d / "run.json").exists():
+        raise SystemExit(f"The week of {week.date()} has no plan in {store}/. "
+                         f"Plan it first: python -m forecast_job run --week {week.date()}")
     fc = pd.read_csv(d / "forecast.csv", parse_dates=["ds"])
     sales = pd.read_csv(Path(data_dir) / "demand.csv.gz", parse_dates=["date"])
     days = pd.date_range(week, periods=7, freq="D")

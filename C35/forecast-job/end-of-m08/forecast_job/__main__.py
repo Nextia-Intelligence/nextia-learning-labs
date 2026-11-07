@@ -95,7 +95,14 @@ def main(argv=None):
             p.add_argument("--start", required=True)
             p.add_argument("--weeks", type=int, default=12)
     a = ap.parse_args(argv)
+    try:
+        command(a)
+    except store.AlreadyPlanned as e:
+        print(e)
+        raise SystemExit(2) from None
 
+
+def command(a):
     if a.command == "run":
         if run_week(monday(a.week), a.data, a.store, a.overrides, a.force) is None:
             raise SystemExit(2)

@@ -30,13 +30,15 @@ def test_a_second_run_with_the_same_inputs_changes_nothing(data_dir, week, tmp_p
     assert "Nothing to do" in capsys.readouterr().out
 
 
-def test_other_inputs_need_force_and_keep_the_old_plan(data_dir, week, tmp_path):
+def test_other_inputs_need_force_and_keep_the_old_plan(data_dir, week, tmp_path, capsys):
     run(data_dir, tmp_path / "runs", week)
     over = tmp_path / "overrides.csv"
     pd.DataFrame([{"week": str(week.date()), "product_id": "P001", "region": "north", "order": 99,
                    "reason": "promotion next week", "who": "Kenji"}]).to_csv(over, index=False)
-    with pytest.raises(Exception, match="--force"):
+    capsys.readouterr()
+    with pytest.raises(SystemExit):
         run(data_dir, tmp_path / "runs", week, "--overrides", str(over))
+    assert "was planned with other inputs" in capsys.readouterr().out
     run(data_dir, tmp_path / "runs", week, "--overrides", str(over), "--force")
     d = tmp_path / "runs" / str(week.date())
     assert list(d.glob("replaced-*/orders.csv"))
