@@ -27,7 +27,7 @@ Chloé wrote these guidelines for the people who label Larkfield's support messa
 | `returns_refunds` and `product` | "Can I return it if I don't like it?" **before buying** → `product`. **After** buying, the customer wants to return it → `returns_refunds`. | A question about the policy is a product question. A keyword rule on "return" gets this wrong. |
 | `product` and `returns_refunds` | **Broke after some weeks or months of use** (warranty) → `product`. **Broken on arrival** → `returns_refunds`. | |
 | `account` and `billing` | An order the customer did not make **and** a changed login or email → `account` (account takeover). A charge the customer does not understand, with no sign of someone else in the account → `billing`. | An account takeover is urgent: the account team locks the account first. |
-| any team and `needs_person` | Safety, legal threats, the press and a request for a manager **always** go to `needs_person`, even if the message also asks for a refund or a delivery. | A team answer to these messages makes things worse. |
+| any team and `needs_person` or `account` | **The route follows the main request.** When the main request is about safety, a legal or press threat or a manager → `needs_person`; when it is that someone else used the account → `account`. When one of these is **only mentioned in passing** ("still no parcel; also, my son got hurt"), keep the main request's route, **raise the priority** and **flag** the message for a person. | Each team owns the requests it can solve, and every label keeps one meaning. The flag is part of the rule: a team must not answer an injury or a legal threat without a person. |
 | `orders` and `delivery` | The order **has not shipped** and the customer wants a change → `orders`. It **has shipped** → `delivery`. | |
 
 ## Messages that are not clear
@@ -38,4 +38,4 @@ Chloé wrote these guidelines for the people who label Larkfield's support messa
 
 ## Priority
 
-`urgent`: an account takeover, a safety problem, a legal threat, a double charge of a large amount, a parcel marked delivered but not received, or a customer who gives a deadline in the next day or two. `low`: an invoice, a promotion code, a question about stock or a product with no deadline. Everything else is `normal`.
+`urgent`: an account takeover, a safety problem, a legal threat, a double charge of a large amount, a parcel marked delivered but not received, or a customer who gives a deadline in the next day or two. `low`: an invoice, a promotion code, a question about stock or a product with no deadline. Everything else is `normal`. A safety problem, a legal threat or a takeover that is only mentioned in passing raises the priority, and the message gets a flag (see the hard cases).

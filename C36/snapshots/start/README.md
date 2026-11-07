@@ -26,7 +26,7 @@ pip install -r requirements.txt
 python get_data.py
 ```
 
-`get_data.py` downloads the inbox into `data/` (about 6 MB) and checks every file. You should see `Ready: … files in data/, every checksum is right.`
+`get_data.py` downloads the inbox into `data/` (about 9 MB) and checks every file. You should see `Ready: … files in data/, every checksum is right.`
 
 ## First run
 

@@ -46,5 +46,6 @@ Real support messages hold personal data and cannot be shared. A synthetic inbox
 - The messages were written by a language model from templates. They are cleaner and more similar to each other than real messages: models score higher here than on a real inbox. Do not quote these accuracies as what to expect elsewhere.
 - One small hosted model wrote all the messages. Another LLM can find them easier to read than a person would.
 - Product names stay in English in French messages: they are Larkfield's catalogue names.
+- A few `language` labels are wrong (a slip of the generator, kept on purpose because a lesson finds them). In the test set, four messages labelled `en` are written in French (M-100856, M-102786, M-104246, M-108100) and one labelled `fr` is written in English (M-108940). The other splits were not checked one by one.
 - The costs in `costs.json` are assumptions for the course, not measured values.
 - No real person, order, address or card is in the data. Names are common first names; order numbers and amounts are random.

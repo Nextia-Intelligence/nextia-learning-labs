@@ -1,6 +1,8 @@
 """route zones: choose the two thresholds (decide / review / send to a person) on the validation messages so that
 the review and person zones stay under what the team can carry, then report them once on the test messages."""
 
+import pandas as pd
+
 from larkroute import costs as cost_table
 from larkroute import data, tfidf
 from larkroute.methods import as_proba
@@ -9,6 +11,12 @@ from larkroute.zones import choose, decide, report
 
 def proba_of(model, messages):
     return as_proba(model.predict_proba(messages["text"]), model.classes_).set_index(messages.index)
+
+
+def messages_per_day(messages) -> float:
+    """The labelled messages per day, from the first to the last day of the data."""
+    days = pd.to_datetime(messages["created_at"]).dt.normalize()
+    return len(messages) / ((days.max() - days.min()).days + 1)
 
 
 def run(args):
@@ -23,7 +31,7 @@ def run(args):
         print(f"{name:>10}: decide {r['decide']:.1%}, review {r['review']:.1%}, person {r['person']:.1%}; "
               f"errors in the decide zone {r['error_rate_decide']:.1%}; "
               f"cost {r['cost_per_1000']:.1f} dollars per 1,000")
-    per_day = 10000 / 153  # the history: about 65 messages a day
+    per_day = messages_per_day(data.messages())  # the history: 10,000 messages in 153 days, about 65 a day
     print(f"At about {per_day:.0f} messages a day, the review and person zones are about "
           f"{(rep['review'] + rep['person']) * per_day:.0f} messages a day for Grace's team.")
 

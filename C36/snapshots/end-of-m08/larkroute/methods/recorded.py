@@ -11,6 +11,7 @@ import json
 import pandas as pd
 
 from larkroute.data import ROUTES, data_dir
+from larkroute.data import messages as messages_of
 from larkroute.methods import Method
 
 
@@ -29,8 +30,12 @@ class Recorded(Method):
     def _rows(self, messages):
         missing = set(messages["message_id"]) - set(self.table.index)
         if missing:
-            raise SystemExit(f"{self.name}: no recorded answer for {len(missing)} messages "
-                             f"(recordings cover the validation and test messages)")
+            covered = [s for s in ("validation", "test")
+                       if set(messages_of(s)["message_id"]) <= set(self.table.index)]
+            where = " and ".join(covered) or "other"
+            hint = " Use --split test." if covered == ["test"] else ""
+            raise SystemExit(f"{self.name}: no recorded answer for {len(missing)} of these messages. "
+                             f"Its answers were recorded for the {where} messages only.{hint}")
         return self.table.loc[messages["message_id"]]
 
     def predict(self, messages):

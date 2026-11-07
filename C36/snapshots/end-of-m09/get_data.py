@@ -18,9 +18,9 @@ URL = "https://raw.githubusercontent.com/Nextia-Intelligence/nextia-learning-lab
 FILES = {
     "corrections.csv": "be3088aecd9b7ba5d07ea222b79e06a476806eba81bc80c2f33da695878e5cc0",
     "costs.json": "9a2d566f062c3382b8884ef07756f886179c69a3525d80e3d4c15c0c4fd4507e",
-    "dataset-card.md": "fce0d2e602002a2ea2c6fc26c1d2ab9c3d1a30906f40fa4a426180c3639e99af",
+    "dataset-card.md": "ec1d7769d1d68a9e51a5b12660364c74352af936df79533a0d2170867171bdd1",
     "double_labelled.csv": "ba4a8dadc3c1ba8d48af893124bd33fb7a895f917a2add211486e3dbd353dfc9",
-    "guidelines.md": "8ab83de04998b9017b1aabce00be04084e989af75aff5a9abdd760f4d3cb24b2",
+    "guidelines.md": "04df0cd72da4e6b7e6aa629ca21205e5395df7b66aae9268618ae14597e45782",
     "launch_labels_sample.csv": "600c689325b7c14e56f4a27e92e395eb0b2e965411b1abf9d724720c8b485029",
     "launch_month.csv": "7ef3cc2c5fa910023c6330c1e895744358846ce451e551b86be8c9abe1c4289f",
     "messages.csv": "266ca23c0551249fc114fc74253103ea8602a04be1fe31d1b7f91bc94ce6dd5e",
@@ -50,7 +50,7 @@ FILES = {
     "recordings/llm-reasoning.jsonl": "fc8ae631121f3240ce378df429af767ac52ea6e1560aa409de09ffc99b092300",
     "recordings/llm-zero-shot.jsonl": "957edfb8811e177c83bf23772f0da561659cf50728ffc95597f85cd7680aed86",
     "rules.json": "6f95d5e7b87869ec7975b198a3777cdd96a0db6a869554d922889479c87b2066",
-    "SHA256SUMS": "935c4b6321a834a2c26ea7f166b43ce9c1d94b2d36d8370adc90a5ff43ca6a81",
+    "SHA256SUMS": "2f46894c8a04e4dea7dc3421ec7877143730f1234778e4398af9655e5e9fefe1",
 }
 # FILES-END
 DATA = Path(__file__).resolve().parent / "data"

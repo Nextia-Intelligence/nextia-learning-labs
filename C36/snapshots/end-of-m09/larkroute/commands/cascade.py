@@ -28,8 +28,11 @@ def run(args):
     compute = json.loads((ROOT / "config" / "compute.json").read_text())
     first_cost = 0.3 / 1000 / 3600 * compute["usd_per_cpu_hour"]  # about 0.3 ms of computer time a message
     model = tfidf.logistic_regression().fit(data.messages("train")["text"], data.messages("train")["route"])
+    if args.search and args.mode == "zero-shot":
+        raise SystemExit("The zero-shot answers were recorded for the test messages only, so --search cannot choose "
+                         "thresholds on validation. Use the few-shot mode for --search, or give --sure and --llm-sure.")
     sets = {}
-    for split in ("validation", "test"):
+    for split in (("validation", "test") if args.search else ("test",)):
         m = data.messages(split)
         proba = as_proba(model.predict_proba(m["text"]), model.classes_).set_index(m.index)
         route, conf, usd = llm_answers(m, args.mode)
@@ -53,6 +56,7 @@ def add(sub):
     p.add_argument("--sure", type=float, default=0.9, help="TF-IDF decides when its probability is at least this")
     p.add_argument("--llm-sure", type=float, default=0.0,
                    help="the LLM decides when its stated confidence is at least this")
-    p.add_argument("--mode", default="few-shot", choices=["zero-shot", "few-shot"])
+    p.add_argument("--mode", default="few-shot", choices=["zero-shot", "few-shot"],
+                   help="the recorded LLM answers to use (zero-shot: test messages only)")
     p.add_argument("--search", action="store_true", help="choose the two thresholds on validation")
     p.set_defaults(func=run)
