@@ -3,7 +3,8 @@ zone and the versions. Decisions are logged without the message text; unsure mes
 
     route serve                       (or: uvicorn larkroute.service:app --port 8036)
     curl -s localhost:8036/route -H 'content-type: application/json' \
-         -d '{"message_id": "M-999001", "text": "Tracking says my parcel was delivered yesterday, but nothing is at my door.", "channel": "chat"}'
+         -d '{"message_id": "M-999001", "channel": "chat",
+              "text": "Tracking says my parcel was delivered yesterday, but nothing is at my door."}'
 """
 
 import json
