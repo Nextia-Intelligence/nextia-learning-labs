@@ -1,0 +1,14 @@
+intent,scenario,description,kind,priority
+alarm_set,alarm,set a new alarm,change,urgent
+alarm_query,alarm,ask which alarms are set,question,normal
+alarm_remove,alarm,delete an alarm,change,normal
+calendar_set,calendar,add an event or a reminder to the calendar,change,urgent
+calendar_query,calendar,ask about events in the calendar,question,normal
+calendar_remove,calendar,delete an event from the calendar,change,normal
+email_sendemail,email,write or send an email,change,normal
+email_query,email,check or read emails,question,normal
+email_querycontact,email,ask for a contact's details,question,normal
+email_addcontact,email,add a new contact or an email address,change,normal
+lists_createoradd,lists,create a list or add an item to a list,change,normal
+lists_query,lists,read a list or ask what is on it,question,normal
+lists_remove,lists,delete a list or remove an item from it,change,normal
