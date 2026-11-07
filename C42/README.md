@@ -1,0 +1,43 @@
+# Vision AI: See, Count and Inspect
+
+The files for the Vision AI course of Nextia Learning.
+
+| Folder or file | What it is |
+|---|---|
+| `data/` | The Larkfield image sets: catalogue photos, returned candles, pallet photos, customer photos, a replayed month. Read `data/dataset-card.md` first: it gives the licence and the source of every image. |
+| `compare.py` | The comparison table helper that the notebooks use: the same scores, the same cost table, for every method. |
+| `models/` | The model files of the image service: the returns inspector and a face detector. See `models/README.md`. |
+| `snapshots/` | The `larkvision` project at the end of each module (`start`, `end-of-m02` ... `end-of-m08`). See `snapshots/README.md`. |
+
+Everything runs on a laptop CPU. You need no key, no graphics card and no money.
+
+## Quick start
+
+macOS and Linux:
+
+```sh
+cd snapshots/start
+python3.12 -m venv .venv
+. .venv/bin/activate
+pip install -r requirements.txt
+pip install -e . --no-deps
+vision info
+```
+
+Windows (PowerShell):
+
+```powershell
+cd snapshots\start
+py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+pip install -e . --no-deps
+vision info
+```
+
+## What is real and what is made by code
+
+- The catalogue photos are cut from open photos (Open Images, CC BY 2.0). The returned candles are photos of the VisA inspection set (CC BY 4.0). Each photo's author and source are in the manifests.
+- The pallet photos are drawn by our code. The customer photos, the "new studio" light and the new camera are changes that our code made to real photos. The manifests mark all of them `synthetic: yes`.
+- Some problems are planted on purpose: the course says so each time ("a problem we planted").
+- The hidden test sets are not here. The course team keeps them, so that a final score is honest.
