@@ -1,0 +1,41 @@
+station,day,verdict,reason
+Gucheng,2017-01-02,real,cleaner air reaches this station first: the others fall from 403 to 48 in four hours
+Tiantan,2017-01-02,real,"a rise to 314 with its PM10; Wanshouxigong next to it rises too, and the city follows"
+Wanshouxigong,2017-01-02,real,"a rise to 362 with its PM10; Tiantan next to it rises too, and the city follows two hours later"
+Tiantan,2017-01-08,real,"PM2.5 and PM10 at 112 to 128 for 4 hours, as at Wanshouxigong next to it: local pollution"
+Wanshouxigong,2017-01-08,real,"PM2.5 and PM10 at 129 to 168 for 4 hours, as at Tiantan next to it: local pollution"
+Aotizhongxin,2017-01-10,real,pollution arrives here an hour after the others; PM10 rises first
+Wanshouxigong,2017-01-10,real,"pollution arrives here first; PM10 agrees, and the others follow"
+Nongzhanguan,2017-01-11,fault,"PM2.5 and PM10 both fall to 2 to 13 for two hours, between 78 and 56, while the others read 50"
+Wanshouxigong,2017-01-11,real,the station clears an hour after the others; PM10 agrees
+Wanliu,2017-01-13,fault,"one hour at 2 between 10 and 13, while its PM10 stays at 22"
+Shunyi,2017-01-16,fault,two hours at 10 and 13 while the others read 96 to 109; its PM10 drops for one of them
+Tiantan,2017-01-16,fault,"PM2.5 and PM10 fall to 10 to 16 for an hour, twice, while the others read 109 to 122"
+Wanshouxigong,2017-01-16,fault,two hours at 10 and 3 while the others read 86 to 90
+Changping,2017-01-17,fault,"one hour with PM2.5 7 and PM10 16, between 132 and 92, while the others read 137"
+Wanliu,2017-01-17,fault,"one hour with PM2.5 10 and PM10 16, between 150 and 64, while the others read 140"
+Guanyuan,2017-01-26,real,cleaner air reaches this station first; the others fall to 10 an hour later
+Aotizhongxin,2017-01-29,real,cleaner air reaches this station first; the others follow an hour later
+Changping,2017-01-29,real,cleaner air reaches the north first: the others fall from 214 to 7 in two hours
+Shunyi,2017-01-29,real,the station clears an hour after the others; PM10 agrees
+Wanliu,2017-01-29,real,cleaner air arrives: the others fall from 214 to 7 in two hours
+Aotizhongxin,2017-01-31,real,cleaner air reaches this station first; the others follow an hour later
+Changping,2017-02-04,real,a northern station stays clean (15 to 35) while the city reads over 300; Dingling agrees
+Dingling,2017-02-04,real,a northern station stays clean (5 to 37) while the city reads over 300; Changping agrees
+Gucheng,2017-02-04,real,cleaner air reaches this station first; the others follow an hour later
+Shunyi,2017-02-04,real,the station clears an hour after the others; PM10 agrees
+Wanshouxigong,2017-02-06,normal,clean air: one hour at 3 against 11
+Nongzhanguan,2017-02-08,real,the station clears an hour after the others; PM10 agrees
+Dongsi,2017-02-10,normal,"clean air: 11 to 16 against 3 to 7, with its PM10 at 20 to 63"
+Aotizhongxin,2017-02-11,normal,clean air: one hour at 3 against 13
+Tiantan,2017-02-12,real,the station stays polluted longer than the others; PM10 agrees
+Dingling,2017-02-16,real,cleaner air reaches the north first: the others fall from 216 to 17 in four hours
+Nongzhanguan,2017-02-16,normal,clean air: one hour at 3 against 10
+Nongzhanguan,2017-02-17,normal,clean air: one hour at 3 against 10
+Tiantan,2017-02-17,normal,clean air: 4 to 22 against 6 to 8
+Gucheng,2017-02-19,real,cleaner air reaches this station first; the others follow an hour later
+Tiantan,2017-02-22,real,the station clears an hour after the others; Wanshouxigong next to it too
+Wanshouxigong,2017-02-22,real,the station clears an hour after the others; Tiantan next to it too
+Aotizhongxin,2017-02-23,real,pollution arrives here an hour after the others; PM10 rises too
+Dongsi,2017-02-23,real,the city is split: the central stations read 28 to 39 and the outer ones 8 to 15
+Guanyuan,2017-02-23,real,the city is split: the central stations read 28 to 39 and the outer ones 8 to 15

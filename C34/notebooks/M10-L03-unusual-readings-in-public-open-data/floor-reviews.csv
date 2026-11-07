@@ -1,0 +1,21 @@
+station,day,verdict,reason
+Dingling,2015-05-07,fault,"after a missing hour, the readings restart at 3 and stay at 6 to 10 while the others read 49 to 57"
+Shunyi,2015-05-18,fault,PM2.5 jumps between 3 and 20 from hour to hour while its PM10 stays at 38 to 52
+Changping,2015-05-28,fault,one hour at the floor (3) while its PM10 reads 158 and the others 87
+Wanliu,2015-05-29,fault,PM2.5 falls to 3 while its PM10 jumps to 291; the others read 33
+Changping,2015-06-03,fault,"one hour with PM2.5 3 and PM10 9, between 8 and 23, while the others read 24"
+Dingling,2015-06-04,unclear,"PM2.5 4 to 6 and PM10 5 to 15 for hours, while the others read 54 to 77: both instruments low, the others far higher"
+Huairou,2015-06-11,normal,"a clean rural station: 4 to 9 for hours, with its PM10 at 11 to 18"
+Dingling,2015-06-18,unclear,"PM2.5 3 to 7 and PM10 5 to 25 for hours, while the others read 53 to 66: both instruments low, the others far higher"
+Wanshouxigong,2015-07-22,fault,4 hours at the floor (3) while the others read 13 to 23
+Wanshouxigong,2015-08-07,fault,"one hour at the floor (3) between 54 and 21, while the others read 20"
+Dingling,2015-08-15,real,"PM2.5 and PM10 fall together, and the others fall an hour later: cleaner air arrives"
+Changping,2015-08-22,fault,"PM2.5 3 to 5 with its PM10 stuck at 5 for 4 hours, while the others read 11 to 22"
+Shunyi,2015-08-29,fault,"one hour with PM2.5 3 and PM10 7, between 8 and 15, while the others read 22"
+Shunyi,2015-09-27,fault,"one hour at 4 while its PM10 reads 52 and the others 16, between 11 and 24"
+Dingling,2015-09-30,fault,"PM2.5 and PM10 jump together between 14 and 4 from hour to hour, while the others stay at 22 to 25"
+Huairou,2015-10-18,fault,PM2.5 3 at 08:00 while its PM10 reads 27 and the others 11
+Aotizhongxin,2015-12-02,real,cleaner air reaches this station first: the others fall from 80 to 16 an hour later
+Dingling,2016-01-04,normal,"clean air: 3 to 7 against 12 to 18, with its PM10 at 5 to 7"
+Changping,2016-01-10,unclear,one hour with PM2.5 4 and PM10 5 while the others read 65; the others fall to 22 an hour later
+Dingling,2016-02-19,fault,PM2.5 falls to 3 and 4 while its PM10 stays at 17 to 18 and the others read 19 to 21

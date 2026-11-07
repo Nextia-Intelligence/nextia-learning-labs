@@ -1,0 +1,11 @@
+week,product_id,region,order,reason,who
+2025-03-17,P186,north,37,warm weather: heaters will sell less,Kenji
+2025-03-24,P002,north,9,warm weather: garden season starts early,Kenji
+2025-03-24,P001,north,13,warm weather: garden season starts early,Kenji
+2025-03-31,P025,south,21,warm weather: garden season starts early,Kenji
+2025-04-07,P055,north,2,Easter weekend,Kenji
+2025-04-14,P117,north,2,gut feeling,Kenji
+2025-04-14,P141,south,80,supplier minimum order of 80,Kenji
+2025-04-28,P039,north,21,warm weather: garden season starts early,Kenji
+2025-05-05,P118,coast,2,gut feeling,Kenji
+2025-05-12,P025,coast,87,weather forecast: a hot weekend,Kenji

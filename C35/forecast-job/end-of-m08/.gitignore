@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+data/*.csv
+data/*.gz
+data/SHA256SUMS
+runs/
+plan/

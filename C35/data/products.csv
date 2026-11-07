@@ -1,0 +1,201 @@
+product_id,name,category,base_price,launch_date
+P001,"Garden chair, grey",garden-furniture,46.99,2024-04-01
+P002,"Folding chair, black",garden-furniture,26.99,2024-04-01
+P003,"Sun lounger, grey",garden-furniture,81.99,2024-04-01
+P004,"Garden table, black",garden-furniture,178.99,2024-04-01
+P005,"Bistro set, grey",garden-furniture,110.99,2024-04-01
+P006,"Garden bench, black",garden-furniture,129.99,2024-04-01
+P007,"Hammock, grey",garden-furniture,73.99,2025-04-07
+P008,"Swing seat, black",garden-furniture,201.99,2024-04-01
+P009,"Deck chair, grey",garden-furniture,47.99,2024-04-01
+P010,"Cushion set, black",garden-furniture,41.99,2024-04-01
+P011,"Corner sofa, grey",garden-furniture,381.99,2024-04-01
+P012,"Side table, black",garden-furniture,59.99,2024-04-01
+P013,"Garden chair small, grey",garden-furniture,39.99,2024-04-01
+P014,"Folding chair small, black",garden-furniture,24.99,2024-04-01
+P015,"Sun lounger small, grey",garden-furniture,75.99,2024-04-01
+P016,"Garden table small, black",garden-furniture,105.99,2024-04-01
+P017,"Bistro set small, grey",garden-furniture,103.99,2024-04-01
+P018,"Garden bench small, black",garden-furniture,105.99,2024-04-01
+P019,"Hammock small, grey",garden-furniture,43.99,2024-04-01
+P020,"Swing seat small, black",garden-furniture,164.99,2024-04-01
+P021,"Deck chair small, grey",garden-furniture,28.99,2024-04-01
+P022,"Cushion set small, black",garden-furniture,26.99,2024-04-01
+P023,"Corner sofa small, grey",garden-furniture,350.99,2024-04-01
+P024,"Side table small, black",garden-furniture,39.99,2024-04-01
+P025,"Parasol, 3 m, sand",shade-and-parasols,79.99,2024-04-01
+P026,"Cantilever parasol, black",shade-and-parasols,192.99,2024-04-01
+P027,"Parasol base, grey",shade-and-parasols,38.99,2025-04-21
+P028,"Sun sail, black",shade-and-parasols,38.99,2024-04-01
+P029,"Gazebo, grey",shade-and-parasols,181.99,2024-04-01
+P030,"Pop-up shelter, black",shade-and-parasols,58.99,2024-04-01
+P031,"Parasol cover, grey",shade-and-parasols,16.99,2025-05-26
+P032,"Parasol small, black",shade-and-parasols,51.99,2024-04-01
+P033,"Cantilever parasol small, grey",shade-and-parasols,197.99,2024-04-01
+P034,"Parasol base small, black",shade-and-parasols,32.99,2024-04-01
+P035,"Sun sail small, grey",shade-and-parasols,29.99,2024-04-01
+P036,"Gazebo small, black",shade-and-parasols,156.99,2024-04-01
+P037,"Pop-up shelter small, grey",shade-and-parasols,59.99,2024-04-01
+P038,"Parasol cover small, black",shade-and-parasols,11.99,2024-04-01
+P039,"Charcoal grill, red",barbecue,65.99,2024-04-01
+P040,"Gas grill, blue",barbecue,359.99,2024-04-01
+P041,"Grill tools, red",barbecue,24.99,2024-04-01
+P042,"Grill cover, blue",barbecue,16.99,2024-04-01
+P043,"Charcoal bag, red",barbecue,11.99,2024-04-01
+P044,"Smoker box, blue",barbecue,14.99,2024-04-01
+P045,"Pizza stone, red",barbecue,33.99,2024-04-01
+P046,"Cool box, blue",barbecue,70.99,2024-04-01
+P047,"Charcoal grill small, red",barbecue,41.99,2024-04-01
+P048,"Gas grill small, blue",barbecue,218.99,2024-04-01
+P049,"Grill tools small, red",barbecue,18.99,2024-04-01
+P050,"Grill cover small, blue",barbecue,12.99,2024-04-01
+P051,"Charcoal bag small, red",barbecue,9.99,2024-04-01
+P052,"Smoker box small, blue",barbecue,12.99,2025-06-16
+P053,"Pizza stone small, red",barbecue,26.99,2024-04-01
+P054,"Cool box small, blue",barbecue,35.99,2026-02-16
+P055,"Tomato seeds, red",plants-and-seeds,2.99,2024-04-01
+P056,"Herb kit, blue",plants-and-seeds,16.99,2024-04-01
+P057,"Flower bulbs, red",plants-and-seeds,7.99,2024-04-01
+P058,"Lawn seed, blue",plants-and-seeds,15.99,2024-04-01
+P059,"Compost bag, red",plants-and-seeds,8.99,2024-04-01
+P060,"Seed tray, blue",plants-and-seeds,5.99,2024-04-01
+P061,"Planter, red",plants-and-seeds,21.99,2024-04-01
+P062,"Rose bush, blue",plants-and-seeds,22.99,2024-04-01
+P063,"Plant food, red",plants-and-seeds,7.99,2024-04-01
+P064,"Hanging basket, blue",plants-and-seeds,23.99,2024-04-01
+P065,"Grow bag, red",plants-and-seeds,3.99,2025-07-21
+P066,"Tomato seeds small, blue",plants-and-seeds,1.99,2024-04-01
+P067,"Herb kit small, red",plants-and-seeds,13.99,2025-07-21
+P068,"Flower bulbs small, blue",plants-and-seeds,5.99,2024-04-01
+P069,"Lawn seed small, red",plants-and-seeds,12.99,2025-08-04
+P070,"Compost bag small, blue",plants-and-seeds,6.99,2024-04-01
+P071,"Seed tray small, red",plants-and-seeds,3.99,2024-04-01
+P072,"Planter small, blue",plants-and-seeds,18.99,2024-04-01
+P073,"Rose bush small, red",plants-and-seeds,17.99,2024-04-01
+P074,"Plant food small, blue",plants-and-seeds,3.99,2024-04-01
+P075,"Hanging basket small, red",plants-and-seeds,18.99,2024-04-01
+P076,"Grow bag small, blue",plants-and-seeds,3.99,2024-04-01
+P077,"Garden hose 25 m, green",garden-tools,24.99,2024-04-01
+P078,"Hose reel, grey",garden-tools,44.99,2024-04-01
+P079,"Spade, black",garden-tools,28.99,2024-04-01
+P080,"Rake, grey",garden-tools,18.99,2024-04-01
+P081,"Pruner, black",garden-tools,16.99,2024-04-01
+P082,"Watering can, grey",garden-tools,10.99,2024-04-01
+P083,"Leaf blower, black",garden-tools,73.99,2024-04-01
+P084,"Wheelbarrow, grey",garden-tools,71.99,2024-04-01
+P085,"Gloves, black",garden-tools,8.99,2024-04-01
+P086,"Lawn mower, grey",garden-tools,309.99,2024-04-01
+P087,"Hedge trimmer, black",garden-tools,109.99,2024-04-01
+P088,"Sprinkler, grey",garden-tools,20.99,2024-04-01
+P089,"Garden hose small, black",garden-tools,17.99,2024-04-01
+P090,"Hose reel small, grey",garden-tools,24.99,2024-04-01
+P091,"Spade small, black",garden-tools,27.99,2024-04-01
+P092,"Rake small, grey",garden-tools,10.99,2024-04-01
+P093,"Pruner small, black",garden-tools,14.99,2024-04-01
+P094,"Watering can small, grey",garden-tools,10.99,2025-08-11
+P095,"Leaf blower small, black",garden-tools,76.99,2024-04-01
+P096,"Wheelbarrow small, grey",garden-tools,47.99,2025-08-25
+P097,"Gloves small, black",garden-tools,5.99,2025-09-01
+P098,"Lawn mower small, grey",garden-tools,237.99,2024-04-01
+P099,"Hedge trimmer small, black",garden-tools,81.99,2025-09-08
+P100,"Sprinkler small, grey",garden-tools,12.99,2024-04-01
+P101,"Solar lights, black",outdoor-lighting,28.99,2024-04-01
+P102,"String lights, grey",outdoor-lighting,14.99,2024-04-01
+P103,"Lantern, black",outdoor-lighting,23.99,2024-04-01
+P104,"Wall light, grey",outdoor-lighting,48.99,2024-04-01
+P105,"Path light, black",outdoor-lighting,14.99,2024-04-01
+P106,"Spotlight, grey",outdoor-lighting,30.99,2024-04-01
+P107,"Festoon lights, black",outdoor-lighting,42.99,2024-04-01
+P108,"Motion light, grey",outdoor-lighting,26.99,2024-04-01
+P109,"Solar lights small, black",outdoor-lighting,19.99,2024-04-01
+P110,"String lights small, grey",outdoor-lighting,14.99,2024-04-01
+P111,"Lantern small, black",outdoor-lighting,18.99,2024-04-01
+P112,"Wall light small, grey",outdoor-lighting,30.99,2024-04-01
+P113,"Path light small, black",outdoor-lighting,7.99,2024-04-01
+P114,"Spotlight small, grey",outdoor-lighting,25.99,2025-10-13
+P115,"Festoon lights small, black",outdoor-lighting,24.99,2024-04-01
+P116,"Motion light small, grey",outdoor-lighting,23.99,2024-04-01
+P117,"Kettle, black",kitchen,32.99,2024-04-01
+P118,"Toaster, grey",kitchen,43.99,2024-04-01
+P119,"Chef knife, black",kitchen,37.99,2024-04-01
+P120,"Frying pan, grey",kitchen,30.99,2024-04-01
+P121,"Cutlery set, black",kitchen,49.99,2024-04-01
+P122,"Mixing bowls, grey",kitchen,26.99,2024-04-01
+P123,"Coffee maker, black",kitchen,85.99,2024-04-01
+P124,"Storage jars, grey",kitchen,19.99,2024-04-01
+P125,"Baking tray, black",kitchen,15.99,2025-11-10
+P126,"Water bottle, grey",kitchen,17.99,2024-04-01
+P127,"Tea towels, black",kitchen,10.99,2024-04-01
+P128,"Spice rack, grey",kitchen,27.99,2024-04-01
+P129,"Kettle small, black",kitchen,30.99,2024-04-01
+P130,"Toaster small, grey",kitchen,30.99,2024-04-01
+P131,"Chef knife small, black",kitchen,28.99,2024-04-01
+P132,"Frying pan small, grey",kitchen,22.99,2024-04-01
+P133,"Cutlery set small, black",kitchen,36.99,2024-04-01
+P134,"Mixing bowls small, grey",kitchen,16.99,2025-12-08
+P135,"Coffee maker small, black",kitchen,52.99,2024-04-01
+P136,"Storage jars small, grey",kitchen,15.99,2024-04-01
+P137,"Baking tray small, black",kitchen,10.99,2024-04-01
+P138,"Water bottle small, grey",kitchen,10.99,2024-04-01
+P139,"Tea towels small, black",kitchen,6.99,2024-04-01
+P140,"Spice rack small, grey",kitchen,20.99,2024-04-01
+P141,"Duvet, black",bedding-and-textiles,74.99,2024-04-01
+P142,"Pillow, grey",bedding-and-textiles,26.99,2024-04-01
+P143,"Bed sheet set, black",bedding-and-textiles,42.99,2024-04-01
+P144,"Throw, grey",bedding-and-textiles,39.99,2024-04-01
+P145,"Bath towel, black",bedding-and-textiles,15.99,2024-04-01
+P146,"Curtains, grey",bedding-and-textiles,53.99,2024-04-01
+P147,"Cushion, black",bedding-and-textiles,17.99,2024-04-01
+P148,"Rug, grey",bedding-and-textiles,92.99,2024-04-01
+P149,"Blanket, black",bedding-and-textiles,42.99,2024-04-01
+P150,"Bath mat, grey",bedding-and-textiles,15.99,2024-04-01
+P151,"Mattress topper, black",bedding-and-textiles,89.99,2025-12-22
+P152,"Duvet small, grey",bedding-and-textiles,50.99,2024-04-01
+P153,"Pillow small, black",bedding-and-textiles,18.99,2025-12-22
+P154,"Bed sheet set small, grey",bedding-and-textiles,33.99,2026-01-26
+P155,"Throw small, black",bedding-and-textiles,22.99,2026-01-26
+P156,"Bath towel small, grey",bedding-and-textiles,9.99,2024-04-01
+P157,"Curtains small, black",bedding-and-textiles,39.99,2024-04-01
+P158,"Cushion small, grey",bedding-and-textiles,15.99,2024-04-01
+P159,"Rug small, black",bedding-and-textiles,57.99,2024-04-01
+P160,"Blanket small, grey",bedding-and-textiles,23.99,2024-04-01
+P161,"Bath mat small, black",bedding-and-textiles,8.99,2024-04-01
+P162,"Mattress topper small, grey",bedding-and-textiles,48.99,2024-04-01
+P163,"Storage box, blue",storage,12.99,2024-04-01
+P164,"Shelf unit, red",storage,82.99,2024-04-01
+P165,"Laundry basket, blue",storage,20.99,2024-04-01
+P166,"Shoe rack, red",storage,28.99,2024-04-01
+P167,"Hooks, blue",storage,8.99,2024-04-01
+P168,"Garden shed, red",storage,465.99,2024-04-01
+P169,"Tool box, blue",storage,29.99,2024-04-01
+P170,"Vacuum bags, red",storage,10.99,2024-04-01
+P171,"Drawer organiser, blue",storage,16.99,2024-04-01
+P172,"Coat stand, red",storage,48.99,2024-04-01
+P173,"Storage box small, blue",storage,13.99,2024-04-01
+P174,"Shelf unit small, red",storage,61.99,2024-04-01
+P175,"Laundry basket small, blue",storage,13.99,2024-04-01
+P176,"Shoe rack small, red",storage,18.99,2024-04-01
+P177,"Hooks small, blue",storage,4.99,2024-04-01
+P178,"Garden shed small, red",storage,319.99,2024-04-01
+P179,"Tool box small, blue",storage,24.99,2024-04-01
+P180,"Vacuum bags small, red",storage,6.99,2026-02-02
+P181,"Drawer organiser small, blue",storage,9.99,2024-04-01
+P182,"Coat stand small, red",storage,35.99,2024-04-01
+P183,"Patio heater, red",heating-and-decor,162.99,2024-04-01
+P184,"Fire pit, blue",heating-and-decor,126.99,2024-04-01
+P185,"Log basket, red",heating-and-decor,39.99,2024-04-01
+P186,"Candle set, blue",heating-and-decor,18.99,2024-04-01
+P187,"Christmas wreath, red",heating-and-decor,26.99,2024-04-01
+P188,"Christmas lights, blue",heating-and-decor,24.99,2024-04-01
+P189,"Tree stand, red",heating-and-decor,24.99,2024-04-01
+P190,"Draught excluder, blue",heating-and-decor,18.99,2024-04-01
+P191,"Hot water bottle, red",heating-and-decor,12.99,2024-04-01
+P192,"Patio heater small, blue",heating-and-decor,136.99,2024-04-01
+P193,"Fire pit small, red",heating-and-decor,100.99,2024-04-01
+P194,"Log basket small, blue",heating-and-decor,27.99,2024-04-01
+P195,"Candle set small, red",heating-and-decor,13.99,2024-04-01
+P196,"Christmas wreath small, blue",heating-and-decor,22.99,2024-04-01
+P197,"Christmas lights small, red",heating-and-decor,16.99,2024-04-01
+P198,"Tree stand small, blue",heating-and-decor,22.99,2024-04-01
+P199,"Draught excluder small, red",heating-and-decor,9.99,2024-04-01
+P200,"Hot water bottle small, blue",heating-and-decor,8.99,2024-04-01

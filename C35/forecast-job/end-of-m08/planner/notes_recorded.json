@@ -1,0 +1,360 @@
+{
+  "what": "Drafted forecast notes, recorded once from the Azure deployment chat-small (a small hosted LLM). The numbers come from the job's plan; the course checks every number in each note.",
+  "price_per_million_tokens_usd": {
+    "input": 0.1,
+    "output": 0.5
+  },
+  "notes": [
+    {
+      "week": "2025-03-10",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-03-10",
+        "order_units": 12839,
+        "order_value_usd": 596273,
+        "order_expected_cost_usd": 32038,
+        "agent_hours": 397,
+        "roster_expected_cost_usd": 3665,
+        "peak_hour": "2025-03-10 10:00:00",
+        "peak_agents": 6,
+        "overrides": 0,
+        "top_categories": {
+          "bedding-and-textiles": 2226,
+          "heating-and-decor": 2134,
+          "kitchen": 1989
+        },
+        "top_products": {
+          "P128 Spice rack, grey": 409,
+          "P183 Patio heater, red": 374,
+          "P103 Lantern, black": 359
+        },
+        "warnings": [],
+        "alarms": []
+      },
+      "note": "Larkfield\u2019s plan for the week of 2025-03-10 is to handle 12,839 orders, worth $596,273, with an expected order cost of $32,038. It staffs 397 agent hours, with roster cost expected at $3,665. The busiest hour is 2025-03-10 10:00, when the plan calls for 6 agents. Bedding and textiles lead the category mix, followed by heating and decor and kitchen. The leading products are the grey spice rack, red patio heater and black lantern. There are no bias alarms or data warnings. The forecast cannot know how actual demand or customer contacts will differ from the plan.",
+      "input_tokens": 274,
+      "output_tokens": 488,
+      "latency_s": 6.74,
+      "cost_usd": 0.000271
+    },
+    {
+      "week": "2025-03-17",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-03-17",
+        "order_units": 13468,
+        "order_value_usd": 562677,
+        "order_expected_cost_usd": 32004,
+        "agent_hours": 382,
+        "roster_expected_cost_usd": 3708,
+        "peak_hour": "2025-03-17 11:00:00",
+        "peak_agents": 6,
+        "overrides": 1,
+        "top_categories": {
+          "bedding-and-textiles": 2219,
+          "kitchen": 2031,
+          "plants-and-seeds": 2025
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 447,
+          "P128 Spice rack, grey": 408,
+          "P150 Bath mat, grey": 355
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM plants-and-seeds: the forecast was too low 2 weeks in a row (-23% and -56%, weeks of 2025-03-03, 2025-03-10). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-03-17, the plan orders 13,468 units and staffs 382 agent hours. The busiest hour is forecast for 2025-03-17 at 11:00, with 6 agents. Bedding and textiles lead the category forecast, followed by kitchen and plants and seeds. There is 1 override. A bias alarm says the plants-and-seeds forecast was too low for 2 weeks in a row: by 23% and 56% in the weeks of 2025-03-03 and 2025-03-10. Check for an early season, stock-out, or price change before the next order. No data warnings are listed. The forecast cannot know what will actually happen during the week.",
+      "input_tokens": 352,
+      "output_tokens": 336,
+      "latency_s": 6.44,
+      "cost_usd": 0.000203
+    },
+    {
+      "week": "2025-03-24",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-03-24",
+        "order_units": 15344,
+        "order_value_usd": 610177,
+        "order_expected_cost_usd": 33596,
+        "agent_hours": 382,
+        "roster_expected_cost_usd": 3667,
+        "peak_hour": "2025-03-25 11:00:00",
+        "peak_agents": 7,
+        "overrides": 2,
+        "top_categories": {
+          "plants-and-seeds": 3686,
+          "bedding-and-textiles": 2224,
+          "kitchen": 1990
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 734,
+          "P070 Compost bag small, blue": 532,
+          "P128 Spice rack, grey": 416
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM heating-and-decor: the forecast was too high 2 weeks in a row (+44% and +81%, weeks of 2025-03-10, 2025-03-17). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM plants-and-seeds: the forecast was too low 2 weeks in a row (-56% and -52%, weeks of 2025-03-10, 2025-03-17). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-03-24, the plan orders 15,344 units, with an expected order value of $610,177. It staffs 382 agent hours. Plants and seeds, bedding and textiles, and kitchen are the leading categories. The peak is forecast for 2025-03-25 at 11:00, with 7 agents. There are 2 overrides and no data warnings. Bias alarms flag heating and decor as too high for 2 weeks in a row, and plants and seeds as too low for 2 weeks in a row; investigate possible causes before the next order. The forecast cannot know whether actual demand will match the plan or what may cause differences.",
+      "input_tokens": 430,
+      "output_tokens": 374,
+      "latency_s": 5.61,
+      "cost_usd": 0.00023
+    },
+    {
+      "week": "2025-03-31",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-03-31",
+        "order_units": 16510,
+        "order_value_usd": 670751,
+        "order_expected_cost_usd": 35006,
+        "agent_hours": 453,
+        "roster_expected_cost_usd": 3836,
+        "peak_hour": "2025-04-01 11:00:00",
+        "peak_agents": 7,
+        "overrides": 1,
+        "top_categories": {
+          "plants-and-seeds": 4454,
+          "bedding-and-textiles": 2184,
+          "garden-tools": 2117
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 908,
+          "P071 Seed tray small, red": 489,
+          "P064 Hanging basket, blue": 444
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM garden-furniture: the forecast was too low 2 weeks in a row (-45% and -59%, weeks of 2025-03-17, 2025-03-24). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM garden-tools: the forecast was too low 2 weeks in a row (-27% and -29%, weeks of 2025-03-17, 2025-03-24). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM heating-and-decor: the forecast was too high 2 weeks in a row (+81% and +103%, weeks of 2025-03-17, 2025-03-24). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-03-31, the plan orders 16,510 units, with an expected order value of $670,751, and staffs 453 agent hours. The busiest hour is 2025-04-01 at 11:00, with 7 agents planned. Plants-and-seeds is the largest category, with 4,454 units forecast. Bias alarms flag garden-furniture and garden-tools as repeatedly forecast too low, and heating-and-decor as repeatedly forecast too high. There are no data warnings. The forecast cannot know whether these patterns will continue or what will cause actual demand to differ.",
+      "input_tokens": 504,
+      "output_tokens": 297,
+      "latency_s": 3.98,
+      "cost_usd": 0.000199
+    },
+    {
+      "week": "2025-04-07",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-04-07",
+        "order_units": 17667,
+        "order_value_usd": 736104,
+        "order_expected_cost_usd": 35804,
+        "agent_hours": 462,
+        "roster_expected_cost_usd": 3852,
+        "peak_hour": "2025-04-08 10:00:00",
+        "peak_agents": 8,
+        "overrides": 1,
+        "top_categories": {
+          "plants-and-seeds": 5012,
+          "garden-tools": 2376,
+          "kitchen": 2243
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 1029,
+          "P128 Spice rack, grey": 641,
+          "P071 Seed tray small, red": 634
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM garden-furniture: the forecast was too low 2 weeks in a row (-59% and -41%, weeks of 2025-03-24, 2025-03-31). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM garden-tools: the forecast was too low 2 weeks in a row (-29% and -22%, weeks of 2025-03-24, 2025-03-31). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM heating-and-decor: the forecast was too high 2 weeks in a row (+103% and +72%, weeks of 2025-03-24, 2025-03-31). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-04-07, the plan orders 17,667 units, with an order value of $736,104 and expected order cost of $35,804. It staffs 462 agent hours, with roster expected cost of $3,852. Plants and seeds lead the category forecast at 5,012 units; garden tools and kitchen follow. The peak is 2025-04-08 at 10:00, with 8 agents. Bias alarms flag garden furniture and garden tools as too low for 2 weeks in a row, and heating and decor as too high for 2 weeks in a row. There are no data warnings. The forecast cannot know whether these patterns reflect seasonality, stock-outs, or price changes.",
+      "input_tokens": 502,
+      "output_tokens": 647,
+      "latency_s": 8.74,
+      "cost_usd": 0.000374
+    },
+    {
+      "week": "2025-04-14",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-04-14",
+        "order_units": 17509,
+        "order_value_usd": 699358,
+        "order_expected_cost_usd": 34789,
+        "agent_hours": 398,
+        "roster_expected_cost_usd": 3788,
+        "peak_hour": "2025-04-15 11:00:00",
+        "peak_agents": 7,
+        "overrides": 2,
+        "top_categories": {
+          "plants-and-seeds": 5042,
+          "garden-tools": 2464,
+          "bedding-and-textiles": 2197
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 1065,
+          "P128 Spice rack, grey": 602,
+          "P071 Seed tray small, red": 498
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM heating-and-decor: the forecast was too high 2 weeks in a row (+72% and +32%, weeks of 2025-03-31, 2025-04-07). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-04-14, the plan orders 17,509 units, with expected order value of $699,358 and expected order cost of $34,789. It staffs 398 agent hours, with roster expected cost of $3,788. The busiest hour is 2025-04-15 at 11:00, with 7 agents; there are 2 overrides. Plants and seeds lead the categories at 5,042 units. A bias alarm flags heating-and-decor: forecasts were too high 2 weeks in a row, by 72% and 32%, so investigate before the next order. There are no data warnings. The forecast cannot know what will actually happen during the week.",
+      "input_tokens": 354,
+      "output_tokens": 517,
+      "latency_s": 5.14,
+      "cost_usd": 0.000294
+    },
+    {
+      "week": "2025-04-21",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-04-21",
+        "order_units": 19304,
+        "order_value_usd": 771014,
+        "order_expected_cost_usd": 35626,
+        "agent_hours": 441,
+        "roster_expected_cost_usd": 3988,
+        "peak_hour": "2025-04-21 10:00:00",
+        "peak_agents": 8,
+        "overrides": 0,
+        "top_categories": {
+          "plants-and-seeds": 6577,
+          "garden-tools": 2791,
+          "bedding-and-textiles": 2141
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 1275,
+          "P071 Seed tray small, red": 849,
+          "P076 Grow bag small, blue": 587
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM heating-and-decor: the forecast was too high 2 weeks in a row (+32% and +36%, weeks of 2025-04-07, 2025-04-14). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-04-21, the plan orders 19,304 units, with an order value of $771,014 and expected order cost of $35,626. It staffs 441 agent hours, with an expected roster cost of $3,988. The busiest hour is 2025-04-21 10:00, when the plan calls for 8 agents. There are no overrides and no data warnings. A bias alarm flags heating-and-decor: its forecast was too high for 2 weeks in a row, by +32% and +36%. Check for an early season, stock-out, or price change before the next order, then refit or change the method. The forecast cannot know what will happen outside the patterns and information available to it.",
+      "input_tokens": 355,
+      "output_tokens": 507,
+      "latency_s": 4.93,
+      "cost_usd": 0.000289
+    },
+    {
+      "week": "2025-04-28",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-04-28",
+        "order_units": 18172,
+        "order_value_usd": 747124,
+        "order_expected_cost_usd": 35350,
+        "agent_hours": 437,
+        "roster_expected_cost_usd": 3997,
+        "peak_hour": "2025-04-29 11:00:00",
+        "peak_agents": 8,
+        "overrides": 1,
+        "top_categories": {
+          "plants-and-seeds": 5617,
+          "garden-tools": 2740,
+          "bedding-and-textiles": 2126
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 1145,
+          "P071 Seed tray small, red": 603,
+          "P076 Grow bag small, blue": 542
+        },
+        "warnings": [],
+        "alarms": []
+      },
+      "note": "For the week of 2025-04-28, the plan is for 18,172 order units, with an expected order value of $747,124. The staffing plan provides 437 agent hours, with a roster expected cost of $3,997. The busiest hour is forecast for 2025-04-29 at 11:00, requiring 8 agents. There is 1 override. Plants and seeds lead the category outlook at 5,617 units, followed by garden tools and bedding and textiles. There are no bias alarms or data warnings. This forecast cannot know unexpected events or how customers will actually behave.",
+      "input_tokens": 278,
+      "output_tokens": 545,
+      "latency_s": 6.85,
+      "cost_usd": 0.0003
+    },
+    {
+      "week": "2025-05-05",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-05-05",
+        "order_units": 19554,
+        "order_value_usd": 854708,
+        "order_expected_cost_usd": 37556,
+        "agent_hours": 490,
+        "roster_expected_cost_usd": 3919,
+        "peak_hour": "2025-05-06 11:00:00",
+        "peak_agents": 8,
+        "overrides": 1,
+        "top_categories": {
+          "plants-and-seeds": 5924,
+          "garden-tools": 2757,
+          "bedding-and-textiles": 2082
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 1156,
+          "P071 Seed tray small, red": 553,
+          "P072 Planter small, blue": 512
+        },
+        "warnings": [],
+        "alarms": []
+      },
+      "note": "For the week of 2025-05-05, the plan orders 19,554 units, with an order value of $854,708 and expected order costs of $37,556. It staffs 490 agent hours, with roster costs expected to be $3,919. The busiest hour is 2025-05-06 11:00:00, with 8 agents planned. Plants and seeds lead the categories at 5,924 units; the leading product is P075 Hanging basket small, red, at 1,156 units. There is 1 override. No bias alarms or data warnings are listed. The forecast cannot know exactly what customers will order or how operations will actually perform.",
+      "input_tokens": 278,
+      "output_tokens": 358,
+      "latency_s": 5.61,
+      "cost_usd": 0.000207
+    },
+    {
+      "week": "2025-05-12",
+      "model": "chat-small (gpt-6-luna-2026-09-22)",
+      "system": "You write the weekly forecast note for Larkfield's operations manager, an online shop for home and garden products. Write 80 to 120 words in plain English. Use only the numbers in the JSON you get; do not compute new numbers and do not add any number that is not there. Say what the plan orders and how many agent hours it staffs, name any bias alarm or data warning, and end with one sentence on what the forecast cannot know.",
+      "facts_sent": {
+        "week": "2025-05-12",
+        "order_units": 21595,
+        "order_value_usd": 1009727,
+        "order_expected_cost_usd": 39598,
+        "agent_hours": 534,
+        "roster_expected_cost_usd": 3890,
+        "peak_hour": "2025-05-12 10:00:00",
+        "peak_agents": 8,
+        "overrides": 1,
+        "top_categories": {
+          "plants-and-seeds": 5839,
+          "garden-furniture": 3201,
+          "garden-tools": 2896
+        },
+        "top_products": {
+          "P075 Hanging basket small, red": 984,
+          "P071 Seed tray small, red": 617,
+          "P072 Planter small, blue": 605
+        },
+        "warnings": [],
+        "alarms": [
+          "BIAS ALARM barbecue: the forecast was too low 2 weeks in a row (-46% and -39%, weeks of 2025-04-28, 2025-05-05). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM garden-furniture: the forecast was too low 2 weeks in a row (-40% and -42%, weeks of 2025-04-28, 2025-05-05). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method.",
+          "BIAS ALARM shade-and-parasols: the forecast was too low 2 weeks in a row (-45% and -47%, weeks of 2025-04-28, 2025-05-05). Look for the cause before the next order (a season that starts early, a stock-out, a price change), then refit or change the method."
+        ]
+      },
+      "note": "For the week of 2025-05-12, the plan calls for 21,595 order units and staffs 534 agent hours. Plants and seeds lead the category forecast, followed by garden furniture and garden tools. The busiest hour is 2025-05-12 at 10:00, with 8 agents planned. Bias alarms flag forecasts that were too low for barbecue, garden furniture, and shade and parasols for 2 weeks in a row. There are no data warnings. The forecast cannot know whether actual demand will change because of an early season, stock-outs, or price changes.",
+      "input_tokens": 504,
+      "output_tokens": 477,
+      "latency_s": 7.89,
+      "cost_usd": 0.000289
+    }
+  ]
+}
