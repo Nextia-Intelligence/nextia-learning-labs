@@ -49,7 +49,7 @@ vision info
 - `vision vlm --model hosted`: score the recorded answers of a vision-language model.
 - `vision inspect ../../data/returns/test/<photo>.jpg`: judge one photo: pass, check or fail.
 - `vision serve`: the image service on http://127.0.0.1:8042.
-- `vision replay`: a month of returns photos through the inspector, with drift checks.
+- `vision replay`: a month of returns photos through the inspector, with drift alarms and cost alarms.
 
 Your own runs go to `outputs/table.json`; `vision compare` shows them next to the course's rows with "(yours)". `vision reset` removes them.
 

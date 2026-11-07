@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 from larkvision import data as D
-from larkvision.drift import alarms
+from larkvision.drift import alarms, business_alarms
 from larkvision.paths import data_dir, models_dir, outputs_dir
 
 
@@ -31,6 +31,7 @@ def replay(data, rows, inspector, find_faces, review_dir, costs):
         results.append({**res, "day": r["day"], "week": week_of(r["day"])})
     budget_share = costs["checks_per_day"] / costs["returns_per_day"]
     ref = inspector.config["validation_good_scores"]
+    shares_ref = inspector.config["validation_shares"]
     weeks = {}
     for res in results:
         weeks.setdefault(res["week"], []).append(res)
@@ -40,11 +41,13 @@ def replay(data, rows, inspector, find_faces, review_dir, costs):
         scores = [r["score"] for r in rs if r["score"] is not None]
         share = sum(r["zone"] == "check" for r in rs) / len(rs)
         p, al = alarms(wk, scores, ref, share, budget_share)
+        shares = {z: sum(r["zone"] == z for r in rs) / len(rs) for z in ("fail", "check")}
+        cost = business_alarms(shares, shares_ref)
         summary.append({"week": wk, "photos": len(rs), "pass": sum(r["zone"] == "pass" for r in rs),
                         "check": sum(r["zone"] == "check" for r in rs), "fail": sum(r["zone"] == "fail" for r in rs),
                         "faces": sum(r["faces"] > 0 for r in rs), "review": sum(r["review"] for r in rs),
                         "mean_score": round(float(np.mean(scores)), 3) if scores else None, "psi": round(p, 2),
-                        "alarms": al})
+                        "alarms": al, "cost_alarms": cost})
     return results, summary
 
 
@@ -68,7 +71,16 @@ def run(args):
               f"{s['review']:6d}  {s['mean_score']:10.3f}  {s['psi']:.2f}")
     for s in summary:
         for a in s["alarms"]:
-            print(f"ALARM {s['week']}: {a}. Look at the photos in {args.review}/ before you change anything.")
+            print(f"DRIFT ALARM {s['week']}: {a}. Look at the photos in {args.review}/ before you change anything.")
+        for a in s["cost_alarms"]:
+            print(f"COST ALARM {s['week']}: {a}. Stop the automatic decisions and ask Kwame's team to check by hand.")
+    days = {}
+    for r in results:
+        days.setdefault(r["day"], []).append(r["zone"])
+    lvl = insp.config["validation_shares"]
+    print(f"Daily share of fail (validation level {lvl['fail']:.0%}) and check ({lvl['check']:.0%}), "
+          "about 5 photos a day:")
+    print(" ".join(f"{d[-2:]}:{z.count('fail') / len(z):.0%}" for d, z in sorted(days.items())))
     out = outputs_dir() / "replay.csv"
     with open(out, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["item_id", "day", "week", "zone", "score", "confidence", "faces", "review",

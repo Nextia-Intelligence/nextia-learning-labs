@@ -12,7 +12,7 @@ the lesson you are on. If your own copy breaks, take the snapshot of the last mo
 | `end-of-m05` | damage area from masks: `vision masks` | 19 |
 | `end-of-m06` | pass, check and fail lines from the review budget: `vision zones` | 22 |
 | `end-of-m07` | matching customer photos and checking vision-language answers: `vision match`, `vision vlm` | 24 |
-| `end-of-m08` | the returns inspector, the image service with its review folder, blur by default and drift checks: `vision inspect`, `vision serve`, `vision replay` | 30 |
+| `end-of-m08` | the returns inspector, the image service with its review folder, blur by default, drift and cost alarms: `vision inspect`, `vision serve`, `vision replay` | 32 |
 
 Each folder has its own `README.md` with the set-up commands for macOS, Linux and Windows. The data (`../data`) and
 the models (`../models`) are shared: the commands find them by themselves.

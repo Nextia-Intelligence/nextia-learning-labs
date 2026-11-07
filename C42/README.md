@@ -8,6 +8,9 @@ The files for the Vision AI course of Nextia Learning.
 | `compare.py` | The comparison table helper that the notebooks use: the same scores, the same cost table, for every method. |
 | `models/` | The model files of the image service: the returns inspector and a face detector. See `models/README.md`. |
 | `snapshots/` | The `larkvision` project at the end of each module (`start`, `end-of-m02` ... `end-of-m08`). See `snapshots/README.md`. |
+| `M01-L04-...` to `M08-L01-...` | Lesson notebooks: a learner notebook and a solution notebook for each. They open in Colab, Kaggle or Jupyter and download what they need. |
+| `archives/` | The image sets as zip files, for the notebooks (the same files as `data/`). |
+| `final/` | The final assignment: the task (`final/README.md`) and its images. |
 
 Everything runs on a laptop CPU. You need no key, no graphics card and no money.
 

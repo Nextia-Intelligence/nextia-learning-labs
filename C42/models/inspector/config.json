@@ -104,5 +104,9 @@
   6.2006,
   6.6658
  ],
+ "validation_shares": {
+  "fail": 0.0357,
+  "check": 0.1607
+ },
  "note": "A small PatchCore: ResNet-18 (timm resnet18.a1_in1k, Apache-2.0) to layer 3 in ONNX, int8; a memory of 20,000 patches of the 380 good training candles; lines chosen on the validation photos for 100 checks a day."
 }

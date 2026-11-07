@@ -14,6 +14,16 @@ def psi(expected, actual, bins=10):
     return float(((pa - pe) * np.log(pa / pe)).sum())
 
 
+def business_alarms(shares, reference, margin=0.10):
+    """Cost alarms: the share of "fail" (good items lost if they are good) and of "check" (a person's time) against
+    their validation level. An alarm when a share is more than `margin` (10 points) above its level."""
+    out = []
+    for zone in ("fail", "check"):
+        if shares[zone] > reference[zone] + margin:
+            out.append(f"{shares[zone]:.0%} of photos {zone}, validation level {reference[zone]:.0%}")
+    return out
+
+
 def alarms(week, scores, reference, check_share, budget_share, psi_limit=0.25):
     out = []
     p = psi(reference, scores)

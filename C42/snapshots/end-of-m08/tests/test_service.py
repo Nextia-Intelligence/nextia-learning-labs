@@ -12,7 +12,8 @@ from larkvision.service import create_app
 class FakeInspector:
     """Scores a photo by its darkest pixel (a dark spot = damage), with the real inspector's config keys."""
     version = "test"
-    config = {"check_line": 0.4, "fail_line": 0.8, "validation_good_scores": [0.1, 0.12, 0.15, 0.2, 0.25] * 4}
+    config = {"check_line": 0.4, "fail_line": 0.8, "validation_good_scores": [0.1, 0.12, 0.15, 0.2, 0.25] * 4,
+              "validation_shares": {"fail": 0.05, "check": 0.15}}
 
     def score(self, img):
         return float(1 - np.asarray(img.convert("L")).min() / 255) if img.width != 333 else 0.6
