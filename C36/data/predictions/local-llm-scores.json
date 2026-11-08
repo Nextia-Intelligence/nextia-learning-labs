@@ -1,0 +1,9 @@
+{
+  "method": "local Qwen3-0.6B, route scores (decision model by hand)",
+  "label": "measured",
+  "model": "Qwen/Qwen3-0.6B@c1899de289 (Apache-2.0): log-probability of each route name, temperature 5.0",
+  "ms_per_message": 452.785,
+  "run_per_1000": 0.0063,
+  "messages": 4000,
+  "notes": "The temperature was fitted on the validation messages. Measured on a laptop CPU (Apple M4)."
+}

@@ -1,0 +1,9 @@
+{
+  "method": "GLiClass zero-shot (multilang edge)",
+  "label": "measured",
+  "model": "knowledgator/gliclass-multilang-edge@d16c08ef70 (Apache-2.0), one phrase per route",
+  "ms_per_message": 21.291,
+  "run_per_1000": 0.0003,
+  "messages": 4000,
+  "notes": "No Larkfield labels used. Measured on a laptop CPU (Apple M4, 4 threads), all routes in one pass."
+}

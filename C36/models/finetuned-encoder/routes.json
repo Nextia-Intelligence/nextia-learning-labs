@@ -1,0 +1,14 @@
+{
+  "base_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+  "routes": [
+    "orders",
+    "delivery",
+    "returns_refunds",
+    "billing",
+    "product",
+    "account",
+    "needs_person"
+  ],
+  "max_length": 96
+}

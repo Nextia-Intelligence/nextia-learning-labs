@@ -1,0 +1,16 @@
+{
+  "what": "Keyword rules and regular expressions: the first rule that matches a message gives its route. Strong rules are the ones Grace trusts more than a model (see 'rules and models together'). Patterns ignore upper and lower case.",
+  "rules": [
+    {"route": "needs_person", "strong": true, "pattern": "\\b(lawyer|attorney|avocat|journalist|journaliste|consumer protection|protection du consommateur)\\b", "why": "a legal or press threat"},
+    {"route": "needs_person", "strong": true, "pattern": "\\b(injur\\w*|hurt|bless\u00e9\\w*|smok\\w+|fum\u00e9e|fumer|on fire|en feu|cut (his|her|my) hand)\\b", "why": "a safety problem"},
+    {"route": "needs_person", "strong": false, "pattern": "\\b(manager|supervisor|superviseur|responsable)\\b", "why": "asks for a manager"},
+    {"route": "account", "strong": true, "pattern": "\\b(hacked|pirat\u00e9\\w*|didn'?t (make|place|order)|never placed|jamais pass\u00e9e|pas fait)\\b", "why": "someone else used the account"},
+    {"route": "billing", "strong": true, "pattern": "\\b(charged twice|double charge|d\u00e9bit\u00e9e? deux fois|second charge)\\b", "why": "a double charge"},
+    {"route": "billing", "strong": false, "pattern": "\\b(invoice|facture|receipt|re\u00e7u|promo code|code promo|gift card|carte-cadeau|payment (declined|failed|refused|keeps failing)|paiement (refus\u00e9|est refus\u00e9))\\b", "why": "invoices, codes and failed payments"},
+    {"route": "returns_refunds", "strong": false, "pattern": "\\b(refund\\w*|rembours\\w*|return\\w*|retourn\\w*|renvoy\\w*|exchange|\u00e9chang\\w*|arrived broken|cass\u00e9|wrong item|mauvais article)\\b", "why": "returns, refunds and broken items"},
+    {"route": "delivery", "strong": false, "pattern": "\\b(tracking|suivi|delivered|livr\u00e9e?|courier|livreur|transporteur|still waiting|toujours pas re\u00e7u)\\b", "why": "where is my parcel"},
+    {"route": "orders", "strong": false, "pattern": "\\b(cancel\\w*|annul\\w*|change the (delivery )?address|changer l'adresse|confirmation)\\b", "why": "change or cancel an order"},
+    {"route": "product", "strong": false, "pattern": "\\b(dimensions?|waterproof|imperm\u00e9able|in stock|en stock|warranty|garantie|instructions|notice|assembl\\w+)\\b", "why": "questions about a product"},
+    {"route": "account", "strong": false, "pattern": "\\b(log ?in|password|mot de passe|connecter|delete my account|supprimer mon compte|my account|mon compte)\\b", "why": "the customer's account"}
+  ]
+}

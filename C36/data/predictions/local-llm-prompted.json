@@ -1,0 +1,9 @@
+{
+  "method": "local Qwen3-0.6B, prompted (JSON answer)",
+  "label": "measured",
+  "model": "Qwen/Qwen3-0.6B@c1899de289 (Apache-2.0), greedy, max 60 new tokens",
+  "ms_per_message": 2127.98,
+  "run_per_1000": 0.0296,
+  "messages": 2000,
+  "notes": "Test messages only. An answer that is not valid JSON with a known route goes to review."
+}

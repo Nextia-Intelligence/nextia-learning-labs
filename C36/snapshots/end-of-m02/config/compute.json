@@ -1,0 +1,4 @@
+{
+  "what": "The price of computer time, to turn the measured seconds of a local model into dollars. An assumption: a small cloud server with 4 virtual CPUs and 16 GB of memory at about 0.20 dollars an hour, one message at a time on one CPU.",
+  "usd_per_cpu_hour": 0.05
+}
