@@ -9,6 +9,10 @@ This folder belongs to the Speech AI course of Nextia Learning. It holds:
 - `snapshots/`: the course project, `larkspeech` and its `speech` command, at the end of each module (`start`,
   `end-of-m02` ... `end-of-m09`). The last ones contain the Larkfield IVR and its test phone.
 - one folder per notebook lesson.
+- `M10-*`: the four case studies, each with its notebooks and its own sample of open, real recordings in
+  `data/` (read its `dataset.md` for the source, the licence and the attribution).
+- `final/`: the public data of the final assignment (40 French calls and 20 IVR calls on a new phone line, with
+  no answers). Read `final/README.md` first.
 
 ## Start (macOS or Linux)
 

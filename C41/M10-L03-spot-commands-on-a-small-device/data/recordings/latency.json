@@ -1,0 +1,25 @@
+{
+ "clips": 100,
+ "machine": "arm64 Darwin (Apple M4), 1 thread",
+ "template": {
+  "median_ms": 0.25,
+  "p90_ms": 0.25,
+  "bytes": 56320
+ },
+ "cnn": {
+  "median_ms": 0.31,
+  "p90_ms": 0.31,
+  "parameters": 45132,
+  "bytes": 180528
+ },
+ "vosk": {
+  "median_ms": 4.42,
+  "p90_ms": 4.59,
+  "bytes": 70898967
+ },
+ "whisper": {
+  "median_ms": 275.68,
+  "p90_ms": 281.54,
+  "bytes": 78207087
+ }
+}

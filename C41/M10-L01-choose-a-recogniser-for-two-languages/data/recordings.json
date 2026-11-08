@@ -1,0 +1,4104 @@
+{
+"source": "google/fleurs",
+"revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+"sample": [
+{
+"utt_id": "en-1664-f",
+"language": "en",
+"sentence_id": 1664,
+"file": "1944915261206096046.wav",
+"gender": "female",
+"seconds": 5.4
+},
+{
+"utt_id": "en-1664-m",
+"language": "en",
+"sentence_id": 1664,
+"file": "13031516147694203229.wav",
+"gender": "male",
+"seconds": 8.36
+},
+{
+"utt_id": "en-1666-f",
+"language": "en",
+"sentence_id": 1666,
+"file": "13875708868701082683.wav",
+"gender": "female",
+"seconds": 8.34
+},
+{
+"utt_id": "en-1666-m",
+"language": "en",
+"sentence_id": 1666,
+"file": "9100750275960890476.wav",
+"gender": "male",
+"seconds": 10.58
+},
+{
+"utt_id": "en-1669-f",
+"language": "en",
+"sentence_id": 1669,
+"file": "15618717836108767541.wav",
+"gender": "female",
+"seconds": 7.2
+},
+{
+"utt_id": "en-1669-m",
+"language": "en",
+"sentence_id": 1669,
+"file": "8173060820032255320.wav",
+"gender": "male",
+"seconds": 9.14
+},
+{
+"utt_id": "en-1670-f",
+"language": "en",
+"sentence_id": 1670,
+"file": "6263891810431071444.wav",
+"gender": "female",
+"seconds": 19.8
+},
+{
+"utt_id": "en-1670-m",
+"language": "en",
+"sentence_id": 1670,
+"file": "2508559905589212221.wav",
+"gender": "male",
+"seconds": 29.3
+},
+{
+"utt_id": "en-1671-f",
+"language": "en",
+"sentence_id": 1671,
+"file": "12784232275162817860.wav",
+"gender": "female",
+"seconds": 10.02
+},
+{
+"utt_id": "en-1671-m",
+"language": "en",
+"sentence_id": 1671,
+"file": "5904418145588789259.wav",
+"gender": "male",
+"seconds": 12.42
+},
+{
+"utt_id": "en-1675-f",
+"language": "en",
+"sentence_id": 1675,
+"file": "6817878979697223927.wav",
+"gender": "female",
+"seconds": 6.6
+},
+{
+"utt_id": "en-1675-m",
+"language": "en",
+"sentence_id": 1675,
+"file": "10052240106321793346.wav",
+"gender": "male",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1680-f",
+"language": "en",
+"sentence_id": 1680,
+"file": "10894616243452123700.wav",
+"gender": "female",
+"seconds": 10.2
+},
+{
+"utt_id": "en-1680-m",
+"language": "en",
+"sentence_id": 1680,
+"file": "1277588711703410007.wav",
+"gender": "male",
+"seconds": 14.88
+},
+{
+"utt_id": "en-1681-f",
+"language": "en",
+"sentence_id": 1681,
+"file": "9951576861356531238.wav",
+"gender": "female",
+"seconds": 11.34
+},
+{
+"utt_id": "en-1681-m",
+"language": "en",
+"sentence_id": 1681,
+"file": "4822858934027125258.wav",
+"gender": "male",
+"seconds": 19.98
+},
+{
+"utt_id": "en-1683-f",
+"language": "en",
+"sentence_id": 1683,
+"file": "14624695685248966546.wav",
+"gender": "female",
+"seconds": 11.1
+},
+{
+"utt_id": "en-1683-m",
+"language": "en",
+"sentence_id": 1683,
+"file": "16561255522246307224.wav",
+"gender": "male",
+"seconds": 17.7
+},
+{
+"utt_id": "en-1684-f",
+"language": "en",
+"sentence_id": 1684,
+"file": "9431561488681290113.wav",
+"gender": "female",
+"seconds": 9.96
+},
+{
+"utt_id": "en-1684-m",
+"language": "en",
+"sentence_id": 1684,
+"file": "4496786334735634498.wav",
+"gender": "male",
+"seconds": 10.96
+},
+{
+"utt_id": "en-1685-f",
+"language": "en",
+"sentence_id": 1685,
+"file": "1045619486290403122.wav",
+"gender": "female",
+"seconds": 13.92
+},
+{
+"utt_id": "en-1685-m",
+"language": "en",
+"sentence_id": 1685,
+"file": "18249328980235371168.wav",
+"gender": "male",
+"seconds": 12.9
+},
+{
+"utt_id": "en-1686-f",
+"language": "en",
+"sentence_id": 1686,
+"file": "988308832713047124.wav",
+"gender": "female",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1686-m",
+"language": "en",
+"sentence_id": 1686,
+"file": "8036301841859634130.wav",
+"gender": "male",
+"seconds": 12.12
+},
+{
+"utt_id": "en-1689-f",
+"language": "en",
+"sentence_id": 1689,
+"file": "2888426082139840822.wav",
+"gender": "female",
+"seconds": 13.02
+},
+{
+"utt_id": "en-1689-m",
+"language": "en",
+"sentence_id": 1689,
+"file": "14328568808003469713.wav",
+"gender": "male",
+"seconds": 20.76
+},
+{
+"utt_id": "en-1691-f",
+"language": "en",
+"sentence_id": 1691,
+"file": "970996899856075411.wav",
+"gender": "female",
+"seconds": 5.76
+},
+{
+"utt_id": "en-1691-m",
+"language": "en",
+"sentence_id": 1691,
+"file": "12382404601461539160.wav",
+"gender": "male",
+"seconds": 9.36
+},
+{
+"utt_id": "en-1692-f",
+"language": "en",
+"sentence_id": 1692,
+"file": "15494714124475485422.wav",
+"gender": "female",
+"seconds": 7.38
+},
+{
+"utt_id": "en-1692-m",
+"language": "en",
+"sentence_id": 1692,
+"file": "814068542761107022.wav",
+"gender": "male",
+"seconds": 10.34
+},
+{
+"utt_id": "en-1694-f",
+"language": "en",
+"sentence_id": 1694,
+"file": "15359249341091182172.wav",
+"gender": "female",
+"seconds": 7.98
+},
+{
+"utt_id": "en-1694-m",
+"language": "en",
+"sentence_id": 1694,
+"file": "14160468372285024125.wav",
+"gender": "male",
+"seconds": 10.72
+},
+{
+"utt_id": "en-1697-f",
+"language": "en",
+"sentence_id": 1697,
+"file": "15004506730396162914.wav",
+"gender": "female",
+"seconds": 6.36
+},
+{
+"utt_id": "en-1697-m",
+"language": "en",
+"sentence_id": 1697,
+"file": "18202947038243735021.wav",
+"gender": "male",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1700-f",
+"language": "en",
+"sentence_id": 1700,
+"file": "16725549094651424150.wav",
+"gender": "female",
+"seconds": 4.92
+},
+{
+"utt_id": "en-1700-m",
+"language": "en",
+"sentence_id": 1700,
+"file": "15228527404193944906.wav",
+"gender": "male",
+"seconds": 7.2
+},
+{
+"utt_id": "en-1701-f",
+"language": "en",
+"sentence_id": 1701,
+"file": "163369145011818208.wav",
+"gender": "female",
+"seconds": 6.9
+},
+{
+"utt_id": "en-1701-m",
+"language": "en",
+"sentence_id": 1701,
+"file": "11147918080606585533.wav",
+"gender": "male",
+"seconds": 10.62
+},
+{
+"utt_id": "en-1702-f",
+"language": "en",
+"sentence_id": 1702,
+"file": "3130624662424273953.wav",
+"gender": "female",
+"seconds": 6.84
+},
+{
+"utt_id": "en-1702-m",
+"language": "en",
+"sentence_id": 1702,
+"file": "1483818313790875806.wav",
+"gender": "male",
+"seconds": 10.18
+},
+{
+"utt_id": "en-1703-f",
+"language": "en",
+"sentence_id": 1703,
+"file": "7705168054572226609.wav",
+"gender": "female",
+"seconds": 6.12
+},
+{
+"utt_id": "en-1703-m",
+"language": "en",
+"sentence_id": 1703,
+"file": "6284223441572848962.wav",
+"gender": "male",
+"seconds": 10.12
+},
+{
+"utt_id": "en-1708-f",
+"language": "en",
+"sentence_id": 1708,
+"file": "5153770112137332001.wav",
+"gender": "female",
+"seconds": 9.48
+},
+{
+"utt_id": "en-1708-m",
+"language": "en",
+"sentence_id": 1708,
+"file": "17720519199437095973.wav",
+"gender": "male",
+"seconds": 13.18
+},
+{
+"utt_id": "en-1711-f",
+"language": "en",
+"sentence_id": 1711,
+"file": "15533201887617185536.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "en-1711-m",
+"language": "en",
+"sentence_id": 1711,
+"file": "1043394666292127188.wav",
+"gender": "male",
+"seconds": 15.56
+},
+{
+"utt_id": "en-1716-f",
+"language": "en",
+"sentence_id": 1716,
+"file": "18401388433019060091.wav",
+"gender": "female",
+"seconds": 18.96
+},
+{
+"utt_id": "en-1716-m",
+"language": "en",
+"sentence_id": 1716,
+"file": "17637008742317695762.wav",
+"gender": "male",
+"seconds": 21.72
+},
+{
+"utt_id": "en-1718-f",
+"language": "en",
+"sentence_id": 1718,
+"file": "4507570726474155114.wav",
+"gender": "female",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1718-m",
+"language": "en",
+"sentence_id": 1718,
+"file": "16249020005264010985.wav",
+"gender": "male",
+"seconds": 11.8
+},
+{
+"utt_id": "en-1719-f",
+"language": "en",
+"sentence_id": 1719,
+"file": "14291047344508554279.wav",
+"gender": "female",
+"seconds": 10.8
+},
+{
+"utt_id": "en-1719-m",
+"language": "en",
+"sentence_id": 1719,
+"file": "2462607144574975891.wav",
+"gender": "male",
+"seconds": 13.26
+},
+{
+"utt_id": "en-1720-f",
+"language": "en",
+"sentence_id": 1720,
+"file": "11374239868879585530.wav",
+"gender": "female",
+"seconds": 6.42
+},
+{
+"utt_id": "en-1720-m",
+"language": "en",
+"sentence_id": 1720,
+"file": "1800879378797955911.wav",
+"gender": "male",
+"seconds": 6.98
+},
+{
+"utt_id": "en-1721-f",
+"language": "en",
+"sentence_id": 1721,
+"file": "16851035292487940942.wav",
+"gender": "female",
+"seconds": 6.48
+},
+{
+"utt_id": "en-1721-m",
+"language": "en",
+"sentence_id": 1721,
+"file": "1633905380187706594.wav",
+"gender": "male",
+"seconds": 9.24
+},
+{
+"utt_id": "en-1733-f",
+"language": "en",
+"sentence_id": 1733,
+"file": "9485750708964169814.wav",
+"gender": "female",
+"seconds": 13.08
+},
+{
+"utt_id": "en-1733-m",
+"language": "en",
+"sentence_id": 1733,
+"file": "899317378039624755.wav",
+"gender": "male",
+"seconds": 17.58
+},
+{
+"utt_id": "en-1737-f",
+"language": "en",
+"sentence_id": 1737,
+"file": "9989642899702468851.wav",
+"gender": "female",
+"seconds": 4.14
+},
+{
+"utt_id": "en-1737-m",
+"language": "en",
+"sentence_id": 1737,
+"file": "6351367445025505944.wav",
+"gender": "male",
+"seconds": 6.6
+},
+{
+"utt_id": "en-1742-f",
+"language": "en",
+"sentence_id": 1742,
+"file": "18320871674783850842.wav",
+"gender": "female",
+"seconds": 7.02
+},
+{
+"utt_id": "en-1742-m",
+"language": "en",
+"sentence_id": 1742,
+"file": "5907599423488165658.wav",
+"gender": "male",
+"seconds": 9.36
+},
+{
+"utt_id": "en-1745-f",
+"language": "en",
+"sentence_id": 1745,
+"file": "3495437884024744716.wav",
+"gender": "female",
+"seconds": 7.68
+},
+{
+"utt_id": "en-1745-m",
+"language": "en",
+"sentence_id": 1745,
+"file": "6927296460002744628.wav",
+"gender": "male",
+"seconds": 9.66
+},
+{
+"utt_id": "en-1749-f",
+"language": "en",
+"sentence_id": 1749,
+"file": "1054805305879816018.wav",
+"gender": "female",
+"seconds": 9.6
+},
+{
+"utt_id": "en-1749-m",
+"language": "en",
+"sentence_id": 1749,
+"file": "1372746700546513130.wav",
+"gender": "male",
+"seconds": 13.74
+},
+{
+"utt_id": "en-1752-f",
+"language": "en",
+"sentence_id": 1752,
+"file": "11060294228176938598.wav",
+"gender": "female",
+"seconds": 7.56
+},
+{
+"utt_id": "en-1752-m",
+"language": "en",
+"sentence_id": 1752,
+"file": "10536763405165824117.wav",
+"gender": "male",
+"seconds": 11.44
+},
+{
+"utt_id": "en-1755-f",
+"language": "en",
+"sentence_id": 1755,
+"file": "8065205721681723081.wav",
+"gender": "female",
+"seconds": 4.86
+},
+{
+"utt_id": "en-1755-m",
+"language": "en",
+"sentence_id": 1755,
+"file": "13345242347208844836.wav",
+"gender": "male",
+"seconds": 6.64
+},
+{
+"utt_id": "en-1757-f",
+"language": "en",
+"sentence_id": 1757,
+"file": "12156117084384995618.wav",
+"gender": "female",
+"seconds": 10.98
+},
+{
+"utt_id": "en-1757-m",
+"language": "en",
+"sentence_id": 1757,
+"file": "9089212191853214530.wav",
+"gender": "male",
+"seconds": 10.44
+},
+{
+"utt_id": "en-1758-f",
+"language": "en",
+"sentence_id": 1758,
+"file": "18050107333341461921.wav",
+"gender": "female",
+"seconds": 9.0
+},
+{
+"utt_id": "en-1758-m",
+"language": "en",
+"sentence_id": 1758,
+"file": "15945599843667387523.wav",
+"gender": "male",
+"seconds": 12.48
+},
+{
+"utt_id": "en-1760-f",
+"language": "en",
+"sentence_id": 1760,
+"file": "12596571867015231445.wav",
+"gender": "female",
+"seconds": 6.9
+},
+{
+"utt_id": "en-1760-m",
+"language": "en",
+"sentence_id": 1760,
+"file": "17931113498862338153.wav",
+"gender": "male",
+"seconds": 12.44
+},
+{
+"utt_id": "en-1761-f",
+"language": "en",
+"sentence_id": 1761,
+"file": "5966925948005244453.wav",
+"gender": "female",
+"seconds": 8.16
+},
+{
+"utt_id": "en-1761-m",
+"language": "en",
+"sentence_id": 1761,
+"file": "14836289886440749215.wav",
+"gender": "male",
+"seconds": 8.62
+},
+{
+"utt_id": "en-1766-f",
+"language": "en",
+"sentence_id": 1766,
+"file": "4312337355143990691.wav",
+"gender": "female",
+"seconds": 6.12
+},
+{
+"utt_id": "en-1766-m",
+"language": "en",
+"sentence_id": 1766,
+"file": "6620866315580544260.wav",
+"gender": "male",
+"seconds": 9.72
+},
+{
+"utt_id": "en-1768-f",
+"language": "en",
+"sentence_id": 1768,
+"file": "4329375098749636027.wav",
+"gender": "female",
+"seconds": 7.62
+},
+{
+"utt_id": "en-1768-m",
+"language": "en",
+"sentence_id": 1768,
+"file": "985789144848890340.wav",
+"gender": "male",
+"seconds": 8.58
+},
+{
+"utt_id": "en-1771-f",
+"language": "en",
+"sentence_id": 1771,
+"file": "2589557553267364799.wav",
+"gender": "female",
+"seconds": 8.94
+},
+{
+"utt_id": "en-1771-m",
+"language": "en",
+"sentence_id": 1771,
+"file": "17824557748066874904.wav",
+"gender": "male",
+"seconds": 11.9
+},
+{
+"utt_id": "en-1779-f",
+"language": "en",
+"sentence_id": 1779,
+"file": "4638707534646618403.wav",
+"gender": "female",
+"seconds": 7.68
+},
+{
+"utt_id": "en-1779-m",
+"language": "en",
+"sentence_id": 1779,
+"file": "12725120105000747485.wav",
+"gender": "male",
+"seconds": 10.8
+},
+{
+"utt_id": "en-1783-f",
+"language": "en",
+"sentence_id": 1783,
+"file": "8582392026322819617.wav",
+"gender": "female",
+"seconds": 7.8
+},
+{
+"utt_id": "en-1783-m",
+"language": "en",
+"sentence_id": 1783,
+"file": "8395660467583137383.wav",
+"gender": "male",
+"seconds": 7.58
+},
+{
+"utt_id": "en-1784-f",
+"language": "en",
+"sentence_id": 1784,
+"file": "3100569628927735189.wav",
+"gender": "female",
+"seconds": 12.06
+},
+{
+"utt_id": "en-1784-m",
+"language": "en",
+"sentence_id": 1784,
+"file": "14572481585322233862.wav",
+"gender": "male",
+"seconds": 19.02
+},
+{
+"utt_id": "en-1785-f",
+"language": "en",
+"sentence_id": 1785,
+"file": "7411546787616977704.wav",
+"gender": "female",
+"seconds": 11.76
+},
+{
+"utt_id": "en-1785-m",
+"language": "en",
+"sentence_id": 1785,
+"file": "9833173223298420094.wav",
+"gender": "male",
+"seconds": 15.3
+},
+{
+"utt_id": "en-1786-f",
+"language": "en",
+"sentence_id": 1786,
+"file": "1770419804458122000.wav",
+"gender": "female",
+"seconds": 7.74
+},
+{
+"utt_id": "en-1786-m",
+"language": "en",
+"sentence_id": 1786,
+"file": "13070914954918539330.wav",
+"gender": "male",
+"seconds": 11.88
+},
+{
+"utt_id": "en-1787-f",
+"language": "en",
+"sentence_id": 1787,
+"file": "77041922762474361.wav",
+"gender": "female",
+"seconds": 8.46
+},
+{
+"utt_id": "en-1787-m",
+"language": "en",
+"sentence_id": 1787,
+"file": "1559267283424963143.wav",
+"gender": "male",
+"seconds": 9.6
+},
+{
+"utt_id": "en-1789-f",
+"language": "en",
+"sentence_id": 1789,
+"file": "1963592535181342965.wav",
+"gender": "female",
+"seconds": 12.6
+},
+{
+"utt_id": "en-1789-m",
+"language": "en",
+"sentence_id": 1789,
+"file": "10768814098664478369.wav",
+"gender": "male",
+"seconds": 14.6
+},
+{
+"utt_id": "en-1791-f",
+"language": "en",
+"sentence_id": 1791,
+"file": "14648010410081654131.wav",
+"gender": "female",
+"seconds": 4.5
+},
+{
+"utt_id": "en-1791-m",
+"language": "en",
+"sentence_id": 1791,
+"file": "5922110980503615373.wav",
+"gender": "male",
+"seconds": 6.72
+},
+{
+"utt_id": "en-1793-f",
+"language": "en",
+"sentence_id": 1793,
+"file": "4491697341889976683.wav",
+"gender": "female",
+"seconds": 8.28
+},
+{
+"utt_id": "en-1793-m",
+"language": "en",
+"sentence_id": 1793,
+"file": "2258483735861631299.wav",
+"gender": "male",
+"seconds": 11.1
+},
+{
+"utt_id": "en-1795-f",
+"language": "en",
+"sentence_id": 1795,
+"file": "5152804099019194563.wav",
+"gender": "female",
+"seconds": 13.38
+},
+{
+"utt_id": "en-1795-m",
+"language": "en",
+"sentence_id": 1795,
+"file": "9490718340956113423.wav",
+"gender": "male",
+"seconds": 18.18
+},
+{
+"utt_id": "en-1796-f",
+"language": "en",
+"sentence_id": 1796,
+"file": "6203495122297129260.wav",
+"gender": "female",
+"seconds": 5.82
+},
+{
+"utt_id": "en-1796-m",
+"language": "en",
+"sentence_id": 1796,
+"file": "16528325964292062857.wav",
+"gender": "male",
+"seconds": 11.22
+},
+{
+"utt_id": "en-1797-f",
+"language": "en",
+"sentence_id": 1797,
+"file": "15505806025419963341.wav",
+"gender": "female",
+"seconds": 7.26
+},
+{
+"utt_id": "en-1797-m",
+"language": "en",
+"sentence_id": 1797,
+"file": "12356293452530186109.wav",
+"gender": "male",
+"seconds": 11.64
+},
+{
+"utt_id": "en-1798-f",
+"language": "en",
+"sentence_id": 1798,
+"file": "5606750157981126233.wav",
+"gender": "female",
+"seconds": 11.22
+},
+{
+"utt_id": "en-1798-m",
+"language": "en",
+"sentence_id": 1798,
+"file": "1218355507714944126.wav",
+"gender": "male",
+"seconds": 13.18
+},
+{
+"utt_id": "en-1800-f",
+"language": "en",
+"sentence_id": 1800,
+"file": "5131184112261114926.wav",
+"gender": "female",
+"seconds": 8.28
+},
+{
+"utt_id": "en-1800-m",
+"language": "en",
+"sentence_id": 1800,
+"file": "6614658234069371088.wav",
+"gender": "male",
+"seconds": 12.0
+},
+{
+"utt_id": "en-1804-f",
+"language": "en",
+"sentence_id": 1804,
+"file": "17901982257181767377.wav",
+"gender": "female",
+"seconds": 11.04
+},
+{
+"utt_id": "en-1804-m",
+"language": "en",
+"sentence_id": 1804,
+"file": "2107835372204888631.wav",
+"gender": "male",
+"seconds": 14.9
+},
+{
+"utt_id": "en-1805-f",
+"language": "en",
+"sentence_id": 1805,
+"file": "14396239747345303015.wav",
+"gender": "female",
+"seconds": 5.64
+},
+{
+"utt_id": "en-1805-m",
+"language": "en",
+"sentence_id": 1805,
+"file": "1361225517388701679.wav",
+"gender": "male",
+"seconds": 11.56
+},
+{
+"utt_id": "en-1807-f",
+"language": "en",
+"sentence_id": 1807,
+"file": "4940213511640275250.wav",
+"gender": "female",
+"seconds": 7.44
+},
+{
+"utt_id": "en-1807-m",
+"language": "en",
+"sentence_id": 1807,
+"file": "1273817225649957097.wav",
+"gender": "male",
+"seconds": 12.32
+},
+{
+"utt_id": "en-1815-f",
+"language": "en",
+"sentence_id": 1815,
+"file": "17744887036120495547.wav",
+"gender": "female",
+"seconds": 6.3
+},
+{
+"utt_id": "en-1815-m",
+"language": "en",
+"sentence_id": 1815,
+"file": "4960341437383881404.wav",
+"gender": "male",
+"seconds": 10.94
+},
+{
+"utt_id": "en-1816-f",
+"language": "en",
+"sentence_id": 1816,
+"file": "17737260257548671107.wav",
+"gender": "female",
+"seconds": 6.24
+},
+{
+"utt_id": "en-1816-m",
+"language": "en",
+"sentence_id": 1816,
+"file": "8268356342449509719.wav",
+"gender": "male",
+"seconds": 9.24
+},
+{
+"utt_id": "en-1817-f",
+"language": "en",
+"sentence_id": 1817,
+"file": "7233685891059653046.wav",
+"gender": "female",
+"seconds": 4.56
+},
+{
+"utt_id": "en-1817-m",
+"language": "en",
+"sentence_id": 1817,
+"file": "17289442889985927678.wav",
+"gender": "male",
+"seconds": 6.8
+},
+{
+"utt_id": "en-1818-f",
+"language": "en",
+"sentence_id": 1818,
+"file": "2372674739221720006.wav",
+"gender": "female",
+"seconds": 5.94
+},
+{
+"utt_id": "en-1818-m",
+"language": "en",
+"sentence_id": 1818,
+"file": "4727095276781970486.wav",
+"gender": "male",
+"seconds": 8.28
+},
+{
+"utt_id": "en-1820-f",
+"language": "en",
+"sentence_id": 1820,
+"file": "2786302614981736925.wav",
+"gender": "female",
+"seconds": 5.52
+},
+{
+"utt_id": "en-1820-m",
+"language": "en",
+"sentence_id": 1820,
+"file": "2381187994276969930.wav",
+"gender": "male",
+"seconds": 8.8
+},
+{
+"utt_id": "en-1825-f",
+"language": "en",
+"sentence_id": 1825,
+"file": "9999528530847666097.wav",
+"gender": "female",
+"seconds": 7.2
+},
+{
+"utt_id": "en-1825-m",
+"language": "en",
+"sentence_id": 1825,
+"file": "12782801286775256949.wav",
+"gender": "male",
+"seconds": 9.24
+},
+{
+"utt_id": "en-1830-f",
+"language": "en",
+"sentence_id": 1830,
+"file": "3866409166763965048.wav",
+"gender": "female",
+"seconds": 8.52
+},
+{
+"utt_id": "en-1830-m",
+"language": "en",
+"sentence_id": 1830,
+"file": "11668734600035674277.wav",
+"gender": "male",
+"seconds": 10.64
+},
+{
+"utt_id": "en-1831-f",
+"language": "en",
+"sentence_id": 1831,
+"file": "8148321977143490493.wav",
+"gender": "female",
+"seconds": 10.68
+},
+{
+"utt_id": "en-1831-m",
+"language": "en",
+"sentence_id": 1831,
+"file": "11781376959217630586.wav",
+"gender": "male",
+"seconds": 15.36
+},
+{
+"utt_id": "en-1835-f",
+"language": "en",
+"sentence_id": 1835,
+"file": "1727490782035998315.wav",
+"gender": "female",
+"seconds": 11.88
+},
+{
+"utt_id": "en-1835-m",
+"language": "en",
+"sentence_id": 1835,
+"file": "7610837418342439800.wav",
+"gender": "male",
+"seconds": 16.08
+},
+{
+"utt_id": "en-1837-f",
+"language": "en",
+"sentence_id": 1837,
+"file": "17107523751051309601.wav",
+"gender": "female",
+"seconds": 8.04
+},
+{
+"utt_id": "en-1837-m",
+"language": "en",
+"sentence_id": 1837,
+"file": "7853008702989503136.wav",
+"gender": "male",
+"seconds": 10.26
+},
+{
+"utt_id": "en-1839-f",
+"language": "en",
+"sentence_id": 1839,
+"file": "9192331858482440321.wav",
+"gender": "female",
+"seconds": 4.98
+},
+{
+"utt_id": "en-1839-m",
+"language": "en",
+"sentence_id": 1839,
+"file": "4705502721902980056.wav",
+"gender": "male",
+"seconds": 4.94
+},
+{
+"utt_id": "en-1840-f",
+"language": "en",
+"sentence_id": 1840,
+"file": "3709475786289139797.wav",
+"gender": "female",
+"seconds": 8.4
+},
+{
+"utt_id": "en-1840-m",
+"language": "en",
+"sentence_id": 1840,
+"file": "4168260504174612795.wav",
+"gender": "male",
+"seconds": 10.86
+},
+{
+"utt_id": "en-1846-f",
+"language": "en",
+"sentence_id": 1846,
+"file": "12442340605801616197.wav",
+"gender": "female",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1846-m",
+"language": "en",
+"sentence_id": 1846,
+"file": "10344335557154974057.wav",
+"gender": "male",
+"seconds": 11.04
+},
+{
+"utt_id": "en-1852-f",
+"language": "en",
+"sentence_id": 1852,
+"file": "517532078886085321.wav",
+"gender": "female",
+"seconds": 16.32
+},
+{
+"utt_id": "en-1852-m",
+"language": "en",
+"sentence_id": 1852,
+"file": "17991438134494400884.wav",
+"gender": "male",
+"seconds": 25.68
+},
+{
+"utt_id": "en-1858-f",
+"language": "en",
+"sentence_id": 1858,
+"file": "10751756685109361684.wav",
+"gender": "female",
+"seconds": 6.3
+},
+{
+"utt_id": "en-1858-m",
+"language": "en",
+"sentence_id": 1858,
+"file": "13447718337043682273.wav",
+"gender": "male",
+"seconds": 9.6
+},
+{
+"utt_id": "en-1861-f",
+"language": "en",
+"sentence_id": 1861,
+"file": "6243143230365031162.wav",
+"gender": "female",
+"seconds": 7.32
+},
+{
+"utt_id": "en-1861-m",
+"language": "en",
+"sentence_id": 1861,
+"file": "14982964006464846866.wav",
+"gender": "male",
+"seconds": 10.56
+},
+{
+"utt_id": "en-1863-f",
+"language": "en",
+"sentence_id": 1863,
+"file": "6933250279887426793.wav",
+"gender": "female",
+"seconds": 12.96
+},
+{
+"utt_id": "en-1863-m",
+"language": "en",
+"sentence_id": 1863,
+"file": "3195362600486929544.wav",
+"gender": "male",
+"seconds": 16.9
+},
+{
+"utt_id": "en-1867-f",
+"language": "en",
+"sentence_id": 1867,
+"file": "12682843461389402977.wav",
+"gender": "female",
+"seconds": 7.02
+},
+{
+"utt_id": "en-1867-m",
+"language": "en",
+"sentence_id": 1867,
+"file": "9906376183448922344.wav",
+"gender": "male",
+"seconds": 10.3
+},
+{
+"utt_id": "en-1868-f",
+"language": "en",
+"sentence_id": 1868,
+"file": "9794832621341165457.wav",
+"gender": "female",
+"seconds": 9.24
+},
+{
+"utt_id": "en-1868-m",
+"language": "en",
+"sentence_id": 1868,
+"file": "3945532745541195136.wav",
+"gender": "male",
+"seconds": 13.2
+},
+{
+"utt_id": "en-1869-f",
+"language": "en",
+"sentence_id": 1869,
+"file": "6852813781354643345.wav",
+"gender": "female",
+"seconds": 10.98
+},
+{
+"utt_id": "en-1869-m",
+"language": "en",
+"sentence_id": 1869,
+"file": "3585583328394597156.wav",
+"gender": "male",
+"seconds": 16.2
+},
+{
+"utt_id": "en-1870-f",
+"language": "en",
+"sentence_id": 1870,
+"file": "11827077161070295147.wav",
+"gender": "female",
+"seconds": 4.32
+},
+{
+"utt_id": "en-1870-m",
+"language": "en",
+"sentence_id": 1870,
+"file": "18089255921943570546.wav",
+"gender": "male",
+"seconds": 6.06
+},
+{
+"utt_id": "en-1871-f",
+"language": "en",
+"sentence_id": 1871,
+"file": "4838660681321542582.wav",
+"gender": "female",
+"seconds": 6.72
+},
+{
+"utt_id": "en-1871-m",
+"language": "en",
+"sentence_id": 1871,
+"file": "7587276269543309929.wav",
+"gender": "male",
+"seconds": 6.02
+},
+{
+"utt_id": "en-1872-f",
+"language": "en",
+"sentence_id": 1872,
+"file": "2642023010607031328.wav",
+"gender": "female",
+"seconds": 12.12
+},
+{
+"utt_id": "en-1872-m",
+"language": "en",
+"sentence_id": 1872,
+"file": "7489324500816890474.wav",
+"gender": "male",
+"seconds": 12.54
+},
+{
+"utt_id": "en-1877-f",
+"language": "en",
+"sentence_id": 1877,
+"file": "18080893208509673354.wav",
+"gender": "female",
+"seconds": 12.12
+},
+{
+"utt_id": "en-1877-m",
+"language": "en",
+"sentence_id": 1877,
+"file": "1722118868151836971.wav",
+"gender": "male",
+"seconds": 19.56
+},
+{
+"utt_id": "en-1878-f",
+"language": "en",
+"sentence_id": 1878,
+"file": "15462197415062072209.wav",
+"gender": "female",
+"seconds": 9.24
+},
+{
+"utt_id": "en-1878-m",
+"language": "en",
+"sentence_id": 1878,
+"file": "15790784892019701649.wav",
+"gender": "male",
+"seconds": 13.12
+},
+{
+"utt_id": "en-1879-f",
+"language": "en",
+"sentence_id": 1879,
+"file": "3404855403082339212.wav",
+"gender": "female",
+"seconds": 5.46
+},
+{
+"utt_id": "en-1879-m",
+"language": "en",
+"sentence_id": 1879,
+"file": "6306322369645218273.wav",
+"gender": "male",
+"seconds": 6.98
+},
+{
+"utt_id": "en-1882-f",
+"language": "en",
+"sentence_id": 1882,
+"file": "11504385604540375365.wav",
+"gender": "female",
+"seconds": 6.18
+},
+{
+"utt_id": "en-1882-m",
+"language": "en",
+"sentence_id": 1882,
+"file": "2919974750836990238.wav",
+"gender": "male",
+"seconds": 9.64
+},
+{
+"utt_id": "en-1885-f",
+"language": "en",
+"sentence_id": 1885,
+"file": "14693330690944350091.wav",
+"gender": "female",
+"seconds": 8.94
+},
+{
+"utt_id": "en-1885-m",
+"language": "en",
+"sentence_id": 1885,
+"file": "5164710956485163027.wav",
+"gender": "male",
+"seconds": 14.88
+},
+{
+"utt_id": "en-1889-f",
+"language": "en",
+"sentence_id": 1889,
+"file": "12820699144181559822.wav",
+"gender": "female",
+"seconds": 4.86
+},
+{
+"utt_id": "en-1889-m",
+"language": "en",
+"sentence_id": 1889,
+"file": "16188741492070958424.wav",
+"gender": "male",
+"seconds": 6.78
+},
+{
+"utt_id": "en-1892-f",
+"language": "en",
+"sentence_id": 1892,
+"file": "8260950316138046112.wav",
+"gender": "female",
+"seconds": 10.32
+},
+{
+"utt_id": "en-1892-m",
+"language": "en",
+"sentence_id": 1892,
+"file": "7266355212113564962.wav",
+"gender": "male",
+"seconds": 13.14
+},
+{
+"utt_id": "en-1894-f",
+"language": "en",
+"sentence_id": 1894,
+"file": "4848767269319106744.wav",
+"gender": "female",
+"seconds": 6.48
+},
+{
+"utt_id": "en-1894-m",
+"language": "en",
+"sentence_id": 1894,
+"file": "2024594662850694945.wav",
+"gender": "male",
+"seconds": 9.06
+},
+{
+"utt_id": "en-1895-f",
+"language": "en",
+"sentence_id": 1895,
+"file": "5358875111503056320.wav",
+"gender": "female",
+"seconds": 7.56
+},
+{
+"utt_id": "en-1895-m",
+"language": "en",
+"sentence_id": 1895,
+"file": "11200231708585274851.wav",
+"gender": "male",
+"seconds": 10.18
+},
+{
+"utt_id": "en-1897-f",
+"language": "en",
+"sentence_id": 1897,
+"file": "6656552880161745727.wav",
+"gender": "female",
+"seconds": 7.14
+},
+{
+"utt_id": "en-1897-m",
+"language": "en",
+"sentence_id": 1897,
+"file": "10861831846737909528.wav",
+"gender": "male",
+"seconds": 9.58
+},
+{
+"utt_id": "en-1898-f",
+"language": "en",
+"sentence_id": 1898,
+"file": "1891517816131569989.wav",
+"gender": "female",
+"seconds": 12.36
+},
+{
+"utt_id": "en-1898-m",
+"language": "en",
+"sentence_id": 1898,
+"file": "7481269528554216749.wav",
+"gender": "male",
+"seconds": 15.7
+},
+{
+"utt_id": "en-1899-f",
+"language": "en",
+"sentence_id": 1899,
+"file": "12381237049043414166.wav",
+"gender": "female",
+"seconds": 11.28
+},
+{
+"utt_id": "en-1899-m",
+"language": "en",
+"sentence_id": 1899,
+"file": "1876924768395363851.wav",
+"gender": "male",
+"seconds": 14.52
+},
+{
+"utt_id": "en-1902-f",
+"language": "en",
+"sentence_id": 1902,
+"file": "5482406888941085018.wav",
+"gender": "female",
+"seconds": 7.08
+},
+{
+"utt_id": "en-1902-m",
+"language": "en",
+"sentence_id": 1902,
+"file": "5381110210154713971.wav",
+"gender": "male",
+"seconds": 7.5
+},
+{
+"utt_id": "en-1905-f",
+"language": "en",
+"sentence_id": 1905,
+"file": "4186976662250569146.wav",
+"gender": "female",
+"seconds": 6.6
+},
+{
+"utt_id": "en-1905-m",
+"language": "en",
+"sentence_id": 1905,
+"file": "5381693779708341332.wav",
+"gender": "male",
+"seconds": 11.16
+},
+{
+"utt_id": "en-1907-f",
+"language": "en",
+"sentence_id": 1907,
+"file": "14868402834603110105.wav",
+"gender": "female",
+"seconds": 5.46
+},
+{
+"utt_id": "en-1907-m",
+"language": "en",
+"sentence_id": 1907,
+"file": "16757205419144758552.wav",
+"gender": "male",
+"seconds": 7.02
+},
+{
+"utt_id": "en-1908-f",
+"language": "en",
+"sentence_id": 1908,
+"file": "10969774925516121312.wav",
+"gender": "female",
+"seconds": 4.5
+},
+{
+"utt_id": "en-1908-m",
+"language": "en",
+"sentence_id": 1908,
+"file": "4332544138278608734.wav",
+"gender": "male",
+"seconds": 6.66
+},
+{
+"utt_id": "en-1911-f",
+"language": "en",
+"sentence_id": 1911,
+"file": "11880309600276730497.wav",
+"gender": "female",
+"seconds": 14.88
+},
+{
+"utt_id": "en-1911-m",
+"language": "en",
+"sentence_id": 1911,
+"file": "12728606633758857674.wav",
+"gender": "male",
+"seconds": 14.84
+},
+{
+"utt_id": "en-1933-f",
+"language": "en",
+"sentence_id": 1933,
+"file": "17202654907652316758.wav",
+"gender": "female",
+"seconds": 8.64
+},
+{
+"utt_id": "en-1933-m",
+"language": "en",
+"sentence_id": 1933,
+"file": "319499985577636973.wav",
+"gender": "male",
+"seconds": 11.06
+},
+{
+"utt_id": "en-1939-f",
+"language": "en",
+"sentence_id": 1939,
+"file": "11820398005906165915.wav",
+"gender": "female",
+"seconds": 7.02
+},
+{
+"utt_id": "en-1939-m",
+"language": "en",
+"sentence_id": 1939,
+"file": "13362021168025680919.wav",
+"gender": "male",
+"seconds": 10.28
+},
+{
+"utt_id": "en-1940-f",
+"language": "en",
+"sentence_id": 1940,
+"file": "13388880723958450388.wav",
+"gender": "female",
+"seconds": 9.48
+},
+{
+"utt_id": "en-1940-m",
+"language": "en",
+"sentence_id": 1940,
+"file": "5910253289107526048.wav",
+"gender": "male",
+"seconds": 15.46
+},
+{
+"utt_id": "en-1941-f",
+"language": "en",
+"sentence_id": 1941,
+"file": "12200368278244671662.wav",
+"gender": "female",
+"seconds": 4.8
+},
+{
+"utt_id": "en-1941-m",
+"language": "en",
+"sentence_id": 1941,
+"file": "11853072634976133891.wav",
+"gender": "male",
+"seconds": 6.84
+},
+{
+"utt_id": "en-1944-f",
+"language": "en",
+"sentence_id": 1944,
+"file": "1724953769276277810.wav",
+"gender": "female",
+"seconds": 10.5
+},
+{
+"utt_id": "en-1944-m",
+"language": "en",
+"sentence_id": 1944,
+"file": "2074231104398719826.wav",
+"gender": "male",
+"seconds": 9.72
+},
+{
+"utt_id": "en-1945-f",
+"language": "en",
+"sentence_id": 1945,
+"file": "2611687111227264759.wav",
+"gender": "female",
+"seconds": 6.24
+},
+{
+"utt_id": "en-1945-m",
+"language": "en",
+"sentence_id": 1945,
+"file": "9113447011736256545.wav",
+"gender": "male",
+"seconds": 7.38
+},
+{
+"utt_id": "en-1947-f",
+"language": "en",
+"sentence_id": 1947,
+"file": "4844570914389909899.wav",
+"gender": "female",
+"seconds": 7.38
+},
+{
+"utt_id": "en-1947-m",
+"language": "en",
+"sentence_id": 1947,
+"file": "5111153817746112904.wav",
+"gender": "male",
+"seconds": 8.94
+},
+{
+"utt_id": "en-1952-f",
+"language": "en",
+"sentence_id": 1952,
+"file": "10492761258488775721.wav",
+"gender": "female",
+"seconds": 8.58
+},
+{
+"utt_id": "en-1952-m",
+"language": "en",
+"sentence_id": 1952,
+"file": "6434859821714227491.wav",
+"gender": "male",
+"seconds": 11.32
+},
+{
+"utt_id": "en-1955-f",
+"language": "en",
+"sentence_id": 1955,
+"file": "12239464249642485259.wav",
+"gender": "female",
+"seconds": 7.2
+},
+{
+"utt_id": "en-1955-m",
+"language": "en",
+"sentence_id": 1955,
+"file": "4060670580459188209.wav",
+"gender": "male",
+"seconds": 10.44
+},
+{
+"utt_id": "en-1958-f",
+"language": "en",
+"sentence_id": 1958,
+"file": "2013850546771709559.wav",
+"gender": "female",
+"seconds": 6.72
+},
+{
+"utt_id": "en-1958-m",
+"language": "en",
+"sentence_id": 1958,
+"file": "941860798944293989.wav",
+"gender": "male",
+"seconds": 10.9
+},
+{
+"utt_id": "en-1959-f",
+"language": "en",
+"sentence_id": 1959,
+"file": "4257743601527484794.wav",
+"gender": "female",
+"seconds": 5.76
+},
+{
+"utt_id": "en-1959-m",
+"language": "en",
+"sentence_id": 1959,
+"file": "2424735714200189273.wav",
+"gender": "male",
+"seconds": 8.64
+},
+{
+"utt_id": "en-1961-f",
+"language": "en",
+"sentence_id": 1961,
+"file": "13809395828339499811.wav",
+"gender": "female",
+"seconds": 14.1
+},
+{
+"utt_id": "en-1961-m",
+"language": "en",
+"sentence_id": 1961,
+"file": "916168198524353904.wav",
+"gender": "male",
+"seconds": 18.0
+},
+{
+"utt_id": "en-1962-f",
+"language": "en",
+"sentence_id": 1962,
+"file": "15038927295183526116.wav",
+"gender": "female",
+"seconds": 6.6
+},
+{
+"utt_id": "en-1962-m",
+"language": "en",
+"sentence_id": 1962,
+"file": "7528221290776312797.wav",
+"gender": "male",
+"seconds": 10.56
+},
+{
+"utt_id": "en-1964-f",
+"language": "en",
+"sentence_id": 1964,
+"file": "17158526797037461547.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "en-1964-m",
+"language": "en",
+"sentence_id": 1964,
+"file": "3745044899208519847.wav",
+"gender": "male",
+"seconds": 11.88
+},
+{
+"utt_id": "en-1965-f",
+"language": "en",
+"sentence_id": 1965,
+"file": "2512265253579641885.wav",
+"gender": "female",
+"seconds": 8.46
+},
+{
+"utt_id": "en-1965-m",
+"language": "en",
+"sentence_id": 1965,
+"file": "4130846879604713113.wav",
+"gender": "male",
+"seconds": 8.96
+},
+{
+"utt_id": "en-1969-f",
+"language": "en",
+"sentence_id": 1969,
+"file": "4666717028619624057.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "en-1969-m",
+"language": "en",
+"sentence_id": 1969,
+"file": "12517884865939916901.wav",
+"gender": "male",
+"seconds": 12.8
+},
+{
+"utt_id": "en-1970-f",
+"language": "en",
+"sentence_id": 1970,
+"file": "3491234462595391279.wav",
+"gender": "female",
+"seconds": 8.34
+},
+{
+"utt_id": "en-1970-m",
+"language": "en",
+"sentence_id": 1970,
+"file": "1394697283561012104.wav",
+"gender": "male",
+"seconds": 14.06
+},
+{
+"utt_id": "en-1971-f",
+"language": "en",
+"sentence_id": 1971,
+"file": "6162405598905036396.wav",
+"gender": "female",
+"seconds": 9.48
+},
+{
+"utt_id": "en-1971-m",
+"language": "en",
+"sentence_id": 1971,
+"file": "5408022991504111502.wav",
+"gender": "male",
+"seconds": 14.92
+},
+{
+"utt_id": "en-1974-f",
+"language": "en",
+"sentence_id": 1974,
+"file": "7497575538636120175.wav",
+"gender": "female",
+"seconds": 6.0
+},
+{
+"utt_id": "en-1974-m",
+"language": "en",
+"sentence_id": 1974,
+"file": "9781076737390802637.wav",
+"gender": "male",
+"seconds": 6.28
+},
+{
+"utt_id": "en-1975-f",
+"language": "en",
+"sentence_id": 1975,
+"file": "11265842188315045636.wav",
+"gender": "female",
+"seconds": 10.74
+},
+{
+"utt_id": "en-1975-m",
+"language": "en",
+"sentence_id": 1975,
+"file": "1605300975319497622.wav",
+"gender": "male",
+"seconds": 9.76
+},
+{
+"utt_id": "en-1978-f",
+"language": "en",
+"sentence_id": 1978,
+"file": "17390731724222522492.wav",
+"gender": "female",
+"seconds": 4.02
+},
+{
+"utt_id": "en-1978-m",
+"language": "en",
+"sentence_id": 1978,
+"file": "13128254958003826368.wav",
+"gender": "male",
+"seconds": 4.98
+},
+{
+"utt_id": "en-1979-f",
+"language": "en",
+"sentence_id": 1979,
+"file": "2497077037159179595.wav",
+"gender": "female",
+"seconds": 10.08
+},
+{
+"utt_id": "en-1979-m",
+"language": "en",
+"sentence_id": 1979,
+"file": "8281638920677065102.wav",
+"gender": "male",
+"seconds": 10.98
+},
+{
+"utt_id": "en-1980-f",
+"language": "en",
+"sentence_id": 1980,
+"file": "9055240296608129734.wav",
+"gender": "female",
+"seconds": 7.92
+},
+{
+"utt_id": "en-1980-m",
+"language": "en",
+"sentence_id": 1980,
+"file": "12741024238657315067.wav",
+"gender": "male",
+"seconds": 12.64
+},
+{
+"utt_id": "en-1982-f",
+"language": "en",
+"sentence_id": 1982,
+"file": "315766676094600296.wav",
+"gender": "female",
+"seconds": 6.18
+},
+{
+"utt_id": "en-1982-m",
+"language": "en",
+"sentence_id": 1982,
+"file": "10481451226514948764.wav",
+"gender": "male",
+"seconds": 10.14
+},
+{
+"utt_id": "en-1986-f",
+"language": "en",
+"sentence_id": 1986,
+"file": "3664511950771966320.wav",
+"gender": "female",
+"seconds": 8.64
+},
+{
+"utt_id": "en-1986-m",
+"language": "en",
+"sentence_id": 1986,
+"file": "2512373209802184926.wav",
+"gender": "male",
+"seconds": 11.94
+},
+{
+"utt_id": "en-1989-f",
+"language": "en",
+"sentence_id": 1989,
+"file": "17555259562398245870.wav",
+"gender": "female",
+"seconds": 12.36
+},
+{
+"utt_id": "en-1989-m",
+"language": "en",
+"sentence_id": 1989,
+"file": "7199696972196091849.wav",
+"gender": "male",
+"seconds": 18.42
+},
+{
+"utt_id": "en-1990-f",
+"language": "en",
+"sentence_id": 1990,
+"file": "10938576782105608041.wav",
+"gender": "female",
+"seconds": 8.76
+},
+{
+"utt_id": "en-1990-m",
+"language": "en",
+"sentence_id": 1990,
+"file": "2866079421585301198.wav",
+"gender": "male",
+"seconds": 11.4
+},
+{
+"utt_id": "en-1992-f",
+"language": "en",
+"sentence_id": 1992,
+"file": "1046653381869710616.wav",
+"gender": "female",
+"seconds": 8.64
+},
+{
+"utt_id": "en-1992-m",
+"language": "en",
+"sentence_id": 1992,
+"file": "7912552494860461835.wav",
+"gender": "male",
+"seconds": 9.5
+},
+{
+"utt_id": "en-1996-f",
+"language": "en",
+"sentence_id": 1996,
+"file": "16824485789160047135.wav",
+"gender": "female",
+"seconds": 13.98
+},
+{
+"utt_id": "en-1996-m",
+"language": "en",
+"sentence_id": 1996,
+"file": "14993919225529607964.wav",
+"gender": "male",
+"seconds": 15.6
+},
+{
+"utt_id": "en-2007-f",
+"language": "en",
+"sentence_id": 2007,
+"file": "5865390219641610051.wav",
+"gender": "female",
+"seconds": 6.96
+},
+{
+"utt_id": "en-2007-m",
+"language": "en",
+"sentence_id": 2007,
+"file": "13295416245066118625.wav",
+"gender": "male",
+"seconds": 8.76
+},
+{
+"utt_id": "en-2008-f",
+"language": "en",
+"sentence_id": 2008,
+"file": "12700569942235742079.wav",
+"gender": "female",
+"seconds": 9.66
+},
+{
+"utt_id": "en-2008-m",
+"language": "en",
+"sentence_id": 2008,
+"file": "2634994688992335656.wav",
+"gender": "male",
+"seconds": 13.54
+},
+{
+"utt_id": "en-2009-f",
+"language": "en",
+"sentence_id": 2009,
+"file": "17695442797451759106.wav",
+"gender": "female",
+"seconds": 11.04
+},
+{
+"utt_id": "en-2009-m",
+"language": "en",
+"sentence_id": 2009,
+"file": "17120997777600226051.wav",
+"gender": "male",
+"seconds": 13.86
+},
+{
+"utt_id": "fr-1660-f",
+"language": "fr",
+"sentence_id": 1660,
+"file": "4115181558875922783.wav",
+"gender": "female",
+"seconds": 7.86
+},
+{
+"utt_id": "fr-1660-m",
+"language": "fr",
+"sentence_id": 1660,
+"file": "925292890493340703.wav",
+"gender": "male",
+"seconds": 7.38
+},
+{
+"utt_id": "fr-1663-f",
+"language": "fr",
+"sentence_id": 1663,
+"file": "5451505813889356389.wav",
+"gender": "female",
+"seconds": 13.38
+},
+{
+"utt_id": "fr-1663-m",
+"language": "fr",
+"sentence_id": 1663,
+"file": "2442077088303431914.wav",
+"gender": "male",
+"seconds": 11.82
+},
+{
+"utt_id": "fr-1667-f",
+"language": "fr",
+"sentence_id": 1667,
+"file": "8908834532261426776.wav",
+"gender": "female",
+"seconds": 13.2
+},
+{
+"utt_id": "fr-1667-m",
+"language": "fr",
+"sentence_id": 1667,
+"file": "12405478354284816354.wav",
+"gender": "male",
+"seconds": 14.88
+},
+{
+"utt_id": "fr-1670-f",
+"language": "fr",
+"sentence_id": 1670,
+"file": "2717766324364632627.wav",
+"gender": "female",
+"seconds": 21.78
+},
+{
+"utt_id": "fr-1670-m",
+"language": "fr",
+"sentence_id": 1670,
+"file": "5161983009398441910.wav",
+"gender": "male",
+"seconds": 28.68
+},
+{
+"utt_id": "fr-1671-f",
+"language": "fr",
+"sentence_id": 1671,
+"file": "155000780886023197.wav",
+"gender": "female",
+"seconds": 13.14
+},
+{
+"utt_id": "fr-1671-m",
+"language": "fr",
+"sentence_id": 1671,
+"file": "4695180606587908182.wav",
+"gender": "male",
+"seconds": 12.06
+},
+{
+"utt_id": "fr-1672-f",
+"language": "fr",
+"sentence_id": 1672,
+"file": "4616776316801604903.wav",
+"gender": "female",
+"seconds": 10.62
+},
+{
+"utt_id": "fr-1672-m",
+"language": "fr",
+"sentence_id": 1672,
+"file": "2176479717063502140.wav",
+"gender": "male",
+"seconds": 7.74
+},
+{
+"utt_id": "fr-1675-f",
+"language": "fr",
+"sentence_id": 1675,
+"file": "11743576916303436440.wav",
+"gender": "female",
+"seconds": 7.32
+},
+{
+"utt_id": "fr-1675-m",
+"language": "fr",
+"sentence_id": 1675,
+"file": "2412329915761515247.wav",
+"gender": "male",
+"seconds": 9.72
+},
+{
+"utt_id": "fr-1677-f",
+"language": "fr",
+"sentence_id": 1677,
+"file": "13279079565064190750.wav",
+"gender": "female",
+"seconds": 6.6
+},
+{
+"utt_id": "fr-1677-m",
+"language": "fr",
+"sentence_id": 1677,
+"file": "471966525717622151.wav",
+"gender": "male",
+"seconds": 10.2
+},
+{
+"utt_id": "fr-1683-f",
+"language": "fr",
+"sentence_id": 1683,
+"file": "18303323795796510969.wav",
+"gender": "female",
+"seconds": 9.9
+},
+{
+"utt_id": "fr-1683-m",
+"language": "fr",
+"sentence_id": 1683,
+"file": "409873146475411312.wav",
+"gender": "male",
+"seconds": 14.4
+},
+{
+"utt_id": "fr-1684-f",
+"language": "fr",
+"sentence_id": 1684,
+"file": "2635745390982738628.wav",
+"gender": "female",
+"seconds": 10.8
+},
+{
+"utt_id": "fr-1684-m",
+"language": "fr",
+"sentence_id": 1684,
+"file": "5154352563438068142.wav",
+"gender": "male",
+"seconds": 7.44
+},
+{
+"utt_id": "fr-1685-f",
+"language": "fr",
+"sentence_id": 1685,
+"file": "10451502537136425109.wav",
+"gender": "female",
+"seconds": 8.1
+},
+{
+"utt_id": "fr-1685-m",
+"language": "fr",
+"sentence_id": 1685,
+"file": "16025007967772953193.wav",
+"gender": "male",
+"seconds": 13.32
+},
+{
+"utt_id": "fr-1686-f",
+"language": "fr",
+"sentence_id": 1686,
+"file": "15837232817617864957.wav",
+"gender": "female",
+"seconds": 11.52
+},
+{
+"utt_id": "fr-1686-m",
+"language": "fr",
+"sentence_id": 1686,
+"file": "2585322521679747181.wav",
+"gender": "male",
+"seconds": 10.8
+},
+{
+"utt_id": "fr-1689-f",
+"language": "fr",
+"sentence_id": 1689,
+"file": "390032609814762317.wav",
+"gender": "female",
+"seconds": 11.22
+},
+{
+"utt_id": "fr-1689-m",
+"language": "fr",
+"sentence_id": 1689,
+"file": "6532225463918874493.wav",
+"gender": "male",
+"seconds": 14.52
+},
+{
+"utt_id": "fr-1698-f",
+"language": "fr",
+"sentence_id": 1698,
+"file": "2661173981354246438.wav",
+"gender": "female",
+"seconds": 7.62
+},
+{
+"utt_id": "fr-1698-m",
+"language": "fr",
+"sentence_id": 1698,
+"file": "7746297231914829374.wav",
+"gender": "male",
+"seconds": 6.06
+},
+{
+"utt_id": "fr-1702-f",
+"language": "fr",
+"sentence_id": 1702,
+"file": "14754079151700296911.wav",
+"gender": "female",
+"seconds": 9.3
+},
+{
+"utt_id": "fr-1702-m",
+"language": "fr",
+"sentence_id": 1702,
+"file": "16105464976014698311.wav",
+"gender": "male",
+"seconds": 11.46
+},
+{
+"utt_id": "fr-1703-f",
+"language": "fr",
+"sentence_id": 1703,
+"file": "9731905184920674228.wav",
+"gender": "female",
+"seconds": 5.7
+},
+{
+"utt_id": "fr-1703-m",
+"language": "fr",
+"sentence_id": 1703,
+"file": "10876086819338968684.wav",
+"gender": "male",
+"seconds": 7.2
+},
+{
+"utt_id": "fr-1707-f",
+"language": "fr",
+"sentence_id": 1707,
+"file": "3661632639400662062.wav",
+"gender": "female",
+"seconds": 7.08
+},
+{
+"utt_id": "fr-1707-m",
+"language": "fr",
+"sentence_id": 1707,
+"file": "9118106854415790987.wav",
+"gender": "male",
+"seconds": 7.5
+},
+{
+"utt_id": "fr-1710-f",
+"language": "fr",
+"sentence_id": 1710,
+"file": "3769750332651138380.wav",
+"gender": "female",
+"seconds": 11.34
+},
+{
+"utt_id": "fr-1710-m",
+"language": "fr",
+"sentence_id": 1710,
+"file": "11637469397576410753.wav",
+"gender": "male",
+"seconds": 14.58
+},
+{
+"utt_id": "fr-1712-f",
+"language": "fr",
+"sentence_id": 1712,
+"file": "11961715422517660841.wav",
+"gender": "female",
+"seconds": 11.16
+},
+{
+"utt_id": "fr-1712-m",
+"language": "fr",
+"sentence_id": 1712,
+"file": "12463754265383123135.wav",
+"gender": "male",
+"seconds": 11.88
+},
+{
+"utt_id": "fr-1714-f",
+"language": "fr",
+"sentence_id": 1714,
+"file": "11295389174145067264.wav",
+"gender": "female",
+"seconds": 9.78
+},
+{
+"utt_id": "fr-1714-m",
+"language": "fr",
+"sentence_id": 1714,
+"file": "14355182512380738831.wav",
+"gender": "male",
+"seconds": 10.86
+},
+{
+"utt_id": "fr-1717-f",
+"language": "fr",
+"sentence_id": 1717,
+"file": "7160098958583618965.wav",
+"gender": "female",
+"seconds": 9.18
+},
+{
+"utt_id": "fr-1717-m",
+"language": "fr",
+"sentence_id": 1717,
+"file": "13292226229846030035.wav",
+"gender": "male",
+"seconds": 8.82
+},
+{
+"utt_id": "fr-1720-f",
+"language": "fr",
+"sentence_id": 1720,
+"file": "15483129155942250394.wav",
+"gender": "female",
+"seconds": 6.0
+},
+{
+"utt_id": "fr-1720-m",
+"language": "fr",
+"sentence_id": 1720,
+"file": "10703796668246155041.wav",
+"gender": "male",
+"seconds": 5.04
+},
+{
+"utt_id": "fr-1722-f",
+"language": "fr",
+"sentence_id": 1722,
+"file": "17384584725417924254.wav",
+"gender": "female",
+"seconds": 10.44
+},
+{
+"utt_id": "fr-1722-m",
+"language": "fr",
+"sentence_id": 1722,
+"file": "17815512019716102082.wav",
+"gender": "male",
+"seconds": 9.9
+},
+{
+"utt_id": "fr-1726-f",
+"language": "fr",
+"sentence_id": 1726,
+"file": "16167619111508898566.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "fr-1726-m",
+"language": "fr",
+"sentence_id": 1726,
+"file": "12010154632627664704.wav",
+"gender": "male",
+"seconds": 16.08
+},
+{
+"utt_id": "fr-1736-f",
+"language": "fr",
+"sentence_id": 1736,
+"file": "11459739058484338122.wav",
+"gender": "female",
+"seconds": 4.2
+},
+{
+"utt_id": "fr-1736-m",
+"language": "fr",
+"sentence_id": 1736,
+"file": "3693672928808080722.wav",
+"gender": "male",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-1738-f",
+"language": "fr",
+"sentence_id": 1738,
+"file": "16622823894352070720.wav",
+"gender": "female",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-1738-m",
+"language": "fr",
+"sentence_id": 1738,
+"file": "6190264536337805967.wav",
+"gender": "male",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-1740-f",
+"language": "fr",
+"sentence_id": 1740,
+"file": "9984922725503397568.wav",
+"gender": "female",
+"seconds": 11.28
+},
+{
+"utt_id": "fr-1740-m",
+"language": "fr",
+"sentence_id": 1740,
+"file": "8448688083956555378.wav",
+"gender": "male",
+"seconds": 11.64
+},
+{
+"utt_id": "fr-1741-f",
+"language": "fr",
+"sentence_id": 1741,
+"file": "15551477711118835465.wav",
+"gender": "female",
+"seconds": 3.96
+},
+{
+"utt_id": "fr-1741-m",
+"language": "fr",
+"sentence_id": 1741,
+"file": "13361643016326652917.wav",
+"gender": "male",
+"seconds": 9.48
+},
+{
+"utt_id": "fr-1743-f",
+"language": "fr",
+"sentence_id": 1743,
+"file": "8958768754376202232.wav",
+"gender": "female",
+"seconds": 17.1
+},
+{
+"utt_id": "fr-1743-m",
+"language": "fr",
+"sentence_id": 1743,
+"file": "18166006700830801336.wav",
+"gender": "male",
+"seconds": 16.92
+},
+{
+"utt_id": "fr-1744-f",
+"language": "fr",
+"sentence_id": 1744,
+"file": "2582399872168648378.wav",
+"gender": "female",
+"seconds": 8.46
+},
+{
+"utt_id": "fr-1744-m",
+"language": "fr",
+"sentence_id": 1744,
+"file": "15679345674072383870.wav",
+"gender": "male",
+"seconds": 6.96
+},
+{
+"utt_id": "fr-1745-f",
+"language": "fr",
+"sentence_id": 1745,
+"file": "9072438163452641933.wav",
+"gender": "female",
+"seconds": 8.58
+},
+{
+"utt_id": "fr-1745-m",
+"language": "fr",
+"sentence_id": 1745,
+"file": "10926529561499706520.wav",
+"gender": "male",
+"seconds": 12.24
+},
+{
+"utt_id": "fr-1747-f",
+"language": "fr",
+"sentence_id": 1747,
+"file": "15860444280774944541.wav",
+"gender": "female",
+"seconds": 4.8
+},
+{
+"utt_id": "fr-1747-m",
+"language": "fr",
+"sentence_id": 1747,
+"file": "17096997444655055340.wav",
+"gender": "male",
+"seconds": 7.92
+},
+{
+"utt_id": "fr-1748-f",
+"language": "fr",
+"sentence_id": 1748,
+"file": "5927656692527234400.wav",
+"gender": "female",
+"seconds": 4.98
+},
+{
+"utt_id": "fr-1748-m",
+"language": "fr",
+"sentence_id": 1748,
+"file": "11537679603629573994.wav",
+"gender": "male",
+"seconds": 7.98
+},
+{
+"utt_id": "fr-1750-f",
+"language": "fr",
+"sentence_id": 1750,
+"file": "16238108457719488387.wav",
+"gender": "female",
+"seconds": 8.64
+},
+{
+"utt_id": "fr-1750-m",
+"language": "fr",
+"sentence_id": 1750,
+"file": "5655563442639696119.wav",
+"gender": "male",
+"seconds": 7.32
+},
+{
+"utt_id": "fr-1752-f",
+"language": "fr",
+"sentence_id": 1752,
+"file": "7571098161836793777.wav",
+"gender": "female",
+"seconds": 8.76
+},
+{
+"utt_id": "fr-1752-m",
+"language": "fr",
+"sentence_id": 1752,
+"file": "17361222639637388875.wav",
+"gender": "male",
+"seconds": 11.34
+},
+{
+"utt_id": "fr-1754-f",
+"language": "fr",
+"sentence_id": 1754,
+"file": "2385921400569855551.wav",
+"gender": "female",
+"seconds": 12.0
+},
+{
+"utt_id": "fr-1754-m",
+"language": "fr",
+"sentence_id": 1754,
+"file": "17081465656807010187.wav",
+"gender": "male",
+"seconds": 8.04
+},
+{
+"utt_id": "fr-1755-f",
+"language": "fr",
+"sentence_id": 1755,
+"file": "11431212784065590790.wav",
+"gender": "female",
+"seconds": 3.78
+},
+{
+"utt_id": "fr-1755-m",
+"language": "fr",
+"sentence_id": 1755,
+"file": "9254871272781214222.wav",
+"gender": "male",
+"seconds": 4.02
+},
+{
+"utt_id": "fr-1757-f",
+"language": "fr",
+"sentence_id": 1757,
+"file": "972117554639153177.wav",
+"gender": "female",
+"seconds": 8.16
+},
+{
+"utt_id": "fr-1757-m",
+"language": "fr",
+"sentence_id": 1757,
+"file": "16845455022240045713.wav",
+"gender": "male",
+"seconds": 10.32
+},
+{
+"utt_id": "fr-1759-f",
+"language": "fr",
+"sentence_id": 1759,
+"file": "7304210961908449201.wav",
+"gender": "female",
+"seconds": 18.12
+},
+{
+"utt_id": "fr-1759-m",
+"language": "fr",
+"sentence_id": 1759,
+"file": "3617378149977921174.wav",
+"gender": "male",
+"seconds": 17.94
+},
+{
+"utt_id": "fr-1761-f",
+"language": "fr",
+"sentence_id": 1761,
+"file": "18157391707976155025.wav",
+"gender": "female",
+"seconds": 7.5
+},
+{
+"utt_id": "fr-1761-m",
+"language": "fr",
+"sentence_id": 1761,
+"file": "3449842069535625798.wav",
+"gender": "male",
+"seconds": 7.02
+},
+{
+"utt_id": "fr-1765-f",
+"language": "fr",
+"sentence_id": 1765,
+"file": "13272772745569079611.wav",
+"gender": "female",
+"seconds": 10.92
+},
+{
+"utt_id": "fr-1765-m",
+"language": "fr",
+"sentence_id": 1765,
+"file": "9789885586770466749.wav",
+"gender": "male",
+"seconds": 9.12
+},
+{
+"utt_id": "fr-1767-f",
+"language": "fr",
+"sentence_id": 1767,
+"file": "2059904047069183420.wav",
+"gender": "female",
+"seconds": 7.2
+},
+{
+"utt_id": "fr-1767-m",
+"language": "fr",
+"sentence_id": 1767,
+"file": "16949862966091892699.wav",
+"gender": "male",
+"seconds": 9.42
+},
+{
+"utt_id": "fr-1770-f",
+"language": "fr",
+"sentence_id": 1770,
+"file": "5221248167739462675.wav",
+"gender": "female",
+"seconds": 4.2
+},
+{
+"utt_id": "fr-1770-m",
+"language": "fr",
+"sentence_id": 1770,
+"file": "17559822372056259463.wav",
+"gender": "male",
+"seconds": 5.04
+},
+{
+"utt_id": "fr-1775-f",
+"language": "fr",
+"sentence_id": 1775,
+"file": "9747669897173511466.wav",
+"gender": "female",
+"seconds": 7.5
+},
+{
+"utt_id": "fr-1775-m",
+"language": "fr",
+"sentence_id": 1775,
+"file": "171450178198153804.wav",
+"gender": "male",
+"seconds": 12.96
+},
+{
+"utt_id": "fr-1777-f",
+"language": "fr",
+"sentence_id": 1777,
+"file": "5472816019113202964.wav",
+"gender": "female",
+"seconds": 8.4
+},
+{
+"utt_id": "fr-1777-m",
+"language": "fr",
+"sentence_id": 1777,
+"file": "5423487351382449679.wav",
+"gender": "male",
+"seconds": 12.48
+},
+{
+"utt_id": "fr-1780-f",
+"language": "fr",
+"sentence_id": 1780,
+"file": "279195715250212060.wav",
+"gender": "female",
+"seconds": 8.1
+},
+{
+"utt_id": "fr-1780-m",
+"language": "fr",
+"sentence_id": 1780,
+"file": "14112006910306217287.wav",
+"gender": "male",
+"seconds": 12.9
+},
+{
+"utt_id": "fr-1781-f",
+"language": "fr",
+"sentence_id": 1781,
+"file": "13426156682890896829.wav",
+"gender": "female",
+"seconds": 7.26
+},
+{
+"utt_id": "fr-1781-m",
+"language": "fr",
+"sentence_id": 1781,
+"file": "4480206433729614938.wav",
+"gender": "male",
+"seconds": 6.18
+},
+{
+"utt_id": "fr-1785-f",
+"language": "fr",
+"sentence_id": 1785,
+"file": "410431591433544420.wav",
+"gender": "female",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-1785-m",
+"language": "fr",
+"sentence_id": 1785,
+"file": "14960919887442449532.wav",
+"gender": "male",
+"seconds": 11.94
+},
+{
+"utt_id": "fr-1788-f",
+"language": "fr",
+"sentence_id": 1788,
+"file": "6712597982116340925.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "fr-1788-m",
+"language": "fr",
+"sentence_id": 1788,
+"file": "4159321266034083240.wav",
+"gender": "male",
+"seconds": 14.7
+},
+{
+"utt_id": "fr-1790-f",
+"language": "fr",
+"sentence_id": 1790,
+"file": "11868760808794373459.wav",
+"gender": "female",
+"seconds": 10.26
+},
+{
+"utt_id": "fr-1790-m",
+"language": "fr",
+"sentence_id": 1790,
+"file": "18268464756755448881.wav",
+"gender": "male",
+"seconds": 9.78
+},
+{
+"utt_id": "fr-1791-f",
+"language": "fr",
+"sentence_id": 1791,
+"file": "6144755754301467400.wav",
+"gender": "female",
+"seconds": 5.88
+},
+{
+"utt_id": "fr-1791-m",
+"language": "fr",
+"sentence_id": 1791,
+"file": "16596041856027581235.wav",
+"gender": "male",
+"seconds": 5.22
+},
+{
+"utt_id": "fr-1796-f",
+"language": "fr",
+"sentence_id": 1796,
+"file": "2868346751914104518.wav",
+"gender": "female",
+"seconds": 6.6
+},
+{
+"utt_id": "fr-1796-m",
+"language": "fr",
+"sentence_id": 1796,
+"file": "14218582064729914931.wav",
+"gender": "male",
+"seconds": 7.62
+},
+{
+"utt_id": "fr-1797-f",
+"language": "fr",
+"sentence_id": 1797,
+"file": "3598665689422649485.wav",
+"gender": "female",
+"seconds": 5.52
+},
+{
+"utt_id": "fr-1797-m",
+"language": "fr",
+"sentence_id": 1797,
+"file": "15942080413960253441.wav",
+"gender": "male",
+"seconds": 8.46
+},
+{
+"utt_id": "fr-1798-f",
+"language": "fr",
+"sentence_id": 1798,
+"file": "17318908648586294767.wav",
+"gender": "female",
+"seconds": 8.1
+},
+{
+"utt_id": "fr-1798-m",
+"language": "fr",
+"sentence_id": 1798,
+"file": "9946857661334947968.wav",
+"gender": "male",
+"seconds": 8.82
+},
+{
+"utt_id": "fr-1799-f",
+"language": "fr",
+"sentence_id": 1799,
+"file": "15067998148826168426.wav",
+"gender": "female",
+"seconds": 6.72
+},
+{
+"utt_id": "fr-1799-m",
+"language": "fr",
+"sentence_id": 1799,
+"file": "122619262747635040.wav",
+"gender": "male",
+"seconds": 6.42
+},
+{
+"utt_id": "fr-1802-f",
+"language": "fr",
+"sentence_id": 1802,
+"file": "8715939162705934607.wav",
+"gender": "female",
+"seconds": 5.46
+},
+{
+"utt_id": "fr-1802-m",
+"language": "fr",
+"sentence_id": 1802,
+"file": "8048456904739408213.wav",
+"gender": "male",
+"seconds": 5.46
+},
+{
+"utt_id": "fr-1803-f",
+"language": "fr",
+"sentence_id": 1803,
+"file": "14149543873312318749.wav",
+"gender": "female",
+"seconds": 7.86
+},
+{
+"utt_id": "fr-1803-m",
+"language": "fr",
+"sentence_id": 1803,
+"file": "8796377610986171777.wav",
+"gender": "male",
+"seconds": 8.1
+},
+{
+"utt_id": "fr-1806-f",
+"language": "fr",
+"sentence_id": 1806,
+"file": "16704496151031241396.wav",
+"gender": "female",
+"seconds": 9.9
+},
+{
+"utt_id": "fr-1806-m",
+"language": "fr",
+"sentence_id": 1806,
+"file": "5788874380798792438.wav",
+"gender": "male",
+"seconds": 11.64
+},
+{
+"utt_id": "fr-1808-f",
+"language": "fr",
+"sentence_id": 1808,
+"file": "9755490567928863556.wav",
+"gender": "female",
+"seconds": 6.36
+},
+{
+"utt_id": "fr-1808-m",
+"language": "fr",
+"sentence_id": 1808,
+"file": "15515639463532216702.wav",
+"gender": "male",
+"seconds": 10.38
+},
+{
+"utt_id": "fr-1811-f",
+"language": "fr",
+"sentence_id": 1811,
+"file": "15714735573421811185.wav",
+"gender": "female",
+"seconds": 8.4
+},
+{
+"utt_id": "fr-1811-m",
+"language": "fr",
+"sentence_id": 1811,
+"file": "4960111231634917468.wav",
+"gender": "male",
+"seconds": 11.4
+},
+{
+"utt_id": "fr-1812-f",
+"language": "fr",
+"sentence_id": 1812,
+"file": "17576168788336216832.wav",
+"gender": "female",
+"seconds": 11.46
+},
+{
+"utt_id": "fr-1812-m",
+"language": "fr",
+"sentence_id": 1812,
+"file": "2193266994982809183.wav",
+"gender": "male",
+"seconds": 11.16
+},
+{
+"utt_id": "fr-1820-f",
+"language": "fr",
+"sentence_id": 1820,
+"file": "5831084096944162011.wav",
+"gender": "female",
+"seconds": 7.14
+},
+{
+"utt_id": "fr-1820-m",
+"language": "fr",
+"sentence_id": 1820,
+"file": "12623958270472538706.wav",
+"gender": "male",
+"seconds": 9.48
+},
+{
+"utt_id": "fr-1827-f",
+"language": "fr",
+"sentence_id": 1827,
+"file": "13534209647622702605.wav",
+"gender": "female",
+"seconds": 10.8
+},
+{
+"utt_id": "fr-1827-m",
+"language": "fr",
+"sentence_id": 1827,
+"file": "4088577714441894427.wav",
+"gender": "male",
+"seconds": 6.48
+},
+{
+"utt_id": "fr-1828-f",
+"language": "fr",
+"sentence_id": 1828,
+"file": "122946205367383977.wav",
+"gender": "female",
+"seconds": 5.4
+},
+{
+"utt_id": "fr-1828-m",
+"language": "fr",
+"sentence_id": 1828,
+"file": "530200512798810100.wav",
+"gender": "male",
+"seconds": 11.94
+},
+{
+"utt_id": "fr-1829-f",
+"language": "fr",
+"sentence_id": 1829,
+"file": "7105431834829365765.wav",
+"gender": "female",
+"seconds": 9.42
+},
+{
+"utt_id": "fr-1829-m",
+"language": "fr",
+"sentence_id": 1829,
+"file": "8412394508646602569.wav",
+"gender": "male",
+"seconds": 13.44
+},
+{
+"utt_id": "fr-1833-f",
+"language": "fr",
+"sentence_id": 1833,
+"file": "13957746081811148824.wav",
+"gender": "female",
+"seconds": 8.4
+},
+{
+"utt_id": "fr-1833-m",
+"language": "fr",
+"sentence_id": 1833,
+"file": "2904576322032833878.wav",
+"gender": "male",
+"seconds": 10.8
+},
+{
+"utt_id": "fr-1841-f",
+"language": "fr",
+"sentence_id": 1841,
+"file": "12271397797191229695.wav",
+"gender": "female",
+"seconds": 12.84
+},
+{
+"utt_id": "fr-1841-m",
+"language": "fr",
+"sentence_id": 1841,
+"file": "4812981656148707070.wav",
+"gender": "male",
+"seconds": 13.5
+},
+{
+"utt_id": "fr-1849-f",
+"language": "fr",
+"sentence_id": 1849,
+"file": "15510536844300476299.wav",
+"gender": "female",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-1849-m",
+"language": "fr",
+"sentence_id": 1849,
+"file": "17832495206529876985.wav",
+"gender": "male",
+"seconds": 13.92
+},
+{
+"utt_id": "fr-1850-f",
+"language": "fr",
+"sentence_id": 1850,
+"file": "4674720933145438925.wav",
+"gender": "female",
+"seconds": 11.76
+},
+{
+"utt_id": "fr-1850-m",
+"language": "fr",
+"sentence_id": 1850,
+"file": "5928284733586519270.wav",
+"gender": "male",
+"seconds": 9.3
+},
+{
+"utt_id": "fr-1853-f",
+"language": "fr",
+"sentence_id": 1853,
+"file": "13574905551270596347.wav",
+"gender": "female",
+"seconds": 6.3
+},
+{
+"utt_id": "fr-1853-m",
+"language": "fr",
+"sentence_id": 1853,
+"file": "4667311872899516883.wav",
+"gender": "male",
+"seconds": 7.8
+},
+{
+"utt_id": "fr-1860-f",
+"language": "fr",
+"sentence_id": 1860,
+"file": "9205802884722420587.wav",
+"gender": "female",
+"seconds": 4.62
+},
+{
+"utt_id": "fr-1860-m",
+"language": "fr",
+"sentence_id": 1860,
+"file": "16924477496179802622.wav",
+"gender": "male",
+"seconds": 7.8
+},
+{
+"utt_id": "fr-1863-f",
+"language": "fr",
+"sentence_id": 1863,
+"file": "70025853428893411.wav",
+"gender": "female",
+"seconds": 11.7
+},
+{
+"utt_id": "fr-1863-m",
+"language": "fr",
+"sentence_id": 1863,
+"file": "18006433020406435732.wav",
+"gender": "male",
+"seconds": 15.78
+},
+{
+"utt_id": "fr-1867-f",
+"language": "fr",
+"sentence_id": 1867,
+"file": "16856758107872062072.wav",
+"gender": "female",
+"seconds": 9.24
+},
+{
+"utt_id": "fr-1867-m",
+"language": "fr",
+"sentence_id": 1867,
+"file": "1856585387483238980.wav",
+"gender": "male",
+"seconds": 12.84
+},
+{
+"utt_id": "fr-1869-f",
+"language": "fr",
+"sentence_id": 1869,
+"file": "13095390120646560022.wav",
+"gender": "female",
+"seconds": 12.66
+},
+{
+"utt_id": "fr-1869-m",
+"language": "fr",
+"sentence_id": 1869,
+"file": "3851184196755403550.wav",
+"gender": "male",
+"seconds": 13.38
+},
+{
+"utt_id": "fr-1870-f",
+"language": "fr",
+"sentence_id": 1870,
+"file": "882897483766712466.wav",
+"gender": "female",
+"seconds": 4.62
+},
+{
+"utt_id": "fr-1870-m",
+"language": "fr",
+"sentence_id": 1870,
+"file": "976188642074609837.wav",
+"gender": "male",
+"seconds": 4.98
+},
+{
+"utt_id": "fr-1874-f",
+"language": "fr",
+"sentence_id": 1874,
+"file": "16139714976212728807.wav",
+"gender": "female",
+"seconds": 10.14
+},
+{
+"utt_id": "fr-1874-m",
+"language": "fr",
+"sentence_id": 1874,
+"file": "6683860269372642470.wav",
+"gender": "male",
+"seconds": 9.18
+},
+{
+"utt_id": "fr-1877-f",
+"language": "fr",
+"sentence_id": 1877,
+"file": "7223611474570343381.wav",
+"gender": "female",
+"seconds": 10.92
+},
+{
+"utt_id": "fr-1877-m",
+"language": "fr",
+"sentence_id": 1877,
+"file": "12479666886919657463.wav",
+"gender": "male",
+"seconds": 12.48
+},
+{
+"utt_id": "fr-1878-f",
+"language": "fr",
+"sentence_id": 1878,
+"file": "7625516577244837392.wav",
+"gender": "female",
+"seconds": 11.58
+},
+{
+"utt_id": "fr-1878-m",
+"language": "fr",
+"sentence_id": 1878,
+"file": "14133596223444314003.wav",
+"gender": "male",
+"seconds": 9.9
+},
+{
+"utt_id": "fr-1880-f",
+"language": "fr",
+"sentence_id": 1880,
+"file": "5583809432188860335.wav",
+"gender": "female",
+"seconds": 5.88
+},
+{
+"utt_id": "fr-1880-m",
+"language": "fr",
+"sentence_id": 1880,
+"file": "5566317317232777821.wav",
+"gender": "male",
+"seconds": 8.7
+},
+{
+"utt_id": "fr-1881-f",
+"language": "fr",
+"sentence_id": 1881,
+"file": "2223767058180697343.wav",
+"gender": "female",
+"seconds": 8.34
+},
+{
+"utt_id": "fr-1881-m",
+"language": "fr",
+"sentence_id": 1881,
+"file": "17885323158320780436.wav",
+"gender": "male",
+"seconds": 10.26
+},
+{
+"utt_id": "fr-1893-f",
+"language": "fr",
+"sentence_id": 1893,
+"file": "11962196321446720509.wav",
+"gender": "female",
+"seconds": 13.8
+},
+{
+"utt_id": "fr-1893-m",
+"language": "fr",
+"sentence_id": 1893,
+"file": "15813539945032003892.wav",
+"gender": "male",
+"seconds": 10.38
+},
+{
+"utt_id": "fr-1898-f",
+"language": "fr",
+"sentence_id": 1898,
+"file": "2975686338747078906.wav",
+"gender": "female",
+"seconds": 10.92
+},
+{
+"utt_id": "fr-1898-m",
+"language": "fr",
+"sentence_id": 1898,
+"file": "11053552208891406186.wav",
+"gender": "male",
+"seconds": 14.28
+},
+{
+"utt_id": "fr-1905-f",
+"language": "fr",
+"sentence_id": 1905,
+"file": "16241994582612171470.wav",
+"gender": "female",
+"seconds": 4.98
+},
+{
+"utt_id": "fr-1905-m",
+"language": "fr",
+"sentence_id": 1905,
+"file": "6630670683326806541.wav",
+"gender": "male",
+"seconds": 12.24
+},
+{
+"utt_id": "fr-1910-f",
+"language": "fr",
+"sentence_id": 1910,
+"file": "900422693219452087.wav",
+"gender": "female",
+"seconds": 5.1
+},
+{
+"utt_id": "fr-1910-m",
+"language": "fr",
+"sentence_id": 1910,
+"file": "11575460016199460203.wav",
+"gender": "male",
+"seconds": 4.44
+},
+{
+"utt_id": "fr-1913-f",
+"language": "fr",
+"sentence_id": 1913,
+"file": "10143749263702132703.wav",
+"gender": "female",
+"seconds": 10.2
+},
+{
+"utt_id": "fr-1913-m",
+"language": "fr",
+"sentence_id": 1913,
+"file": "15007010135849113886.wav",
+"gender": "male",
+"seconds": 11.52
+},
+{
+"utt_id": "fr-1919-f",
+"language": "fr",
+"sentence_id": 1919,
+"file": "12304870150060032664.wav",
+"gender": "female",
+"seconds": 8.58
+},
+{
+"utt_id": "fr-1919-m",
+"language": "fr",
+"sentence_id": 1919,
+"file": "14472952933250313690.wav",
+"gender": "male",
+"seconds": 13.5
+},
+{
+"utt_id": "fr-1920-f",
+"language": "fr",
+"sentence_id": 1920,
+"file": "5232155587323445112.wav",
+"gender": "female",
+"seconds": 7.56
+},
+{
+"utt_id": "fr-1920-m",
+"language": "fr",
+"sentence_id": 1920,
+"file": "3762855066984473299.wav",
+"gender": "male",
+"seconds": 10.14
+},
+{
+"utt_id": "fr-1921-f",
+"language": "fr",
+"sentence_id": 1921,
+"file": "15239334234589359445.wav",
+"gender": "female",
+"seconds": 7.62
+},
+{
+"utt_id": "fr-1921-m",
+"language": "fr",
+"sentence_id": 1921,
+"file": "62461471055238586.wav",
+"gender": "male",
+"seconds": 11.58
+},
+{
+"utt_id": "fr-1926-f",
+"language": "fr",
+"sentence_id": 1926,
+"file": "17810850355374913939.wav",
+"gender": "female",
+"seconds": 5.88
+},
+{
+"utt_id": "fr-1926-m",
+"language": "fr",
+"sentence_id": 1926,
+"file": "14679599176309841444.wav",
+"gender": "male",
+"seconds": 6.24
+},
+{
+"utt_id": "fr-1933-f",
+"language": "fr",
+"sentence_id": 1933,
+"file": "15046212832826875024.wav",
+"gender": "female",
+"seconds": 10.44
+},
+{
+"utt_id": "fr-1933-m",
+"language": "fr",
+"sentence_id": 1933,
+"file": "10777874021057022864.wav",
+"gender": "male",
+"seconds": 14.28
+},
+{
+"utt_id": "fr-1937-f",
+"language": "fr",
+"sentence_id": 1937,
+"file": "2274557611628732428.wav",
+"gender": "female",
+"seconds": 33.54
+},
+{
+"utt_id": "fr-1937-m",
+"language": "fr",
+"sentence_id": 1937,
+"file": "1057422269812878594.wav",
+"gender": "male",
+"seconds": 27.6
+},
+{
+"utt_id": "fr-1942-f",
+"language": "fr",
+"sentence_id": 1942,
+"file": "18151681871637167427.wav",
+"gender": "female",
+"seconds": 10.74
+},
+{
+"utt_id": "fr-1942-m",
+"language": "fr",
+"sentence_id": 1942,
+"file": "6442757468221375039.wav",
+"gender": "male",
+"seconds": 11.82
+},
+{
+"utt_id": "fr-1944-f",
+"language": "fr",
+"sentence_id": 1944,
+"file": "743880428812799577.wav",
+"gender": "female",
+"seconds": 8.22
+},
+{
+"utt_id": "fr-1944-m",
+"language": "fr",
+"sentence_id": 1944,
+"file": "6821834401128438733.wav",
+"gender": "male",
+"seconds": 8.46
+},
+{
+"utt_id": "fr-1945-f",
+"language": "fr",
+"sentence_id": 1945,
+"file": "15080454381912740789.wav",
+"gender": "female",
+"seconds": 5.1
+},
+{
+"utt_id": "fr-1945-m",
+"language": "fr",
+"sentence_id": 1945,
+"file": "13132336053284602337.wav",
+"gender": "male",
+"seconds": 8.64
+},
+{
+"utt_id": "fr-1946-f",
+"language": "fr",
+"sentence_id": 1946,
+"file": "17356681289057930157.wav",
+"gender": "female",
+"seconds": 11.82
+},
+{
+"utt_id": "fr-1946-m",
+"language": "fr",
+"sentence_id": 1946,
+"file": "5001020775514452955.wav",
+"gender": "male",
+"seconds": 14.58
+},
+{
+"utt_id": "fr-1948-f",
+"language": "fr",
+"sentence_id": 1948,
+"file": "15406143425379165453.wav",
+"gender": "female",
+"seconds": 15.96
+},
+{
+"utt_id": "fr-1948-m",
+"language": "fr",
+"sentence_id": 1948,
+"file": "7459679355457970510.wav",
+"gender": "male",
+"seconds": 14.88
+},
+{
+"utt_id": "fr-1958-f",
+"language": "fr",
+"sentence_id": 1958,
+"file": "7247907611588271766.wav",
+"gender": "female",
+"seconds": 10.62
+},
+{
+"utt_id": "fr-1958-m",
+"language": "fr",
+"sentence_id": 1958,
+"file": "15829686047046406376.wav",
+"gender": "male",
+"seconds": 10.68
+},
+{
+"utt_id": "fr-1959-f",
+"language": "fr",
+"sentence_id": 1959,
+"file": "16803559580526069339.wav",
+"gender": "female",
+"seconds": 7.56
+},
+{
+"utt_id": "fr-1959-m",
+"language": "fr",
+"sentence_id": 1959,
+"file": "2185735266707508578.wav",
+"gender": "male",
+"seconds": 7.2
+},
+{
+"utt_id": "fr-1960-f",
+"language": "fr",
+"sentence_id": 1960,
+"file": "12140928166693713243.wav",
+"gender": "female",
+"seconds": 13.2
+},
+{
+"utt_id": "fr-1960-m",
+"language": "fr",
+"sentence_id": 1960,
+"file": "13431698495155265005.wav",
+"gender": "male",
+"seconds": 18.96
+},
+{
+"utt_id": "fr-1969-f",
+"language": "fr",
+"sentence_id": 1969,
+"file": "12785245718131734148.wav",
+"gender": "female",
+"seconds": 9.54
+},
+{
+"utt_id": "fr-1969-m",
+"language": "fr",
+"sentence_id": 1969,
+"file": "476956455356127952.wav",
+"gender": "male",
+"seconds": 9.6
+},
+{
+"utt_id": "fr-1972-f",
+"language": "fr",
+"sentence_id": 1972,
+"file": "840826250478302080.wav",
+"gender": "female",
+"seconds": 6.72
+},
+{
+"utt_id": "fr-1972-m",
+"language": "fr",
+"sentence_id": 1972,
+"file": "18384957537321638607.wav",
+"gender": "male",
+"seconds": 9.96
+},
+{
+"utt_id": "fr-1973-f",
+"language": "fr",
+"sentence_id": 1973,
+"file": "16135406137969315305.wav",
+"gender": "female",
+"seconds": 12.0
+},
+{
+"utt_id": "fr-1973-m",
+"language": "fr",
+"sentence_id": 1973,
+"file": "17352302516004269144.wav",
+"gender": "male",
+"seconds": 12.54
+},
+{
+"utt_id": "fr-1976-f",
+"language": "fr",
+"sentence_id": 1976,
+"file": "16900291026528238866.wav",
+"gender": "female",
+"seconds": 13.38
+},
+{
+"utt_id": "fr-1976-m",
+"language": "fr",
+"sentence_id": 1976,
+"file": "2079755441792604769.wav",
+"gender": "male",
+"seconds": 10.62
+},
+{
+"utt_id": "fr-1978-f",
+"language": "fr",
+"sentence_id": 1978,
+"file": "15064773392108480229.wav",
+"gender": "female",
+"seconds": 7.5
+},
+{
+"utt_id": "fr-1978-m",
+"language": "fr",
+"sentence_id": 1978,
+"file": "3292214861722888809.wav",
+"gender": "male",
+"seconds": 9.72
+},
+{
+"utt_id": "fr-1979-f",
+"language": "fr",
+"sentence_id": 1979,
+"file": "14878083544049672174.wav",
+"gender": "female",
+"seconds": 14.34
+},
+{
+"utt_id": "fr-1979-m",
+"language": "fr",
+"sentence_id": 1979,
+"file": "13197448347303456627.wav",
+"gender": "male",
+"seconds": 8.88
+},
+{
+"utt_id": "fr-1983-f",
+"language": "fr",
+"sentence_id": 1983,
+"file": "4679551722475820359.wav",
+"gender": "female",
+"seconds": 18.18
+},
+{
+"utt_id": "fr-1983-m",
+"language": "fr",
+"sentence_id": 1983,
+"file": "8475041387621209979.wav",
+"gender": "male",
+"seconds": 19.56
+},
+{
+"utt_id": "fr-1987-f",
+"language": "fr",
+"sentence_id": 1987,
+"file": "10043298898524273336.wav",
+"gender": "female",
+"seconds": 10.2
+},
+{
+"utt_id": "fr-1987-m",
+"language": "fr",
+"sentence_id": 1987,
+"file": "2489052484783752.wav",
+"gender": "male",
+"seconds": 9.54
+},
+{
+"utt_id": "fr-1988-f",
+"language": "fr",
+"sentence_id": 1988,
+"file": "6855713188548748164.wav",
+"gender": "female",
+"seconds": 5.7
+},
+{
+"utt_id": "fr-1988-m",
+"language": "fr",
+"sentence_id": 1988,
+"file": "16629988053345159346.wav",
+"gender": "male",
+"seconds": 6.42
+},
+{
+"utt_id": "fr-1992-f",
+"language": "fr",
+"sentence_id": 1992,
+"file": "159570134205138238.wav",
+"gender": "female",
+"seconds": 10.5
+},
+{
+"utt_id": "fr-1992-m",
+"language": "fr",
+"sentence_id": 1992,
+"file": "18208285039675704068.wav",
+"gender": "male",
+"seconds": 14.22
+},
+{
+"utt_id": "fr-1994-f",
+"language": "fr",
+"sentence_id": 1994,
+"file": "1532251563850813188.wav",
+"gender": "female",
+"seconds": 4.92
+},
+{
+"utt_id": "fr-1994-m",
+"language": "fr",
+"sentence_id": 1994,
+"file": "6218019923550337350.wav",
+"gender": "male",
+"seconds": 5.34
+},
+{
+"utt_id": "fr-1998-f",
+"language": "fr",
+"sentence_id": 1998,
+"file": "822362724095816125.wav",
+"gender": "female",
+"seconds": 7.32
+},
+{
+"utt_id": "fr-1998-m",
+"language": "fr",
+"sentence_id": 1998,
+"file": "11608262059921773552.wav",
+"gender": "male",
+"seconds": 14.58
+},
+{
+"utt_id": "fr-2003-f",
+"language": "fr",
+"sentence_id": 2003,
+"file": "12145447530749713446.wav",
+"gender": "female",
+"seconds": 8.04
+},
+{
+"utt_id": "fr-2003-m",
+"language": "fr",
+"sentence_id": 2003,
+"file": "16132267734225650963.wav",
+"gender": "male",
+"seconds": 11.16
+},
+{
+"utt_id": "fr-2004-f",
+"language": "fr",
+"sentence_id": 2004,
+"file": "10166091086920486572.wav",
+"gender": "female",
+"seconds": 8.34
+},
+{
+"utt_id": "fr-2004-m",
+"language": "fr",
+"sentence_id": 2004,
+"file": "16651556590221169367.wav",
+"gender": "male",
+"seconds": 8.34
+},
+{
+"utt_id": "fr-2007-f",
+"language": "fr",
+"sentence_id": 2007,
+"file": "1183195841366637455.wav",
+"gender": "female",
+"seconds": 7.2
+},
+{
+"utt_id": "fr-2007-m",
+"language": "fr",
+"sentence_id": 2007,
+"file": "1340814928779301646.wav",
+"gender": "male",
+"seconds": 13.68
+},
+{
+"utt_id": "fr-2008-f",
+"language": "fr",
+"sentence_id": 2008,
+"file": "14348895125714870649.wav",
+"gender": "female",
+"seconds": 17.76
+},
+{
+"utt_id": "fr-2008-m",
+"language": "fr",
+"sentence_id": 2008,
+"file": "3172268488349984843.wav",
+"gender": "male",
+"seconds": 10.98
+}
+],
+"new": [
+{
+"utt_id": "en-new01-f",
+"language": "en",
+"sentence_id": 1547,
+"file": "17581818460988395551.wav",
+"gender": "female",
+"seconds": 10.44
+},
+{
+"utt_id": "en-new02-f",
+"language": "en",
+"sentence_id": 1515,
+"file": "1894240377480073066.wav",
+"gender": "female",
+"seconds": 8.04
+},
+{
+"utt_id": "en-new03-f",
+"language": "en",
+"sentence_id": 1624,
+"file": "4547743266503066629.wav",
+"gender": "female",
+"seconds": 3.96
+},
+{
+"utt_id": "en-new04-f",
+"language": "en",
+"sentence_id": 1654,
+"file": "380621939748022371.wav",
+"gender": "female",
+"seconds": 9.96
+},
+{
+"utt_id": "en-new05-f",
+"language": "en",
+"sentence_id": 1519,
+"file": "786465049904960526.wav",
+"gender": "female",
+"seconds": 7.8
+},
+{
+"utt_id": "en-new06-m",
+"language": "en",
+"sentence_id": 1594,
+"file": "7955601066139339429.wav",
+"gender": "male",
+"seconds": 12.36
+},
+{
+"utt_id": "en-new07-m",
+"language": "en",
+"sentence_id": 1513,
+"file": "822694990038496232.wav",
+"gender": "male",
+"seconds": 7.38
+},
+{
+"utt_id": "en-new08-m",
+"language": "en",
+"sentence_id": 1565,
+"file": "6048950654071186425.wav",
+"gender": "male",
+"seconds": 10.16
+},
+{
+"utt_id": "en-new09-m",
+"language": "en",
+"sentence_id": 1641,
+"file": "4272008885921228157.wav",
+"gender": "male",
+"seconds": 11.06
+},
+{
+"utt_id": "en-new10-m",
+"language": "en",
+"sentence_id": 1561,
+"file": "16257945526208770570.wav",
+"gender": "male",
+"seconds": 7.92
+},
+{
+"utt_id": "fr-new01-f",
+"language": "fr",
+"sentence_id": 1609,
+"file": "13630599605931307319.wav",
+"gender": "female",
+"seconds": 9.84
+},
+{
+"utt_id": "fr-new02-f",
+"language": "fr",
+"sentence_id": 1657,
+"file": "8945337825626301353.wav",
+"gender": "female",
+"seconds": 7.8
+},
+{
+"utt_id": "fr-new03-f",
+"language": "fr",
+"sentence_id": 1533,
+"file": "10245663879872870443.wav",
+"gender": "female",
+"seconds": 7.86
+},
+{
+"utt_id": "fr-new04-f",
+"language": "fr",
+"sentence_id": 1598,
+"file": "475129543623066238.wav",
+"gender": "female",
+"seconds": 10.38
+},
+{
+"utt_id": "fr-new05-f",
+"language": "fr",
+"sentence_id": 1538,
+"file": "546107982963610662.wav",
+"gender": "female",
+"seconds": 10.86
+},
+{
+"utt_id": "fr-new06-m",
+"language": "fr",
+"sentence_id": 1558,
+"file": "336892504374541425.wav",
+"gender": "male",
+"seconds": 8.58
+},
+{
+"utt_id": "fr-new07-m",
+"language": "fr",
+"sentence_id": 1652,
+"file": "14806885850460296007.wav",
+"gender": "male",
+"seconds": 7.68
+},
+{
+"utt_id": "fr-new08-m",
+"language": "fr",
+"sentence_id": 1652,
+"file": "10283447552217995593.wav",
+"gender": "male",
+"seconds": 8.52
+},
+{
+"utt_id": "fr-new09-m",
+"language": "fr",
+"sentence_id": 1573,
+"file": "7362418168264574358.wav",
+"gender": "male",
+"seconds": 8.88
+},
+{
+"utt_id": "fr-new10-m",
+"language": "fr",
+"sentence_id": 1530,
+"file": "6542977456959320125.wav",
+"gender": "male",
+"seconds": 6.9
+}
+]
+}
