@@ -1,0 +1,23 @@
+{
+ "note": "Published list prices of hosted speech services, NOT measured by the course and NOT checked on the vendor pages by the course team: re-check every price on the vendor's page before you quote it, and write the date you checked.",
+ "rows": [
+  {
+   "service": "Azure AI Speech, speech to text, batch transcription",
+   "usd_per_audio_hour": 0.18,
+   "source": "third-party price list reporting the Azure retail price (East US)",
+   "status": "to verify"
+  },
+  {
+   "service": "Azure AI Speech, speech to text, real time",
+   "usd_per_audio_hour": 1.0,
+   "source": "third-party price list reporting the Azure retail price (East US)",
+   "status": "to verify"
+  },
+  {
+   "service": "Azure AI Speech, fast transcription",
+   "usd_per_audio_hour": 0.36,
+   "source": "third-party price list reporting the Azure retail price (East US)",
+   "status": "to verify"
+  }
+ ]
+}
