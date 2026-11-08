@@ -7,8 +7,8 @@ Larkfield opens a second returns warehouse. Its camera is not the camera of the 
 | Folder or file | What |
 |---|---|
 | `data/returns/` and `data/returns_manifest.csv` | 95 photos of returned tea lights from the second warehouse, one month, **no labels**. |
-| `data/catalogue/kettle/` and `data/catalogue_manifest.csv` | 104 catalogue photos of the new category: 64 for training, 40 for your test. |
-| `data/customer_photos/` and `data/customer_photos_manifest.csv` | 104 customer photos of the new kettles, **without the answer**: which catalogue photo each one shows. |
+| `data/catalogue/kettle/` and `data/catalogue_manifest.csv` | 102 catalogue photos of the new category: 64 for training, 38 for your test. |
+| `data/customer_photos/` and `data/customer_photos_manifest.csv` | 102 customer photos of the new kettles, **without the answer**: which catalogue photo each one shows. |
 | `data/credits.csv` | The authors and licences of the kettle photos. |
 | `../data/` | The course data of the first warehouse and the eight earlier categories. |
 

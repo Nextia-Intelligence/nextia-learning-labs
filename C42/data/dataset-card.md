@@ -27,6 +27,7 @@ Other files: `costs.json` (the cost table: assumptions), `comparison_table.json`
 - Catalogue: photos with a single, clear object of the category, at least 5% of the photo. We removed every photo with a person in it: by the people labels of Open Images, by a face detector and by a person detector, and then by looking at every photo. If you still find a person, tell us.
 - The splits are fixed. A photo is never in two splits. The candle category has only 15 training photos on purpose.
 - Changes made by code are marked `synthetic: yes` in the manifests: the new studio, the customer photos, the second half of the month and the photos with a painted face.
+- The 8 categories come from these Open Images classes: Bowl, Candle, Chair, Pillow (cushion), Lamp, Mug, Flowerpot (plant pot) and Vase. A photo sits in the folder of its label, and the manifest's note does not name the class. A few training photos were also cropped a little and made brighter by code, and their manifest rows do not say which: both are planted problems that you search for (below).
 
 ## Problems we planted
 

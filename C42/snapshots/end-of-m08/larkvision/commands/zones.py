@@ -40,5 +40,10 @@ def run(args):
           f"{c['damaged_sold_as_new_per_day']:.1f} damaged sold as new, "
           f"{c['good_marked_damaged_per_day']:.1f} good items lost; cost {c['cost_per_day']:.0f}"
           " dollars a day")
-    add_row(inspection_row(args.method, sv, dv, st, dt, [r["damage"] for r in test], "returns test", None, None, None,
-                           "-"))
+    row = inspection_row(args.method, sv, dv, st, dt, [r["damage"] for r in test], "returns test", None, None, None,
+                         "-")
+    if costs["checks_per_day"] != D.costs(d)["checks_per_day"]:
+        # inspection_row uses the cost table's budget: keep this run's lines and cost, and say the budget.
+        row = dict(row, setting=f"returns test, {costs['checks_per_day']} checks a day", value=c["cost_per_day"],
+                   lines=[lines["check_line"], lines["fail_line"]], test=c, worst="-", worst_value=None)
+    add_row(row)

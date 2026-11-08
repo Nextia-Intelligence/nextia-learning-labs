@@ -8,7 +8,8 @@ The files for the Vision AI course of Nextia Learning.
 | `compare.py` | The comparison table helper that the notebooks use: the same scores, the same cost table, for every method. |
 | `models/` | The model files of the image service: the returns inspector and a face detector. See `models/README.md`. |
 | `snapshots/` | The `larkvision` project at the end of each module (`start`, `end-of-m02` ... `end-of-m08`). See `snapshots/README.md`. |
-| `M01-L04-...` to `M08-L01-...` | Lesson notebooks: a learner notebook and a solution notebook for each. They open in Colab, Kaggle or Jupyter and download what they need. |
+| `M01-L04-...` to `M08-L04-...` | Lesson notebooks: a learner notebook and a solution notebook for each. They open in Colab, Kaggle or Jupyter and download what they need. |
+| `M09-L01-...` to `M09-L03-...` | The case studies' notebooks. Case studies 1 and 3 have their photos next to them (`visa-pcb.zip`, a changed copy of part of VisA, CC BY 4.0; `crowd.zip`, Open Images photos, CC BY 2.0 each by its author: see each `dataset.md`). Case study 2 downloads the Oxford-IIIT Pet photos from their own site (CC BY-SA 4.0); nothing of them is stored here. |
 | `archives/` | The image sets as zip files, for the notebooks (the same files as `data/`). |
 | `final/` | The final assignment: the task (`final/README.md`) and its images. |
 

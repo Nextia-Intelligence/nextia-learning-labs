@@ -64,9 +64,12 @@ def classification_scores(y_true, y_pred, labels=None):
             "worst_class": worst, "worst_recall": pc[worst]["recall"], "per_class": pc}
 
 
-def classification_row(method, y_true, y_pred, setting, ms_per_image, model_mb, labelled, licence, label="measured"):
+def classification_row(method, y_true, y_pred, setting, ms_per_image, model_mb, labelled, licence, label="measured",
+                       task="catalogue"):
+    """A row of the comparison table for a classifier. `task` names the table's task column (the course's catalogue,
+    or another set, such as "pets" in a case study)."""
     s = classification_scores(list(y_true), list(y_pred))
-    return {"task": "catalogue", "method": method, "setting": setting, "metric": "accuracy", "value": s["accuracy"],
+    return {"task": task, "method": method, "setting": setting, "metric": "accuracy", "value": s["accuracy"],
             "worst": s["worst_class"], "worst_value": s["worst_recall"], "ms_per_image": ms_per_image,
             "model_mb": model_mb, "labelled_images": labelled, "licence": licence, "label": label}
 
