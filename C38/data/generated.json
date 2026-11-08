@@ -1,0 +1,7 @@
+{
+ "files": 15,
+ "megabytes": 42.8,
+ "products": 40066,
+ "queries": 624,
+ "generator": "reference/c38/data (build.py, assemble.py, embed.py), reference/c38/recordings"
+}
