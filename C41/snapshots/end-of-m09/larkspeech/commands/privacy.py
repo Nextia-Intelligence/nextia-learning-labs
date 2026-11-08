@@ -43,9 +43,10 @@ def run_redact(args):
 
 def run_check(args):
     folder = Path(args.folder)
-    texts = {str(p): p.read_text(encoding="utf-8", errors="replace") for p in folder.rglob("*")
-             if p.suffix in (".txt", ".jsonl", ".json") and p.is_file()}
-    problems = X.privacy_check(texts) + X.privacy_check(texts, "fr")  # 12 digits or more in a row
+    texts = {str(p): X.spoken_parts(p.name, p.read_text(encoding="utf-8", errors="replace"))
+             for p in folder.rglob("*") if p.suffix in (".txt", ".jsonl", ".json") and p.is_file()}
+    # 12 digits or more in a row, in what people said (not in the times and IDs of the JSON records)
+    problems = X.privacy_check(texts) + X.privacy_check(texts, "fr")
     problems = sorted(set(problems))
     print(f"Privacy check: {len(texts)} text files in {folder}; "
           + ("no card numbers found. Passed." if not problems else f"{len(problems)} card numbers found:"))

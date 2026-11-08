@@ -1,5 +1,6 @@
 """Personal data in voice: find card numbers in a transcript, remove them from the text, and beep them in the
 audio using the word times. The privacy check proves that no card number is left."""
+import json
 import re
 
 import numpy as np
@@ -58,6 +59,49 @@ def beep(x, sr, spans, freq=1000, pad=0.15):
     return y
 
 
+# Fields of our JSON records that hold times, durations or IDs, never words that someone said. Their numbers are
+# not scanned: a list of turn times ("0.0, 3.21, 3.5, ...") would otherwise read as one long run of digits.
+NOT_SPOKEN = {"start", "end", "seconds", "duration", "time", "times", "timeline", "turns", "call_id", "id", "order",
+              "orders", "rtf", "real_time_factor", "tokens", "usd"}
+
+
+def spoken_parts(name, raw):
+    """The pieces of a file to scan. A .txt file is one piece. In a .json or .jsonl file, every string is its own
+    piece, except in the NOT_SPOKEN fields; numbers are skipped, except whole numbers of 12 digits or more (a card
+    number saved as a number). A JSON file that does not parse is scanned as text."""
+    if not str(name).endswith((".json", ".jsonl")):
+        return [raw]
+    try:
+        records = [json.loads(raw)] if str(name).endswith(".json") else \
+            [json.loads(x) for x in raw.splitlines() if x.strip()]
+    except ValueError:
+        return [raw]
+    parts = []
+
+    def walk(v, key=None):
+        if key in NOT_SPOKEN:
+            return
+        if isinstance(v, dict):
+            for k, x in v.items():
+                walk(x, k)
+        elif isinstance(v, list):
+            for x in v:
+                walk(x)
+        elif isinstance(v, str):
+            parts.append(v)
+        elif isinstance(v, int) and not isinstance(v, bool) and len(str(abs(v))) >= 12:
+            parts.append(str(v))
+
+    for r in records:
+        walk(r)
+    return parts
+
+
 def privacy_check(texts, language="en", strict=False):
-    """Problems: every text that still holds a card number (by default the broad rule: 12 digits or more)."""
-    return [(name, n) for name, t in texts.items() for n in card_numbers(t, language, strict)]
+    """Problems: every text that still holds a card number (by default the broad rule: 12 digits or more).
+    texts: {name: text} or {name: [pieces]} (each piece is scanned on its own, see spoken_parts)."""
+    out = []
+    for name, t in texts.items():
+        for piece in ([t] if isinstance(t, str) else t):
+            out += [(name, n) for n in card_numbers(piece, language, strict)]
+    return out

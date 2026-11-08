@@ -17,7 +17,7 @@ INTENT_WORDS = {
 }
 KEY_INTENT = {"1": "order_status", "2": "opening_hours", "3": "start_return", "0": "agent"}
 YES = {"yes", "yeah", "yep", "correct", "right", "that's right", "oui", "exact", "exactement", "c'est ça", "ouais"}
-NO = {"no", "nope", "wrong", "non", "pas"}
+NO = {"no", "nope", "wrong", "not", "incorrect", "non", "pas", "faux"}  # checked before YES: "that's not right" is a no
 
 
 def find_intent(text, language):

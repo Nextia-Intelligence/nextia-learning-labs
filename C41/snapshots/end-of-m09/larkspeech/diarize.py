@@ -138,6 +138,17 @@ def der(pred, truth, seconds, collar=0.25):
             "confusion": best / total}
 
 
+def speaker_at(turns, t, reach=0.5):
+    """The speaker of the turn that holds time t (the middle of a word). A word in a short gap between turns goes
+    to the nearest turn within `reach` seconds; further away, "?" (nobody was found speaking there)."""
+    for s, e, w in turns:
+        if s <= t <= e:
+            return w
+    near = [(min(abs(t - s), abs(t - e)), w) for s, e, w in turns]
+    best = min(near, default=(reach + 1, "?"))
+    return best[1] if best[0] <= reach else "?"
+
+
 def truth_turns(call):
     """The true turns from the labels, from the first word to the last word of each turn."""
     out = []

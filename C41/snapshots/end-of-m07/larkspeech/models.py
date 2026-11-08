@@ -5,6 +5,11 @@ import urllib.request
 from larkspeech.paths import models_dir
 
 HF = "https://huggingface.co/rhasspy/piper-voices/resolve/main/"
+# A second place for a file, tried when the first one fails (the same file: the SHA-256 is checked either way).
+MIRRORS = {
+    "spk/wespeaker_en_voxceleb_resnet34_LM.onnx":
+        "https://huggingface.co/csukuangfj/speaker-embedding-models/resolve/main/wespeaker_en_voxceleb_resnet34_LM.onnx",
+}
 FILES = {
     # Speaker embeddings: WeSpeaker ResNet-34 trained on VoxCeleb (Apache-2.0), the sherpa-onnx ONNX copy.
     "spk/wespeaker_en_voxceleb_resnet34_LM.onnx": (
@@ -30,10 +35,19 @@ def path(name):
         url, digest = FILES[name]
         p.parent.mkdir(parents=True, exist_ok=True)
         tmp = p.with_suffix(p.suffix + ".part")
-        print(f"Downloading {name} ...", flush=True)
-        urllib.request.urlretrieve(url, tmp)
-        if digest and hashlib.sha256(tmp.read_bytes()).hexdigest() != digest:
-            tmp.unlink()
-            raise RuntimeError(f"{name}: the download does not match its SHA-256; try again")
-        tmp.rename(p)
+        problems = []
+        for source in [url] + ([MIRRORS[name]] if name in MIRRORS else []):
+            print(f"Downloading {name} ...", flush=True)
+            try:
+                urllib.request.urlretrieve(source, tmp)
+            except OSError as e:  # the server did not answer, or answered with an error
+                problems.append(f"{source}: {e}")
+                continue
+            if digest and hashlib.sha256(tmp.read_bytes()).hexdigest() != digest:
+                tmp.unlink()
+                problems.append(f"{source}: the download does not match its SHA-256")
+                continue
+            tmp.rename(p)
+            return p
+        raise RuntimeError(f"{name} could not be downloaded; try again later.\n  " + "\n  ".join(problems))
     return p

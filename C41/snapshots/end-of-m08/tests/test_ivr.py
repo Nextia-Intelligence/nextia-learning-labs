@@ -3,7 +3,7 @@ import numpy as np
 from larkspeech import data as D
 from larkspeech.ivr import dtmf
 from larkspeech.ivr import replay as R
-from larkspeech.ivr.dialogue import Dialogue, find_intent
+from larkspeech.ivr.dialogue import Dialogue, find_intent, yes_no
 
 ORDERS = {"742155": {"order": "742155", "product": "Grow Hub", "status": "shipped", "date": "2026-05-04",
                      "returnable": False},
@@ -40,6 +40,8 @@ def test_change_of_mind_and_partial_number():
     assert find_intent("I want to return... no, track my order", "en") == "order_status"
     d = talk([("keys", "1"), ("keys", "1"), ("speech", "seven four two"), ("speech", "one five five")])
     assert d.state == "confirm" and d.order == "742155"
+    assert yes_no("That's not right.", "en") == "no" and yes_no("Yes, that's right.", "en") == "yes"
+    assert yes_no("Non, c'est faux.", "fr") == "no" and yes_no("Oui, c'est ça.", "fr") == "yes"
 
 
 def test_two_misses_hand_over_and_zero_puts_through():

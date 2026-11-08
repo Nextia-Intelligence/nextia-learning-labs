@@ -6,6 +6,8 @@ def test_der_perfect_and_swapped_names():
     assert Z.der(truth, truth, 5)["der"] == 0
     swapped = [(0, 2, "caller"), (2.5, 4, "agent")]
     assert Z.der(swapped, truth, 5)["der"] == 0  # names are matched first
+    # a word's speaker: inside a turn, in a short gap (nearest turn), or far from any turn
+    assert [Z.speaker_at(truth, t) for t in (1.0, 2.3, 4.2, 9.0)] == ["agent", "caller", "caller", "?"]
 
 
 def test_der_counts_a_merged_speaker():

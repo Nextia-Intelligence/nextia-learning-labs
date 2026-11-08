@@ -42,5 +42,12 @@ Optional paths (not tested by the course team, and they cost money or need an ac
 real phone number with a provider's media stream (for example Twilio Media Streams), or wire it to Asterisk in a
 container with a softphone. The course page explains both.
 
+## The voice and its licence
+
+The IVR's prompts are made by Piper (`piper-tts`, installed by `requirements.txt`). Piper is GPL-3.0-or-later.
+`larkspeech/ivr/tts.py` runs the `piper` command as a separate program (text in, a WAV file out) and never imports
+it, so this MIT project does not include Piper's code. If you share the IVR with Piper, read Piper's licence first.
+The first prompts take a few seconds each; they are then cached in `outputs/prompts/`.
+
 Licence: MIT (this code). The voices and models have their own licences: see `../../data/voices.json` and the
 course page.

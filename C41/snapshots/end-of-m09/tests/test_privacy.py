@@ -1,3 +1,5 @@
+import json
+
 import numpy as np
 
 from larkspeech import redact as X
@@ -23,3 +25,14 @@ def test_beep_the_audio():
 def test_privacy_check(tmp_path):
     assert X.privacy_check({"a.txt": "order 742155"}) == []
     assert X.privacy_check({"b.txt": "card 4111 1111 1111 1111"}) == [("b.txt", "4111111111111111")]
+
+
+def test_times_and_ids_are_not_card_numbers():
+    rec = {"call_id": "N-001", "turns": [[0.0, 3.21, 0], [3.5, 7.04, 1], [7.3, 12.88, 0]],
+           "lines": [{"speaker": "caller", "start": 3.5, "end": 7.04, "text": "my order is 742155"}]}
+    parts = X.spoken_parts("pipeline.jsonl", json.dumps(rec))
+    assert X.privacy_check({"pipeline.jsonl": parts}) == []
+    assert X.privacy_check({"pipeline.txt": json.dumps(rec)}) != []  # read as plain text, the times look like a card
+    rec["lines"][0]["text"] = "card 4111 1111 1111 1111"
+    parts = X.spoken_parts("pipeline.jsonl", json.dumps(rec))
+    assert X.privacy_check({"pipeline.jsonl": parts}) == [("pipeline.jsonl", "4111111111111111")]
