@@ -167,15 +167,15 @@ class TwoStage(Method):
         groups_with_pos = cand[cand.label == 1].u.unique()
         cand = cand[keep & cand.u.isin(groups_with_pos)].sort_values("u")
         feats = stage.features(cand.drop(columns=["label", "r", "nr"]))
-        self.ranker = lgb.LGBMRanker(objective="lambdarank", n_estimators=s.get("trees", 300),
-                                     learning_rate=s.get("learning_rate", 0.05), num_leaves=s.get("leaves", 31),
-                                     min_child_samples=20, subsample=0.8, subsample_freq=1, colsample_bytree=0.8,
-                                     random_state=s.get("seed", 37), n_jobs=1, verbose=-1)
+        params = {"objective": "lambdarank", "learning_rate": s.get("learning_rate", 0.05),
+                  "num_leaves": s.get("leaves", 31), "min_data_in_leaf": 20, "bagging_fraction": 0.8, "bagging_freq": 1,
+                  "feature_fraction": 0.8, "seed": s.get("seed", 37), "num_threads": 1, "verbose": -1}
         group = feats.groupby("u", sort=True).size().to_numpy()
-        self.ranker.fit(feats[FEATURES], cand.label.to_numpy(), group=group)
+        train = lgb.Dataset(feats[FEATURES], label=cand.label.to_numpy(), group=group)
+        self.ranker = lgb.train(params, train, num_boost_round=s.get("trees", 300))
         self.train_rows, self.train_customers = len(feats), len(group)
         self.train_positives = int(cand.label.sum())
-        gain = self.ranker.booster_.feature_importance("gain")
+        gain = self.ranker.feature_importance("gain")
         self.importance = sorted(zip(FEATURES, gain / gain.sum()), key=lambda x: -x[1])
         self.stage = Stage(self.period)
         self.fit_seconds = time.perf_counter() - t0
