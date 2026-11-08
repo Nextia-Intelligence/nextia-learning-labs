@@ -1,0 +1,4 @@
+{
+  "popular_validation_quick_recall10": 0.1034,
+  "note": "recs check compares popular on the validation period (quick sample) with this value"
+}
