@@ -1,0 +1,24 @@
+[project]
+name = "larkvision"
+version = "1.0.0"
+description = "Larkfield's image tools: compare vision methods on the same photos, and inspect returned items with a review folder."
+requires-python = ">=3.12"
+license = "MIT"
+
+[project.scripts]
+vision = "larkvision.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["larkvision*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore:Using `httpx` with"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+ignore = ["B008", "B905"]  # FastAPI uses File(...) in defaults; zip() on lists of the same length
