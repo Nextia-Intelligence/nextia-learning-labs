@@ -72,22 +72,26 @@ def _numbers_en(tokens: list[str]) -> list[str]:
         t = tokens[i]
         if t in EN_TENS:
             v = EN_TENS[t]
-            if i + 1 < len(tokens) and tokens[i + 1] in EN_UNITS[1:10]:
-                v += EN_UNITS.index(tokens[i + 1])
+            nxt = tokens[i + 1] if i + 1 < len(tokens) else ""
+            if nxt in EN_UNITS[1:10]:
+                v += EN_UNITS.index(nxt)
                 i += 1
+            elif EN_ORDINALS.get(nxt, 99) < 10:  # twenty first -> 21 (an ordinal)
+                out.append("#" + str(v + EN_ORDINALS[nxt]))
+                i += 2
+                continue
             out.append(str(v))
         elif t in EN_UNITS:
             out.append(str(EN_UNITS.index(t)))
-        elif t in EN_ORDINALS:
-            out.append(str(EN_ORDINALS[t]))
+        elif t in EN_ORDINALS:  # "#": an ordinal is never joined to the digits around it
+            out.append("#" + str(EN_ORDINALS[t]))
         elif t.endswith("ieth") and t[:-4] + "y" in EN_TENS:
-            out.append(str(EN_TENS[t[:-4] + "y"]))
+            out.append("#" + str(EN_TENS[t[:-4] + "y"]))
         elif re.fullmatch(r"\d+(st|nd|rd|th)", t):
-            out.append(re.sub(r"\D", "", t))
+            out.append("#" + re.sub(r"\D", "", t))
         else:
             out.append(t)
         i += 1
-    # twenty first -> 21 (a ten followed by an ordinal unit)
     return out
 
 
@@ -124,7 +128,7 @@ def _numbers_fr(tokens: list[str]) -> list[str]:
         elif t in ("un", "une") and (_isdig(out[-1:]) or _isdig([nxt]) or nxt in FR_UNITS or nxt in FR_TENS):
             out.append("1")
         elif t == "premier" and out[-1:] == ["le"]:
-            out.append("1")
+            out.append("#1")
         else:
             out.append(t)
         i += 1
@@ -167,7 +171,7 @@ def normalise(text: str, level: str = "full", language: str = "en") -> str:
             joined[-1] += t
         else:
             joined.append(t)
-    return " ".join(joined)
+    return " ".join(t.lstrip("#") for t in joined)
 
 
 # ---------------------------------------------------------------- alignment and error rates
