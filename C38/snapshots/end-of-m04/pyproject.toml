@@ -1,0 +1,26 @@
+[project]
+name = "larkfield-search"
+version = "1.0.0"
+description = "Larkfield's product search: the project of the Search and Ranking course"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+
+[project.scripts]
+search = "larkfield_search.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["larkfield_search*"]
+
+[tool.setuptools.package-data]
+larkfield_search = ["static/*.html"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
