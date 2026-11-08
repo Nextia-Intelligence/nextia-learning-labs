@@ -1,0 +1,16 @@
+{
+ "model": "ibm-granite/granite-embedding-97m-multilingual-r2",
+ "revision": "835ad14087e140460703cf0fae09f97d469d65c2",
+ "licence": "Apache-2.0",
+ "dimensions": 384,
+ "max_tokens": 128,
+ "normalised": true,
+ "dtype": "float16",
+ "product_text": "title. first product class. first 40 words of the description",
+ "products": 42994,
+ "queries": 480,
+ "product_seconds": 156.8,
+ "products_per_second": 274.1,
+ "threads": 4,
+ "torch": "2.15.0"
+}

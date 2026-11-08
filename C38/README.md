@@ -7,9 +7,10 @@ Materials for the course *Search and Ranking: Find the Best Match* on
 
 | Folder or file | What it is |
 |---|---|
-| `notebooks/` | One folder per lesson: the learner notebook and its solution. Open them in Colab, Kaggle or VS Code. |
+| `M01-L03-…` to `M09-L03-…` | One folder per lesson: the learner notebook and its solution. Open them in Colab, Kaggle or VS Code. The case-study folders also have their own `data/` and `dataset.md`. |
 | `data/` | The Larkfield catalogue, the queries with their judgments, the synthetic query log, embeddings and recorded model answers, with a dataset card and checksums. |
 | `compare.py` | The ranking measures and the comparison table: every lesson scores a search the same way. |
+| `final/` | The final assignment's new season: new products and new queries, without judgments. |
 | `snapshots/` | The course project `larkfield-search` (the `search` command) at the start and at the end of each module. |
 
 Every notebook downloads what it needs by itself. To work on your own computer, use Python 3.12, open a snapshot
