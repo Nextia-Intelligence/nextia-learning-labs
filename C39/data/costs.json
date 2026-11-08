@@ -1,0 +1,16 @@
+{
+ "false_merge_dollars": 150,
+ "false_merge_note": "a stranger sees another customer's orders and address: support time, an apology credit and a privacy report (assumption)",
+ "missed_match_dollars_per_year": 3,
+ "missed_match_note": "double marketing emails and a double printed catalogue, loyalty points split over two accounts (assumption)",
+ "review_pairs_per_day": 300,
+ "review_minutes_per_pair": 1.2,
+ "reviewer_dollars_per_hour": 40,
+ "cpu_usd_per_hour": 0.17,
+ "cpu_note": "a CPU server with 4 vCPUs and 16 GB on demand (the course family's price; check the provider's page)",
+ "llm_usd_per_million_tokens": {
+  "input": 0.1,
+  "output": 0.5
+ },
+ "llm_note": "Azure chat-small, Global Standard price used by the course family (check the provider's page)"
+}
