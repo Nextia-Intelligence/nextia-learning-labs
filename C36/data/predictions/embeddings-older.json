@@ -1,0 +1,9 @@
+{
+  "method": "embeddings MiniLM-L12 multilingual (2021) + logistic regression",
+  "label": "measured",
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@e8f8c21122 (Apache-2.0) + logistic regression C=30",
+  "ms_per_message": 6.757,
+  "run_per_1000": 0.0001,
+  "messages": 4000,
+  "notes": "Embeddings measured on a laptop CPU (Apple M4, 4 threads); time per message one at a time."
+}

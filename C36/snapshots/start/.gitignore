@@ -1,0 +1,9 @@
+data/
+models/
+runs/
+queue/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/

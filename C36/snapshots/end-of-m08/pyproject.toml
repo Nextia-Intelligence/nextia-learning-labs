@@ -1,0 +1,24 @@
+[project]
+name = "larkroute"
+version = "1.0.0"
+description = "Larkfield's message router: route each support message to the right team, with a confidence, and send unsure messages to a person."
+requires-python = ">=3.12"
+license = "MIT"
+
+[project.scripts]
+route = "larkroute.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["larkroute*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# FastAPI's test client still uses httpx; its newer name (httpx2) changes nothing for these tests.
+filterwarnings = ["ignore:Using `httpx` with"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]

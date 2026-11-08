@@ -1,0 +1,42 @@
+{
+ "noise": "_background_noise_/doing_the_dishes.wav (last 20%, gain 0.5)",
+ "seconds": 19.04,
+ "words": [
+  {
+   "start": 2.0,
+   "end": 3.0,
+   "word": "yes",
+   "file": "yes/b97c9f77_nohash_3.wav"
+  },
+  {
+   "start": 5.0,
+   "end": 6.0,
+   "word": "bed",
+   "file": "bed/c22d3f18_nohash_0.wav"
+  },
+  {
+   "start": 8.0,
+   "end": 9.0,
+   "word": "stop",
+   "file": "stop/d962e5ac_nohash_3.wav"
+  },
+  {
+   "start": 11.0,
+   "end": 12.0,
+   "word": "go",
+   "file": "go/44260689_nohash_0.wav"
+  },
+  {
+   "start": 14.0,
+   "end": 15.0,
+   "word": "seven",
+   "file": "seven/e9901cf0_nohash_0.wav"
+  },
+  {
+   "start": 16.5,
+   "end": 17.5,
+   "word": "off",
+   "file": "off/ffa76c4a_nohash_2.wav"
+  }
+ ]
+}

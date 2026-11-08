@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Larkfield test phone</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 420px; margin: 24px auto; padding: 0 16px; color: #1d1d1f; }
+  h1 { font-size: 1.3rem; }
+  #log { border: 1px solid #ccc; border-radius: 8px; padding: 8px; height: 220px; overflow-y: auto; font-size: .9rem; }
+  .ivr { color: #0b5394; } .you { color: #38761d; } .sys { color: #666; font-style: italic; }
+  .keys { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0; }
+  button { font-size: 1.2rem; padding: 12px; border-radius: 8px; border: 1px solid #999; background: #f6f6f6; }
+  button:focus-visible { outline: 3px solid #0b5394; }
+  #call { background: #d9ead3; } #hang { background: #f4cccc; }
+</style>
+</head>
+<body>
+<h1>Larkfield test phone</h1>
+<p>Press <b>Call</b>, allow the microphone, and talk to the IVR. Use the keypad for keypad tones. The audio is
+changed to 8 kHz, like a phone line. Nothing leaves this computer.</p>
+<p><button id="call">Call</button> <button id="hang" disabled>Hang up</button></p>
+<div class="keys" id="keys"></div>
+<div id="log" aria-live="polite"></div>
+<script>
+const log = (cls, text) => { const p = document.createElement('p'); p.className = cls; p.textContent = text;
+  const l = document.getElementById('log'); l.appendChild(p); l.scrollTop = l.scrollHeight; };
+let ws, ctx, src, node, stream, playing = 0;
+for (const k of ['1','2','3','4','5','6','7','8','9','*','0','#']) {
+  const b = document.createElement('button'); b.textContent = k; b.disabled = true;
+  b.onclick = () => { if (ws && ws.readyState === 1) { ws.send(JSON.stringify({type: 'dtmf', key: k})); log('you', 'key ' + k); } };
+  document.getElementById('keys').appendChild(b);
+}
+function play(bytes) {
+  const pcm = new Int16Array(bytes); const buf = ctx.createBuffer(1, pcm.length, 8000);
+  const ch = buf.getChannelData(0); for (let i = 0; i < pcm.length; i++) ch[i] = pcm[i] / 32768;
+  const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); playing++;
+  s.onended = () => { playing--; if (!playing && ws && ws.readyState === 1) ws.send(JSON.stringify({type: 'ready'})); };
+  s.start();
+}
+document.getElementById('call').onclick = async () => {
+  stream = await navigator.mediaDevices.getUserMedia({audio: {echoCancellation: true, noiseSuppression: false}});
+  ctx = new AudioContext(); src = ctx.createMediaStreamSource(stream);
+  node = ctx.createScriptProcessor(4096, 1, 1); src.connect(node); node.connect(ctx.destination);
+  const ratio = ctx.sampleRate / 8000; let carry = [];
+  node.onaudioprocess = (e) => {
+    e.outputBuffer.getChannelData(0).fill(0);
+    if (!ws || ws.readyState !== 1 || playing) return;
+    const x = e.inputBuffer.getChannelData(0); const out = [];
+    for (let t = 0; t < x.length; t += ratio) out.push(x[Math.floor(t)]);   // simple downsampling to 8 kHz
+    carry = carry.concat(out);
+    while (carry.length >= 160) { const f = carry.splice(0, 160);
+      ws.send(Int16Array.from(f, v => Math.max(-1, Math.min(1, v)) * 32767).buffer); }
+  };
+  ws = new WebSocket((location.protocol === 'https:' ? 'wss://' : 'ws://') + location.host + '/call');
+  ws.binaryType = 'arraybuffer';
+  ws.onmessage = (m) => {
+    if (typeof m.data !== 'string') { play(m.data); return; }
+    const msg = JSON.parse(m.data);
+    if (msg.type === 'say') log('ivr', 'IVR: ' + msg.text);
+    if (msg.type === 'end') { log('sys', 'Call ended: ' + msg.record.outcome + (msg.record.handoff_reason ? ' (' + msg.record.handoff_reason + ')' : '')); }
+  };
+  ws.onclose = () => { log('sys', 'Line closed.'); hang(); };
+  document.getElementById('call').disabled = true; document.getElementById('hang').disabled = false;
+  document.querySelectorAll('#keys button').forEach(b => b.disabled = false);
+};
+function hang() {
+  if (ws && ws.readyState === 1) { ws.send(JSON.stringify({type: 'hangup'})); ws.close(); }
+  if (stream) stream.getTracks().forEach(t => t.stop());
+  if (ctx) ctx.close(); ws = null; ctx = null;
+  document.getElementById('call').disabled = false; document.getElementById('hang').disabled = true;
+  document.querySelectorAll('#keys button').forEach(b => b.disabled = true);
+}
+document.getElementById('hang').onclick = hang;
+</script>
+</body>
+</html>
