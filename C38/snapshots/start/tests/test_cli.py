@@ -1,3 +1,5 @@
+import pytest
+
 from larkfield_search.cli import main
 
 
@@ -15,7 +17,8 @@ def test_eval_and_list(capsys):
     out = capsys.readouterr().out
     assert "current on 4 test queries" in out
     main(["eval", "--list"])
-    assert "bm25" in capsys.readouterr().out
+    listed = capsys.readouterr().out
+    assert "bm25" in listed and " M01 " not in listed  # no course codes for learners
 
 
 def test_log_and_reset(capsys):
@@ -24,3 +27,12 @@ def test_log_and_reset(capsys):
     assert "5 searches (synthetic)" in out
     main(["reset"])
     assert "all files are right" in capsys.readouterr().out
+
+
+def test_help(capsys):
+    # A help text with "95% interval" once crashed `search --help`.
+    for argv in (["--help"], ["eval", "--help"]):
+        with pytest.raises(SystemExit):
+            main(argv)
+    out = capsys.readouterr().out
+    assert "95%" in out and "%%" not in out

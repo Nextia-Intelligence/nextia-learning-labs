@@ -15,10 +15,15 @@ def price_band(price):
     return PRICE_BANDS[-1][2]
 
 
+def main_colour(colour):
+    """The first colour of a value such as "blue/red": the facet counts it and the filter matches it."""
+    return str(colour).split("/")[0].strip()
+
+
 def facets(product_ids, top=6):
     """{facet: [(value, count)]} for the products of a result list; only values that the results have."""
     cat = data.catalogue().set_index("product_id").loc[list(product_ids)]
-    colour = cat["colour"].str.split("/").str[0].str.strip().replace("", pd.NA).dropna()
+    colour = cat["colour"].map(main_colour).replace("", pd.NA).dropna()
     return {
         "product class": list(cat["product_class"].value_counts().head(top).items()),
         "colour": list(colour.value_counts().head(top).items()),
@@ -36,7 +41,7 @@ def apply(product_ids, **filters):
         r = cat.loc[p]
         if "product_class" in filters and r["product_class"] != filters["product_class"]:
             continue
-        if "colour" in filters and not r["colour"].startswith(filters["colour"]):
+        if "colour" in filters and main_colour(r["colour"]) != filters["colour"]:
             continue
         if "price" in filters and price_band(r["price"]) != filters["price"]:
             continue

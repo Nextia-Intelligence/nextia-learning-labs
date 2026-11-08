@@ -26,6 +26,7 @@
   .s { color: var(--muted); font-size: 14px; }
   .tag { font-size: 12px; padding: 1px 6px; border-radius: 4px; border: 1px solid var(--line); margin-left: 6px; }
   .out { color: var(--warn); }
+  .note { border-left: 3px solid var(--warn); padding: 6px 10px; margin: 0 0 12px; }
 </style>
 </head>
 <body>
@@ -37,6 +38,7 @@
     <ul class="sug" id="sug" hidden></ul>
   </div>
   <p class="meta" id="meta"></p>
+  <p class="note" id="note" hidden></p>
   <div class="grid">
     <aside id="facets"></aside>
     <ol id="results"></ol>
@@ -56,10 +58,12 @@ q.addEventListener('input', () => {
   }, 120);
 });
 sug.addEventListener('click', (e) => { if (e.target.tagName === 'LI') { q.value = e.target.textContent; sug.hidden = true; search(); } });
-q.addEventListener('keydown', (e) => { if (e.key === 'Enter') { sug.hidden = true; search(); } });
+q.addEventListener('keydown', (e) => { if (e.key === 'Enter') { clearTimeout(timer); sug.hidden = true; search(); } });
 async function search() {
   const r = await (await fetch('/api/search?q=' + encodeURIComponent(q.value))).json();
   document.getElementById('meta').textContent = `${r.results.length} results shown, run ${r.run}, ${r.ms} ms`;
+  const note = document.getElementById('note');
+  note.textContent = r.note; note.hidden = !r.note;
   document.getElementById('results').innerHTML = r.results.map((x) =>
     `<li class="r"><div class="t">${esc(x.title)}</div><div class="s">${esc(x.product_id)} · ${esc(x.product_class)} · ${x.price.toFixed(2)} dollars` +
     (x.on_sale ? '<span class="tag">sale</span>' : '') + (x.in_stock ? '' : '<span class="tag out">out of stock</span>') + '</div></li>').join('');

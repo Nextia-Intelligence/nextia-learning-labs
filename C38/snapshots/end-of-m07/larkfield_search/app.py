@@ -3,7 +3,7 @@
     search serve --port 8038 --run ltr      then open http://127.0.0.1:8038/
 
 GET /                   the page (static/search.html)
-GET /api/search?q=...   {"run", "query", "ms", "results": [...], "facets": {...}}
+GET /api/search?q=...   {"run", "query", "ms", "note", "results": [...], "facets": {...}}
 GET /api/suggest?q=...  {"suggestions": [...]}
 GET /health             {"status": "ok", "products": n}
 """
@@ -14,14 +14,22 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 
-from . import data, facets, runs, suggest
+from . import business, data, facets, runs, suggest
 
 PAGE = Path(__file__).resolve().parent / "static" / "search.html"
+NOTES = {"any word": "No product has every word of your search. These products have some of the words.",
+         "by meaning": "No product has any word of your search. These products are close in meaning."}
 
 
 def search_json(q, run, k=20):
     t0 = time.perf_counter()
-    res = runs.get(run)(q, None, 100) if q.strip() else []
+    how = "all words"
+    if not q.strip():
+        res = []
+    elif run == "current+fallback":  # say which step answered, so the page can tell the person
+        res, how = business.fallback(q, None, 100)
+    else:
+        res = runs.get(run)(q, None, 100)
     ms = (time.perf_counter() - t0) * 1000
     cat = data.catalogue().set_index("product_id")
     items = []
@@ -30,7 +38,7 @@ def search_json(q, run, k=20):
         items.append({"product_id": pid, "title": r["title"], "product_class": r["product_class"],
                       "price": float(r["price"]), "in_stock": bool(r["in_stock"]), "on_sale": bool(r["on_sale"]),
                       "score": round(float(score), 4)})
-    return {"run": run, "query": q, "ms": round(ms, 1), "results": items,
+    return {"run": run, "query": q, "ms": round(ms, 1), "note": NOTES.get(how, ""), "results": items,
             "facets": facets.facets([p for p, _ in res]) if res else {}}
 
 

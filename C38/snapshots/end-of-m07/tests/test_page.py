@@ -5,6 +5,7 @@ def test_suggest_prefix():
     s = [t for t, _ in suggest.suggest("gar")]
     assert s[0] == "garden hose"
     assert "outdor cushion" not in [t for t, _ in suggest.suggest("out")]
+    assert all(t for t, _ in suggest.suggestions())  # no empty suggestion
 
 
 def test_facets_never_zero():
@@ -12,6 +13,9 @@ def test_facets_never_zero():
     assert dict(f["product class"])["Furniture Cushions"] == 2
     assert all(n > 0 for _, n in f["price"])
     assert facets.apply(["LK-10001", "LK-10002"], in_stock=True) == ["LK-10001"]
+    ids = ["LK-10001", "LK-10002", "LK-10007"]
+    for value, n in facets.facets(ids)["colour"]:  # the count and the filter use the same rule
+        assert len(facets.apply(ids, colour=value)) == n
 
 
 def test_business_rules():
@@ -33,4 +37,5 @@ def test_fallback_never_empty(monkeypatch):
 
 def test_page_json():
     j = app.search_json("garden hose", "bm25")
-    assert j["results"][0]["product_id"] == "LK-10003" and "price" in j["facets"]
+    assert j["results"][0]["product_id"] == "LK-10003" and "price" in j["facets"] and j["note"] == ""
+    assert app.search_json("zebra garden", "current+fallback")["note"].startswith("No product has every word")

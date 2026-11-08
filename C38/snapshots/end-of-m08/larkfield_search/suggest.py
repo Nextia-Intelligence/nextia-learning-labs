@@ -32,7 +32,8 @@ def suggestions():
             continue
         w[q] += n
     for cls, n in data.catalogue()["product_class"].value_counts().items():
-        w[fold(cls)] += max(1, n // 20)
+        if fold(cls).strip():  # products with no class have an empty class name: never a suggestion
+            w[fold(cls).strip()] += max(1, n // 20)
     items = sorted(w.items())
     path.write_text(json.dumps(items))
     return items

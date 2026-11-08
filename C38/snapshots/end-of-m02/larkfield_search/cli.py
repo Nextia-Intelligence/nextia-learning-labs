@@ -14,7 +14,8 @@ def main(argv=None):
     for m in sorted(pkgutil.iter_modules(commands.__path__), key=lambda m: m.name):
         mod = importlib.import_module(f"{commands.__name__}.{m.name}")
         for cmd in getattr(mod, "COMMANDS", [mod]):
-            p = sub.add_parser(cmd.NAME, help=cmd.HELP, description=cmd.HELP)
+            # argparse formats a subcommand's help with %, so "95% interval" is written "95%% interval" there.
+            p = sub.add_parser(cmd.NAME, help=cmd.HELP.replace("%", "%%"), description=cmd.HELP)
             cmd.add(p)
             found[cmd.NAME] = cmd
     args = parser.parse_args(argv)

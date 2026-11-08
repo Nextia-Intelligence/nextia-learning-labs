@@ -26,7 +26,7 @@ def report(name, split, pq, ms):
 def run(args):
     if args.list:
         for name, r in sorted(runs.load().items(), key=lambda kv: (kv[1]["module"], kv[0])):
-            print(f"{name:<24} {r['module']}  {r['about']}")
+            print(f"{name:<24} {r['about']}")
         return
     settings.parse(args.set)
     pq, ms = engine.evaluate(args.run, args.split)
