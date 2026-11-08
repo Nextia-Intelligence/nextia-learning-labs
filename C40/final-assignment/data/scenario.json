@@ -1,0 +1,24 @@
+{
+  "about": "The 'complete the look' block on product pages: an A/B test by customer, 28 days from 2025-11-03, the soft-launch logs of the four weeks before, and next month's customers.",
+  "test": {
+    "unit": "customer",
+    "split": 0.5,
+    "start": "2025-11-03",
+    "days": 28,
+    "variants": {
+      "A": "today's product page",
+      "B": "with the 'complete the look' block"
+    },
+    "covariate": "pre_spend (spending in the 8 weeks before the test)"
+  },
+  "soft_launch": {
+    "treatment": "turned_on_new_look (an opt-in toggle; not random)",
+    "outcome": "revenue",
+    "days": 28
+  },
+  "targeting": {
+    "budget": 15000,
+    "list": "next_month_customers.csv"
+  },
+  "data": "Synthetic: made by the course simulator. There are no real people."
+}

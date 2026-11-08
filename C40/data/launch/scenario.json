@@ -1,0 +1,15 @@
+{
+  "scenario": "launch",
+  "seed": 40,
+  "about": "Daily orders and sales around the recommendation block's launch (6 October 2025): no test, one series",
+  "unit": "day",
+  "start": "2024-09-02",
+  "end": "2025-11-02",
+  "events": {
+    "launch": "2025-10-06",
+    "thanksgiving": "2025-10-13",
+    "sale": "2025-10-09 to 2025-10-19"
+  },
+  "note": "counterfactual.csv is the simulator's truth: the same days without the block.",
+  "data": "Synthetic: made by the course simulator."
+}

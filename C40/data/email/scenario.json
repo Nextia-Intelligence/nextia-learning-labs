@@ -1,0 +1,20 @@
+{
+  "scenario": "email",
+  "seed": 40,
+  "about": "A reminder email to customers who have not ordered for 30 days: an A/B test by customer, 14 days",
+  "unit": "customer",
+  "days": 14,
+  "start": "2025-09-15",
+  "end": "2025-09-28",
+  "variants": {
+    "A": "no email",
+    "B": "the reminder email"
+  },
+  "primary_metric": "ordered",
+  "split": 0.5,
+  "guardrails": [
+    "unsubscribed"
+  ],
+  "note": "targets.csv is next month's list (no outcomes); truth_targets.csv is the simulator's truth.",
+  "data": "Synthetic: made by the course simulator."
+}

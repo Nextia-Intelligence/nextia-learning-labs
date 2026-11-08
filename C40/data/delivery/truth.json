@@ -1,0 +1,31 @@
+{
+  "customers": 110759,
+  "revenue": {
+    "control_world": 25.2144,
+    "treated_world": 25.9124,
+    "effect": 0.6979,
+    "relative": 0.0277,
+    "unit": "dollars per customer"
+  },
+  "orders": {
+    "control_world": 0.29552,
+    "treated_world": 0.30852,
+    "effect": 0.013,
+    "relative": 0.044,
+    "unit": "orders per customer"
+  },
+  "converted": {
+    "control_world": 0.21646,
+    "treated_world": 0.22395,
+    "effect": 0.00748,
+    "relative": 0.0346,
+    "unit": "share of customers with an order"
+  },
+  "return_rate": {
+    "control_world": 0.08411,
+    "treated_world": 0.09584,
+    "effect": 0.01173,
+    "relative": 0.1395,
+    "unit": "returns per order"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scenario": "logs",
+  "seed": 40,
+  "about": "28 days of logs after the recommendation block's launch: who used it and what they spent (no test)",
+  "unit": "customer",
+  "days": 28,
+  "start": "2025-10-06",
+  "end": "2025-11-02",
+  "treatment": "used_block (clicked a product in the block at least once)",
+  "outcome": "revenue",
+  "columns": {
+    "pages_viewed": "pages seen in the 28 days (the block adds pages: a mediator)",
+    "left_review": "wrote a product review (caused by both the block and spending: a collider)",
+    "pre_spend": "spending in the 8 weeks before the launch"
+  },
+  "data": "Synthetic: made by the course simulator."
+}
