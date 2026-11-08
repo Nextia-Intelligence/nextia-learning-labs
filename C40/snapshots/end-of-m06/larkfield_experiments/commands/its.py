@@ -32,7 +32,7 @@ def run(args):
     m = smf.ols(f"log_orders ~ post + {terms}", data=d).fit(cov_type="HAC", cov_kwds={"maxlags": 7})
     b, se = m.params["post"], m.bse["post"]
     est, low, high = np.expm1(b), np.expm1(b - 1.96 * se), np.expm1(b + 1.96 * se)
-    model = "trend and weekday only" if args.simple else "trend, weekday, yearly season, holiday windows and the sale"
+    model = "trend and weekday only" if args.simple else "trend, weekday, holiday windows and the sale"
     print(f"Interrupted time series ({model}), {len(d)} days ({args.before} weeks before, {args.weeks} after), "
           f"launch {launch.date()}:")
     print(f"  Effect of the launch on daily orders: {est:+.1%} (95% interval {low:+.1%} to {high:+.1%}; "

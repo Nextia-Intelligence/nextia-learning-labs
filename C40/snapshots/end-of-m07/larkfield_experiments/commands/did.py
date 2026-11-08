@@ -61,4 +61,4 @@ def check(analysis, truth):
     inside = analysis["low"] <= t <= analysis["high"]
     return [f"True effect (from the simulator): {t:+.1%} on Quebec's weekly sales.",
             f"Your estimate: {analysis['estimate']:+.1%} ({analysis['low']:+.1%} to {analysis['high']:+.1%}), "
-            f"{analysis['estimate'] - t:+.1%} from the truth; the interval {'contains' if inside else 'does NOT contain'} it."]
+            f"{100 * (analysis['estimate'] - t):+.1f} percentage points from the truth; the interval {'contains' if inside else 'does NOT contain'} it."]

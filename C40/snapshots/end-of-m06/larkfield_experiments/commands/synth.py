@@ -43,5 +43,5 @@ def run(args):
 def check(analysis, truth):
     t = truth["effect"]["relative"]
     return [f"True effect (from the simulator): {t:+.1%} on Quebec's weekly sales.",
-            f"Your synthetic control: {analysis['estimate']:+.1%}, {analysis['estimate'] - t:+.1%} from the truth "
+            f"Your synthetic control: {analysis['estimate']:+.1%}, {100 * (analysis['estimate'] - t):+.1f} percentage points from the truth "
             f"(placebo p = {analysis['p']:.2f})."]
