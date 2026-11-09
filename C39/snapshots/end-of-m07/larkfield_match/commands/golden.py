@@ -32,6 +32,8 @@ def _show(eid):
     import pandas as pd
 
     from .. import data
+    if not golden.out("golden.csv").exists():
+        raise SystemExit("No golden records yet: run `match golden` first.")
     g = pd.read_csv(golden.out("golden.csv"), dtype=str, keep_default_na=False).set_index("entity_id")
     ents = golden.load_entities()
     if eid not in g.index:

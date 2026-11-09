@@ -31,7 +31,7 @@ pip install -r requirements.txt -e .
 
 ```sh
 match check
-match show S-000001
+match show G-000001
 match eval --run exact
 python -m pytest -q
 ```

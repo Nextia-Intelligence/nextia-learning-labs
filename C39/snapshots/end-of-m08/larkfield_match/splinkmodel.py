@@ -12,6 +12,7 @@ these as if they were separate evidence), and many pairs get a probability of ex
 
 import json
 import logging
+import os
 import time
 
 import duckdb
@@ -67,7 +68,6 @@ def table(df=None):
 
 def _api():
     from splink.backends.duckdb import DuckDBAPI
-    import os
     tmp = os.environ.get("LARKFIELD_DUCKDB_TEMP") or str(out("duckdb_tmp", ".keep").parent)
     con = duckdb.connect()
     con.execute(f"SET threads = {THREADS}; SET memory_limit = '{MEMORY_LIMIT}'; "
