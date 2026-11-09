@@ -23,6 +23,9 @@ from .paths import out
 COLUMNS = ["first", "last", "email", "phone", "postcode", "street", "town", "dob"]
 THREADS = 4
 MEMORY_LIMIT = "4GB"
+# DuckDB writes to disk when a step does not fit in memory. Keep those files in one folder and cap their size,
+# so a large run stops with an error instead of filling the disk.
+TEMP_LIMIT = "4GB"
 
 
 def EM_RULES():
@@ -64,8 +67,11 @@ def table(df=None):
 
 def _api():
     from splink.backends.duckdb import DuckDBAPI
+    import os
+    tmp = os.environ.get("LARKFIELD_DUCKDB_TEMP") or str(out("duckdb_tmp", ".keep").parent)
     con = duckdb.connect()
-    con.execute(f"SET threads = {THREADS}; SET memory_limit = '{MEMORY_LIMIT}'")
+    con.execute(f"SET threads = {THREADS}; SET memory_limit = '{MEMORY_LIMIT}'; "
+                f"SET temp_directory = '{tmp}'; SET max_temp_directory_size = '{TEMP_LIMIT}'")
     return DuckDBAPI(connection=con)
 
 
