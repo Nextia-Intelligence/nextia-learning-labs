@@ -1,0 +1,23 @@
+[project]
+name = "larkfield-recs"
+version = "1.0.0"
+description = "Larkfield's recommender: the project of the Recommendation and Personalisation course"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+
+[project.scripts]
+recs = "larkfield_recs.cli:main"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["larkfield_recs*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

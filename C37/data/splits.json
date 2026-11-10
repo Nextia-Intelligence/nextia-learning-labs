@@ -1,0 +1,21 @@
+{
+  "log_start": "2025-02-01",
+  "new_products_month": [
+    "2026-05-01",
+    "2026-05-31"
+  ],
+  "launch": [
+    "2026-05-01",
+    "2026-05-14"
+  ],
+  "validation": [
+    "2026-06-08",
+    "2026-06-21"
+  ],
+  "test": [
+    "2026-06-22",
+    "2026-07-05"
+  ],
+  "stock_day": "2026-06-15",
+  "note": "Train on everything before the period's first day; predict the orders of the period. Validation is for tuning; use the test period once. 'launch' replays the first two weeks of the new summer range (launched on its first day) for the cold-start lessons."
+}

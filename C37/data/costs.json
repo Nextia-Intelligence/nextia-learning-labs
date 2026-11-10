@@ -1,0 +1,10 @@
+{
+  "note": "Assumptions of the course (not measured). Say 'under these assumptions' when you use them.",
+  "return_handling_dollars": 12.0,
+  "email_subscriber_value_dollars_per_year": 18.0,
+  "cpu_server_usd_per_hour": 0.17,
+  "cpu_server": "4 vCPUs, 16 GB, on demand (the course family's example price; check the provider's page)",
+  "latency_budget_ms": 100,
+  "known_customer_recall_drop_limit": 0.02,
+  "known_customer_recall_drop_note": "Omar's limit for cold-start changes: recall@10 of known customers may fall by at most 2% of its value"
+}
