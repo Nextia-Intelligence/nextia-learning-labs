@@ -1,0 +1,10 @@
+# Larkfield's business rules (Hana, merchandising, and Rafael, email). `recs evaluate <method> --rules` applies
+# them to each list in this order; `recs rules <method>` measures what each rule changes.
+
+[rules]
+remove_out_of_stock = true      # no stock today (the stock file is from 2026-06-15; not applied before that day)
+remove_age_restricted = true    # wine and spirits: we do not know the customer's age
+remove_already_bought = true    # bought before, unless it is a product people buy again (compost, pet food ...)
+remove_sensitive = true         # health products that a shared family email could reveal
+min_margin = 0.0                # Hana: products with a lower margin are not suggested (0.12 = 12%)
+max_per_subcategory = 3         # diversity: at most this many products of one subcategory in a list

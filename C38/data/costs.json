@@ -1,0 +1,27 @@
+{
+ "lost_basket_dollars": {
+  "value": 85.0,
+  "label": "assumption",
+  "note": "average basket of a search that ends in a purchase (synthetic prices)"
+ },
+ "leave_after_zero_results": {
+  "value": 0.3,
+  "label": "assumption",
+  "note": "share of people who leave the shop after an empty results page"
+ },
+ "support_contact_dollars": {
+  "value": 6.0,
+  "label": "assumption",
+  "note": "one chat or e-mail to support about a product they could not find"
+ },
+ "cpu_server_usd_per_hour": {
+  "value": 0.17,
+  "label": "assumption",
+  "note": "a cloud server with 4 vCPUs and 16 GB, on demand (the course family's price; check your provider's page)"
+ },
+ "latency_budget_ms": {
+  "value": 200,
+  "label": "assumption",
+  "note": "Amira's budget for one search"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "model": "ibm-granite/granite-embedding-97m-multilingual-r2",
+ "revision": "835ad14087e140460703cf0fae09f97d469d65c2",
+ "max_tokens": 128,
+ "dimensions": 384,
+ "text": "title + brand + colour",
+ "normalised": true,
+ "dtype": "float16",
+ "products": 32759,
+ "queries": 1400,
+ "cross_encoder": {
+  "model": "ibm-granite/granite-embedding-reranker-english-r2",
+  "revision": "d09d3d6971b689bf9c23839e45a470874d46e13a",
+  "max_tokens": 256
+ }
+}

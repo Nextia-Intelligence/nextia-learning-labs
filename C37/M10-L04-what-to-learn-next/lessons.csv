@@ -1,0 +1,85 @@
+lesson,course,course_title,position,title,optional,prerequisites
+GIT-01,GIT,Git and the command line,1,The command line,False,
+GIT-02,GIT,Git and the command line,2,Files and folders,False,GIT-01
+GIT-03,GIT,Git and the command line,3,Your first repository,False,GIT-02
+GIT-04,GIT,Git and the command line,4,Branches,False,GIT-03
+GIT-05,GIT,Git and the command line,5,Work with others,False,GIT-04
+PY-01,PY,Python basics,1,Values and variables,False,
+PY-02,PY,Python basics,2,Lists and loops,False,PY-01
+PY-03,PY,Python basics,3,Decisions,False,PY-02
+PY-04,PY,Python basics,4,Functions,False,PY-03
+PY-05,PY,Python basics,5,Dictionaries,False,PY-04
+PY-06,PY,Python basics,6,Files,False,PY-05
+PY-07,PY,Python basics,7,Extra practice: a quiz game,True,PY-06
+PY-08,PY,Python basics,8,Modules and packages,False,PY-06
+SQL-01,SQL,SQL for analysis,1,Tables and SELECT,False,
+SQL-02,SQL,SQL for analysis,2,Filter rows,False,SQL-01
+SQL-03,SQL,SQL for analysis,3,Sort and limit,False,SQL-02
+SQL-04,SQL,SQL for analysis,4,Group and count,False,SQL-03
+SQL-05,SQL,SQL for analysis,5,Joins,False,SQL-04
+SQL-06,SQL,SQL for analysis,6,Subqueries,False,SQL-05
+SQL-07,SQL,SQL for analysis,7,Window functions,False,SQL-06
+STA-01,STA,Statistics with Python,1,Averages and spread,False,PY-04
+STA-02,STA,Statistics with Python,2,Distributions,False,STA-01
+STA-03,STA,Statistics with Python,3,Samples,False,STA-02
+STA-04,STA,Statistics with Python,4,Confidence intervals,False,STA-03
+STA-05,STA,Statistics with Python,5,Tests,False,STA-04
+STA-06,STA,Statistics with Python,6,Correlation,False,STA-05
+STA-07,STA,Statistics with Python,7,Regression,False,STA-06
+PD-01,PD,Data analysis with pandas,1,DataFrames,False,PY-08
+PD-02,PD,Data analysis with pandas,2,Select and filter,False,PD-01
+PD-03,PD,Data analysis with pandas,3,Clean data,False,PD-02
+PD-04,PD,Data analysis with pandas,4,Group and aggregate,False,PD-03
+PD-05,PD,Data analysis with pandas,5,Join tables,False,PD-04
+PD-06,PD,Data analysis with pandas,6,Extra practice: a sales report,True,PD-05
+PD-07,PD,Data analysis with pandas,7,Dates and time,False,PD-05
+PD-08,PD,Data analysis with pandas,8,A small analysis,False,PD-07
+VIZ-01,VIZ,Charts and dashboards,1,Choose a chart,False,PD-04
+VIZ-02,VIZ,Charts and dashboards,2,Bar and line charts,False,VIZ-01
+VIZ-03,VIZ,Charts and dashboards,3,Scatter plots,False,VIZ-02
+VIZ-04,VIZ,Charts and dashboards,4,Colour and labels,False,VIZ-03
+VIZ-05,VIZ,Charts and dashboards,5,A dashboard,False,VIZ-04
+VIZ-06,VIZ,Charts and dashboards,6,Tell a story,False,VIZ-05
+ML-01,ML,Machine learning,1,What a model learns,False,PD-08;STA-05
+ML-02,ML,Machine learning,2,Train and test,False,ML-01
+ML-03,ML,Machine learning,3,Linear models,False,ML-02
+ML-04,ML,Machine learning,4,Trees,False,ML-03
+ML-05,ML,Machine learning,5,Metrics,False,ML-04
+ML-06,ML,Machine learning,6,Overfitting,False,ML-05
+ML-07,ML,Machine learning,7,Features,False,ML-06
+ML-08,ML,Machine learning,8,Extra practice: house prices,True,ML-07
+ML-09,ML,Machine learning,9,A full project,False,ML-07
+DL-01,DL,Deep learning,1,Neurons and layers,False,ML-06
+DL-02,DL,Deep learning,2,Training,False,DL-01
+DL-03,DL,Deep learning,3,Images,False,DL-02
+DL-04,DL,Deep learning,4,Text,False,DL-03
+DL-05,DL,Deep learning,5,Transfer learning,False,DL-04
+DL-06,DL,Deep learning,6,Tuning,False,DL-05
+DL-07,DL,Deep learning,7,Extra practice: a classifier,True,DL-06
+DL-08,DL,Deep learning,8,Serve a model,False,DL-06
+WEB-01,WEB,How the web works,1,Requests and responses,False,
+WEB-02,WEB,How the web works,2,HTML,False,WEB-01
+WEB-03,WEB,How the web works,3,CSS,False,WEB-02
+WEB-04,WEB,How the web works,4,JavaScript,False,WEB-03
+WEB-05,WEB,How the web works,5,Extra practice: a page,True,WEB-04
+WEB-06,WEB,How the web works,6,Forms,False,WEB-04
+API-01,API,Build APIs with Python,1,What an API is,False,PY-08;WEB-04
+API-02,API,Build APIs with Python,2,Your first endpoint,False,API-01
+API-03,API,Build APIs with Python,3,Validate input,False,API-02
+API-04,API,Build APIs with Python,4,A database,False,API-03
+API-05,API,Build APIs with Python,5,Authentication,False,API-04
+API-06,API,Build APIs with Python,6,Tests,False,API-05
+API-07,API,Build APIs with Python,7,Errors and logs,False,API-06
+OPS-01,OPS,Deploy to the cloud,1,Servers and containers,False,API-05;GIT-03
+OPS-02,OPS,Deploy to the cloud,2,Your first deployment,False,OPS-01
+OPS-03,OPS,Deploy to the cloud,3,Configuration,False,OPS-02
+OPS-04,OPS,Deploy to the cloud,4,Logs,False,OPS-03
+OPS-05,OPS,Deploy to the cloud,5,Scale,False,OPS-04
+OPS-06,OPS,Deploy to the cloud,6,Costs,False,OPS-05
+LLM-01,LLM,Build apps with language models,1,What a language model does,False,API-04
+LLM-02,LLM,Build apps with language models,2,Your first call,False,LLM-01
+LLM-03,LLM,Build apps with language models,3,Prompts,False,LLM-02
+LLM-04,LLM,Build apps with language models,4,Structured output,False,LLM-03
+LLM-05,LLM,Build apps with language models,5,Tools,False,LLM-04
+LLM-06,LLM,Build apps with language models,6,Retrieval,False,LLM-05
+LLM-07,LLM,Build apps with language models,7,Evaluate an app,False,LLM-06
