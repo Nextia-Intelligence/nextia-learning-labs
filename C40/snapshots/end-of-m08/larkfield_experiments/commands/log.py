@@ -19,12 +19,34 @@ def add(p):
     p.add_argument("--plan", default="", help="the test plan file written before the test")
 
 
+def effect(run_) -> dict:
+    """The run's last effect estimate. If the last analysis has none (xp srm) or there is none (only xp report),
+    the primary metric's difference, computed now as xp report does."""
+    if (run_.folder / "analysis.json").exists() and "difference" in run_.analysis():
+        return run_.analysis()
+    from .report import units
+
+    df, est = units(run_)
+    metric = run_.meta.get("primary_metric")
+    print(f"The last analysis of {run_.folder.name} has no effect: logging the primary metric, {metric}.")
+    return {"metric": metric, **est(df, metric)}
+
+
+def is_ship(decision: str) -> bool:
+    """'ship', 'Ship B' and 'shipped' count as shipped; 'do not ship' and 'keep A' do not."""
+    d = " ".join(decision.lower().split())
+    return d.startswith("ship") and not d.startswith("ship nothing")
+
+
 def run(args):
     if args.action == "add":
         if not args.decision:
             raise SystemExit("Give the decision: --decision ship|keep|'no clear effect'|'do not use'")
+        if args.plan and not Path(args.plan).exists():
+            raise SystemExit(f"No plan file {args.plan}. Give the plan written before the test, or leave out --plan "
+                             "to log the test without one.")
         run_ = load_run(args.run)
-        a = run_.analysis()
+        a = effect(run_)
         new = not FILE.exists()
         with FILE.open("a", newline="") as f:
             w = csv.DictWriter(f, COLUMNS)
@@ -47,7 +69,7 @@ def run(args):
                   f"({num(r['low'])} to {num(r['high'])}) plan: {r['plan'] or 'NONE'}")
         return
     n = len(rows)
-    ship = sum(r["decision"] == "ship" for r in rows)
+    ship = sum(is_ship(r["decision"]) for r in rows)
     no_plan = sum(not r["plan"] for r in rows)
     print(f"{n} tests: {ship} shipped ({ship / n:.0%}), {no_plan} without a written plan.")
     print("Most changes do not win: a team that ships most of its tests may be shipping noise.")

@@ -50,8 +50,8 @@ def check(analysis, truth):
     got = float(tt.loc[chosen].sum())
     rand = float(tt.mean() * len(chosen))
     harmed = int((tt.loc[chosen] < 0).sum())
+    best = float(tt.sort_values().iloc[-len(chosen):].sum())  # the budget's best list, from the true chances
     return [f"Your {len(chosen):,} customers: {got:+.0f} extra orders expected (from the simulator's true chances).",
-            f"  Random {len(chosen):,}: {rand:+.0f}. The best possible {len(chosen):,}: {truth['targets']['best_10000']:+.0f} "
-            f"(for a budget of 10,000). Emailing all {truth['targets']['customers']:,}: "
-            f"{truth['targets']['expected_extra_orders_all']:+.0f}.",
+            f"  Random {len(chosen):,}: {rand:+.0f}. The best possible {len(chosen):,}: {best:+.0f}. "
+            f"Emailing all {truth['targets']['customers']:,}: {truth['targets']['expected_extra_orders_all']:+.0f}.",
             f"  {harmed:,} of your customers order less because of the email (do-not-disturbs)."]

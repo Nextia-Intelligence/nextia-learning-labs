@@ -26,4 +26,5 @@ def test_t_learner_beats_random_targeting(make_run, capsys):
     mine = float(out.split("Your 10,000 customers: ")[1].split()[0])
     rand = float(out.split("Random 10,000: ")[1].split(".")[0])
     assert mine > 3 * rand
+    assert "for a budget" not in out
     assert load_run("email").analysis()["qini"] > 0

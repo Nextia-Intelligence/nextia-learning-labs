@@ -36,3 +36,13 @@ def test_its_beats_the_naive_answer(make_run):
     xp_cli.main(["its"])
     a = load_run("launch").analysis()
     assert a["low"] <= 0.02 <= a["high"]
+
+
+def test_its_refuses_weeks_beyond_the_data(make_run):
+    make_run("launch")
+    try:
+        xp_cli.main(["its", "--weeks", "8"])
+    except SystemExit as e:
+        assert "4 full weeks after the launch" in str(e)
+    else:
+        raise AssertionError("xp its --weeks 8 should stop: the run has 4 weeks after the launch")

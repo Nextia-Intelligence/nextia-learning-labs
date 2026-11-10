@@ -68,3 +68,23 @@ def test_reset_deletes_runs(make_run, runs_in_tmp):
     make_run("email", customers=1_000)
     xp_cli.main(["reset", "--yes"])
     assert not (runs_in_tmp / "runs").exists()
+
+
+def test_check_follows_the_analysed_run(make_run, capsys):
+    make_run("email", customers=3_000)
+    xp_cli.main(["analyse"])
+    make_run("logs", customers=3_000)
+    xp_cli.main(["check"])
+    assert "Run email-s40: the last analysis was `xp analyse`." in capsys.readouterr().out
+
+
+def test_check_without_truth_says_so(make_run, capsys):
+    folder = make_run("logs", customers=3_000)
+    xp_cli.main(["naive"])
+    (folder / "truth.json").write_text("{}\n")
+    try:
+        xp_cli.main(["check"])
+    except SystemExit as e:
+        assert str(e).startswith("No truth for this run")
+    else:
+        raise AssertionError("xp check should stop when the run has no truth")

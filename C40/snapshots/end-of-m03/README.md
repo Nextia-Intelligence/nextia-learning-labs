@@ -41,7 +41,7 @@ xp check
 | `sim about email` | what a scenario simulates, and its planted problem if it has one |
 | `xp analyse` | the difference B − A of the last run, its 95% interval and p-value (--metric) |
 | `xp naive launch` | the naive answers to distrust: before against after, users against non-users |
-| `xp check` | compare your last analysis with the true effect that the simulator knows |
+| `xp check` | compare your last analysis with the true effect that the simulator knows (xp check RUN for another run) |
 | `xp reset` | delete all runs and start again |
 | `xp power --baseline 0.09 --mde 0.01 --per-day 4000` | sample size, power and duration (--simulate 200 checks the formula by simulation) |
 | `xp plan new reminder-email` | write a test plan before the test; xp plan check FILE checks it |

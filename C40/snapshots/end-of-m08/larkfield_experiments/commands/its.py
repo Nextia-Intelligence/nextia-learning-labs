@@ -27,6 +27,11 @@ def run(args):
     d["t"] = (dates - dates.min()).dt.days
     d["post"] = (dates >= launch).astype(int)
     d["log_orders"] = np.log(d["orders"])
+    after, before = (dates.max() - launch).days + 1, (launch - dates.min()).days
+    for flag, asked, have in (("--weeks", args.weeks, after // 7), ("--before", args.before, before // 7)):
+        if not 1 <= asked <= have:
+            raise SystemExit(f"{flag} {asked}: the run {run_.folder.name} has {have} full weeks "
+                             f"{'after' if flag == '--weeks' else 'before'} the launch. Use 1 to {have}.")
     d = d[(dates >= launch - pd.Timedelta(weeks=args.before)) & (dates < launch + pd.Timedelta(weeks=args.weeks))]
     terms = "t + C(weekday)" if args.simple else "t + C(weekday) + holiday_window + sale"
     m = smf.ols(f"log_orders ~ post + {terms}", data=d).fit(cov_type="HAC", cov_kwds={"maxlags": 7})

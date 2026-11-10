@@ -36,9 +36,39 @@ def test_report_decisions():
     assert decide({"low": 0.1, "high": 0.5}, {"returns": {"low": 0.01}})[0] == "Discuss before shipping"
 
 
-def test_log_add_and_stats(make_run, capsys):
+def test_log_add_and_stats(make_run, capsys, runs_in_tmp):
+    (runs_in_tmp / "plans").mkdir()
+    (runs_in_tmp / "plans" / "email.md").write_text("# Test plan: email\n")
     make_run("email", customers=5_000)
     xp_cli.main(["analyse"])
     xp_cli.main(["log", "add", "--decision", "ship", "--plan", "plans/email.md"])
+    xp_cli.main(["srm"])
+    xp_cli.main(["log", "add", "--decision", "Ship B"])
+    xp_cli.main(["log", "add", "--decision", "do not ship"])
     xp_cli.main(["log", "stats"])
-    assert "1 tests: 1 shipped" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert "3 tests: 2 shipped" in out
+    assert "logging the primary metric, ordered" in out
+
+
+def test_log_add_needs_an_existing_plan(make_run):
+    make_run("email", customers=2_000)
+    xp_cli.main(["analyse"])
+    try:
+        xp_cli.main(["log", "add", "--decision", "ship", "--plan", "plans/missing.md"])
+    except SystemExit as e:
+        assert str(e).startswith("No plan file plans/missing.md")
+    else:
+        raise AssertionError("xp log add should stop when the plan file does not exist")
+
+
+def test_report_works_on_the_prompt_test_and_reads_the_plan(make_run, runs_in_tmp):
+    make_run("prompt")
+    plan = runs_in_tmp / "plan.md"
+    plan.write_text("- **Primary metric:** resolved\n- **Guardrail metrics:** complaint\n- **Duration:** 2 weeks\n")
+    xp_cli.main(["report", "prompt", "--plan", str(plan)])
+    text = (runs_in_tmp / "reports" / "prompt-s40.md").read_text()
+    assert "- Duration: 14 days, 2025-10-20 to 2025-11-02, as in the plan." in text
+    assert "- Primary metric: resolved, as in the plan." in text
+    xp_cli.main(["report", "prompt"])
+    assert "as in the plan" not in (runs_in_tmp / "reports" / "prompt-s40.md").read_text()

@@ -21,6 +21,9 @@ def add(p):
 def estimate(df, metric, cuped=False, bootstrap=None):
     a, b = split(df)
     if metric in RATIOS:
+        if cuped:
+            raise SystemExit(f"CUPED works on a metric per customer, such as revenue. '{metric}' is a ratio "
+                             f"(per order): run it without --cuped.")
         num, den = RATIOS[metric]
         a, b = a[a[den] > 0], b[b[den] > 0]
         return diff_ratio(a[num], a[den], b[num], b[den])

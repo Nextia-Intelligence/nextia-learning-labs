@@ -18,6 +18,13 @@ def add(p):
     p.add_argument("--offline", action="store_true", help="grade the 120 recorded answers of each prompt")
 
 
+def per_customer(t):
+    """One row per customer (the randomisation unit): the number of tickets and the sum of each metric."""
+    return t.groupby(["customer_id", "variant"]).agg(tickets=("ticket_id", "size"), resolved=("resolved", "sum"),
+                                                     handoff=("handoff", "sum"), complaint=("complaint", "sum"),
+                                                     cost=("cost", "sum")).reset_index()
+
+
 def run(args):
     if args.offline:
         g = pd.DataFrame(graded())
@@ -29,9 +36,7 @@ def run(args):
         return
     run_ = load_run(args.run)
     t = run_.table("tickets")
-    per = t.groupby(["customer_id", "variant"]).agg(tickets=("ticket_id", "size"), resolved=("resolved", "sum"),
-                                                    handoff=("handoff", "sum"), complaint=("complaint", "sum"),
-                                                    cost=("cost", "sum")).reset_index()
+    per = per_customer(t)
     a, b = per[per.variant == "A"], per[per.variant == "B"]
     print(f"Run {run_.folder.name}: {len(t):,} tickets from {len(per):,} customers "
           f"(A {len(a):,}, B {len(b):,} customers). Per ticket, B − A:")

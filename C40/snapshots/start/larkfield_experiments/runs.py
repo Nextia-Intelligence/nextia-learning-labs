@@ -2,7 +2,7 @@
 
 A run folder (runs/<scenario>-s<seed>/) holds the scenario's tables as CSV files, scenario.json (what the run
 is) and truth.json (the true effects that the simulator knows). `xp` saves its last result in analysis.json, and
-`xp check` compares it with truth.json.
+`xp check` compares it with truth.json. runs/LATEST names the last run made, runs/LAST_ANALYSIS the last run analysed.
 """
 
 import json
@@ -53,6 +53,8 @@ class Run:
     def save_analysis(self, result: dict) -> Path:
         path = self.folder / "analysis.json"
         path.write_text(json.dumps(result, indent=2) + "\n")
+        if self.folder.parent.resolve() == runs_dir().resolve():
+            (runs_dir() / "LAST_ANALYSIS").write_text(self.folder.name + "\n")
         return path
 
     def analysis(self) -> dict:
@@ -77,3 +79,11 @@ def load_run(ref: str | None = None) -> Run:
     if matches:
         return Run(matches[-1].parent)
     raise SystemExit(f"No run called '{ref}'. Create it with: sim run --scenario {ref}")
+
+
+def load_analysed_run(ref: str | None = None) -> Run:
+    """Like load_run, but with no ref it takes the run that the last `xp` command analysed (not the last run made)."""
+    last = runs_dir() / "LAST_ANALYSIS"
+    if ref is None and last.exists() and (runs_dir() / last.read_text().strip() / "analysis.json").exists():
+        return Run(runs_dir() / last.read_text().strip())
+    return load_run(ref)
