@@ -1,0 +1,28 @@
+{
+ "model": "ibm-granite/granite-embedding-97m-multilingual-r2",
+ "revision": "835ad14087e140460703cf0fae09f97d469d65c2",
+ "dimensions": 384,
+ "text": "the product title as the shop wrote it",
+ "sets": {
+  "abt": {
+   "rows": 1081,
+   "seconds": 2.2,
+   "per_second": 494
+  },
+  "buy": {
+   "rows": 1092,
+   "seconds": 2.1,
+   "per_second": 530
+  },
+  "amazon": {
+   "rows": 1363,
+   "seconds": 1.7,
+   "per_second": 783
+  },
+  "google": {
+   "rows": 3226,
+   "seconds": 5.5,
+   "per_second": 589
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "model": "ibm-granite/granite-embedding-97m-multilingual-r2",
+ "revision": "835ad14087e140460703cf0fae09f97d469d65c2",
+ "licence": "Apache-2.0",
+ "dimensions": 384,
+ "normalised": true,
+ "dtype": "float16",
+ "text": "the text field (the title field holds topic tags and is not used)",
+ "threads": 4,
+ "torch": "2.15.0",
+ "order": "docs.npy: the rows of corpus.jsonl; queries*.npy: the rows of queries.jsonl",
+ "docs": {
+  "rows": 8674,
+  "max_tokens": 512,
+  "seconds": 137.5,
+  "per_second": 63.1
+ },
+ "queries": {
+  "rows": 1406,
+  "max_tokens": 512,
+  "seconds": 26.7,
+  "per_second": 52.7
+ },
+ "queries-128": {
+  "rows": 1406,
+  "max_tokens": 128,
+  "seconds": 10.2,
+  "per_second": 137.9
+ },
+ "query_tokens": {
+  "median": 221.0,
+  "over_128": 1287,
+  "over_512": 43,
+  "max": 1088
+ },
+ "doc_tokens": {
+  "median": 185.0,
+  "over_512": 185,
+  "max": 1368
+ }
+}

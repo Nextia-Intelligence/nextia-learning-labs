@@ -1,0 +1,11 @@
+{
+  "model": "ibm-granite/granite-embedding-97m-multilingual-r2",
+  "revision": "835ad14087e140460703cf0fae09f97d469d65c2",
+  "licence": "Apache-2.0",
+  "dimensions": 384,
+  "normalised": true,
+  "dtype": "float16",
+  "rows": "products_new.csv order",
+  "products": 150,
+  "text": "title. description Category: category, subcategory. Style: style. Colour: colour."
+}

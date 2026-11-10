@@ -1,0 +1,625 @@
+query_id,query,language,split,source,base_query_id,query_class,qtype,band,has_number,planted,log_searches
+W-001,smart coffee table,en,train,wands,,Coffee & Cocktail Tables,specific,torso,False,False,42
+F-001,table basse intelligente,fr,train,translated,W-001,Coffee & Cocktail Tables,specific,tail,False,False,8
+W-002,dinosaur,en,test,wands,,Kids Wall Décor,broad,torso,False,False,61
+W-003,turquoise pillows,en,train,wands,,Accent Pillows,specific,torso,False,False,62
+W-004,chair and a half recliner,en,train,wands,,Recliners,specific,tail,False,False,12
+F-004,fauteuil inclinable une place et demie,fr,train,translated,W-004,Recliners,specific,tail,False,False,4
+W-005,sofa with ottoman,en,train,wands,,Sectionals,specific,torso,False,False,27
+W-006,acrylic clear chair,en,validation,wands,,Dining Chairs,specific,tail,False,False,19
+W-007,driftwood mirror,en,validation,wands,,Wall & Accent Mirrors,specific,torso,False,False,37
+W-008,home sweet home sign,en,test,wands,,Wall Décor,specific,tail,False,False,14
+W-009,coffee table fire pit,en,validation,wands,,Outdoor Fireplaces,specific,tail,False,False,20
+F-009,table basse avec foyer,fr,validation,translated,W-009,Outdoor Fireplaces,specific,tail,False,False,6
+W-010,king poster bed,en,validation,wands,,Beds,specific,tail,False,False,16
+F-010,lit à colonnes king,fr,validation,translated,W-010,Beds,specific,tail,False,False,5
+W-011,ombre rug,en,train,wands,,Area Rugs,specific,torso,False,False,41
+W-012,large spoon and fork wall decor,en,test,wands,,Wall Décor,specific,tail,False,False,8
+W-013,outdoor privacy wall,en,validation,wands,,Fencing & Accessories,specific,torso,False,False,28
+F-013,cloison d’intimité extérieure,fr,validation,translated,W-013,Fencing & Accessories,specific,tail,False,False,8
+W-014,beds that have leds,en,test,wands,,Beds,specific,tail,False,False,11
+W-015,black 5 drawer dresser by guilford,en,train,wands,,Dressers & Chests,known-item,tail,True,False,10
+W-016,blk 18x18 seat cushions,en,test,wands,,Furniture Cushions,specific,tail,True,False,12
+W-019,gurney slade 56,en,train,wands,,Chandeliers,known-item,torso,True,False,28
+F-019,gurney slade 56,fr,train,translated,W-019,Chandeliers,known-item,torso,True,False,28
+W-020,foutains with brick look,en,test,wands,,Wallpaper,specific,torso,False,False,31
+F-020,fontaines imitation brique,fr,test,translated,W-020,Wallpaper,specific,tail,False,False,21
+W-021,living curtains pearl,en,train,wands,,Curtains & Drapes,specific,torso,False,False,29
+W-022,light and navy blue decorative pillow,en,test,wands,,Accent Pillows,specific,tail,False,False,9
+W-023,stoneford end tables white and wood,en,test,wands,,End Tables,known-item,tail,False,False,3
+F-023,tables d’appoint stoneford blanches et bois,fr,test,translated,W-023,End Tables,known-item,tail,False,False,2
+W-024,wood coffee table set by storage,en,validation,wands,,Living Room Table Sets,specific,tail,False,False,13
+W-025,sunflower,en,validation,wands,,Wall Art,broad,head,False,False,377
+F-025,tournesol,fr,validation,translated,W-025,Wall Art,broad,torso,False,False,42
+W-026,leather chairs,en,test,wands,,Accent Chairs,specific,torso,False,False,56
+W-027,outdoor welcome rug,en,train,wands,,Door Mats,specific,torso,False,False,34
+W-028,rooster decor,en,validation,wands,,Decorative Objects,specific,tail,False,False,19
+W-029,bathroom vanity knobs,en,train,wands,,Cabinet and Drawer Knobs,specific,tail,False,False,15
+W-030,3 1/2 inch drawer pull,en,test,wands,,Cabinet and Drawer Pulls,specific,tail,True,False,17
+W-031,burnt orange curtains,en,train,wands,,Curtains & Drapes,specific,torso,False,False,33
+W-034,bar stool with backrest,en,validation,wands,,Bar Stools,specific,tail,False,False,21
+F-034,tabouret de bar avec dossier,fr,validation,translated,W-034,Bar Stools,specific,tail,False,False,8
+W-035,enclosed shoe rack,en,validation,wands,,Shoe Storage,specific,tail,False,False,21
+F-035,meuble à chaussures fermé,fr,validation,translated,W-035,Shoe Storage,specific,tail,False,False,14
+W-036,laundry basket with wheels,en,train,wands,,Hampers & Baskets,specific,tail,False,False,19
+W-038,calvin patio chair,en,train,wands,,Patio Lounge Chairs,known-item,tail,False,False,13
+W-039,door jewelry organizer,en,train,wands,,Jewelry Armoires,specific,tail,False,False,12
+W-040,elegant executive chair,en,test,wands,,Office Chairs,specific,tail,False,False,18
+F-040,fauteuil de direction élégant,fr,test,translated,W-040,Office Chairs,specific,tail,False,False,10
+W-041,closet pull out valet rod,en,train,wands,,Closet Organizer Accessories,specific,tail,False,False,11
+W-042,toddler couch fold out,en,test,wands,,Kids Chairs,specific,tail,False,False,24
+W-043,solid teak end table,en,train,wands,,End Tables,specific,tail,False,False,19
+W-044,chrome shower head and valve,en,test,wands,,Shower Faucets & Systems,specific,tail,False,False,14
+W-046,beach blue headboard,en,test,wands,,Headboards,specific,tail,False,False,19
+F-046,tête de lit bleu plage,fr,test,translated,W-046,Headboards,specific,tail,False,False,9
+W-047,porcelain loaf pan,en,train,wands,,Bread & Loaf Pans,specific,tail,False,False,23
+W-049,moen matte black hooks,en,train,wands,,Towel & Robe Hooks,known-item,tail,False,False,7
+W-050,tufted chair with gold legs,en,train,wands,,Accent Chairs,specific,tail,False,False,9
+W-052,westling coffee table,en,validation,wands,,Coffee & Cocktail Tables,known-item,tail,False,False,20
+W-053,carolyn console table,en,test,wands,,Sofa & Console Tables,known-item,tail,False,False,6
+W-055,tollette teal outdoor rug,en,train,wands,,Area Rugs,known-item,tail,False,False,18
+W-056,royal blue counter height chairs,en,test,wands,,Bar Stools,specific,tail,False,False,21
+W-057,jordanna solid wood rocking,en,validation,wands,,Patio Rockers & Gliders,known-item,tail,False,False,13
+F-057,fauteuil à bascule en bois massif jordanna,fr,validation,translated,W-057,Patio Rockers & Gliders,known-item,tail,False,False,5
+W-061,overstreet rustic pub stools,en,validation,wands,,Bar Stools,known-item,tail,False,False,18
+F-061,tabourets de bar rustiques overstreet,fr,validation,translated,W-061,Bar Stools,known-item,tail,False,False,4
+W-062,7qt slow cooker,en,train,wands,,Crock Pots & Slow Cookers,specific,tail,True,False,25
+W-063,monthly calendar,en,train,wands,,Memo Boards,specific,tail,False,False,24
+W-064,zachary 72.5,en,test,wands,,Bookcases,known-item,tail,True,False,23
+W-065,gnome fairy garden,en,test,wands,,Garden Accents,specific,torso,False,False,25
+W-066,novara pergola,en,test,wands,,Pergolas,known-item,tail,False,False,20
+W-067,osgood mirror,en,test,wands,,Wall & Accent Mirrors,known-item,tail,False,False,17
+W-068,nautical platters,en,train,wands,,Serving Dishes & Platters,specific,head,False,False,76
+W-071,infant girl crib bedding,en,validation,wands,,Crib Bedding Sets,specific,tail,False,False,17
+F-071,literie de lit de bébé pour fille,fr,validation,translated,W-071,Crib Bedding Sets,specific,tail,False,False,4
+W-072,fold in half table,en,train,wands,,Folding Tables,specific,tail,False,False,14
+F-072,table pliante en deux,fr,train,translated,W-072,Folding Tables,specific,tail,False,False,6
+W-073,certified international melamine,en,validation,wands,,Plates & Saucers,known-item,tail,False,False,7
+F-073,mélamine certified international,fr,validation,translated,W-073,Plates & Saucers,known-item,tail,False,False,9
+W-074,serta kleinmon,en,test,wands,,Innerspring Mattresses,known-item,torso,False,False,33
+F-074,serta kleinmon,fr,test,translated,W-074,Innerspring Mattresses,known-item,torso,False,False,33
+W-076,46 inch closet door,en,train,wands,,Interior Doors,specific,tail,True,False,13
+W-079,palram harmony greenhouses,en,test,wands,,Awnings,known-item,tail,False,False,14
+W-080,7 draw white dresser,en,train,wands,,Dressers & Chests,specific,tail,True,False,9
+W-083,wall art fiji,en,train,wands,,Wall Art,specific,tail,False,False,11
+W-084,full metal bed rose gold,en,train,wands,,Beds,specific,tail,False,False,4
+W-086,aloe vera plant pot,en,train,wands,,Faux Plants and Trees,specific,tail,False,False,15
+W-087,vlad modular sectional,en,train,wands,,Sectionals,known-item,tail,False,False,5
+W-088,rose gold lounge,en,validation,wands,,Indoor Chaise Lounges,specific,tail,False,False,16
+W-089,whimsical solar lights,en,test,wands,,Landscape Lighting,specific,tail,False,False,18
+F-089,lampes solaires fantaisistes,fr,test,translated,W-089,Landscape Lighting,specific,tail,False,False,9
+W-090,filaret outdoor sofa,en,test,wands,,Patio Sofas,known-item,tail,False,False,19
+F-090,canapé d’extérieur filaret,fr,test,translated,W-090,Patio Sofas,known-item,tail,False,False,8
+W-091,industrial pipe dining table,en,train,wands,,Dining Tables,specific,tail,False,False,7
+W-092,antique silver entry table,en,train,wands,,Sofa & Console Tables,specific,torso,False,False,31
+F-092,console d’entrée argent antique,fr,train,translated,W-092,Sofa & Console Tables,specific,tail,False,False,16
+W-093,outdoor sectional dining,en,train,wands,,Patio Sofas,specific,tail,False,False,20
+W-094,kohler whitehaven farmhouse kitchen sink,en,train,wands,,Kitchen Sinks,known-item,tail,False,False,11
+W-095,entertainment stand end table,en,train,wands,,TV Stands & Entertainment Centers,broad,tail,False,False,16
+F-095,meuble télé et table d’appoint,fr,train,translated,W-095,TV Stands & Entertainment Centers,broad,tail,False,False,3
+W-096,bar room wall decor,en,test,wands,,Wall Décor,specific,torso,False,False,29
+W-097,regner power loom red,en,train,wands,,Area Rugs,known-item,tail,False,False,12
+W-100,tufted upholstered bed diamond,en,train,wands,,Beds,specific,tail,False,False,22
+W-101,48 in entry table with side by side drawer,en,test,wands,,Sofa & Console Tables,specific,tail,True,False,8
+W-103,kitchen anti fatigue mats,en,train,wands,,Kitchen Mats,specific,tail,False,False,13
+W-104,flour and sugar containers,en,test,wands,,Canisters & Jars,specific,tail,False,False,9
+W-105,outdoor movie screen,en,validation,wands,,Projector Screens,specific,tail,False,False,18
+F-105,écran de cinéma extérieur,fr,validation,translated,W-105,Projector Screens,specific,tail,False,False,6
+W-106,bed risers,en,train,wands,,Bed Accessories,broad,torso,False,False,49
+W-107,front porch furniture sets,en,train,wands,,Outdoor Conversation Sets,specific,tail,False,False,13
+W-108,ayesha curry kitchen,en,validation,wands,,Cookware Sets,known-item,tail,False,False,23
+W-111,delta trinsic,en,validation,wands,,Bathroom Sink Faucets,known-item,torso,False,False,25
+W-112,pineapple,en,test,wands,,Decorative Objects,broad,head,False,False,146
+W-113,led light strip,en,test,wands,,Under Cabinet Lighting,specific,tail,False,False,14
+W-114,geralyn upholstered storage platform bed,en,train,wands,,Beds,known-item,tail,False,False,11
+F-114,lit plateforme rembourré avec rangement geralyn,fr,train,translated,W-114,Beds,known-item,tail,False,False,7
+W-116,brockham solid blackout thermal grommet curtain panels,en,validation,wands,,Curtains & Drapes,known-item,tail,False,False,8
+F-116,panneaux de rideaux thermiques occultants unis à œillets brockham,fr,validation,translated,W-116,Curtains & Drapes,known-item,tail,False,False,4
+W-117,tall storage cabinet,en,test,wands,,Office Storage Cabinets,specific,tail,False,False,18
+F-117,armoire de rangement haute,fr,test,translated,W-117,Office Storage Cabinets,specific,tail,False,False,8
+W-118,body pillow case,en,train,wands,,Sheets And Sheet Sets,specific,torso,False,False,37
+F-118,taie d’oreiller de corps,fr,train,translated,W-118,Sheets And Sheet Sets,specific,tail,False,False,10
+W-119,welcome sign,en,train,wands,,Outdoor Wall Decor,specific,torso,False,False,31
+F-119,pancarte de bienvenue,fr,train,translated,W-119,Outdoor Wall Decor,specific,torso,False,False,30
+W-120,zodiac pillow,en,test,wands,,Accent Pillows,specific,torso,False,False,44
+F-120,coussin zodiac,fr,test,translated,W-120,Accent Pillows,specific,torso,False,False,47
+W-121,upholstered bed,en,train,wands,,Beds,broad,torso,False,False,55
+W-122,king size bed,en,test,wands,,Beds,specific,torso,False,False,27
+F-122,lit très grand format,fr,test,translated,W-122,Beds,specific,tail,False,False,5
+W-123,entrance table,en,test,wands,,Sofa & Console Tables,broad,head,False,False,141
+F-123,table d’entrée,fr,test,translated,W-123,Sofa & Console Tables,broad,tail,False,False,20
+W-124,unique coffee tables,en,test,wands,,Coffee & Cocktail Tables,specific,torso,False,False,31
+F-124,tables basses uniques,fr,test,translated,W-124,Coffee & Cocktail Tables,specific,torso,False,False,34
+W-125,boho bed frame,en,train,wands,,Bed Frames,specific,torso,False,False,30
+W-127,wine bar,en,train,wands,,Bars & Bar Sets,broad,head,False,False,90
+W-128,block coffee table,en,validation,wands,,Coffee & Cocktail Tables,specific,torso,False,False,39
+F-128,table basse bloc,fr,validation,translated,W-128,Coffee & Cocktail Tables,specific,tail,False,False,25
+W-129,wainscoting ideas,en,validation,wands,,Molding & Millwork,broad,torso,False,False,32
+F-129,idées de lambris muraux,fr,validation,translated,W-129,Molding & Millwork,broad,tail,False,False,8
+W-130,entertainment console,en,test,wands,,TV Stands & Entertainment Centers,broad,tail,False,False,24
+W-131,kids chair,en,test,wands,,Kids Chairs,specific,torso,False,False,46
+W-132,farmhouse cabinet,en,test,wands,,Accent Chests / Cabinets,specific,torso,False,False,54
+F-132,armoire de style rustique,fr,test,translated,W-132,Accent Chests / Cabinets,specific,tail,False,False,3
+W-133,outdoor light fixtures,en,test,wands,,Outdoor Wall Lights,specific,tail,False,False,15
+W-135,low profile loveseat recliner,en,train,wands,,Sofas,specific,tail,False,False,19
+F-135,causeuse inclinable à profil bas,fr,train,translated,W-135,Sofas,specific,tail,False,False,5
+W-136,black fluffy stool,en,train,wands,,Accent Stools,specific,torso,False,False,26
+W-137,orren ellis l shaped desk,en,test,wands,,Desks,known-item,tail,False,False,9
+F-137,bureau en l orren ellis,fr,test,translated,W-137,Desks,known-item,tail,False,False,3
+W-138,glass doors for bath,en,train,wands,,Shower & Tub Doors,specific,tail,False,False,17
+W-139,auburn throw pillows,en,test,wands,,Accent Pillows,specific,torso,False,False,52
+F-139,coussins décoratifs auburn,fr,test,translated,W-139,Accent Pillows,specific,tail,False,False,15
+W-140,wire basket with dividers,en,train,wands,,"Boxes, Bins, Baskets, & Buckets",specific,tail,False,False,7
+W-141,podium with locking cabinet,en,test,wands,,Lecterns & Podiums,specific,tail,False,False,21
+W-142,kitchen wooden stand,en,train,wands,,Specialty Serving,specific,head,False,False,96
+W-146,laundry vanity cabinet,en,train,wands,,Vanity Bases,specific,torso,False,False,27
+W-147,drum picture,en,test,wands,,Wall Art,specific,torso,False,False,49
+F-147,tableau de tambour,fr,test,translated,W-147,Wall Art,specific,tail,False,False,8
+W-148,industrial,en,test,wands,,Wall & Accent Mirrors,broad,head,False,False,313
+F-148,industriel,fr,test,translated,W-148,Wall & Accent Mirrors,broad,head,False,False,78
+W-150,dumbbells,en,train,wands,,Free Weights,broad,head,False,False,442
+W-151,leather chair,en,train,wands,,Accent Chairs,specific,torso,False,False,36
+F-151,chaise en cuir,fr,train,translated,W-151,Accent Chairs,specific,tail,False,False,10
+W-153,bohemian,en,train,wands,,Area Rugs,broad,head,False,False,149
+W-155,floating bed,en,train,wands,,Beds,specific,torso,False,False,44
+W-156,papasan chair frame only,en,test,wands,,Accent Chairs,specific,tail,False,False,13
+W-157,velvet chaise,en,train,wands,,Indoor Chaise Lounges,specific,torso,False,False,67
+W-158,led nightstand,en,validation,wands,,Nightstands,specific,torso,False,False,39
+W-159,meditation,en,test,wands,,Decorative Objects,broad,head,False,False,189
+W-160,marble,en,validation,wands,,End Tables,broad,head,False,False,119
+F-160,marbre,fr,validation,translated,W-160,End Tables,broad,torso,False,False,62
+W-162,turquoise chair,en,validation,wands,,Accent Chairs,specific,torso,False,False,46
+F-162,chaise turquoise,fr,validation,translated,W-162,Accent Chairs,specific,tail,False,False,19
+W-163,dual monitor stand,en,train,wands,,Computer Mounts,specific,torso,False,False,41
+F-163,support double écran,fr,train,translated,W-163,Computer Mounts,specific,tail,False,False,16
+W-164,modern outdoor furniture,en,test,wands,,Outdoor Conversation Sets,specific,tail,False,False,15
+F-164,meubles d’extérieur modernes,fr,test,translated,W-164,Outdoor Conversation Sets,specific,tail,False,False,7
+W-165,kitchen storage shelves,en,test,wands,,Shelving & Racks,specific,tail,False,False,14
+W-166,feather wall art,en,train,wands,,Wall Art,specific,torso,False,False,62
+F-166,décoration murale en plumes,fr,train,translated,W-166,Wall Art,specific,tail,False,False,10
+W-167,camper,en,train,wands,,Sheets And Sheet Sets,broad,head,False,False,186
+W-168,printers,en,test,wands,,Carts & Stands,broad,head,False,False,153
+F-168,imprimantes,fr,test,translated,W-168,Carts & Stands,broad,torso,False,False,62
+W-169,coffee bar buffet,en,validation,wands,,Sideboards & Buffets,specific,torso,False,False,39
+F-169,buffet pour coin café,fr,validation,translated,W-169,Sideboards & Buffets,specific,tail,False,False,12
+W-175,basket planter,en,train,wands,,Planters,specific,torso,False,False,47
+W-176,mexican art,en,train,wands,,Wall Art,specific,tail,False,False,24
+W-177,rustic storage cabinet,en,test,wands,,Office Storage Cabinets,specific,tail,False,False,18
+F-177,armoire de rangement rustique,fr,test,translated,W-177,Office Storage Cabinets,specific,tail,False,False,6
+W-178,almost heaven sauna,en,test,wands,,Saunas,known-item,tail,False,False,14
+F-178,sauna almost heaven,fr,test,translated,W-178,Saunas,known-item,tail,False,False,4
+W-180,outdoor lounge cushions,en,train,wands,,Furniture Cushions,specific,torso,False,False,28
+W-182,penny round tile,en,test,wands,,Floor & Wall Tile,specific,torso,False,False,30
+F-182,carreau rond penny,fr,test,translated,W-182,Floor & Wall Tile,specific,tail,False,False,16
+W-183,farmhouse bread box,en,validation,wands,,Food Storage & Dispensers,specific,torso,False,False,36
+F-183,boîte à pain style campagnard,fr,validation,translated,W-183,Food Storage & Dispensers,specific,tail,False,False,7
+W-186,board game storage cabinet,en,test,wands,,Office Storage Cabinets,specific,tail,False,False,10
+F-186,armoire de rangement pour jeux de société,fr,test,translated,W-186,Office Storage Cabinets,specific,tail,False,False,4
+W-188,"bedroom wall decor floral, multicolored with some teal (prints)",en,validation,wands,,Wall Décor,specific,tail,False,False,13
+W-189,big basket for dirty cloths,en,train,wands,,Hampers & Baskets,specific,tail,False,False,15
+F-189,grand panier à linge sale,fr,train,translated,W-189,Hampers & Baskets,specific,tail,False,False,4
+W-190,benjiamino faux leather power lift chair,en,test,wands,,Recliners,known-item,tail,False,False,15
+F-190,fauteuil releveur électrique en similicuir benjiamino,fr,test,translated,W-190,Recliners,known-item,tail,False,False,3
+W-191,biycicle plant stands,en,test,wands,,Plant & Telephone Tables,specific,tail,False,False,16
+F-191,supports à plantes en forme de vélo,fr,test,translated,W-191,Plant & Telephone Tables,specific,tail,False,False,2
+W-193,belchertown table lamp,en,train,wands,,Table Lamps,known-item,tail,False,False,14
+W-194,black frame 22 x 36,en,train,wands,,Picture Frames,specific,tail,True,False,8
+W-195,black freestanding tub with faucet,en,test,wands,,Tubs And Whirlpools,specific,tail,False,False,19
+F-195,baignoire autoportante noire avec robinet,fr,test,translated,W-195,Tubs And Whirlpools,specific,tail,False,False,7
+W-196,chabely 5 draw chest,en,validation,wands,,Dressers & Chests,known-item,tail,True,False,19
+W-199,blue faux throw with pillows,en,validation,wands,,Accent Pillows,specific,tail,False,False,16
+W-200,ceramic tile sea shell,en,train,wands,,Floor & Wall Tile,specific,tail,False,False,24
+F-200,carreau de céramique coquillage,fr,train,translated,W-200,Floor & Wall Tile,specific,tail,False,False,14
+W-201,delta trinsic double towel hook in champagne bronze,en,test,wands,,Towel & Robe Hooks,known-item,tail,False,False,9
+W-202,full mattress padded liner,en,test,wands,,Mattress Toppers and Pads,specific,tail,False,False,14
+W-203,ge top loading washer 4.5,en,test,wands,,Washing Machines,known-item,tail,True,False,9
+F-203,laveuse ge à chargement par le haut 4.5,fr,test,translated,W-203,Washing Machines,known-item,tail,True,False,5
+W-204,fleur de lis living candle wall sconce bronze,en,validation,wands,,Candle Holders,known-item,tail,False,False,6
+W-206,grill cover 73,en,train,wands,,Covers & Carry Bags,specific,tail,True,False,13
+W-208,"fawkes 36"" blue vanity",en,train,wands,,Vanities,known-item,tail,True,False,8
+W-209,door pulls bronze matte 4 inch,en,test,wands,,Cabinet and Drawer Pulls,specific,tail,True,False,8
+W-210,love seat wide faux leather tuxedo arm sofa,en,validation,wands,,Sofas,specific,tail,False,False,7
+W-211,memory foam rug galveston,en,train,wands,,Bath Rugs & Mats,known-item,tail,False,False,7
+F-211,tapis en mousse à mémoire galveston,fr,train,translated,W-211,Bath Rugs & Mats,known-item,tail,False,False,4
+W-214,light wood nightstand with silver accents,en,test,wands,,Nightstands,specific,tail,False,False,10
+W-215,king adjustable bed including mattress,en,train,wands,,Adjustable Beds,specific,tail,False,False,9
+W-219,trinaic towel rod,en,test,wands,,,known-item,torso,False,False,29
+W-220,sheets for twinxl,en,train,wands,,Sheets And Sheet Sets,specific,torso,False,False,48
+F-220,draps pour lit simple xl,fr,train,translated,W-220,Sheets And Sheet Sets,specific,tail,False,False,10
+W-221,small space dining table and chairs sets,en,validation,wands,,Dining Table Sets,specific,tail,False,False,7
+W-223,wisdom stone river 3-3/4,en,train,wands,,Cabinet and Drawer Pulls,known-item,tail,True,False,15
+F-223,wisdom stone river 3-3/4,fr,train,translated,W-223,Cabinet and Drawer Pulls,known-item,tail,True,False,15
+W-224,twin over full bunk beds cool desins,en,test,wands,,,specific,tail,False,False,15
+F-224,lits superposés simple sur double au design cool,fr,test,translated,W-224,,specific,tail,False,False,3
+W-226,power lift chair,en,test,wands,,Recliners,specific,torso,False,False,59
+F-226,fauteuil releveur électrique,fr,test,translated,W-226,Recliners,specific,tail,False,False,3
+W-227,owl,en,train,wands,,Garden Statues,broad,head,False,False,164
+F-227,hibou,fr,train,translated,W-227,Garden Statues,broad,head,False,False,216
+W-228,bee,en,test,wands,,Glassware & Barware,broad,head,False,False,1157
+F-228,abeille,fr,test,translated,W-228,Glassware & Barware,broad,head,False,False,77
+W-229,waterfall faucet,en,test,wands,,Bathroom Sink Faucets,specific,head,False,False,95
+F-229,robinet cascade,fr,test,translated,W-229,Bathroom Sink Faucets,specific,torso,False,False,26
+W-230,gold,en,train,wands,,Decorative Objects,broad,head,False,False,137
+W-231,anti fatigue mat,en,test,wands,,Kitchen Mats,specific,tail,False,False,15
+W-232,storage dresser,en,test,wands,,Dressers & Chests,broad,head,False,False,76
+W-233,kelly clarkson light fixtures,en,test,wands,,Flush Mount Lighting,known-item,tail,False,False,11
+W-234,artificial orchid arrangement,en,train,wands,,Faux Florals,specific,torso,False,False,48
+W-235,bathroom wastebasket,en,test,wands,,Trash Cans & Recycling,specific,tail,False,False,20
+F-235,poubelle de salle de bain,fr,test,translated,W-235,Trash Cans & Recycling,specific,tail,False,False,6
+W-236,3 piece rug set with runners,en,validation,wands,,Area Rugs,specific,tail,True,False,12
+F-236,ensemble de tapis 3 pièces avec tapis de couloir,fr,validation,translated,W-236,Area Rugs,specific,tail,True,False,5
+W-240,eiffel tower wall art,en,train,wands,,Wall Art,specific,tail,False,False,11
+W-241,decorative wall clocks,en,test,wands,,Wall Clocks,specific,torso,False,False,43
+F-241,horloges murales décoratives,fr,test,translated,W-241,Wall Clocks,specific,tail,False,False,8
+W-242,accent leather chair,en,test,wands,,Accent Chairs,specific,torso,False,False,31
+W-243,indoor multi tiered plant stand,en,train,wands,,Plant & Telephone Tables,specific,tail,False,False,12
+W-245,anchor decor,en,validation,wands,,Wall Décor,specific,torso,False,False,55
+F-245,décoration en forme d’ancre,fr,validation,translated,W-245,Wall Décor,specific,tail,False,False,8
+W-246,clear shower curtain,en,test,wands,,Shower Curtains,specific,torso,False,False,34
+F-246,rideau de douche transparent,fr,test,translated,W-246,Shower Curtains,specific,tail,False,False,8
+W-247,beaded curtains,en,train,wands,,Curtains & Drapes,specific,torso,False,False,69
+F-247,rideaux de perles,fr,train,translated,W-247,Curtains & Drapes,specific,torso,False,False,30
+W-248,surge protector,en,train,wands,,Lighting Accessories,broad,tail,False,False,17
+W-250,multi color rug,en,train,wands,,Area Rugs,specific,torso,False,False,37
+W-251,coffee container,en,train,wands,,Canisters & Jars,broad,head,False,False,70
+W-252,accent chairs living room,en,train,wands,,Accent Chairs,specific,tail,False,False,12
+W-253,antique brass faucet,en,test,wands,,Bathroom Sink Faucets,specific,torso,False,False,30
+F-253,robinet en laiton antique,fr,test,translated,W-253,Bathroom Sink Faucets,specific,tail,False,False,8
+W-254,comfortable accent chair,en,train,wands,,Accent Chairs,specific,tail,False,False,20
+F-254,fauteuil d’appoint confortable,fr,train,translated,W-254,Accent Chairs,specific,tail,False,False,10
+W-257,living room coffee table sets,en,test,wands,,Living Room Table Sets,specific,tail,False,False,20
+F-257,ensembles de tables basses pour salon,fr,test,translated,W-257,Living Room Table Sets,specific,tail,False,False,7
+W-258,breakfast bar table,en,validation,wands,,Dining Table Sets,specific,tail,False,False,18
+F-258,table de bar pour déjeuner,fr,validation,translated,W-258,Dining Table Sets,specific,tail,False,False,12
+W-259,nursery end table,en,test,wands,,End Tables,specific,tail,False,False,18
+W-260,retractable side awning,en,train,wands,,Awnings,specific,torso,False,False,28
+W-261,semi flush foyer light,en,train,wands,,Flush Mount Lighting,specific,tail,False,False,19
+W-262,bathroom freestanding cabinet,en,train,wands,,Bathroom Storage,specific,tail,False,False,11
+W-264,cortez pillow,en,test,wands,,Accent Pillows,known-item,torso,False,False,32
+F-264,coussin cortez,fr,test,translated,W-264,Accent Pillows,known-item,tail,False,False,3
+W-265,candace wingback upholstered bed,en,test,wands,,Beds,known-item,tail,False,False,11
+F-265,lit rembourré à tête de lit à oreilles candace,fr,test,translated,W-265,Beds,known-item,tail,False,False,5
+W-266,champagne velvet desk chair,en,test,wands,,Office Chairs,specific,tail,False,False,13
+F-266,chaise de bureau en velours champagne,fr,test,translated,W-266,Office Chairs,specific,tail,False,False,3
+W-267,dolomite subway tile,en,train,wands,,Floor & Wall Tile,specific,torso,False,False,31
+W-269,donaldson teak couch,en,train,wands,,Patio Sofas,known-item,torso,False,False,54
+F-269,canapé en teck donaldson,fr,train,translated,W-269,Patio Sofas,known-item,tail,False,False,7
+W-271,chinese flower stand,en,train,wands,,Plant & Telephone Tables,specific,tail,False,False,17
+W-272,oliver parsons,en,test,wands,,Dining Chairs,known-item,torso,False,False,42
+F-272,oliver parsons,fr,test,translated,W-272,Dining Chairs,known-item,torso,False,False,42
+W-273,stainless steel free standing shower caddy,en,test,wands,,Shower & Tub Accessories,specific,tail,False,False,18
+W-274,gowdy height adjustable standing desk,en,test,wands,,Desks,known-item,tail,False,False,12
+W-275,hinged square ottoman,en,validation,wands,,Ottomans,specific,tail,False,False,13
+W-276,chaves l-shape floating desk with hutch,en,train,wands,,Desks,known-item,tail,False,False,11
+W-277,barstool patio sets,en,train,wands,,Patio Bar Stools,specific,tail,False,False,16
+W-278,parakeet toy,en,train,wands,,Bird Play Stand & Playcenters,broad,head,False,False,154
+F-278,jouet pour perruche,fr,train,translated,W-278,Bird Play Stand & Playcenters,broad,tail,False,False,6
+W-280,johan desk by laurel foundry,en,test,wands,,Desks,known-item,tail,False,False,13
+F-280,bureau johan de laurel foundry,fr,test,translated,W-280,Desks,known-item,tail,False,False,9
+W-281,brunk ship wheel,en,train,wands,,Decorative Objects,known-item,tail,False,False,18
+W-282,grantola wall mirror,en,train,wands,,Wall & Accent Mirrors,known-item,tail,False,False,18
+W-284,family lamp,en,validation,wands,,Table Lamps,specific,torso,False,False,30
+W-285,"48"" sliding single track , barn door for laundry",en,validation,wands,,Barn Door Hardware,specific,tail,True,False,8
+F-285,"porte de grange coulissante sur rail simple 48"" pour salle de lavage",fr,validation,translated,W-285,Barn Door Hardware,specific,tail,True,False,2
+W-287,cover set for outdoor furniture,en,validation,wands,,Furniture Covers,specific,tail,False,False,14
+F-287,ensemble de housses pour meubles d’extérieur,fr,validation,translated,W-287,Furniture Covers,specific,tail,False,False,10
+W-288,round outdoor patio cover,en,train,wands,,Furniture Covers,specific,tail,False,False,14
+F-288,housse ronde pour mobilier de patio,fr,train,translated,W-288,Furniture Covers,specific,tail,False,False,5
+W-291,front door cabinet with doors,en,train,wands,,Accent Chests / Cabinets,specific,tail,False,False,17
+F-291,meuble d’entrée avec portes,fr,train,translated,W-291,Accent Chests / Cabinets,specific,tail,False,False,9
+W-293,wood floor protector mat,en,train,wands,,Chairmats,specific,tail,False,False,11
+W-295,end table between recliners,en,test,wands,,End Tables,specific,tail,False,False,18
+F-295,table d’appoint entre fauteuils inclinables,fr,test,translated,W-295,End Tables,specific,tail,False,False,4
+W-296,zakariyah twin platform,en,train,wands,,Kids Beds,known-item,tail,False,False,10
+W-297,seat cushions desk,en,validation,wands,,Chair Accessories,specific,torso,False,False,29
+W-300,animal print handmade tufted wool beige/black area rug by allmodern,en,train,wands,,Area Rugs,known-item,tail,False,False,10
+W-301,circle cabinet pulls,en,train,wands,,Cabinet and Drawer Pulls,specific,tail,False,False,16
+W-305,ligth bulb,en,train,wands,,Light Bulbs,broad,head,False,False,139
+F-305,ampoule,fr,train,translated,W-305,Light Bulbs,broad,head,False,False,119
+W-306,mobley zero gravity adjustable bed with wireless remote,en,test,wands,,Adjustable Beds,known-item,tail,False,False,13
+F-306,lit réglable mobley à gravité zéro avec télécommande sans fil,fr,test,translated,W-306,Adjustable Beds,known-item,tail,False,False,9
+W-307,real touch roses floral arrangements in glass vase,en,test,wands,,Faux Florals,specific,tail,False,False,10
+F-307,arrangements floraux de roses au toucher réaliste dans un vase en verre,fr,test,translated,W-307,Faux Florals,specific,tail,False,False,5
+W-308,led 60,en,validation,wands,,Light Bulbs,specific,tail,True,False,12
+W-309,moen 5995 arbor one,en,train,wands,,Kitchen Faucets,known-item,tail,True,False,17
+W-312,coat rack for bedroom,en,train,wands,,Coat Racks and Hooks,specific,torso,False,False,36
+W-313,malachi sled,en,train,wands,,Coffee & Cocktail Tables,known-item,tail,False,False,16
+W-314,body pillow and case,en,train,wands,,Sheets And Sheet Sets,broad,tail,False,False,21
+W-315,medium clips,en,train,wands,,Uniters Outdoor Furniture,specific,torso,False,False,25
+W-316,rolande heavy duty power lift assist recliner,en,test,wands,,Recliners,known-item,tail,False,False,7
+W-317,hulmeville writing desk with hutch,en,train,wands,,Desks,known-item,tail,False,False,10
+W-318,sunjoy lantern,en,validation,wands,,Outdoor Lanterns & Lamps,known-item,torso,False,False,31
+F-318,lanterne sunjoy,fr,validation,translated,W-318,Outdoor Lanterns & Lamps,known-item,tail,False,False,15
+W-320,blaylock bookcase headboard,en,train,wands,,Headboards,known-item,tail,False,False,14
+W-321,hussain handmade tufted magenta rug,en,train,wands,,Area Rugs,known-item,tail,False,False,10
+W-323,hub leaning full length mirror,en,train,wands,,Wall & Accent Mirrors,known-item,tail,False,False,9
+W-324,chase utility laundry cart,en,test,wands,,Laundry Accessories & Storage,known-item,tail,False,False,9
+F-324,chariot à linge utilitaire chase,fr,test,translated,W-324,Laundry Accessories & Storage,known-item,tail,False,False,7
+W-325,outdoor waterproof chest,en,test,wands,,Deck Boxes,specific,torso,False,False,32
+F-325,coffre extérieur imperméable,fr,test,translated,W-325,Deck Boxes,specific,tail,False,False,14
+W-327,kohler purist brushed bronze,en,validation,wands,,Bathroom Sink Faucets,known-item,tail,False,False,9
+W-328,golub dining table,en,train,wands,,Dining Tables,known-item,tail,False,False,16
+W-329,larkfield tension rod,en,test,wands,,Curtain Hardware & Accessories,known-item,tail,False,False,22
+F-329,tringle à tension larkfield,fr,test,translated,W-329,Curtain Hardware & Accessories,known-item,tail,False,False,7
+W-330,kari 2 piece,en,train,wands,,Outdoor Conversation Sets,known-item,tail,True,False,19
+W-331,upholstered girls bed,en,train,wands,,Beds,specific,tail,False,False,16
+W-333,stainless steel colander set,en,train,wands,,"Strainers, Colanders, & Salad Spinners",specific,tail,False,False,14
+W-334,itchington butterfly,en,train,wands,,Dining Tables,known-item,torso,False,False,36
+F-334,papillon itchington,fr,train,translated,W-334,Dining Tables,known-item,tail,False,False,18
+W-335,canadian,en,test,wands,,Wreaths,broad,head,False,False,293
+W-337,iittala bowl,en,test,wands,,Dining Bowls,known-item,tail,False,False,16
+F-337,bol iittala,fr,test,translated,W-337,Dining Bowls,known-item,tail,False,False,14
+W-339,ruckus chair,en,train,wands,,Accent Chairs,known-item,torso,False,False,55
+W-341,canvas map art,en,test,wands,,Wall Art,specific,tail,False,False,19
+W-342,brendon counter stool,en,train,wands,,Bar Stools,known-item,tail,False,False,10
+W-343,navy and peach bedding,en,train,wands,,Bedding Sets,specific,tail,False,False,11
+W-344,ottoman bed queen,en,train,wands,,Ottomans,specific,tail,False,False,14
+W-345,oriental vanity,en,train,wands,,Makeup Vanities,specific,torso,False,False,32
+W-346,nesting tray set,en,train,wands,,Decorative Trays,specific,tail,False,False,17
+W-347,olive green console table,en,train,wands,,Sofa & Console Tables,specific,tail,False,False,11
+W-349,mud room sign,en,train,wands,,Wall Décor,specific,tail,False,False,18
+W-351,white bathroom vanity black hardware,en,train,wands,,Vanities,specific,tail,False,False,13
+F-351,meuble-lavabo blanc avec quincaillerie noire,fr,train,translated,W-351,Vanities,specific,tail,False,False,12
+W-352,amarillo,en,train,wands,,Wall Art,known-item,tail,False,False,15
+W-353,pennfield playhouse,en,validation,wands,,Playhouses & Play Tents,known-item,tail,False,False,11
+W-354,tressler rug,en,train,wands,,Area Rugs,known-item,tail,False,False,13
+W-355,argenteuil,en,train,wands,,Wall Art,known-item,torso,False,False,46
+W-356,platform bed side table,en,train,wands,,End Tables,specific,tail,False,False,22
+W-357,tall free standing pet gate,en,train,wands,,Pet Gates,specific,tail,False,False,15
+F-357,barrière autoportante haute pour animaux,fr,train,translated,W-357,Pet Gates,specific,tail,False,False,5
+W-358,sliding closet mirror,en,train,wands,,Wall & Accent Mirrors,specific,torso,False,False,27
+W-359,french molding,en,train,wands,,Molding & Millwork,specific,torso,False,False,28
+W-361,kisner,en,train,wands,,Wall Art,known-item,tail,False,False,18
+W-362,brushed gold wall decor,en,test,wands,,Wall Décor,specific,tail,False,False,19
+W-363,fortunat coffee table,en,test,wands,,Coffee & Cocktail Tables,known-item,tail,False,False,18
+W-364,croscill ashton,en,test,wands,,Accent Pillows,known-item,torso,False,False,57
+F-364,croscill ashton,fr,test,translated,W-364,Accent Pillows,known-item,torso,False,False,57
+W-365,gas detector,en,train,wands,,Smoke & CO Detectors,broad,tail,False,False,16
+W-366,drudge report,en,train,wands,,Wall Art,broad,torso,False,False,37
+W-367,wooden chair outdoor,en,validation,wands,,Patio Lounge Chairs,specific,torso,False,False,27
+W-368,pasta tools,en,train,wands,,Cooking Utensils,broad,head,False,False,226
+W-370,rug for teen room,en,train,wands,,Area Rugs,specific,tail,False,False,11
+W-371,milk cow chair,en,validation,wands,,Accent Chairs,specific,tail,False,False,21
+W-372,verden callan,en,test,wands,,Door Knobs,known-item,tail,False,False,16
+W-373,togo chair,en,test,wands,,Accent Chairs,known-item,torso,False,False,27
+F-373,fauteuil togo,fr,test,translated,W-373,Accent Chairs,known-item,tail,False,False,15
+W-374,sinks bed frame,en,validation,wands,,Kitchen Sinks,specific,torso,False,False,26
+F-374,cadre de lit sinks,fr,validation,translated,W-374,Kitchen Sinks,specific,tail,False,False,7
+W-377,glinda upholstered bench,en,test,wands,,Benches,known-item,tail,False,False,16
+F-377,banc rembourré glinda,fr,test,translated,W-377,Benches,known-item,tail,False,False,6
+W-379,urban outfitters duvet,en,test,wands,,Bedding Sets,known-item,tail,False,False,12
+W-380,gravity feeder,en,validation,wands,,"Dog and Cat Bowls, Feeders & Accessories",broad,head,False,False,113
+F-380,mangeoire à gravité,fr,validation,translated,W-380,"Dog and Cat Bowls, Feeders & Accessories",broad,torso,False,False,30
+W-381,farmhouse hood vent,en,train,wands,,Range Hoods,specific,tail,False,False,20
+W-382,counter top one cup hot water dispenser,en,test,wands,,Kitchen Faucets,specific,tail,False,False,12
+F-382,distributeur d’eau chaude de comptoir pour une tasse,fr,test,translated,W-382,Kitchen Faucets,specific,tail,False,False,2
+W-383,minnestrista,en,test,wands,,Wall Art,known-item,torso,False,False,36
+W-387,self enclosed planters,en,train,wands,,Planters,specific,tail,False,False,20
+W-388,outdoor sectional doning,en,test,wands,,Outdoor Conversation Sets,specific,tail,False,False,19
+F-388,ensemble sectionnel extérieur pour salle à manger,fr,test,translated,W-388,Outdoor Conversation Sets,specific,tail,False,False,6
+W-390,cushion replacement insert,en,test,wands,,Furniture Cushions,specific,tail,False,False,13
+W-391,"writing desk 48""",en,validation,wands,,Desks,specific,tail,True,False,16
+W-394,gray leather cocktail table,en,test,wands,,Coffee & Cocktail Tables,specific,tail,False,False,13
+W-395,pantry grey,en,test,wands,,Pantry Cabinets,specific,torso,False,False,29
+F-395,garde-manger gris,fr,test,translated,W-395,Pantry Cabinets,specific,tail,False,False,23
+W-396,alyse 8 light,en,train,wands,,Chandeliers,known-item,tail,True,False,13
+W-397,maryford queen tufted bed,en,train,wands,,Beds,known-item,tail,False,False,14
+W-398,super bright lights,en,train,wands,,Pendant Lights,broad,torso,False,False,26
+W-399,12v dirt bike,en,validation,wands,,Ride-On Toys,specific,tail,True,False,20
+F-399,moto hors route 12v,fr,validation,translated,W-399,Ride-On Toys,specific,tail,True,False,7
+W-401,glass lsmp shades,en,validation,wands,,Lighting Shades,specific,tail,False,False,12
+W-402,modern farmhouse lighting semi flush mount,en,train,wands,,Flush Mount Lighting,specific,tail,False,False,11
+W-404,large cushion outdoor chair,en,validation,wands,,Furniture Cushions,specific,tail,False,False,10
+W-405,queen ann style living room chair,en,train,wands,,Accent Chairs,specific,tail,False,False,10
+W-406,refrigerator with ice an water in door,en,test,wands,,Refrigerators,specific,tail,False,False,13
+W-407,huge bookcase,en,train,wands,,Bookcases,specific,tail,False,False,23
+W-408,girl reading statue,en,train,wands,,Garden Statues,specific,torso,False,False,41
+F-408,statue de fille qui lit,fr,train,translated,W-408,Garden Statues,specific,tail,False,False,5
+W-409,teal chair,en,train,wands,,Accent Chairs,specific,head,False,False,131
+F-409,chaise bleu sarcelle,fr,train,translated,W-409,Accent Chairs,specific,tail,False,False,15
+W-412,jennie tufted upholstered low profile platform bed,en,train,wands,,Beds,known-item,tail,False,False,5
+W-413,burruss patio sectional with cushions,en,train,wands,,Outdoor Conversation Sets,known-item,tail,False,False,11
+W-415,toilet paper stand,en,train,wands,,Toilet Paper Holders,broad,tail,False,False,24
+F-415,porte-papier hygiénique sur pied,fr,train,translated,W-415,Toilet Paper Holders,broad,tail,False,False,5
+W-416,larkfield coffee table,en,train,wands,,Coffee & Cocktail Tables,known-item,tail,False,False,12
+W-417,twin bed frame,en,test,wands,,Bed Frames,specific,tail,False,False,12
+W-419,living room ideas,en,validation,wands,,Living Room Sets,broad,head,False,False,81
+F-419,idées de salon,fr,validation,translated,W-419,Living Room Sets,broad,tail,False,False,14
+W-420,tile backsplash,en,test,wands,,Floor & Wall Tile,specific,head,False,False,96
+W-421,dining room tables,en,train,wands,,Dining Tables,specific,torso,False,False,37
+F-421,tables de salle à manger,fr,train,translated,W-421,Dining Tables,specific,tail,False,False,6
+W-422,ergonomic chair,en,test,wands,,Office Chairs,specific,torso,False,False,33
+F-422,chaise ergonomique,fr,test,translated,W-422,Office Chairs,specific,torso,False,False,32
+W-424,larkfield comforters,en,train,wands,,Bedding Sets,known-item,torso,False,False,26
+W-425,side table with storage,en,train,wands,,End Tables,specific,tail,False,False,13
+W-429,gray dresser,en,train,wands,,Dressers & Chests,specific,torso,False,False,69
+F-429,commode grise,fr,train,translated,W-429,Dressers & Chests,specific,torso,False,False,34
+W-430,30 inch bathroom vanity,en,train,wands,,Vanities,specific,tail,True,False,13
+W-431,shoe bench entryway,en,test,wands,,Shoe Storage,specific,tail,False,False,14
+W-434,bathroom lighting,en,train,wands,,Vanity Lighting,specific,head,False,False,82
+W-435,shoe closet,en,train,wands,,Shoe Storage,broad,tail,False,False,20
+W-436,full bed with trundle,en,train,wands,,Kids Beds,specific,tail,False,False,16
+W-437,kitchen islands with seating,en,train,wands,,Kitchen Islands,specific,tail,False,False,7
+W-438,indoor water fountain,en,train,wands,,Fountains,specific,tail,False,False,24
+W-439,parsons chairs,en,test,wands,,Dining Chairs,specific,torso,False,False,29
+W-440,wood bar stools,en,train,wands,,Bar Stools,specific,torso,False,False,25
+W-442,above toilet cabinet,en,test,wands,,Bathroom Storage,specific,tail,False,False,11
+W-443,patio design,en,test,wands,,Outdoor Conversation Sets,broad,head,False,False,77
+W-444,outdoor lounge chair,en,train,wands,,Patio Chaise Lounges,specific,torso,False,False,29
+W-445,chaise lounge couch,en,test,wands,,Sectionals,broad,torso,False,False,51
+F-445,canapé chaise longue,fr,test,translated,W-445,Sectionals,broad,tail,False,False,16
+W-446,card table,en,test,wands,,Folding Tables,broad,head,False,False,109
+F-446,table à cartes,fr,test,translated,W-446,Folding Tables,broad,tail,False,False,24
+W-447,tall buffet cabinet,en,test,wands,,Sideboards & Buffets,specific,torso,False,False,41
+F-447,buffet haut,fr,test,translated,W-447,Sideboards & Buffets,specific,tail,False,False,25
+W-448,bed side table,en,train,wands,,End Tables,specific,tail,False,False,16
+W-449,living room designs,en,train,wands,,Living Room Sets,broad,tail,False,False,19
+W-452,day bed indian,en,test,wands,,Daybeds & Guest Beds,specific,tail,False,False,24
+W-453,midcentury tv unit,en,train,wands,,TV Stands & Entertainment Centers,specific,tail,False,False,11
+W-454,carpet 5x6,en,train,wands,,Area Rugs,specific,torso,True,False,27
+F-454,tapis 5x6,fr,train,translated,W-454,Area Rugs,specific,tail,True,False,23
+W-455,deer coat hooks,en,train,wands,,Coat Racks and Hooks,specific,torso,False,False,35
+F-455,crochets à manteaux en forme de cerf,fr,train,translated,W-455,Coat Racks and Hooks,specific,tail,False,False,4
+W-456,wall design shelf,en,validation,wands,,Wall Mounted Shelves,specific,torso,False,False,36
+F-456,étagère murale design,fr,validation,translated,W-456,Wall Mounted Shelves,specific,tail,False,False,22
+W-458,bubble guppies chair,en,train,wands,,Dining Chairs,known-item,tail,False,False,9
+W-461,luau string lights,en,train,wands,,String Lights,specific,tail,False,False,21
+F-461,guirlande lumineuse luau,fr,train,translated,W-461,String Lights,specific,tail,False,False,5
+W-466,rock climbing wall kids,en,train,wands,,Swing Set Accessories,specific,tail,False,False,14
+W-467,town & country living curtains,en,train,wands,,Curtains & Drapes,known-item,tail,False,False,10
+W-468,glow in the dark silent wall clock,en,validation,wands,,Wall Clocks,specific,tail,False,False,6
+W-469,garage sports storage rack,en,test,wands,,Bike And Sport Racks,specific,torso,False,False,40
+F-469,support de rangement d’équipement sportif pour garage,fr,test,translated,W-469,Bike And Sport Racks,specific,tail,False,False,5
+W-470,elephant framed,en,train,wands,,Wall Art,specific,tail,False,False,15
+W-472,window wall accent,en,train,wands,,Wall Décor,specific,torso,False,False,38
+W-473,chair pillow cushion,en,test,wands,,Furniture Cushions,specific,torso,False,False,31
+F-473,coussin de chaise,fr,test,translated,W-473,Furniture Cushions,specific,tail,False,False,23
+W-474,48 inch bathroom vanity with trough sink,en,train,wands,,Vanities,specific,tail,True,False,10
+W-476,hardwood beds,en,train,wands,,Beds,specific,torso,False,False,30
+F-476,lits en bois massif,fr,train,translated,W-476,Beds,specific,tail,False,False,3
+W-478,worn leather office chair,en,validation,wands,,Office Chairs,specific,tail,False,False,8
+W-479,garage door mail slot,en,validation,wands,,Mailboxes,specific,tail,False,False,21
+W-481,emma headboard,en,validation,wands,,Headboards,known-item,tail,False,False,25
+F-481,tête de lit emma,fr,validation,translated,W-481,Headboards,known-item,tail,False,False,4
+W-482,48 inch kitchen hood,en,train,wands,,Range Hoods,specific,tail,True,False,15
+F-482,hotte de cuisine 48 inch,fr,train,translated,W-482,Range Hoods,specific,tail,True,False,4
+W-483,rustic twig,en,train,wands,,Faux Plants and Trees,broad,torso,False,False,30
+W-484,nespresso vertuo next premium by breville with aeroccino,en,validation,wands,,Espresso Machines,known-item,tail,False,False,13
+W-485,pedistole sink,en,test,wands,,Kitchen Sinks,broad,torso,False,False,38
+W-486,54 in bench cushion,en,train,wands,,Furniture Cushions,specific,tail,True,False,21
+F-486,coussin de banc 54 in,fr,train,translated,W-486,Furniture Cushions,specific,tail,True,False,5
+W-487,rack glass,en,train,wands,,Candle Holders,broad,head,False,False,606
+T-001,memory foam rug galevston,en,train,typo,W-211,Bath Rugs & Mats,known-item,tail,False,True,0
+T-002,teal chaiir,en,train,typo,W-409,Accent Chairs,specific,tail,False,True,5
+T-003,belhcertown table lamp,en,train,typo,W-193,Table Lamps,known-item,tail,False,True,1
+T-004,town & country liivng curtains,en,train,typo,W-467,Curtains & Drapes,known-item,tail,False,True,1
+T-005,boho bed frmae,en,train,typo,W-125,Bed Frames,specific,tail,False,True,0
+T-006,wood bar stopls,en,train,typo,W-440,Bar Stools,specific,tail,False,True,0
+T-007,luau string lightts,en,train,typo,W-461,String Lights,specific,tail,False,True,1
+T-008,bruunk ship wheel,en,train,typo,W-281,Decorative Objects,known-item,tail,False,True,3
+T-009,olive green coonsole table,en,train,typo,W-347,Sofa & Console Tables,specific,tail,False,True,0
+T-010,wire baslet with dividers,en,train,typo,W-140,"Boxes, Bins, Baskets, & Buckets",specific,tail,False,True,0
+T-011,mosern farmhouse lighting semi flush mount,en,train,typo,W-402,Flush Mount Lighting,specific,tail,False,True,1
+T-012,shheets for twinxl,en,train,typo,W-220,Sheets And Sheet Sets,specific,tail,False,True,3
+T-013,moen matte black hoooks,en,train,typo,W-049,Towel & Robe Hooks,known-item,tail,False,True,1
+T-014,batrhoom lighting,en,train,typo,W-434,Vanity Lighting,specific,tail,False,True,2
+T-015,floatimg bed,en,train,typo,W-155,Beds,specific,tail,False,True,0
+T-016,toilt paper stand,en,train,typo,W-415,Toilet Paper Holders,broad,tail,False,True,2
+T-017,gray dressrr,en,train,typo,W-429,Dressers & Chests,specific,tail,False,True,0
+T-018,round outdoro patio cover,en,train,typo,W-288,Furniture Covers,specific,tail,False,True,1
+T-019,dtudge report,en,train,typo,W-366,Wall Art,broad,tail,False,True,3
+T-020,48 inch kittchen hood,en,train,typo,W-482,Range Hoods,specific,tail,True,True,1
+T-021,jennie tufted upholstered low profile platforrm bed,en,train,typo,W-412,Beds,known-item,tail,False,True,0
+T-022,low profle loveseat recliner,en,train,typo,W-135,Sofas,specific,tail,False,True,0
+T-023,orienntal vanity,en,train,typo,W-345,Makeup Vanities,specific,tail,False,True,2
+T-024,dolomite subbway tile,en,train,typo,W-267,Floor & Wall Tile,specific,tail,False,True,1
+T-025,living room dessigns,en,train,typo,W-449,Living Room Sets,broad,tail,False,True,1
+T-026,aloe vera plat pot,en,train,typo,W-086,Faux Plants and Trees,specific,tail,False,True,0
+T-027,vlad modukar sectional,en,train,typo,W-087,Sectionals,known-item,tail,False,True,2
+T-028,ruclus chair,en,train,typo,W-339,Accent Chairs,known-item,tail,False,True,10
+T-029,shoe cloet,en,train,typo,W-435,Shoe Storage,broad,tail,False,True,2
+T-030,girl reading stayue,en,train,typo,W-408,Garden Statues,specific,tail,False,True,1
+T-031,kohler purist brushhed bronze,en,validation,typo,W-327,Bathroom Sink Faucets,known-item,tail,False,True,0
+T-032,oversteret rustic pub stools,en,validation,typo,W-061,Bar Stools,known-item,tail,False,True,0
+T-033,infnat girl crib bedding,en,validation,typo,W-071,Crib Bedding Sets,specific,tail,False,True,1
+T-034,gracity feeder,en,validation,typo,W-380,"Dog and Cat Bowls, Feeders & Accessories",broad,tail,False,True,4
+T-035,ecnlosed shoe rack,en,validation,typo,W-035,Shoe Storage,specific,tail,False,True,1
+T-036,rooster deecor,en,validation,typo,W-028,Decorative Objects,specific,tail,False,True,0
+T-037,"bedroom wall decor floral, multticolored with some teal (prints)",en,validation,typo,W-188,Wall Décor,specific,tail,False,True,0
+T-038,bar stol with backrest,en,validation,typo,W-034,Bar Stools,specific,tail,False,True,1
+T-039,cooffee table fire pit,en,validation,typo,W-009,Outdoor Fireplaces,specific,tail,False,True,1
+T-040,sunkoy lantern,en,validation,typo,W-318,Outdoor Lanterns & Lamps,known-item,tail,False,True,2
+T-041,gaage door mail slot,en,validation,typo,W-479,Mailboxes,specific,tail,False,True,1
+T-042,outdoor mvoie screen,en,validation,typo,W-105,Projector Screens,specific,tail,False,True,0
+T-043,living room ides,en,validation,typo,W-419,Living Room Sets,broad,tail,False,True,2
+T-044,ancgor decor,en,validation,typo,W-245,Wall Décor,specific,tail,False,True,3
+T-045,nespresso vertuo next premium by brevolle with aeroccino,en,validation,typo,W-484,Espresso Machines,known-item,tail,False,True,0
+T-046,ayesha cuurry kitchen,en,validation,typo,W-108,Cookware Sets,known-item,tail,False,True,3
+T-047,maarble,en,validation,typo,W-160,End Tables,broad,tail,False,True,4
+T-048,coffee bar bffet,en,validation,typo,W-169,Sideboards & Buffets,specific,tail,False,True,2
+T-049,farmhoues bread box,en,validation,typo,W-183,Food Storage & Dispensers,specific,tail,False,True,1
+T-050,led nightstad,en,validation,typo,W-158,Nightstands,specific,tail,False,True,2
+T-051,large spopn and fork wall decor,en,test,typo,W-012,Wall Décor,specific,tail,False,True,1
+T-052,blk 18x18 seat cusjions,en,test,typo,W-016,Furniture Cushions,specific,tail,True,True,1
+T-053,shoe bnch entryway,en,test,typo,W-431,Shoe Storage,specific,tail,False,True,0
+T-054,board game storage cabiet,en,test,typo,W-186,Office Storage Cabinets,specific,tail,False,True,0
+T-055,outdoor lighht fixtures,en,test,typo,W-133,Outdoor Wall Lights,specific,tail,False,True,0
+T-056,farmhouse cabinte,en,test,typo,W-132,Accent Chests / Cabinets,specific,tail,False,True,2
+T-057,48 in entry tbale with side by side drawer,en,test,typo,W-101,Sofa & Console Tables,specific,tail,True,True,0
+T-058,johan desk by laurel fpundry,en,test,typo,W-280,Desks,known-item,tail,False,True,1
+T-059,outtdoor sectional doning,en,test,typo,W-388,Outdoor Conversation Sets,specific,tail,False,True,1
+T-060,oren ellis l shaped desk,en,test,typo,W-137,Desks,known-item,tail,False,True,0
+T-061,home sewet home sign,en,test,typo,W-008,Wall Décor,specific,tail,False,True,0
+T-062,stonefoord end tables white and wood,en,test,typo,W-023,End Tables,known-item,tail,False,True,3
+T-063,abtique brass faucet,en,test,typo,W-253,Bathroom Sink Faucets,specific,tail,False,True,0
+T-064,brushed gold wall deor,en,test,typo,W-362,Wall Décor,specific,tail,False,True,1
+T-065,led light sttip,en,test,typo,W-113,Under Cabinet Lighting,specific,tail,False,True,1
+T-066,waaterfall faucet,en,test,typo,W-229,Bathroom Sink Faucets,specific,tail,False,True,3
+T-067,twin over full bunk beds cool dsins,en,test,typo,W-224,,specific,tail,False,True,0
+T-068,clar shower curtain,en,test,typo,W-246,Shower Curtains,specific,tail,False,True,0
+T-069,zodiac piillow,en,test,typo,W-120,Accent Pillows,specific,tail,False,True,0
+T-070,chrme shower head and valve,en,test,typo,W-044,Shower Faucets & Systems,specific,tail,False,True,0
+T-071,living room coffre table sets,en,test,typo,W-257,Living Room Table Sets,specific,tail,False,True,0
+T-072,trinaic towl rod,en,test,typo,W-219,,known-item,tail,False,True,0
+T-073,twin bed frrame,en,test,typo,W-417,Bed Frames,specific,tail,False,True,1
+T-074,cushion replacemnet insert,en,test,typo,W-390,Furniture Cushions,specific,tail,False,True,0
+T-075,decorative wall cloks,en,test,typo,W-241,Wall Clocks,specific,tail,False,True,0
+T-076,deltta trinsic double towel hook in champagne bronze,en,test,typo,W-201,Towel & Robe Hooks,known-item,tail,False,True,0
+T-077,drum picutre,en,test,typo,W-147,Wall Art,specific,tail,False,True,2
+T-078,storage dreser,en,test,typo,W-232,Dressers & Chests,broad,tail,False,True,3
+T-079,kelly clarkson ligt fixtures,en,test,typo,W-233,Flush Mount Lighting,known-item,tail,False,True,0
+T-080,togo chaiir,en,test,typo,W-373,Accent Chairs,known-item,tail,False,True,1
+T-081,tall buffet cabnet,en,test,typo,W-447,Sideboards & Buffets,specific,tail,False,True,1
+T-082,almost heavven sauna,en,test,typo,W-178,Saunas,known-item,tail,False,True,0
+T-083,dnosaur,en,test,typo,W-002,Kids Wall Décor,broad,tail,False,True,3
+T-084,cavnas map art,en,test,typo,W-341,Wall Art,specific,tail,False,True,1
+T-085,ge top loading wassher 4.5,en,test,typo,W-203,Washing Machines,known-item,tail,True,True,0
+T-086,toddler couh fold out,en,test,typo,W-042,Kids Chairs,specific,tail,False,True,1
+T-087,pedistloe sink,en,test,typo,W-485,Kitchen Sinks,broad,tail,False,True,1
+T-088,fortunat cofffee table,en,test,typo,W-363,Coffee & Cocktail Tables,known-item,tail,False,True,0
+T-089,card tabe,en,test,typo,W-446,Folding Tables,broad,tail,False,True,4
+T-090,bar room wall decro,en,test,typo,W-096,Wall Décor,specific,tail,False,True,1
+C-001,13338,en,train,code,,Canisters & Jars,known-item,tail,True,True,4
+C-002,LK-91857,en,train,code,,Kids Beds,known-item,tail,True,True,8
+C-003,77229,en,train,code,,Hampers & Baskets,known-item,tail,True,True,4
+C-004,lk23511,en,train,code,,Christmas Trees,known-item,tail,True,True,7
+C-005,lk 92939,en,train,code,,Living Room Table Sets,known-item,tail,True,True,4
+C-006,LK-17288,en,train,code,,Range Hoods,known-item,tail,True,True,10
+C-007,LK-55513,en,train,code,,Wall & Accent Mirrors,known-item,tail,True,True,13
+C-008,LK-80645,en,train,code,,Coffee & Cocktail Tables,known-item,tail,True,True,11
+C-009,lk41101,en,train,code,,Toilet Paper Holders,known-item,tail,True,True,8
+C-010,LK-14239,en,train,code,,Shoe Storage,known-item,tail,True,True,8
+C-011,51036,en,validation,code,,Christmas Trees,known-item,tail,True,True,7
+C-012,62696,en,validation,code,,Cabinet and Drawer Pulls,known-item,tail,True,True,4
+C-013,lk87585,en,validation,code,,Area Rugs,known-item,tail,True,True,7
+C-014,lk 84561,en,validation,code,,"Vases, Urns, Jars, & Bottles",known-item,tail,True,True,10
+C-015,LK-87084,en,validation,code,,Light Bulbs,known-item,tail,True,True,8
+C-016,56985,en,validation,code,,Area Rugs,known-item,tail,True,True,8
+C-017,58931,en,validation,code,,Clothing & Garment Racks,known-item,tail,True,True,8
+C-018,lk43566,en,validation,code,,Dining Tables,known-item,tail,True,True,3
+C-019,lk38204,en,validation,code,,Coffee & Cocktail Tables,known-item,tail,True,True,2
+C-020,lk42775,en,validation,code,,Desks,known-item,tail,True,True,8
+C-021,86953,en,test,code,,Bread & Loaf Pans,known-item,tail,True,True,8
+C-022,71541,en,test,code,,Curtains & Drapes,known-item,tail,True,True,5
+C-023,75618,en,test,code,,Bar Stools,known-item,tail,True,True,11
+C-024,lk 68270,en,test,code,,Ride-On Toys,known-item,tail,True,True,4
+C-025,24819,en,test,code,,Bar & Wine Tools,known-item,tail,True,True,6
+C-026,lk 63752,en,test,code,,Curtains & Drapes,known-item,tail,True,True,8
+C-027,LK-23668,en,test,code,,Interior Doors,known-item,tail,True,True,6
+C-028,25201,en,test,code,,Accent Chairs,known-item,tail,True,True,6
+C-029,lk41861,en,test,code,,Office Chairs,known-item,tail,True,True,9
+C-030,LK-29216,en,test,code,,Landscape Lighting,known-item,tail,True,True,9
+C-031,41878,en,test,code,,Accent Chairs,known-item,tail,True,True,10
+C-032,LK-67973,en,test,code,,Armoires & Wardrobes,known-item,tail,True,True,5
+C-033,lk 34286,en,test,code,,Canisters & Jars,known-item,tail,True,True,7
+C-034,lk11027,en,test,code,,,known-item,tail,True,True,8
+C-035,lk23397,en,test,code,,Teen Dressers,known-item,tail,True,True,11
+C-036,LK-87486,en,test,code,,Area Rugs,known-item,tail,True,True,9
+C-037,26054,en,test,code,,Wall Clocks,known-item,tail,True,True,8
+C-038,70408,en,test,code,,Bathroom Storage,known-item,tail,True,True,10
+C-039,LK-64699,en,test,code,,,known-item,tail,True,True,9
+C-040,13897,en,test,code,,Picture Frames,known-item,tail,True,True,10
+P-001,sofa,en,test,planted,,Sofas,broad,head,False,True,158
+P-002,couch,en,test,planted,,Sofas,broad,head,False,True,81
+P-003,canapé,fr,test,planted,,Sofas,broad,head,False,True,79
+P-004,sofa,en,validation,planted,,Sofas,broad,head,False,True,158
