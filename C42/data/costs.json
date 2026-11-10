@@ -1,0 +1,12 @@
+{
+  "note": "Assumptions for the whole course (not measured). Change them only in the authoring brief.",
+  "damaged_sold_as_new": 45.0,
+  "damaged_sold_as_new_parts": {"refund": 28.0, "return_shipping": 9.0, "complaint_handling": 8.0},
+  "good_marked_damaged": 28.0,
+  "check_by_a_person": 0.5,
+  "check_minutes": 1,
+  "staff_cost_per_hour": 30.0,
+  "checks_per_day": 100,
+  "returns_per_day": 600,
+  "currency": "CAD"
+}

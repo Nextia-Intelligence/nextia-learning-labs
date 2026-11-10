@@ -1,0 +1,79 @@
+category,area,name
+cs.AI,cs,Artificial Intelligence
+cs.AR,cs,Hardware Architecture
+cs.CC,cs,Computational Complexity
+cs.CE,cs,"Computational Engineering, Finance, and Science"
+cs.CG,cs,Computational Geometry
+cs.CL,cs,Computation and Language
+cs.CR,cs,Cryptography and Security
+cs.CV,cs,Computer Vision and Pattern Recognition
+cs.CY,cs,Computers and Society
+cs.DB,cs,Databases
+cs.DC,cs,"Distributed, Parallel, and Cluster Computing"
+cs.DL,cs,Digital Libraries
+cs.DM,cs,Discrete Mathematics
+cs.DS,cs,Data Structures and Algorithms
+cs.ET,cs,Emerging Technologies
+cs.FL,cs,Formal Languages and Automata Theory
+cs.GL,cs,General Literature
+cs.GR,cs,Graphics
+cs.GT,cs,Computer Science and Game Theory
+cs.HC,cs,Human-Computer Interaction
+cs.IR,cs,Information Retrieval
+cs.IT,cs,Information Theory
+cs.LG,cs,Machine Learning
+cs.LO,cs,Logic in Computer Science
+cs.MA,cs,Multiagent Systems
+cs.MM,cs,Multimedia
+cs.MS,cs,Mathematical Software
+cs.NE,cs,Neural and Evolutionary Computing
+cs.NI,cs,Networking and Internet Architecture
+cs.OH,cs,Other Computer Science
+cs.OS,cs,Operating Systems
+cs.PF,cs,Performance
+cs.PL,cs,Programming Languages
+cs.RO,cs,Robotics
+cs.SC,cs,Symbolic Computation
+cs.SD,cs,Sound
+cs.SE,cs,Software Engineering
+cs.SI,cs,Social and Information Networks
+eess.AS,eess,Audio and Speech Processing
+eess.IV,eess,Image and Video Processing
+eess.SP,eess,Signal Processing
+eess.SY,eess,Systems and Control
+math.AC,math,Commutative Algebra
+math.AG,math,Algebraic Geometry
+math.AP,math,Analysis of PDEs
+math.AT,math,Algebraic Topology
+math.CA,math,Classical Analysis and ODEs
+math.CO,math,Combinatorics
+math.CT,math,Category Theory
+math.CV,math,Complex Variables
+math.DG,math,Differential Geometry
+math.DS,math,Dynamical Systems
+math.FA,math,Functional Analysis
+math.GM,math,General Mathematics
+math.GN,math,General Topology
+math.GR,math,Group Theory
+math.GT,math,Geometric Topology
+math.HO,math,History and Overview
+math.KT,math,K-Theory and Homology
+math.LO,math,Logic
+math.MG,math,Metric Geometry
+math.MP,math,Mathematical Physics
+math.NA,math,Numerical Analysis
+math.NT,math,Number Theory
+math.OA,math,Operator Algebras
+math.OC,math,Optimization and Control
+math.PR,math,Probability
+math.QA,math,Quantum Algebra
+math.RA,math,Rings and Algebras
+math.RT,math,Representation Theory
+math.SG,math,Symplectic Geometry
+math.SP,math,Spectral Theory
+math.ST,math,Statistics Theory
+stat.AP,stat,Applications
+stat.CO,stat,Computation
+stat.ME,stat,Methodology
+stat.ML,stat,Machine Learning
+stat.OT,stat,Other Statistics

@@ -1,0 +1,21 @@
+rule,kind,note
+"couch, sofa",two-way,
+"grey, gray",two-way,
+"rug, carpet",two-way,
+"nightstand, bedside table, night stand",two-way,
+"loveseat, love seat",two-way,
+"barstool, bar stool",two-way,
+"tv, television",two-way,
+"drapes, curtains",two-way,
+"comforter, duvet",two-way,
+"dresser, chest of drawers",two-way,
+"faucet, tap",two-way,
+"armchair, accent chair",two-way,
+"patio, outdoor",two-way,
+"ottoman, footstool",two-way,
+"throw pillow, accent pillow, decorative pillow",two-way,
+"bookcase, bookshelf",two-way,
+"wardrobe, armoire",two-way,
+sectional => sofa,one-way,a sectional is a kind of sofa
+recliner => chair,one-way,
+"light, lamp",two-way,"planted: breaks light blue, light wood"

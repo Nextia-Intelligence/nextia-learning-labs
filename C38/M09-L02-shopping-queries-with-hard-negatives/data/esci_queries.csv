@@ -1,0 +1,1401 @@
+query_id,locale,split,query,source
+130,es,test,'el verano sin hombres',negations
+260,es,test,",metal anillo para el pelo sin goma",negations
+740,es,test,1 funda de cojin con patron mixto sin relleno,negations
+901,es,test,1 turbante para rizos sin calor,negations
+937,es,test,"1, 2 o 3 pantalones cortos moldeadores sin costuras",negations
+1440,es,test,100 x papel para hornear freidora sin aceite,negations
+1658,es,test,10xdiez saco nordico sin relleno,negations
+2107,es,test,140x230 estor beige sin taladrar,negations
+2456,es,test,1tanga sin costuras mujer,negations
+2467,es,test,1x cat 7a conector de red rj45 sin herramientas,negations
+2472,es,test,1´5l sin lactosa,negations
+2512,es,test,2 barras para utensilios cocina negro sin perforar,negations
+2521,es,test,2 cepillso electricso sin cargador,negations
+2649,es,test,2 porterias de fútbol sin balón,negations
+2694,es,test,2 utp cat 6a sin herramientas,negations
+2829,es,test,200 cartas pokemon sin repetir,negations
+2948,es,test,226ers sin mangas,negations
+3095,es,test,250 sobres sin ventana 26x18,negations
+3323,es,test,3 cuadros sin marcos muy coloridos,negations
+3374,es,test,3 laminas sin marco decorativas salon,negations
+3386,es,test,3 metros de luces led sin enchufw,negations
+3428,es,test,3 restas sin llevada ismael sausa,negations
+3453,es,test,3 ventiladores sin color,negations
+3637,es,test,30g ginebra sin alcol,negations
+3651,es,test,30x90 sin marco,negations
+3691,es,test,32'' full hd,other
+3745,es,test,35mm sigma sony,other
+3929,es,test,3m ffp3 sin valvula,negations
+3955,es,test,3mm algondon sin trenzar,negations
+4084,es,test,4 ojos de buey sin bombillas,negations
+4102,es,test,4 pin conector led sin soldadura,negations
+4121,es,test,4 taburetes cocina sin respaldo.,negations
+4642,es,test,50 mm canon,other
+5010,es,test,64tb,other
+5378,es,test,8gb 512gb,other
+6300,es,test,acer conceptd 500,other
+6391,es,test,acrilico cover para uñas,parse_pattern
+6651,es,test,adidas busenitz vulc,parse_pattern
+7761,es,test,alarma corte corriente,other
+7919,es,test,alfabeto montessori,other
+7952,es,test,alfombras sin pelo,negations
+7983,es,test,alicates crimpar,other
+8026,es,test,alienware portatil gaming,other
+8214,es,test,almohada ergononica espalda,other
+8221,es,test,almohadas firmeza media,other
+8614,es,test,amazon sofa,other
+8838,es,test,americanas hombre sport,parse_pattern
+8895,es,test,amor sin limites,negations
+9014,es,test,andadores sin ruedas,negations
+9162,es,test,anillos hombre sello de oro solitario,other
+9164,es,test,anillos mujer acero inoxidable ajustable,other
+9353,es,test,anorak mujer rojo,parse_pattern
+9389,es,test,anthem pc,other
+9522,es,test,aorpods,other
+10159,es,test,archivador anillas de oxford,other
+10292,es,test,arkham knight,other
+10311,es,test,arm & hammer,parse_pattern
+10592,es,test,arts and crafts for kids,parse_pattern
+10606,es,test,arya stark funko pop,parse_pattern
+10627,es,test,asesinos sin rostro,negations
+10718,es,test,aspirador dayson sin cable potente,negations
+10736,es,test,aspiradora kobold,other
+11106,es,test,audiolab m-dac plus,other
+13151,es,test,barbie cientifica,other
+13288,es,test,barras proteinas sin azucar,negations
+13335,es,test,bascula de baño xiaomi,other
+13547,es,test,bateria patinete 60v,other
+13560,es,test,batería cocina cobre,other
+13838,es,test,batman,other
+14028,es,test,bañadores sin tirantes de mujer,negations
+15428,es,test,bici niña 16 pulgadas,other
+15466,es,test,bicicletas electricas vintage,other
+17020,es,test,blanco y negro decoracion,parse_pattern
+17173,es,test,bloc oxford 4 anillas,parse_pattern
+17851,es,test,bobina de hilo para soldar sin gas,negations
+17906,es,test,body lentejuelas,other
+18084,es,test,bolis pilot borrables azul,other
+18183,es,test,bolsos organizador maletas,other
+18566,es,test,bordado dorado,other
+18732,es,test,botas altas mustang,other
+18745,es,test,botas de agua niña azul marino,other
+18771,es,test,botas futbol tacos talla 37,other
+18792,es,test,botas mujer iowa,other
+18881,es,test,botiquin riñonera emergencias,parse_pattern
+19409,es,test,bragas faja sin costuras mujer,negations
+20445,es,test,buje trasero mtb 29,parse_pattern
+20771,es,test,bushnell golf,other
+20928,es,test,buzon de tiempo,parse_pattern
+21035,es,test,c922,other
+21245,es,test,cadena para bolso,other
+21253,es,test,cadenas oro hombre 24k,other
+21290,es,test,cafetera nesspreso cápsulas,other
+21335,es,test,caja negra de conexión electrónicos,other
+21339,es,test,caja para guardar vinilos,behavioral
+21576,es,test,calibre pie de rey mitutoyo,behavioral
+21825,es,test,camas juveniles con escritorio,other
+21832,es,test,camasutra libro,other
+22925,es,test,caramelos sin azucar solano,negations
+22974,es,test,carcasa gopro session,parse_pattern
+23111,es,test,cargador cable galaxi s8+,other
+23147,es,test,cargadores apple,other
+23282,es,test,carpa militar,other
+23460,es,test,cartucho tinta lc221,other
+23515,es,test,cascos gaming sin microfono,negations
+23944,es,test,catalizador pintura epoxi sin disolvente nazza,negations
+24045,es,test,cazadora lentejuelas mujer,other
+24050,es,test,cazadora plumas mujer invierno,other
+24051,es,test,cazadora sport chico,other
+24061,es,test,cañamazo punto de cruz,parse_pattern
+24603,es,test,chair massage,other
+24747,es,test,champu matrix sin sulfatos,negations
+24748,es,test,champu morado sin sulfatos,negations
+24784,es,test,chandal nike mujer invierno,other
+24910,es,test,chaquetas hombre invierno waterproof,other
+26159,es,test,chubasquero mujer talla grande,other
+26166,es,test,chuches sin gluten,negations
+26284,es,test,cigarrillos electrónicos mujer,other
+26312,es,test,cine para adultos x,parse_pattern
+26326,es,test,cinta adhesiva 2.5,other
+27243,es,test,coche,other
+27260,es,test,cochede juguete para niños,other
+27266,es,test,coches super zings,other
+27268,es,test,coches vtech,other
+27281,es,test,cocina para todos mery libro,behavioral
+27350,es,test,coderas niños patines,parse_pattern
+27536,es,test,cola madera titebond,parse_pattern
+27560,es,test,colchon masaje espalda,other
+27665,es,test,colgadores de cuadros sin agujeros,negations
+27683,es,test,colgar cuadros sin clavos,negations
+27734,es,test,collar oro 18k,other
+28495,es,test,confitura sin azucar,negations
+28511,es,test,conjunto ducha sin grifo roca,negations
+28613,es,test,contorno ojos loreal,other
+29303,es,test,cortavientos moto manillar,other
+29537,es,test,couch tisch,other
+29990,es,test,crema avellanas sin azucar,negations
+30006,es,test,crema sexo calor mujer y hombre,parse_pattern
+30404,es,test,cruzcampo lata,other
+30492,es,test,cuadr pequeños decoracion s,other
+30554,es,test,cubierta 26x1.95,other
+30603,es,test,cuchilla termomix tm 31,parse_pattern
+30718,es,test,cunas muebles,other
+31224,es,test,cámaras bridge baratas,other
+31397,es,test,daiwa crosscast,behavioral
+31671,es,test,data a ide,other
+32442,es,test,deportivas con plataformas de color rojo,other
+32459,es,test,deposito de plastico,other
+32465,es,test,depósito gasolina de 100litros,other
+32868,es,test,dewars 18,behavioral
+33273,es,test,dii mavic pro 2,other
+33293,es,test,diluyente esmalte uñas semipermanente,parse_pattern
+33412,es,test,dinosaurios playmobil,other
+33578,es,test,disfraces niña muñeca,other
+34161,es,test,doble pantalla,other
+34767,es,test,donde el corazón te lleve,behavioral
+34932,es,test,dormitorio matrimonio baratos,other
+36095,es,test,dvd infantiles español,other
+36906,es,test,el ikabog,behavioral
+36921,es,test,el lloc magic,behavioral
+37050,es,test,electric estufa,other
+37352,es,test,elite99 colores verano,parse_pattern
+37370,es,test,ellese camisetas hombre,behavioral
+38035,es,test,escribir sin faltas,negations
+38409,es,test,eucalipto difusor,other
+39206,es,test,face paints,parse_pattern
+39623,es,test,farmacia online sin gastos de envio,negations
+39671,es,test,faros de bicicleta americana,other
+39905,es,test,felpas niña,other
+40088,es,test,fiambrera niños ecologica,parse_pattern
+40169,es,test,fifa 20 ps4,other
+40224,es,test,figuras pesebre madera,other
+41209,es,test,flesh eater courts,parse_pattern
+41754,es,test,foco emergencia casa,parse_pattern
+41755,es,test,foco empotrable led pared,other
+42687,es,test,frigorifico balay cristal blanco,other
+42985,es,test,fuente gatos sin filtros,negations
+43014,es,test,fujifilm x-a5,other
+43361,es,test,funda xiaomi mi 9 con esquinas reforzadas,other
+43365,es,test,funda xiaomi redmi 7,other
+43366,es,test,funda xiaomi redmi note 6 pro amarilla,other
+43438,es,test,fundas sillas jardín,other
+43815,es,test,gabardina hombre tres cuartos,other
+43816,es,test,gabardina mujer invierno rebajas,other
+43864,es,test,gafas raivan hombre,other
+43901,es,test,gala smart tapa,other
+45022,es,test,get around,behavioral
+46668,es,test,good girl carolina herrera,other
+46838,es,test,gorra para chica,other
+46853,es,test,gorro dc,other
+46917,es,test,gourmia freidora sin aceite,negations
+47024,es,test,gran diver invicta,behavioral
+47547,es,test,grifo lateral sin caño para lavabo,negations
+47758,es,test,gtx660,other
+47789,es,test,guantes everlast,other
+47926,es,test,guilete fusion proglide,other
+48240,es,test,haftgrund,other
+48245,es,test,haier frigorifico,other
+49602,es,test,hdmi ladron 2 salidas,other
+50658,es,test,hilo soldar sin gas 1mm,negations
+50954,es,test,hombre de honor,other
+51234,es,test,hookah,other
+51300,es,test,hornos industriales,other
+51656,es,test,hoz mango largo,behavioral
+51786,es,test,hp zbook x2,other
+52866,es,test,imitacion moldura,other
+53734,es,test,ionizador sin ozono,negations
+54859,es,test,irimo herramientas,other
+54988,es,test,ise cinta de correr,other
+55099,es,test,itelco vascula,parse_pattern
+56438,es,test,juego forza horizon 4 pc,behavioral
+56449,es,test,juego ps4 nba 2k20,other
+56917,es,test,kang and kodos,parse_pattern
+57086,es,test,kayak autovaciable,other
+58184,es,test,kindle,other
+58475,es,test,kit fibra de vidrio y resina,parse_pattern
+59002,es,test,kong,other
+59084,es,test,kpop albums the perfect red velvet,other
+59304,es,test,l736h,behavioral
+59308,es,test,la biblia cristiana,other
+59347,es,test,la la land vinyl,behavioral
+60221,es,test,laser co2 corte,other
+60409,es,test,lavaaspiradora,other
+60831,es,test,lechada juntas de baño,parse_pattern
+62002,es,test,libro lengua 3 primaria santillana,behavioral
+62585,es,test,limpiador cocina sin aclarado,negations
+62606,es,test,limpieza acero inoxidable,other
+63715,es,test,loreto sesma,other
+63797,es,test,louis tomlinson walls,parse_pattern
+64076,es,test,luces infantiles sensoriales,other
+64197,es,test,lulzbot mini 2,other
+64352,es,test,luz led enchufe mechero,other
+64412,es,test,lámina a4 decorativa,behavioral
+65257,es,test,maleta 40x20x25 cm ryanair,other
+65286,es,test,malezas,behavioral
+65300,es,test,mallas de invierno mujer,other
+65404,es,test,mando all in one,other
+65426,es,test,mando usb inalambrico,other
+65638,es,test,maquina cortar piedra,other
+65664,es,test,maquina soldar hilo sin gas,negations
+65665,es,test,maquina soldar por puntos,other
+65929,es,test,mars poster,parse_pattern
+66078,es,test,masajes spa,other
+66093,es,test,mascara luz neutrogena,other
+66271,es,test,masturbádor hombre lata,other
+66385,es,test,matizador sin sulfatos,negations
+66570,es,test,mayas estampadas mujer,other
+66638,es,test,mcbook apple pro,other
+68126,es,test,merida,other
+68172,es,test,mermelada sin azucar arandanos,negations
+68219,es,test,mesa de ping pong plegable,parse_pattern
+68252,es,test,mesas jardin piedra,other
+68827,es,test,microfonos solapa inalambrico,other
+69234,es,test,mindstorm ev3,other
+69801,es,test,mister potato,other
+69985,es,test,mochila colegio niña,other
+70032,es,test,mochilas deporte,other
+70504,es,test,monster sin azucar pack,negations
+70632,es,test,mophie iphone 7,other
+70727,es,test,mosaicos manualidades,parse_pattern
+71138,es,test,movil sin camara delantera,negations
+71200,es,test,mpm freidora sin aceite,negations
+71343,es,test,mt matrix,other
+71410,es,test,mueble auxiliar mini cadena,other
+72253,es,test,nas netgear,other
+72768,es,test,nenuco dolor de garganta,other
+73997,es,test,nivea manchas,other
+74809,es,test,nutria peluche,parse_pattern
+75022,es,test,obleas de arroz,other
+75408,es,test,old skool,other
+76031,es,test,ordenadores msi precios,other
+76178,es,test,organizador accesorios afeitado,other
+76179,es,test,organizador apilable stanley,other
+76335,es,test,ortur laser master 2,other
+76919,es,test,ovomaltine original,parse_pattern
+77368,es,test,pamela,other
+77508,es,test,pantalla android seat leon mk3,parse_pattern
+77649,es,test,papel fotografico polaroid 600,other
+77671,es,test,papelera habitacion,other
+77824,es,test,parche cuero ropa,parse_pattern
+77887,es,test,parogencyl colutorio,behavioral
+77989,es,test,pasta de dientes sin plástico,negations
+78086,es,test,patinete lila,other
+78302,es,test,pc convertible 2 en 1,other
+78320,es,test,pc haming,other
+78576,es,test,pega de pestañas,behavioral
+78589,es,test,pegatina luna,other
+78693,es,test,pen de animales,other
+79023,es,test,perfumes hombre versace eros,parse_pattern
+79062,es,test,perritos para niñas,parse_pattern
+79176,es,test,pesas,other
+79858,es,test,pies hongos,parse_pattern
+79943,es,test,pilas para calculadora casio,other
+79952,es,test,piles cream,behavioral
+80011,es,test,pillow top para colchon,other
+81141,es,test,plastico trasparente grueso,behavioral
+81266,es,test,playeras tommy hombre,behavioral
+81984,es,test,polvo traslucido loreal,parse_pattern
+82041,es,test,pomada del silencio,parse_pattern
+82056,es,test,pompom mini,other
+82359,es,test,porsche 993 turbo,other
+82533,es,test,portalamparas escritorio,other
+82545,es,test,portatil 4k,other
+82559,es,test,portatil razer blade pro,other
+83181,es,test,presscontrol para bomba de agua,parse_pattern
+83382,es,test,princess revlon,other
+83807,es,test,proteina guisante texturizada,behavioral
+83848,es,test,proyector pantalla,other
+84079,es,test,puerto hdmi a tablet,other
+84334,es,test,punta taco billar,parse_pattern
+84339,es,test,punzon metal letra,other
+85120,es,test,quitabolas philips,behavioral
+85662,es,test,raton bluetooth sin receptor recargable,negations
+85801,es,test,razer kraken x,other
+86060,es,test,rebel master,other
+86220,es,test,recuerditos para bodas,parse_pattern
+86774,es,test,regalos para los reyes magos,other
+86905,es,test,reloj mujer dw,other
+86948,es,test,relojes con gps,other
+86965,es,test,relojes mujer acuaticos baratos analogicos,other
+87168,es,test,repuesto vaso licuadora oster,other
+87794,es,test,rinoduche xl,behavioral
+88009,es,test,robot piscina sin cable,negations
+88024,es,test,robusta botas seguridad,other
+88210,es,test,rointe,other
+88538,es,test,ropa trabajo hombre,other
+89121,es,test,rulo camilla masaje,parse_pattern
+89685,es,test,sage green keyboard,other
+90281,es,test,samsung s8,other
+91007,es,test,sckeacher mujer sandalias,parse_pattern
+91426,es,test,secador de pelo,other
+91431,es,test,secador pelo 500w,other
+91507,es,test,seda natural sin teñir,negations
+92458,es,test,shein ropa niña,behavioral
+92719,es,test,shoe tree,other
+95560,es,test,sobre plastico transparente,other
+95683,es,test,sofa piel blanco,other
+95803,es,test,sofás jardin exterior,other
+95970,es,test,sombreros piratas,other
+96108,es,test,sony dslr,other
+96110,es,test,sony e gran angular,other
+96643,es,test,speed tubes kit completo,other
+98529,es,test,strength bands,other
+98573,es,test,strimmer,other
+98818,es,test,subrayador escaner,other
+98883,es,test,sudadera halloween hombre,other
+98914,es,test,sudaderas alitas,other
+98935,es,test,sudarera de mujer lisa blanca,other
+99041,es,test,sujetador playtex sin aros algodon,negations
+99045,es,test,sujetador reductor sin aros,negations
+99048,es,test,sujetador solo con tirantes,parse_pattern
+99153,es,test,sun parasol,parse_pattern
+99329,es,test,super mario odyssey nintendo switch,other
+99400,es,test,superman hijo rojo figura,parse_pattern
+100324,es,test,tacon buganvilla,behavioral
+100721,es,test,tapiflex 150x200 sin patas,negations
+100773,es,test,tarjetas xqd,other
+100885,es,test,taza abuelo mr wonderful,parse_pattern
+101155,es,test,teclado para samsung galaxy tab a sm- t550,other
+101168,es,test,teclados originales,parse_pattern
+101264,es,test,tefal electrica picadoras,other
+101292,es,test,tela nylon,other
+101361,es,test,televisión smart tv 65 pulgadas,other
+101533,es,test,termica verde futbol,parse_pattern
+101651,es,test,tetina dr brown nivel 3 boca estrecha,other
+101972,es,test,the feather thief,parse_pattern
+102295,es,test,the painted bird,parse_pattern
+103346,es,test,tira aislante autoadhesiva profesional fillin,parse_pattern
+103555,es,test,tocado dorado para el pelo,parse_pattern
+103950,es,test,tom moore,parse_pattern
+104319,es,test,tortitas sin gluten,negations
+105263,es,test,trigo sarraceno sin gluten copos,negations
+105893,es,test,tv auriculares inalámbrico radio,other
+106634,es,test,under armour mujer zapatillas 42,parse_pattern
+107132,es,test,urna cenizas pequeñas,parse_pattern
+107506,es,test,usp airsoft,parse_pattern
+107705,es,test,vainilla sin azucar,negations
+107950,es,test,vaqueros mujer verano,parse_pattern
+107984,es,test,vaso oster licuadora,behavioral
+107990,es,test,vasos cristal labrados,other
+108205,es,test,ventilador calefactor usb,other
+108336,es,test,vestido ajustado negro mujer,parse_pattern
+108340,es,test,vestido con tirantes algodon,other
+108371,es,test,vestidod largos tay days,parse_pattern
+108991,es,test,vitis aloe vera manzana,parse_pattern
+109288,es,test,wacom cintiq,other
+109289,es,test,wacom cintiq pro,other
+109294,es,test,wacon pro,other
+110283,es,test,wd green,other
+112850,es,test,womens black and white striped trousers,other
+114300,es,test,xbox one s,other
+114349,es,test,xevi verdaguer libros,parse_pattern
+114382,es,test,xiaomi cinta de correr plegable,parse_pattern
+114383,es,test,xiaomi g1 aspirador,parse_pattern
+114401,es,test,xiaomi mi a3,other
+114444,es,test,xihama mi band 2,other
+115243,es,test,ytx7l bs bateria,behavioral
+115472,es,test,zapato negro hebilla hombre vestir,other
+115524,es,test,zapatos zaragoza mujer,parse_pattern
+115630,es,test,zephyrus g14,other
+115895,es,test,zuecos sin agujeros,negations
+13,us,test,#1 rated resveratrol supplement without tea leaves,negations
+177,us,test,(p_num: integer not null i_num: integer not null,negations
+402,us,test,0 size 4 pads without wings,negations
+568,us,test,08 chevy tahoe wheel not cover,negations
+579,us,test,08 wrangler jk without hitch,negations
+778,us,test,1 inch mending plate,parse_pattern
+856,us,test,1 per day bariatric multivitamin capsules without iron,negations
+1039,us,test,1/16th scale gravity wagon without tractor,negations
+1359,us,test,10.5 inw straight silicone bench squeegee without handle,negations
+1423,us,test,100 photo album 4x6,other
+1457,us,test,100% cotton underwear,other
+1466,us,test,100% montmorency tart cherry juice without added sugar,negations
+1509,us,test,100w solar panel without controller,negations
+1536,us,test,105 cm belt strap without buckle,negations
+1618,us,test,10w30 marine oil,parse_pattern
+1718,us,test,11 year old girl gifts,other
+1847,us,test,12 month hoodie girls,other
+1897,us,test,12 volt g4 pin base,other
+2215,us,test,15x70 binoculars,other
+2603,us,test,2 oz bowls,other
+2750,us,test,"2.5"" hdd",other
+2756,us,test,20 amp deepcycle battery,other
+2810,us,test,20 pound weights,other
+2899,us,test,21 day fix portion control,parse_pattern
+2920,us,test,22 gold chain for men,other
+3049,us,test,24v bow mount trolling motor,other
+3268,us,test,2x4 rug,other
+3363,us,test,3 inch foam roller for physical therapy & exercise,other
+3682,us,test,32 inch smart tv 4k,other
+4027,us,test,4 1/2 angle grinder,other
+4116,us,test,4 seater patio set,other
+4185,us,test,"40"" electric fireplace insert",other
+4300,us,test,49ers hats for men,other
+4321,us,test,4exls,parse_pattern
+4341,us,test,4k 3d tv,other
+4696,us,test,50mm 1.8 sony,other
+4978,us,test,60s wigs for women,parse_pattern
+5130,us,test,7.4v 2.2ah,other
+5339,us,test,80s disney shirt,other
+5497,us,test,901 ink,other
+5640,us,test,Black leather jacket with dark leopard print and black patent leather detailing. ,nlqec
+6077,us,test,aboline makeup remover,parse_pattern
+6663,us,test,adidas dry fit shirt men,other
+7127,us,test,ag earbuds,parse_pattern
+7585,us,test,airpods wireless charging case,other
+7996,us,test,alice in wonderland crewneck,other
+8062,us,test,all black yankees hat,parse_pattern
+8274,us,test,alpaca comforter queen,other
+8327,us,test,already scrapbook pages,other
+8369,us,test,altimaker 3d printer,other
+8816,us,test,american indian jewelry for women,other
+8942,us,test,an appeal to heaven flag,other
+9215,us,test,anime figures poseable,other
+9218,us,test,anime hentia figure,other
+9368,us,test,ant man,other
+9407,us,test,anti freeze products without blow out,negations
+9719,us,test,apple iphone 11 case,other
+9779,us,test,apple power adapter and lightning cable,other
+9805,us,test,apple tv usb c cable,other
+10841,us,test,asus aimesh,other
+10864,us,test,asus predator monitor,other
+11328,us,test,automatic pro car tracker,other
+11509,us,test,award winning childrens books ages 9-12,other
+11621,us,test,b'patriot supply',other
+11821,us,test,baby boy onesies,parse_pattern
+11924,us,test,baby fisher price cat,other
+11956,us,test,baby gift set,other
+11970,us,test,baby girl clothes funny,other
+12176,us,test,baby shower gifts,other
+12534,us,test,bad vibes shirt 3xl,other
+13089,us,test,bar stools,other
+14337,us,test,bears hat b,other
+14638,us,test,bee magic wand lip and face,parse_pattern
+14804,us,test,bella canvas heather autumn,other
+14880,us,test,ben 10 ver,other
+15213,us,test,bestway 15' pool pump hoses,other
+15347,us,test,bi-xenon hid projector fog light,other
+15667,us,test,big nate book 4-6,other
+16448,us,test,black cumberbund,other
+16770,us,test,black rose mens shirts,other
+16787,us,test,black sequin fabric,other
+17405,us,test,blue light blocking glasses 175,other
+17461,us,test,blue sandals for women,other
+17775,us,test,boat bumper,other
+17884,us,test,body bath moissturizer,other
+18441,us,test,books on wood,other
+18503,us,test,boot pulls equestrian boots,other
+19011,us,test,bows for wreaths indoor xlarge,other
+19078,us,test,boxing track suit,other
+19122,us,test,boya by-pm700sp,behavioral
+19733,us,test,bribery,other
+19923,us,test,bronze and pottery,other
+20294,us,test,bud abbott and lou costello collection,other
+20296,us,test,bud light pool table light,other
+20834,us,test,butt plug with string attatched,other
+20872,us,test,butterfly face mask washable prime,other
+21314,us,test,caitriona balfe,other
+22414,us,test,canon 6d battery grip,other
+22429,us,test,canon d6 mark ii,other
+23148,us,test,cargill uncertain,other
+23234,us,test,carmel harrington,parse_pattern
+23320,us,test,carplay head unit,other
+23347,us,test,carro control remoto,other
+23817,us,test,cat furniture,other
+24387,us,test,ceramic coffee mug without handle,negations
+25132,us,test,cheap white dress shoes,other
+25197,us,test,cheese dip prime pantry,parse_pattern
+26201,us,test,chunky lace up heels,other
+26296,us,test,cinch white label jeans,parse_pattern
+26321,us,test,cinnamon sticks for potpourri,other
+26375,us,test,circa watches,other
+26431,us,test,citi mini gt2 stroller,other
+26435,us,test,citizen eco drive replacement band,other
+27084,us,test,cloud drop top frame guest book,other
+27229,us,test,cobra 29 cb radio peaked and tuned,other
+27920,us,test,colorful otterbox for iphone 6s plus,other
+27998,us,test,columbia women's back beauty long sport short,other
+28373,us,test,computer monitor wall mount 27in,other
+28432,us,test,concert shirts for women,other
+29430,us,test,cotonnelle flushable wipes,other
+29450,us,test,cotton candy chapstick,other
+29567,us,test,counter stove,other
+29777,us,test,cpu intel i7,other
+29859,us,test,cranberry mask,other
+30035,us,test,crepe paper purple,parse_pattern
+30455,us,test,crystals,other
+30938,us,test,custom soap packaging and labels for soapmaking,other
+31012,us,test,cute flower pot,other
+31081,us,test,cute stopwatch on lanyard,other
+31119,us,test,cutlery pocket knifes forks bag,other
+31134,us,test,cutting board turquoise,other
+31196,us,test,cynthia morgan book,other
+31326,us,test,daddy shark shirt back,other
+32560,us,test,designer handbags for women,other
+32821,us,test,dewalt cold cut saw,other
+33289,us,test,dill pickle slim jim,parse_pattern
+33922,us,test,disposable night guards for teeth grinding,parse_pattern
+33943,us,test,distilling supplies,other
+34265,us,test,dog allergy spray,other
+34572,us,test,dog things for girls,other
+35029,us,test,double team dvd,other
+35190,us,test,dr smith butt,other
+35674,us,test,drumstick bag,other
+35939,us,test,dummy door handle brass,other
+36669,us,test,ed fowler,other
+36726,us,test,editing day sign,other
+36912,us,test,el juego de las llaves,other
+36967,us,test,elastic bands 1 inch wide,other
+37098,us,test,electric moped for adults,other
+37805,us,test,entryway signs for home decor,other
+37947,us,test,ergonomic desk,other
+38452,us,test,european to 220v american adapter,parse_pattern
+38716,us,test,extended clip for bodyguard 380,other
+39008,us,test,ez carafe,behavioral
+39747,us,test,fat laces for sneakers,other
+39951,us,test,female yorkie,parse_pattern
+40031,us,test,ferry boats scrub cap,other
+40109,us,test,fiberglass soundproofing,other
+40794,us,test,fit 9 sascha fitness,other
+41399,us,test,floor pouf ivory,other
+41496,us,test,flower,other
+41502,us,test,flower centerpiece,other
+41732,us,test,foam shoes size 7 men,other
+42143,us,test,forest green bath mat,other
+42300,us,test,fountain pen without cartridge,negations
+42422,us,test,frankie pickle book 2,other
+42647,us,test,friend wine stopper,parse_pattern
+42677,us,test,frigadare aigatator dogs,other
+42750,us,test,front bumper mugen,other
+43118,us,test,full size refrigerator without freezer,negations
+43573,us,test,funny shirts for men,other
+43657,us,test,fushigi ball,other
+43948,us,test,galaxy note 10,other
+44137,us,test,game informer,other
+44148,us,test,game over messenger purse,other
+44557,us,test,gary rhodes cookbooks,other
+45256,us,test,gifts for artsy girls,other
+45655,us,test,girls red sleevelessmaxi dress,other
+45721,us,test,girls uniform pants,other
+46277,us,test,gods not dead dvd,negations
+46915,us,test,gourmet tea cookies,other
+47133,us,test,grass skirts bulk,other
+48471,us,test,"hale dwoskin, lester levenson",other
+48660,us,test,halloween window boards,other
+49274,us,test,harley quinnn badeball bay,other
+49288,us,test,harmon mute trumpet,other
+50170,us,test,helping without hurting,negations
+50245,us,test,herb jelly,other
+50274,us,test,here is new york e.b. white,parse_pattern
+50582,us,test,high waisted yoga pants for women plus size,other
+51127,us,test,honest baby detergent laundry,other
+51221,us,test,hoodies for men with designs,other
+51522,us,test,house haunted hill board game,other
+51840,us,test,huawei fast charger,other
+51863,us,test,huawei p20,other
+51888,us,test,hublot womens watch,other
+53055,us,test,indio guitars,parse_pattern
+53456,us,test,instant pot air fryer lid only 8 qt,other
+53849,us,test,ipad for a 6th generation 32gb,other
+54194,us,test,iphone 6s plus case,other
+54304,us,test,iphone 8 case horse,other
+54363,us,test,iphone 8 renewed att,other
+54366,us,test,iphone 8 screen protector not plus,negations
+54414,us,test,iphone case 6s mario,other
+54889,us,test,iron chest master,other
+55657,us,test,jean jacket 4t,other
+55825,us,test,jerry can pour spout,other
+56083,us,test,jocko willink,other
+56155,us,test,john lennon imagine,other
+56301,us,test,jordan vogt-roberts,other
+56481,us,test,jugs pitching machine parts,other
+56651,us,test,juniors shirts,other
+56750,us,test,juvenatur antiarrugas,other
+56822,us,test,k60 ridgid parts,other
+57154,us,test,keen womens water shoe,other
+57978,us,test,kids room posters for boys,other
+58150,us,test,killing joke comic book,other
+58186,us,test,kindle,other
+58261,us,test,king bed,other
+58688,us,test,kitchenaid k5gb,other
+58927,us,test,knotted stockings plussizegols glitter top,other
+59037,us,test,korean eyeshadow,parse_pattern
+59113,us,test,kremotex new anti aging cream,parse_pattern
+59513,us,test,lacoste shirts for men,other
+59790,us,test,lancome setting spray,other
+60267,us,test,lash bed,other
+60433,us,test,lavazza coffee machine,other
+61174,us,test,legend of zelda twilight princess link,other
+61309,us,test,lego lord of the rings,other
+61456,us,test,lemon yellow blouse,parse_pattern
+61928,us,test,lgbt movies,other
+62440,us,test,lightning to usb a cable 1 ft,other
+63229,us,test,locking medicine bag,other
+63408,us,test,lone peak 4 women,other
+63841,us,test,lovaru womens christmas tops,other
+63986,us,test,lowes,other
+65697,us,test,marble electric diffisers,other
+65772,us,test,maria romanov,other
+66519,us,test,max outfit,other
+66556,us,test,maxpider tesla model y,parse_pattern
+67075,us,test,membrain gaming keyboard,other
+67207,us,test,men pink suit set,parse_pattern
+67271,us,test,men without women hemingway,negations
+67679,us,test,mens insulated flannel shirts,other
+67729,us,test,mens long swim trunks,parse_pattern
+67894,us,test,mens slippers size 9,other
+68070,us,test,mens zombie costume,other
+68999,us,test,midway,other
+69055,us,test,milan kundera,other
+69347,us,test,mini chem sticks,other
+69361,us,test,mini cooper speedometer,other
+69371,us,test,mini cupcake pan metal,other
+69556,us,test,mini usb to hdmi adapter for android devices,other
+69565,us,test,mini+fridge+with+freezer+for+bedroom,other
+69959,us,test,mobstub crossbody bag,parse_pattern
+70097,us,test,modem router combo xfinity,other
+70196,us,test,moist heating pad for hand,other
+70345,us,test,money heist,other
+71051,us,test,mous iphone xr case,other
+71372,us,test,mtg torbran,other
+71401,us,test,mud pie valentines day,parse_pattern
+71567,us,test,multitool without knife,negations
+71987,us,test,n95 not kn95 masks,negations
+71997,us,test,nacked 3 eye shadow palet,other
+73042,us,test,nevada barr deep south,parse_pattern
+73173,us,test,new telugu movies,other
+73522,us,test,nike cortez black and pink,other
+73739,us,test,nikon camera,other
+74810,us,test,nutribiotic plain rice protein powder 1 lb,other
+74931,us,test,o gauge train set christmas,other
+75360,us,test,olaf candy,other
+75495,us,test,olympic weights set,other
+75579,us,test,on speaking well - peggy noonan,other
+75709,us,test,oneplus tv 55 inch,other
+75774,us,test,oofos women,other
+76059,us,test,orgain organic protein powder under $25,other
+76922,us,test,owelette baby monitors,other
+77192,us,test,pain without love,negations
+77413,us,test,panang red curry paste,parse_pattern
+78004,us,test,pastel earings,other
+78851,us,test,pentax k3,other
+79034,us,test,period box for tweens,other
+79550,us,test,phone cover a 50 wizard of oz,other
+80264,us,test,pink mens pajama set,other
+81047,us,test,plastic floormat,other
+81077,us,test,plastic pegboard,other
+81269,us,test,playfoarm,other
+81578,us,test,plus size trnch sweater,other
+81871,us,test,polaroid lab digital to analog,other
+81903,us,test,police scanner,other
+82141,us,test,pool floats sexy,other
+82765,us,test,potty signing time,other
+83100,us,test,prelit christmas tree 7ft full,other
+83325,us,test,primes,other
+83479,us,test,private property not for sale,negations
+83522,us,test,probably something that has a good amd ryzen processor in it with metal build quality and a nice va panel screen  ,nlqec
+84243,us,test,puma quarter socks women,other
+84570,us,test,purple hair dye for dark hair without bleach,negations
+84624,us,test,purple stripe microfiber pillow shams,other
+85453,us,test,raincoat durable kids xl,other
+85700,us,test,ravens,other
+85866,us,test,rc kicker,other
+85977,us,test,real men wear pink shirt,other
+86302,us,test,red carpet manicure kit with uv light,other
+86320,us,test,red crayons only,parse_pattern
+86363,us,test,red gel.pen,other
+87009,us,test,remote control ceiling fan without light,negations
+87116,us,test,replacement plastic floor for metal kennel,other
+87304,us,test,retractable flag pole,other
+87308,us,test,retractable portable,other
+88170,us,test,rodillo de madera para masajes reductores,behavioral
+88286,us,test,roller shoes,other
+88964,us,test,rubber to open jars,parse_pattern
+89196,us,test,running women,other
+89403,us,test,ryobi miter saw stand,other
+89562,us,test,sackcloth for prayer,other
+90849,us,test,scary kids dvds,other
+90984,us,test,science gift,other
+91072,us,test,scotch titanium non-stick scissors,parse_pattern
+91323,us,test,seahawk iron on patches,other
+91450,us,test,secret city season 1,other
+91593,us,test,selector switch for glock,other
+92063,us,test,sexy formal dresses for curvy women,other
+92138,us,test,sf giants mousepad,other
+92288,us,test,shark navigator pet pro vacuum,other
+92320,us,test,sharon tate recollection,other
+92597,us,test,shiny car decal,other
+92891,us,test,shotgun,other
+93133,us,test,siding channels,other
+93581,us,test,silverado wing,other
+94170,us,test,skirt overalls for women,parse_pattern
+94752,us,test,small high power flashlight cree torch,other
+94946,us,test,small utility trailer for car,other
+94983,us,test,smart adult toy,other
+96120,us,test,sony g master lens,other
+96540,us,test,sparkly handbags for women,other
+96688,us,test,sperry tennis shoes for men,other
+97456,us,test,stainless steel tumbler case,other
+97755,us,test,starmark bob a lot large,behavioral
+97776,us,test,starting point hayao miyazaki,other
+98668,us,test,student prime membership,other
+98755,us,test,stylish sequin open toe chunky heeled sandals,parse_pattern
+99107,us,test,summer suit jacket for women,other
+99516,us,test,surgical disposable face masks charcoal activated,other
+99561,us,test,sushi roller,other
+99896,us,test,swissqlip deep carry pocket clip,parse_pattern
+99992,us,test,syosin,other
+100539,us,test,tamashii nations stand,other
+100654,us,test,tap faicet washers,other
+101015,us,test,tea tree blepharitis,other
+101457,us,test,tendo switch,other
+101492,us,test,tens snap pads 2x2,other
+102176,us,test,the man without talent by yoshiharu tsuge,negations
+102625,us,test,thermos owl water bottle replacement straw,other
+102724,us,test,thin wool socks women,other
+102980,us,test,thymes hand lotion,behavioral
+103102,us,test,tiger thermos,other
+103248,us,test,tin ceiling tiles bronze,other
+103600,us,test,toddler books moo moo cow,other
+103700,us,test,toddler insoles,other
+104607,us,test,toys 8 year old boy,other
+104925,us,test,trash bags 30 gallon,other
+105170,us,test,trees for planting outdoors,behavioral
+105502,us,test,trumpet yamaha,other
+105522,us,test,truskin vitamin c cream,other
+105627,us,test,tubshroom,other
+105914,us,test,tv hearing aid devices wireless,other
+106221,us,test,type 1 diabetes kids supprt,other
+107238,us,test,usb c headphones s10,other
+107667,us,test,vacuum attachment for dryer vent,other
+107752,us,test,valerian root oil,other
+108001,us,test,vastatosaurus rex toy,parse_pattern
+108290,us,test,versagel,other
+108341,us,test,vestido corto sexy de mujer,parse_pattern
+108848,us,test,viper exhaust,other
+108964,us,test,vitamin k oil,other
+109216,us,test,vr6,other
+109221,us,test,vsco collage poster,other
+109670,us,test,wanderers chuck wendig,other
+110031,us,test,water suction gun,parse_pattern
+110811,us,test,wheel locks lug nuts,other
+110858,us,test,where's waldo costume,other
+110879,us,test,whipping powder for cake,other
+111773,us,test,wind rose,other
+111887,us,test,windshield sun shade wrx,other
+111893,us,test,wine,other
+112127,us,test,wireless bluetooth am fm earbud,other
+112513,us,test,women design,other
+112974,us,test,womens fall clothing,other
+113037,us,test,womens i phone 8 plus wallet case,other
+113181,us,test,womens reading glasses,other
+113888,us,test,workout socks for men,other
+114196,us,test,x-ray iphone wallet with phone case,other
+114321,us,test,xbox storage hard drive 4tb,behavioral
+114516,us,test,xp pen artist 12 case,other
+114705,us,test,yamaha g16a carburetor,parse_pattern
+114796,us,test,year one by nora roberts,other
+114934,us,test,yes open your eyes,parse_pattern
+115094,us,test,yorktend not a day over fabulous wine tumbler,negations
+115097,us,test,yoshi 10 inch black trays,other
+31,es,train,#27 rubio oscuro extensiones sin clip,negations
+253,es,train,",ahou sin alcohol",negations
+719,es,train,1 din bluetooth sin cable,negations
+794,es,train,1 kg crema de cacahuete sin azúcar,negations
+1265,es,train,10 misterios sin resolver,negations
+1367,es,train,100 %algodon sin elastico,negations
+1757,es,train,112 tinte sin amoniaco,negations
+2418,es,train,1;5 freidora sin aceite,negations
+2447,es,train,1soldador mig sin gas inverter de 120 amperios,negations
+2469,es,train,1x polygel para uñas kit completo sin lampara,negations
+2502,es,train,2 3 isofix sin asiento,negations
+2514,es,train,2 batería para canon 90d sin cargador,negations
+2534,es,train,2 din sin pantalla,negations
+2674,es,train,2 sujetador deportivo sin aro,negations
+2815,es,train,20 velas aromaticas sin marco,negations
+2827,es,train,200 agujas sin cabeza,negations
+2975,es,train,24 cervezas botella sin alcool,negations
+3253,es,train,2vaper sin nicotina,negations
+3259,es,train,2x1 sillas gaming,behavioral
+3310,es,train,3 bobinas de hilo soldar sin gas,negations
+3320,es,train,3 cereales sin gluten hipp,negations
+3570,es,train,30 años pack sin globo,negations
+3753,es,train,36 cm cacerola sin tapa,negations
+3909,es,train,3g sin limites,negations
+4005,es,train,3xl sudaderas sin capucha,negations
+4032,es,train,4 beyblade set sin lanzador,negations
+4033,es,train,4 bff sin nombre collar,negations
+4041,es,train,4 cilla para comedor sin funda,negations
+4232,es,train,42k sin mangas,negations
+4530,es,train,5 l aceite oliva virgen extra sin refinar,negations
+4557,es,train,5 ruedas para suelo duro sin freno,negations
+5840,es,train,a la mujer sin voz,negations
+6104,es,train,abrigo gorotex hombre,other
+6210,es,train,accesorios maquetas coches,other
+7781,es,train,album de stray kids,behavioral
+7953,es,train,alfombras suelo gaming,parse_pattern
+8112,es,train,all on one pc,other
+8311,es,train,alpine chukka,other
+8337,es,train,altavoces coche 13 cm 3 vias,other
+9013,es,train,andador sin ruedas,negations
+9069,es,train,android tv 9.0 s905x3,other
+9165,es,train,anillos mujer oro blanco tiara real,other
+9464,es,train,antihierbas cerde,other
+9535,es,train,aparador negro madera,other
+10418,es,train,aro de gimnasia ritmica,other
+10726,es,train,aspirador silvano,other
+10731,es,train,aspiradora daison sin cable v11 pro,negations
+10795,es,train,astore hombre pantalon,parse_pattern
+10933,es,train,atem mini pro,other
+11050,es,train,atún rojo fresco,parse_pattern
+11111,es,train,audispray ultra,behavioral
+11154,es,train,auriculares aislantes ruido,other
+11202,es,train,auriculares sin cable,negations
+11587,es,train,b complex now,behavioral
+13525,es,train,batas niñas de reno,other
+13999,es,train,baul moto 36l,other
+14758,es,train,belen infantil para pintar,parse_pattern
+15007,es,train,bernina chicago 7,other
+18096,es,train,bolsa blanca papel,parse_pattern
+18165,es,train,bolso mc2 project,parse_pattern
+18349,es,train,book of thoth,other
+18761,es,train,botas equitacion hombre piel,parse_pattern
+18773,es,train,botas fútbol sin tacos,negations
+18880,es,train,botiquin primeros auxilios,other
+19123,es,train,boyas bebederos,other
+19404,es,train,bragas avet talla e,parse_pattern
+20411,es,train,buho espanta palomas,other
+21177,es,train,cable ps4,other
+21283,es,train,cafetera icona vintage delonghi,parse_pattern
+21287,es,train,cafetera lor,other
+21322,es,train,caja coleccionista harry potter,parse_pattern
+21337,es,train,caja ordenador,other
+21740,es,train,cama matrimonio 135x190,other
+21744,es,train,cama perro cueva,other
+21824,es,train,camas individuales 90x190,other
+21931,es,train,camisa blanca con lazo,other
+21942,es,train,camisa sin rayas,negations
+22010,es,train,camiseta unicornio niña 5 años,other
+22038,es,train,camisetas running mujer tirantes,parse_pattern
+22574,es,train,capa chubasquero,other
+22577,es,train,capa roja caperucita,other
+23475,es,train,casa pepa pig,other
+23608,es,train,casi sin querer,negations
+23644,es,train,casita perro pequeño interior,parse_pattern
+24055,es,train,cazadoras mujer,other
+24360,es,train,cepillo electrico para cabello,other
+24487,es,train,cesta navidad sin gluten,negations
+24760,es,train,champú ducray descamacion,other
+24770,es,train,chanclas hombre talla 49,parse_pattern
+24873,es,train,chaqueta 4 años,other
+25680,es,train,chips microondas,parse_pattern
+26120,es,train,chrome extension,parse_pattern
+26142,es,train,chromecast,other
+26146,es,train,chromecasts,behavioral
+26187,es,train,chuleton de buey gallego,behavioral
+26345,es,train,cintas cassette,other
+27351,es,train,codificador netflix para la televisión,parse_pattern
+27480,es,train,coimasa,other
+27508,es,train,cojin grande animales,other
+27527,es,train,cojín negro y blanco,parse_pattern
+28276,es,train,compresores de 300 litros,other
+28484,es,train,coney bebés llorones,parse_pattern
+28518,es,train,conjuntos pantalon corto y top,parse_pattern
+28673,es,train,converse mostaza,other
+28690,es,train,conversor cintas video,other
+29056,es,train,cordones botas 150,other
+29202,es,train,correa telefono camuflaje,other
+29300,es,train,cortauñas,other
+29314,es,train,cortina impresion digital,other
+29996,es,train,crema corporal hidratante natural,parse_pattern
+30581,es,train,cubre piernas para motos térmica,other
+30601,es,train,cucharillas mango plastico,other
+30638,es,train,cuento la vocecita,behavioral
+30640,es,train,cuentos bebes llorones,parse_pattern
+30769,es,train,curcuma nutravita,other
+30830,es,train,curso de programacion c/c++ miguel anaya,other
+32427,es,train,depeche mode violator,behavioral
+32448,es,train,deportivas mujer marca salomon,behavioral
+32464,es,train,depuradora en piscina sin agujeros,negations
+33079,es,train,dibujos para calcar,other
+33867,es,train,dispensador de monedas,other
+33978,es,train,divinity original sin switch,negations
+34051,es,train,dji mini,other
+34075,es,train,djm pioneer,other
+35404,es,train,dremel moto saw,parse_pattern
+36283,es,train,e14 enchufe,behavioral
+36610,es,train,echo show,other
+36914,es,train,el lazarillo de tormes vicens vives clasicos adaptados,parse_pattern
+36919,es,train,el libro del amor rumi,other
+36927,es,train,el mono con pajarita,behavioral
+36939,es,train,el principito,other
+37191,es,train,electrodomesticos frigorificos,other
+37289,es,train,elevador 2 columnas,other
+38005,es,train,esab soldadura,other
+38043,es,train,escritorio sin cajones,negations
+38109,es,train,espejo para poner pendientes,behavioral
+38232,es,train,estanteria cerrada baño,other
+38287,es,train,estrella sin lejia,negations
+40218,es,train,figuras gormiti serie 2,parse_pattern
+40322,es,train,filtro hyosung 125,other
+41882,es,train,folios a4 amarillo,other
+42988,es,train,fuentes de jardines exteriores solares,parse_pattern
+43727,es,train,fy-light,other
+44308,es,train,ganchos para colgar cuadros sin agujeros,negations
+44924,es,train,geofono detectar fugas de agua,other
+45828,es,train,glass cabinet,other
+46636,es,train,gomas imantadas para mamparas,parse_pattern
+46638,es,train,gomas montaña,other
+46649,es,train,gonplac luz de emergencia v16 homologada,parse_pattern
+46859,es,train,gorro lana mujer,other
+47442,es,train,gregorio moran,other
+47450,es,train,grenetina en polvo sin sabor,negations
+47762,es,train,gu10,other
+49221,es,train,haribo balla stixx,parse_pattern
+51680,es,train,hp all in one 27,other
+51738,es,train,hp omen x,other
+51859,es,train,huawei p smart,other
+51895,es,train,hucha transparente,parse_pattern
+52065,es,train,humo halloween,other
+53622,es,train,interruptor schneider doble,parse_pattern
+55157,es,train,ivernador piscina sin cobre,negations
+55373,es,train,jaguar xf,parse_pattern
+55620,es,train,jbl extreme 2,other
+56414,es,train,judía blanca para adelgazar,parse_pattern
+56424,es,train,juego de comoda y mesita de noche,behavioral
+56434,es,train,juego de tronos serie completa,other
+56457,es,train,juegos de construcción adultos,other
+56882,es,train,kali uchis sin miedo,negations
+56956,es,train,karambit sin filo,negations
+58464,es,train,kit de aceite,other
+58503,es,train,kit vaper sin nicotina,negations
+59020,es,train,koogeek tira led,behavioral
+59097,es,train,kranzle hidrolimpiadora,other
+59118,es,train,krf funda,parse_pattern
+59309,es,train,la biosthetique cabello,behavioral
+59751,es,train,lamparas colgantes para cocinas,other
+61207,es,train,leggins tommy hilfiger mujer,behavioral
+61772,es,train,lg,other
+61846,es,train,lg oled 65 c9,other
+61968,es,train,libreta a5 sin espiral,negations
+61990,es,train,libro digitsl recetas sanas thermomix,other
+62579,es,train,limpia hornos profesional muy potente,parse_pattern
+63138,es,train,llave vaso torx 15,other
+63153,es,train,llavero valentino rossi 46,parse_pattern
+63295,es,train,logitech g203,other
+64492,es,train,m4a1 airsoft,parse_pattern
+65475,es,train,manhattan sexy love,parse_pattern
+65517,es,train,manos libres bluetooth coche sin instalacion parrot,negations
+65671,es,train,maquinas de tatuar,other
+66072,es,train,masa modelar secado al aire,behavioral
+66097,es,train,mascara tuerto,other
+66693,es,train,me luna soft,behavioral
+66772,es,train,mecool km3,other
+66798,es,train,medias descanso negras,other
+68220,es,train,mesa de reuniones,other
+68847,es,train,microondas orbegozo sin grill,negations
+69031,es,train,miguel rios un largo tiempo,parse_pattern
+69325,es,train,mini books for party bags,other
+69995,es,train,mochila escolar para,other
+70007,es,train,mochila mujer casual,other
+70299,es,train,"moma mtb 27,5",other
+70522,es,train,mont blanc perfume muner,other
+70856,es,train,moto electrica adulto,other
+70998,es,train,motos de niños de gasolina,other
+71178,es,train,mp3 bluetooth running,other
+71327,es,train,msi x570 gaming edge wifi,other
+71561,es,train,multipower maquina smith,other
+72639,es,train,neceser niño,other
+73518,es,train,nike calzado hombre,parse_pattern
+73521,es,train,nike cortes honbre,other
+73620,es,train,nike pro sin mangas,negations
+73963,es,train,nissan micra,other
+74295,es,train,nordica cama infantil,other
+74516,es,train,notebook touch,other
+75117,es,train,oedo crema,parse_pattern
+76011,es,train,ordenador 11,other
+76012,es,train,ordenador 11.6 pulgadas,other
+76034,es,train,ordenadores portatiles hp pavillion,other
+76341,es,train,orígenes secretos,parse_pattern
+76351,es,train,oscars pack,other
+77654,es,train,papel impresora,other
+78026,es,train,pastillas de freno passat b5,other
+78291,es,train,pc barato,parse_pattern
+78652,es,train,pelota,other
+78681,es,train,peluches economicos,other
+78853,es,train,pentax objetivo,parse_pattern
+78988,es,train,perfectos desconocidos,other
+79268,es,train,petanca niños 2 años,parse_pattern
+80398,es,train,pintura blanca muebles sin lijar,negations
+80408,es,train,pintura para coches,other
+80625,es,train,pixel 4,other
+80765,es,train,plafon infantil techo,parse_pattern
+80962,es,train,plants vs zombies battle for neighborville,other
+81242,es,train,play station 4,other
+81294,es,train,playmobil set de policia,other
+81315,es,train,playstation 4,other
+81959,es,train,polo ralph lauren,other
+82074,es,train,poner cuadros sin hacer agujeros,negations
+82578,es,train,portero inalámbrico exterior,parse_pattern
+83997,es,train,ps63,other
+84095,es,train,puff hinchable,other
+84965,es,train,queen shawn mendes,behavioral
+85248,es,train,radiador electrico bajo consumo,other
+86114,es,train,receptor satelite wifi sin parabolica,negations
+86883,es,train,reloj deportivo xiaomi,other
+86916,es,train,reloj pandora para mujer,other
+86957,es,train,relojes edifice casio,behavioral
+86972,es,train,relojes sin pilas hombre,negations
+87000,es,train,remolque sin ruedas para perros,negations
+87269,es,train,retardante para yaculacion precoz,parse_pattern
+87599,es,train,ricola caramelos sin azucar,negations
+87701,es,train,rinconera ducha sin taladro,negations
+88247,es,train,rolex,other
+88387,es,train,ron sin alcohol,negations
+88898,es,train,rpg juguete,parse_pattern
+89426,es,train,ryzn 9,other
+89803,es,train,salomon botas de montaña,other
+90494,es,train,sansalias punta cerrada,other
+91571,es,train,seiko skx007,other
+91852,es,train,serum kerastase nutritive,behavioral
+93392,es,train,silla de montar a caballo vaquera,other
+93931,es,train,skate profesional,parse_pattern
+94217,es,train,skullcandy s6crw-k591 crusher,other
+95151,es,train,smeg kettle,parse_pattern
+95289,es,train,snap dragon 865,other
+95815,es,train,soja en grano,parse_pattern
+95983,es,train,somier 140x200 sin patas,negations
+96068,es,train,sonus faber altavoces,other
+96142,es,train,sony oled 55,other
+96217,es,train,soporte flexi bath stokke,other
+96246,es,train,soporte redondo movil,other
+96411,es,train,spa exterior,other
+97092,es,train,spray pimienta defensa personal,other
+98882,es,train,sudadera hakuna matata mujer,other
+99024,es,train,sujeción pared sin agujeros,negations
+99650,es,train,swatch hombre nasa,parse_pattern
+100370,es,train,tado v2 kit de inicio,other
+100674,es,train,tapadera wc gala,other
+101301,es,train,tele 75 pulgadas,other
+101505,es,train,tensor cuerda tendedero,parse_pattern
+101525,es,train,teoria del lenguaje musical 1 pilar de la vega,other
+101534,es,train,termico monocular,other
+101676,es,train,texas 25 vinilo,parse_pattern
+101799,es,train,the americans fotografia,parse_pattern
+103517,es,train,toallitas bebe reutilizables,other
+104205,es,train,top sin capa pegajosa,negations
+104207,es,train,top sin tirantes mujer verano,negations
+104707,es,train,tracto cortacesped gasolina,other
+104820,es,train,traje pirata mujer,other
+105538,es,train,trx suspension,other
+105887,es,train,tv 70 pulgadas smart tv wifi 4k,other
+107651,es,train,vaca lola peluche granja zenon,parse_pattern
+107955,es,train,varcas hinchables de 15,other
+108652,es,train,vinagre de limpieza con detergente,behavioral
+108678,es,train,vinilo magnetico,other
+108905,es,train,visor swarovski,other
+108907,es,train,visor zeiss,other
+109957,es,train,water heater portable,behavioral
+112642,es,train,women shoes waterproof,other
+114385,es,train,xiaomi laser projector 4k,other
+14,us,train,#1 selling shoes for men without shoeleases,negations
+115,us,train,"&a pedicure spa parts, pop-up drain plug without strainer",negations
+504,us,train,03 durango front calipers without pads,negations
+515,us,train,04 gmc yukon rear ac blower not working,negations
+682,us,train,1 blink outdoor camera without module,negations
+743,us,train,1 gallon brown glass bottle,other
+906,us,train,1 weight bar without weights 7ft,negations
+1195,us,train,10 ft. x 10 ft. heavy duty tarp,parse_pattern
+1257,us,train,10 m syringe for liquid without needle,negations
+1276,us,train,10 oz mason jars without lids with handle,negations
+1284,us,train,10 pk curtain tie backs without hooks,negations
+1323,us,train,10 x 5 x 13 inch polka dot party bags without handles,negations
+1378,us,train,100 cc syringes without needle,negations
+1615,us,train,10th mylar balloon without helium,negations
+1751,us,train,110l laundry hamper without lid,negations
+1808,us,train,12 cup programmable coffee maker,other
+1938,us,train,120v dryer,other
+2368,us,train,18k gold studs for men,other
+2410,us,train,19 pin usb splitter,parse_pattern
+2619,us,train,2 person patio swing,other
+2623,us,train,2 piece bathing suits for women low waist,other
+2992,us,train,24 inch form tube,other
+3344,us,train,3 god cards yu-gi-oh,other
+3487,us,train,3-6v motor,other
+3647,us,train,30x30 picture frame,other
+3748,us,train,35x29 mens jeans,parse_pattern
+3783,us,train,360 polaris pool cleaner,other
+4193,us,train,409 multi-surface cleaner,other
+4556,us,train,5 quart white bowl,other
+4685,us,train,505 levis jeans for men,other
+5116,us,train,7 watt led bulb,other
+5175,us,train,720p camera,other
+5376,us,train,8ft pool tables for adults,other
+6667,us,train,adidas football ball,other
+7004,us,train,advantix ii for dogs large,other
+7508,us,train,airpod charging cable,other
+7805,us,train,alcohol mixed drinks books,other
+7845,us,train,alesis strike multipad,other
+8075,us,train,all creatures great and small james herriot,parse_pattern
+8458,us,train,amal tail removable,other
+8492,us,train,"amazon ,folding art boxes",other
+8882,us,train,ammo 9mm luger,other
+9046,us,train,android 21 super card game,other
+10123,us,train,arcade cabinet,other
+10155,us,train,arches watercolor paper 300 lb cold press,other
+10568,us,train,artificial roses without stems,negations
+10854,us,train,asus inspire 5 charger,other
+10964,us,train,athlon cronus g2 binoculars,other
+11138,us,train,auntie necklaces for women,other
+11465,us,train,avery adress labels with gold border,other
+11606,us,train,b'batterie charger plus tester',other
+11626,us,train,b'time machine clock',other
+11824,us,train,baby boy shoes 4.5-5,other
+12034,us,train,baby joker costume toddler,other
+13788,us,train,bathroom towels with flamingoes,other
+14218,us,train,bead tube holder,parse_pattern
+14776,us,train,belkin mixit 6ft usb-c to usb-a cable,other
+15650,us,train,big kids chair,other
+17388,us,train,blue green wallpaper,parse_pattern
+17437,us,train,blue pennant,other
+17932,us,train,body scrub without oil,negations
+18580,us,train,bored dog,other
+18952,us,train,bourbon gifts,other
+19013,us,train,bowser pajamas,other
+19087,us,train,boy baby shoes 6-9 months,other
+19142,us,train,boys 8 nightgown,other
+20007,us,train,brother tn 630 toner cartridge,parse_pattern
+20039,us,train,brown blackout lined curtains 120 inch,other
+20472,us,train,bulk classroom supplies,other
+20480,us,train,bulk gift for kids,other
+21543,us,train,calendar rifle paper co,other
+21698,us,train,calvin klein sleepwear women,other
+22847,us,train,car shampooer for auto detailing,other
+22858,us,train,car stereo red,other
+23442,us,train,cartier watches for women,other
+23725,us,train,casual midi shift dresses for women,other
+23905,us,train,cat toys without catnip for indoor cats,negations
+24130,us,train,cd wifi double din car stereo,other
+25130,us,train,cheap watches,other
+25846,us,train,christmas bodysuit for girls,other
+25894,us,train,christmas fabric by the yard clearance,other
+26560,us,train,classic batman riddler pop,other
+26564,us,train,classic books,parse_pattern
+26723,us,train,clear green cup,other
+27066,us,train,clothes size 78 for girls,other
+27445,us,train,coffee table base,other
+27696,us,train,collage team ornament,other
+28106,us,train,comic disney,other
+28579,us,train,container for ceremony sand,other
+29034,us,train,cordless phone without answering machine 3 handsets,negations
+29599,us,train,couple travel mugs,other
+29613,us,train,couples shirts for him and her,other
+30117,us,train,cricut maker machine,other
+30186,us,train,croc heels,other
+30188,us,train,croc kid crocband clog slip water shoe toddler boi,other
+30215,us,train,crock pot small 3 qt,other
+31472,us,train,dance exercise dvds for weight loss,other
+31629,us,train,dart shield captain america,other
+31751,us,train,day of the dead barbie,other
+31959,us,train,decarboxylator,other
+31982,us,train,decline bench,other
+33333,us,train,dining room with 6 chairs and table,other
+33372,us,train,dinosaur decorations orange,other
+33513,us,train,discmania p2,behavioral
+33897,us,train,disposable cake container,other
+34530,us,train,dog rug,other
+34895,us,train,dope bookbags,other
+34937,us,train,dorothy picnic basket,other
+35780,us,train,dslr autofocus camera,other
+35967,us,train,dunkin donut coffee cup,other
+36433,us,train,earring mail out,other
+37325,us,train,elf on the shelf without book,negations
+37438,us,train,em sculpting machine professional,other
+37474,us,train,embroidery sweatsuits for women,other
+37672,us,train,energizer aa rechargeable batteries,parse_pattern
+38133,us,train,esponjas para pulir,parse_pattern
+38183,us,train,essential oil for soap making,other
+38215,us,train,essie red nail polish,other
+38588,us,train,excedrin migraine extra strength,other
+39369,us,train,fake louis vuitton key chain,other
+39841,us,train,feather fsh10 blades,other
+40987,us,train,flag football set,other
+41019,us,train,flamingo travel bag,other
+41279,us,train,flip a zoo mini figures,parse_pattern
+41434,us,train,floral dessert plates,parse_pattern
+42194,us,train,formal shoes for men without lace,negations
+42252,us,train,fortnite school supplies,other
+42783,us,train,frontier co op spice set,other
+43019,us,train,fujimax instax mini 11 film,parse_pattern
+43507,us,train,funko pop storage shelves,other
+43533,us,train,funny bunny opi,other
+44219,us,train,gaming chair for adults 300lbs,other
+44438,us,train,gardening tipsfinn family moomintroll by tove jansson,other
+44491,us,train,garmin fenix 6s pro rose gold,other
+44659,us,train,gazebo gutters,other
+44673,us,train,gds g205 ebike,other
+45082,us,train,ghost recon breakpoint pc,other
+45432,us,train,girl four wheeler,other
+45524,us,train,girls bed in a bag twin,other
+46721,us,train,google computers devices,other
+46809,us,train,gordon lightfoot greatest hits cd,other
+47672,us,train,groovy girls dolls,parse_pattern
+48917,us,train,handheld poker games for seniors,other
+50224,us,train,henry fuller,other
+51027,us,train,home sign grey,other
+51586,us,train,how i beat cancer by andrea,other
+52121,us,train,hunting for teens,other
+52146,us,train,hurricane emergency kit,other
+52224,us,train,hydraulic tent,other
+52836,us,train,im608 pro,other
+53196,us,train,infant spongebob costume,other
+53341,us,train,inkpads,other
+54128,us,train,iphone 4 bands 44mm,other
+54184,us,train,iphone 6s case heavy duty cheap,other
+55331,us,train,jackery portable charger,other
+55440,us,train,janet oakley,other
+55729,us,train,jeep polo shirts for men,parse_pattern
+56293,us,train,jordan love jersey green bay packers,parse_pattern
+56314,us,train,joseph joachim,other
+56394,us,train,juana mens,other
+56679,us,train,jurassic world,other
+57161,us,train,keep ants off hummingbird feeder,other
+57634,us,train,kid tops,other
+58161,us,train,kim possible costume,other
+58417,us,train,kiplingkeiko black,other
+58516,us,train,kitchen aide grill,other
+58784,us,train,kms humidity spray,other
+59150,us,train,kt fancy 16 piece american doll accessory suitcase,parse_pattern
+60131,us,train,large pots for trees outdoor clearance,other
+60396,us,train,lauren runow,other
+60399,us,train,lava bar soap,other
+60698,us,train,leather chair covers,other
+61528,us,train,lenseed oil,other
+61579,us,train,leopard stationary,other
+61602,us,train,les belles lettres,other
+61832,us,train,lg k20 plus,other
+62153,us,train,life without diabetes roy taylor,negations
+62741,us,train,lions spatula,other
+63093,us,train,living room tv,other
+63801,us,train,louis vuitton dog purse,other
+64208,us,train,lumi,other
+64586,us,train,macbook air cases,other
+64735,us,train,made you look maga hat,other
+66227,us,train,massage uniform men,other
+66281,us,train,mat man handwriting without tears set,negations
+66815,us,train,medical foot stools,other
+68197,us,train,merrill women sandals size 9,other
+68936,us,train,microwave without turntable,negations
+69186,us,train,milwaukee long screwdriver,parse_pattern
+69386,us,train,mini doughnut maker,other
+69589,us,train,minibikes adult gas,other
+69676,us,train,mint green buttermints,other
+69845,us,train,mixed activity book for kids,behavioral
+70785,us,train,mother day gift personalized,other
+71013,us,train,mountable child,other
+71317,us,train,msi prebuilt,other
+71722,us,train,mussett bags,other
+71930,us,train,mythos stephen fry,other
+72231,us,train,naruto headband,other
+72305,us,train,native indian costume for men,other
+72755,us,train,nelson rigg rg-020,other
+73242,us,train,newcastle united jersey,other
+73743,us,train,nikon dot sight,other
+73882,us,train,nintendo switch controller with analog trigger,other
+74151,us,train,noel lawrence,other
+74627,us,train,nude purse clutch,other
+75382,us,train,old dutch dill pickle chips,other
+75490,us,train,olukai womens flip flops,other
+75859,us,train,oprah winfrey what happened to you,behavioral
+77050,us,train,pa1,other
+77062,us,train,paci blanket holder,other
+77098,us,train,pack of nike shorts men,other
+78805,us,train,penis confetti,other
+78913,us,train,pepper plant pot,other
+79227,us,train,pet friendly house plants,other
+79380,us,train,pgi-280xl,other
+79867,us,train,pig socks,other
+80181,us,train,pink cat ears,other
+80685,us,train,pizza tshirt women,other
+81171,us,train,platform bed with drawers queen payment olan,other
+81377,us,train,pletco filter pma40l,other
+81994,us,train,poly tunnel,other
+83551,us,train,proclick,other
+83693,us,train,propane tank regulator btu,other
+83904,us,train,ps4 back button,other
+83912,us,train,ps4 console,other
+84844,us,train,qnap tvs-872xt,other
+84919,us,train,queen bed with led lights and nightstand,other
+85414,us,train,rainbow dress for women,other
+85430,us,train,rainbow loom bands,other
+85836,us,train,razors for men,other
+85862,us,train,rc drone without camera,negations
+86396,us,train,red junior tops,other
+86440,us,train,red paper printer,other
+87732,us,train,ring for phone case purple,other
+87764,us,train,ring stick up cam,other
+87976,us,train,roblox backpack for boys with lunch bag,other
+88126,us,train,rocky thermal underwear for boys,other
+88767,us,train,round running boards,other
+88775,us,train,round table cloths marvel,other
+89248,us,train,rustic farmhouse restroom sign,other
+90742,us,train,saw v,other
+91877,us,train,sesame chips,other
+92394,us,train,shed with windows and floor,other
+93548,us,train,silver pothos,other
+93844,us,train,sitting eliptical exercise machine,other
+93872,us,train,size 14 sneakers,other
+94173,us,train,skirted tablecloths round 36 inch,other
+94299,us,train,sleep number split king sheets 600 thread count,other
+94539,us,train,slots organizer,behavioral
+94922,us,train,small stuffed teddy bear,behavioral
+95224,us,train,smoth undershirt vests,other
+95529,us,train,soa stickers,other
+95639,us,train,socks with sayings football,other
+96153,us,train,sony rx0,other
+96777,us,train,spiderman funko pop,other
+97100,us,train,spread love not germs sticker,negations
+97657,us,train,star wars episode 4,other
+98163,us,train,stihl pull cord,other
+99352,us,train,super sonico headphones,other
+99850,us,train,swimsuits for bride,other
+100312,us,train,tacks for upholstery,other
+100509,us,train,tall rain boots for women,parse_pattern
+100589,us,train,tang boys,other
+100840,us,train,tattoo artist chair,other
+101762,us,train,thanksgivingchristmas outfit for baby boy,other
+102024,us,train,the goldbergs season 2,other
+102082,us,train,the hot ones,other
+102168,us,train,the magic of light jean rosenthal,parse_pattern
+102315,us,train,the plot to kill king,behavioral
+102508,us,train,the wolf of wall street book,other
+102734,us,train,things that help pregnancy,behavioral
+102779,us,train,this book will not be fun,negations
+104268,us,train,tornado blower gun,other
+104498,us,train,toy brock,other
+105126,us,train,treat people with kindness grey hoodie,other
+105587,us,train,tub faucet without shower head,negations
+106014,us,train,tweezer coil,other
+106752,us,train,underwwear for girls,other
+106949,us,train,universal split cv boot kit drive,other
+107258,us,train,usb c to dvi splitter,other
+107784,us,train,vampire cape,other
+108816,us,train,vinyl shield,other
+109037,us,train,vivosun carbon filter 6 inch,other
+109135,us,train,voltage mountain dew,other
+109656,us,train,walt disney wedding greeting cards,other
+110226,us,train,wax dab pen,other
+110504,us,train,weed pipe,other
+111138,us,train,white hair spray temporary,other
+111546,us,train,wife devotional,other
+111592,us,train,wifi vibrating egg,other
+112383,us,train,woman and daughter book,other
+112861,us,train,womens black under armour zip,other
+113495,us,train,wood chest,other
+114036,us,train,wrestling belt adult costume,other
+114217,us,train,x900h sony tv,other
+114691,us,train,yakima q towers 4 pack,other
+115259,us,train,yugioh clothes,other
+115341,us,train,zac brown band cd welcome home,parse_pattern
+115617,us,train,"zener diode 5,1v 1w",other

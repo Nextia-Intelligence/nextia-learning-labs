@@ -1,0 +1,7 @@
+{
+  "what": "The price of the hosted models in the course's recordings, in US dollars per 1 million tokens. Prices change often: check the provider's current price page before you use these numbers for a decision.",
+  "models": {
+    "chat-small": {"model": "gpt-6-luna-2026-09-22", "input": 0.10, "output": 0.50, "kind": "small hosted LLM"},
+    "chat-strong": {"model": "gpt-6.1-sol-2026-09-29", "input": 2.00, "output": 10.00, "kind": "hosted reasoning model"}
+  }
+}

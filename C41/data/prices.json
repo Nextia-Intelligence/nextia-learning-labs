@@ -1,0 +1,53 @@
+{
+ "note": "Published list prices of hosted speech-to-text services (pay as you go, no commitment, no discount): vendor claims, NOT measured by the course. Checked on the vendor's own price source on the date in 'checked'. Prices change: re-check the page before you quote one. Google Cloud and OpenAI prices could not be read by the course team's tools (the pages render prices with JavaScript or refuse automated reads): not quoted.",
+ "rows": [
+  {
+   "service": "Azure AI Speech, speech to text, batch transcription",
+   "usd_per_audio_hour": 0.18,
+   "region": "East US",
+   "source": "Microsoft's Azure Retail Prices API (the data behind the Azure price page): product 'Azure Speech', SKU S1, meter 'S1 Speech to Text Batch', 0.18 USD per 1 hour",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+   "api": "https://prices.azure.com/api/retail/prices?$filter=armRegionName eq 'eastus' and productName eq 'Azure Speech' and skuName eq 'S1'",
+   "status": "checked",
+   "checked": "2026-11-07"
+  },
+  {
+   "service": "Azure AI Speech, speech to text, real time",
+   "usd_per_audio_hour": 1.0,
+   "region": "East US",
+   "source": "Azure Retail Prices API: product 'Azure Speech', SKU S1, meter 'S1 Speech To Text', 1.0 USD per 1 hour",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+   "api": "https://prices.azure.com/api/retail/prices?$filter=armRegionName eq 'eastus' and productName eq 'Azure Speech' and skuName eq 'S1'",
+   "status": "checked",
+   "checked": "2026-11-07"
+  },
+  {
+   "service": "Azure AI Speech, fast transcription",
+   "usd_per_audio_hour": 0.36,
+   "region": "East US",
+   "source": "Azure Retail Prices API: product 'Azure Speech', SKU 'Fast Transcription', meter 'Fast Transcription Speech To Text', 0.36 USD per 1 hour (a separate 'Fast Transcription Promo' meter shows 0.10 USD per hour)",
+   "url": "https://azure.microsoft.com/en-us/pricing/details/cognitive-services/speech-services/",
+   "api": "https://prices.azure.com/api/retail/prices?$filter=armRegionName eq 'eastus' and productName eq 'Azure Speech' and contains(skuName,'Fast')",
+   "status": "checked",
+   "checked": "2026-11-07"
+  },
+  {
+   "service": "Amazon Transcribe, batch",
+   "usd_per_audio_hour": 0.36,
+   "region": "US East (N. Virginia)",
+   "source": "AWS price page, pricing example: 'Batch transcription is priced at $0.006 per minute.' (0.006 x 60 = 0.36 USD an hour; the page's tier table did not render for the course team's tools)",
+   "url": "https://aws.amazon.com/transcribe/pricing/",
+   "status": "checked",
+   "checked": "2026-11-07"
+  },
+  {
+   "service": "Amazon Transcribe, streaming",
+   "usd_per_audio_hour": 0.6,
+   "region": "US East (N. Virginia)",
+   "source": "AWS price page, pricing example: 'Streaming transcription is priced at $0.01 per minute.' (0.01 x 60 = 0.60 USD an hour)",
+   "url": "https://aws.amazon.com/transcribe/pricing/",
+   "status": "checked",
+   "checked": "2026-11-07"
+  }
+ ]
+}

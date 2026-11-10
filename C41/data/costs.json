@@ -1,0 +1,20 @@
+{
+  "note": "Assumptions for the whole Speech AI course (not measured). Change them only in the authoring brief.",
+  "currency": "USD",
+  "calls_per_month": 4000,
+  "out_of_hours_calls_per_month": 900,
+  "call_handled_by_person": 4.0,
+  "call_handled_by_person_parts": {"agent_minutes": 6, "agent_cost_per_hour": 40.0},
+  "wrong_action": 15.0,
+  "wrong_action_note": "a return started or a wrong status given: a second call, a correction and some goodwill",
+  "caller_hangs_up": 8.0,
+  "missed_follow_up": 25.0,
+  "missed_follow_up_note": "a promise in a call that nobody acts on: a complaint, a second call, sometimes a lost customer",
+  "review_minute": 0.75,
+  "review_minute_note": "a team lead listens to calls at 45 dollars an hour",
+  "review_minutes_per_day": 60,
+  "cpu_server_usd_per_hour": 0.17,
+  "cpu_server_note": "a general-purpose cloud server with 4 vCPUs and 16 GB, on demand (assumption in the range of the large providers' list prices)",
+  "ivr_call_compute": 0.002,
+  "ivr_call_compute_note": "recognition and voice for one IVR call of about one minute on the CPU server above (assumption, rounded up)"
+}

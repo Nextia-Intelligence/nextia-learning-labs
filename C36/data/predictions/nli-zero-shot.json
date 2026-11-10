@@ -1,0 +1,9 @@
+{
+  "method": "NLI zero-shot (mDeBERTa-v3 multilingual)",
+  "label": "measured",
+  "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7@b5113eb38a (MIT), hypothesis 'This message is about {}.' with one phrase per route",
+  "ms_per_message": 844.701,
+  "run_per_1000": 0.0117,
+  "messages": 4000,
+  "notes": "No Larkfield labels used. Measured on a laptop CPU (Apple M4, 4 threads), 7 checks per message."
+}

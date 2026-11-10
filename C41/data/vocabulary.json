@@ -1,0 +1,57 @@
+{
+ "products": [
+  "Grow Hub",
+  "Solara lantern",
+  "Cedar raised bed",
+  "Terracotta Trio",
+  "Mistral fan",
+  "Willow hammock",
+  "Ember fire pit",
+  "Aqua Mist sprinkler",
+  "Fern wall planter",
+  "Harbor bench",
+  "Pebble path lights",
+  "Juniper compost bin"
+ ],
+ "order_number": "6 digits; the last digit is a check digit (Luhn, mod 10). Callers say it digit by digit, in pairs (seventy-four), with 'oh' for zero, or with a pause.",
+ "agents": {
+  "en": [
+   "Nadia",
+   "Ben",
+   "Chloe",
+   "Victor"
+  ],
+  "fr": [
+   "Camille",
+   "Julien"
+  ]
+ },
+ "recording_notice": {
+  "en": {
+   "exact": "This call is recorded for quality and training.",
+   "variant": "Just so you know, calls may be recorded for training and quality purposes."
+  },
+  "fr": {
+   "exact": "Cet appel est enregistré pour la qualité et la formation.",
+   "variant": "Pour information, les appels peuvent être enregistrés à des fins de formation et de qualité."
+  }
+ },
+ "call_reasons": [
+  "order_status",
+  "return_refund",
+  "damaged_item",
+  "billing",
+  "product_question",
+  "account_change",
+  "cancel_order"
+ ],
+ "next_steps": [
+  "courier_call",
+  "none",
+  "refund_charge",
+  "refund_order",
+  "send_guide",
+  "send_replacement",
+  "send_return_label"
+ ]
+}

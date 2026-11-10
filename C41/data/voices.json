@@ -1,0 +1,523 @@
+{
+ "licences": {
+  "en_US-libritts_r-medium": {
+   "data": "LibriTTS-R (CC BY 4.0), readers of LibriVox public-domain audiobooks",
+   "weights": "Piper voice (MIT, rhasspy/piper-voices)",
+   "accent": "en-US"
+  },
+  "en_GB-vctk-medium": {
+   "data": "CSTR VCTK Corpus 0.92 (CC BY 4.0), 109 speakers with British, Irish, Scottish and other accents",
+   "weights": "Piper voice (MIT)",
+   "accent": "en-GB"
+  },
+  "en_US-ljspeech-medium": {
+   "data": "LJ Speech (public domain)",
+   "weights": "Piper voice (MIT)",
+   "accent": "en-US"
+  },
+  "fr_FR-siwis-medium": {
+   "data": "SIWIS French Speech Synthesis Database (CC BY 4.0)",
+   "weights": "Piper voice (MIT)",
+   "accent": "fr-FR"
+  },
+  "fr_FR-gilles-low": {
+   "data": "French Single Speaker Speech Dataset (CC0)",
+   "weights": "Piper voice (MIT)",
+   "accent": "fr-FR"
+  },
+  "fr_FR-mls-medium (not used)": {
+   "data": "Multilingual LibriSpeech French (CC BY 4.0)",
+   "why_not": "rambles on longer sentences; reference transcripts would be wrong"
+  },
+  "kokoro": {
+   "data": "Kokoro-82M v1.0: public-domain and permissively licensed audio, and synthetic audio from closed text-to-speech services (the model card's own statement); SIWIS (CC BY 4.0) for French",
+   "weights": "Kokoro-82M (Apache-2.0, hexgrad/Kokoro-82M)"
+  }
+ },
+ "agents": {
+  "Nadia": {
+   "id": "kokoro:bf_emma",
+   "engine": "kokoro",
+   "model": "b",
+   "speaker": "bf_emma",
+   "accent": "en-GB"
+  },
+  "Ben": {
+   "id": "kokoro:am_michael",
+   "engine": "kokoro",
+   "model": "a",
+   "speaker": "am_michael",
+   "accent": "en-US"
+  },
+  "Chloe": {
+   "id": "en_US-libritts_r-medium:5401",
+   "engine": "piper",
+   "model": "en_US-libritts_r-medium",
+   "speaker": "5401",
+   "accent": "en-US"
+  },
+  "Victor": {
+   "id": "en_GB-vctk-medium:p240",
+   "engine": "piper",
+   "model": "en_GB-vctk-medium",
+   "speaker": "p240",
+   "accent": "en-GB"
+  },
+  "Camille": {
+   "id": "kokoro:ff_siwis",
+   "engine": "kokoro",
+   "model": "f",
+   "speaker": "ff_siwis",
+   "accent": "fr-FR",
+   "family": "siwis"
+  },
+  "Julien": {
+   "id": "fr_FR-gilles-low",
+   "engine": "piper",
+   "model": "fr_FR-gilles-low",
+   "speaker": null,
+   "accent": "fr-FR",
+   "family": "gilles"
+  }
+ },
+ "callers": {
+  "en": [
+   {
+    "id": "en_US-libritts_r-medium:3922",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "3922",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:925",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "925",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:1322",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "1322",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:3852",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "3852",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:3340",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "3340",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:64",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "64",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7994",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7994",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:249",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "249",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7939",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7939",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7011",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7011",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:17",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "17",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7258",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7258",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:2592",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "2592",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7169",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7169",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:5147",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "5147",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:3258",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "3258",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7867",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7867",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:2397",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "2397",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:7717",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "7717",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:1629",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "1629",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:8635",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "8635",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:54",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "54",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:459",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "459",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_US-libritts_r-medium:6956",
+    "engine": "piper",
+    "model": "en_US-libritts_r-medium",
+    "speaker": "6956",
+    "accent": "en-US"
+   },
+   {
+    "id": "en_GB-vctk-medium:p246",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p246",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p288",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p288",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p330",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p330",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p333",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p333",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p229",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p229",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p364",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p364",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p323",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p323",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p334",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p334",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p302",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p302",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p258",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p258",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p254",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p254",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p326",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p326",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p263",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p263",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p340",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p340",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p305",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p305",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p244",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p244",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p264",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p264",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p268",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p268",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p281",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p281",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p301",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p301",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_GB-vctk-medium:p295",
+    "engine": "piper",
+    "model": "en_GB-vctk-medium",
+    "speaker": "p295",
+    "accent": "en-GB"
+   },
+   {
+    "id": "en_US-ljspeech-medium",
+    "engine": "piper",
+    "model": "en_US-ljspeech-medium",
+    "speaker": null,
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:af_heart",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "af_heart",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:af_bella",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "af_bella",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:af_nicole",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "af_nicole",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:am_adam",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "am_adam",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:am_fenrir",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "am_fenrir",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:af_sarah",
+    "engine": "kokoro",
+    "model": "a",
+    "speaker": "af_sarah",
+    "accent": "en-US"
+   },
+   {
+    "id": "kokoro:bf_isabella",
+    "engine": "kokoro",
+    "model": "b",
+    "speaker": "bf_isabella",
+    "accent": "en-GB"
+   },
+   {
+    "id": "kokoro:bm_george",
+    "engine": "kokoro",
+    "model": "b",
+    "speaker": "bm_george",
+    "accent": "en-GB"
+   },
+   {
+    "id": "kokoro:bm_lewis",
+    "engine": "kokoro",
+    "model": "b",
+    "speaker": "bm_lewis",
+    "accent": "en-GB"
+   },
+   {
+    "id": "kokoro:bf_alice",
+    "engine": "kokoro",
+    "model": "b",
+    "speaker": "bf_alice",
+    "accent": "en-GB"
+   },
+   {
+    "id": "kokoro:bm_daniel",
+    "engine": "kokoro",
+    "model": "b",
+    "speaker": "bm_daniel",
+    "accent": "en-GB"
+   }
+  ],
+  "fr": [
+   {
+    "id": "fr_FR-siwis-medium",
+    "engine": "piper",
+    "model": "fr_FR-siwis-medium",
+    "speaker": null,
+    "accent": "fr-FR",
+    "family": "siwis"
+   },
+   {
+    "id": "kokoro:ff_siwis",
+    "engine": "kokoro",
+    "model": "f",
+    "speaker": "ff_siwis",
+    "accent": "fr-FR",
+    "family": "siwis"
+   },
+   {
+    "id": "fr_FR-gilles-low",
+    "engine": "piper",
+    "model": "fr_FR-gilles-low",
+    "speaker": null,
+    "accent": "fr-FR",
+    "family": "gilles"
+   }
+  ]
+ },
+ "similar": {
+  "Chloe": {
+   "id": "en_US-libritts_r-medium:1914",
+   "engine": "piper",
+   "model": "en_US-libritts_r-medium",
+   "speaker": "1914",
+   "accent": "en-US",
+   "similarity_to_agent": 0.952,
+   "median_similarity_of_others": 0.717
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+  "method": "fine-tuned MiniLM-L12 multilingual encoder",
+  "label": "measured",
+  "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2@e8f8c21122 fine-tuned 3 epochs on the 6,000 training messages",
+  "ms_per_message": 6.729,
+  "run_per_1000": 0.0001,
+  "messages": 4000,
+  "notes": "Fine-tuned and measured on a laptop CPU (Apple M4, 4 threads); time per message one at a time."
+}

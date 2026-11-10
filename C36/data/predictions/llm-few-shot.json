@@ -1,0 +1,9 @@
+{
+  "method": "hosted LLM chat-small, few-shot (recorded)",
+  "label": "recorded",
+  "model": "chat-small (gpt-6-luna-2026-09-22)",
+  "ms_per_message": 1708.0,
+  "run_per_1000": 0.0876,
+  "messages": 4000,
+  "notes": "Recorded once from the Azure deployment chat-small (reasoning effort none); replayed. The confidence is the number the model wrote, not a probability."
+}
