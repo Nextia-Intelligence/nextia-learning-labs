@@ -1,0 +1,601 @@
+record_id_l,record_id_r,label,why_sampled,split
+FH-000728,S-003435,0,same surname and region,test
+FH-000758,FH-003788,0,same surname and region,validation
+FH-007802,S-010250,0,same surname and region,test
+FH-001403,FH-010247,0,same surname and region,test
+FH-000355,G-011937,1,true pair,test
+FH-006742,L-011533,0,same surname and region,test
+FH-003785,S-022987,1,true pair,validation
+FH-007870,L-000101,0,same surname and region,validation
+FH-001303,G-006695,1,true pair,validation
+FH-006975,FH-010343,0,random,test
+FH-002097,L-014238,0,same surname and region,test
+FH-008235,L-007580,1,true pair,test
+FH-003240,G-008828,0,same surname and region,validation
+FH-004525,S-019799,0,same surname and region,test
+FH-004218,S-022315,0,same surname and region,validation
+FH-010258,L-012809,0,same surname and region,test
+FH-000455,S-001774,0,same surname and region,validation
+FH-002611,S-027190,0,same surname and region,validation
+FH-007904,L-006760,0,same surname and region,test
+FH-006786,G-011463,0,same surname and region,validation
+FH-000902,FH-001223,0,same surname and region,test
+FH-004819,S-002573,0,same surname and region,validation
+FH-009186,S-023403,0,same surname and region,validation
+FH-006906,S-018602,0,random,validation
+FH-005708,FH-009674,0,same surname and region,test
+FH-008690,L-003895,0,same surname and region,validation
+FH-000633,S-016697,1,true pair,test
+FH-001462,S-025415,0,same surname and region,test
+FH-001033,S-014118,0,same surname and region,validation
+FH-003375,G-005759,0,same surname and region,test
+FH-010062,S-025738,0,same surname and region,validation
+FH-010213,S-024512,0,same surname and region,test
+FH-002657,L-007163,0,same surname and region,test
+FH-009276,S-015170,1,true pair,validation
+FH-003899,L-002005,1,true pair,test
+FH-008228,S-014523,1,true pair,test
+FH-010554,S-022812,0,random,test
+FH-000740,S-002764,1,true pair,test
+FH-008293,L-000065,0,same surname and region,validation
+FH-010164,S-019963,0,same surname and region,validation
+FH-003592,G-003429,1,true pair,validation
+FH-006179,S-030867,0,same surname and region,validation
+FH-001570,S-010534,0,same surname and region,test
+FH-000444,S-029139,1,true pair,test
+FH-000255,FH-008703,0,same surname and region,validation
+FH-002156,FH-005898,0,random,validation
+FH-004985,L-010396,1,true pair,test
+FH-002813,FH-009058,1,true pair,validation
+FH-004382,L-010837,0,same surname and region,validation
+FH-006920,G-005115,0,same surname and region,test
+FH-010406,S-027290,1,true pair,test
+FH-000064,FH-007177,1,true pair,test
+FH-004446,S-014858,0,random,validation
+FH-002416,L-016783,0,same surname and region,test
+FH-006979,S-025909,0,same surname and region,validation
+FH-001327,L-003758,0,same surname and region,test
+FH-008647,FH-010011,0,same surname and region,validation
+FH-008977,G-005908,0,same surname and region,validation
+FH-009571,S-006442,1,true pair,validation
+FH-001172,FH-007775,1,true pair,test
+FH-004961,S-028469,0,same surname and region,validation
+FH-006964,G-007715,0,random,validation
+FH-005702,L-017004,0,same surname and region,test
+FH-002037,FH-009953,0,random,test
+FH-003851,S-005574,1,true pair,test
+FH-003328,G-001061,0,same surname and region,test
+FH-006551,S-014282,0,same surname and region,validation
+FH-008215,S-017494,1,true pair,test
+FH-003074,L-013984,1,true pair,validation
+FH-010535,S-029924,1,true pair,test
+FH-001140,S-020852,0,same surname and region,validation
+FH-001409,L-014551,1,true pair,test
+FH-000283,S-024515,0,same surname and region,validation
+FH-000583,S-006771,1,true pair,test
+FH-005924,L-005523,0,same surname and region,validation
+FH-009947,L-011591,0,same surname and region,validation
+FH-006994,L-003083,0,same surname and region,test
+FH-002460,G-007509,0,same surname and region,test
+FH-002939,G-009483,0,same surname and region,test
+FH-009864,S-014887,1,true pair,test
+FH-006455,S-018295,0,same surname and region,validation
+FH-009098,S-028424,0,same surname and region,test
+FH-005225,G-008965,1,true pair,test
+FH-003145,G-002141,0,same surname and region,validation
+FH-007562,S-010338,0,random,validation
+FH-010560,G-000536,0,same surname and region,test
+FH-004643,S-009481,1,true pair,test
+FH-006701,L-007875,1,true pair,test
+FH-004172,L-002423,0,same surname and region,test
+FH-007378,FH-009234,0,same surname and region,test
+FH-004081,G-008415,1,true pair,test
+FH-004831,G-005606,0,same surname and region,validation
+FH-001962,S-016489,1,true pair,validation
+FH-002626,L-011623,1,true pair,validation
+FH-003001,S-005122,0,random,validation
+FH-001723,L-002710,1,true pair,validation
+FH-002004,S-015084,1,true pair,validation
+FH-003544,S-024980,1,true pair,validation
+FH-001775,L-015128,0,random,validation
+FH-004245,FH-008387,0,random,validation
+FH-008049,S-011833,1,true pair,test
+FH-008902,S-012756,0,same surname and region,validation
+FH-008728,G-008460,0,same surname and region,validation
+FH-009216,G-000318,0,random,validation
+FH-006146,S-000629,1,true pair,validation
+FH-000484,G-008884,1,true pair,test
+FH-005751,L-003632,0,same surname and region,validation
+FH-002791,L-011779,0,same surname and region,test
+FH-004057,S-011021,1,true pair,test
+FH-006187,S-000589,1,true pair,validation
+FH-007841,S-011432,0,same surname and region,test
+FH-003326,S-027408,1,true pair,validation
+FH-003067,L-004968,0,same surname and region,test
+FH-001845,L-001149,0,same surname and region,validation
+FH-001626,L-005970,0,same surname and region,validation
+FH-000283,S-003699,1,true pair,validation
+FH-002346,G-000877,1,true pair,test
+FH-005259,S-019408,0,same surname and region,test
+FH-002427,G-003092,0,same surname and region,validation
+FH-004552,G-006653,1,true pair,test
+FH-009830,S-010895,0,same surname and region,test
+FH-004988,S-014852,0,same surname and region,validation
+FH-009149,L-002353,0,same surname and region,test
+FH-010288,G-001917,0,same surname and region,validation
+FH-000309,S-021136,1,true pair,test
+FH-003920,S-000245,1,true pair,test
+FH-009943,S-003586,0,same surname and region,test
+FH-002667,S-001906,0,same surname and region,validation
+FH-005863,S-022300,0,same surname and region,validation
+FH-002495,S-004714,1,true pair,test
+FH-007715,L-007734,1,true pair,validation
+FH-006229,S-014457,0,same surname and region,validation
+FH-005243,L-011393,0,same surname and region,validation
+FH-002190,S-021169,0,same surname and region,test
+FH-000773,L-003876,0,same surname and region,validation
+FH-005257,L-014123,1,true pair,validation
+FH-009731,G-009677,0,same surname and region,validation
+FH-004866,S-006776,1,true pair,validation
+FH-005493,FH-005871,0,same surname and region,test
+FH-006461,S-023857,0,same surname and region,validation
+FH-008943,L-016391,1,true pair,validation
+FH-004258,S-004253,0,random,validation
+FH-005314,S-008218,0,same surname and region,test
+FH-004313,L-005318,0,random,test
+FH-005664,S-002137,1,true pair,test
+FH-002524,G-002186,1,true pair,test
+FH-006269,L-001935,0,same surname and region,validation
+FH-001095,FH-001679,1,true pair,test
+FH-007175,L-010947,0,same surname and region,validation
+FH-003513,FH-009986,0,same surname and region,validation
+FH-010656,G-000613,1,true pair,validation
+FH-006527,S-002963,0,same surname and region,validation
+FH-008588,S-008889,0,random,validation
+FH-010292,S-009655,1,true pair,test
+FH-010380,L-005000,0,random,test
+FH-007224,S-017128,0,same surname and region,validation
+FH-001451,FH-001535,1,true pair,validation
+FH-000041,L-015524,1,true pair,validation
+FH-006863,L-008629,1,true pair,validation
+FH-006248,S-007559,1,true pair,validation
+FH-010690,L-006488,1,true pair,test
+FH-009374,L-006452,1,true pair,test
+FH-002867,S-010439,1,true pair,validation
+FH-002497,S-027456,0,random,test
+FH-008593,FH-009808,0,same surname and region,test
+FH-001190,G-002865,1,true pair,test
+FH-010456,FH-010709,0,random,validation
+FH-003996,L-016642,0,same surname and region,test
+FH-003259,G-007810,1,true pair,test
+FH-003624,S-028723,1,true pair,test
+FH-003657,G-005448,1,true pair,validation
+FH-007509,G-006365,0,same surname and region,validation
+FH-004648,S-019723,1,true pair,test
+FH-003283,S-010944,0,random,validation
+FH-001940,S-022479,0,same surname and region,validation
+FH-008846,S-028589,0,same surname and region,validation
+FH-009439,L-001335,0,same surname and region,test
+FH-002128,L-001010,1,true pair,validation
+FH-005566,S-025594,1,true pair,validation
+FH-004356,L-003493,0,same surname and region,validation
+FH-009779,S-007986,0,same surname and region,validation
+FH-000352,L-012718,1,true pair,validation
+FH-008985,S-018678,0,same surname and region,test
+FH-003578,S-001513,0,random,validation
+FH-006839,L-003548,0,same surname and region,test
+FH-000077,S-002336,0,same surname and region,validation
+FH-009794,S-003952,0,random,test
+FH-010283,L-010322,0,random,validation
+FH-006835,S-023867,1,true pair,validation
+FH-010705,S-013582,1,true pair,validation
+FH-002180,L-015131,0,same surname and region,validation
+FH-010383,L-016009,1,true pair,test
+FH-000025,S-013674,1,true pair,test
+FH-007913,S-017326,1,true pair,test
+FH-001703,S-014326,0,same surname and region,validation
+FH-003284,L-010870,1,true pair,test
+FH-001774,S-006905,0,same surname and region,validation
+FH-006103,S-028704,0,random,test
+FH-000487,FH-002524,1,true pair,test
+FH-010769,S-003316,0,same surname and region,test
+FH-001618,S-017539,1,true pair,validation
+FH-003843,L-005479,0,same surname and region,validation
+FH-004151,G-009799,1,true pair,test
+FH-002580,FH-003113,1,true pair,validation
+FH-003725,G-010248,0,random,validation
+FH-009412,L-003655,0,same surname and region,test
+FH-008769,S-028717,0,random,validation
+FH-000352,S-017570,0,same surname and region,validation
+FH-000441,S-007249,0,same surname and region,validation
+FH-000142,S-004135,0,same surname and region,test
+FH-000492,L-015640,0,random,test
+FH-002441,S-025453,0,random,test
+FH-004639,S-029817,1,true pair,validation
+FH-008648,S-026042,1,true pair,test
+FH-000010,S-015012,0,same surname and region,test
+FH-010531,S-024789,0,random,validation
+FH-008275,FH-009631,0,random,test
+FH-004394,G-006540,0,random,validation
+FH-001541,L-011916,0,random,validation
+FH-001957,L-015837,0,same surname and region,validation
+FH-006581,L-010262,0,same surname and region,test
+FH-009956,S-014445,0,same surname and region,test
+FH-008827,L-006359,1,true pair,validation
+FH-009630,S-026437,0,same surname and region,test
+FH-005836,S-024467,1,true pair,validation
+FH-000618,G-008818,1,true pair,test
+FH-005504,S-009230,0,same surname and region,validation
+FH-006816,S-015208,0,same surname and region,validation
+FH-001118,S-030538,0,same surname and region,test
+FH-005315,S-011576,0,same surname and region,test
+FH-001735,L-010937,1,true pair,validation
+FH-000618,S-003767,1,true pair,test
+FH-006882,S-025962,0,random,validation
+FH-001311,FH-002025,0,same surname and region,test
+FH-007605,L-013513,0,same surname and region,validation
+FH-008405,S-024931,0,same surname and region,validation
+FH-003240,S-007774,1,true pair,validation
+FH-003975,G-006817,0,same surname and region,test
+FH-007689,L-001276,1,true pair,test
+FH-006857,S-005569,0,random,validation
+FH-003028,S-010838,1,true pair,validation
+FH-001847,L-006895,1,true pair,validation
+FH-006570,G-008243,1,true pair,validation
+FH-008639,S-000876,1,true pair,validation
+FH-002576,S-017386,0,same surname and region,validation
+FH-004395,L-013631,1,true pair,validation
+FH-008971,S-028985,0,same surname and region,test
+FH-007506,S-029499,1,true pair,test
+FH-002721,S-006874,0,same surname and region,validation
+FH-002593,G-007565,1,true pair,test
+FH-004967,L-001020,0,same surname and region,test
+FH-000920,L-001855,0,same surname and region,test
+FH-000480,FH-002348,0,same surname and region,validation
+FH-007936,G-004206,1,true pair,validation
+FH-006559,S-005469,1,true pair,validation
+FH-010281,S-014690,1,true pair,validation
+FH-003931,S-009765,1,true pair,validation
+FH-002768,FH-008385,0,same surname and region,validation
+FH-001129,L-011282,0,same surname and region,validation
+FH-010084,L-006310,0,same surname and region,test
+FH-001475,S-023309,1,true pair,test
+FH-007946,S-009483,1,true pair,test
+FH-009840,S-004718,1,true pair,validation
+FH-001795,S-029264,0,random,validation
+FH-008372,L-000263,0,same surname and region,test
+FH-003956,G-000028,0,same surname and region,test
+FH-004304,L-014187,0,random,test
+FH-007180,G-008117,0,same surname and region,validation
+FH-009776,S-025600,0,same surname and region,test
+FH-003523,FH-003881,1,true pair,test
+FH-002266,S-007220,1,true pair,validation
+FH-010596,S-014875,1,true pair,test
+FH-005577,S-018044,0,same surname and region,test
+FH-004403,L-013762,0,same surname and region,test
+FH-002849,L-016290,0,same surname and region,test
+FH-009783,S-023340,0,same surname and region,test
+FH-007033,L-016728,0,same surname and region,validation
+FH-009677,S-005471,0,random,validation
+FH-000323,G-000869,0,same surname and region,test
+FH-001846,FH-006552,1,true pair,validation
+FH-002449,L-010925,0,same surname and region,test
+FH-002123,G-010057,0,same surname and region,validation
+FH-010380,S-003541,0,same surname and region,test
+FH-008416,G-006303,0,same surname and region,test
+FH-000142,S-029353,0,same surname and region,test
+FH-007007,S-022340,1,true pair,validation
+FH-000989,S-021023,0,same surname and region,test
+FH-010689,S-011647,0,random,validation
+FH-008407,G-011928,0,same surname and region,validation
+FH-006667,G-004079,0,same surname and region,test
+FH-008835,S-003986,0,same surname and region,test
+FH-005412,S-006230,0,same surname and region,test
+FH-007139,S-027204,0,same surname and region,test
+FH-000106,S-028628,1,true pair,validation
+FH-007218,S-020725,1,true pair,validation
+FH-008198,S-005954,0,random,test
+FH-009330,S-022577,1,true pair,validation
+FH-002179,S-014947,0,same surname and region,test
+FH-003090,S-027362,1,true pair,test
+FH-002540,FH-008806,0,same surname and region,validation
+FH-006879,S-014285,1,true pair,test
+FH-010727,S-018342,1,true pair,validation
+FH-007135,L-000741,0,same surname and region,validation
+FH-001486,G-010398,0,same surname and region,validation
+FH-004841,S-006949,0,same surname and region,test
+FH-001506,S-001237,1,true pair,test
+FH-004915,S-017769,0,same surname and region,validation
+FH-008299,G-008177,0,same surname and region,validation
+FH-009286,FH-009809,0,same surname and region,test
+FH-008350,L-004152,0,same surname and region,test
+FH-003507,L-006676,0,same surname and region,validation
+FH-004741,G-005149,0,random,validation
+FH-005939,L-006081,1,true pair,validation
+FH-000900,L-012730,0,same surname and region,test
+FH-000775,S-011792,0,same surname and region,test
+FH-009633,L-015349,0,same surname and region,test
+FH-000564,S-005610,0,same surname and region,validation
+FH-000195,S-014199,0,same surname and region,test
+FH-007555,L-007702,1,true pair,validation
+FH-008419,L-003285,1,true pair,validation
+FH-007388,L-016516,1,true pair,validation
+FH-010642,S-010167,0,same surname and region,validation
+FH-001474,L-000354,1,true pair,test
+FH-007616,S-021654,1,true pair,test
+FH-003819,L-003722,1,true pair,test
+FH-000020,S-009756,1,true pair,validation
+FH-008614,G-001862,0,same surname and region,test
+FH-003898,S-014338,1,true pair,test
+FH-003122,L-001104,0,random,test
+FH-005143,S-016345,0,random,test
+FH-003026,G-009904,0,same surname and region,test
+FH-005528,S-016807,1,true pair,test
+FH-001625,L-006216,0,same surname and region,validation
+FH-008900,S-009117,1,true pair,validation
+FH-010483,S-004251,1,true pair,validation
+FH-007946,FH-008568,1,true pair,test
+FH-001589,S-024662,1,true pair,validation
+FH-010612,S-004765,0,same surname and region,test
+FH-005532,L-005049,0,same surname and region,validation
+FH-006458,L-000296,0,same surname and region,test
+FH-006075,L-001269,0,same surname and region,validation
+FH-001764,S-027383,1,true pair,test
+FH-007531,L-013917,1,true pair,test
+FH-002076,G-011077,0,same surname and region,test
+FH-002621,G-003385,0,same surname and region,test
+FH-005791,L-011287,0,same surname and region,validation
+FH-009383,S-029752,1,true pair,test
+FH-006722,S-030998,1,true pair,test
+FH-001994,G-001543,0,random,validation
+FH-003654,G-000433,0,same surname and region,validation
+FH-006753,G-011257,0,same surname and region,validation
+FH-010637,G-010289,1,true pair,validation
+FH-006446,G-010300,0,random,test
+FH-003264,G-009008,1,true pair,test
+FH-007727,G-004609,0,same surname and region,test
+FH-002388,G-010170,0,same surname and region,validation
+FH-003437,S-021568,1,true pair,validation
+FH-007819,L-001984,0,same surname and region,validation
+FH-002323,G-002891,0,same surname and region,validation
+FH-003366,S-002814,1,true pair,validation
+FH-009002,S-016188,0,same surname and region,validation
+FH-007240,G-002198,1,true pair,test
+FH-001887,FH-007604,1,true pair,validation
+FH-006427,S-005847,0,same surname and region,test
+FH-001866,L-011099,0,same surname and region,validation
+FH-005768,G-010656,0,same surname and region,test
+FH-004600,S-007626,1,true pair,test
+FH-004074,G-006083,1,true pair,test
+FH-002133,S-005725,0,random,test
+FH-001533,S-024966,0,same surname and region,test
+FH-010421,L-002097,0,same surname and region,validation
+FH-006289,S-011213,1,true pair,validation
+FH-008176,S-005373,1,true pair,validation
+FH-000750,S-006417,1,true pair,validation
+FH-009090,L-012821,0,random,test
+FH-001798,S-015489,1,true pair,test
+FH-007226,L-016855,0,same surname and region,validation
+FH-003775,S-004715,0,same surname and region,test
+FH-009015,S-002736,0,same surname and region,validation
+FH-001546,L-000740,0,same surname and region,test
+FH-004297,S-024803,1,true pair,test
+FH-010256,L-016684,0,same surname and region,validation
+FH-009327,L-006619,0,same surname and region,validation
+FH-004827,S-028110,0,same surname and region,validation
+FH-000854,FH-004821,0,same surname and region,validation
+FH-003787,L-011964,1,true pair,validation
+FH-000963,L-010410,0,same surname and region,test
+FH-006168,G-000411,0,same surname and region,test
+FH-005999,S-003846,0,same surname and region,validation
+FH-005657,S-000660,0,same surname and region,validation
+FH-005620,S-023414,0,same surname and region,validation
+FH-010386,S-023384,0,random,validation
+FH-008521,L-001414,1,true pair,validation
+FH-000511,S-008317,0,same surname and region,validation
+FH-004279,G-010574,1,true pair,validation
+FH-001222,S-017508,0,same surname and region,test
+FH-001983,G-011806,0,same surname and region,validation
+FH-008103,G-002251,1,true pair,validation
+FH-006839,S-027745,1,true pair,test
+FH-004143,G-006791,1,true pair,validation
+FH-003044,S-018446,1,true pair,test
+FH-006838,L-010058,1,true pair,test
+FH-000560,S-020428,1,true pair,test
+FH-000732,L-013490,1,true pair,validation
+FH-008115,L-005701,1,true pair,validation
+FH-005400,S-018080,0,same surname and region,validation
+FH-004225,L-007140,0,same surname and region,validation
+FH-009254,L-015048,0,same surname and region,validation
+FH-010372,S-000320,1,true pair,validation
+FH-009097,S-004233,1,true pair,validation
+FH-009074,L-006176,0,same surname and region,validation
+FH-003255,S-017859,0,same surname and region,validation
+FH-002818,L-015468,1,true pair,validation
+FH-004063,L-002560,0,same surname and region,test
+FH-004467,L-014375,0,random,validation
+FH-002433,L-007806,0,same surname and region,validation
+FH-007900,S-022437,0,same surname and region,validation
+FH-003881,L-012298,0,random,validation
+FH-003956,S-005235,0,same surname and region,test
+FH-009015,S-012972,0,same surname and region,validation
+FH-000511,FH-001732,0,random,validation
+FH-010529,G-009992,1,true pair,test
+FH-008150,S-008768,0,same surname and region,test
+FH-010448,S-021921,1,true pair,validation
+FH-006605,L-010739,0,same surname and region,test
+FH-008270,G-005516,1,true pair,validation
+FH-004224,S-017413,1,true pair,validation
+FH-007446,L-005650,1,true pair,validation
+FH-000422,G-001554,1,true pair,validation
+FH-007273,FH-010073,0,same surname and region,validation
+FH-002254,L-008268,0,random,test
+FH-005168,FH-009590,1,true pair,test
+FH-003264,S-002507,1,true pair,test
+FH-001344,S-004233,1,true pair,test
+FH-005627,L-016294,0,same surname and region,test
+FH-009289,L-014477,1,true pair,validation
+FH-005374,L-013825,1,true pair,test
+FH-005677,L-009868,0,same surname and region,validation
+FH-005915,L-013835,0,same surname and region,test
+FH-004041,L-007812,1,true pair,test
+FH-000662,S-001044,0,same surname and region,validation
+FH-002870,S-024138,1,true pair,validation
+FH-002426,S-013356,1,true pair,validation
+FH-001570,L-010947,0,same surname and region,test
+FH-008097,S-021765,0,same surname and region,test
+FH-010158,S-007534,1,true pair,validation
+FH-003004,FH-009802,1,true pair,test
+FH-001690,G-005143,0,same surname and region,validation
+FH-005305,G-009699,0,same surname and region,validation
+FH-000841,FH-005455,0,same surname and region,validation
+FH-001710,S-028637,1,true pair,test
+FH-005509,L-015526,0,same surname and region,test
+FH-009111,S-010564,0,same surname and region,validation
+FH-003809,L-001843,0,same surname and region,validation
+FH-007568,S-019821,1,true pair,validation
+FH-008261,L-009093,1,true pair,test
+FH-002067,L-000277,0,same surname and region,validation
+FH-009131,S-022194,0,random,validation
+FH-007444,L-012137,0,same surname and region,validation
+FH-004776,S-011077,1,true pair,validation
+FH-009262,S-027620,1,true pair,validation
+FH-002042,S-003715,1,true pair,test
+FH-002235,S-029437,1,true pair,test
+FH-006560,L-005511,0,same surname and region,test
+FH-001233,S-011579,1,true pair,validation
+FH-010264,L-001159,0,same surname and region,test
+FH-006394,L-001476,0,same surname and region,test
+FH-003766,S-018946,0,same surname and region,validation
+FH-005264,L-004831,0,random,test
+FH-003257,L-016068,0,same surname and region,validation
+FH-007955,S-015852,1,true pair,validation
+FH-009232,L-003504,0,same surname and region,test
+FH-000358,L-002969,1,true pair,validation
+FH-005826,S-006381,0,same surname and region,test
+FH-004003,S-001279,0,same surname and region,test
+FH-000416,L-003558,0,same surname and region,validation
+FH-003526,L-007336,0,same surname and region,validation
+FH-003384,S-002459,1,true pair,validation
+FH-005839,S-018247,1,true pair,test
+FH-006622,S-007235,0,random,validation
+FH-007210,FH-010004,0,same surname and region,validation
+FH-004865,S-006566,1,true pair,validation
+FH-002879,S-010083,0,same surname and region,validation
+FH-010474,S-027683,1,true pair,validation
+FH-009149,L-006216,1,true pair,test
+FH-003602,S-025549,1,true pair,validation
+FH-010371,L-013708,0,same surname and region,validation
+FH-003265,S-011783,1,true pair,test
+FH-010578,G-003404,1,true pair,validation
+FH-001603,S-029467,1,true pair,test
+FH-003951,S-019683,0,same surname and region,validation
+FH-003818,FH-009676,0,random,test
+FH-005897,S-007277,1,true pair,validation
+FH-004192,S-015896,0,same surname and region,test
+FH-001562,L-008215,0,same surname and region,validation
+FH-006829,L-004621,1,true pair,validation
+FH-007297,S-018506,0,same surname and region,test
+FH-001076,S-029196,0,same surname and region,test
+FH-008594,S-030281,0,random,validation
+FH-007107,S-000228,1,true pair,test
+FH-001946,L-013532,1,true pair,test
+FH-009120,L-000661,0,same surname and region,test
+FH-001520,L-010642,0,same surname and region,validation
+FH-005547,L-015715,0,same surname and region,validation
+FH-001674,G-000787,0,same surname and region,test
+FH-000027,L-016399,0,same surname and region,test
+FH-005462,L-013583,1,true pair,validation
+FH-002107,FH-005146,1,true pair,test
+FH-006428,S-027496,0,same surname and region,validation
+FH-002407,S-013670,1,true pair,validation
+FH-002060,S-006391,0,same surname and region,test
+FH-010034,S-009114,0,same surname and region,validation
+FH-002262,S-006197,0,random,test
+FH-008515,L-011336,0,same surname and region,validation
+FH-006754,S-012003,0,same surname and region,test
+FH-008237,G-004279,0,same surname and region,test
+FH-002064,L-012320,1,true pair,validation
+FH-005569,S-016361,0,same surname and region,test
+FH-004528,S-024928,0,same surname and region,validation
+FH-003864,S-012767,1,true pair,test
+FH-006915,S-011868,0,same surname and region,test
+FH-003014,S-009324,0,same surname and region,validation
+FH-002216,G-001962,1,true pair,test
+FH-007502,S-005716,0,same surname and region,validation
+FH-006857,S-029450,0,same surname and region,validation
+FH-008077,G-010933,1,true pair,test
+FH-007259,L-010134,0,random,validation
+FH-008976,S-002449,1,true pair,validation
+FH-003704,S-019710,0,same surname and region,validation
+FH-010215,S-012972,0,same surname and region,validation
+FH-007210,L-002302,0,same surname and region,validation
+FH-007060,FH-010614,0,same surname and region,test
+FH-004759,S-007420,1,true pair,test
+FH-008462,G-004450,0,same surname and region,test
+FH-008324,G-006268,0,same surname and region,test
+FH-010003,S-026016,0,same surname and region,validation
+FH-007430,G-010884,0,same surname and region,validation
+FH-006309,G-000742,1,true pair,test
+FH-009349,S-008257,1,true pair,test
+FH-005382,S-022727,0,same surname and region,test
+FH-007508,L-011217,1,true pair,validation
+FH-009217,L-005193,0,same surname and region,validation
+FH-001780,L-002404,1,true pair,validation
+FH-009942,L-016637,0,same surname and region,test
+FH-002705,L-016807,1,true pair,test
+FH-007950,L-013157,0,random,test
+FH-005450,L-016782,0,same surname and region,test
+FH-004173,S-010631,0,same surname and region,test
+FH-002096,L-000171,0,same surname and region,test
+FH-007847,S-000934,1,true pair,validation
+FH-004112,G-001810,1,true pair,test
+FH-009235,G-009783,0,random,validation
+FH-004616,G-005051,0,same surname and region,test
+FH-009355,L-008593,0,same surname and region,test
+FH-007493,L-009056,1,true pair,validation
+FH-003999,S-026382,1,true pair,validation
+FH-010731,S-016076,1,true pair,validation
+FH-007897,FH-009900,1,true pair,test
+FH-009298,G-010067,1,true pair,test
+FH-005382,S-021832,1,true pair,test
+FH-000609,S-012530,0,same surname and region,validation
+FH-008123,L-007665,0,same surname and region,validation
+FH-005695,S-020104,0,same surname and region,validation
+FH-008348,S-015426,1,true pair,validation
+FH-001575,L-009792,0,random,validation
+FH-010322,S-018454,1,true pair,test
+FH-002092,G-009334,0,same surname and region,validation
+FH-001058,S-006083,0,same surname and region,validation
+FH-010053,L-004183,1,true pair,test
+FH-006431,S-003348,1,true pair,test
+FH-004064,S-000504,1,true pair,validation
+FH-005551,S-003882,0,same surname and region,validation
+FH-004957,S-009562,1,true pair,validation
+FH-003133,S-014144,1,true pair,validation
+FH-009670,S-022053,1,true pair,test
+FH-008545,G-002225,1,true pair,test
+FH-000142,L-003200,0,same surname and region,test
+FH-005098,G-002353,0,same surname and region,test
+FH-005739,G-008224,0,same surname and region,validation
+FH-003379,L-005622,0,same surname and region,validation
+FH-010629,G-009553,1,true pair,validation
+FH-001462,S-009913,0,same surname and region,test
+FH-007857,S-021629,1,true pair,test
+FH-005713,L-013483,0,same surname and region,validation
+FH-006729,L-016068,1,true pair,test
+FH-004909,L-012859,0,same surname and region,validation
+FH-002378,S-025021,1,true pair,test
+FH-004279,S-027890,1,true pair,validation
+FH-003299,FH-007576,1,true pair,test
+FH-009655,S-002412,1,true pair,validation
+FH-004212,S-003859,1,true pair,validation
+FH-000696,S-008872,1,true pair,validation
+FH-001314,S-004681,0,same surname and region,validation
+FH-002007,L-016941,1,true pair,validation
+FH-001320,S-009204,0,same surname and region,validation
+FH-005360,S-014743,0,same surname and region,test
+FH-007323,G-009617,0,same surname and region,validation
+FH-000671,FH-007786,0,same surname and region,test
+FH-010025,S-023443,0,same surname and region,test
+FH-010475,L-000746,1,true pair,validation

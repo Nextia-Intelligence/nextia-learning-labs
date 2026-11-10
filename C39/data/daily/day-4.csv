@@ -1,0 +1,302 @@
+record_id,source,first_name,last_name,full_name,email,phone,address,city,province,postcode,date_of_birth
+D4-0001,loyalty,,,Yuki Garcia,,819-555-1780,,,,H8R 7X7,18/12/1996
+D4-0002,shop,Mohammed,Li,,mohammed.li46@inbox.example,,1125 Kestrel Road,Heronvale,ON,K9Z 5E4,1958-10-13
+D4-0003,shop,Amanda,Robinson,,arobinson@example.net,604.555.8934,106 Bramble Drive,Cedarwell,BC,V7G 1Z7,
+D4-0004,loyalty,,,Jérôme Girard,Jerome.Girard46@Example.org,(418) 555-1329,,,,j8w 0y8,18/07/1994
+D4-0005,shop,Nathalie,Gagné,,ngagne@example.net,4185554611,9985 rang du Coteau,Rivière-aux-Brumes,QC,G1Y 5S1,1946-09-27
+D4-0006,shop,Will,Wilson,,williamwilson@example.net,416.555.5038,298 Elder Avenue,Ashbury Falls,ON,N8A 1T2,1971-06-30
+D4-0007,shop,Linda,Stewart,,lstewart@example.org,519-555-4795,"9683 Copper Beech Pl, Unit 33",Cedarholt,ON,l9k 1k6,1966-03-02
+D4-0008,shop,Brian,Anderson,,briananderson@inbox.example,1-416-555-8555,8458 Heron Pl,Cedarholt,ON,M0S 6G4,
+D4-0009,shop,Joseph,Walker,,joseph.walker53@example.net,,8064 Wren Rd.,Fernhaven,BC,V0Z 5J6,
+D4-0010,shop,Leila,Li,,li.leila78@mail.example,5195558952,1125 Kestrel Road,Heronvale,ON,K9Z 5E4,
+D4-0011,shop,Olivia,Williams,,owilliams@post.example,506.555.3879,6483 boulevard des Merisiers app. 24,Saint-Aldric,NB,E0P 6R9,
+D4-0012,shop,Richard,Brown,,rbrown@inbox.example,,166 Copper Beech Road Apt 39,Foxhollow Bay,ON,m6w 0h1,1967-06-25
+D4-0013,shop,Isabelle,Plirier,,poirier.isabelle77@example.org,+1 450 555 4093,"2087, r. de l'Église app. 7",Saint-Éloi-du-Lac,QC,H3B 8X0,
+D4-0014,shop,Marie Claude,Fortin,,fortin.marie-claude60@post.example,1-450-555-8191,2613 r. de l'Église app. 5,Mont-Bellerose,QC,H4C-4H0,2006-07-12
+D4-0015,shop,Susan,Lockhart,,Susan.Lockhart71@Mail.example,(519) 555-7883,7750 Wren Blvd.,Wrenhollow,ON,L0S 1M1,2006-11-23
+D4-0016,loyalty,,,Marie-Claude Bouchard,marie-claude.bouchard97@post.example,450-555-7228,,,,J5T 7A1,27/02/1967
+D4-0017,loyalty,,,Jean Lapointe,jeanlapointe@post.example,(819) 555-2229,,,,G5H 2E5,24/04/1970
+D4-0018,loyalty,,,François Bélanger,thebelangers47@example.net,,,,,H3H 1M3,02/09/1990
+D4-0019,loyalty,,,S. Lewis,samuel.lewis@inbox.example,(506) 555-2525,,,,E9B 9P9,21/11/1966
+D4-0020,shop,Elizabeth,Jones,,elizabeth.jones@mail.example,+1 905 555 0518,"3514 Orchard Drive, Unit 39",Ashbury Falls,ON,L7M 8E6,1974-02-27
+D4-0021,shop,Linda,Jones,,lindajones@example.org,(506) 555-5508,4011 Cobble Rd Apt 28,Port Wrenna,NB,e8e 0n0,
+D4-0022,loyalty,,,François Simard,francoissimard@inbox.example,,,,,E7Y 7H2,21/04/1986
+D4-0023,shop,Dmitri,Chen,,dmitri.chen@inbox.example,+1 613 555 9479,6 Linden Cres.,Heronvale,ON,M0C2X3,
+D4-0024,shop,Mohammed,Khan,,mohammed.khan72@example.net,,6 Linden Cres.,Heronvale,ON,M0C 2X3,
+D4-0025,shop,Fatima,Chen,,fcheen@example.org,1-519-555-1375,6 Linden Cres,Heronvale,ON,M0C2X3,
+D4-0026,shop,Jean,Gauthier,,gauthier.jean72@example.net,,37-9953 rue Saint-Joseph,Mont-Bellerose,QC,H1C 6Y5,
+D4-0027,loyalty,,,Dmitri Nguyen,dmitri.nguyen@example.com,(250) 555-2149,,,,v2n 3s9,12/07/1953
+D4-0028,shop,Ms Chloe,Cote,,chloe.cote68@post.example,1-418-555-1382,6635 avenue des Pins,Pointe-aux-Saules,QC,H9Y 3W7,
+D4-0029,loyalty,,,Emily Taylor,emilytaylor@example.org,6135554512,,,,K3L 9K3,15/06/1980
+D4-0030,shop,David,Kennedy,,davidkennedy@mail.example,1-250-555-4853,9611 Bramble Place Apt 12,Ravensmere Point,BC,V3H 7N8,
+D4-0031,shop,Marie,Côté,,mariecote@inbox.example,,6699 boulevard de la Colline app. 23,Sainte-Rose-des-Neiges,QC,H7L6R0,1997-09-06
+D4-0032,shop,Priyanka,Kim,,priyanka.kim39@post.example,,181 Old Mill Crt,Wrenhollow,ON,K1L-1N6,1992-10-21
+D4-0033,loyalty,,,Geneviève Bouchard,genevieve.bouchard@post.example,514-555-1912,,,,G8J 1Y6,15/07/1967
+D4-0034,shop,Andrew,Brown,,abrown@inbox.example,+1 519 555 2206,1408 Fern Street,Briarstead,ON,M1T 5B2,
+D4-0035,shop,Barb,Wilson,,wilson.barbara66@mail.example,+1 519 555 6704,262 Larkspur Boulevard,Briarstead,ON,K7A 4T4,
+D4-0036,shop,Thomas,Morrison,, morrison.thomas86@example.org ,506.555.6461,4740 Juniper Court,Port Wrenna,NB,E3B 6J6,1956-05-25
+D4-0037,shop,Susan,Ashworth,,susan.ashworth@example.net,,30-59 Elder St,Tidewick,BC,V5C-1X6,1951-09-08
+D4-0038,shop,Sébastien,Lavoie,,Sebastienlavoie@Example.net,4185550974,5910 chemin des Tilleuls,Pointe-aux-Saules,QC,J1T 2K4,1977-08-06
+D4-0039,shop,Olga,Kowalski,,olgakowalski@inbox.example,,175 Fern Ln,Tidewick,BC,V6S 8Y0,
+D4-0040,loyalty,,,M-C Lavoie,lavoie.marie-claude66@post.example,(514) 555-9129,,,,J1T2K4,11/04/1980
+D4-0041,shop,Kate,Wilson,,wilson.katherine92@inbox.example,(519) 555-4776,275 Hawthorn Court,Briarstead,ON,N5J 6Z7,1975-01-07
+D4-0042,loyalty,,,Rebecca Baker, rbaker@example.net ,,,,,K1K 9W3,05/10/2006
+D4-0043,loyalty,,,Susan Stewart,susanstewart@post.example,(519) 555-1020,,,,L8J 2X1,10/10/2060
+D4-0044,shop,Helene,St-Pierre,,st-pierre.helene88@example.net,+1 506 555 1892,895 Fern Ln,Port Wrenna,NB,E8J 6L5,
+D4-0045,shop,Michael,Stewart,,mstewart@example.net,,29 Primrose Cres,Maplemere,ON,K1K9W3,
+D4-0046,shop,Sarah,Stewart,,Sarah.Stewart@Example.org,,29 Primrose Cres.,Maplemere,ON,K1K 9W3,
+D4-0047,shop,Thomas,Whitfield,,twhitfield@example.org,(613) 555-3244,507 Marigold Crt,Larkmere,ON,l0z 0g0,
+D4-0048,loyalty,,,Jennifer Green,green.jennifer62@example.com,506-555-1420,,,,E0A 1Y7,24/12/1958
+D4-0049,shop,François,Roy,,froy@example.com,506-555-9610,9724 Briar Way,Port Wrenna,NB,e8y 7y8,
+D4-0050,loyalty,,,Annie Côté,annie.cote65@example.net,4185558200,,,,H6B 7R2,04/06/1952
+D4-0051,loyalty,,,Michel Mercier,Michel.Mercier18@Example.org,8195554235,,,,G3C 2L7,14/08/1945
+D4-0052,shop,William,Williams,,williams.william63@example.com,250-555-0216,16-4812 Linden Crescent,Cedarwell,BC,V5T7C6,1991-08-12
+D4-0053,shop,Kevin,Thompson,, thompson.kevin65@mail.example ,819-555-8537,113 chemin des Érables,Saint Éloi du Lac,QC,h9l 2c9,2000-05-16
+D4-0054,shop,James,Pemberton,,jamespemberton@mail.example,(416) 555-1080,982 Briar Pl Apt 13,Foxhollow Bay,ON,P2R-4C5,1949-01-18
+D4-0055,shop,Sarah,Pemberton,,spemberton@example.com,,982 Briar Place Apt 13,Foxhollow Bay,ON,P2R 4C5,
+D4-0056,loyalty,,,Isabelle Roy,roy.isabelle79@example.net,514-555-7982,,,,G2P 2M9,09/09/1986
+D4-0057,shop,Jean,Tremblay,,Jean.Tremblay88@Example.com,+1 519 555 5189,86 Linden Drive,Maplemere,ON,N1X-9C1,1966-03-04
+D4-0058,loyalty,,,Joseph Hamilton,hamilton.joseph62@post.example,250-555-8612,,,,v5y 7w7,21/05/1988
+D4-0059,loyalty,,,Tunde Patel,tundepatel@example.com,(250) 555-5385,,,,V5M-9C4,21/02/1971
+D4-0060,shop,Mrs Emma,King,,king.emma63@mail.example,519.555.7209,104 Copper Beech Drive,Briarstead,ON,M9K 1T8,1948-07-05
+D4-0061,shop,John,Allen,,allen.john76@post.example,1-613-555-6312,6393 Foxglove Crescent,Larkmere,ON,P6C 4N9,
+D4-0062,shop,Fatima,Garcia,,fatimagarcia@post.example,5195552733,191 Foxglove Ln Apt 19,Ashbury Falls,ON,M4G 1S2,
+D4-0063,loyalty,,,Mateo Patel, mateo.patel@example.net ,,,,,L1P 4H0,28/05/1976
+D4-0064,shop,Elizabeth,Lewis,,elizabeth.lewis20@example.net,1-250-555-0760,"69 Orchard Crt, Unit 24",Alderholm,BC,V1E 8H5,
+D4-0065,shop,Aisha,Garcia,, aisha.garcia69@mail.example ,416.555.8371,19-191 Foxglove Lane,Ashbury Falls,ON,M4G 1S2,1945-02-18
+D4-0066,shop,Patricia,Clark,,Patriciaclark@Post.example,,3398 Fern Blvd. Apt 8,Maplemere,ON,P8N1L2,
+D4-0067,shop,William,Clark,,William.Clark@Mail.example,+1 519 555 7478,3398 Fern Boulevard Apt 8,Maplemere,ON,P8N 1L2,1986-03-07
+D4-0068,loyalty,,,Jennifer Anderson,anderson.jennifer66@mail.example,,,,,P7K0P1,23/06/1995
+D4-0069,shop,Jessica,Tyalor,,jessica.taylor@example.com,,2220 Briar Road #24,Foxhollow Bay,ON,M1Y 3T1,1976-04-29
+D4-0070,shop,Camille,Lévesque,,camille.levesque16@example.com,416-555-0135,9427 Linden Way Apt 22,Ashbury Falls,ON,M8X1R1,
+D4-0071,shop,Jennifer,Johnson,,johnson.jennifer64@mail.example,,3343 Marigold Avenue,Cedarholt,ON,l3t 1g8,1995-10-29
+D4-0072,loyalty,,,James White,james.white@mail.example,5145550093,,,,H2N 4Y4,28/01/1985
+D4-0073,loyalty,,,Rbert Smith,robertsmith@example.net,(905) 555-3040,,,,N2Y-4A7,15/10/1960
+D4-0074,shop,Mary,Thompson,,thompson.mary79@example.com,519.555.1318,1067 Bramble Drive Apt 3,Briarstead,ON,P7N0Z2,1996-05-10
+D4-0075,loyalty,,,Leila Garcia,garcia.leila61@post.example,4165552641,,,,K2R3M2,28/02/1995
+D4-0076,loyalty,,,Sophie Tremblay,sophie.tremblay@example.com,8195559047,,,,G8Y 3K9,02/03/1991
+D4-0077,shop,Susan,Thompson,,thompson.susan62@example.com,9055554037,23-61 Kestrel Boulevard,Fernwick Crossing,ON,L6V 0J2,
+D4-0078,shop,James,Ross,,james.ross@example.org,1-613-555-4256,9830 Willowbend Lane,Foxhollow Bay,ON,P0C 8M7,
+D4-0079,loyalty,,,Karen Thompson,kthompson@inbox.example,(905) 555-6526,,,,L6V 0J2,27/04/1954
+D4-0080,loyalty,,,David Johnson,,,,,,N4R7B9,03/05/1995
+D4-0081,shop,Liam,Morrison,,liam.morrison@example.org,613.555.4767,7569 Bramble Ln,Cedarholt,ON,N4R-7B9,
+D4-0082,loyalty,,,Edward Johnson,johnson.edward95@inbox.example,4165558612,,,,N9Z 9S1,13/03/1987
+D4-0083,shop,Linda,White,,linda.white@inbox.example,416.555.8980,200 Orchard Dr,Cedarholt,ON,P3G-9P4,2006-05-19
+D4-0084,shop,Patrick,Johnson,,patrick.johnson@example.com,,7569 Bramble Lane,Cedarholt,ON,n4r 7b9,
+D4-0085,shop,Richard,Jones,,richardjones@example.net,1-905-555-9797,4498 Sorrel Way,Fernwick Crossing,ON,M8Z 5A1,
+D4-0086,shop,Fatima,Ali,,fatimaali@post.example,416-555-3941,10-3818 Bramble Ave,Larkmere,ON,K6M 6P3,1978-07-06
+D4-0087,loyalty,,,Dr. Arjun Rodriguez,rodriguez.arjun68@mail.example,819-555-5769,,,,J8Y5B4,12/12/1958
+D4-0088,shop,Emily,Wilson,,emilywilson@example.net,(416) 555-8587,"38 Briar St, Unit 15",Heronvale,ON,P5R 6Y5,
+D4-0089,shop,Sarah,Wilson,,sarah.wilson@example.net,,3483 Linden Way,Larkmere,ON,N9E 5J2,2006-02-02
+D4-0090,shop,Marc,Lavoie,, lavoie.marc62@example.com ,+1 450 555 6380,5519 avenue du Ruisseau,Saint-Valère-des-Bois,QC,G9B 8T4,1969-06-22
+D4-0091,loyalty,,,Anthony Williams,anthony.williams@example.net,519-555-0221,,,,K0J 3Y1,15/09/1988
+D4-0092,shop,Nicole,Wilson,,nwilson@example.com,+1 416 555 8687,38 Briar Street Apt 15,Heronvale,ON,P5R6Y5,
+D4-0093,shop,James,Wilson,,james.wilson@example.com,1-613-555-1339,3483 Linden Way,Larkmere,ON,N9E 5J2,
+D4-0094,shop,Amanda,MacDonald,,amanda.macdonald1@example.net,,2283 boulevard des Saules,St-Éloi-du-Lac,QC,G5C 1N0,
+D4-0095,loyalty,,,Gabriel Ouellet,gouelllet@example.com,819-555-2758,,,,J4C 3G8,09/05/1972
+D4-0096,loyalty,,,Mary Fitzgerald,maryfitzgerald@example.com,604-555-1389,,,,V5T 4L0,08/10/2006
+D4-0097,loyalty,,,David King,david.king@post.example,506-555-6393,,,,E1N 9W7,21/08/1984
+D4-0098,shop,Jean,Beaulieu,, jean.beaulieu10@example.com ,,"9140, rang des Merisiers",Saint-Eloi-du-Lac,QC,H4V 3X6,
+D4-0099,shop,Émilie,Gagné,,emilie.gagne93@example.com,1-819-555-4492,"9306, boulevard des Tilleuls",Val-des-Hérons,QC,H6J-8G4,
+D4-0100,loyalty,,,Rebecca Fitzgerald,rebecca.fitzgerald@example.net,6045558609,,,,V5T 4L0,29/04/2006
+D4-0101,shop,Chantal,Bouchard,,cbouchard@example.org,+1 819 555 0436,9798 rang Saint-Joseph,Rivière-aux-Brumes,QC,G0X 1R4,
+D4-0102,loyalty,,,Laura Brown,thebrowns8@inbox.example,9055558269,,,,L9G 3N2,12/08/1994
+D4-0103,loyalty,,,Patrick Fitzgerald,patrick.fitzgerald@example.com,(604) 555-2582,,,,V5T 4L0,14/11/1989
+D4-0104,loyalty,,,Emily Anderson,eanderson@example.com,(250) 555-5072,,,,V1X 3V1,24/10/1961
+D4-0105,loyalty,,,G. Tremblay,gabriel.tremblay@inbox.example,(819) 555-9550,,,,G0B 8B2,10/05/1994
+D4-0106,loyalty,,,Trish Fitzgerald,,6045552850,,,,V5T 4L0,11/07/1984
+D4-0107,loyalty,,,Mary Johnson,johnson.mary98@mail.example,6135557523,,,,N0V 8Y8,13/12/1987
+D4-0108,loyalty,,,Tunde Oyelaran,toyelaran@mail.example,506-555-0466,,,,e4j 8m2,04/01/1994
+D4-0109,shop,Emily,Brown,,emily.brown@inbox.example,+1 506 555 4304,6487 Copper Beech Drive,Mossbank Harbour,NB,E9X 5H2,1978-05-13
+D4-0110,shop,Nicole,Brown,,nbrown@example.com,,8698 Heron Ln,Mossbank Harbour,NB,E9S 7Y6,1981-08-15
+D4-0111,shop,Ryan,Young,,young.ryan79@example.org,,4472 chemin des Erables,Saint-Aldric,NB,E2N 9Z8,
+D4-0112,shop,Richard,Wilsno,,richardwilson@mail.example,6045557368,6185 Fern Court,Alderholm,BC,V5A 2E2,
+D4-0113,shop,Jimmy,Brown,,brown.james96@example.org,+1 506 555 5881,8698 Heron Lane,Mossbank Harbour,NB,E9S 7Y6,1982-01-05
+D4-0114,shop,Megan,Brown,,mbrown@mail.example,+1 506 555 9525,6487 Copper Beech Drive,Mossbank Harbour,NB,E9X 5H2,1957-02-07
+D4-0115,shop,Karen,Fitzgerald,,karenfitzgerald@mail.example,+1 604 555 2688,1988 Wren Avenue,Tidewick,BC,V5K-0B2,1954-05-27
+D4-0116,shop,Christopher,Brown,,Christopher.Brown41@Example.com,,6487 Copper Beech Dr,Mossbank Harbour,NB,e9x 5h2,1950-02-18
+D4-0117,loyalty,,,Rebecca Henderson,rebecca.henderson@post.example,(416) 555-3747,,,,N3S 5P7,14/03/1997
+D4-0118,shop,James,Henderson,,james.henderson40@example.net,2505550571,8278 Quarry Road,Ravensmere Point,BC,v0y 9v3,
+D4-0119,loyalty,,,Jérôme Roy,jeromeroy@example.net,5145550957,,,,h9w 5k2,25/04/1991
+D4-0120,loyalty,,,Samantha Talor,taylor.samantha96@example.com,519-555-0934,,,,N9J 3J6,19/05/1980
+D4-0121,shop,Elizabeth,Reid,,ereid@example.com,250.555.3564,8278 Quarry Road,Ravensmere Point,BC,V0Y 9V3,
+D4-0122,loyalty,,,Katherine Henderson,henderson.katherine95@post.example,6045557774,,,,V0Y 9V3,22/12/1958
+D4-0123,shop,Linda,Henderson,,linda.henderson97@mail.example,1-250-555-8093,8278 Quarry Road,Ravensmere Point,BC,V0Y 9V3,1958-02-05
+D4-0124,shop,Alexander,Scott,,alexanderscott@example.org,,3230 Tamarack Crescent,Heronvale,ON,L5L 8X2,
+D4-0125,shop,Sarah,Hall,,shall@mail.example,(905) 555-3173,3962 Elder Pl,Foxhollow Bay,ON,n7p 3b8,1976-09-20
+D4-0126,shop,David,Jones,,davidjones@example.net,(604) 555-3983,3354 Tamarack Crt,Cedarwell,BC,V0C 3E7,1944-07-03
+D4-0127,shop,Jessica,Wilson,,jwilson@example.com,,8381 Willowbend Cres #5,Foxhollow Bay,ON,L1H 0H7,1950-08-20
+D4-0128,shop,Mandy,Wilson,,Wilson.Amanda94@Example.org,(905) 555-6457,3962 Elder Place,Foxhollow Bay,ON,N7P-3B8,1980-07-27
+D4-0129,loyalty,,,Emily Williams,emily.williams@post.example,(416) 555-1474,,,,K1A 9R9,28/11/1961
+D4-0130,loyalty,,,Olivier Roy,olivierroy@example.net,,,,,J5C0N3,07/12/2006
+D4-0131,shop,Mary,Robinson,,maryrobinson@post.example,,142 Quarry Drive Apt 29,Fernhaven,BC,V3T 7R2,
+D4-0132,shop,Anne-Marie,Roy,,anne-marie.roy@post.example,418-555-5551,"8124, rang du Ruisseau",Saint-Éloi-du-Lac,QC,J5C 0N3,2006-07-03
+D4-0133,loyalty,,,Félix Roy,felix.roy38@example.org,450-555-1513,,,,j5c 0n3,
+D4-0134,shop,Robert,Fraser,,rfraser@inbox.example,,4858 Fern Avenue,Ashbury Falls,ON,k6l 1c3,
+D4-0135,loyalty,,,M. Thoompson,michaelthompson@post.example,(604) 555-8354,,,,V4T 1Z3,21/03/1971
+D4-0136,loyalty,,,Pierre Roy,Proy@Post.example,514-555-6499,,,,J5C 0N3,06/05/1987
+D4-0137,shop,Stéphane,Ouellet,,souellet@example.com,4185553715,"6761, avenue des Ormes app. 31",Beaulac-les-Pins,QC,J6S 9R5,2006-07-02
+D4-0138,shop,Marie,Gagnon,,gagnon.marie88@example.com,,571 chemin des Bouleaux,Rivière-aux-Brumes,QC,h1e 7x8,
+D4-0139,shop,Ronald,Brown,,ronald.brown63@post.example,(416) 555-8886,96 Bramble Cres,Fernwick Crossing,ON,P3T 7J8,
+D4-0140,shop,Catherine,Levesque,,catherinelevesque@example.net,1-514-555-3562,"110, r. des Merisiers",Mont-Bellerose,QC,G4V 2X1,1976-04-30
+D4-0141,shop,Danielle,Dubé,,ddube@example.com,4505550841,2218 rang des Hérons,Mont-Bellerose,QC,J4Z 0E1,1953-04-23
+D4-0142,shop,Richard,Thompson,,richard.thompson@mail.example,,9327 Elder Way,Briarstead,ON,L6P 8W0,
+D4-0143,loyalty,,,Chantal Lavoie,,514-555-5011,,,,J2L 5X1,30/08/1949
+D4-0144,shop,Jen,Campbell,,Jennifercampbell@Post.example,416.555.7447,5433 Meadowlark Drive,Briarstead,ON,L6R 3Z5,
+D4-0145,loyalty,,,Mary Wilson,Wilson.Mary81@Example.net,416-555-8059,,,,L0Y 3A4,24/09/1991
+D4-0146,shop,Sarah,McLean,,sarah.mclean41@example.com,416.555.7447,173 Copper Beech Court,Briarstead,ON,n2r 8m9,
+D4-0147,loyalty,,,Hannah Wright, wright.hannah87@example.org ,(250) 555-7057,,,,V4B 7N2,06/01/1945
+D4-0148,loyalty,,,Samantah Scott,thecampbells@inbox.example,416-555-7447,,,,N2R-8M9,14/02/1980
+D4-0149,shop,Alexandre,Roy,,alexandre.roy35@example.net,819-555-9774,"250, av. des Pruniers",Beaulac-les-Pins,QC,G0Z 8A2,1973-02-18
+D4-0150,shop,Mary,Campbell,,mcampbell@example.org,,5433 Meadowlark Dr.,Briarstead,ON,L6R-3Z5,1978-05-07
+D4-0151,shop,Sophie,Gagné,,sgagne@post.example,1-450-555-2068,9343 rang des Merisiers,Lac-aux-Grives,QC,G1L0B4,
+D4-0152,loyalty,,,Elizabeth Thompson,thecampbells17@mail.example,,,,,N9N 6K8,18/02/1979
+D4-0153,loyalty,,,James Campbell,thecampbells17@mail.example,6135559337,,,,N9N 6K8,08/08/1990
+D4-0154,shop,Marie,Tremblay,,marie.tremblay22@post.example,,"6613, av. Saint-Joseph",Lac-aux-Grives,QC,J5H 2J8,1956-04-17
+D4-0155,shop,Sarah,Campbell,,sarah.campbell@example.org,+1 613 555 7971,3476 Old Mill Ave,Cedarholt,ON,N9N 6K8,
+D4-0156,loyalty,,,Hannah Campbell,thecampbells17@mail.example,905-555-8865,,,,M0G 4H9,19/12/1955
+D4-0157,shop,Marie-Ève,Lavoie,,marie-evelavoie@example.org,1-506-555-5177,3836 Birchwood Rd,Ellerby Cove,NB,E6C 6B9,1987-03-02
+D4-0158,shop,Robert,Clark,,robertclark@mail.example,8195557263,2951 avenue des Merisiers,Rivière-aux-Brumes,QC,H3T 9M9,1958-08-15
+D4-0159,loyalty,,,Sam Pemberton,tpembertons@example.com,(519) 555-4529,,,,p3c 4k1,10/08/1954
+D4-0160,shop,Ms Valérie,Simard,,vsimard@mail.example,,5128 rang du Moulin,Lac-aux-Grives,QC,G6W 5G5,
+D4-0161,loyalty,,,James Pemberton,,4165557913,,,,K1L 4P7,13/05/1954
+D4-0162,shop,Hugo,Roy,,hugo.roy38@post.example,8195555995,5912 av. des Tilleuls app. 36,Rivière-aux-Brumes,QC,G0M 4V6,1956-06-04
+D4-0163,loyalty,,,P. Ivanova,priyanka.ivanova10@example.com,(613) 555-5911,,,,L8P-7G6,26/01/1954
+D4-0164,shop,James,Hall,,James.Hall@Inbox.example,,295 Heron Road,Heronvale,ON,K3G 7G8,
+D4-0165,shop,Mateo,Ivanova,,Mateo.Ivanova53@Example.com,6135556690,124 Old Mill Ave,Briarstead,ON,L8P 7G6,1955-01-29
+D4-0166,shop,Nathalie,Cloutier,,nathalie.cloutier25@post.example,+1 819 555 7104,"7927, ch. du Coteau",Saint-Valère-des-Bois,QC,H2R 2A4,
+D4-0167,loyalty,,,Joseph White,jwhite@inbox.example,(905) 555-1870,,,,L6X 3G4,27/06/1984
+D4-0168,loyalty,,,Jones Stephanie,stephaniejones@example.com,(250) 555-5204,,,,V0P 4J9,
+D4-0169,shop,James,Smith,,smith.james69@post.example,,765 Linden Crescent Apt 22,Mossbank Harbour,NB,E2K-8R0,
+D4-0170,shop,William,Jones,,william.jones@example.org,,9864 Marigold Place,Fernhaven,BC,V0P 4J9,1959-05-21
+D4-0171,shop,Karen,Green,,karen.green73@example.org,6045552623,4151 Sorrel Drive Apt 39,Fernhaven,BC,V8J 1W7,1955-10-20
+D4-0172,shop,Barbara,Taylor,,btaylor@example.org,5195555879,7323 Briar Cres.,Maplemere,ON,l0y 0g2,
+D4-0173,shop,André,Paquette,,apaquette@inbox.example,450.555.6216,3332 rue Sainte-Cécile,Sainte-Rose-des-Neiges,QC,J1C-4R4,
+D4-0174,shop,Hélène,Côté,,helene.cote@example.net,5145553300,"9083, rue des Lilas",Val-des-Hérons,QC,J4N 6V7,
+D4-0175,loyalty,,,Mateo Szymanski,Mateo.Szymanski@Example.net,4505558914,,,,G6R 1X0,12/09/2003
+D4-0176,loyalty,,,Richard Young,richard.young88@post.example,5195551851,,,,N7S 4A1,17/07/1980
+D4-0177,shop,Luc,Bergeron,,bergeron.luc65@example.net,,"1574, av. de la Rivière",Mont-Bellerose,QC,G5T 2N0,1975-09-12
+D4-0178,shop,Liam,Jones,,ljones@inbox.example,613-555-1433,9885 Elder Street,Cedarholt,ON,P9A 9X4,2002-01-18
+D4-0179,shop,Ahmed,Szymanski,,ahmedszymanski@post.example,8195559044,3889 r. Saint-Joseph,Beaulac-les-Pins,QC,G6R 1X0,1999-01-18
+D4-0180,shop,Mei,Szymanski,,Mei.Szymanski46@Inbox.example,,"3922, avenue des Herons app. 22",Sainte-Rose-des-Neiges,QC,j9e 2a6,
+D4-0181,shop,Mateo,Szymanski,,mateo.szymanski@inbox.example,,3889 r. Saint-Joseph,Beaulac-les-Pins,QC,G6R 1X0,1976-03-07
+D4-0182,loyalty,,,Dmitri Szymanski,szymanski.dmitri83@example.com,514-555-7613,,,,G6R 1X0,09/09/1972
+D4-0183,loyalty,,,Marc Côté,Marccote@Example.net,(450) 555-8343,,,,J3S-8N4,30/04/1954
+D4-0184,shop,Amara,Okonkwo,,amaraokonkwo@inbox.example,418.555.0017,4829 rang des Saules,Mont-Bellerose,QC,J7C 0C7,
+D4-0185,shop,Jessica,Murray,,jessicamurray@mail.example,(613) 555-6327,2774 Fern Cres,Ashbury Falls,ON,K3T-3W5,1962-07-06
+D4-0186,shop,Jérôme,Bergeron,,Jeromebergeron@Post.example,450.555.5452,"228, rue du Ruisseau",Rivière-aux-Brumes,QC,H6W 9X4,
+D4-0187,shop,Liam,Stewart,,liamstewart@example.net,416.555.4634,8229 Briar Street,Maplemere,ON,N1Y 1T4,1982-02-20
+D4-0188,shop,Ms Patricia,Anderson,,panderson@mail.example,5065552250,"9632, boulevard Saint-Joseph, app 5",Saint-Aldric,NB,E0V 7P8,1990-05-17
+D4-0189,shop,Philippe,Lavoie,,philippelavoie@example.org,1-506-555-8080,5878 Sorrel Ave,Ellerby Cove,NB,E7Y-4N8,1963-09-16
+D4-0190,shop,Jean-François,Mercier,,jean-francois.mercier@post.example,+1 506 555 8443,4948 Linden Cres #3,Mossbank Harbour,NB,E9T 7J8,
+D4-0191,shop,felix,leclerc,,fleclerc@post.example,(418) 555-8075,"5820, chemin des Herons",Beaulac-les-Pins,QC,J6B 4M9,
+D4-0192,shop,isa,poulin,, isabellepoulin@example.com ,514-555-9108,"251, av. des Ormes",Val-des-Hérons,QC,G6N 2N6,
+D4-0193,shop,Fatima,Nguyen,,nguyen.fatima90@example.net,514.555.9233,"3510, r. Sainte-Cécile",Sainte Odile sur Mer,QC,H1M 2G6,1953-12-01
+D4-0194,loyalty,,,Jean-François Gagné,jean-francoisgagne@inbox.example,450-555-9117,,,,J0V 4P9,27/09/1956
+D4-0195,loyalty,,,Hiroshi Chen,Hiroshichen@Mail.example,(519) 555-9083,,,,L4T 8X1,15/06/1994
+D4-0196,shop,Marie,Côté,,mariecote@example.com,1-450-555-0959,63 ch. des Lilas,Lac-aux-Grives,QC,J2G 6C1,
+D4-0197,shop,Jacques,Ouellet,,jacquesouellet@post.example,1-514-555-9858,3461 rang des Pruniers,St-Ambroise-des-Monts,QC,H4P6W0,1975-07-01
+D4-0198,shop,Lucía,Nguyen,,nguyen.lucia65@inbox.example,(514) 555-1439,"3510, rue Sainte-Cécile",Sainte-Odile-sur-Mer,QC,H1M 2G6,1946-08-09
+D4-0199,shop,Étienne,Roy,,etienne.roy@example.com,1-450-555-3079,2818 rue des Bouleaux,Beaulac-les-Pins,QC,H1P 0L7,
+D4-0200,shop,Wei,Khan,,weikhan@inbox.example,6135550722,5664 Tamarack Court,Stonewick,ON,M9P 8T6,1975-01-16
+D4-0201,loyalty,,,Dylan Baker,baker.dylan63@mail.example,(905) 555-0394,,,,M7A-7H4,03/10/1973
+D4-0202,shop,Ryan,Brown,,rbrown@example.org,,3706 Heron Boulevard Apt 33,Larkmere,ON,M8T 8E2,
+D4-0203,shop,Joshua,Wilson,,joshua.wilson43@example.org,613-555-8932,3706 Heron Blvd #33,Larkmere,ON,M8T 8E2,1981-04-29
+D4-0204,loyalty,,,Richard Jones,rjones@post.example,5065555112,,,,E9B 8R1,25/10/1968
+D4-0205,loyalty,,,Stéphane Bergeron,bergeron.stephane77@mail.example,(450) 555-9165,,,,H6Y 9B0,19/11/2006
+D4-0206,shop,Léa,Lavoie,,lea.lavoie@example.net,1-450-555-3564,"7353, ch. des Saules",Val-des-Hérons,QC,G6W 6B1,1960-11-18
+D4-0207,shop,John,Wright,,jwright@post.example,1-905-555-2946,1884 Juniper Rd.,Ashbury Falls,ON,K4S 5J3,
+D4-0208,shop,Gabriel,Ouellet,,gabriel.ouellet16@inbox.example,4505559603,"298 rang de la Rivière, app 31",Sainte Odile sur Mer,QC,G0Z 4K7,1976-08-30
+D4-0209,loyalty,,,Christopher Martin,,(604) 555-8370,,,,V9E 6J2,13/05/1989
+D4-0210,loyalty,,,Stépane Morin,morin.stephane91@mail.example,819-555-7799,,,,G8P 6L4,15/07/1962
+D4-0211,shop,Stéphane,Paquette,,paquette.stephane93@inbox.example,1-819-555-7509,"3390, boul. des Pruniers",Pointe-aux-Saules,QC,G6K 7A4,
+D4-0212,loyalty,,,Mathieu Paquette,thepaquettes13@inbox.example,418-555-9859,,,,G3W 5Z6,06/10/1995
+D4-0213,loyalty,,,Alexandre Bélanger,abelanger@inbox.example,418-555-4953,,,,J0E 7N0,17/01/1967
+D4-0214,loyalty,,,Jean-Francois Bouchard,jean-francois.bouchard@post.example,(514) 555-0959,,,,J0E7N0,17/08/1965
+D4-0215,shop,Jennifer,Skith,,jennifer.smith85@example.net,+1 506 555 2753,202 Meadowlark Place,Mossbank Harbour,NB,E3L-1K5,
+D4-0216,shop,Nguyen,Amara,,amara.nguyen57@mail.example,,7577 Briar Rd.,Mossbank Harbour,NB,E4G-5H1,1952-06-18
+D4-0217,shop,Karen,HHughes,,hughes.karen68@post.example,250-555-3643,8258 Thistle Blvd,Cedarwell,BC,V8B7M9,1969-11-17
+D4-0218,shop,Jaxques,Morin,,jmorin@inbox.example,,"3770, rang de la Rivière",Sainte-Anne-des-Prés,QC,G8H 0R9,
+D4-0219,shop,Olivier,Fournier,,olivier.fournier@inbox.example,+1 450 555 1032,7704 avenue des Lilas,Val-des-Hérons,QC,G6L 9V5,1976-08-21
+D4-0220,loyalty,,,Félix Morin,Fmorin@Mail.example,(514) 555-8391,,,,G8H 0R9,07/09/1953
+D4-0221,shop,Bill,Smith,,wsmith@post.example,(250) 555-8900,3374 Alder Lane Apt 8,Fernhaven,BC,V1Y8L3,
+D4-0222,loyalty,,,Fatima Nguyen,fatima.nguyen16@example.com,(613) 555-0821,,,,M0N 4H0,29/09/2000
+D4-0223,loyalty,,,Marie Paquette,Mariepaquette@Mail.example,(450) 555-6721,,,,H5X 4A4,25/03/1955
+D4-0224,shop,David,Williams,,davidwilliams@example.net,416.555.8318,447 Foxglove Street,Maplemere,ON,P0P 6N9,
+D4-0225,loyalty,,,Rachel King,king.rachel76@example.com,6045554453,,,,v9l 9h4,02/12/1968
+D4-0226,loyalty,,,M. Côté,marie.cote@inbox.example,(514) 555-3169,,,,J2L 7T0,15/09/1970
+D4-0227,loyalty,,,Amara Nguyen,amara.nguyen@example.net,4165554655,,,,K3N 6L8,
+D4-0228,shop,Daniel,Maryin,,daniel.martin@example.net,,7 Sorrel Crescent,Alderholm,BC,V8B 2J8,
+D4-0229,shop,Megan,Hall,,meganhall@post.example,416-555-8626,7849 Foxglove Way,Wrenhollow,ON,L4W8X2,1964-03-07
+D4-0230,shop,Jérôme,Morin,,jmorin@example.com,+1 418 555 8377,"956, ch. des Erables",Saint-Valere-des-Bois,QC,j5h 6l0,
+D4-0231,shop,Étienne,Lavoie,,lavoie.etienne90@post.example,5065555058,"156, av. de la Colline app. 21",Saint-Aldric,NB,E3T 5R3,1988-04-17
+D4-0232,loyalty,,,M. Smith,smith.mary80@example.net,(604) 555-9585,,,,V9S 3A5,13/03/1987
+D4-0233,loyalty,,,Emily Walker,thollingss@example.com,519-555-6630,,,,K3T 6E6,09/05/1981
+D4-0234,loyalty,,,Lnda Smith,toneills@post.example,250-555-5523,,,,V3J 0B9,03/08/1971
+D4-0235,shop,Lucía,Patel,,patel.lucia90@inbox.example,+1 514 555 4702,1424 ch. du Moulin,Rivière-aux-Brumes,QC,J4N 1B6,
+D4-0236,shop,Arjun,Cen,,achen@mail.example,418-555-9098,"7629, r. de la Colline",Saint-Valère-des-Bois,QC,G8J 5Y4,
+D4-0237,loyalty,,,Wei Chen,techens@example.net,(514) 555-8167,,,,G8J 5Y4,30/05/1982
+D4-0238,shop,Philippe,Morin,, philippe.morin44@inbox.example ,4505553189,1636 avenue des Merisiers,Saint-Ambroise-des-Monts,QC,J8N-4J1,
+D4-0239,loyalty,,,Olivier Caron,Olivier.Caron@Example.net,450-555-7060,,,,G0T 2K8,24/12/1958
+D4-0240,shop,Gabriel,Cote,,gabriel.cote18@mail.example,,4842 av. des Érables,Ste Anne-des-Prés,QC,J5K 6W0,
+D4-0241,loyalty,,,François Roy,froy@mail.example,450-555-4952,,,,J5K 6W0,09/04/1980
+D4-0242,shop,Geneviève,Bélanger,,belanger.genevieve85@example.com,(418) 555-2117,"7635, rang du Coteau",Saint-Valère-des-Bois,QC,J9G 0W1,1982-04-11
+D4-0243,loyalty,,,Hélène Bouchard,,(514) 555-8504,,,,J7X 2P8,31/01/1965
+D4-0244,shop,Singh,Kwame,,Kwame.Singh@Example.org,+1 514 555 8787,169 avenue des Ormes,Mont-Bellerose,QC,h0w 5s3,
+D4-0245,shop,Philippe,Bouchard,,philippe.bouchard17@example.com,1-514-555-6893,"229, boulevard du Moulin",Val-des-Hérons,QC,G1W7T2,
+D4-0246,shop,Sarah,Scott,,sscott@example.org,1-450-555-8536,2618 av. de la Colline,Val-des-Hérons,QC,H3K 4K5,
+D4-0247,shop,Ronald,Wilson,,Ronald.Wilson25@Example.org,,6719 Meadowlark Street Apt 30,Ashbury Falls,ON,P8P 3B9,2006-03-10
+D4-0248,shop,Dr James,Brow,,jamesbrown@mail.example,1-613-555-8247,95 Copper Beech Boulevard,Heronvale,ON,N1W 2Y9,
+D4-0249,loyalty,,,Mme Sarah Wilson,sarah.wilson46@mail.example,5195554633,,,,L7Y 1A7,24/08/1943
+D4-0250,shop,Dr Michael,Wilson,,mwilson@mail.example,(613) 555-8247,95 Copper Beech Blvd,Heronvale,ON,N1W 2Y9,
+D4-0251,shop,Margaret,Henderson,,margaret.henderson61@example.net,+1 416 555 3005,9818 Fern Road,Ashbury Falls,ON,N4Z 5Z4,
+D4-0252,shop,Kwame,Kim,,kim.kwame65@post.example,1-905-555-1250,8020 Tamarack Ave,Heronvale,ON,K5Z 5A9,
+D4-0253,shop,smith,hannah,,Hsmith@Example.com,+1 519 555 2757,7760 Alder Boulevard Apt 27,Ashbury Falls,ON,L6K 3J2,1971-10-29
+D4-0254,shop,Catherine,Lapointe,,catherinelapointe@example.com,418-555-4150,"5378, boul. de la Riviere app. 5",Lac-aux-Grives,QC,J8H 1N3,
+D4-0255,loyalty,,,Caroline Ouellet,couellet@example.org,(450) 555-0667,,,,J7E 7H1,11/11/1995
+D4-0256,loyalty,,,Ethan Smith,Smiths.The85@Example.org,(905) 555-0965,,,,M0T-9L5,09/01/1988
+D4-0257,shop,Nat,Tremblay,,nathalietremblay@post.example,418-555-2450,6273 boul. des Tilleuls,Sainte-Rose-des-Neiges,QC,J7E 7H1,
+D4-0258,shop,Valérie,Tremblay,,valerietremblay@example.com,(418) 555-2613,6273 boulevard des Tilleuls,Sainte-Rose-des-Neiges,QC,J7E 7H1,
+D4-0259,loyalty,,,Andrew Hall,andrew.hall@example.org,2505550966,,,,V4X 7Y5,27/03/1962
+D4-0260,shop,Sébastien,Tremblay,,stremblay@inbox.example,(819) 555-1460,6273 boulevard des Tilleuls,Sainte Rose des Neiges,QC,J7E 7H1,
+D4-0261,loyalty,,,Michael Anderson,michael.anerson28@example.org,(519) 555-0033,,,,K4A 3P3,07/01/1990
+D4-0262,shop,Daniel,Sinclair,,dsinclair@example.net,250.555.6593,6626 Wren Lane,Ravensmere Point,BC,V2Y 1X3,
+D4-0263,shop,fatima,khan,,fkhan@example.org,,6109 Quarry Road,Fernwick Crossing,ON,M5H 9X6,
+D4-0264,shop,Melanie,Leblanc,,melanie.leblanc67@example.com,418-555-1587,1123 boulevard des Ormes,Val-des-Hérons,QC,H5C 5N6,1998-01-13
+D4-0265,loyalty,,,Ryan Martin,martin.ryan94@inbox.example,905-555-4865,,,,k8r 5g8,28/01/1997
+D4-0266,loyalty,,,Ryan Wright,wright.ryan92@inbox.example,6135551747,,,,K0J 0W4,09/12/1963
+D4-0267,shop,Susan,Smith,,smith.susan70@inbox.example,,1586 Meadowlark Drive,Heronvale,ON,P2Y 7V9,
+D4-0268,loyalty,,,Julie Morin,morin.julie91@mail.example,6135556597,,,,L0T 5S1,22/12/1949
+D4-0269,shop,Joseph,Anderson,,joseph.anderson21@mail.example,,1586 Meadowlark Dr.,Heronvale,ON,p2y 7v9,
+D4-0270,loyalty,,,Anne-Marie Lavoie,thelavoies1@example.net,(514) 555-2394,,,,J7P 3Y5,25/08/1954
+D4-0271,shop,Michael,Kennedy,,michaelkennedy@example.org,905-555-3470,5478 Tamarack Crescent,Wrenhollow,ON,p7p 2b8,
+D4-0272,shop,Margaret,Brown,,margaret.brown@inbox.example,(905) 555-4686,4320 Foxglove Road Apt 18,Wrenhollow,ON,M0L 4H9,
+D4-0273,shop,ryan,stewart,,stewart.ryan93@post.example,(519) 555-1728,9524 Briar Blvd,Wrenhollow,ON,K1M 0A2,
+D4-0274,shop,Katherine,MacDonald,,katherinemacdonald@example.com,416-555-1984,1586 Meadowlark Dr,Heronvale,ON,p2y 7v9,1960-07-17
+D4-0275,loyalty,,,Linda Wilson,lwilson@example.com,905-555-5506,,,,P2Y 7V9,01/04/1963
+D4-0276,shop,Emma,Fairbanks,,emmafairbanks@example.com,+1 519 555 1218,2398 Heron Lane Apt 1,Larkmere,ON,N1R 5Y4,
+D4-0277,loyalty,,,Ms. Isabelle Lavoie,,819-555-1637,,,,J6G 3H3,27/12/2006
+D4-0278,shop,Josée,Lavoie,,jlavoie@inbox.example,+1 450 555 2949,281 ch. du Verger,Rivière-aux-Brumes,QC,J6G 3H3,
+D4-0279,loyalty,,,Amanda Jones,jones.amanda81@inbox.example,5195553743,,,,P1N 9S4,05/05/1965
+D4-0280,loyalty,,,Leila Patel,patels.the95@example.org,506-555-1785,,,,E3J 4K5,28/04/1978
+D4-0281,loyalty,,,Michel Bérubé,tlavoies@example.net,819-555-7449,,,,J6G 3H3,30/10/2006
+D4-0282,loyalty,,,Sarah Wilson,sarah.wilson31@example.com,(416) 555-8880,,,,N8A1T2,09/08/1996
+D4-0283,shop,Marc,Lavoie,,mlavoie@example.org,819.555.1407,"281, chemin du Verger",Rivière-aux-Brumes,QC,J6G 3H3,
+D4-0284,loyalty,,,Linda White, lindawhite@example.net ,519-555-0582,,,,P3G9P4,19/05/2006
+D4-0285,shop,Lavoie,Jean-Philippe,,lavoie.jean-philippe63@inbox.example,(418) 555-9558,"281, chemin du Verger",Rivière-aux-Brumes,QC,J6G 3H3,1981-11-15
+D4-0286,shop,Mélanie,Gagnon,,melaniegagnon@example.org,+1 514 555 1377,"287, rang Sainte-Cécile",Sainte-Odile-sur-Mer,QC,j9p 1b8,
+D4-0287,shop,Alexander,Blackwood,,ablackwood@inbox.example,416-555-5404,116 Heron Avenue Apt 14,Larkmere,ON,N8E 8C1,
+D4-0288,shop,Mandy,Ross,,amanda.ross44@example.net,(905) 555-6046,2178 Marigold Crt,Briarstead,ON,N4P 5M1,1941-07-30
+D4-0289,loyalty,,,Amanda Miller,miller.amanda95@inbox.example,4505559240,,,,G0G 4H4,26/09/1977
+D4-0290,shop,Jean,Dube,,jdube@example.net,+1 506 555 4365,4066 Linden Boulevard,Mossbank Harbour,NB,E9E 9B3,
+D4-0291,loyalty,,,Andy MacDonald, Amacdonald@Example.com ,9055551424,,,,L3Y 6Y0,14/10/1967
+D4-0292,shop,Becky,Cartwright,,cartwright.rebecca92@mail.example,519.555.5539,1016 Juniper Boulevard,Wrenhollow,ON,K3N 5K2,
+D4-0293,shop,Alexandre,Morin,,morin.alexandre91@example.com,418-555-5140,5056 chemin des Saules,Rivière-aux-Brumes,QC,G0C 6W6,
+D4-0294,shop,François,Cloutier,,cloutier.francois85@example.com,,3036 boulevard des Tilleuls app. 34,Saint-Éloi-du-Lac,QC,J8S 7A3,
+D4-0295,shop,Barbara,Brown,,barbarabrown@example.net,613-555-2516,5426 Linden Drive,Cedarholt,ON,M3L 0X1,2006-12-04
+D4-0296,loyalty,,,David Williams,twilliamss@post.example,(506) 555-0787,,,,E2T 0Y9,27/07/1985
+D4-0297,shop,Hélène,Gagnon,,helene.gagnon@inbox.example,506-555-2014,"4116, rang des Bouleaux",Saint-Aldric,NB,E7B 3S8,
+D4-0298,shop,Valerie,Girard,,valerie.girard@inbox.example,506.555.2130,9988 Old Mill Ln.,Port Wrenna,NB,E0S 8C3,1982-12-15
+D4-0299,loyalty,,,Émilie Tremblay,emilie.tremblay@example.org,4185558089,,,,j2b 9e7,11/02/1966
+D4-0300,loyalty,,,Marie Gagnon,thegagnons@example.com,(506) 555-2130,,,,E7B 3S8,19/04/1984
+D4-0301,shop,Robert,Williams,,williamss.the60@mail.example,(905) 555-8664,2571 Birchwood Way Apt 26,Heronvale,ON,N4N 9G4,

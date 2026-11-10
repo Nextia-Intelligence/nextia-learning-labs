@@ -1,0 +1,3001 @@
+record_id_l,record_id_r,label,why_sampled
+L-007995,S-011860,1,same entity
+L-015913,S-026620,0,random
+G-005123,S-014960,1,same entity
+G-008187,L-007542,0,same surname and region
+S-025039,S-027921,0,same surname and region
+L-013398,S-009124,0,random
+G-000573,L-004587,1,same entity
+S-012667,S-029811,0,same surname and region
+L-008619,S-007138,1,same entity
+G-006781,S-004660,0,random
+L-007899,S-028683,0,random
+G-008165,S-001651,0,same surname and region
+S-000460,S-008331,0,same surname and region
+G-011525,S-014112,1,same entity
+G-002994,L-009628,1,same entity
+L-013222,S-016570,0,same surname and region
+L-005953,S-023509,0,same surname and region
+L-004605,L-005460,0,random
+S-002700,S-009883,0,same surname and region
+L-007818,S-015801,1,same entity
+L-014095,S-015944,1,same entity
+G-000500,G-009392,0,same surname and region
+G-001235,S-010185,1,same entity
+L-001207,L-004268,0,random
+G-004207,S-014703,0,same surname and region
+L-016056,S-010917,1,same entity
+L-013269,S-017801,0,random
+L-003149,S-003210,0,same surname and region
+S-001677,S-028728,0,random
+G-007303,G-008369,0,random
+G-010188,S-024162,1,same entity
+S-018712,S-031058,0,same surname and region
+L-014762,S-017729,0,same surname and region
+G-002386,S-003384,1,same entity
+G-009516,G-009590,0,same surname and region
+G-006858,S-005330,1,same entity
+L-006025,S-007599,0,same surname and region
+S-001395,S-006467,0,same surname and region
+S-007746,S-011980,0,same surname and region
+G-000910,S-014513,1,same entity
+L-012266,S-015732,1,same entity
+G-011087,L-000981,0,same surname and region
+S-013183,S-014359,0,same surname and region
+L-010404,S-008074,0,same surname and region
+L-004397,S-013733,1,same entity
+S-006226,S-011030,0,same surname and region
+L-015038,S-001172,1,same entity
+L-014242,L-015409,1,same entity
+L-009958,S-024407,0,random
+G-002655,S-008960,1,same entity
+G-007286,S-017254,1,same entity
+L-013300,S-001368,0,same surname and region
+L-005951,S-006478,0,same surname and region
+L-003595,S-014811,0,same surname and region
+S-002950,S-018775,0,same surname and region
+L-015265,S-008662,0,same surname and region
+G-001442,S-001214,0,same surname and region
+L-004985,S-012043,0,same surname and region
+L-014172,S-016513,0,same surname and region
+S-002374,S-029571,0,same surname and region
+S-014293,S-015654,0,same surname and region
+S-002475,S-024083,0,same surname and region
+G-006203,L-006627,0,same surname and region
+S-012317,S-014310,0,same surname and region
+G-003972,L-014076,1,same entity
+S-017917,S-029712,0,same surname and region
+G-003467,L-008782,0,random
+L-006598,S-001065,0,random
+L-002073,S-003976,1,same entity
+L-011410,S-007073,0,same surname and region
+L-004432,S-004117,0,same surname and region
+L-014063,S-008112,1,same entity
+S-006694,S-023070,0,same surname and region
+S-027948,S-028421,0,same surname and region
+L-004811,S-009851,0,same surname and region
+L-002310,S-011273,1,same entity
+L-010263,S-022061,0,same surname and region
+G-003119,L-009286,0,same surname and region
+L-009223,S-010556,0,same surname and region
+S-011230,S-028843,0,same surname and region
+L-005530,S-015364,1,same entity
+G-008201,S-009743,0,same surname and region
+S-017204,S-023526,0,same surname and region
+G-004289,L-004610,0,same surname and region
+L-000696,S-020224,1,same entity
+G-004281,G-008716,0,same surname and region
+G-009233,S-012833,1,same entity
+S-003566,S-005466,0,random
+L-014073,S-000165,0,same surname and region
+L-000372,S-022097,0,random
+L-002520,S-001954,0,same surname and region
+G-009369,S-012957,0,same surname and region
+L-006957,S-027056,1,same entity
+L-001195,S-004312,1,same entity
+S-014499,S-016554,0,random
+G-009757,S-001076,0,same surname and region
+L-008799,S-001171,1,same entity
+G-005607,S-007853,0,same surname and region
+L-014382,S-005778,0,random
+L-010530,S-023558,1,same entity
+G-002750,S-004593,0,same surname and region
+G-002224,L-000504,0,same surname and region
+L-007077,S-000392,0,same surname and region
+G-010922,L-013248,0,random
+L-000458,S-001165,0,random
+G-008023,S-010842,0,same surname and region
+G-009084,S-016922,1,same entity
+G-004250,S-017498,0,random
+L-005006,L-015662,0,random
+L-003690,L-011981,0,same surname and region
+S-000538,S-021880,0,same surname and region
+L-001339,S-009902,1,same entity
+L-006173,S-011960,1,same entity
+L-009629,S-017405,1,same entity
+S-004514,S-028021,0,random
+L-007071,S-028163,0,same surname and region
+G-005489,S-012355,0,random
+L-014339,S-011726,0,same surname and region
+L-006072,S-017351,0,same surname and region
+G-010858,L-008881,1,same entity
+S-015267,S-020323,0,random
+G-009947,S-014310,0,same surname and region
+G-002015,G-005175,0,random
+G-008115,S-018726,0,same surname and region
+L-000970,S-000088,0,random
+L-006191,L-010954,0,random
+G-009001,S-024788,0,same surname and region
+L-009791,S-026093,1,same entity
+G-003814,S-030379,0,random
+G-005428,L-011909,1,same entity
+S-007916,S-008803,0,same surname and region
+L-006843,S-013574,0,same surname and region
+S-000855,S-027034,0,same surname and region
+L-008368,S-005855,1,same entity
+S-022227,S-023699,0,same surname and region
+G-000839,S-024684,0,random
+L-002621,L-005543,0,same surname and region
+L-009014,S-020355,0,same surname and region
+S-010276,S-029542,0,random
+L-008409,S-015447,1,same entity
+G-002145,L-007654,1,same entity
+S-001820,S-023262,0,same surname and region
+G-000423,L-012600,0,same surname and region
+G-007657,S-005751,0,random
+L-005700,L-010665,0,same surname and region
+G-001291,L-012164,1,same entity
+L-013529,S-028233,1,same entity
+L-015362,S-022179,0,same surname and region
+G-004598,S-012642,1,same entity
+L-000705,L-005631,0,same surname and region
+L-000196,S-011660,0,same surname and region
+S-006815,S-007845,1,same entity
+G-001514,S-017566,1,same entity
+L-014205,S-025509,0,same surname and region
+S-008201,S-010846,0,random
+L-007168,S-009713,1,same entity
+S-008408,S-011204,0,random
+L-006448,S-000935,1,same entity
+G-007846,S-010259,1,same entity
+L-007267,S-020675,1,same entity
+G-008625,G-011687,0,same surname and region
+S-007779,S-015074,0,same surname and region
+S-012159,S-028512,0,same surname and region
+G-004300,L-000776,1,same entity
+L-008287,S-007560,1,same entity
+L-004807,S-005799,1,same entity
+G-006371,S-012951,1,same entity
+L-009725,L-016917,0,same surname and region
+L-004479,S-026695,1,same entity
+L-006422,S-023901,1,same entity
+G-003848,S-016607,0,same surname and region
+G-001686,G-004914,0,same surname and region
+G-007163,S-005045,1,same entity
+S-013749,S-029442,0,random
+G-003532,G-009471,0,random
+L-004659,L-011969,0,random
+L-014761,S-027895,0,same surname and region
+S-000208,S-019714,0,same surname and region
+G-008336,S-020368,0,random
+G-002907,S-016595,1,same entity
+S-004550,S-028265,0,same surname and region
+L-009265,S-006261,0,same surname and region
+G-004967,S-001737,1,same entity
+S-011749,S-030706,0,same surname and region
+G-005955,G-010405,0,same surname and region
+G-004797,S-007323,1,same entity
+S-010107,S-029929,0,same surname and region
+L-011312,L-015472,0,same surname and region
+S-011749,S-017639,0,random
+G-009906,S-005041,1,same entity
+G-000798,L-003084,1,same entity
+L-008103,S-002681,1,same entity
+G-006568,G-008375,0,same surname and region
+G-009736,G-009763,0,same surname and region
+L-013883,S-011653,1,same entity
+L-009113,S-024550,1,same entity
+S-002012,S-026188,0,same surname and region
+G-010725,L-008507,1,same entity
+L-012664,S-011981,0,same surname and region
+G-009481,L-003004,0,same surname and region
+L-010015,S-012700,1,same entity
+G-011723,S-014333,1,same entity
+L-006416,S-018585,0,same surname and region
+L-005337,S-003544,0,same surname and region
+S-000559,S-015242,0,same surname and region
+G-008716,S-015342,0,random
+L-005101,S-019209,0,random
+L-011890,S-026826,0,same surname and region
+G-002772,S-011031,0,same surname and region
+G-005009,L-006117,0,same surname and region
+S-021140,S-021510,0,same surname and region
+L-002158,S-030544,0,same surname and region
+G-011060,S-011011,0,random
+S-002023,S-017236,0,random
+G-011365,S-006759,0,same surname and region
+G-002021,S-028098,1,same entity
+G-011801,S-029277,1,same entity
+L-003962,S-002225,1,same entity
+S-004301,S-025450,0,random
+G-001069,S-016674,1,same entity
+G-009543,S-009413,1,same entity
+S-001363,S-019806,1,same entity
+G-003353,S-010016,0,same surname and region
+S-002957,S-012950,0,random
+G-009930,S-010471,1,same entity
+G-010790,S-003339,1,same entity
+L-010882,S-027039,1,same entity
+L-010515,S-022158,0,same surname and region
+G-007127,G-009193,0,same surname and region
+G-006049,S-004020,1,same entity
+S-007702,S-014154,0,same surname and region
+S-001051,S-015560,1,same entity
+L-001118,S-022977,1,same entity
+S-008834,S-025731,0,random
+S-009838,S-017017,0,same surname and region
+L-011431,S-027204,1,same entity
+G-004027,S-010473,0,same surname and region
+G-006863,G-007002,0,same surname and region
+L-003046,S-012677,0,same surname and region
+G-000956,S-004293,1,same entity
+L-006567,S-026970,1,same entity
+G-003092,S-027192,1,same entity
+G-004948,L-005749,1,same entity
+S-017882,S-030122,0,same surname and region
+S-021437,S-024538,0,same surname and region
+L-009402,S-026909,1,same entity
+L-016320,S-001482,0,random
+L-013605,S-030455,1,same entity
+G-008046,L-014839,0,same surname and region
+G-003719,S-012148,0,same surname and region
+L-001876,S-009606,1,same entity
+G-009575,S-015079,1,same entity
+G-002491,L-003998,0,same surname and region
+G-009791,S-021741,0,same surname and region
+G-003681,S-012514,1,same entity
+L-000056,S-008823,1,same entity
+L-011878,S-015267,1,same entity
+L-003350,S-026742,0,random
+G-003719,S-024511,0,same surname and region
+G-005564,L-000990,1,same entity
+L-002871,S-006308,0,same surname and region
+L-001207,S-014722,0,random
+S-020932,S-029050,0,random
+G-011921,L-010271,1,same entity
+G-008510,L-003657,0,same surname and region
+L-000843,L-011477,0,same surname and region
+G-009422,L-012369,1,same entity
+L-008418,S-010387,1,same entity
+S-017819,S-021610,0,random
+G-008299,L-000957,0,same surname and region
+L-014875,S-029513,1,same entity
+S-021150,S-026282,0,random
+L-002735,S-013711,1,same entity
+G-009649,S-013662,0,same surname and region
+L-007697,S-003779,1,same entity
+L-014146,S-026000,0,same surname and region
+L-003631,S-023298,1,same entity
+S-001211,S-002332,0,same surname and region
+S-007357,S-027681,0,random
+G-001120,L-005599,0,same surname and region
+S-025791,S-029857,0,random
+G-008048,S-020642,0,same surname and region
+G-002102,L-003000,1,same entity
+G-005650,S-011566,1,same entity
+G-005126,S-030608,0,same surname and region
+L-004442,S-021946,1,same entity
+L-005101,S-021946,0,same surname and region
+S-014626,S-022711,0,same surname and region
+G-001692,L-003726,1,same entity
+L-016817,S-017270,0,random
+G-010138,L-005753,0,same surname and region
+L-009746,S-024275,0,same surname and region
+L-003342,S-000783,0,same surname and region
+G-001768,S-010556,0,same surname and region
+G-007486,S-000471,0,same surname and region
+G-003457,S-004323,0,same surname and region
+G-004094,G-010789,0,same surname and region
+S-011508,S-026341,0,random
+S-015132,S-028008,0,same surname and region
+S-007039,S-028923,0,same surname and region
+L-009859,L-012140,1,same entity
+G-006344,L-003310,1,same entity
+L-016211,S-011938,1,same entity
+L-001708,S-018893,0,same surname and region
+G-007959,S-013753,0,random
+S-002177,S-016790,0,random
+L-011927,S-015524,1,same entity
+L-010690,S-006416,0,same surname and region
+S-002050,S-021157,0,same surname and region
+L-006222,S-028072,0,same surname and region
+L-011278,S-005973,1,same entity
+S-003239,S-004334,0,random
+G-011737,S-017957,1,same entity
+S-011643,S-029335,0,same surname and region
+G-002831,L-008251,1,same entity
+L-004459,S-021535,0,same surname and region
+G-003209,S-009875,0,same surname and region
+L-010692,S-005982,0,random
+L-016705,S-027132,1,same entity
+L-006835,S-029665,0,same surname and region
+L-000527,L-001928,0,same surname and region
+G-004905,S-005298,1,same entity
+L-008736,S-024532,0,same surname and region
+G-001644,G-008576,0,same surname and region
+L-003914,S-015699,0,same surname and region
+L-014547,S-030804,0,same surname and region
+L-004563,L-010380,0,same surname and region
+S-007240,S-016550,0,same surname and region
+G-006902,S-015080,0,random
+S-019764,S-026721,0,same surname and region
+L-003847,S-021653,0,same surname and region
+L-000690,S-001611,0,same surname and region
+L-007647,L-016274,0,random
+G-000703,G-003430,0,same surname and region
+G-005375,S-011653,0,random
+G-005297,G-011520,0,same surname and region
+G-003633,S-012173,0,same surname and region
+S-015626,S-020252,0,same surname and region
+G-000221,S-006629,0,random
+L-003859,L-011410,0,same surname and region
+G-009839,L-005845,0,same surname and region
+S-003434,S-005150,0,same surname and region
+S-009681,S-022323,0,same surname and region
+L-014073,S-030628,0,random
+L-004653,S-027884,1,same entity
+G-011476,S-017460,0,same surname and region
+G-011179,S-012262,0,same surname and region
+L-003530,S-018669,1,same entity
+S-016015,S-018617,0,same surname and region
+L-000221,S-010307,0,same surname and region
+S-028505,S-029161,0,same surname and region
+S-009697,S-017324,0,random
+L-005512,S-009872,1,same entity
+L-012156,S-018125,1,same entity
+G-007160,S-030712,1,same entity
+G-010063,S-001544,1,same entity
+G-002952,S-015897,1,same entity
+S-003208,S-007144,0,random
+G-005737,S-016897,0,same surname and region
+S-008224,S-016163,0,same surname and region
+L-010593,L-013131,0,same surname and region
+G-010264,S-001128,1,same entity
+L-012067,S-000069,1,same entity
+G-007793,S-003046,0,same surname and region
+G-002265,S-013513,1,same entity
+L-007196,S-018849,1,same entity
+G-005010,S-027363,1,same entity
+S-014127,S-020176,0,random
+L-015840,L-016296,0,same surname and region
+L-005059,S-006255,1,same entity
+G-000499,L-007702,0,same surname and region
+L-005032,S-018190,0,same surname and region
+L-002795,S-030954,1,same entity
+G-001884,S-012355,0,same surname and region
+L-014992,S-028669,1,same entity
+G-011418,S-011035,0,same surname and region
+G-002007,S-019777,0,same surname and region
+G-001489,S-028792,1,same entity
+G-010830,S-023937,1,same entity
+G-002882,G-009970,0,same surname and region
+L-005570,S-005585,0,random
+G-000926,S-000804,1,same entity
+S-010782,S-028391,0,same surname and region
+L-001013,S-010641,0,same surname and region
+L-010686,L-010872,0,same surname and region
+S-021470,S-024748,0,random
+G-002811,S-014587,0,same surname and region
+G-011699,L-014011,1,same entity
+G-005802,L-010780,1,same entity
+S-013019,S-027232,0,random
+L-002081,L-016543,0,random
+L-013673,S-004301,1,same entity
+G-003261,S-029186,1,same entity
+G-002328,S-008484,0,same surname and region
+L-001545,L-004325,0,random
+L-000607,S-030154,1,same entity
+S-007227,S-028358,0,same surname and region
+G-006693,L-006783,0,same surname and region
+L-003616,S-015595,1,same entity
+G-011720,L-008877,1,same entity
+S-008353,S-008627,0,same surname and region
+G-008646,S-005949,1,same entity
+L-007596,L-013889,0,same surname and region
+L-013505,S-021264,1,same entity
+L-001298,S-020888,1,same entity
+L-004628,S-005167,0,random
+G-008520,L-012184,1,same entity
+L-011348,S-021298,0,same surname and region
+G-000369,G-006695,0,same surname and region
+G-001234,L-012814,1,same entity
+G-001379,S-018960,1,same entity
+G-011606,L-014053,1,same entity
+G-001377,G-010844,1,same entity
+L-002408,S-013927,0,same surname and region
+G-008025,G-009248,0,same surname and region
+L-007028,S-001877,0,same surname and region
+G-005222,S-014693,0,same surname and region
+G-004843,L-004774,0,same surname and region
+L-016585,S-006670,1,same entity
+G-008132,S-021523,1,same entity
+G-011201,S-003486,1,same entity
+L-001549,S-018853,0,same surname and region
+L-012918,S-012561,0,random
+G-005433,S-019674,1,same entity
+S-005044,S-005141,0,same surname and region
+G-004423,L-009679,0,same surname and region
+G-006616,S-000215,1,same entity
+G-006496,S-006433,1,same entity
+G-006208,S-027339,0,random
+G-007195,L-016152,0,random
+G-007137,S-023364,0,random
+S-002380,S-018868,0,random
+G-000848,G-010201,0,random
+G-003390,S-019220,1,same entity
+G-009693,S-022449,1,same entity
+G-004500,S-001274,1,same entity
+G-003160,S-007010,1,same entity
+G-003434,L-012512,1,same entity
+L-009185,S-011814,1,same entity
+S-005630,S-027588,0,random
+L-010494,S-004839,1,same entity
+L-013523,S-023146,1,same entity
+L-016152,S-014921,0,same surname and region
+L-000893,L-010509,0,random
+L-016949,S-015393,1,same entity
+G-010086,S-027385,0,same surname and region
+G-009193,S-013547,1,same entity
+G-004132,S-004878,0,random
+S-001968,S-018404,0,same surname and region
+G-005996,L-004877,1,same entity
+S-023871,S-030185,0,same surname and region
+G-005121,L-011721,0,same surname and region
+S-019272,S-029816,0,random
+G-001833,S-016288,1,same entity
+L-006839,S-012468,0,same surname and region
+S-011330,S-022119,1,same entity
+G-011281,L-000376,1,same entity
+S-000819,S-011985,0,same surname and region
+L-012225,S-007038,1,same entity
+L-007374,L-014466,0,same surname and region
+L-002803,S-013437,0,same surname and region
+G-009267,L-015228,0,random
+G-000611,L-004140,0,same surname and region
+L-011166,S-030155,0,same surname and region
+L-012537,S-018899,0,same surname and region
+G-000551,L-014376,1,same entity
+L-000101,S-021557,1,same entity
+S-000239,S-006233,0,same surname and region
+L-010990,L-013008,0,random
+G-005224,S-004802,0,same surname and region
+S-018470,S-020599,0,same surname and region
+G-006771,S-004592,0,same surname and region
+L-008834,S-003299,1,same entity
+G-007112,S-023354,1,same entity
+L-007309,S-017482,1,same entity
+L-004865,S-029237,1,same entity
+G-010940,L-014081,0,same surname and region
+L-008614,S-017838,0,same surname and region
+L-010746,L-014073,0,same surname and region
+G-010374,S-015323,1,same entity
+L-005816,S-007097,0,same surname and region
+G-010294,L-015884,0,same surname and region
+L-003794,S-000484,0,same surname and region
+L-008767,L-014822,0,same surname and region
+G-005860,S-017483,0,same surname and region
+L-013039,S-029083,1,same entity
+S-007581,S-012247,0,same surname and region
+G-007011,L-016102,0,same surname and region
+G-007614,S-026320,0,same surname and region
+S-004776,S-025696,0,same surname and region
+G-004752,S-011601,1,same entity
+G-008295,L-012128,0,same surname and region
+G-008833,L-005550,0,same surname and region
+G-009866,L-002932,0,same surname and region
+L-001059,L-012064,0,random
+L-002847,L-011156,0,same surname and region
+S-013754,S-018496,1,same entity
+L-011828,S-017794,1,same entity
+L-007990,S-014654,0,same surname and region
+L-009954,S-013974,0,same surname and region
+L-011415,S-009039,0,same surname and region
+G-004034,S-001437,1,same entity
+L-012682,S-022704,0,same surname and region
+G-006838,S-017778,0,same surname and region
+L-005661,S-011749,0,same surname and region
+L-010459,S-008256,1,same entity
+S-017876,S-018124,0,same surname and region
+L-005667,S-010765,1,same entity
+L-015722,S-014031,0,same surname and region
+L-000927,S-025325,0,same surname and region
+L-010630,S-010265,0,same surname and region
+S-021372,S-022501,0,same surname and region
+L-000976,L-015189,1,same entity
+G-009882,L-004477,0,random
+L-000543,S-025238,0,same surname and region
+G-000124,L-012460,1,same entity
+G-009995,L-005476,1,same entity
+G-010793,S-008829,0,same surname and region
+L-014885,S-012598,0,same surname and region
+G-009674,L-009342,0,random
+G-003973,S-030993,1,same entity
+L-015845,S-017188,1,same entity
+G-001685,S-026229,0,same surname and region
+S-014050,S-021744,1,same entity
+L-013405,S-030601,1,same entity
+L-005246,L-010551,1,same entity
+L-000981,L-011433,0,same surname and region
+L-015092,S-002836,0,random
+S-003878,S-025686,0,same surname and region
+L-004901,S-023214,1,same entity
+G-001402,S-028302,1,same entity
+S-011844,S-029754,0,same surname and region
+L-015285,S-005390,1,same entity
+L-003860,S-002021,1,same entity
+G-011432,S-020556,0,random
+L-008342,S-010829,0,random
+G-007702,S-007230,0,same surname and region
+G-009278,S-003423,0,same surname and region
+L-001380,S-005801,1,same entity
+L-002940,S-008951,1,same entity
+S-012144,S-029959,0,same surname and region
+L-003433,S-018925,1,same entity
+G-008586,S-028412,0,same surname and region
+G-008180,S-016555,1,same entity
+L-010052,S-023759,0,same surname and region
+G-006311,S-017645,0,random
+L-015061,S-020916,1,same entity
+L-011782,S-008371,1,same entity
+L-007663,S-023153,1,same entity
+S-000033,S-009019,0,random
+L-004108,L-011426,0,same surname and region
+L-015404,S-028517,1,same entity
+L-004650,S-020267,1,same entity
+L-015431,S-021333,1,same entity
+L-016784,S-000683,1,same entity
+G-006599,L-001988,0,same surname and region
+G-007813,S-009349,0,random
+L-001002,S-005175,1,same entity
+G-005980,S-006624,0,same surname and region
+G-006131,G-006138,0,same surname and region
+L-005032,S-004917,1,same entity
+G-002840,L-003420,1,same entity
+G-004024,S-030758,0,same surname and region
+S-007600,S-026509,0,same surname and region
+S-023662,S-027527,0,random
+G-009835,S-007529,1,same entity
+L-003699,S-030542,0,same surname and region
+G-008181,L-003134,1,same entity
+G-007522,S-016748,1,same entity
+S-011844,S-017105,0,same surname and region
+S-001501,S-013227,0,same surname and region
+G-001339,S-028432,0,same surname and region
+G-000978,L-006528,0,same surname and region
+S-003225,S-005006,0,same surname and region
+S-011914,S-028383,0,same surname and region
+S-006348,S-027850,0,random
+S-014361,S-019142,1,same entity
+L-008182,L-010993,0,same surname and region
+L-007549,S-001578,0,random
+L-004505,S-005192,1,same entity
+G-010630,L-011261,0,random
+L-014546,S-022315,1,same entity
+L-005166,S-024739,0,same surname and region
+G-011887,S-019997,0,same surname and region
+L-016802,S-013718,0,random
+G-002302,L-016178,1,same entity
+L-004418,L-008162,0,same surname and region
+L-007235,S-018704,0,same surname and region
+G-008975,S-030255,1,same entity
+G-004727,G-008634,0,same surname and region
+L-011756,L-015473,0,random
+G-007304,L-003962,0,same surname and region
+L-007083,S-016060,0,same surname and region
+L-003220,S-002012,0,random
+L-002484,L-014664,0,same surname and region
+G-011134,S-030246,1,same entity
+L-007096,S-020348,0,same surname and region
+L-003211,L-005546,0,same surname and region
+L-004890,S-021505,0,same surname and region
+G-001090,L-004064,1,same entity
+L-009757,S-000033,1,same entity
+L-001939,L-008001,0,same surname and region
+L-007708,S-021702,0,same surname and region
+G-007348,L-007699,1,same entity
+L-001160,S-007867,1,same entity
+L-000384,S-014081,0,same surname and region
+L-009158,S-029633,0,random
+L-002824,S-019378,1,same entity
+S-012766,S-019765,0,same surname and region
+G-008918,S-006425,1,same entity
+S-017973,S-025431,0,same surname and region
+L-012645,S-017973,0,same surname and region
+G-011211,S-014516,1,same entity
+L-007239,S-012669,1,same entity
+G-009045,S-016297,1,same entity
+G-000198,L-005452,1,same entity
+L-015325,S-009754,0,same surname and region
+G-011390,L-002209,1,same entity
+G-005364,S-014120,1,same entity
+L-003191,S-002560,0,random
+G-005908,L-014074,0,same surname and region
+S-024914,S-028118,0,same surname and region
+S-001594,S-002606,0,same surname and region
+L-008655,S-026600,0,random
+L-010205,S-027130,0,same surname and region
+G-006437,L-001591,0,random
+S-008367,S-021321,0,same surname and region
+G-003423,L-010837,1,same entity
+G-011166,S-009306,1,same entity
+G-001653,G-001701,0,random
+S-010613,S-016618,0,same surname and region
+G-010990,S-006726,0,same surname and region
+G-009877,S-013526,1,same entity
+G-004754,L-012935,1,same entity
+G-010037,L-005979,1,same entity
+S-008146,S-025062,0,random
+L-013378,S-009659,0,same surname and region
+L-001264,S-011757,0,same surname and region
+L-005789,S-003856,1,same entity
+L-007628,S-018334,1,same entity
+L-014505,S-022030,0,same surname and region
+L-001403,L-004946,1,same entity
+L-008048,S-013315,0,same surname and region
+G-006596,S-004781,0,same surname and region
+G-010491,S-016195,0,random
+L-014884,S-007031,1,same entity
+S-010634,S-021562,1,same entity
+L-002932,L-007259,0,same surname and region
+L-012422,S-019220,0,same surname and region
+G-006650,S-011459,0,random
+S-016441,S-028523,0,same surname and region
+S-002345,S-022270,0,same surname and region
+L-000811,S-021452,1,same entity
+L-008729,S-008850,0,same surname and region
+L-005801,S-015253,1,same entity
+L-013649,S-011429,1,same entity
+S-001379,S-020217,1,same entity
+G-003863,S-021191,1,same entity
+L-006058,L-014222,0,same surname and region
+L-014358,S-025652,1,same entity
+G-001644,L-000502,1,same entity
+S-008750,S-009665,0,same surname and region
+L-001555,L-015901,0,same surname and region
+S-001140,S-029682,0,same surname and region
+G-006816,L-003915,1,same entity
+G-005170,G-009743,0,same surname and region
+G-011144,S-004128,0,random
+G-000886,L-015192,0,random
+L-003529,L-013813,0,same surname and region
+G-006092,S-017558,0,same surname and region
+S-011811,S-017810,0,same surname and region
+L-008891,S-006552,0,same surname and region
+G-000470,S-014123,0,same surname and region
+G-001278,L-015866,1,same entity
+S-005730,S-023644,0,same surname and region
+L-004719,S-023922,1,same entity
+G-001304,L-012501,1,same entity
+L-015877,S-016986,0,random
+L-006547,S-027153,0,same surname and region
+L-016844,S-025258,0,random
+S-018185,S-023711,0,same surname and region
+L-008362,S-004773,0,same surname and region
+G-005289,S-027480,0,same surname and region
+G-009636,L-006845,0,same surname and region
+L-002104,S-004758,0,same surname and region
+G-001486,S-022909,1,same entity
+S-019327,S-019902,0,same surname and region
+L-009154,S-015719,1,same entity
+L-002833,S-006138,0,random
+G-010133,S-015686,0,same surname and region
+L-012971,S-004592,0,same surname and region
+S-005976,S-017623,0,same surname and region
+G-005432,G-008330,0,same surname and region
+S-019457,S-028510,0,same surname and region
+L-004034,S-008178,1,same entity
+G-000432,S-019730,0,same surname and region
+L-010959,S-014837,1,same entity
+G-008740,L-008915,0,same surname and region
+G-005545,L-004251,1,same entity
+L-016234,S-026828,1,same entity
+L-013906,S-023262,0,same surname and region
+S-016811,S-021755,0,same surname and region
+G-007702,S-015929,1,same entity
+G-006755,S-001272,1,same entity
+L-013336,S-015261,0,same surname and region
+L-015186,S-023882,0,same surname and region
+G-004556,S-004956,1,same entity
+G-009756,S-026568,1,same entity
+G-007879,S-017123,0,same surname and region
+L-007834,S-024721,0,same surname and region
+L-015208,S-029324,1,same entity
+L-004529,S-005960,0,same surname and region
+S-003127,S-004024,0,same surname and region
+G-003327,L-010606,1,same entity
+S-004640,S-015748,1,same entity
+S-008363,S-027924,0,same surname and region
+L-004889,L-006178,0,same surname and region
+G-002815,S-003489,0,same surname and region
+G-005408,L-016818,0,same surname and region
+G-010035,S-028464,0,same surname and region
+G-000705,S-005596,1,same entity
+G-004028,L-011640,0,same surname and region
+S-002012,S-024790,0,same surname and region
+G-004255,L-008655,0,same surname and region
+L-002251,S-026295,0,random
+G-006600,S-005089,1,same entity
+L-003563,S-003418,0,same surname and region
+S-013293,S-013563,0,random
+L-005759,S-003961,1,same entity
+S-009002,S-018087,1,same entity
+S-003721,S-012683,0,same surname and region
+G-000938,L-008988,0,same surname and region
+G-006639,L-002381,1,same entity
+L-003882,S-000889,0,random
+G-002825,L-015729,1,same entity
+G-007186,L-000926,1,same entity
+G-006874,L-013729,1,same entity
+L-006414,S-015811,1,same entity
+S-001954,S-029028,0,same surname and region
+L-014373,S-015657,1,same entity
+L-001260,S-021535,1,same entity
+L-001024,S-028528,1,same entity
+L-005634,S-010436,1,same entity
+G-004612,G-008035,0,same surname and region
+L-003783,S-008352,0,same surname and region
+G-001147,G-004063,0,same surname and region
+L-016915,S-000315,0,same surname and region
+G-006343,S-007808,0,same surname and region
+S-014031,S-014589,0,same surname and region
+L-006441,S-020902,1,same entity
+S-013574,S-018781,1,same entity
+G-005073,S-007758,1,same entity
+S-006308,S-015780,0,same surname and region
+L-001461,S-030948,1,same entity
+L-000681,S-012306,0,same surname and region
+L-000963,S-007033,0,same surname and region
+G-000606,L-005894,1,same entity
+G-005776,S-030453,1,same entity
+G-008391,S-016804,0,same surname and region
+L-012134,S-017561,1,same entity
+S-008898,S-020953,1,same entity
+S-009357,S-019767,0,same surname and region
+L-014625,S-011828,0,same surname and region
+S-006939,S-019777,0,same surname and region
+G-008548,S-021787,0,same surname and region
+G-000099,G-007255,1,same entity
+L-000409,S-005477,0,same surname and region
+L-006339,S-004247,0,random
+G-006641,S-012560,1,same entity
+L-010147,S-003820,0,same surname and region
+G-008176,S-026639,0,random
+G-002894,S-021034,1,same entity
+S-020456,S-024770,0,same surname and region
+L-014984,S-017794,0,same surname and region
+G-009102,L-003114,1,same entity
+L-001423,S-030218,0,same surname and region
+S-003552,S-026275,1,same entity
+G-006453,S-028297,1,same entity
+G-003951,S-023566,1,same entity
+L-008233,L-008944,0,same surname and region
+G-000862,G-011222,0,same surname and region
+G-010050,S-008951,0,random
+L-004506,S-012436,0,same surname and region
+L-003950,S-027791,0,same surname and region
+S-000042,S-015527,0,same surname and region
+S-015050,S-024782,0,same surname and region
+L-006575,S-018740,0,same surname and region
+S-000221,S-014469,0,same surname and region
+L-012151,S-029282,1,same entity
+G-005046,L-006498,0,same surname and region
+L-014029,S-016378,0,same surname and region
+L-003611,L-016261,0,same surname and region
+S-000493,S-023775,0,random
+S-009976,S-020758,0,same surname and region
+G-009229,S-007543,1,same entity
+G-004852,S-020409,0,same surname and region
+L-001987,L-016973,0,same surname and region
+L-001914,L-013267,0,same surname and region
+L-001831,S-030079,1,same entity
+L-011314,S-021125,0,same surname and region
+G-011182,S-000006,0,same surname and region
+G-002837,L-015472,0,random
+G-001751,L-008860,1,same entity
+S-021286,S-024484,0,random
+S-010017,S-014699,0,random
+G-007505,S-019257,1,same entity
+G-011443,S-001763,1,same entity
+S-007780,S-028482,0,random
+S-016319,S-026295,0,same surname and region
+G-010790,L-010529,0,same surname and region
+L-006560,L-014517,0,same surname and region
+S-001439,S-027257,0,random
+G-011451,S-004132,1,same entity
+S-003708,S-004073,0,same surname and region
+L-013763,S-020902,0,random
+L-008876,S-008271,1,same entity
+G-003196,L-009453,0,same surname and region
+G-000928,G-006610,0,random
+L-005188,S-002080,0,same surname and region
+L-010771,S-013167,1,same entity
+L-001907,S-026832,0,same surname and region
+L-014259,S-015478,1,same entity
+L-016319,S-019871,0,same surname and region
+L-007965,S-027040,1,same entity
+L-009061,S-029198,1,same entity
+L-002814,S-004301,0,same surname and region
+G-010289,S-007416,1,same entity
+L-003911,L-009740,1,same entity
+S-009858,S-019259,0,same surname and region
+G-009396,S-001333,0,same surname and region
+L-009741,S-000264,1,same entity
+L-007979,S-017341,0,same surname and region
+L-008914,S-011762,1,same entity
+G-005058,L-015579,1,same entity
+S-015892,S-029571,0,same surname and region
+G-009337,L-006372,0,random
+L-005605,S-005016,0,same surname and region
+G-008122,S-009109,0,same surname and region
+L-003038,S-013579,1,same entity
+L-006263,S-008809,1,same entity
+G-010210,S-025648,0,same surname and region
+G-011230,S-002311,1,same entity
+G-002472,L-006032,0,random
+G-000867,G-002027,0,same surname and region
+G-008295,L-003211,0,same surname and region
+L-011769,S-012045,1,same entity
+G-000218,S-012521,0,same surname and region
+G-011200,S-030348,0,random
+S-010410,S-011338,0,same surname and region
+S-010511,S-024296,0,same surname and region
+G-001298,G-008940,0,same surname and region
+L-007598,L-016261,0,same surname and region
+L-005692,L-015716,0,same surname and region
+S-009513,S-013612,0,random
+L-008564,S-006012,1,same entity
+S-026598,S-026852,1,same entity
+L-013611,S-003788,1,same entity
+L-013785,S-020564,1,same entity
+S-007988,S-016534,0,same surname and region
+L-006331,S-010873,0,same surname and region
+G-008995,S-000788,0,random
+G-006277,L-007434,0,same surname and region
+G-005983,L-015026,0,same surname and region
+S-020430,S-023123,0,same surname and region
+G-010921,S-012649,0,same surname and region
+S-001799,S-004024,0,same surname and region
+S-017144,S-021821,0,same surname and region
+L-007665,S-002891,1,same entity
+G-008411,L-010009,0,same surname and region
+G-003154,S-010193,1,same entity
+L-003624,S-001700,0,same surname and region
+S-025899,S-025905,1,same entity
+L-008405,S-011483,0,same surname and region
+G-008571,S-016621,0,random
+G-010186,S-014131,0,random
+G-003478,S-020874,0,random
+L-002526,L-011461,0,random
+L-001119,S-027613,1,same entity
+G-000289,S-002974,0,same surname and region
+S-018537,S-024353,0,random
+L-004735,S-029304,1,same entity
+L-003013,S-017485,1,same entity
+G-002200,S-022284,0,same surname and region
+G-004516,S-012422,1,same entity
+L-007766,S-000805,1,same entity
+S-005339,S-010991,0,random
+S-020253,S-026151,0,same surname and region
+L-000471,S-009381,0,same surname and region
+L-013086,S-019886,0,same surname and region
+S-007211,S-030341,0,same surname and region
+G-003301,L-008455,0,same surname and region
+S-013615,S-020164,0,same surname and region
+S-010370,S-021527,0,same surname and region
+G-007582,L-012226,1,same entity
+S-018758,S-030430,0,same surname and region
+S-003603,S-023763,0,same surname and region
+S-003928,S-021165,0,random
+G-005241,S-011463,0,random
+L-000118,S-024150,1,same entity
+L-014955,S-030691,1,same entity
+S-023251,S-030634,0,random
+G-000598,S-001033,1,same entity
+L-010005,S-017376,1,same entity
+L-005175,S-003491,0,same surname and region
+S-009233,S-029973,0,same surname and region
+L-009350,S-029046,0,random
+L-009494,S-000622,1,same entity
+L-003881,S-013438,1,same entity
+S-012842,S-025459,0,same surname and region
+G-003926,S-022712,1,same entity
+S-005967,S-011171,0,same surname and region
+L-006960,S-025890,1,same entity
+L-000547,S-016656,0,same surname and region
+S-016979,S-030265,0,same surname and region
+L-011909,S-016941,0,same surname and region
+G-009877,S-012839,0,same surname and region
+S-002074,S-023719,0,same surname and region
+G-002214,S-002434,0,same surname and region
+G-001074,L-008347,1,same entity
+L-011054,S-007599,1,same entity
+L-001385,S-024880,0,same surname and region
+G-003084,S-001346,0,same surname and region
+G-009218,L-003403,0,same surname and region
+S-000977,S-007023,0,random
+L-008859,S-002788,0,random
+G-002891,G-009545,0,same surname and region
+L-004696,S-016672,0,random
+G-004484,L-015976,1,same entity
+G-001031,S-005833,1,same entity
+L-013166,S-006537,0,same surname and region
+G-000789,S-023982,0,same surname and region
+S-002052,S-030993,0,same surname and region
+L-011890,S-029726,1,same entity
+L-016432,S-006915,0,same surname and region
+L-004349,L-015231,0,random
+L-009675,S-011182,0,random
+L-014054,S-013977,0,same surname and region
+G-005723,G-007515,0,same surname and region
+G-011316,S-026178,0,same surname and region
+L-008595,S-024319,0,same surname and region
+L-016945,S-011394,1,same entity
+G-003201,S-024553,0,same surname and region
+G-002851,G-004211,0,same surname and region
+G-006584,L-008393,0,same surname and region
+G-002313,L-006677,0,same surname and region
+L-007259,S-015985,1,same entity
+L-001298,S-025487,0,same surname and region
+G-002032,S-030348,1,same entity
+G-004954,G-006671,0,same surname and region
+L-015045,S-020561,0,same surname and region
+S-013294,S-023812,0,same surname and region
+L-009168,S-018670,1,same entity
+S-006161,S-026543,0,random
+L-004913,S-025676,0,same surname and region
+G-006022,S-006351,1,same entity
+G-000998,S-022273,0,same surname and region
+G-001490,S-009423,0,random
+L-004078,L-014465,0,random
+G-011003,S-020776,1,same entity
+G-003400,S-002380,0,same surname and region
+G-011337,S-010506,1,same entity
+L-013991,S-022769,1,same entity
+S-006301,S-014255,1,same entity
+G-010049,S-020388,0,same surname and region
+S-002601,S-016896,0,same surname and region
+L-016706,S-023929,1,same entity
+S-003611,S-020500,0,same surname and region
+L-001626,S-000655,0,same surname and region
+L-005792,S-024389,1,same entity
+S-002205,S-029298,0,same surname and region
+S-008266,S-026746,0,same surname and region
+S-019345,S-019866,0,same surname and region
+L-000416,S-012284,0,same surname and region
+S-022222,S-029460,0,same surname and region
+L-006202,S-021112,0,same surname and region
+L-004421,S-005086,0,same surname and region
+S-027199,S-030307,0,same surname and region
+L-015553,S-006558,1,same entity
+S-015502,S-025454,0,same surname and region
+G-001944,S-014840,0,random
+L-007084,S-016960,0,same surname and region
+L-000308,S-021196,1,same entity
+L-016029,L-016545,0,same surname and region
+S-009164,S-021442,0,same surname and region
+L-014124,S-027210,1,same entity
+G-009186,S-020510,1,same entity
+G-008012,S-027856,0,same surname and region
+L-012680,S-004568,0,random
+L-016320,S-018129,1,same entity
+L-004815,S-006796,0,same surname and region
+L-014188,S-030758,0,same surname and region
+G-000627,L-013869,0,same surname and region
+L-012358,S-011500,0,random
+L-003172,L-009457,0,same surname and region
+L-012536,L-015711,0,same surname and region
+L-002733,S-026616,1,same entity
+S-003648,S-029801,0,same surname and region
+G-003268,S-008738,1,same entity
+S-019712,S-027119,0,same surname and region
+L-015413,L-016277,0,same surname and region
+S-002647,S-012956,0,same surname and region
+G-011590,L-016339,1,same entity
+G-007364,L-011051,0,same surname and region
+G-002757,S-003682,1,same entity
+G-002506,G-007658,0,random
+L-012789,L-015469,0,same surname and region
+L-011887,S-019217,1,same entity
+G-003054,L-012480,1,same entity
+G-006277,S-003754,1,same entity
+S-011011,S-011604,0,same surname and region
+L-015042,S-012724,1,same entity
+S-005753,S-016504,0,same surname and region
+L-001711,S-023014,0,same surname and region
+G-002399,S-018010,1,same entity
+G-006952,S-019534,0,same surname and region
+L-011087,L-011777,0,same surname and region
+G-000544,G-001622,0,same surname and region
+S-002784,S-014100,0,same surname and region
+L-007933,S-012710,0,random
+G-009248,L-009000,0,same surname and region
+G-011707,S-009056,1,same entity
+G-009135,L-004473,1,same entity
+L-002898,S-028420,0,same surname and region
+G-007063,S-024676,0,same surname and region
+G-003004,S-011174,0,same surname and region
+S-010222,S-018693,0,same surname and region
+G-009097,S-030845,1,same entity
+S-011565,S-029495,0,same surname and region
+L-015401,S-021705,1,same entity
+L-013210,S-003125,1,same entity
+S-020159,S-022150,0,same surname and region
+L-013278,S-012401,0,random
+L-001752,S-021544,1,same entity
+G-008949,L-009653,1,same entity
+L-001843,S-018579,1,same entity
+L-014617,S-014283,1,same entity
+S-010841,S-019400,0,same surname and region
+G-001424,G-006217,0,same surname and region
+L-012547,S-013312,0,random
+L-004524,S-017934,1,same entity
+G-005750,S-016063,1,same entity
+G-009655,L-010528,0,same surname and region
+S-002185,S-017347,0,same surname and region
+G-001555,S-019389,0,same surname and region
+S-002601,S-025152,0,same surname and region
+L-000558,S-027748,1,same entity
+L-013869,S-000581,0,same surname and region
+S-002890,S-021263,0,same surname and region
+G-000661,S-025142,1,same entity
+S-001051,S-009377,0,same surname and region
+L-006329,S-011486,0,same surname and region
+L-013349,S-016726,0,same surname and region
+S-012883,S-020280,0,same surname and region
+S-011203,S-013699,0,same surname and region
+L-010748,S-017913,1,same entity
+L-010060,S-023733,0,same surname and region
+G-007578,S-029351,1,same entity
+S-006532,S-022617,0,same surname and region
+L-008238,S-021287,0,same surname and region
+L-009043,S-029338,1,same entity
+L-015502,S-026059,1,same entity
+G-003044,L-016358,0,random
+S-015074,S-020159,0,same surname and region
+L-013746,S-009621,1,same entity
+L-001142,S-021813,0,random
+S-002419,S-020815,0,same surname and region
+G-008545,L-003149,0,same surname and region
+G-009573,L-011896,0,same surname and region
+G-005595,S-025279,1,same entity
+G-002635,S-011885,1,same entity
+S-000359,S-023850,0,same surname and region
+G-008310,L-005111,1,same entity
+G-010073,L-012522,1,same entity
+G-006622,G-009354,0,random
+S-021598,S-029695,0,random
+L-002445,S-011862,1,same entity
+L-011920,S-012086,1,same entity
+L-006737,S-000774,1,same entity
+L-005175,S-010861,0,random
+G-000154,S-019662,1,same entity
+S-022999,S-030319,0,same surname and region
+G-011214,S-026751,0,same surname and region
+G-005746,L-016457,1,same entity
+S-006606,S-017539,0,same surname and region
+S-001930,S-009236,0,same surname and region
+L-007516,S-013572,1,same entity
+G-002840,S-012852,0,same surname and region
+L-004063,S-019464,0,same surname and region
+L-008325,S-027752,1,same entity
+L-001479,L-007714,0,same surname and region
+G-001693,S-022485,0,same surname and region
+L-008909,S-004369,0,same surname and region
+S-005009,S-027370,0,same surname and region
+L-001366,S-003982,1,same entity
+L-000908,S-003221,0,same surname and region
+G-006260,L-008393,1,same entity
+L-008729,S-013788,1,same entity
+L-007509,S-025005,0,same surname and region
+L-011914,S-012947,0,same surname and region
+L-005454,S-005634,0,random
+G-008147,S-018374,1,same entity
+L-009409,S-009760,0,same surname and region
+G-007394,S-010439,0,random
+G-006603,S-011739,0,same surname and region
+L-010164,S-019726,1,same entity
+L-006182,S-004091,1,same entity
+G-005536,L-011632,0,same surname and region
+L-012646,S-008472,1,same entity
+L-005851,S-013462,0,same surname and region
+L-001424,S-006240,0,same surname and region
+S-005159,S-010806,0,same surname and region
+G-009905,S-008612,0,same surname and region
+L-010434,S-019652,1,same entity
+G-008183,S-012049,1,same entity
+G-007949,S-024626,1,same entity
+G-007857,S-013173,0,same surname and region
+L-006152,S-007077,1,same entity
+L-011160,S-006761,0,same surname and region
+S-012527,S-013630,0,same surname and region
+G-008629,S-016569,1,same entity
+S-008339,S-016431,0,same surname and region
+L-008047,S-023255,1,same entity
+G-006101,S-012133,0,same surname and region
+L-003717,L-009520,0,same surname and region
+G-000589,S-010755,0,same surname and region
+L-015682,S-016284,0,random
+S-007684,S-015998,1,same entity
+L-014150,S-005953,1,same entity
+G-008777,L-012751,1,same entity
+L-001501,L-007476,0,same surname and region
+S-011770,S-021248,0,same surname and region
+S-020153,S-022727,0,same surname and region
+S-024387,S-030703,0,same surname and region
+G-001523,S-029352,0,same surname and region
+L-009347,S-011143,1,same entity
+G-001434,S-024804,1,same entity
+G-000150,L-016754,1,same entity
+L-001862,L-005543,0,same surname and region
+G-007883,S-029193,0,random
+S-005441,S-026626,0,random
+S-011983,S-016137,0,same surname and region
+L-008203,S-011633,1,same entity
+S-024305,S-028135,0,same surname and region
+L-004772,L-010133,0,same surname and region
+L-004755,S-019643,0,same surname and region
+L-002604,L-007654,0,same surname and region
+G-010518,L-014141,0,random
+G-010269,S-023071,1,same entity
+G-003801,G-007195,0,random
+G-002414,L-015026,1,same entity
+G-006532,L-009552,0,same surname and region
+G-004688,S-009664,0,random
+L-004937,S-009638,0,same surname and region
+S-029185,S-030685,0,same surname and region
+L-007012,S-010614,1,same entity
+S-011182,S-024305,0,same surname and region
+L-011845,S-028957,1,same entity
+L-012173,S-004582,1,same entity
+L-004101,S-020736,1,same entity
+L-014262,S-008641,0,random
+L-006828,S-021538,0,same surname and region
+L-016388,S-003711,0,random
+G-001115,S-021684,0,same surname and region
+L-004353,S-012635,1,same entity
+L-004005,S-007262,1,same entity
+G-000799,G-003563,1,same entity
+L-012138,S-025732,0,same surname and region
+G-003901,S-008210,0,same surname and region
+L-006540,S-002499,0,random
+S-006226,S-011066,0,same surname and region
+G-003364,S-025869,0,same surname and region
+L-002254,S-007475,0,same surname and region
+S-013184,S-017975,0,same surname and region
+L-008813,S-027598,1,same entity
+L-006299,L-008312,0,random
+G-002208,L-004061,1,same entity
+L-007937,S-011164,0,same surname and region
+G-001875,S-018189,0,same surname and region
+G-001746,S-024844,0,same surname and region
+L-010363,S-028796,1,same entity
+L-000803,L-015199,0,same surname and region
+S-009345,S-029506,0,random
+G-005073,G-006452,0,same surname and region
+L-004380,S-008917,1,same entity
+G-010675,L-007993,1,same entity
+L-011303,S-000779,0,random
+L-016060,S-007804,0,random
+S-021120,S-023778,0,same surname and region
+L-003767,L-005463,0,same surname and region
+L-007743,S-015238,0,same surname and region
+L-006230,S-020438,0,same surname and region
+S-015075,S-029306,0,same surname and region
+G-011941,S-021012,0,same surname and region
+G-000607,L-011794,1,same entity
+G-009493,G-010477,0,same surname and region
+G-009234,L-013466,0,same surname and region
+G-009072,S-025858,0,random
+S-000596,S-006365,1,same entity
+L-003516,L-005078,0,same surname and region
+S-021057,S-029192,0,same surname and region
+G-000678,L-000903,1,same entity
+G-004357,S-027982,0,same surname and region
+L-003022,S-014597,0,same surname and region
+S-005093,S-005748,0,same surname and region
+S-008750,S-022230,0,same surname and region
+G-003666,S-003443,1,same entity
+L-014445,S-025784,1,same entity
+G-005823,S-030284,0,same surname and region
+S-003544,S-012126,0,same surname and region
+L-000581,L-014140,0,same surname and region
+L-011862,S-014115,1,same entity
+S-000277,S-006497,0,same surname and region
+L-009055,S-001298,1,same entity
+G-010654,S-014310,1,same entity
+L-006460,S-009958,0,same surname and region
+S-004285,S-024803,0,same surname and region
+G-000633,L-015204,0,random
+G-002250,L-000714,0,same surname and region
+S-005097,S-012473,0,random
+L-003747,S-007946,1,same entity
+S-019547,S-027874,0,random
+L-013026,S-025668,1,same entity
+G-011884,S-027817,1,same entity
+S-009869,S-009991,0,random
+L-002214,L-002511,0,same surname and region
+L-002790,S-020843,1,same entity
+G-003435,S-030632,0,same surname and region
+L-004765,L-008898,0,same surname and region
+L-012811,L-013643,0,random
+L-012908,S-011723,0,same surname and region
+S-003174,S-030542,0,random
+G-011880,S-007776,1,same entity
+G-008440,S-011635,0,same surname and region
+L-013095,S-011441,0,same surname and region
+L-016674,S-012330,0,random
+L-012978,S-014866,0,same surname and region
+G-000672,L-016987,0,same surname and region
+S-007415,S-008827,0,random
+G-009966,L-011187,1,same entity
+S-017199,S-026531,0,random
+L-000544,L-006732,0,same surname and region
+G-004534,S-009366,1,same entity
+L-010654,S-024629,0,same surname and region
+G-009531,S-014735,1,same entity
+L-009121,S-020301,0,same surname and region
+L-000102,S-017341,1,same entity
+G-003526,L-007007,0,same surname and region
+L-009034,L-016553,0,same surname and region
+G-009753,S-021880,0,same surname and region
+L-002732,S-027644,1,same entity
+G-011116,S-000090,0,same surname and region
+G-009342,S-002805,0,random
+L-015254,S-006242,0,same surname and region
+L-016261,S-010115,0,same surname and region
+S-001705,S-008630,0,same surname and region
+G-011594,L-003843,0,same surname and region
+G-007049,L-002502,1,same entity
+L-009606,S-024647,1,same entity
+S-021493,S-025881,0,random
+L-011490,S-029080,0,same surname and region
+L-011791,S-006213,1,same entity
+S-013833,S-015514,0,random
+S-027747,S-029126,0,same surname and region
+S-014621,S-021238,1,same entity
+G-010142,L-004533,0,random
+L-004252,S-015114,1,same entity
+G-007487,S-013434,1,same entity
+G-007596,S-003857,1,same entity
+L-011850,S-007350,1,same entity
+L-013192,S-002690,0,same surname and region
+L-010752,S-003157,0,random
+S-000116,S-015612,0,same surname and region
+S-005815,S-020455,0,same surname and region
+L-007896,S-017029,1,same entity
+S-008210,S-021809,1,same entity
+L-010823,S-013473,1,same entity
+S-005152,S-007119,1,same entity
+S-008706,S-013720,1,same entity
+L-005446,L-006258,0,same surname and region
+L-015919,S-008311,0,same surname and region
+L-001627,S-028448,1,same entity
+G-010559,L-002173,0,same surname and region
+S-011418,S-030579,0,same surname and region
+G-002747,L-012433,0,random
+S-011272,S-021627,0,same surname and region
+L-008363,S-018952,0,same surname and region
+G-002328,G-009248,0,same surname and region
+L-004597,S-006606,0,same surname and region
+L-001737,L-016824,0,same surname and region
+S-027237,S-030751,1,same entity
+S-019555,S-029223,0,same surname and region
+L-002511,S-003213,0,same surname and region
+L-003442,S-021804,1,same entity
+L-015380,S-011292,0,same surname and region
+S-004523,S-020950,0,same surname and region
+L-001357,L-007689,0,random
+G-006195,L-011538,0,same surname and region
+G-008244,S-023449,0,same surname and region
+L-011502,S-005723,1,same entity
+L-002114,S-013577,0,same surname and region
+L-001292,L-011462,0,random
+G-004651,S-010439,0,same surname and region
+L-001850,S-022897,0,same surname and region
+G-007677,S-010689,1,same entity
+G-010622,L-006864,1,same entity
+S-010222,S-015468,0,same surname and region
+L-004492,S-008745,0,random
+L-006543,L-014506,0,random
+L-016093,S-004732,0,same surname and region
+G-010450,S-019068,0,same surname and region
+G-002741,L-005556,0,same surname and region
+G-009987,S-030103,1,same entity
+L-009337,S-002955,0,same surname and region
+G-011630,L-002253,0,same surname and region
+G-003976,S-002504,0,same surname and region
+S-009721,S-017966,0,same surname and region
+L-009176,S-007736,0,same surname and region
+S-001033,S-002460,0,same surname and region
+L-014788,S-012980,0,same surname and region
+G-004914,L-008771,0,same surname and region
+S-001102,S-011583,0,same surname and region
+S-000746,S-021695,0,same surname and region
+G-010426,G-010588,0,same surname and region
+G-006791,S-004414,0,same surname and region
+G-009100,S-018157,1,same entity
+S-001232,S-014316,0,same surname and region
+L-010263,S-003240,0,same surname and region
+G-001719,S-011304,1,same entity
+L-005452,L-016936,0,same surname and region
+G-001904,S-009926,0,random
+G-000526,G-008330,0,same surname and region
+S-024310,S-027639,0,same surname and region
+L-001065,S-006928,1,same entity
+L-010950,S-014901,0,same surname and region
+G-010411,L-010215,0,random
+L-013535,S-004897,0,random
+L-003161,S-003674,1,same entity
+L-006250,S-025318,1,same entity
+G-011344,S-002743,1,same entity
+L-003653,S-001359,1,same entity
+G-010972,L-000770,0,same surname and region
+G-010164,L-016959,1,same entity
+G-002086,L-005747,1,same entity
+S-001926,S-002384,0,same surname and region
+G-000471,L-001563,1,same entity
+G-007320,S-016884,1,same entity
+G-011269,S-022900,0,same surname and region
+L-009477,S-018803,1,same entity
+L-014725,S-009954,1,same entity
+S-002206,S-014110,0,same surname and region
+G-000131,L-004405,0,random
+L-000851,S-015653,0,same surname and region
+G-001128,S-002331,0,same surname and region
+G-010477,L-016405,0,same surname and region
+L-009746,S-008654,0,same surname and region
+S-018991,S-021810,0,same surname and region
+L-015210,S-001873,0,same surname and region
+L-016753,S-029318,1,same entity
+G-003491,S-011101,0,random
+L-003781,S-008180,0,same surname and region
+L-014130,S-010635,0,same surname and region
+G-010736,S-021516,0,same surname and region
+G-002395,S-005044,0,same surname and region
+L-006005,S-014762,1,same entity
+G-008164,S-012280,0,random
+L-001457,S-023903,1,same entity
+L-010573,S-004851,0,same surname and region
+G-005577,S-014382,0,random
+G-008311,S-017270,0,same surname and region
+L-003220,S-030003,1,same entity
+G-006588,L-006849,1,same entity
+G-004717,S-026251,0,random
+S-021683,S-026695,0,same surname and region
+L-000258,S-015324,1,same entity
+G-005420,S-006871,0,same surname and region
+L-003221,S-002630,0,same surname and region
+G-007181,L-004796,1,same entity
+L-007947,S-005204,1,same entity
+L-011617,S-002098,0,same surname and region
+G-001087,S-014999,1,same entity
+S-004956,S-007115,0,same surname and region
+L-015183,S-018234,0,same surname and region
+L-016302,S-029677,0,random
+S-004149,S-022320,0,same surname and region
+S-020995,S-021221,0,random
+L-010630,S-028448,0,same surname and region
+L-010325,S-002222,0,same surname and region
+G-006234,S-005302,0,random
+L-014465,S-027990,1,same entity
+G-010099,S-021973,0,random
+L-015773,S-023497,0,same surname and region
+S-017020,S-027928,0,same surname and region
+G-001043,S-013199,0,same surname and region
+G-011797,S-001332,1,same entity
+L-005449,S-010280,0,same surname and region
+L-006246,S-016896,1,same entity
+G-009120,S-001349,0,random
+L-015782,S-005475,0,same surname and region
+L-008171,S-011139,1,same entity
+G-008496,L-012262,1,same entity
+G-004817,S-014205,0,same surname and region
+G-004259,S-019284,1,same entity
+G-006641,L-007280,0,same surname and region
+L-004616,S-007730,1,same entity
+S-000174,S-008693,0,same surname and region
+L-006401,S-018979,1,same entity
+L-014100,S-003878,1,same entity
+S-005688,S-009017,0,same surname and region
+S-019786,S-029176,0,same surname and region
+G-006372,S-006349,1,same entity
+G-000562,S-029053,0,random
+G-005636,L-012406,0,random
+S-008354,S-016740,0,random
+L-014238,S-026931,0,same surname and region
+G-010064,S-024716,1,same entity
+L-004391,S-025835,0,same surname and region
+G-006727,L-011433,0,same surname and region
+L-002183,L-006488,0,same surname and region
+G-001965,S-002630,1,same entity
+L-010814,S-027936,0,same surname and region
+L-008946,S-019951,1,same entity
+G-008319,S-027101,0,same surname and region
+L-007434,S-007452,1,same entity
+G-000895,S-023531,0,same surname and region
+S-008722,S-020301,0,random
+L-007492,S-019970,0,same surname and region
+G-006922,L-003850,0,same surname and region
+L-002105,S-013492,1,same entity
+L-008538,L-015695,0,same surname and region
+G-004507,S-022884,1,same entity
+L-004506,S-021219,1,same entity
+S-006247,S-012914,0,same surname and region
+G-007610,S-030240,0,same surname and region
+L-009867,S-016357,1,same entity
+G-010552,L-009414,0,same surname and region
+G-007628,S-029866,0,same surname and region
+G-003014,L-013166,0,random
+G-006229,L-011041,1,same entity
+L-010812,S-000238,0,same surname and region
+G-011006,S-006786,1,same entity
+L-008827,S-019853,1,same entity
+L-005258,S-002862,0,same surname and region
+L-003529,L-007085,0,same surname and region
+L-012455,S-000956,1,same entity
+L-008942,S-008163,0,same surname and region
+G-003826,S-010980,0,random
+S-020148,S-026363,0,same surname and region
+L-004052,S-030813,0,same surname and region
+L-004242,S-028911,1,same entity
+S-006607,S-012203,0,same surname and region
+G-003227,S-025578,0,same surname and region
+G-009196,L-009014,0,same surname and region
+L-010654,S-014504,0,same surname and region
+G-005504,S-022557,1,same entity
+L-010248,S-026884,0,random
+G-010955,S-028862,0,random
+L-011981,S-021565,0,same surname and region
+L-007887,S-029161,0,same surname and region
+L-007984,S-001994,0,same surname and region
+G-003046,S-028654,1,same entity
+G-002459,S-030132,1,same entity
+S-004573,S-006494,0,same surname and region
+G-008308,S-010628,1,same entity
+G-009557,S-026570,1,same entity
+L-009107,S-013068,1,same entity
+L-013764,S-020323,1,same entity
+L-008771,S-002402,0,same surname and region
+L-014883,S-013551,0,same surname and region
+G-001656,G-004598,0,same surname and region
+S-013107,S-020148,0,same surname and region
+S-021522,S-028800,0,random
+S-016588,S-030066,0,same surname and region
+G-002631,G-011575,0,same surname and region
+L-007149,S-023015,0,same surname and region
+G-010832,L-011659,1,same entity
+L-004405,S-006666,1,same entity
+G-003933,S-027159,0,random
+G-004158,L-014603,0,random
+G-009831,S-025789,1,same entity
+G-000425,G-003697,1,same entity
+G-004606,S-002355,0,same surname and region
+L-000801,S-003978,0,same surname and region
+G-006370,S-007097,1,same entity
+G-003787,G-006762,0,same surname and region
+L-001382,S-012179,1,same entity
+G-007127,L-002033,1,same entity
+L-008810,L-013006,0,same surname and region
+L-000020,S-002886,1,same entity
+G-000333,S-026220,0,random
+L-002413,S-015631,1,same entity
+S-005493,S-022949,0,same surname and region
+G-002157,S-015833,0,same surname and region
+G-011249,L-003403,0,random
+L-013791,S-026238,0,same surname and region
+G-005950,G-010808,0,same surname and region
+S-008127,S-016668,0,same surname and region
+G-002546,G-007708,0,random
+G-001606,L-003947,1,same entity
+S-013396,S-013530,0,same surname and region
+G-007694,S-006139,1,same entity
+L-008573,S-029757,0,same surname and region
+S-002405,S-024170,0,same surname and region
+G-001999,G-009589,0,same surname and region
+G-000028,S-028373,0,random
+L-009719,S-029339,0,same surname and region
+G-006260,G-011757,0,random
+L-016093,S-024252,1,same entity
+L-013963,S-022450,0,same surname and region
+G-006842,L-008493,1,same entity
+G-008557,S-003205,1,same entity
+G-008607,S-012104,0,same surname and region
+G-005080,G-011013,1,same entity
+L-002885,S-010318,0,random
+S-010846,S-017676,0,same surname and region
+L-008241,S-002401,1,same entity
+L-008194,S-030066,1,same entity
+L-005129,S-017097,1,same entity
+G-002751,S-014793,1,same entity
+G-009668,S-000819,1,same entity
+L-013971,S-001397,0,same surname and region
+G-006927,S-008956,1,same entity
+S-017085,S-023858,0,same surname and region
+G-007948,S-019152,0,same surname and region
+L-004165,S-010513,0,same surname and region
+L-007138,L-015722,0,same surname and region
+G-003899,S-006313,0,same surname and region
+L-009123,S-000616,0,same surname and region
+G-009392,L-008650,0,same surname and region
+G-011406,S-026914,1,same entity
+G-003477,L-003402,1,same entity
+S-021034,S-025256,0,random
+L-016028,S-005668,1,same entity
+L-003897,S-022225,1,same entity
+G-003761,S-030066,0,same surname and region
+L-011389,L-014146,0,same surname and region
+L-011271,S-022346,1,same entity
+G-005408,S-017758,1,same entity
+G-007981,L-014048,1,same entity
+G-000588,S-011799,0,same surname and region
+L-008022,S-028414,1,same entity
+S-011766,S-016784,0,random
+L-005744,S-030057,0,same surname and region
+L-016363,S-029703,1,same entity
+G-000970,L-013121,1,same entity
+L-001751,L-005018,0,same surname and region
+L-010518,S-017334,0,same surname and region
+G-000540,S-001908,1,same entity
+G-011776,S-006273,1,same entity
+G-005890,S-027271,1,same entity
+S-004526,S-004615,0,random
+S-016221,S-018064,0,same surname and region
+G-005034,S-024298,0,same surname and region
+S-010400,S-024345,0,random
+L-014775,S-028639,0,same surname and region
+L-004502,L-013633,0,random
+S-012317,S-016462,0,same surname and region
+L-000616,S-018230,0,random
+L-010863,S-009666,0,same surname and region
+G-007802,S-010442,0,same surname and region
+L-011687,S-015831,0,same surname and region
+L-011819,S-001473,1,same entity
+L-003957,L-015684,0,same surname and region
+S-003149,S-013789,0,same surname and region
+L-002228,S-006839,1,same entity
+G-009457,S-015565,1,same entity
+S-017043,S-019417,0,same surname and region
+G-010588,L-006800,0,same surname and region
+L-015386,S-021538,1,same entity
+L-006610,S-004786,0,random
+L-012793,S-024441,0,same surname and region
+S-000918,S-015106,0,same surname and region
+S-013951,S-016368,1,same entity
+G-002514,S-016375,1,same entity
+G-004844,L-013619,1,same entity
+L-006497,S-006001,0,same surname and region
+S-010458,S-025807,0,random
+L-014862,S-022482,1,same entity
+S-017808,S-022610,0,same surname and region
+L-006884,S-002514,1,same entity
+S-011152,S-013275,0,same surname and region
+S-005551,S-029987,0,same surname and region
+G-010070,S-016048,1,same entity
+L-005877,S-006643,0,same surname and region
+S-000873,S-006119,0,same surname and region
+S-011982,S-016213,0,same surname and region
+G-006291,L-005488,0,same surname and region
+S-011497,S-011839,0,same surname and region
+L-001176,L-007559,0,random
+G-005209,S-016740,0,same surname and region
+G-003477,S-015568,0,same surname and region
+S-008794,S-017377,0,random
+G-011133,S-008399,1,same entity
+S-018205,S-031042,0,same surname and region
+L-011801,S-018186,1,same entity
+G-002141,S-027489,0,same surname and region
+L-005979,S-012137,0,same surname and region
+G-009488,L-001420,1,same entity
+G-011540,S-018916,1,same entity
+L-003251,S-012454,1,same entity
+L-010308,S-000479,1,same entity
+L-002598,L-004158,0,same surname and region
+G-006372,S-016302,0,same surname and region
+L-012232,S-028303,0,same surname and region
+S-015380,S-018998,0,same surname and region
+L-012781,S-027114,0,same surname and region
+S-001087,S-005205,0,same surname and region
+G-005575,L-016201,0,random
+G-002250,S-008874,0,same surname and region
+L-006941,L-015481,0,same surname and region
+L-011687,S-000050,0,same surname and region
+L-010892,S-027879,0,same surname and region
+G-010355,S-029530,0,same surname and region
+G-010547,S-020861,1,same entity
+S-024866,S-030215,0,same surname and region
+L-012769,S-015473,0,same surname and region
+L-003953,L-014207,0,random
+L-000411,L-007151,0,same surname and region
+L-000795,S-029408,1,same entity
+G-001905,L-008999,0,random
+S-011074,S-020781,0,same surname and region
+S-011890,S-022558,0,same surname and region
+L-003419,S-001345,0,same surname and region
+G-006224,L-007208,1,same entity
+G-009845,L-014523,1,same entity
+S-012510,S-014930,0,same surname and region
+G-005432,S-013630,0,same surname and region
+G-007137,S-008274,0,same surname and region
+L-003478,S-018073,0,same surname and region
+L-015464,S-020889,0,same surname and region
+L-015169,S-009184,1,same entity
+S-012139,S-029598,0,same surname and region
+L-007464,S-016643,1,same entity
+G-010241,S-014960,0,random
+L-009430,S-006791,0,same surname and region
+G-006515,S-019421,0,same surname and region
+L-004498,L-011868,0,random
+G-009366,S-020158,1,same entity
+S-002360,S-028457,0,random
+L-001547,S-002700,1,same entity
+G-005379,S-023886,1,same entity
+S-020152,S-029148,0,same surname and region
+L-015233,S-004211,0,same surname and region
+S-005310,S-026018,1,same entity
+L-012664,S-007731,0,same surname and region
+L-000971,S-025610,0,same surname and region
+L-015183,S-015378,1,same entity
+G-008901,S-029921,0,random
+G-006207,L-007182,0,same surname and region
+S-007688,S-021362,0,same surname and region
+L-003857,S-024129,1,same entity
+G-000585,S-020712,0,same surname and region
+L-000165,S-007732,1,same entity
+G-009755,S-001197,0,same surname and region
+G-005090,L-002022,1,same entity
+L-001060,S-018509,0,same surname and region
+S-011326,S-026354,0,same surname and region
+G-005841,L-012776,0,same surname and region
+G-003931,L-015973,1,same entity
+L-000586,S-023175,1,same entity
+G-005807,S-023342,1,same entity
+G-000003,S-013622,1,same entity
+G-007040,S-005727,0,random
+G-003015,L-011113,1,same entity
+L-016714,S-005767,0,random
+L-014932,S-001597,1,same entity
+S-007990,S-010626,0,same surname and region
+G-010460,S-002329,1,same entity
+L-009204,L-015984,0,same surname and region
+G-003373,S-011908,0,same surname and region
+L-011865,S-003840,0,random
+G-008783,L-010287,1,same entity
+G-004126,L-016574,1,same entity
+L-012809,S-009182,1,same entity
+S-010673,S-022135,0,same surname and region
+S-006965,S-029386,0,same surname and region
+L-006535,S-010021,1,same entity
+L-001854,S-022802,1,same entity
+L-000043,S-026482,0,same surname and region
+G-005129,L-010377,1,same entity
+L-010024,S-005907,0,same surname and region
+G-002943,S-003288,1,same entity
+S-013125,S-028593,0,same surname and region
+L-001853,S-004982,1,same entity
+S-011061,S-016238,0,same surname and region
+G-008901,S-009839,0,same surname and region
+G-006744,S-004020,0,same surname and region
+G-006492,S-005469,0,same surname and region
+G-004992,G-005577,0,same surname and region
+S-006464,S-007849,0,same surname and region
+S-017214,S-022834,1,same entity
+S-010264,S-027468,0,same surname and region
+L-003609,S-023683,1,same entity
+G-008308,L-015907,0,same surname and region
+L-008948,S-013144,1,same entity
+L-007280,S-006166,1,same entity
+L-016900,S-011118,0,same surname and region
+S-000006,S-000471,0,same surname and region
+G-011716,S-002222,0,same surname and region
+G-002809,S-001646,0,random
+G-011042,L-002883,1,same entity
+L-012286,S-029385,1,same entity
+L-000023,S-014081,1,same entity
+S-029911,S-030951,0,random
+S-011345,S-023050,0,same surname and region
+S-002259,S-015267,0,same surname and region
+S-030097,S-030336,0,same surname and region
+L-007742,S-013732,1,same entity
+G-007745,L-012175,1,same entity
+G-006318,S-017475,1,same entity
+L-000213,S-024795,1,same entity
+S-013724,S-029807,0,same surname and region
+G-005740,L-016503,1,same entity
+L-007665,S-022580,0,same surname and region
+L-015206,S-004802,1,same entity
+S-003463,S-012173,0,same surname and region
+L-001347,S-025152,1,same entity
+S-016456,S-023372,0,same surname and region
+S-002108,S-027878,0,random
+L-009136,S-003556,1,same entity
+S-016568,S-021029,0,random
+G-010524,L-015619,1,same entity
+G-004661,S-009345,0,same surname and region
+L-012971,S-027453,1,same entity
+G-008251,S-002881,1,same entity
+S-008171,S-020357,1,same entity
+L-002449,S-026323,0,same surname and region
+L-000693,L-007362,0,same surname and region
+L-005128,S-000790,1,same entity
+G-002218,S-014903,1,same entity
+L-010712,S-021832,1,same entity
+L-003443,S-011762,0,same surname and region
+S-009088,S-012638,0,random
+G-011557,S-001987,0,random
+L-011704,S-016553,1,same entity
+S-009806,S-015080,0,random
+S-000677,S-029705,0,same surname and region
+L-000783,L-014080,0,same surname and region
+L-009657,S-009321,0,random
+L-003461,S-005821,0,random
+S-024179,S-029158,0,same surname and region
+G-010141,S-007532,0,same surname and region
+G-010226,L-006737,0,same surname and region
+L-015800,S-026960,0,random
+S-002345,S-012515,0,same surname and region
+G-006866,S-028578,0,same surname and region
+G-002673,S-006996,1,same entity
+G-010621,L-001914,0,same surname and region
+L-001501,S-016959,1,same entity
+G-011841,L-002135,0,same surname and region
+S-006018,S-007205,0,random
+L-014346,S-004516,0,same surname and region
+S-012173,S-018466,0,same surname and region
+L-007892,S-020223,1,same entity
+L-004230,L-005754,0,random
+G-003439,S-026390,1,same entity
+S-003221,S-020138,0,same surname and region
+G-006118,L-016335,1,same entity
+G-010503,L-006103,1,same entity
+L-010404,S-007374,0,same surname and region
+L-006597,S-008261,1,same entity
+G-005950,L-003322,0,same surname and region
+L-007129,L-008032,0,same surname and region
+G-009026,S-015362,0,same surname and region
+G-009790,S-002838,0,same surname and region
+L-006539,L-010522,0,same surname and region
+G-006233,S-030149,0,same surname and region
+G-001973,S-021817,0,same surname and region
+S-002028,S-015799,0,random
+L-004545,L-006281,0,same surname and region
+L-000402,L-007296,0,same surname and region
+G-008516,L-016463,0,random
+S-014058,S-016805,0,random
+L-006442,S-024293,1,same entity
+S-025310,S-029137,0,same surname and region
+S-022936,S-026980,0,same surname and region
+G-006333,S-010064,0,same surname and region
+G-009237,S-026865,0,same surname and region
+L-000173,S-006686,0,random
+G-000045,S-011793,1,same entity
+L-009141,S-012807,1,same entity
+L-010982,L-012543,1,same entity
+L-007552,S-018397,0,random
+S-018422,S-025043,0,random
+L-002324,S-022467,0,same surname and region
+L-012040,S-024591,0,random
+L-002015,L-011040,0,same surname and region
+G-006468,L-006917,0,same surname and region
+L-005798,S-029300,1,same entity
+L-003265,S-030141,1,same entity
+G-001033,L-004072,1,same entity
+L-011691,S-012136,0,same surname and region
+L-001492,S-026035,1,same entity
+L-001299,S-011602,0,same surname and region
+S-000426,S-013275,0,random
+G-009660,L-007007,0,same surname and region
+L-006512,S-025898,1,same entity
+S-010276,S-028637,0,same surname and region
+L-011697,S-029695,1,same entity
+L-011080,S-023034,0,same surname and region
+S-014026,S-018217,0,random
+G-010181,S-026512,1,same entity
+G-006373,S-007000,1,same entity
+L-009155,S-006680,0,same surname and region
+G-000121,S-024673,1,same entity
+S-004523,S-020158,0,same surname and region
+S-014393,S-019866,0,same surname and region
+G-006650,S-010045,0,same surname and region
+G-004760,S-026433,1,same entity
+L-002408,S-021636,0,random
+S-003358,S-019369,0,same surname and region
+G-009566,L-012357,0,same surname and region
+S-019490,S-019581,0,same surname and region
+S-001683,S-027477,1,same entity
+L-010318,L-010730,0,same surname and region
+G-001980,S-014239,1,same entity
+L-011541,S-001780,0,same surname and region
+G-000130,S-015262,1,same entity
+G-007198,G-010146,0,same surname and region
+L-004898,S-023982,1,same entity
+L-001704,S-009583,1,same entity
+G-005238,S-027967,0,random
+G-009324,L-001181,1,same entity
+L-001208,L-015707,0,same surname and region
+G-011750,L-009776,1,same entity
+L-001591,S-027509,1,same entity
+S-007425,S-017474,0,random
+L-007153,S-007545,1,same entity
+L-007388,S-000410,1,same entity
+L-003994,S-022289,1,same entity
+G-005256,S-006319,1,same entity
+S-025550,S-031101,0,same surname and region
+L-013570,S-001824,1,same entity
+G-005723,L-005304,0,same surname and region
+L-002822,S-012067,0,same surname and region
+S-012956,S-022857,0,same surname and region
+L-010862,S-021472,0,random
+L-012894,S-008647,1,same entity
+G-009566,S-029492,1,same entity
+S-014654,S-022288,0,same surname and region
+G-006480,S-006062,0,same surname and region
+G-008500,L-011633,0,same surname and region
+G-008129,L-012233,0,same surname and region
+S-000391,S-025913,0,random
+G-002782,L-012174,0,same surname and region
+S-009604,S-021092,0,random
+S-003042,S-013903,0,random
+L-012873,S-023458,0,same surname and region
+L-009613,L-012955,0,same surname and region
+S-015536,S-030398,0,same surname and region
+S-000863,S-002195,0,same surname and region
+L-013553,S-020104,1,same entity
+L-004690,S-016387,1,same entity
+G-009694,L-014492,1,same entity
+L-012325,S-005281,1,same entity
+S-000842,S-005365,0,random
+L-004269,S-002792,0,same surname and region
+L-000810,L-012399,0,same surname and region
+G-010241,S-005268,0,random
+S-003821,S-013338,0,same surname and region
+S-002408,S-008447,0,same surname and region
+L-015711,S-008473,1,same entity
+L-006178,S-001516,1,same entity
+L-009070,L-014121,0,same surname and region
+L-002271,S-002514,0,same surname and region
+G-000123,S-000118,0,random
+G-006537,L-011558,0,same surname and region
+G-004703,L-016447,1,same entity
+G-007538,L-001261,0,same surname and region
+G-000164,G-011128,0,same surname and region
+L-006073,S-029589,1,same entity
+S-014459,S-016782,0,same surname and region
+G-008052,S-009687,0,same surname and region
+L-003858,S-030177,0,same surname and region
+L-013556,S-005450,0,same surname and region
+G-004051,S-002589,1,same entity
+L-010496,S-001584,1,same entity
+L-004264,S-021874,0,same surname and region
+G-002022,S-022569,0,random
+L-005976,S-010013,0,same surname and region
+L-014119,S-026525,0,random
+G-007573,L-014642,1,same entity
+G-006606,G-010804,0,same surname and region
+S-000621,S-001118,0,same surname and region
+S-011508,S-012753,0,same surname and region
+L-011825,S-002936,0,same surname and region
+S-007240,S-013394,0,same surname and region
+L-001914,S-009935,1,same entity
+L-016205,S-028327,0,random
+L-003594,L-008762,0,same surname and region
+G-000578,S-030044,1,same entity
+G-008250,S-018883,0,same surname and region
+L-011852,S-025857,0,random
+L-016457,S-011570,0,random
+G-001622,S-011500,0,same surname and region
+G-001092,L-000587,1,same entity
+G-005004,L-007463,0,same surname and region
+L-015600,S-026518,0,random
+S-014053,S-024395,0,same surname and region
+L-010215,S-005579,0,same surname and region
+S-003990,S-012044,0,same surname and region
+L-014837,S-027675,1,same entity
+L-011195,S-002602,0,same surname and region
+G-007121,S-004965,1,same entity
+L-000976,L-007482,0,same surname and region
+L-016776,S-004257,1,same entity
+S-005108,S-024085,0,random
+S-001453,S-020815,0,random
+S-010350,S-011761,0,same surname and region
+S-000989,S-007294,0,same surname and region
+G-008246,S-000464,0,same surname and region
+G-005018,S-015521,0,same surname and region
+S-021798,S-025169,0,random
+G-010768,L-014945,0,same surname and region
+L-015589,L-017027,0,same surname and region
+S-002098,S-002645,0,same surname and region
+L-008152,S-030461,0,same surname and region
+S-005548,S-006622,0,same surname and region
+G-011149,S-018383,0,random
+S-005651,S-009979,0,random
+G-004746,S-022819,1,same entity
+L-000123,L-006127,0,same surname and region
+S-011885,S-020758,0,same surname and region
+L-010352,L-015286,0,same surname and region
+L-005650,S-010099,1,same entity
+L-002518,S-030271,0,same surname and region
+S-008111,S-009565,1,same entity
+S-018122,S-024100,0,same surname and region
+L-006356,S-017659,1,same entity
+G-002220,S-001793,0,random
+L-015331,S-023119,1,same entity
+G-008481,S-003765,0,same surname and region
+L-000147,S-020711,0,same surname and region
+S-008254,S-025077,0,same surname and region
+G-009926,L-001187,0,same surname and region
+G-000351,G-010816,0,same surname and region
+G-003777,S-014622,0,same surname and region
+G-000810,S-026859,1,same entity
+G-000661,S-002595,0,same surname and region
+G-009857,S-010550,1,same entity
+S-001557,S-004382,0,random
+L-001778,S-019054,0,random
+L-015443,S-022085,0,same surname and region
+G-003770,S-005343,1,same entity
+S-002018,S-029278,0,same surname and region
+L-000860,S-030102,1,same entity
+L-008705,L-015843,0,same surname and region
+G-004647,L-001912,0,same surname and region
+G-011830,S-014095,0,random
+L-014841,S-021141,1,same entity
+L-009509,S-025741,0,random
+G-005868,L-011848,0,same surname and region
+L-003094,L-010881,0,same surname and region
+G-002353,S-008565,1,same entity
+S-007299,S-021765,0,random
+L-015700,S-025562,1,same entity
+S-011752,S-015598,0,same surname and region
+G-010989,S-012152,0,same surname and region
+L-007862,L-011871,0,random
+L-004489,L-011191,0,random
+L-010118,S-028814,0,same surname and region
+S-001823,S-017878,0,same surname and region
+L-002937,L-007347,0,same surname and region
+G-006788,S-011896,0,same surname and region
+S-004175,S-010854,0,same surname and region
+S-004397,S-026078,0,same surname and region
+L-004616,L-014039,0,same surname and region
+L-012445,S-016877,1,same entity
+G-004938,G-006040,0,same surname and region
+L-011299,S-024337,0,same surname and region
+L-015919,S-020452,1,same entity
+L-015864,S-002782,1,same entity
+L-008194,S-012385,0,same surname and region
+L-015299,S-000500,1,same entity
+G-002630,L-013806,1,same entity
+L-002445,S-018967,0,same surname and region
+G-005888,S-004171,0,same surname and region
+L-016428,S-028970,1,same entity
+G-002882,L-016925,1,same entity
+G-010709,S-013158,0,same surname and region
+L-002062,L-015194,0,same surname and region
+S-010958,S-022357,0,same surname and region
+L-002214,L-016389,0,same surname and region
+S-015491,S-030243,0,random
+G-006889,S-020446,1,same entity
+G-000085,S-022256,1,same entity
+S-006672,S-013635,0,random
+L-004597,S-026183,0,same surname and region
+S-001337,S-014616,0,random
+G-011305,S-017799,1,same entity
+S-000138,S-015930,0,same surname and region
+L-013216,S-014755,0,same surname and region
+G-001138,S-003903,1,same entity
+L-003957,S-011784,1,same entity
+L-003853,S-017093,0,same surname and region
+S-027686,S-030196,0,same surname and region
+S-005280,S-028254,0,random
+L-012343,S-011384,0,same surname and region
+S-010085,S-029791,0,random
+L-007031,L-012174,0,same surname and region
+L-003253,S-025360,0,same surname and region
+L-010921,S-020462,0,same surname and region
+L-001099,L-001548,0,same surname and region
+L-011808,S-013582,1,same entity
+G-005021,S-022635,1,same entity
+L-007269,L-015129,0,same surname and region
+S-018230,S-019055,0,same surname and region
+L-010134,S-003434,0,same surname and region
+L-005756,S-023531,1,same entity
+L-012547,S-010240,1,same entity
+G-000657,G-002345,0,random
+S-002700,S-007346,0,same surname and region
+L-011192,S-022444,0,random
+L-004477,S-005132,0,same surname and region
+L-014152,S-014888,0,same surname and region
+G-010330,S-028919,0,same surname and region
+L-002040,S-002440,0,same surname and region
+S-015622,S-020125,0,random
+L-001954,S-017949,0,same surname and region
+L-005849,S-001756,0,same surname and region
+L-009909,L-015653,0,random
+S-004973,S-030323,0,same surname and region
+L-015697,S-021251,1,same entity
+S-009800,S-011452,0,same surname and region
+G-011176,S-027631,1,same entity
+L-015018,L-017020,0,same surname and region
+S-010143,S-010755,0,same surname and region
+G-002995,G-003208,0,same surname and region
+L-011193,S-005165,0,same surname and region
+L-002202,S-022285,1,same entity
+L-016753,S-007029,0,same surname and region
+G-011239,S-014626,0,same surname and region
+G-000220,L-005364,0,random
+L-015715,S-008153,0,random
+S-009228,S-021516,0,same surname and region
+L-010080,S-018734,1,same entity
+L-014092,S-001902,1,same entity
+L-003583,S-009243,0,same surname and region
+G-011624,L-013375,0,same surname and region
+S-022558,S-024638,0,same surname and region
+L-003877,S-012067,0,same surname and region
+G-005407,S-003969,1,same entity
+S-018479,S-022257,0,random
+G-004967,S-026461,0,same surname and region
+L-009652,S-015413,0,same surname and region
+G-005686,L-011242,0,random
+G-003477,L-012702,0,same surname and region
+G-009485,S-020818,1,same entity
+G-002703,S-015706,1,same entity
+L-016199,S-021693,0,same surname and region
+L-009692,S-001012,1,same entity
+L-000396,S-005709,0,same surname and region
+L-014806,S-030608,0,random
+L-010421,S-007650,0,same surname and region
+S-002371,S-020939,0,random
+S-002712,S-026305,0,same surname and region
+L-004616,S-009631,0,random
+L-011275,S-014366,1,same entity
+L-016806,S-001489,1,same entity
+L-010881,S-021278,1,same entity
+S-007025,S-027566,0,same surname and region
+L-001724,S-004997,1,same entity
+G-003046,G-011503,0,same surname and region
+L-013743,S-027258,0,same surname and region
+G-008832,S-004969,0,same surname and region
+L-007197,S-014993,1,same entity
+G-004177,S-028666,1,same entity
+S-023297,S-026666,0,random
+L-005178,S-013652,1,same entity
+S-003678,S-028108,0,same surname and region
+S-012432,S-026135,0,same surname and region
+L-008519,S-002003,0,same surname and region
+L-000207,S-015362,0,same surname and region
+G-001083,L-012600,1,same entity
+G-006030,S-030048,0,same surname and region
+L-008856,S-011099,0,same surname and region
+L-001783,S-025766,1,same entity
+S-027922,S-029367,0,same surname and region
+G-000858,L-014922,1,same entity
+G-006901,L-000128,1,same entity
+G-009675,S-000501,1,same entity
+G-011178,L-015581,0,same surname and region
+G-003766,S-021790,1,same entity
+L-014774,S-001205,1,same entity
+L-006682,S-008225,1,same entity
+L-008529,S-027377,0,same surname and region
+G-005463,L-015329,1,same entity
+L-014831,S-007958,0,same surname and region
+G-002283,S-020771,0,same surname and region
+L-003173,S-018897,0,random
+S-012861,S-027350,0,same surname and region
+L-016564,S-009203,0,random
+G-006064,L-003126,1,same entity
+L-000333,S-012196,1,same entity
+G-001071,S-014850,1,same entity
+L-006032,S-030770,0,same surname and region
+G-006217,G-009235,0,same surname and region
+L-012570,S-028128,0,same surname and region
+L-008623,S-009194,0,same surname and region
+L-004280,L-009098,0,same surname and region
+S-008829,S-009698,1,same entity
+G-002783,G-011788,0,same surname and region
+G-004590,S-002324,0,random
+G-010007,S-004845,0,same surname and region
+L-014171,S-011587,1,same entity
+L-010753,S-003214,1,same entity
+L-005651,S-021817,1,same entity
+G-004896,L-004185,0,same surname and region
+L-006437,S-014003,0,random
+G-003301,S-009687,0,same surname and region
+L-002973,S-003745,0,same surname and region
+G-010676,S-002675,1,same entity
+L-012108,S-012201,0,random
+G-003486,S-004833,0,same surname and region
+L-003006,L-014388,0,same surname and region
+L-013982,S-013023,0,same surname and region
+G-002645,L-007083,0,same surname and region
+S-020251,S-027658,1,same entity
+G-000451,S-014506,0,same surname and region
+G-001159,S-006616,0,same surname and region
+L-006363,S-024665,1,same entity
+L-005811,L-013217,0,same surname and region
+G-005432,S-012527,1,same entity
+G-001123,S-012969,1,same entity
+G-006835,L-006999,1,same entity
+S-015038,S-025078,0,random
+G-002976,L-003815,1,same entity
+G-011688,S-015568,0,same surname and region
+L-014506,S-022300,0,same surname and region
+L-012287,S-023506,0,random
+S-020047,S-027670,0,same surname and region
+G-010773,L-002253,0,same surname and region
+L-007176,S-021859,1,same entity
+G-007403,L-002153,1,same entity
+S-002129,S-023859,0,same surname and region
+G-007382,S-005459,1,same entity
+S-012607,S-030791,0,random
+S-001098,S-004029,0,same surname and region
+G-004999,L-014884,0,same surname and region
+L-001259,S-005458,1,same entity
+G-008820,S-000093,0,same surname and region
+S-001477,S-022970,0,random
+G-011348,S-001766,1,same entity
+G-004496,S-017702,1,same entity
+S-001815,S-023968,0,same surname and region
+S-012329,S-023270,0,random
+G-011058,S-017936,1,same entity
+L-014695,S-021387,1,same entity
+L-012138,L-016093,0,same surname and region
+L-006096,S-011038,1,same entity
+L-008032,S-013480,0,same surname and region
+G-004275,L-015088,0,same surname and region
+L-011585,S-025864,0,same surname and region
+S-024754,S-029954,0,random
+S-001190,S-024486,0,random
+G-004752,S-019565,0,same surname and region
+G-007921,L-011354,1,same entity
+G-008461,L-011706,1,same entity
+L-009956,S-031026,0,same surname and region
+L-005527,S-012862,0,random
+L-012205,S-005621,0,random
+L-003616,L-007153,0,same surname and region
+G-008506,S-017086,0,same surname and region
+L-010743,S-025271,0,same surname and region
+G-010503,S-028799,0,same surname and region
+G-001947,G-004076,0,same surname and region
+L-013927,S-017335,0,random
+G-000045,S-029170,0,same surname and region
+L-012355,S-003432,1,same entity
+G-003046,S-024298,0,same surname and region
+G-009057,S-001202,1,same entity
+L-010349,S-018149,0,same surname and region
+G-007197,L-006791,1,same entity
+S-010098,S-018763,0,same surname and region
+L-010247,S-005499,0,same surname and region
+L-014155,S-017359,1,same entity
+S-004537,S-010840,0,same surname and region
+G-009043,S-002909,1,same entity
+L-008833,S-014205,0,same surname and region
+G-009395,L-014741,0,random
+L-008805,L-011491,0,same surname and region
+L-008959,S-010854,1,same entity
+L-000100,L-014670,0,same surname and region
+L-003818,S-029359,1,same entity
+L-001521,S-014371,0,random
+S-003259,S-006170,0,same surname and region
+S-022521,S-028543,0,same surname and region
+L-003041,S-016605,0,random
+S-020255,S-029335,0,same surname and region
+G-006939,L-012864,0,same surname and region
+L-012319,S-001451,0,random
+L-012322,S-000614,0,same surname and region
+S-011283,S-029156,0,same surname and region
+S-008074,S-027639,0,same surname and region
+G-002155,S-019114,1,same entity
+G-003124,L-003973,0,same surname and region
+L-005407,S-028788,1,same entity
+L-007446,S-029331,0,random
+L-004930,S-022179,1,same entity
+L-012682,S-010524,1,same entity
+L-002485,S-010319,1,same entity
+G-003087,S-014089,0,same surname and region
+G-010912,S-000275,1,same entity
+G-001661,S-015584,1,same entity
+G-010202,L-008737,0,same surname and region
+G-006208,S-012163,1,same entity
+L-012140,S-023903,0,same surname and region
+S-008923,S-020374,0,same surname and region
+S-010714,S-013843,0,random
+G-002019,S-010850,0,random
+L-011439,S-023809,1,same entity
+G-010405,S-017059,0,same surname and region
+L-000307,S-028642,0,random
+L-015240,S-019763,0,same surname and region
+L-013996,S-020219,1,same entity
+L-002805,S-011237,1,same entity
+G-009789,S-026368,1,same entity
+L-004260,L-013148,0,random
+L-004627,S-017033,1,same entity
+G-008444,L-003507,1,same entity
+L-000728,S-003143,1,same entity
+L-016593,S-002688,0,same surname and region
+G-002389,S-003228,1,same entity
+L-001662,L-002475,0,same surname and region
+L-016532,S-013836,0,same surname and region
+G-010562,L-015586,0,same surname and region
+G-002192,S-002050,1,same entity
+G-006622,L-011632,0,same surname and region
+G-009866,S-008518,0,random
+G-002221,S-011822,1,same entity
+L-001527,L-015591,0,same surname and region
+G-007823,S-027849,1,same entity
+G-001674,L-002866,1,same entity
+G-009225,S-002792,0,same surname and region
+G-009426,S-018879,1,same entity
+G-009949,L-009016,1,same entity
+S-000298,S-021521,0,same surname and region
+L-013474,S-005577,1,same entity
+L-008052,S-019920,1,same entity
+L-010560,S-013748,1,same entity
+L-007607,S-006359,1,same entity
+S-006829,S-015527,1,same entity
+L-014518,S-029549,1,same entity
+L-013300,S-026736,0,same surname and region
+S-020678,S-030811,0,same surname and region
+G-004731,L-000535,0,random
+G-003496,L-004584,0,same surname and region
+S-001368,S-026736,0,same surname and region
+L-001908,S-031084,0,same surname and region
+G-004326,S-002098,0,same surname and region
+S-016751,S-029405,0,same surname and region
+S-026793,S-030312,0,random
+L-014985,S-023858,1,same entity
+G-005446,L-013894,0,same surname and region
+G-001131,S-011783,0,same surname and region
+L-009936,L-013026,0,same surname and region
+G-010021,G-011215,0,random
+G-008916,S-012348,0,same surname and region
+S-029374,S-030225,0,same surname and region
+S-005908,S-021906,0,random
+L-003361,S-028167,1,same entity
+G-009456,L-010997,1,same entity
+L-014493,S-012531,0,random
+G-009712,L-007607,0,same surname and region
+L-000039,S-025390,0,same surname and region
+L-004300,L-007839,0,random
+G-009790,L-013770,1,same entity
+S-000545,S-026971,0,same surname and region
+G-011229,L-003773,0,random
+S-005519,S-027615,0,same surname and region
+L-008234,S-013992,0,random
+L-003877,S-030049,0,same surname and region
+L-008094,S-007820,0,random
+G-009007,S-013011,0,same surname and region
+G-003980,S-024302,1,same entity
+S-003286,S-017918,0,same surname and region
+L-012225,L-015185,0,same surname and region
+L-009154,S-024245,0,same surname and region
+L-001129,S-005194,1,same entity
+G-009774,S-011074,1,same entity
+L-001465,L-012343,0,same surname and region
+L-015624,L-015695,0,same surname and region
+L-002800,S-010136,1,same entity
+G-004712,L-001256,1,same entity
+L-015693,S-014673,1,same entity
+G-005349,S-026712,0,same surname and region
+L-006553,S-022807,1,same entity
+L-003910,L-012071,0,same surname and region
+G-010117,S-022640,0,same surname and region
+L-015408,S-022807,0,same surname and region
+G-002211,G-008975,0,same surname and region
+G-006068,S-018963,1,same entity
+S-008448,S-016861,0,random
+L-004233,L-013590,0,same surname and region
+G-001254,S-004155,0,random
+S-006658,S-019619,0,same surname and region
+G-000429,S-022974,1,same entity
+L-013367,S-005709,0,same surname and region
+G-006968,L-004592,0,random
+G-007849,S-013767,0,random
+G-010864,L-000100,0,same surname and region
+L-010821,S-019363,0,same surname and region
+L-011701,S-010369,0,same surname and region
+G-005154,S-020383,1,same entity
+L-001968,S-011204,0,same surname and region
+G-003633,S-026618,1,same entity
+G-002935,S-006712,1,same entity
+G-010406,L-013863,0,same surname and region
+L-010288,L-011895,0,same surname and region
+S-022449,S-022919,0,same surname and region
+L-001503,S-008456,1,same entity
+G-009980,S-016957,0,same surname and region
+G-007223,L-014666,0,same surname and region
+L-015929,S-019198,1,same entity
+G-005697,G-009031,0,same surname and region
+L-016743,S-003873,1,same entity
+L-009037,S-008299,0,same surname and region
+L-000230,S-006558,0,random
+G-002711,S-013778,1,same entity
+L-002539,L-016826,1,same entity
+L-010784,S-030368,0,same surname and region
+G-003251,G-005439,1,same entity
+G-003440,L-012040,1,same entity
+L-003924,S-006270,0,same surname and region
+L-012960,S-005572,1,same entity
+G-005435,S-007112,0,same surname and region
+L-005463,S-017698,1,same entity
+G-011089,S-008459,1,same entity
+G-008806,S-026739,1,same entity
+L-000916,S-008420,1,same entity
+L-001591,L-011804,0,same surname and region
+G-007876,S-029690,1,same entity
+L-014633,S-025828,0,same surname and region
+L-002704,S-022327,0,same surname and region
+G-006556,S-020321,0,same surname and region
+L-005823,S-001618,1,same entity
+S-007316,S-016782,0,same surname and region
+L-007401,S-022606,1,same entity
+S-010290,S-022288,0,same surname and region
+G-007740,S-029041,0,same surname and region
+S-008276,S-023462,0,same surname and region
+G-004413,S-022130,1,same entity
+L-003349,S-028843,0,same surname and region
+L-002792,S-001589,1,same entity
+G-002850,G-008545,0,same surname and region
+L-008387,S-030050,1,same entity
+G-011119,L-002925,0,same surname and region
+L-007388,S-023165,0,random
+S-023282,S-028435,0,same surname and region
+L-000103,L-014558,0,random
+S-012323,S-020927,0,random
+L-009187,S-020731,1,same entity
+G-010933,L-015898,0,random
+G-000910,S-014251,0,same surname and region
+S-013577,S-019825,0,same surname and region
+S-011631,S-027658,0,same surname and region
+S-020855,S-030215,0,same surname and region
+S-011079,S-024546,0,same surname and region
+G-005199,S-016945,0,same surname and region
+L-002644,S-008207,1,same entity
+G-001513,S-021683,0,same surname and region
+S-013274,S-029750,0,random
+L-001726,S-018844,0,same surname and region
+G-003973,L-007921,0,same surname and region
+L-006466,S-009424,0,same surname and region
+S-008864,S-012481,0,same surname and region
+G-003924,S-013398,1,same entity
+G-002517,S-030968,1,same entity
+G-002410,S-023097,0,random
+S-008031,S-029084,0,same surname and region
+G-004050,S-006324,0,same surname and region
+G-011866,S-008280,0,same surname and region
+L-012563,S-016932,0,same surname and region
+L-012720,S-014733,0,same surname and region
+G-001359,L-000897,1,same entity
+S-005752,S-010859,0,same surname and region
+G-008663,S-023902,1,same entity
+G-003809,G-007428,0,same surname and region
+G-005389,S-009935,0,same surname and region
+G-007385,S-015995,1,same entity
+G-001703,S-029871,0,same surname and region
+S-009156,S-013268,0,same surname and region
+G-006140,L-001503,0,same surname and region
+S-027915,S-028594,1,same entity
+L-002552,S-000807,1,same entity
+L-012385,S-012147,1,same entity
+L-012176,S-007365,1,same entity
+L-015286,S-003251,0,same surname and region
+G-009191,S-008439,0,same surname and region
+L-013399,S-009345,0,same surname and region
+G-001022,L-001895,1,same entity
+G-008545,S-016662,0,same surname and region
+G-005008,S-018867,1,same entity
+L-008684,L-013043,0,same surname and region
+L-009160,S-003721,0,same surname and region
+S-021161,S-021398,0,random
+S-003576,S-019063,0,random
+L-014328,S-026877,0,same surname and region
+G-008527,S-011234,0,same surname and region
+L-015700,S-021133,0,same surname and region
+L-002819,S-001278,1,same entity
+L-005423,S-007988,0,random
+S-015038,S-016753,0,same surname and region
+L-001206,L-001409,0,same surname and region
+G-003432,L-015897,0,same surname and region
+S-001524,S-011916,0,random
+G-003606,S-023192,1,same entity
+L-012368,S-013898,0,same surname and region
+L-010673,S-009281,1,same entity
+G-009979,L-009931,1,same entity
+G-004825,S-027771,0,same surname and region
+G-006866,S-002956,0,same surname and region
+S-009106,S-028389,0,same surname and region
+G-003477,S-008263,0,same surname and region
+S-008919,S-030948,0,random
+L-003473,L-006585,0,same surname and region
+L-016061,S-012696,0,same surname and region
+L-011098,S-015845,0,same surname and region
+G-003291,S-029228,1,same entity
+L-001516,S-030795,0,random
+L-015862,S-004259,1,same entity
+G-000488,S-027081,1,same entity
+L-014951,S-030283,1,same entity
+S-003021,S-009924,0,random
+G-008348,L-016871,1,same entity
+S-015647,S-020856,0,same surname and region
+L-009675,S-027972,1,same entity
+L-005985,S-005800,0,same surname and region
+S-013975,S-023585,0,same surname and region
+L-014561,S-002774,1,same entity
+G-010266,S-030218,1,same entity
+G-005795,S-000813,1,same entity
+G-005068,L-016318,1,same entity
+L-014500,S-017449,0,same surname and region
+G-008625,S-029828,0,same surname and region
+S-001522,S-020509,0,same surname and region
+L-009936,S-008609,0,same surname and region
+L-003986,S-003661,0,random
+G-002569,S-000928,1,same entity
+L-006562,S-014824,0,same surname and region
+L-000938,S-024511,1,same entity
+L-010560,S-018442,0,same surname and region
+L-010750,S-011588,0,same surname and region
+L-004895,S-001306,1,same entity
+L-012534,S-023864,0,same surname and region
+G-008685,S-013798,1,same entity
+G-009783,S-005386,1,same entity
+S-026975,S-029363,0,same surname and region
+L-006654,S-016866,1,same entity
+L-008605,S-016780,0,same surname and region
+G-002269,S-006201,0,random
+G-006876,G-009854,0,same surname and region
+G-002717,G-006579,0,same surname and region
+G-006689,S-023091,0,random
+G-006752,S-014436,0,random
+S-007326,S-008111,0,same surname and region
+L-012806,S-001958,0,same surname and region
+S-010012,S-023982,0,same surname and region
+G-006966,G-011932,0,same surname and region
+L-016321,S-017805,1,same entity
+S-015515,S-020698,0,same surname and region
+L-004031,S-003075,1,same entity
+L-010894,S-017153,1,same entity
+L-012873,S-004256,0,same surname and region
+L-009045,S-027727,0,same surname and region
+G-009455,S-021390,1,same entity
+G-005002,S-014398,0,same surname and region
+L-015078,S-028832,1,same entity
+L-004956,S-001134,0,same surname and region
+S-003167,S-014629,0,random
+L-014423,S-010264,0,same surname and region
+G-008568,S-008200,1,same entity
+G-010660,L-003041,1,same entity
+L-001347,S-002601,0,same surname and region
+G-008408,L-006407,1,same entity
+G-006115,G-008852,0,same surname and region
+L-000981,S-023603,1,same entity
+S-011688,S-027719,0,same surname and region
+L-011177,S-026764,0,random
+L-011735,S-010381,1,same entity
+L-016046,S-010071,0,same surname and region
+L-012496,S-022445,0,same surname and region
+G-001851,G-006333,0,same surname and region
+G-003381,S-019818,0,random
+L-012659,S-007849,1,same entity
+S-005456,S-028257,0,same surname and region
+L-000622,L-005447,0,random
+S-027223,S-028728,0,same surname and region
+L-013076,S-024823,1,same entity
+G-003132,S-024088,1,same entity
+L-000191,S-000112,1,same entity
+G-001214,S-017068,0,same surname and region
+G-005261,S-013817,0,same surname and region
+G-000549,S-013701,1,same entity
+G-009856,L-008430,0,same surname and region
+G-008331,L-015441,1,same entity
+G-010808,L-003322,0,same surname and region
+G-010330,S-011527,0,same surname and region
+S-000931,S-012277,1,same entity
+G-002236,L-015312,0,same surname and region
+S-013206,S-028886,0,same surname and region
+G-002428,S-018578,1,same entity
+L-009397,S-006653,1,same entity
+L-015862,S-006527,0,same surname and region
+L-000149,L-010362,0,same surname and region
+G-010808,S-014728,1,same entity
+L-016337,S-027879,0,random
+G-009794,S-006825,0,same surname and region
+L-015477,S-010813,0,same surname and region
+G-003674,S-020343,1,same entity
+G-011123,L-011213,1,same entity
+G-004104,L-001817,0,same surname and region
+L-002800,S-014158,0,same surname and region
+G-005340,S-024239,0,random
+L-008079,S-007907,1,same entity
+L-014382,S-004727,1,same entity
+L-008414,L-016355,1,same entity
+G-005855,L-005772,0,random
+G-008167,S-021008,1,same entity
+G-000235,L-004065,0,same surname and region
+G-009433,L-005061,1,same entity
+G-008966,S-009647,0,same surname and region
+L-011764,S-008022,1,same entity
+L-001711,S-008634,1,same entity
+G-009589,L-012702,1,same entity
+L-013567,S-010604,0,same surname and region
+G-011392,S-012032,0,random
+G-006748,S-006688,1,same entity
+G-001213,S-004989,0,random
+L-006538,S-029325,1,same entity
+G-011551,S-004593,0,same surname and region
+G-011300,S-003246,1,same entity
+G-011007,S-025671,0,same surname and region
+S-005931,S-025611,0,same surname and region
+G-010423,S-026740,1,same entity
+L-011025,S-014977,0,same surname and region
+L-009178,S-013974,0,same surname and region
+L-005791,S-020174,1,same entity
+L-011043,S-014823,0,random
+S-013394,S-016550,0,same surname and region
+S-007552,S-028453,1,same entity
+G-003875,S-014977,1,same entity
+L-011875,S-021766,0,random
+G-010790,S-004634,0,same surname and region
+S-004615,S-007824,0,same surname and region
+S-013750,S-025930,0,same surname and region
+G-002067,S-003351,0,same surname and region
+S-000700,S-013836,0,same surname and region
+G-000933,G-009830,0,same surname and region
+L-005690,S-014439,1,same entity
+G-010859,S-017479,0,same surname and region
+L-014476,S-018757,0,same surname and region
+L-014597,S-030020,1,same entity
+S-018230,S-030693,0,same surname and region
+G-002036,S-014630,0,same surname and region
+L-007018,S-030752,1,same entity
+G-005058,S-022295,0,same surname and region
+G-007852,S-030460,0,same surname and region
+L-009744,S-023012,1,same entity
+L-011185,S-012500,0,same surname and region
+G-000118,S-018659,0,random
+L-005780,S-015849,0,random
+L-003778,S-013953,1,same entity
+L-009672,S-001127,1,same entity
+G-004314,S-005548,1,same entity
+G-009240,S-016168,1,same entity
+L-011731,S-012459,0,random
+G-002106,S-006696,0,same surname and region
+G-001602,L-011939,0,same surname and region
+G-005846,L-004998,0,same surname and region
+S-015610,S-020422,0,same surname and region
+S-007410,S-022097,0,same surname and region
+S-016055,S-028236,0,random
+G-010348,S-000770,0,same surname and region
+G-005521,S-005892,0,same surname and region
+L-011270,S-015045,1,same entity
+L-005103,S-002343,0,same surname and region
+G-011848,L-014154,0,same surname and region
+G-000198,S-025712,0,random
+L-013659,S-022705,0,same surname and region
+S-003908,S-005818,0,random
+L-005572,L-008959,0,random
+L-013719,S-014737,1,same entity
+L-004051,L-007092,0,random
+L-010348,S-024302,0,same surname and region
+L-009583,S-015542,0,same surname and region
+G-007881,S-016488,0,same surname and region
+S-002345,S-029606,0,same surname and region
+L-009829,S-027107,0,same surname and region
+L-001090,S-008068,0,same surname and region
+L-010632,S-030440,0,same surname and region
+S-005943,S-014748,0,same surname and region
+L-016495,S-016370,1,same entity
+L-000886,S-030193,0,random
+S-018157,S-028563,0,random
+G-001828,L-001169,0,same surname and region
+L-001102,S-016004,1,same entity
+S-016277,S-022126,0,same surname and region
+S-011100,S-013189,1,same entity
+G-003426,S-005189,0,random
+L-001870,L-006117,0,same surname and region
+S-020259,S-022726,0,same surname and region
+S-008587,S-013189,0,same surname and region
+L-003883,S-004122,1,same entity
+L-008175,S-014824,0,same surname and region
+G-010264,S-019874,0,same surname and region
+S-000666,S-015927,0,same surname and region
+L-004585,S-003286,0,same surname and region
+G-002112,S-001571,1,same entity
+G-003917,S-019761,1,same entity
+L-014001,S-005714,1,same entity
+L-002500,S-021663,1,same entity
+G-011160,L-006712,1,same entity
+L-012348,S-020305,1,same entity
+S-006527,S-023832,0,random
+L-002750,S-018100,0,same surname and region
+L-016320,S-003772,0,same surname and region
+S-026152,S-028948,0,random
+G-002105,S-024159,1,same entity
+L-009745,S-026118,1,same entity
+L-003476,S-018176,0,same surname and region
+L-011994,S-015731,1,same entity
+S-019949,S-020112,0,random
+L-006283,S-011811,0,same surname and region
+L-015848,S-001819,1,same entity
+L-009101,S-011396,1,same entity
+S-009866,S-030674,0,same surname and region
+S-016466,S-027790,0,same surname and region
+G-007663,S-003541,1,same entity
+L-002803,S-026596,1,same entity
+L-009173,S-000529,1,same entity
+L-015415,S-024707,1,same entity
+G-008093,S-013511,1,same entity
+L-011013,S-012923,0,same surname and region
+S-006015,S-013411,0,same surname and region
+G-004989,S-008032,1,same entity
+L-007743,S-029234,0,same surname and region
+S-018048,S-022327,0,same surname and region
+L-005057,S-001743,1,same entity
+L-003468,L-015072,0,same surname and region
+G-004241,S-007341,0,same surname and region
+G-006428,S-001088,1,same entity
+L-008790,S-028236,0,same surname and region
+L-002502,S-002129,0,same surname and region
+L-000411,S-007280,1,same entity
+G-006266,L-002928,0,same surname and region
+G-000811,L-007134,1,same entity
+G-001435,L-004760,1,same entity
+L-014591,S-015339,0,same surname and region
+G-011028,L-000265,1,same entity
+G-009895,L-005580,0,same surname and region
+L-009106,S-005990,1,same entity
+G-002178,S-007525,0,same surname and region
+G-000125,S-014434,1,same entity
+G-007634,L-010019,0,same surname and region
+G-001762,S-011206,1,same entity
+L-004886,L-006337,0,same surname and region
+L-009990,S-002587,1,same entity
+S-000523,S-030372,0,same surname and region
+L-007709,S-006617,0,same surname and region
+L-006593,L-012359,0,same surname and region
+L-010285,S-000120,1,same entity
+L-005232,S-006217,1,same entity
+S-018798,S-025025,0,same surname and region
+G-001868,S-030234,0,same surname and region
+L-016029,S-025039,1,same entity
+G-004149,L-000416,1,same entity
+L-010090,S-022745,1,same entity
+L-008169,S-023383,0,same surname and region
+L-010024,S-005607,1,same entity
+S-019033,S-027778,0,same surname and region
+G-006409,S-024162,0,same surname and region
+G-003059,L-012032,1,same entity
+L-014620,L-015265,0,same surname and region
+L-007286,L-011042,0,same surname and region
+L-001751,S-019136,0,same surname and region
+G-011253,L-015452,0,same surname and region
+G-000749,S-005316,0,same surname and region
+L-004267,S-007122,0,random
+G-009277,L-016430,1,same entity
+G-000536,S-022828,1,same entity
+G-004621,S-014929,0,same surname and region
+S-024091,S-027790,1,same entity
+L-006504,S-025323,1,same entity
+L-001060,S-008078,0,same surname and region
+L-002769,L-006202,0,same surname and region
+L-002894,L-015557,0,same surname and region
+G-005218,S-024825,1,same entity
+S-016896,S-025152,0,same surname and region
+L-000993,L-011623,0,random
+G-002934,S-028862,1,same entity
+G-010289,L-011052,0,same surname and region
+G-002328,L-009000,0,same surname and region
+S-012842,S-019464,0,same surname and region
+L-000697,S-027193,1,same entity
+G-000566,S-006374,1,same entity
+L-014059,S-010749,0,same surname and region
+L-007887,S-002108,1,same entity
+S-000031,S-023152,0,same surname and region
+S-009486,S-028700,0,same surname and region
+S-000811,S-030692,0,random
+L-013344,S-016006,1,same entity
+S-005577,S-021555,0,same surname and region
+G-007182,S-016806,0,same surname and region
+L-016460,S-022097,0,same surname and region
+G-007374,S-003262,1,same entity
+G-003855,S-028644,1,same entity
+G-007002,L-002712,1,same entity
+G-003648,S-000339,1,same entity
+L-014980,S-027909,0,random
+L-007607,L-011303,0,random
+L-011155,S-021695,0,same surname and region
+L-003596,S-027197,0,same surname and region
+G-008328,L-015340,1,same entity
+S-023544,S-023803,0,same surname and region
+L-002822,L-013782,0,same surname and region
+L-006177,L-014547,0,same surname and region
+G-005472,S-010195,1,same entity
+L-001497,L-006367,0,same surname and region
+G-010330,S-009996,0,same surname and region
+L-014888,S-012278,1,same entity
+L-016064,S-009252,0,same surname and region
+L-009667,S-014465,0,same surname and region
+G-001643,S-021582,0,same surname and region
+S-015217,S-022452,0,random
+S-009380,S-028748,0,same surname and region
+G-010351,S-030248,1,same entity
+L-015519,S-019144,0,same surname and region
+G-008391,S-021756,1,same entity
+S-001565,S-016580,0,same surname and region
+L-016188,S-019038,0,random
+G-007906,S-002644,1,same entity
+L-008003,S-004838,0,same surname and region
+G-000957,G-009647,0,random
+G-002859,S-001930,0,same surname and region
+S-016020,S-029950,0,same surname and region
+L-008793,L-010777,0,random
+S-004230,S-028782,0,random
+L-000747,S-027538,1,same entity
+G-004377,S-001517,1,same entity
+L-002878,S-025664,1,same entity
+L-008932,S-005482,1,same entity
+L-016927,S-015833,1,same entity
+L-001155,S-022431,1,same entity
+S-001550,S-002444,0,random
+G-002931,S-025018,1,same entity
+S-010086,S-018952,0,same surname and region
+L-012563,S-000756,0,same surname and region
+L-009486,S-009478,0,same surname and region
+S-008074,S-025059,0,same surname and region
+S-006677,S-015485,0,same surname and region
+L-005576,S-016514,0,random
+S-006814,S-012271,0,same surname and region
+L-005798,S-027451,0,same surname and region
+L-016196,S-004781,0,random
+L-001577,S-029168,1,same entity
+G-001030,L-014322,1,same entity
+G-003243,S-022805,1,same entity
+G-001490,L-007453,1,same entity
+L-000988,S-004829,1,same entity
+G-002108,S-027824,1,same entity
+L-004023,S-019209,1,same entity
+G-011845,S-027983,0,same surname and region
+L-014565,S-019648,1,same entity
+L-015804,S-020855,0,same surname and region
+L-004976,S-019128,1,same entity
+S-008610,S-018736,0,same surname and region
+S-014224,S-020158,0,same surname and region
+S-000006,S-023065,0,random
+L-007544,S-029518,1,same entity
+S-012558,S-021149,0,random
+S-013850,S-026778,0,random
+L-012748,S-018943,0,same surname and region
+L-009352,S-006417,1,same entity
+S-021555,S-024905,0,same surname and region
+L-000756,S-011757,0,same surname and region
+L-012315,L-014820,0,same surname and region
+G-005499,S-029843,1,same entity
+S-001903,S-010299,0,same surname and region
+S-022414,S-023234,0,same surname and region
+S-009207,S-010159,0,same surname and region
+G-008615,S-000597,1,same entity
+G-010109,L-012851,0,same surname and region
+G-009653,L-016834,0,random
+G-006633,L-007257,1,same entity
+L-010312,L-016822,0,same surname and region
+L-003054,L-015907,0,same surname and region
+G-007607,S-026644,0,same surname and region
+S-002520,S-026019,0,same surname and region
+G-007222,L-000709,0,random
+S-006520,S-008263,0,same surname and region
+L-013790,S-001720,1,same entity
+S-008387,S-020619,0,same surname and region
+L-005688,S-025450,1,same entity
+L-008953,S-015337,0,same surname and region
+S-005960,S-018440,0,same surname and region
+L-003882,S-015222,0,random
+S-004969,S-009546,0,same surname and region
+G-007967,S-029915,1,same entity
+L-015185,S-005049,0,random
+G-007840,S-015515,1,same entity
+S-015145,S-015592,0,same surname and region
+G-010503,S-028833,0,random
+L-007084,S-008750,0,same surname and region
+L-012334,S-001651,1,same entity
+S-011910,S-021314,1,same entity
+G-006380,L-016859,0,same surname and region
+S-000518,S-013712,0,random
+L-001634,S-029175,0,same surname and region
+L-005754,S-025141,0,same surname and region
+G-001062,G-008254,0,same surname and region
+G-009482,S-022664,0,same surname and region
+L-002041,S-006158,1,same entity
+L-002061,S-029352,0,random
+S-002677,S-007742,0,random
+L-006818,S-020977,1,same entity
+L-008733,S-029813,0,random
+L-014682,S-006846,1,same entity
+G-008700,S-003591,1,same entity
+L-010117,S-015933,0,same surname and region
+G-009972,L-004804,1,same entity
+S-025111,S-029936,0,same surname and region
+G-003987,S-020834,1,same entity
+L-007908,L-012627,0,same surname and region
+G-002121,S-023844,0,random
+S-015468,S-021436,0,same surname and region
+G-006535,G-011765,0,same surname and region
+G-011660,S-014829,1,same entity
+G-004125,S-030432,1,same entity
+L-016389,S-014991,0,same surname and region
+S-011213,S-026366,0,same surname and region
+S-003482,S-013798,0,same surname and region
+G-011116,S-011237,0,same surname and region
+G-010431,S-022098,1,same entity
+S-003458,S-015973,0,same surname and region
+G-002772,S-002629,0,same surname and region
+G-003500,S-003239,1,same entity
+L-014616,S-022690,0,same surname and region
+L-000208,L-009039,0,same surname and region
+L-012717,S-008793,1,same entity
+G-005111,S-000833,0,random
+L-003317,S-024905,1,same entity
+S-024870,S-027106,0,random
+G-004588,S-002318,0,same surname and region
+S-002010,S-015704,0,random
+S-012926,S-015701,0,random
+L-009867,S-018519,0,same surname and region
+S-003340,S-015792,0,same surname and region
+S-003398,S-024654,0,same surname and region
+L-002221,S-020577,0,same surname and region
+G-007320,S-017041,0,random
+G-005542,L-001535,1,same entity
+L-005941,S-024009,0,same surname and region
+S-005092,S-018868,0,same surname and region
+G-010967,S-001975,1,same entity
+L-001060,S-013951,0,same surname and region
+G-003682,L-012343,0,same surname and region
+G-003112,S-012367,1,same entity
+G-009554,L-015021,1,same entity
+L-012523,S-005842,1,same entity
+S-002711,S-017524,0,same surname and region
+G-001275,S-013267,1,same entity
+S-017419,S-022639,0,random
+G-004466,L-003781,0,same surname and region
+L-012107,S-002616,0,same surname and region
+L-000082,S-001531,0,same surname and region
+S-001779,S-012043,0,same surname and region
+L-016087,S-029417,0,random
+G-009593,S-013836,0,same surname and region
+G-004607,S-020916,0,random
+S-007525,S-022696,0,same surname and region
+L-001841,S-024685,0,random
+L-003919,S-005881,0,random
+G-011468,S-026506,1,same entity
+S-003063,S-018107,0,same surname and region
+S-009306,S-020631,0,same surname and region
+G-005446,S-001874,0,same surname and region
+L-013656,S-008209,1,same entity
+L-013078,L-015936,0,random
+S-024160,S-026295,0,same surname and region
+S-002400,S-017765,0,same surname and region
+G-000314,L-004815,1,same entity
+L-005798,S-016352,0,random
+L-007062,S-019028,1,same entity
+L-002015,S-011441,1,same entity
+G-006973,S-022611,0,same surname and region
+G-001264,L-012430,0,random
+S-014615,S-019035,0,random
+G-011457,L-005265,1,same entity
+L-012673,S-010075,1,same entity
+L-012232,S-012430,0,same surname and region
+G-009784,S-006150,0,same surname and region
+S-011254,S-028694,0,random
+L-005550,S-004197,0,same surname and region
+G-000333,L-008740,0,random
+L-005393,S-009629,0,same surname and region
+G-006625,S-029908,1,same entity
+S-015235,S-022392,0,same surname and region
+S-022182,S-024133,0,same surname and region
+S-002036,S-011442,0,same surname and region
+G-001555,S-017641,1,same entity
+L-002805,L-004946,0,same surname and region
+S-010770,S-013591,0,same surname and region
+L-000115,S-008605,1,same entity
+L-015067,S-020171,0,same surname and region
+L-003289,S-011957,1,same entity
+G-004041,S-003145,1,same entity
+L-001915,L-010999,0,random
+S-007892,S-023763,1,same entity
+L-013899,S-027753,1,same entity
+L-002819,S-016141,0,same surname and region
+L-002799,S-020874,1,same entity
+L-011721,S-007271,0,same surname and region
+L-001489,S-016743,1,same entity
+L-010604,S-014227,1,same entity
+G-007435,S-020914,0,same surname and region
+G-011522,S-003545,1,same entity
+L-011500,S-001038,1,same entity
+L-001349,S-024762,1,same entity
+G-005736,L-007920,0,random
+L-016277,S-016782,0,same surname and region
+L-011310,S-024673,0,same surname and region
+G-004685,L-015822,0,same surname and region
+S-017276,S-017489,0,same surname and region
+G-011834,L-009827,0,same surname and region
+G-007888,S-019512,1,same entity
+G-003849,S-001578,1,same entity
+L-003654,S-006161,0,same surname and region
+G-011941,L-011301,0,same surname and region
+L-015062,S-024269,0,same surname and region
+G-002414,G-005983,0,same surname and region
+L-002023,L-016844,0,same surname and region
+G-002854,L-004349,0,same surname and region
+G-000933,L-009504,0,same surname and region
+L-016029,S-027921,0,same surname and region
+L-014534,S-028504,1,same entity
+L-006078,S-011419,1,same entity
+L-007607,S-003823,0,same surname and region
+G-007344,L-014239,0,random
+G-006677,L-012457,0,same surname and region
+G-003644,S-020758,1,same entity
+G-007052,S-029041,1,same entity
+S-016013,S-018857,0,same surname and region
+G-002955,S-027865,1,same entity
+L-015700,S-029207,0,same surname and region
+L-009852,S-019649,1,same entity
+L-013986,S-003623,0,same surname and region
+S-006392,S-026437,0,random
+G-002061,S-019984,0,same surname and region
+L-000717,S-006726,1,same entity
+L-008455,L-010380,0,random
+G-005127,S-020776,0,same surname and region
+G-003210,G-004766,0,same surname and region
+S-018921,S-024934,0,same surname and region
+G-006291,S-018610,0,same surname and region
+G-003139,S-024770,0,random
+S-025823,S-030120,0,random
+L-015128,S-028208,0,same surname and region
+G-005653,S-024614,1,same entity
+L-009430,S-010592,1,same entity
+S-015238,S-029234,0,same surname and region
+L-000378,S-022840,1,same entity
+L-015513,S-015377,1,same entity
+L-011378,S-030137,0,random
+L-015911,S-008110,1,same entity
+S-006308,S-014501,0,same surname and region
+G-004840,S-030087,1,same entity
+L-008885,S-019628,0,same surname and region
+G-009458,L-012087,1,same entity
+S-014261,S-018754,0,same surname and region
+G-008292,L-000090,1,same entity
+L-009416,S-006527,0,same surname and region
+L-006983,L-013519,0,random
+L-006991,S-022370,1,same entity
+L-014368,S-024147,0,same surname and region
+S-002112,S-008865,1,same entity
+G-009313,S-004786,1,same entity
+S-013035,S-022423,0,same surname and region
+G-004073,S-007319,0,same surname and region
+S-011240,S-025340,1,same entity
+G-007106,L-015900,1,same entity
+S-009485,S-030775,0,random
+L-013191,S-021422,1,same entity
+G-006140,L-002736,0,same surname and region
+G-007652,S-026865,0,same surname and region
+G-006203,L-012701,0,same surname and region
+L-013188,S-028083,1,same entity
+G-001958,S-009213,0,same surname and region
+L-000957,S-001537,1,same entity
+G-006587,S-023585,0,same surname and region
+G-000585,S-029764,1,same entity
+L-001878,L-002475,0,random
+G-010917,S-002910,0,same surname and region
+L-013734,S-022726,1,same entity
+L-010066,S-029033,1,same entity
+G-003048,S-003782,1,same entity
+S-007253,S-014141,0,same surname and region
+G-002899,S-009246,0,random
+S-009541,S-029990,0,random
+G-011764,L-011992,0,same surname and region
+L-007451,S-011570,1,same entity
