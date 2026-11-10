@@ -44,7 +44,7 @@ def soundex(s):
 
 
 def metaphone(s):
-    """A sound code with more English spelling rules ('Thompson' -> TMSN)."""
+    """A sound code with more English spelling rules ('Thompson' -> 0MPSN: 0 is the 'th' of 'thin')."""
     s = strip_accents(s)
     return jellyfish.metaphone(s) if s else ""
 

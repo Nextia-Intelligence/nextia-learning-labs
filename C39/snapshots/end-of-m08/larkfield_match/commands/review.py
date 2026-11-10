@@ -28,7 +28,10 @@ def run(args):
     if args.retrain:
         extra = review.labels()
         known = incremental.known_records()
+        # the retrained model goes to its own file, outputs/models/lgbm-review.pkl: lgbm.pkl stays the model of
+        # `match train`, which `match daily` uses
         for name, ex in (("without review labels", None), (f"with {len(extra)} review labels", extra)):
-            s = learned.scores("lgbm", "customers", ex, known)
+            s = learned.scores("lgbm", "customers", ex, known, name="lgbm-review", save=ex is not None)
             m = evaluate.pair_measures(thresholds.decide(s, thresholds.best_f1(s, "customers")), "customers", "test")
             print(f"  lgbm {name}: test precision {m['precision']:.3f}, recall {m['recall']:.3f}, F1 {m['f1']:.3f}")
+        print("Saved the retrained model in outputs/models/lgbm-review.pkl (outputs/models/lgbm.pkl is unchanged)")

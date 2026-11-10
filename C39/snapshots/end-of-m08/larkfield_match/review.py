@@ -89,7 +89,9 @@ def apply(lab):
         if r.record_id_l not in e or r.record_id_r not in e:
             continue
         if r.label == 1 and e[r.record_id_l] != e[r.record_id_r]:
-            keep, drop = sorted([e[r.record_id_l], e[r.record_id_r]])
+            # the older entity keeps its ID: the entities of the course records (LK-G-, LK-L-, LK-S-) are older than
+            # the entities of new records (LK-D1-, LK-D2-, ...), which sort before them in alphabetical order
+            keep, drop = sorted([e[r.record_id_l], e[r.record_id_r]], key=lambda x: (x.startswith("LK-D"), x))
             for k, v in e.items():
                 if v == drop:
                     e[k] = keep

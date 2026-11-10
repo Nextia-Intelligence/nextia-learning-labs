@@ -16,7 +16,7 @@ def run(args):
         _show(args.show)
         return
     df = pairs.get(args.run)
-    cl = safecluster.safe_components(df, "customers")
+    cl = golden.without_forgotten(safecluster.safe_components(df, "customers"))
     ents = golden.entity_ids(cl, golden.load_entities())
     golden.save_entities(ents)
     g = golden.build(ents)
@@ -25,6 +25,9 @@ def run(args):
     golden.log("build", run=args.run, entities=len(g), merged=merged)
     print(f"{len(g):,} entities from {len(ents):,} records ({merged:,} with more than one record); "
           f"{int(g.get('dob_conflict', False).fillna(False).sum())} with two dates of birth")
+    gone = len(golden.forgotten())
+    if gone:
+        print(f"Left out {gone} record(s) of outputs/forgotten.csv")
     print("Saved outputs/entities.csv and outputs/golden.csv")
 
 
@@ -43,7 +46,14 @@ def _show(eid):
     for f in ("name", "email", "phone", "address", "postcode", "dob"):
         src = row.get(f"{f}_from", "") if f != "postcode" else row.get("address_from", "")
         print(f"  {f:<9} {row.get(f, '') or '-':<40} from {src or '-'}")
-    recs = data.records().set_index("record_id")
+    try:   # Module 8: the daily records too
+        from .. import review
+        recs = review.raw_view()
+    except ImportError:
+        recs = data.records().set_index("record_id")
     for rid in sorted(ents[ents.entity_id == eid].record_id):
+        if rid not in recs.index:
+            print(f"  {rid}  (not in the data files)")
+            continue
         r = recs.loc[rid]
         print(f"  {rid}  {r['name']} | {r['email'] or '-'} | {r['phone'] or '-'} | {r['address'] or r['postcode']}")

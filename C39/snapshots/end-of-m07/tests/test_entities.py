@@ -31,6 +31,11 @@ def test_golden_record_keeps_the_source_of_each_field():
     g = golden.build(ents).iloc[0]
     assert g.records == 3 and g.email == "mc.tremblay@example.com" and g.email_from == "L-000001"
     assert g.dob == "1980-03-14"
+    # any records table with the prepared columns, for example another company's records
+    from larkfield_match import prepared
+    other = prepared.customers().head(2).assign(source="another shop", record_id=["X-1", "X-2"])
+    g = golden.build(pd.DataFrame({"record_id": ["X-1", "X-2"], "entity_id": "E-X"}), records=other).iloc[0]
+    assert g.records == 2 and g.sources == "another shop"
 
 
 def test_undo_splits_and_remembers():
@@ -39,3 +44,11 @@ def test_undo_splits_and_remembers():
     assert new_id == "LK-S-000004" and old == "LK-L-000003"
     assert ("S-000003", "S-000004") in safecluster.cannot_link()
     assert golden.history()[-1]["event"] == "split"
+    # the cannot-link links go first, so the weak but right link L-000003 - S-000003 stays
+    p = _pairs([("L-000003", "S-000004", 0.99, 1), ("S-000003", "S-000004", 0.9, 1), ("L-000003", "S-000003", 0.4, 1)])
+    cl = safecluster.safe_components(p, "customers").set_index("record_id").cluster_id
+    assert cl["L-000003"] == cl["S-000003"] != cl["S-000004"]
+    # a forgotten record (match forget) stays out of the entities
+    pd.DataFrame({"record_id": ["S-000004"]}).to_csv(golden.out("forgotten.csv"), index=False)
+    assert golden.without_forgotten(ents).record_id.tolist() == ["L-000003", "S-000003"]
+

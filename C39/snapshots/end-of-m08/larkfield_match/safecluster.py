@@ -4,7 +4,8 @@ Checks (our choice of rules):
 - no two different dates of birth in one entity (a day and month swapped counts as the same date);
 - no more than MAX_SIZE records in one entity (no true customer has more than 5 records);
 - no pair that a person marked "not the same" (outputs/cannot_link.csv, written by `match undo` and review).
-A cluster that fails loses its weakest link (the pair with the lowest score), then the check runs again.
+First, a link between two records that a person marked "not the same" is removed. Then a cluster that fails loses
+its weakest link (the pair with the lowest score), and the check runs again.
 """
 
 import networkx as nx
@@ -52,10 +53,12 @@ def problems(records, dob, banned):
 def safe_components(pairs_df, dataset="customers", log=None):
     """Connected components, then weak links cut until every cluster passes the checks."""
     m = pairs_df[pairs_df["match"] == 1]
+    banned = cannot_link()
+    if banned:   # a person's "not the same" wins over the model: those links go first
+        m = m[[tuple(sorted(x)) not in banned for x in zip(m.record_id_l, m.record_id_r)]]
     ids = prepared.get(dataset).record_id.tolist()
     base = cluster.components(m, ids)
     dob = dict(zip(prepared.customers().record_id, prepared.customers().dob)) if dataset == "customers" else {}
-    banned = cannot_link()
     groups = base.groupby("cluster_id").record_id.apply(list)
     big = [g for g in groups if len(g) > 1 and problems(g, dob, banned)]
     if not big:

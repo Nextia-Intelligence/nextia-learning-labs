@@ -7,7 +7,10 @@ Merge rules (survivorship), our choice:
 - address and postcode: the newest record that has a street address, else the newest postcode;
 - date of birth: the most common one (a day and month swap counts as the same date).
 The source records are never changed. Every merge, split and deletion is written to outputs/history.jsonl, so a
-merge can be undone.
+merge can be undone. A record in outputs/forgotten.csv (`match forget`, Module 8) is left out of the entities.
+
+`build(entities, records)` works on any table with the prepared columns (record_id, source, created, full, email,
+phone, number, street, unit, town, province, postcode, dob), for example the records of another company.
 """
 
 import json
@@ -23,21 +26,56 @@ TRUST = {"shop": 0, "loyalty": 1, "garden": 2}
 
 
 def entity_ids(clusters, previous=None):
-    """A stable entity ID for each cluster: LK- and the smallest record ID, or the ID it had before."""
+    """A stable entity ID for each cluster: LK- and the smallest record ID, or the ID it had before.
+
+    An old ID goes to one cluster only: when a cluster was split, the part with the most records of the old entity
+    keeps the ID (on a tie, the part with the smallest record ID), and the other parts get new IDs.
+    """
     if previous is not None and len(previous):
         old = dict(zip(previous.record_id, previous.entity_id))
-        out_ = {}
-        for cid, recs in clusters.groupby("cluster_id").record_id:
-            ids = sorted({old[r] for r in recs if r in old})
-            out_[cid] = ids[0] if ids else f"LK-{cid}"
+        members = clusters.groupby("cluster_id").record_id.apply(sorted).to_dict()
+        have = {cid: Counter(old[r] for r in recs if r in old) for cid, recs in members.items()}
+        out_ = {cid: (min(n) if n else f"LK-{cid}") for cid, n in have.items()}   # as before: the smallest old ID
+        by_id = {}
+        for cid, eid in out_.items():
+            by_id.setdefault(eid, []).append(cid)
+        taken = set(out_.values())
+        for eid, cids in by_id.items():
+            if len(cids) < 2:
+                continue
+            keep = min(cids, key=lambda c: (-have[c][eid], c))
+            for cid in cids:
+                if cid != keep:
+                    free = sorted(e for e in have[cid] if e not in taken)
+                    free += [f"LK-{r}" for r in members[cid] if f"LK-{r}" not in taken]
+                    out_[cid] = free[0] if free else f"LK-{cid}-{len(taken)}"
+                    taken.add(out_[cid])
         return clusters.assign(entity_id=clusters.cluster_id.map(out_))
     return clusters.assign(entity_id="LK-" + clusters.cluster_id)
 
 
-def build(entities):
-    """entities: record_id, entity_id -> one golden row per entity, with the source record of each field."""
-    p = prepared.customers().merge(entities[["record_id", "entity_id"]], on="record_id")
-    p = p.assign(trust=p.source.map(TRUST)).sort_values(["entity_id", "created"], ascending=[True, False])
+def forgotten():
+    """The record IDs of deletion requests (outputs/forgotten.csv)."""
+    p = out("forgotten.csv")
+    return set(pd.read_csv(p, dtype=str).record_id) if p.exists() else set()
+
+
+def without_forgotten(entities):
+    gone = forgotten()
+    return entities[~entities.record_id.isin(gone)] if gone else entities
+
+
+def build(entities, records=None, trust=None):
+    """entities: record_id, entity_id -> one golden row per entity, with the source record of each field.
+
+    records: the prepared records (default: the course records); trust: source -> rank, 0 the most trusted
+    (default: TRUST; a source missing from it is trusted least).
+    """
+    records = prepared.customers() if records is None else records
+    trust = TRUST if trust is None else trust
+    p = records.merge(entities[["record_id", "entity_id"]], on="record_id")
+    p = p.assign(trust=p.source.map(trust).fillna(len(trust))).sort_values(["entity_id", "created"],
+                                                                           ascending=[True, False])
     rows = []
     for eid, g in p.groupby("entity_id", sort=True):
         row = {"entity_id": eid, "records": len(g), "sources": ",".join(sorted(set(g.source)))}

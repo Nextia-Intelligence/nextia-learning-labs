@@ -6,13 +6,14 @@ from .. import blocking, classifier, thresholds, vectors
 from ..paths import out
 
 
-def scores(kind, dataset="customers", extra=None, records=None):
-    """Train on the labelled pairs, keep the model, and score every candidate pair."""
+def scores(kind, dataset="customers", extra=None, records=None, name=None, save=True):
+    """Train on the labelled pairs, keep the model (outputs/models/<name>.pkl), and score every candidate pair."""
     x, y = classifier.labelled_training_set(dataset, extra, records)
     model = classifier.fit(kind, x, y)
-    name = f"{'p-' if dataset == 'products' else ''}{kind}"
-    with open(out("models", f"{name}.pkl"), "wb") as f:
-        pickle.dump(model, f)
+    name = name or f"{'p-' if dataset == 'products' else ''}{kind}"
+    if save:
+        with open(out("models", f"{name}.pkl"), "wb") as f:
+            pickle.dump(model, f)
     v = vectors.get(blocking.DEFAULT[dataset])
     p = classifier.predict(model, kind, classifier.features(v, dataset))
     return v[["record_id_l", "record_id_r"]].assign(score=p)
