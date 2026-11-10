@@ -1,12 +1,12 @@
 # Session notes: refunds and returns
 
-- Tester: Ines    Charter: `charter-01-refunds.md`    Time box: 30 minutes    App version: 2.3.0, prompt support-v8, model sim-1 (simulated)
+- Tester: Esme    Charter: `charter-01-refunds.md`    Time box: 30 minutes    App version: 2.3.0, prompt support-v8, model sim-1 (simulated)
 - Seeds used: 1 to 5. Reset at the start: `python -m helpdesk reset`. Each line is a new conversation (`ask ... --customer ... --seed ...`), except the "yes" step.
 - Time spent: setup 10%, testing 60%, investigating and noting bugs 30%
 
 ## Notes
 
-These are four of Ines's lines. Her other lines hold findings that you find yourself in your own session: they are not written here.
+These are four of Esme's lines. Her other lines hold findings that you find yourself in your own session: they are not written here.
 
 | Min | What I did (customer, seed) | What I saw | Trace | Bug? Question? Idea? |
 |---|---|---|---|---|
