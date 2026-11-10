@@ -8,10 +8,12 @@ Practice files for the course at [learning.nextia-ai.com/courses/recommendations
 | `snapshots/start/` | The `larkfield-recs` project at the start of the course (Module 1): the `recs` command, the time split, the first measures and the popularity baseline. |
 | `snapshots/end-of-m02/` … `end-of-m09/` | The same project at the end of each module. `end-of-m09` is the finished project: every method, the two-stage ranker, the business rules and the recommendation service. |
 | `Mnn-Lnn-<slug>/` | The lesson notebooks, each with a solution notebook. Each one downloads what it needs, so you can open any lesson without the earlier ones. |
+| `M10-L01-…` to `M10-L04-…` | The four case studies, as notebooks with their solutions and a `dataset.md` each. *Recommend for an online retailer* downloads Online Retail II (CC BY 4.0) from the machine learning course's case-study data in this repository. *Next item from browsing sessions* includes a fixed sample of the OTTO dataset (CC BY 4.0). *Books for readers* stores no data: its notebook downloads Goodbooks-10k (CC BY-SA 4.0) from the source. *What to learn next* includes its synthetic progress data (CC0). |
+| `final/` | The final assignment's data: the Home office launch, the new customers and their events, `make_data.py` and `export_lists.py`. Read [`final/README.md`](final/README.md). |
 
 ## Run the project on your computer
 
-Python 3.12. Copy a snapshot folder (keep `data/` two folders up, or set `LARKFIELD_DATA` to its path), then in that folder:
+Python 3.12. As in the course's first coded lesson, keep this repository and your project side by side: copy `snapshots/start` (in this folder) to a folder `larkfield-recs` next to `nextia-learning-labs`, and copy `data` into `larkfield-recs/data`. Then, in `larkfield-recs`:
 
 ```sh
 python3.12 -m venv .venv
