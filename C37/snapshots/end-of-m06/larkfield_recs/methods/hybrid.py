@@ -94,5 +94,6 @@ class WithNewSlots(Method):
 METHODS = {
     "hybrid-blend": (Blend, {}, "ALS + 0.5 content + 0.5 trending, each scaled 0..1 per customer"),
     "hybrid-switch": (Switch, {}, "trending with no history, content with under 5 events, ALS with more"),
-    "als+new": (WithNewSlots, {}, "ALS with 2 places (from place 4) for the closest new products (cold start)"),
+    "als+new": (WithNewSlots, {},
+                "ALS with places for the closest new products (2 unless --set slots=N; from place 4; cold start)"),
 }

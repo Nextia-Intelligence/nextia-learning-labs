@@ -11,6 +11,14 @@ def test_service_falls_back_without_a_model():
     assert r["source"] == "fallback" and len(r["products"]) == 10
 
 
+def test_broken_batch_file_falls_back():
+    serving.build("item-cf")
+    f = serving.batch_dir() / "lists.npz"
+    f.write_bytes(f.read_bytes()[:1000])        # a file cut short, as by a full disk
+    r = TestClient(create_app(serving.Server())).get("/recommend/C100002").json()
+    assert r["source"] == "fallback" and r["reason"] == "no model loaded" and len(r["products"]) == 10
+
+
 def test_batch_then_lookup():
     serving.build("item-cf")
     c = TestClient(create_app(serving.Server()))

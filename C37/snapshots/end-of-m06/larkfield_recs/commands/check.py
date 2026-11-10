@@ -19,7 +19,12 @@ def run(args):
         raise SystemExit(f"These data files are missing or changed: {', '.join(bad)}. Download the data again.")
     print(f"Data: {len(data.checksums())} files, all right ({data_dir()})")
     res, _, _ = harness.run("popular", "validation", quick=True)
-    want = json.loads((data_dir() / "expected.json").read_text())["popular_validation_quick_recall10"]
+    want = json.loads((data_dir() / "expected.json").read_text()).get("popular_validation_quick_recall10")
+    if want is None:
+        print(f"popular on the validation period (quick): recall@10 {res['recall']:.3f} (no expected value for "
+              "this validation period)")
+        print("Data check passed. The result check needs the default periods: use `recs info` to see yours.")
+        return
     print(f"popular on the validation period (quick): recall@10 {res['recall']:.3f} (expected {want:.3f})")
     if abs(res["recall"] - want) > 0.0005:
         raise SystemExit("The result is not the expected one. Run `recs reset` and try again.")

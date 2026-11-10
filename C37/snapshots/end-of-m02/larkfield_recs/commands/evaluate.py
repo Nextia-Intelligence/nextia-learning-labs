@@ -3,7 +3,7 @@
 from .. import harness, registry
 
 NAME = "evaluate"
-HELP = "Score a method on the test period (or --period validation) and save the run for recs compare."
+HELP = "Score a method on the test period (or --period validation) and save the run in outputs/runs/."
 
 
 def add(p):

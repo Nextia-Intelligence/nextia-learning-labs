@@ -69,8 +69,23 @@ def load_run(name, period="test", quick=False):
         f"{name}-{period}{'-quick' if quick else ''}"
     f = d / f"{base}.json"
     if not f.exists():
-        raise SystemExit(f"No saved run {base}. Run first: recs evaluate {name}" + (" --quick" if quick else ""))
+        raise SystemExit(f"No saved run {base}. Run first: {evaluate_command(name, period, quick)}")
     return json.loads(f.read_text()), dict(np.load(d / f"{base}.npz"))
+
+
+def evaluate_command(name, period="test", quick=False):
+    """The `recs evaluate` command that saves the run `name` (for example als+new[slots=1]+rules)."""
+    rules = name.endswith("+rules")
+    name = name.removesuffix("+rules")
+    method, _, settings = name.partition("[")
+    cmd = f"recs evaluate {method}"
+    for pair in filter(None, settings.rstrip("]").split(",")):
+        cmd += f" --set {pair}"
+    if rules:
+        cmd += " --rules"
+    if period != "test":
+        cmd += f" --period {period}"
+    return cmd + (" --quick" if quick else "")
 
 
 def describe(method):
@@ -84,7 +99,8 @@ def report(res, by=None):
           + (f", settings {res['settings']}" if res["settings"] else "")
           + (f", rules: {', '.join(res['rules'])}" if res["rules"] else ""))
     print(f"Customers scored: {res['customers']:,}{' (quick sample)' if res['quick'] else ''}; "
-          f"trained on events before {res['cutoff']}")
+          + ("trained on every event except the held-out orders" if res["period"] == "random"
+             else f"trained on events before {res['cutoff']}"))
     lo, hi = res["recall_ci"]
     print(f"recall@{res['k']} {res['recall']:.3f} (95% interval {lo:.3f} to {hi:.3f}), "
           f"NDCG@{res['k']} {res['ndcg']:.3f}, MAP@{res['k']} {res['map']:.3f}, "

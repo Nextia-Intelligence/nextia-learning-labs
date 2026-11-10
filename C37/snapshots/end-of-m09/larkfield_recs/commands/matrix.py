@@ -18,7 +18,8 @@ def run(args):
     shop = data.load()
     p = data.Period(shop, args.period)
     w = {k: float(v) for k, v in (x.split("=") for x in args.weights.split(","))}
-    m = p.matrix(w)
+    m = p.matrix(w).copy()
+    m.eliminate_zeros()  # an event type with weight 0 leaves no filled cell
     users = np.asarray((m > 0).sum(axis=1)).ravel()
     items = np.asarray((m > 0).sum(axis=0)).ravel()
     active = users > 0
@@ -26,7 +27,7 @@ def run(args):
     print(f"Matrix: {m.shape[0]:,} customers x {m.shape[1]:,} products, {m.nnz:,} filled cells "
           f"({m.nnz / (m.shape[0] * m.shape[1]):.3%}); memory {(m.data.nbytes + m.indices.nbytes + m.indptr.nbytes) / 1e6:.1f} MB "
           f"sparse, {m.shape[0] * m.shape[1] * 4 / 1e6:,.0f} MB if it were dense")
-    print(f"Customers with any event: {active.sum():,}; products per customer: median {np.median(users[active]):.0f}, "
+    print(f"Customers with a filled cell: {active.sum():,}; products per customer: median {np.median(users[active]):.0f}, "
           f"mean {users[active].mean():.1f}")
     o = p.train[p.train.event == "order"].groupby("c").session.nunique()
     vc = o.value_counts().sort_index()

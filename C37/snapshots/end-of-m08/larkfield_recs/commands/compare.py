@@ -22,10 +22,13 @@ def run(args):
     rb, pb = harness.load_run(args.b, args.period, args.quick)
     if not np.array_equal(pa["users"], pb["users"]):
         raise SystemExit("The two runs scored different customers: run both with the same period and --quick setting.")
+    if ra["k"] != rb["k"]:
+        raise SystemExit(f"The two runs have lists of different lengths (k={ra['k']} and k={rb['k']}): "
+                         "run both with the same --k.")
     m = args.metric
     a, b = pa[m], pb[m]
     mean, lo, hi = metrics.paired_difference(a, b)
-    print(f"{m}@10: {args.a} {a.mean():.3f}, {args.b} {b.mean():.3f}")
+    print(f"{m}@{ra['k']}: {args.a} {a.mean():.3f}, {args.b} {b.mean():.3f}")
     print(f"difference {mean:+.3f} (95% interval {lo:+.3f} to {hi:+.3f}); "
           f"better for {(b > a).sum():,} customers, worse for {(b < a).sum():,}, the same for {(b == a).sum():,}")
     print("The difference is " + ("clear: the interval does not include 0." if lo > 0 or hi < 0

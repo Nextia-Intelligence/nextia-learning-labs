@@ -7,6 +7,7 @@ with the fallback when the model's file is missing or broken.
 """
 
 import json
+import zipfile
 
 import numpy as np
 
@@ -72,8 +73,8 @@ class Server:
             self.lists = dict(zip(z["customers"].tolist(), z["lists"]))
             self.neigh = z["neighbours"]
             self.meta = json.loads((d / "meta.json").read_text())
-        except (OSError, ValueError, KeyError):
-            self.meta = None          # no model: every answer comes from the fallback
+        except (OSError, ValueError, KeyError, zipfile.BadZipFile):
+            self.meta, self.lists, self.neigh = None, {}, None   # no model or a broken file: answer with the fallback
         try:
             self.fallback = [self.shop.product_index[x] for x in json.loads((d / "fallback.json").read_text())]
         except (OSError, ValueError):
