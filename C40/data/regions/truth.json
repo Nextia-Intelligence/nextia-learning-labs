@@ -1,0 +1,10 @@
+{
+  "rollout": "2025-06-02",
+  "treated": "QC",
+  "effect": {
+    "relative": 0.06,
+    "dollars_per_week": 15411.9,
+    "unit": "Quebec's weekly sales after the rollout"
+  },
+  "note": "Quebec shares an eastern trend with the Atlantic provinces (60% of it); Ontario does not."
+}

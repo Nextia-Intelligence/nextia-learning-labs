@@ -1,0 +1,17 @@
+{
+  "launch": "2025-10-06",
+  "block_effect_on_orders": 0.02,
+  "naive_before_after": {
+    "before": "2025-09-08 to 2025-10-05",
+    "after": "2025-10-06 to 2025-11-02",
+    "sales_before": 3877532.48,
+    "sales_after": 4199656.31,
+    "change": 0.0831
+  },
+  "sales_after_without_block": 4117094.31,
+  "true_effect_after": {
+    "sales": 82562.0,
+    "relative": 0.0201,
+    "orders": 1000
+  }
+}

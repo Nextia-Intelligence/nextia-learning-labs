@@ -1,0 +1,14 @@
+{
+  "scenario": "regions",
+  "seed": 40,
+  "about": "Free delivery in Quebec first (from 2 June 2025): weekly sales of 60 areas in 10 provinces (no test)",
+  "unit": "area-week",
+  "start": "2024-06-03",
+  "end": "2025-11-24",
+  "events": {
+    "rollout": "2025-06-02",
+    "treated": "QC"
+  },
+  "note": "counterfactual.csv is the simulator's truth: Quebec's areas without the change.",
+  "data": "Synthetic: made by the course simulator."
+}

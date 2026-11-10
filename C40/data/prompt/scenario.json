@@ -1,0 +1,21 @@
+{
+  "scenario": "prompt",
+  "seed": 40,
+  "about": "The support assistant's new prompt against today's, with recorded answers: a test by customer, 14 days",
+  "unit": "customer (tickets are grouped by customer)",
+  "days": 14,
+  "start": "2025-10-20",
+  "end": "2025-11-02",
+  "variants": {
+    "A": "today's prompt",
+    "B": "the new prompt"
+  },
+  "split": 0.5,
+  "primary_metric": "resolved",
+  "guardrails": [
+    "complaint"
+  ],
+  "agent_cost": 6.5,
+  "answers": "recorded answers of Azure chat-small (two prompts, 120 questions), replayed",
+  "data": "Synthetic: made by the course simulator."
+}

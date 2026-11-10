@@ -1,0 +1,26 @@
+{
+  "resolved": {
+    "control_world": 0.70178,
+    "treated_world": 0.79735,
+    "effect": 0.09557,
+    "unit": "per ticket"
+  },
+  "handoff": {
+    "control_world": 0.269,
+    "treated_world": 0.17423,
+    "effect": -0.09477,
+    "unit": "per ticket"
+  },
+  "complaint": {
+    "control_world": 0.03006,
+    "treated_world": 0.02383,
+    "effect": -0.00623,
+    "unit": "per ticket"
+  },
+  "cost": {
+    "control_world": 1.74856,
+    "treated_world": 1.13254,
+    "effect": -0.61601,
+    "unit": "per ticket"
+  }
+}

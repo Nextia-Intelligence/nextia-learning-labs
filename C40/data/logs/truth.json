@@ -1,0 +1,23 @@
+{
+  "customers": 40000,
+  "used_block": 13338,
+  "naive": {
+    "users": 39.19,
+    "non_users": 29.48,
+    "difference": 9.7,
+    "relative": 0.3291
+  },
+  "ate": {
+    "effect": 2.3699,
+    "unit": "dollars per customer, if everyone used the block"
+  },
+  "att": {
+    "effect": 2.7299,
+    "unit": "dollars per customer, among the users"
+  },
+  "hidden_confounder_size": {
+    "share_gap": 0.0872,
+    "dollars": 10.27
+  },
+  "hidden_confounder": "has_garden (45% of customers): users are more likely to have a garden, and gardeners spend more. It is not in the log."
+}

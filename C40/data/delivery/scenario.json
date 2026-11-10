@@ -1,0 +1,20 @@
+{
+  "scenario": "delivery",
+  "seed": 40,
+  "about": "Free delivery from 50 dollars instead of 75: an A/B test by customer, 28 days",
+  "unit": "customer",
+  "days": 28,
+  "start": "2025-09-08",
+  "end": "2025-10-05",
+  "variants": {
+    "A": "free delivery from 75 dollars (today)",
+    "B": "free delivery from 50 dollars"
+  },
+  "primary_metric": "revenue",
+  "guardrails": [
+    "return_rate"
+  ],
+  "split": 0.5,
+  "covariate": "pre_spend (spending in the 8 weeks before the test)",
+  "data": "Synthetic: made by the course simulator."
+}

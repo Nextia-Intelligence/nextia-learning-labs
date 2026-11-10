@@ -1,0 +1,35 @@
+{
+  "customers": 60000,
+  "ordered": {
+    "control_world": 0.09075,
+    "treated_world": 0.10265,
+    "effect": 0.0119,
+    "relative": 0.1311,
+    "expected_effect": 0.01298,
+    "unit": "share of customers with an order"
+  },
+  "revenue": {
+    "control_world": 7.9354,
+    "treated_world": 8.9486,
+    "effect": 1.0131,
+    "unit": "dollars per customer"
+  },
+  "unsubscribed": {
+    "control_world": 0.00208,
+    "treated_world": 0.00845,
+    "effect": 0.00637,
+    "unit": "share of customers"
+  },
+  "groups": {
+    "persuadable": 1567,
+    "sure_thing": 4592,
+    "lost_cause": 52988,
+    "do_not_disturb": 853
+  },
+  "targets": {
+    "customers": 50000,
+    "expected_extra_orders_all": 647.8,
+    "best_10000": 942.9,
+    "harmed": 21573
+  }
+}

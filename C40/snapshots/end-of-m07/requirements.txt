@@ -1,0 +1,8 @@
+numpy==2.4.6
+pandas==3.1.1
+scipy==1.15.3
+statsmodels==0.15.0
+scikit-learn==1.9.1
+dowhy==0.14
+econml==0.17.0
+pytest==9.2.0
