@@ -1,7 +1,7 @@
 # Release sign-off: Larkfield help desk 2.3.1 (hotfix)
 
 - Candidate: app 2.3.1, prompt support-v8, model sim-1 (simulated)    Compared with: 2.3.0
-- Tester: Ines    Decision: Omar (product manager), with Grace (product owner)
+- Tester: Esme    Decision: Omar (product manager), with Grace (product owner)
 
 ## Recommendation
 

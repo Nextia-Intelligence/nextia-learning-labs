@@ -1,6 +1,6 @@
 # First bug hunt: practice app 2.3.0, sim-1, prompt support-v8
 
-Ines's first hunt, simulated (practice app). Test customer C-1001 (Alex Martin). Reset before each question (before each run for question 8), then seeds 1, 2 and 3, each in a new conversation. Types are the field guide's: 1 invented fact, 2 wrong or missing source, 3 ignored instruction, 4 wrong refusal or over-refusal, 5 wrong tool or action, 6 another user's data, 7 tone and language, 8 change after an update.
+Esme's first hunt, simulated (practice app). Test customer C-1001 (Alex Martin). Reset before each question (before each run for question 8), then seeds 1, 2 and 3, each in a new conversation. Types are the field guide's: 1 invented fact, 2 wrong or missing source, 3 ignored instruction, 4 wrong refusal or over-refusal, 5 wrong tool or action, 6 another user's data, 7 tone and language, 8 change after an update.
 
 | # | Seed | Pass or fail | Type (1-8) | Evidence: trace ID and field |
 |---|---|---|---|---|

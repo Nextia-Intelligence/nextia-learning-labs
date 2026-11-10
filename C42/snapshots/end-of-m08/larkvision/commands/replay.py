@@ -73,7 +73,7 @@ def run(args):
         for a in s["alarms"]:
             print(f"DRIFT ALARM {s['week']}: {a}. Look at the photos in {args.review}/ before you change anything.")
         for a in s["cost_alarms"]:
-            print(f"COST ALARM {s['week']}: {a}. Stop the automatic decisions and ask Kwame's team to check by hand.")
+            print(f"COST ALARM {s['week']}: {a}. Stop the automatic decisions and ask Hamid's team to check by hand.")
     days = {}
     for r in results:
         days.setdefault(r["day"], []).append(r["zone"])

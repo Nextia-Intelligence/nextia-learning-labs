@@ -11,7 +11,7 @@ image service project. It needs only NumPy (and pandas for `Table.frame`, if pan
 
 Tasks and their main metric:
   catalogue  eight-class product photos      accuracy (worst case: the class with the lowest recall)
-  inspect    returned candles, good/damaged  cost per day at Kwame's budget (worst case: the damage type found least)
+  inspect    returned candles, good/damaged  cost per day at Hamid's budget (worst case: the damage type found least)
   count      boxes on pallet photos          mean absolute count error (worst case: the crowding level with most error)
   match      customer photo -> catalogue     recall at 5 (worst case: the class with the lowest recall at 5)
   attributes vision-language answers         accuracy of the attribute (worst case: the attribute with lowest accuracy)
