@@ -4,7 +4,7 @@
 **with** test customers C-1001 (no Rewards), C-1002 (a BBQ over 30 kg) and C-1003 (Rewards Gold, French); fixed seeds 1 to 5; the trace and the export
 **to discover** whether refund amounts, policy versions and confirmations are ever wrong
 
-- Tester: Ines    Time box: 30 minutes    App version: 2.3.0, prompt support-v8, model sim-1 (simulated)
+- Tester: Esme    Time box: 30 minutes    App version: 2.3.0, prompt support-v8, model sim-1 (simulated)
 - Risks from the risk table: refunds and returns (9), cancel an order (6), French answers (4)
 - Out of scope: order status of other customers (another charter)
 

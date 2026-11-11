@@ -4,7 +4,7 @@
   here, runs 2 and 3 checked for rows that run 1 missed. The prompt described the feature, the users and the scope.
   It had no customer data, no policy text and no risk table.
 - Risk rows: `plan/refund-risks.md`, `plan/risk-table.md`, `plan/metamorphic-relations.md`, `cases/hostile-inputs.yaml`.
-- Tester: Ines. Product owner for new risks: Grace.
+- Tester: Esme. Product owner for new risks: Grace.
 
 ## Run 1: 31 ideas (7 personas, 15 input variants, 9 attacks)
 

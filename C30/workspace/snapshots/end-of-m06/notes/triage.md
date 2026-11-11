@@ -1,6 +1,6 @@
 # Triage: bugs of session 1 and the backlog
 
-Triage meeting: Ines (QA), Tomás (AI engineer), Grace (product owner).
+Triage meeting: Esme (QA), Tomás (AI engineer), Grace (product owner).
 
 ## Severity from harm and frequency together
 

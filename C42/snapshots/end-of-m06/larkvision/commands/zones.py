@@ -1,4 +1,4 @@
-"""`vision zones`: pass, check and fail lines from recorded anomaly scores and Kwame's daily budget."""
+"""`vision zones`: pass, check and fail lines from recorded anomaly scores and Hamid's daily budget."""
 import json
 from pathlib import Path
 

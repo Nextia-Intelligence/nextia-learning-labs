@@ -1,6 +1,6 @@
 # Final assignment: a second warehouse and a new category
 
-Larkfield opens a second returns warehouse. Its camera is not the camera of the first warehouse. At the same time, Omar adds a new product category: kettles and teapots. Kwame asks you for a vision pack for returns inspection and catalogue matching, before the second warehouse starts to work.
+Larkfield opens a second returns warehouse. Its camera is not the camera of the first warehouse. At the same time, Omar adds a new product category: kettles and teapots. Hamid asks you for a vision pack for returns inspection and catalogue matching, before the second warehouse starts to work.
 
 ## What you get
 
@@ -20,7 +20,7 @@ The course team keeps the answers (which returns are damaged, which kettle each 
 2. **A comparison table** with a baseline and at least three method families, on the same images with the same evaluation, with results by class and by camera.
 3. **An inspection method** with thresholds set from the review budget. Say how you set them without labels from the new camera, and what you would label first.
 4. **The image service run over the second warehouse's month**: unsure and privacy-sensitive photos sent to review, latency on a laptop CPU, and the camera shift found and handled.
-5. **A one-page recommendation for Kwame**, including what the system cannot see and what a person still checks.
+5. **A one-page recommendation for Hamid**, including what the system cannot see and what a person still checks.
 
 The assignment page on the course site gives the full rules. Two rules matter most: never tune a threshold on a test set, and never send a photo with a person in it to a hosted model without blurring it first.
 

@@ -1,6 +1,6 @@
 # Risk table: Larkfield help desk 2.3.0
 
-Product owner: Grace (support lead)    Tester: Ines (QA lead)    Version: app 2.3.0, prompt support-v8, model sim-1 (simulated)
+Product owner: Grace (support lead)    Tester: Esme (QA lead)    Version: app 2.3.0, prompt support-v8, model sim-1 (simulated)
 
 Harm: 1 low, 2 medium, 3 high. Frequency: 1 rare, 2 sometimes, 3 often (from the help desk's ticket mix). Risk = harm x frequency.
 
