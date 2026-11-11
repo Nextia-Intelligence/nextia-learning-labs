@@ -35,7 +35,7 @@
   }
  },
  "agents": {
-  "Nadia": {
+  "Freya": {
    "id": "kokoro:bf_emma",
    "engine": "kokoro",
    "model": "b",

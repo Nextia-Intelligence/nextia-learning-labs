@@ -16,7 +16,7 @@
  "order_number": "6 digits; the last digit is a check digit (Luhn, mod 10). Callers say it digit by digit, in pairs (seventy-four), with 'oh' for zero, or with a pause.",
  "agents": {
   "en": [
-   "Nadia",
+   "Freya",
    "Ben",
    "Chloe",
    "Victor"
