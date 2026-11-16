@@ -6,7 +6,7 @@ Files for the course [Leading AI Products and Teams](https://learning.nextia-ai.
 
 A browser, and a document tool: a word processor, a text editor or a spreadsheet. You need no account, no installation and no money.
 
-To use a template, open it on this page, copy its text into your own document, and fill it in. To get every file at once, download this repository as a ZIP file (the green **Code** button, then **Download ZIP**) and open the folder of this course (the folder that has this README). The `.md` files are text files: any text editor opens them. The `.csv` files open in any spreadsheet.
+To use a template, open it on this page, copy its text into your own document, and fill it in. To get every file at once, download [C29.zip](https://github.com/Nextia-Intelligence/nextia-learning-labs/releases/download/course-files/C29.zip) and unzip it: you get the folder `C29`, the folder that has this README. The `.md` files are text files: any text editor opens them. The `.csv` files open in any spreadsheet.
 
 ## How to read the numbers
 

@@ -1,0 +1,56 @@
+# One ZIP file per course, for the "Download the files" buttons on the
+# learning site. Each push to main zips again the course folders that changed
+# and uploads them to the release "course-files", so a stable link always
+# gives the latest files:
+#   https://github.com/Nextia-Intelligence/nextia-learning-labs/releases/download/course-files/C33.zip
+# manifest.json in the same release lists every course's ZIP size; the site
+# reads it with `npm run course-files`. To rebuild every ZIP file, start the
+# workflow by hand with "rebuild all" (Actions, Course files, Run workflow).
+name: Course files
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Rebuild all ZIP files
+        type: boolean
+        default: false
+
+# One run at a time, in order: two runs must not upload at once.
+concurrency:
+  group: course-files
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: course-files
+    steps:
+      - uses: actions/checkout@v4
+      - name: Make the release if it is missing
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" \
+            --title "Course files" --latest=false \
+            --notes "One ZIP file per course folder, updated on every change to main. The learning site links to these files."
+      - name: Get the current manifest
+        if: ${{ !inputs.all }}
+        run: gh release download "$TAG" --pattern manifest.json --dir "$RUNNER_TEMP/old" || true
+      - name: Zip the changed courses
+        run: |
+          .github/course-files/build.sh "$RUNNER_TEMP/zips" "$RUNNER_TEMP/old/manifest.json" > "$RUNNER_TEMP/changed.txt"
+          echo "Changed: $(tr '\n' ' ' < "$RUNNER_TEMP/changed.txt")"
+      - name: Upload
+        run: |
+          cd "$RUNNER_TEMP/zips"
+          while read -r f; do
+            [ -n "$f" ] && gh release upload "$TAG" "$f" --clobber -R "$GITHUB_REPOSITORY"
+          done < "$RUNNER_TEMP/changed.txt"
+          # The manifest goes last, so it never lists a file that is not there yet.
+          gh release upload "$TAG" manifest.json --clobber -R "$GITHUB_REPOSITORY"
